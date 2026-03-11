@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Brain Adapter Meta",
+  "description": "Model information and contributor details for a brain adapter",
+  "type": "object",
+  "required": ["model", "size_class", "provider", "contributor"],
+  "properties": {
+    "model": {
+      "type": "string",
+      "description": "Model identifier (e.g., qwen2.5-7b)"
+    },
+    "size_class": {
+      "type": "string",
+      "enum": ["tiny", "small", "medium", "large"]
+    },
+    "provider": {
+      "type": "string",
+      "enum": ["gguf", "ollama", "anthropic", "groq", "openai_compat"]
+    },
+    "contributor": {
+      "type": "object",
+      "required": ["github"],
+      "properties": {
+        "github": { "type": "string" },
+        "name": { "type": "string" }
+      }
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "has_lora": {
+      "type": "boolean",
+      "default": false
+    },
+    "capabilities": {
+      "type": "object",
+      "properties": {
+        "json_mode": { "type": "boolean" },
+        "tool_calling": { "type": "boolean" },
+        "max_context": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+name: Validate PR
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install jsonschema
+
+      - name: Run schema validation
+        run: python scripts/validate.py
+
+      - name: Run secret scan
+        run: python scripts/check_secrets.py nerves/ adapters/ connectors/
+
+      - name: Check tool safety
+        run: |
+          found=0
+          for f in $(find nerves/ -name "*.py" 2>/dev/null); do
+            if grep -Pn '(os\.system|(?<!#.*)eval\s*\(|(?<!#.*)exec\s*\(|\bsubprocess\b|__import__\s*\()' "$f"; then
+              echo "UNSAFE: $f"
+              found=1
+            fi
+          done
+          if [ "$found" = "1" ]; then
+            echo "::error::Unsafe patterns found in tool code"
+            exit 1
+          fi
+          echo "Tool safety check passed"

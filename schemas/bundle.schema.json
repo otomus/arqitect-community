@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Nerve Bundle",
+  "description": "Nerve identity, tools, and model adapters",
+  "type": "object",
+  "required": ["name", "version", "description", "role", "tags", "authors", "sentient_version", "tools", "default"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "description": "Nerve identifier (snake_case)"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+)?$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10
+    },
+    "role": {
+      "type": "string",
+      "enum": ["tool", "creative", "code"]
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["github"],
+        "properties": {
+          "github": { "type": "string" },
+          "name": { "type": "string" }
+        }
+      },
+      "minItems": 1
+    },
+    "sentient_version": {
+      "type": "string",
+      "description": "Semver constraint, e.g. >=0.1.0"
+    },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "spec"],
+        "properties": {
+          "name": { "type": "string" },
+          "spec": { "type": "string", "description": "Relative path to spec.json" },
+          "implementations": {
+            "type": "object",
+            "properties": {
+              "python": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "default": {
+      "type": "object",
+      "required": ["system_prompt", "examples", "temperature"],
+      "properties": {
+        "system_prompt": { "type": "string" },
+        "examples": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["input", "output"],
+            "properties": {
+              "input": { "type": "string" },
+              "output": { "type": "string" }
+            }
+          }
+        },
+        "temperature": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 2.0
+        }
+      }
+    },
+    "model_adapters": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "system_prompt_override": { "type": ["string", "null"] },
+          "examples_override": {
+            "type": ["array", "null"],
+            "items": {
+              "type": "object",
+              "properties": {
+                "input": { "type": "string" },
+                "output": { "type": "string" }
+              }
+            }
+          },
+          "temperature": { "type": "number", "minimum": 0.0, "maximum": 2.0 },
+          "score": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+          "qualified_by": { "type": "string" }
+        }
+      }
+    }
+  }
+}

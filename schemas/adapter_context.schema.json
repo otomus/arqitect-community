@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Brain Adapter Context",
+  "description": "System prompt, few-shot examples, and temperature for a brain adapter",
+  "type": "object",
+  "required": ["system_prompt", "temperature"],
+  "properties": {
+    "system_prompt": {
+      "type": "string",
+      "minLength": 10,
+      "description": "Full system prompt for the brain"
+    },
+    "few_shot_examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["input", "output"],
+        "properties": {
+          "input": { "type": "string" },
+          "output": { "type": "string" }
+        }
+      }
+    },
+    "temperature": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 2.0
+    },
+    "top_p": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "max_tokens": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "stop_sequences": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

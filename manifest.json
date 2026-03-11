@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "generated_at": null,
+  "nerves": {},
+  "adapters": {},
+  "connectors": {},
+  "stats": {
+    "total_nerves": 0,
+    "total_adapters": 0,
+    "total_connectors": 0
+  }
+}

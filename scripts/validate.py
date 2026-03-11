@@ -1,0 +1,267 @@
+#!/usr/bin/env python3
+"""Schema validation for community contributions.
+
+Validates all JSON files against their respective schemas.
+Checks structural requirements for nerves, adapters, and connectors.
+"""
+
+import json
+import os
+import re
+import sys
+
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SCHEMAS_DIR = os.path.join(REPO_ROOT, "schemas")
+
+# Unsafe patterns in tool Python files
+UNSAFE_PATTERNS = [
+    (r"\bos\.system\b", "os.system"),
+    (r"\beval\s*\(", "eval()"),
+    (r"\bexec\s*\(", "exec()"),
+    (r"\bsubprocess\b", "subprocess"),
+    (r"\b__import__\s*\(", "__import__()"),
+]
+
+
+def load_schema(name: str) -> dict:
+    path = os.path.join(SCHEMAS_DIR, name)
+    with open(path) as f:
+        return json.load(f)
+
+
+def load_json(path: str) -> dict | list | None:
+    try:
+        with open(path) as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError) as e:
+        print(f"  ERROR: Cannot parse {path}: {e}")
+        return None
+
+
+def validate_json_against_schema(data: dict | list, schema: dict, filepath: str) -> list[str]:
+    """Basic schema validation without jsonschema dependency.
+
+    Checks required fields, types, and enum constraints.
+    Falls back gracefully if jsonschema is not installed.
+    """
+    errors = []
+    try:
+        import jsonschema
+        validator = jsonschema.Draft202012Validator(schema)
+        for error in validator.iter_errors(data):
+            errors.append(f"  {filepath}: {error.message} (at {'/'.join(str(p) for p in error.absolute_path)})")
+        return errors
+    except ImportError:
+        pass
+
+    # Fallback: manual validation of required fields and enums
+    if schema.get("type") == "object" and isinstance(data, dict):
+        for field in schema.get("required", []):
+            if field not in data:
+                errors.append(f"  {filepath}: missing required field '{field}'")
+        for field, prop in schema.get("properties", {}).items():
+            if field in data and "enum" in prop:
+                if data[field] not in prop["enum"]:
+                    errors.append(f"  {filepath}: '{field}' must be one of {prop['enum']}, got '{data[field]}'")
+    elif schema.get("type") == "array" and isinstance(data, list):
+        min_items = schema.get("minItems", 0)
+        if len(data) < min_items:
+            errors.append(f"  {filepath}: array must have at least {min_items} items, got {len(data)}")
+
+    return errors
+
+
+def check_tool_safety(filepath: str) -> list[str]:
+    """Check a Python tool file for unsafe patterns."""
+    errors = []
+    try:
+        with open(filepath, "r") as f:
+            content = f.read()
+    except OSError:
+        return errors
+
+    for pattern, name in UNSAFE_PATTERNS:
+        if re.search(pattern, content):
+            errors.append(f"  UNSAFE: {filepath} contains {name}")
+    return errors
+
+
+def validate_nerve(nerve_dir: str) -> list[str]:
+    """Validate a nerve bundle directory."""
+    errors = []
+    name = os.path.basename(nerve_dir)
+
+    # bundle.json must exist
+    bundle_path = os.path.join(nerve_dir, "bundle.json")
+    if not os.path.exists(bundle_path):
+        errors.append(f"  {name}: missing bundle.json")
+        return errors
+
+    bundle = load_json(bundle_path)
+    if bundle is None:
+        return errors
+
+    schema = load_schema("bundle.schema.json")
+    errors.extend(validate_json_against_schema(bundle, schema, bundle_path))
+
+    # test_cases.json must exist with >= 4 cases
+    tests_path = os.path.join(nerve_dir, "test_cases.json")
+    if not os.path.exists(tests_path):
+        errors.append(f"  {name}: missing test_cases.json")
+    else:
+        tests = load_json(tests_path)
+        if tests is not None:
+            test_schema = load_schema("test_cases.schema.json")
+            errors.extend(validate_json_against_schema(tests, test_schema, tests_path))
+            # Check for core and negative tests
+            types = [t.get("type") for t in tests if isinstance(t, dict)]
+            if "core" not in types:
+                errors.append(f"  {name}: test_cases.json must have at least 1 'core' test")
+            if "negative" not in types:
+                errors.append(f"  {name}: test_cases.json must have at least 1 'negative' test")
+
+    # Validate tools
+    for tool in bundle.get("tools", []):
+        tool_name = tool.get("name", "")
+        spec_path = os.path.join(nerve_dir, tool.get("spec", ""))
+        if not os.path.exists(spec_path):
+            errors.append(f"  {name}: tool '{tool_name}' missing spec at {tool.get('spec', '')}")
+        else:
+            spec = load_json(spec_path)
+            if spec is not None:
+                spec_schema = load_schema("tool_spec.schema.json")
+                errors.extend(validate_json_against_schema(spec, spec_schema, spec_path))
+
+        # Check implementations
+        for lang, impl_path in tool.get("implementations", {}).items():
+            full_path = os.path.join(nerve_dir, impl_path)
+            if not os.path.exists(full_path):
+                errors.append(f"  {name}: tool '{tool_name}' missing {lang} implementation at {impl_path}")
+            elif lang == "python":
+                errors.extend(check_tool_safety(full_path))
+
+    return errors
+
+
+def validate_adapter(adapter_dir: str) -> list[str]:
+    """Validate a brain adapter directory."""
+    errors = []
+    name = os.path.basename(adapter_dir)
+
+    for required, schema_name in [
+        ("meta.json", "adapter_meta.schema.json"),
+        ("context.json", "adapter_context.schema.json"),
+        ("qualification.json", "adapter_qualification.schema.json"),
+    ]:
+        path = os.path.join(adapter_dir, required)
+        if not os.path.exists(path):
+            errors.append(f"  {name}: missing {required}")
+            continue
+        data = load_json(path)
+        if data is not None:
+            schema = load_schema(schema_name)
+            errors.extend(validate_json_against_schema(data, schema, path))
+
+    # Check score range in qualification
+    qual_path = os.path.join(adapter_dir, "qualification.json")
+    if os.path.exists(qual_path):
+        qual = load_json(qual_path)
+        if qual and isinstance(qual, dict):
+            score = qual.get("overall_score", -1)
+            if not (0.0 <= score <= 1.0):
+                errors.append(f"  {name}: qualification score must be 0.0-1.0, got {score}")
+
+    # Check size_class validity
+    meta_path = os.path.join(adapter_dir, "meta.json")
+    if os.path.exists(meta_path):
+        meta = load_json(meta_path)
+        if meta and isinstance(meta, dict):
+            sc = meta.get("size_class", "")
+            if sc and sc not in ("tiny", "small", "medium", "large"):
+                errors.append(f"  {name}: invalid size_class '{sc}'")
+
+    return errors
+
+
+def validate_connector(connector_dir: str) -> list[str]:
+    """Validate a connector directory."""
+    errors = []
+    name = os.path.basename(connector_dir)
+
+    # Required files
+    meta_path = os.path.join(connector_dir, "meta.json")
+    if not os.path.exists(meta_path):
+        errors.append(f"  {name}: missing meta.json")
+    else:
+        meta = load_json(meta_path)
+        if meta is not None:
+            schema = load_schema("connector_meta.schema.json")
+            errors.extend(validate_json_against_schema(meta, schema, meta_path))
+
+    config_path = os.path.join(connector_dir, "config-template.json")
+    if not os.path.exists(config_path):
+        errors.append(f"  {name}: missing config-template.json")
+    else:
+        # Check no secrets in config template
+        config = load_json(config_path)
+        if config and isinstance(config, dict):
+            config_str = json.dumps(config)
+            if re.search(r"sk-|ghp_|AKIA|Bearer\s+[A-Za-z0-9]", config_str):
+                errors.append(f"  {name}: config-template.json appears to contain secrets")
+
+    readme_path = os.path.join(connector_dir, "README.md")
+    if not os.path.exists(readme_path):
+        errors.append(f"  {name}: missing README.md")
+
+    # Must have at least one implementation file
+    has_impl = any(
+        f.startswith("connector.") for f in os.listdir(connector_dir) if os.path.isfile(os.path.join(connector_dir, f))
+    )
+    if not has_impl:
+        errors.append(f"  {name}: missing connector implementation (connector.js or connector.py)")
+
+    return errors
+
+
+def main():
+    errors = []
+
+    # Validate all nerves
+    nerves_dir = os.path.join(REPO_ROOT, "nerves")
+    if os.path.isdir(nerves_dir):
+        for name in sorted(os.listdir(nerves_dir)):
+            nerve_dir = os.path.join(nerves_dir, name)
+            if os.path.isdir(nerve_dir):
+                print(f"Validating nerve: {name}")
+                errors.extend(validate_nerve(nerve_dir))
+
+    # Validate all adapters
+    adapters_dir = os.path.join(REPO_ROOT, "adapters", "brain")
+    if os.path.isdir(adapters_dir):
+        for name in sorted(os.listdir(adapters_dir)):
+            adapter_dir = os.path.join(adapters_dir, name)
+            if os.path.isdir(adapter_dir):
+                print(f"Validating adapter: {name}")
+                errors.extend(validate_adapter(adapter_dir))
+
+    # Validate all connectors
+    connectors_dir = os.path.join(REPO_ROOT, "connectors")
+    if os.path.isdir(connectors_dir):
+        for name in sorted(os.listdir(connectors_dir)):
+            connector_dir = os.path.join(connectors_dir, name)
+            if os.path.isdir(connector_dir):
+                print(f"Validating connector: {name}")
+                errors.extend(validate_connector(connector_dir))
+
+    if errors:
+        print(f"\nVALIDATION FAILED — {len(errors)} error(s):")
+        for e in errors:
+            print(e)
+        sys.exit(1)
+    else:
+        print("\nAll validations passed.")
+        sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()

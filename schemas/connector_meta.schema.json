@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Connector Meta",
+  "description": "Connector metadata and capability declaration",
+  "type": "object",
+  "required": ["name", "version", "description", "language", "platforms", "author", "capabilities", "config_fields", "redis_channels"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]*$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10
+    },
+    "language": {
+      "type": "string",
+      "enum": ["javascript", "python"]
+    },
+    "platforms": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "author": {
+      "type": "object",
+      "required": ["github"],
+      "properties": {
+        "github": { "type": "string" },
+        "name": { "type": "string" }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "required": ["incoming", "outgoing"],
+      "properties": {
+        "incoming": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "outgoing": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "config_fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "required"],
+        "properties": {
+          "name": { "type": "string" },
+          "env_var": { "type": "string" },
+          "required": { "type": "boolean" },
+          "secret": { "type": "boolean", "default": false },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "redis_channels": {
+      "type": "object",
+      "required": ["subscribe", "publish"],
+      "properties": {
+        "subscribe": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "publish": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

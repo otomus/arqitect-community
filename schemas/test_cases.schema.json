@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Nerve Test Cases",
+  "description": "Test cases for nerve qualification",
+  "type": "array",
+  "minItems": 4,
+  "items": {
+    "type": "object",
+    "required": ["input", "type"],
+    "properties": {
+      "input": {
+        "type": "string",
+        "minLength": 1,
+        "description": "User input to test"
+      },
+      "type": {
+        "type": "string",
+        "enum": ["core", "negative", "edge"],
+        "description": "core=primary functionality, negative=out-of-scope rejection, edge=boundary case"
+      },
+      "expected_keywords": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Keywords expected in the response (for core tests)"
+      },
+      "expect_reject": {
+        "type": "boolean",
+        "description": "Whether the nerve should reject this input (for negative tests)"
+      },
+      "expected_tool": {
+        "type": "string",
+        "description": "Tool expected to be called (for core tests)"
+      },
+      "description": {
+        "type": "string",
+        "description": "Human-readable description of what this test validates"
+      }
+    }
+  }
+}

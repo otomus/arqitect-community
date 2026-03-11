@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Brain Adapter Qualification",
+  "description": "Qualification scores for a brain adapter",
+  "type": "object",
+  "required": ["overall_score", "test_count", "pass_count"],
+  "properties": {
+    "overall_score": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "test_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "pass_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "breakdown": {
+      "type": "object",
+      "description": "Per-category score breakdown",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "score": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+          "test_count": { "type": "integer" },
+          "pass_count": { "type": "integer" }
+        }
+      }
+    },
+    "qualified_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "qualified_by": {
+      "type": "string",
+      "description": "GitHub username of qualifier"
+    }
+  }
+}

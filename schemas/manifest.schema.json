@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Community Manifest",
+  "description": "Auto-generated index of all community contributions",
+  "type": "object",
+  "required": ["version", "nerves", "adapters", "connectors", "stats"],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "nerves": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["description", "role", "tags", "authors", "version"],
+        "properties": {
+          "description": { "type": "string" },
+          "role": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "authors": { "type": "array", "items": { "type": "object" } },
+          "version": { "type": "string" },
+          "tools": { "type": "array", "items": { "type": "string" } },
+          "model_scores": {
+            "type": "object",
+            "additionalProperties": { "type": "number" }
+          }
+        }
+      }
+    },
+    "adapters": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["model", "size_class", "provider"],
+        "properties": {
+          "model": { "type": "string" },
+          "size_class": { "type": "string" },
+          "provider": { "type": "string" },
+          "score": { "type": "number" },
+          "contributor": { "type": "string" },
+          "has_lora": { "type": "boolean" }
+        }
+      }
+    },
+    "connectors": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["name", "language", "platforms"],
+        "properties": {
+          "name": { "type": "string" },
+          "language": { "type": "string" },
+          "platforms": { "type": "array", "items": { "type": "string" } },
+          "author": { "type": "string" },
+          "version": { "type": "string" }
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "total_nerves": { "type": "integer" },
+        "total_adapters": { "type": "integer" },
+        "total_connectors": { "type": "integer" }
+      }
+    },
+    "leaderboard": {
+      "type": "object",
+      "description": "Top scores by size_class",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "model": { "type": "string" },
+            "score": { "type": "number" },
+            "contributor": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
