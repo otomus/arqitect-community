@@ -2,29 +2,15 @@
 
 Bridges Telegram bot messages to the Sentient brain via Redis using [Telegraf](https://telegraf.js.org/).
 
-## Setup
+This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency. Sentient's `start.sh` handles launching it automatically.
 
-1. Create a bot with [@BotFather](https://t.me/BotFather) on Telegram and get your bot token.
+## Prerequisites
 
-2. Install dependencies:
-   ```bash
-   cd connectors/telegram
-   npm install
-   ```
-
-3. Create config:
-   ```bash
-   cp config-template.json config.json
-   ```
-
-4. Add your `bot_token` to `config.json`.
-
-5. Start the connector:
-   ```bash
-   node connector.js
-   ```
+Create a bot with [@BotFather](https://t.me/BotFather) on Telegram and get your bot token. Add it to `config.json`.
 
 ## Configuration
+
+Copy `config-template.json` to `config.json` and fill in your values.
 
 | Field | Required | Description |
 |-------|----------|-------------|
@@ -56,9 +42,3 @@ Bridges Telegram bot messages to the Sentient brain via Redis using [Telegraf](h
 | Publish | `telegram:monitor` | Forward monitor group messages |
 | Subscribe | `brain:response` | Receive brain responses |
 | Subscribe | `brain:audio` | Receive TTS audio |
-
-## Requirements
-
-- Node.js 18+
-- Redis server running locally
-- Telegram bot token from @BotFather

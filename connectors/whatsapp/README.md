@@ -2,29 +2,15 @@
 
 Bridges WhatsApp messages to the Sentient brain via Redis using [Baileys](https://github.com/WhiskeySockets/Baileys).
 
-## Setup
+This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency. Sentient's `start.sh` handles launching it automatically.
 
-1. Install dependencies:
-   ```bash
-   cd connectors/whatsapp
-   npm install
-   ```
+## First Run
 
-2. Create config:
-   ```bash
-   cp config-template.json config.json
-   ```
-
-3. Edit `config.json` with your settings (see Configuration below).
-
-4. Start the connector:
-   ```bash
-   node connector.js
-   ```
-
-5. On first run, scan the QR code displayed in terminal with WhatsApp (Linked Devices > Link a Device). Session persists in `auth_store/` for subsequent runs.
+On first launch, a QR code is displayed in the terminal. Scan it with WhatsApp (Linked Devices > Link a Device). The session persists in `auth_store/` so subsequent runs reconnect automatically.
 
 ## Configuration
+
+Copy `config-template.json` to `config.json` and adjust as needed.
 
 | Field | Required | Description |
 |-------|----------|-------------|
@@ -56,9 +42,3 @@ Bridges WhatsApp messages to the Sentient brain via Redis using [Baileys](https:
 | Publish | `whatsapp:monitor` | Forward monitor group messages |
 | Subscribe | `brain:response` | Receive brain responses |
 | Subscribe | `brain:audio` | Receive TTS audio |
-
-## Requirements
-
-- Node.js 18+
-- Redis server running locally
-- WhatsApp account for QR pairing
