@@ -10,29 +10,30 @@ Community hub for sharing brain adapters, nerve bundles, and connector implement
 | `adapters/brain/` | Brain adapters | Per-model system prompts, LoRA weights, qualification scores |
 | `connectors/` | Connectors | Full implementations for messaging platforms |
 
-## Quick Start
+## How It Works
 
-### Install a nerve from the community
+Nerves are **not manually installed**. When Sentient's brain synthesizes a nerve, it automatically checks this community repo for a matching bundle. If one exists, the proven identity (system prompt, examples, tools, test cases) is used instead of generating from scratch.
+
+### Sync community content
 
 ```bash
-# In your sentient directory
-python cli.py nerve install weather_nerve
+# Pull the latest manifest and bundles to your local cache
+python cli.py community sync
 ```
 
-### Export and share your nerve
+After syncing, the synthesis pipeline will automatically use community bundles when creating nerves that match.
+
+### Search available nerves
 
 ```bash
-# Export a qualified nerve
-python cli.py export nerve my_nerve
+python cli.py community search "weather"
+```
 
-# Contribute it to the community
+### Contribute a nerve
+
+```bash
+# Export a qualified nerve and open a PR
 python cli.py contribute nerve my_nerve
-```
-
-### Browse available nerves
-
-```bash
-python cli.py nerve search "weather"
 ```
 
 ## Contributing
