@@ -107,10 +107,13 @@ def collect_connectors() -> dict:
 
         connectors[name] = {
             "name": meta.get("name", name),
+            "version": meta.get("version", ""),
+            "description": meta.get("description", ""),
             "language": meta.get("language", ""),
             "platforms": meta.get("platforms", []),
             "author": meta.get("author", {}).get("github", ""),
-            "version": meta.get("version", ""),
+            "capabilities": meta.get("capabilities", {}),
+            "config_fields": meta.get("config_fields", []),
         }
 
     return connectors

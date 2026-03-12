@@ -1,26 +1,147 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-11T19:00:06.089772+00:00",
+  "generated_at": "2026-03-12T07:02:06.932954+00:00",
   "nerves": {},
   "adapters": {},
   "connectors": {
     "telegram": {
       "name": "telegram",
+      "version": "1.0.0",
+      "description": "Telegram connector using Telegraf \u2014 bridges Telegram bot messages to Sentient brain via Redis",
       "language": "javascript",
       "platforms": [
         "telegram"
       ],
       "author": "otomus",
-      "version": "1.0.0"
+      "capabilities": {
+        "incoming": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "sticker",
+          "document",
+          "location",
+          "contact",
+          "poll"
+        ],
+        "outgoing": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "sticker",
+          "document",
+          "location",
+          "contact",
+          "poll"
+        ]
+      },
+      "config_fields": [
+        {
+          "name": "bot_token",
+          "required": true,
+          "secret": true,
+          "description": "Telegram bot token from @BotFather"
+        },
+        {
+          "name": "bot_name",
+          "required": false,
+          "secret": false,
+          "description": "Bot display name (default: Sentient)"
+        },
+        {
+          "name": "bot_aliases",
+          "required": false,
+          "secret": false,
+          "description": "Alternative names the bot responds to"
+        },
+        {
+          "name": "whitelisted_users",
+          "required": false,
+          "secret": false,
+          "description": "Telegram user IDs allowed to interact"
+        },
+        {
+          "name": "whitelisted_groups",
+          "required": false,
+          "secret": false,
+          "description": "Telegram group IDs to process messages from"
+        },
+        {
+          "name": "monitor_groups",
+          "required": false,
+          "secret": false,
+          "description": "Group IDs to observe read-only"
+        }
+      ]
     },
     "whatsapp": {
       "name": "whatsapp",
+      "version": "1.0.0",
+      "description": "WhatsApp connector using Baileys \u2014 bridges WhatsApp messages to Sentient brain via Redis",
       "language": "javascript",
       "platforms": [
         "whatsapp"
       ],
       "author": "otomus",
-      "version": "1.0.0"
+      "capabilities": {
+        "incoming": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "sticker",
+          "document",
+          "location",
+          "contact",
+          "poll"
+        ],
+        "outgoing": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "sticker",
+          "document",
+          "location",
+          "contact",
+          "poll",
+          "reaction"
+        ]
+      },
+      "config_fields": [
+        {
+          "name": "bot_name",
+          "required": false,
+          "secret": false,
+          "description": "Bot display name (default: Sentient)"
+        },
+        {
+          "name": "bot_aliases",
+          "required": false,
+          "secret": false,
+          "description": "Alternative names the bot responds to"
+        },
+        {
+          "name": "whitelisted_users",
+          "required": false,
+          "secret": false,
+          "description": "Phone numbers allowed to interact"
+        },
+        {
+          "name": "whitelisted_groups",
+          "required": false,
+          "secret": false,
+          "description": "Group IDs to process messages from"
+        },
+        {
+          "name": "monitor_groups",
+          "required": false,
+          "secret": false,
+          "description": "Group IDs to observe read-only"
+        }
+      ]
     }
   },
   "stats": {
