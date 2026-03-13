@@ -277,32 +277,6 @@
       ],
       "category": "developer"
     },
-    "dad_jokes": {
-      "name": "dad_jokes",
-      "version": "1.0.0",
-      "description": "Dad jokes generator \u2014 generate, fetch random, rate, and categorize dad jokes",
-      "source": "npm",
-      "package": "dad-jokes-mcp-server",
-      "command": [
-        "npx",
-        "-y",
-        "dad-jokes-mcp-server"
-      ],
-      "auth_type": "none",
-      "tools": [
-        "generate_joke",
-        "random_joke",
-        "rate_joke",
-        "get_categories"
-      ],
-      "capabilities": [
-        "jokes",
-        "humor",
-        "funny",
-        "entertainment"
-      ],
-      "category": "entertainment"
-    },
     "duckduckgo": {
       "name": "duckduckgo",
       "version": "1.0.0",
@@ -658,7 +632,7 @@
     "total_adapters": 0,
     "total_connectors": 2,
     "total_tools": 1,
-    "total_mcps": 19
+    "total_mcps": 18
   },
   "leaderboard": {}
 }
