@@ -1,5 +1,6 @@
 {
   "model": "core",
+  "description": "Router — reads user messages and routes to the right nerve. Never answers directly.",
   "size_class": "tiny",
   "provider": "gguf",
   "contributor": {

@@ -1,5 +1,6 @@
 {
   "model": "core",
+  "description": "Sentient's own identity and persona — who Sentient is, what it can do, its personality.",
   "size_class": "tiny",
   "provider": "gguf",
   "contributor": {

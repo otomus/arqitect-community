@@ -1,5 +1,6 @@
 {
   "model": "core",
+  "description": "Code planner — breaks code tasks into smallest units, one per step.",
   "size_class": "tiny",
   "provider": "gguf",
   "contributor": {

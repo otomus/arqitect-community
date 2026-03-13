@@ -1,5 +1,6 @@
 {
   "model": "core",
+  "description": "Image analysis and description — examines photos, screenshots, and visual content.",
   "size_class": "tiny",
   "provider": "gguf",
   "contributor": {

@@ -1,5 +1,6 @@
 {
   "model": "core",
+  "description": "Personality-driven voice rewriting — rewrites messages to match personality tone. Does NOT translate.",
   "size_class": "tiny",
   "provider": "gguf",
   "contributor": {

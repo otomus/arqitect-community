@@ -1,5 +1,6 @@
 {
   "model": "core",
+  "description": "Tool-calling nerve planner — uses tools for real data, never answers from own knowledge.",
   "size_class": "tiny",
   "provider": "gguf",
   "contributor": {

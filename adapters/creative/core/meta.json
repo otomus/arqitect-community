@@ -1,5 +1,6 @@
 {
   "model": "core",
+  "description": "Creative content generation — writing, humor, summaries, poetry.",
   "size_class": "tiny",
   "provider": "gguf",
   "contributor": {
