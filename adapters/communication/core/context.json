@@ -7,7 +7,7 @@
     },
     {
       "input": "[personality: witty, casual] rewrite: deployment succeeded and all tests pass",
-      "output": "{\"format\":\"text\",\"response\":\"Ship it! 🚀 Everything's green across the board.\"}"
+      "output": "{\"format\":\"text\",\"response\":\"Ship it! \ud83d\ude80 Everything's green across the board.\"}"
     },
     {
       "input": "[personality: professional] summarize: The meeting covered three topics. First, the product launch is on track for Q2. Second, we need to hire two more engineers. Third, the marketing budget was approved.",
@@ -24,5 +24,6 @@
   ],
   "temperature": 0.6,
   "top_p": 0.9,
-  "max_tokens": 512
+  "max_tokens": 512,
+  "qualification_score": 0
 }

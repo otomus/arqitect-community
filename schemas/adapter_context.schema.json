@@ -38,6 +38,12 @@
     "stop_sequences": {
       "type": "array",
       "items": { "type": "string" }
+    },
+    "qualification_score": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Evaluation score from running system (0 = untested, 1 = perfect). High watermark — MRs with lower scores get rejected by reviewers."
     }
   }
 }

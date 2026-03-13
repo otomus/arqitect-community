@@ -20,5 +20,6 @@
   ],
   "temperature": 0.8,
   "top_p": 0.95,
-  "max_tokens": 512
+  "max_tokens": 512,
+  "qualification_score": 0
 }
