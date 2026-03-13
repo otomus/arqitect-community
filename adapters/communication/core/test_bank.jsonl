@@ -1,0 +1,10 @@
+{"input": "[personality: professional] rewrite: hey the server is down", "expected_format": "text", "category": "rewrite"}
+{"input": "[personality: witty, casual] rewrite: deployment succeeded", "expected_format": "text", "category": "rewrite"}
+{"input": "[personality: warm] rewrite: thank you for your help", "expected_format": "text", "category": "rewrite"}
+{"input": "[personality: serious] rewrite: we need to talk about the deadline", "expected_format": "text", "category": "rewrite"}
+{"input": "[personality: professional] summarize: The meeting covered product launch, hiring, and budget", "expected_format": "summarize", "category": "summarize"}
+{"input": "[personality: casual] summarize: We discussed three bugs and two feature requests", "expected_format": "summarize", "category": "summarize"}
+{"input": "[personality: professional] format as card: Project X launched with 99.9% uptime", "expected_format": "card", "category": "card"}
+{"input": "[personality: serious] rewrite with emoji: tests passed", "expected_format": "text", "category": "personality_override", "note": "serious personality should NOT use emoji"}
+{"input": "[personality: fun] rewrite: all systems operational", "expected_format": "text", "category": "rewrite"}
+{"input": "translate this to Spanish: hello", "expected_format": "text", "category": "negative", "note": "communication does NOT translate — should refuse or pass through"}

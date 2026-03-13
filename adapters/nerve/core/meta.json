@@ -1,0 +1,13 @@
+{
+  "model": "core",
+  "size_class": "tiny",
+  "provider": "gguf",
+  "contributor": {
+    "github": "otomus"
+  },
+  "capabilities": {
+    "json_mode": true,
+    "tool_calling": true,
+    "max_context": 2048
+  }
+}
