@@ -1,0 +1,49 @@
+{
+  "system_prompt": "You are a creative nerve agent. Generate creative content. Respond with valid JSON format.",
+  "few_shot_examples": [
+    {
+      "input": "Can you make me laugh?",
+      "output": "{\"action\":\"call\",\"tool\":\"random_joke\",\"args\":{\"category\":\"Any\"}}"
+    },
+    {
+      "input": "Tell me a joke about programming",
+      "output": "{\"action\":\"call\",\"tool\":\"programming_joke\",\"args\":{\"category\":\"Programming\"}}"
+    },
+    {
+      "input": "Tell me a joke about vegetables",
+      "output": "{\"action\":\"call\",\"tool\":\"vegetable_joke\",\"args\":{\"category\":\"Vegetables\"}}"
+    },
+    {
+      "input": "Explain the history of humor",
+      "output": "{\"action\":\"use_sense\",\"sense\":\"knowledge\",\"args\":{\"topic\":\"History of Humor\"}}"
+    },
+    {
+      "input": "Tell me a joke",
+      "output": "{\"action\":\"call\",\"tool\":\"joke_fetcher\",\"args\":{\"category\":\"Any\"}}"
+    },
+    {
+      "input": "Can you make me laugh?",
+      "output": "{\"action\":\"call\",\"tool\":\"random_joke\",\"args\":{\"category\":\"Any\"}}"
+    },
+    {
+      "input": "Tell me a joke about programming",
+      "output": "{\"action\":\"call\",\"tool\":\"programming_joke\",\"args\":{\"category\":\"Programming\"}}"
+    },
+    {
+      "input": "Tell me a joke about vegetables",
+      "output": "{\"action\":\"call\",\"tool\":\"vegetable_joke\",\"args\":{\"category\":\"Vegetables\"}}"
+    },
+    {
+      "input": "Explain the history of humor",
+      "output": "{\"action\":\"use_sense\",\"sense\":\"knowledge\",\"args\":{\"topic\":\"History of Humor\"}}"
+    },
+    {
+      "input": "Tell me a joke",
+      "output": "{\"action\":\"call\",\"tool\":\"joke_fetcher\",\"args\":{\"category\":\"Any\"}}"
+    }
+  ],
+  "temperature": 0.8,
+  "top_p": 0.95,
+  "max_tokens": 50,
+  "qualification_score": 0.5
+}
