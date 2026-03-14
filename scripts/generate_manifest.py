@@ -49,43 +49,80 @@ def collect_nerves() -> dict:
 
 
 def collect_adapters() -> dict:
-    """Walk adapters/brain/ and extract adapter info."""
+    """Walk adapters/{role}/{size_class}/[{model_name}/] and extract adapter info.
+
+    Structure:
+        adapters/{role}/{size_class}/              — size-class default adapter
+        adapters/{role}/{size_class}/{model_name}/ — model-specific adapter
+
+    Fallback order at runtime:
+        1. exact model → 2. size_class default → 3. tinylm (ultimate fallback)
+    """
     adapters = {}
-    adapters_dir = os.path.join(REPO_ROOT, "adapters", "brain")
-    if not os.path.isdir(adapters_dir):
+    adapters_root = os.path.join(REPO_ROOT, "adapters")
+    if not os.path.isdir(adapters_root):
         return adapters
 
-    for name in sorted(os.listdir(adapters_dir)):
-        meta_path = os.path.join(adapters_dir, name, "meta.json")
-        if not os.path.exists(meta_path):
-            continue
-        try:
-            with open(meta_path) as f:
-                meta = json.load(f)
-        except (json.JSONDecodeError, OSError):
+    for role in sorted(os.listdir(adapters_root)):
+        role_dir = os.path.join(adapters_root, role)
+        if not os.path.isdir(role_dir):
             continue
 
-        # Get score from qualification.json if it exists
-        score = None
-        qual_path = os.path.join(adapters_dir, name, "qualification.json")
-        if os.path.exists(qual_path):
-            try:
-                with open(qual_path) as f:
-                    qual = json.load(f)
-                score = qual.get("overall_score")
-            except (json.JSONDecodeError, OSError):
-                pass
+        for size_class in sorted(os.listdir(role_dir)):
+            size_dir = os.path.join(role_dir, size_class)
+            if not os.path.isdir(size_dir):
+                continue
 
-        adapters[name] = {
-            "model": meta.get("model", name),
-            "size_class": meta.get("size_class", ""),
-            "provider": meta.get("provider", ""),
-            "score": score,
-            "contributor": meta.get("contributor", {}).get("github", ""),
-            "has_lora": meta.get("has_lora", False),
-        }
+            # Collect size-class default adapter
+            _collect_adapter_entry(adapters, size_dir, role, size_class, model_name=None)
+
+            # Collect model-specific adapters within this size class
+            for model_name in sorted(os.listdir(size_dir)):
+                model_dir = os.path.join(size_dir, model_name)
+                if os.path.isdir(model_dir):
+                    _collect_adapter_entry(adapters, model_dir, role, size_class, model_name)
 
     return adapters
+
+
+def _collect_adapter_entry(adapters: dict, adapter_dir: str, role: str,
+                           size_class: str, model_name: str | None) -> None:
+    """Read a single adapter directory and add it to the adapters dict."""
+    meta_path = os.path.join(adapter_dir, "meta.json")
+    if not os.path.exists(meta_path):
+        return
+    try:
+        with open(meta_path) as f:
+            meta = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return
+
+    # Get score from qualification.json if it exists
+    score = None
+    qual_path = os.path.join(adapter_dir, "qualification.json")
+    if os.path.exists(qual_path):
+        try:
+            with open(qual_path) as f:
+                qual = json.load(f)
+            score = qual.get("overall_score")
+        except (json.JSONDecodeError, OSError):
+            pass
+
+    # Key format: role/size_class or role/size_class/model_name
+    if model_name:
+        key = f"{role}/{size_class}/{model_name}"
+    else:
+        key = f"{role}/{size_class}"
+
+    adapters[key] = {
+        "role": role,
+        "model": meta.get("model", model_name or size_class),
+        "size_class": meta.get("size_class", size_class),
+        "provider": meta.get("provider", ""),
+        "score": score,
+        "contributor": meta.get("contributor", {}).get("github", ""),
+        "has_lora": meta.get("has_lora", False),
+    }
 
 
 def collect_tools() -> dict:

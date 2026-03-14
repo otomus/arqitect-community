@@ -326,18 +326,28 @@ def main():
                 print(f"Validating nerve: {name}")
                 errors.extend(validate_nerve(nerve_dir))
 
-    # Validate all adapters (across all roles)
+    # Validate all adapters (across all roles, size classes, and model-specific)
+    # Structure: adapters/{role}/{size_class}/[context.json, meta.json]
+    #            adapters/{role}/{size_class}/{model_name}/[context.json, meta.json]
     adapters_root = os.path.join(REPO_ROOT, "adapters")
     if os.path.isdir(adapters_root):
         for role in sorted(os.listdir(adapters_root)):
             role_dir = os.path.join(adapters_root, role)
             if not os.path.isdir(role_dir):
                 continue
-            for name in sorted(os.listdir(role_dir)):
-                adapter_dir = os.path.join(role_dir, name)
-                if os.path.isdir(adapter_dir):
-                    print(f"Validating adapter: {role}/{name}")
-                    errors.extend(validate_adapter(adapter_dir))
+            for size_class in sorted(os.listdir(role_dir)):
+                size_dir = os.path.join(role_dir, size_class)
+                if not os.path.isdir(size_dir):
+                    continue
+                # Validate the size-class level adapter
+                print(f"Validating adapter: {role}/{size_class}")
+                errors.extend(validate_adapter(size_dir))
+                # Validate model-specific adapters within this size class
+                for model_name in sorted(os.listdir(size_dir)):
+                    model_dir = os.path.join(size_dir, model_name)
+                    if os.path.isdir(model_dir):
+                        print(f"Validating adapter: {role}/{size_class}/{model_name}")
+                        errors.extend(validate_adapter(model_dir))
 
     # Validate all connectors
     connectors_dir = os.path.join(REPO_ROOT, "connectors")

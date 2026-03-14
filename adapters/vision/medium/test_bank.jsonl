@@ -1,0 +1,8 @@
+{"input": "describe this image", "expected_field": "description", "category": "describe"}
+{"input": "what do you see?", "expected_field": "description", "category": "describe"}
+{"input": "what text is in this screenshot?", "expected_field": "description", "category": "ocr"}
+{"input": "how many people are in this photo?", "expected_field": "description", "category": "counting"}
+{"input": "what color is the car?", "expected_field": "description", "category": "detail"}
+{"input": "is there any food in this image?", "expected_field": "description", "category": "detection"}
+{"input": "describe the layout of this UI", "expected_field": "description", "category": "ui_analysis"}
+{"input": "what brand logos can you see?", "expected_field": "description", "category": "detection"}

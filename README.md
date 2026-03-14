@@ -8,7 +8,7 @@ Community hub for sharing connector implementations and discovering nerves and b
 |-----------|----------|-------------|------------|
 | `connectors/` | Connectors | Full implementations for messaging platforms | Community PRs |
 | `nerves/` | Nerve bundles | Identity + tools + test cases for autonomous agents | Sentient core |
-| `adapters/brain/` | Brain adapters | Per-model system prompts, LoRA weights, qualification scores | Sentient core |
+| `adapters/` | Adapters | Per-role, per-size-class system prompts with model-specific overrides | Sentient core |
 
 ## Connectors — Community Contributions
 

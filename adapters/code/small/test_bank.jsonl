@@ -1,0 +1,10 @@
+{"input": "create an Express controller for /users", "expected_action": "use_sense", "expected_sense": "touch", "category": "read_first"}
+{"input": "write a python function to reverse a string", "expected_action": "answer", "category": "single_unit"}
+{"input": "write a SQL query to find duplicate emails", "expected_action": "answer", "category": "single_unit"}
+{"input": "create a CSS grid layout for a dashboard", "expected_action": "answer", "category": "single_unit"}
+{"input": "write a bash script to backup a directory", "expected_action": "answer", "category": "single_unit"}
+{"input": "read src/app.ts and add a new route", "expected_action": "use_sense", "expected_sense": "touch", "category": "read_first"}
+{"input": "write the test file for utils.py", "expected_action": "use_sense", "expected_sense": "touch", "category": "read_first"}
+{"input": "refactor this function but I didn't share the code", "expected_action": "needs", "expected_missing": "the function code", "category": "needs"}
+{"input": "add validation but which field?", "expected_action": "needs", "expected_missing": "field name", "category": "needs"}
+{"input": "I need a typescript compiler tool", "expected_action": "acquire", "category": "acquire"}

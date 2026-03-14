@@ -1,0 +1,14 @@
+{
+  "model": "small",
+  "description": "Sentient's own identity and persona — who Sentient is, what it can do, its personality.",
+  "size_class": "small",
+  "provider": "gguf",
+  "contributor": {
+    "github": "otomus"
+  },
+  "capabilities": {
+    "json_mode": true,
+    "tool_calling": false,
+    "max_context": 4096
+  }
+}

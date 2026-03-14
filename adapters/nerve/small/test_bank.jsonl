@@ -1,0 +1,14 @@
+{"input": "fetch me a joke", "expected_action": "call", "expected_tool": "joke_fetcher", "category": "tool_call"}
+{"input": "get the weather in Paris", "expected_action": "call", "expected_tool": "get_weather", "category": "tool_call"}
+{"input": "search for bitcoin price", "expected_action": "call", "expected_tool": "get_price", "category": "tool_call"}
+{"input": "search Wikipedia for Albert Einstein", "expected_action": "call", "expected_tool": "search_wikipedia", "category": "tool_call"}
+{"input": "get current time in Tokyo", "expected_action": "call", "expected_tool": "get_current_time", "category": "tool_call"}
+{"input": "take a screenshot", "expected_action": "use_sense", "expected_sense": "see_screenshot", "category": "sense"}
+{"input": "read the file config.yaml", "expected_action": "use_sense", "expected_sense": "touch", "category": "sense"}
+{"input": "play this audio file", "expected_action": "use_sense", "expected_sense": "speak", "category": "sense"}
+{"input": "analyze this image: photo.jpg", "expected_action": "use_sense", "expected_sense": "see", "category": "sense"}
+{"input": "I need a tool that can send emails", "expected_action": "acquire", "category": "acquire"}
+{"input": "I need a tool to generate PDFs", "expected_action": "acquire", "category": "acquire"}
+{"input": "search for hotels but I didn't say where", "expected_action": "needs", "expected_missing": "location", "category": "needs"}
+{"input": "book a flight but no dates given", "expected_action": "needs", "expected_missing": "dates", "category": "needs"}
+{"input": "convert temperature but no value given", "expected_action": "needs", "expected_missing": "temperature value", "category": "needs"}

@@ -1,10 +1,254 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-13T12:04:25.270725+00:00",
+  "generated_at": "2026-03-14T16:48:32.226982+00:00",
   "nerves": {},
   "adapters": {
-    "core": {
-      "model": "core",
+    "awareness/large": {
+      "role": "awareness",
+      "model": "large",
+      "size_class": "large",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "awareness/medium": {
+      "role": "awareness",
+      "model": "medium",
+      "size_class": "medium",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "awareness/small": {
+      "role": "awareness",
+      "model": "small",
+      "size_class": "small",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "awareness/tinylm": {
+      "role": "awareness",
+      "model": "tinylm",
+      "size_class": "tiny",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "brain/large": {
+      "role": "brain",
+      "model": "large",
+      "size_class": "large",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "brain/medium": {
+      "role": "brain",
+      "model": "medium",
+      "size_class": "medium",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "brain/small": {
+      "role": "brain",
+      "model": "small",
+      "size_class": "small",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "brain/tinylm": {
+      "role": "brain",
+      "model": "tinylm",
+      "size_class": "tiny",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "code/large": {
+      "role": "code",
+      "model": "large",
+      "size_class": "large",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "code/medium": {
+      "role": "code",
+      "model": "medium",
+      "size_class": "medium",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "code/small": {
+      "role": "code",
+      "model": "small",
+      "size_class": "small",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "code/tinylm": {
+      "role": "code",
+      "model": "tinylm",
+      "size_class": "tiny",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "communication/large": {
+      "role": "communication",
+      "model": "large",
+      "size_class": "large",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "communication/medium": {
+      "role": "communication",
+      "model": "medium",
+      "size_class": "medium",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "communication/small": {
+      "role": "communication",
+      "model": "small",
+      "size_class": "small",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "communication/tinylm": {
+      "role": "communication",
+      "model": "tinylm",
+      "size_class": "tiny",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "creative/large": {
+      "role": "creative",
+      "model": "large",
+      "size_class": "large",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "creative/medium": {
+      "role": "creative",
+      "model": "medium",
+      "size_class": "medium",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "creative/small": {
+      "role": "creative",
+      "model": "small",
+      "size_class": "small",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "creative/tinylm": {
+      "role": "creative",
+      "model": "tinylm",
+      "size_class": "tiny",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "nerve/large": {
+      "role": "nerve",
+      "model": "large",
+      "size_class": "large",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "nerve/medium": {
+      "role": "nerve",
+      "model": "medium",
+      "size_class": "medium",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "nerve/small": {
+      "role": "nerve",
+      "model": "small",
+      "size_class": "small",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "nerve/tinylm": {
+      "role": "nerve",
+      "model": "tinylm",
+      "size_class": "tiny",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "vision/large": {
+      "role": "vision",
+      "model": "large",
+      "size_class": "large",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "vision/medium": {
+      "role": "vision",
+      "model": "medium",
+      "size_class": "medium",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "vision/small": {
+      "role": "vision",
+      "model": "small",
+      "size_class": "small",
+      "provider": "gguf",
+      "score": null,
+      "contributor": "otomus",
+      "has_lora": false
+    },
+    "vision/tinylm": {
+      "role": "vision",
+      "model": "tinylm",
       "size_class": "tiny",
       "provider": "gguf",
       "score": null,
@@ -638,7 +882,7 @@
   },
   "stats": {
     "total_nerves": 0,
-    "total_adapters": 1,
+    "total_adapters": 28,
     "total_connectors": 2,
     "total_tools": 1,
     "total_mcps": 18
