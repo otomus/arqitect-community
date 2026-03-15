@@ -1,7 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-15T12:01:21.648949+00:00",
-  "nerves": {},
+  "generated_at": "2026-03-15T12:02:25.333996+00:00",
+  "nerves": {
+    "joke_nerve": {
+      "description": "Generate jokes, puns, and comedic content across various topics. Ensure the humor is appropriate for all audiences.",
+      "role": "creative",
+      "tags": [
+        "creative",
+        "joke"
+      ],
+      "authors": [
+        {
+          "github": "otomus"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "joke_fetcher",
+        "generate_joke",
+        "search_wikipedia",
+        "voice_recognition",
+        "get_article_content",
+        "random_joke"
+      ],
+      "model_scores": {}
+    }
+  },
   "adapters": {
     "awareness/large": {
       "role": "awareness",
@@ -890,7 +914,7 @@
     }
   },
   "stats": {
-    "total_nerves": 0,
+    "total_nerves": 1,
     "total_adapters": 29,
     "total_connectors": 2,
     "total_tools": 1,
