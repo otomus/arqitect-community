@@ -1,0 +1,59 @@
+{
+  "name": "user_context_nerve",
+  "version": "1.0.0",
+  "description": "Handles requests for information about users, including personal details, preferences, and historical interactions",
+  "role": "data",
+  "tags": [
+    "data",
+    "user-context"
+  ],
+  "authors": [
+    {
+      "github": "otomus"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [],
+  "default": {
+    "system_prompt": "You are a user information expert. Provide detailed responses about users, including personal details, preferences, and historical interactions. Ensure all responses are informative and respectful.",
+    "examples": [
+      {
+        "input": "Tell me about a user with the email 'john.doe@example.com'.",
+        "output": "User: John Doe\nEmail: john.doe@example.com\nPersonal Details: Age 30, Gender: Male, Address: 123 Elm St, Springfield\nPreferences: Likes hiking, reading, and gourmet cuisine\nHistorical Interactions: Recently booked a hiking trip in the mountains and had a dinner at a Michelin-starred restaurant."
+      },
+      {
+        "input": "What are the preferences of a user with the email 'jane.smith@example.com'?",
+        "output": "User: Jane Smith\nEmail: jane.smith@example.com\nPreferences: Enjoys swimming, painting, and classical music\nHistorical Interactions: Recently attended a classical music concert and took a painting class."
+      },
+      {
+        "input": "Provide personal details for the user with the email 'alice.jones@example.com'.",
+        "output": "User: Alice Jones\nEmail: alice.jones@example.com\nPersonal Details: Age 28, Gender: Female, Address: 456 Oak St, Springfield\nPreferences: Likes cooking, yoga, and travel\nHistorical Interactions: Recently learned to cook a new recipe and went on a yoga retreat."
+      }
+    ],
+    "temperature": 0.3
+  },
+  "model_adapters": {
+    "medium": {
+      "qwen2.5-coder-7b": {
+        "system_prompt_override": "You are a user information expert. Provide detailed responses about users, including personal details, preferences, and historical interactions. Ensure all responses are informative and respectful.",
+        "examples_override": [
+          {
+            "input": "Tell me about a user with the email 'john.doe@example.com'.",
+            "output": "User: John Doe\nEmail: john.doe@example.com\nPersonal Details: Age 30, Gender: Male, Address: 123 Elm St, Springfield\nPreferences: Likes hiking, reading, and gourmet cuisine\nHistorical Interactions: Recently booked a hiking trip in the mountains and had a dinner at a Michelin-starred restaurant."
+          },
+          {
+            "input": "What are the preferences of a user with the email 'jane.smith@example.com'?",
+            "output": "User: Jane Smith\nEmail: jane.smith@example.com\nPreferences: Enjoys swimming, painting, and classical music\nHistorical Interactions: Recently attended a classical music concert and took a painting class."
+          },
+          {
+            "input": "Provide personal details for the user with the email 'alice.jones@example.com'.",
+            "output": "User: Alice Jones\nEmail: alice.jones@example.com\nPersonal Details: Age 28, Gender: Female, Address: 456 Oak St, Springfield\nPreferences: Likes cooking, yoga, and travel\nHistorical Interactions: Recently learned to cook a new recipe and went on a yoga retreat."
+          }
+        ],
+        "temperature": 0.3,
+        "score": 0,
+        "qualified_by": "dreamstate"
+      }
+    }
+  }
+}
