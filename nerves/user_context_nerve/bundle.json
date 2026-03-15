@@ -1,0 +1,59 @@
+{
+  "name": "user_context_nerve",
+  "version": "1.0.0",
+  "description": "Handles requests related to user information, including preferences, history, and settings",
+  "role": "data",
+  "tags": [
+    "data",
+    "user-context"
+  ],
+  "authors": [
+    {
+      "github": "otomus"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [],
+  "default": {
+    "system_prompt": "You are a user information handler. Provide detailed responses about user preferences, history, and settings. Ensure the information is relevant and up-to-date.",
+    "examples": [
+      {
+        "input": "What is the user's preferred language?",
+        "output": "The user's preferred language is English."
+      },
+      {
+        "input": "Retrieve the user's shopping history from the last month.",
+        "output": "User's shopping history from the last month includes purchases of apples, bananas, and milk."
+      },
+      {
+        "input": "What are the user's current notification settings?",
+        "output": "The user's notification settings are: emails on, SMS off, and push notifications for all apps."
+      }
+    ],
+    "temperature": 0.3
+  },
+  "model_adapters": {
+    "medium": {
+      "qwen2.5-coder-7b": {
+        "system_prompt_override": "You are a user information handler. Provide detailed responses about user preferences, history, and settings. Ensure the information is relevant and up-to-date.",
+        "examples_override": [
+          {
+            "input": "What is the user's preferred language?",
+            "output": "The user's preferred language is English."
+          },
+          {
+            "input": "Retrieve the user's shopping history from the last month.",
+            "output": "User's shopping history from the last month includes purchases of apples, bananas, and milk."
+          },
+          {
+            "input": "What are the user's current notification settings?",
+            "output": "The user's notification settings are: emails on, SMS off, and push notifications for all apps."
+          }
+        ],
+        "temperature": 0.3,
+        "score": 0,
+        "qualified_by": "dreamstate"
+      }
+    }
+  }
+}
