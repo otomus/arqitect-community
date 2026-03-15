@@ -36,9 +36,13 @@ jobs:
             ERRORS=1
           fi
 
-          if echo "$CHANGED" | grep -q '^adapters/'; then
-            MSG="adapters/ is managed by sentient-core. Community PRs cannot modify adapters."
+          # adapters/{role}/{size_class}/ defaults are core-managed
+          # adapters/{role}/{size_class}/{model_name}/ are community-contributed
+          DEFAULT_ADAPTER_FILES=$(echo "$CHANGED" | grep '^adapters/' | grep -v '^adapters/[^/]*/[^/]*/[^/]*/' || true)
+          if [ -n "$DEFAULT_ADAPTER_FILES" ]; then
+            MSG="Default adapter files are managed by the core team. Community PRs can only add model-specific adapters under adapters/{role}/{size_class}/{model_name}/."
             echo "::error::$MSG"
+            echo "  Protected files: $DEFAULT_ADAPTER_FILES"
             REASONS="${REASONS}- ${MSG}\n"
             ERRORS=1
           fi
@@ -71,7 +75,7 @@ jobs:
 
           if [ "$ERRORS" -ne 0 ]; then
             echo ""
-            echo "Only nerves/, connectors/, tools/, and mcps/ can be modified by community PRs."
+            echo "Community PRs can modify: nerves/, adapters/{role}/{size}/{model}/, connectors/, tools/, mcps/"
             echo "See CONTRIBUTING.md for details."
             exit 1
           fi
@@ -82,7 +86,7 @@ jobs:
         with:
           script: |
             const reasons = `${{ steps.path-check.outputs.reasons }}`;
-            const body = `## Validation Failed\n\nThis PR modifies protected paths:\n\n${reasons}\nOnly \`nerves/\`, \`connectors/\`, \`tools/\`, and \`mcps/\` can be modified by community PRs. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.`;
+            const body = `## Validation Failed\n\nThis PR modifies protected paths:\n\n${reasons}\nCommunity PRs can modify: \`nerves/\`, \`adapters/{role}/{size}/{model}/\`, \`connectors/\`, \`tools/\`, \`mcps/\`. Default adapter files are core-managed. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
