@@ -21,7 +21,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install jsonschema
+        run: pip install jsonschema pytest
 
       - name: Reject changes to auto-managed files
         id: path-check
@@ -64,6 +64,9 @@ jobs:
 
           check_path '^\.github/' \
             "CI workflows are maintained by the core team. Community PRs cannot modify .github/."
+
+          check_path '^tests/' \
+            "tests/ are maintained by the core team. Community PRs cannot modify tests."
 
           echo "errors=$ERRORS" >> "$GITHUB_OUTPUT"
           echo "reasons<<EOF" >> "$GITHUB_OUTPUT"
@@ -217,6 +220,32 @@ jobs:
               });
             } catch (err) {
               console.error(`Failed to comment/close PR on score failure: ${err.message}`);
+            }
+
+      - name: Run tests
+        id: test-check
+        run: python -m pytest tests/ -v 2>&1 | tee /tmp/test-output.txt
+
+      - name: Comment test failures on PR
+        if: failure() && steps.test-check.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const output = fs.readFileSync('/tmp/test-output.txt', 'utf8');
+            const lines = output.split('\n');
+            const failures = lines.filter(l => l.match(/^(FAILED|ERROR|tests\/.*FAILED)/));
+            const summary = lines.slice(-3).join('\n');
+            const body = `## Tests Failed\n\n\`\`\`\n${failures.join('\n')}\n\n${summary}\n\`\`\`\n\nPlease fix the failing tests and push again.`;
+            try {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: body
+              });
+            } catch (err) {
+              console.error(`Failed to post test-failure comment: ${err.message}`);
             }
 
       - name: Run secret scan
