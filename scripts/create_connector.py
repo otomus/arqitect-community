@@ -17,8 +17,50 @@ import textwrap
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# --- Language configuration constants ---
+
+LANG_ALIASES = {"js": "javascript", "ts": "typescript", "py": "python"}
+SUPPORTED_LANGUAGES = ["javascript", "typescript", "python", "js", "ts", "py"]
+
+LANG_FILE_EXT = {
+    "javascript": "js",
+    "typescript": "ts",
+    "python": "py",
+}
+
+LANG_DEPS_FILE = {
+    "javascript": "package.json",
+    "typescript": "package.json",
+    "python": "requirements.txt",
+}
+
+LANG_SETUP_INSTRUCTIONS = {
+    "javascript": "```bash\nnpm install\nnode connector.js\n```",
+    "typescript": "```bash\nnpm install\nnpx tsx connector.ts\n```",
+    "python": "```bash\npip install -r requirements.txt\npython connector.py\n```",
+}
+
+
+def _write_json(path: str, data: dict) -> None:
+    """Write a dictionary as pretty-printed JSON with a trailing newline."""
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
+        f.write("\n")
+
+
+def _write_text(path: str, content: str) -> None:
+    """Write a text string to a file."""
+    with open(path, "w") as f:
+        f.write(content)
+
+
+def _file_ext(language: str) -> str:
+    """Return the file extension for a given language."""
+    return LANG_FILE_EXT[language]
+
 
 def create_meta(connector_dir: str, name: str, language: str, platform: str, author: str) -> None:
+    """Generate meta.json with connector metadata and capability declarations."""
     meta = {
         "name": name,
         "version": "1.0.0",
@@ -42,12 +84,11 @@ def create_meta(connector_dir: str, name: str, language: str, platform: str, aut
             "publish": ["brain:task", f"{name}:monitor"],
         },
     }
-    with open(os.path.join(connector_dir, "meta.json"), "w") as f:
-        json.dump(meta, f, indent=2)
-        f.write("\n")
+    _write_json(os.path.join(connector_dir, "meta.json"), meta)
 
 
 def create_config_template(connector_dir: str) -> None:
+    """Generate config-template.json with default configuration values."""
     config = {
         "_instructions": "Copy this file to config.json and fill in your values. config.json is gitignored.",
         "bot_name": "Sentient",
@@ -56,50 +97,20 @@ def create_config_template(connector_dir: str) -> None:
         "whitelisted_groups": [],
         "monitor_groups": [],
     }
-    with open(os.path.join(connector_dir, "config-template.json"), "w") as f:
-        json.dump(config, f, indent=2)
-        f.write("\n")
+    _write_json(os.path.join(connector_dir, "config-template.json"), config)
 
 
 def create_gitignore(connector_dir: str) -> None:
-    with open(os.path.join(connector_dir, ".gitignore"), "w") as f:
-        f.write("node_modules/\nconfig.json\npackage-lock.json\n")
+    """Generate .gitignore to exclude config.json, node_modules, and lockfiles."""
+    _write_text(os.path.join(connector_dir, ".gitignore"),
+                "node_modules/\nconfig.json\npackage-lock.json\n")
 
 
-def create_js_connector(connector_dir: str, name: str, platform: str) -> None:
-    # package.json
-    pkg = {
-        "name": f"sentient-{name}",
-        "private": True,
-        "scripts": {"start": "node connector.js"},
-        "dependencies": {"redis": "^4.6.0"},
-    }
-    with open(os.path.join(connector_dir, "package.json"), "w") as f:
-        json.dump(pkg, f, indent=2)
-        f.write("\n")
+# --- JS / TS connector templates ---
 
-    # connector.js
-    code = textwrap.dedent(f'''\
-        /**
-         * {platform.capitalize()} Connector — bridges {platform} messages to the Sentient brain via Redis.
-         *
-         * Uses the shared ConnectorBase for Redis, config, access control, and response dispatch.
-         * You only need to implement platform-specific setup and send hooks.
-         */
-
-        const ConnectorBase = require("../lib/connector-base");
-        const path = require("path");
-
-        const connector = new ConnectorBase("{name}", __dirname);
-
-        // --- Platform-specific: group detection ---
-        connector.setGroupDetector((chatId) => {{
-          // TODO: Return true if chatId represents a group chat
-          // Example (Telegram): return chatId < 0;
-          // Example (WhatsApp): return String(chatId).endsWith("@g.us");
-          return false;
-        }});
-
+def _js_send_hooks_block(name: str) -> str:
+    """Return the JS send-hooks object literal shared by JS and (partially) TS connectors."""
+    return textwrap.dedent(f'''\
         // --- Platform-specific: send hooks ---
         connector.setSendHooks({{
           async sendText(chatId, text) {{
@@ -151,8 +162,87 @@ def create_js_connector(connector_dir: str, name: str, platform: str) -> None:
           async clearTyping(chatId) {{
             // TODO: Clear typing indicator
           }},
-        }});
+        }});''')
 
+
+def _ts_send_hooks_block(name: str) -> str:
+    """Return the TS send-hooks object literal with type annotations."""
+    return textwrap.dedent(f'''\
+        // --- Platform-specific: send hooks ---
+        connector.setSendHooks({{
+          async sendText(chatId: string, text: string) {{
+            // TODO: Send a text message to chatId
+            console.log(`[{name.upper()}] Would send to ${{chatId}}: ${{text}}`);
+          }},
+
+          async sendImage(chatId: string, caption: string, imageBuffer: Buffer, mime: string) {{
+            // TODO: Send an image with optional caption
+          }},
+
+          async sendAudio(chatId: string, text: string, audioBuffer: Buffer, mime: string) {{
+            // TODO: Send audio/voice message
+          }},
+
+          // Add more send hooks as needed (sendGif, sendSticker, sendDocument, etc.)
+        }});''')
+
+
+def _js_header(name: str, platform: str) -> str:
+    """Return the file header and ConnectorBase import for JS connectors."""
+    return textwrap.dedent(f'''\
+        /**
+         * {platform.capitalize()} Connector — bridges {platform} messages to the Sentient brain via Redis.
+         *
+         * Uses the shared ConnectorBase for Redis, config, access control, and response dispatch.
+         * You only need to implement platform-specific setup and send hooks.
+         */
+
+        const ConnectorBase = require("../lib/connector-base");
+        const path = require("path");
+
+        const connector = new ConnectorBase("{name}", __dirname);''')
+
+
+def _ts_header(name: str, platform: str) -> str:
+    """Return the file header and ConnectorBase import for TS connectors."""
+    return textwrap.dedent(f'''\
+        /**
+         * {platform.capitalize()} Connector — bridges {platform} messages to the Sentient brain via Redis.
+         *
+         * Uses the shared ConnectorBase for Redis, config, access control, and response dispatch.
+         * You only need to implement platform-specific setup and send hooks.
+         */
+
+        const ConnectorBase = require("../lib/connector-base");
+
+        const connector = new ConnectorBase("{name}", __dirname);''')
+
+
+def _js_group_detector() -> str:
+    """Return the JS group-detector callback block."""
+    return textwrap.dedent('''\
+        // --- Platform-specific: group detection ---
+        connector.setGroupDetector((chatId) => {
+          // TODO: Return true if chatId represents a group chat
+          // Example (Telegram): return chatId < 0;
+          // Example (WhatsApp): return String(chatId).endsWith("@g.us");
+          return false;
+        });''')
+
+
+def _ts_group_detector() -> str:
+    """Return the TS group-detector callback block with type annotations."""
+    return textwrap.dedent('''\
+        // --- Platform-specific: group detection ---
+        connector.setGroupDetector((chatId: string | number) => {
+          // TODO: Return true if chatId represents a group chat
+          return false;
+        });''')
+
+
+def _js_setup_and_main(name: str) -> str:
+    """Return the setup function and main entry point for JS connectors."""
+    return textwrap.dedent(f'''\
         // --- Platform-specific: message listener ---
         async function setupPlatform() {{
           // TODO: Initialize your platform SDK/library here
@@ -182,62 +272,12 @@ def create_js_connector(connector_dir: str, name: str, platform: str) -> None:
         main().catch((err) => {{
           console.error(`[{name.upper()}] Fatal:`, err);
           process.exit(1);
-        }});
-    ''')
-    with open(os.path.join(connector_dir, "connector.js"), "w") as f:
-        f.write(code)
+        }});''')
 
 
-def create_ts_connector(connector_dir: str, name: str, platform: str) -> None:
-    # package.json
-    pkg = {
-        "name": f"sentient-{name}",
-        "private": True,
-        "scripts": {"start": "npx tsx connector.ts"},
-        "dependencies": {"redis": "^4.6.0"},
-        "devDependencies": {"tsx": "^4.0.0", "typescript": "^5.0.0"},
-    }
-    with open(os.path.join(connector_dir, "package.json"), "w") as f:
-        json.dump(pkg, f, indent=2)
-        f.write("\n")
-
-    # connector.ts (same structure as JS with type annotations)
-    code = textwrap.dedent(f'''\
-        /**
-         * {platform.capitalize()} Connector — bridges {platform} messages to the Sentient brain via Redis.
-         *
-         * Uses the shared ConnectorBase for Redis, config, access control, and response dispatch.
-         * You only need to implement platform-specific setup and send hooks.
-         */
-
-        const ConnectorBase = require("../lib/connector-base");
-
-        const connector = new ConnectorBase("{name}", __dirname);
-
-        // --- Platform-specific: group detection ---
-        connector.setGroupDetector((chatId: string | number) => {{
-          // TODO: Return true if chatId represents a group chat
-          return false;
-        }});
-
-        // --- Platform-specific: send hooks ---
-        connector.setSendHooks({{
-          async sendText(chatId: string, text: string) {{
-            // TODO: Send a text message to chatId
-            console.log(`[{name.upper()}] Would send to ${{chatId}}: ${{text}}`);
-          }},
-
-          async sendImage(chatId: string, caption: string, imageBuffer: Buffer, mime: string) {{
-            // TODO: Send an image with optional caption
-          }},
-
-          async sendAudio(chatId: string, text: string, audioBuffer: Buffer, mime: string) {{
-            // TODO: Send audio/voice message
-          }},
-
-          // Add more send hooks as needed (sendGif, sendSticker, sendDocument, etc.)
-        }});
-
+def _ts_setup_and_main(name: str) -> str:
+    """Return the setup function and main entry point for TS connectors."""
+    return textwrap.dedent(f'''\
         // --- Platform-specific: message listener ---
         async function setupPlatform() {{
           // TODO: Initialize your platform SDK and set up message handlers
@@ -253,13 +293,57 @@ def create_ts_connector(connector_dir: str, name: str, platform: str) -> None:
         main().catch((err: Error) => {{
           console.error(`[{name.upper()}] Fatal:`, err);
           process.exit(1);
-        }});
-    ''')
-    with open(os.path.join(connector_dir, "connector.ts"), "w") as f:
-        f.write(code)
+        }});''')
+
+
+def _build_node_package_json(name: str, language: str) -> dict:
+    """Build the package.json dict for a JS or TS connector."""
+    pkg = {
+        "name": f"sentient-{name}",
+        "private": True,
+        "scripts": {},
+        "dependencies": {"redis": "^4.6.0"},
+    }
+    if language == "javascript":
+        pkg["scripts"]["start"] = "node connector.js"
+    else:
+        pkg["scripts"]["start"] = "npx tsx connector.ts"
+        pkg["devDependencies"] = {"tsx": "^4.0.0", "typescript": "^5.0.0"}
+    return pkg
+
+
+def create_js_connector(connector_dir: str, name: str, platform: str) -> None:
+    """Generate package.json and connector.js for a JavaScript connector."""
+    _write_json(os.path.join(connector_dir, "package.json"),
+                _build_node_package_json(name, "javascript"))
+
+    sections = [
+        _js_header(name, platform),
+        _js_group_detector(),
+        _js_send_hooks_block(name),
+        _js_setup_and_main(name),
+    ]
+    _write_text(os.path.join(connector_dir, "connector.js"),
+                "\n\n".join(sections) + "\n")
+
+
+def create_ts_connector(connector_dir: str, name: str, platform: str) -> None:
+    """Generate package.json and connector.ts for a TypeScript connector."""
+    _write_json(os.path.join(connector_dir, "package.json"),
+                _build_node_package_json(name, "typescript"))
+
+    sections = [
+        _ts_header(name, platform),
+        _ts_group_detector(),
+        _ts_send_hooks_block(name),
+        _ts_setup_and_main(name),
+    ]
+    _write_text(os.path.join(connector_dir, "connector.ts"),
+                "\n\n".join(sections) + "\n")
 
 
 def create_py_connector(connector_dir: str, name: str, platform: str) -> None:
+    """Generate connector.py and requirements.txt for a Python connector."""
     code = textwrap.dedent(f'''\
         #!/usr/bin/env python3
         """
@@ -334,21 +418,12 @@ def create_py_connector(connector_dir: str, name: str, platform: str) -> None:
             print("[{name.upper()}] Sentient {platform.capitalize()} Connector starting...")
             asyncio.run(main())
     ''')
-    with open(os.path.join(connector_dir, "connector.py"), "w") as f:
-        f.write(code)
-
-    # requirements.txt
-    with open(os.path.join(connector_dir, "requirements.txt"), "w") as f:
-        f.write("redis>=5.0.0\n")
+    _write_text(os.path.join(connector_dir, "connector.py"), code)
+    _write_text(os.path.join(connector_dir, "requirements.txt"), "redis>=5.0.0\n")
 
 
 def create_readme(connector_dir: str, name: str, platform: str, language: str) -> None:
-    lang_setup = {
-        "javascript": "```bash\nnpm install\nnode connector.js\n```",
-        "typescript": "```bash\nnpm install\nnpx tsx connector.ts\n```",
-        "python": "```bash\npip install -r requirements.txt\npython connector.py\n```",
-    }
-
+    """Generate README.md with setup instructions and configuration reference."""
     readme = textwrap.dedent(f"""\
         # {platform.capitalize()} Connector
 
@@ -365,7 +440,7 @@ def create_readme(connector_dir: str, name: str, platform: str, language: str) -
         2. Edit `config.json` with your settings.
 
         3. Start the connector:
-           {lang_setup.get(language, lang_setup["javascript"])}
+           {LANG_SETUP_INSTRUCTIONS.get(language, LANG_SETUP_INSTRUCTIONS["javascript"])}
 
         ## Configuration
 
@@ -381,64 +456,83 @@ def create_readme(connector_dir: str, name: str, platform: str, language: str) -
 
         - Redis server running locally
     """)
-
-    with open(os.path.join(connector_dir, "README.md"), "w") as f:
-        f.write(readme)
+    _write_text(os.path.join(connector_dir, "README.md"), readme)
 
 
-def main():
+# --- CLI entry point ---
+
+_CONNECTOR_CREATORS = {
+    "javascript": create_js_connector,
+    "typescript": create_ts_connector,
+    "python": create_py_connector,
+}
+
+
+def _parse_args() -> argparse.Namespace:
+    """Parse and return command-line arguments."""
     parser = argparse.ArgumentParser(description="Scaffold a new Sentient connector")
     parser.add_argument("name", help="Connector name (lowercase, e.g., discord)")
-    parser.add_argument("--language", "-l", required=True, choices=["javascript", "typescript", "python", "js", "ts", "py"],
+    parser.add_argument("--language", "-l", required=True, choices=SUPPORTED_LANGUAGES,
                         help="Implementation language")
     parser.add_argument("--platform", "-p", help="Platform name (default: same as connector name)")
     parser.add_argument("--author", "-a", default="", help="GitHub username of the author")
-    args = parser.parse_args()
+    return parser.parse_args()
 
+
+def _normalize_inputs(args: argparse.Namespace) -> tuple:
+    """Normalize name, platform, and language from raw CLI arguments."""
     name = args.name.lower().replace("-", "_").replace(" ", "_")
     platform = (args.platform or name).lower()
+    language = LANG_ALIASES.get(args.language, args.language)
+    return name, platform, language, args.author
 
-    # Normalize language aliases
-    lang_map = {"js": "javascript", "ts": "typescript", "py": "python"}
-    language = lang_map.get(args.language, args.language)
 
-    connector_dir = os.path.join(REPO_ROOT, "connectors", name)
-
-    if os.path.exists(connector_dir):
-        print(f"Error: connectors/{name}/ already exists")
-        sys.exit(1)
-
+def _scaffold_connector(connector_dir: str, name: str, platform: str, language: str, author: str) -> None:
+    """Create the connector directory and generate all scaffold files."""
     os.makedirs(connector_dir)
     print(f"Creating connector: {name} ({language}) for {platform}")
 
-    create_meta(connector_dir, name, language, platform, args.author)
+    create_meta(connector_dir, name, language, platform, author)
     create_config_template(connector_dir)
     create_gitignore(connector_dir)
     create_readme(connector_dir, name, platform, language)
+    _CONNECTOR_CREATORS[language](connector_dir, name, platform)
 
-    if language == "javascript":
-        create_js_connector(connector_dir, name, platform)
-    elif language == "typescript":
-        create_ts_connector(connector_dir, name, platform)
-    elif language == "python":
-        create_py_connector(connector_dir, name, platform)
 
+def _print_summary(name: str, language: str) -> None:
+    """Print post-scaffold instructions for the user."""
+    ext = _file_ext(language)
+    deps_file = LANG_DEPS_FILE[language]
     print(f"""
 Connector scaffolded at: connectors/{name}/
 
 Files created:
   meta.json            — Connector metadata
   config-template.json — Config template (copy to config.json)
-  connector.{{'js' if language == 'javascript' else 'ts' if language == 'typescript' else 'py'}}       — Implementation (fill in TODOs)
+  connector.{ext}       — Implementation (fill in TODOs)
   README.md            — Setup instructions
   .gitignore           — Excludes config.json, node_modules
 
 Next steps:
-  1. Install your platform SDK (add to {'package.json' if language != 'python' else 'requirements.txt'})
-  2. Implement the TODOs in connector.{{'js' if language == 'javascript' else 'ts' if language == 'typescript' else 'py'}}
+  1. Install your platform SDK (add to {deps_file})
+  2. Implement the TODOs in connector.{ext}
   3. Test locally with Redis running
   4. Submit a PR using the connector PR template
 """)
+
+
+def main() -> None:
+    """Parse arguments, validate inputs, scaffold a connector, and print next steps."""
+    args = _parse_args()
+    name, platform, language, author = _normalize_inputs(args)
+
+    connector_dir = os.path.join(REPO_ROOT, "connectors", name)
+    if os.path.exists(connector_dir):
+        print(f"Error: connectors/{name}/ already exists")
+        sys.exit(1)
+
+    _scaffold_connector(connector_dir, name, platform, language, author)
+    _print_summary(name, language)
 
 
 if __name__ == "__main__":

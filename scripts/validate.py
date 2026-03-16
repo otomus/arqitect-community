@@ -9,6 +9,7 @@ import json
 import os
 import re
 import sys
+from functools import lru_cache
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCHEMAS_DIR = os.path.join(REPO_ROOT, "schemas")
@@ -32,28 +33,28 @@ UNSAFE_PATTERNS_JS = [
 ]
 
 
-_schema_cache: dict[str, dict] = {}
-_role_tuning_profiles: dict | None = None
+@lru_cache(maxsize=None)
+def load_role_tuning_profiles() -> tuple:
+    """Load role tuning profiles from the schemas directory.
+
+    Returns a tuple of (roles_dict,) wrapped for lru_cache compatibility.
+    The actual dict is accessed via the return value directly.
+    """
+    path = os.path.join(SCHEMAS_DIR, "role_tuning_profiles.json")
+    with open(path) as f:
+        return json.load(f).get("roles", {})
 
 
-def load_role_tuning_profiles() -> dict:
-    global _role_tuning_profiles
-    if _role_tuning_profiles is None:
-        path = os.path.join(SCHEMAS_DIR, "role_tuning_profiles.json")
-        with open(path) as f:
-            _role_tuning_profiles = json.load(f).get("roles", {})
-    return _role_tuning_profiles
-
-
+@lru_cache(maxsize=None)
 def load_schema(name: str) -> dict:
-    if name not in _schema_cache:
-        path = os.path.join(SCHEMAS_DIR, name)
-        with open(path) as f:
-            _schema_cache[name] = json.load(f)
-    return _schema_cache[name]
+    """Load and cache a JSON schema file by name from the schemas directory."""
+    path = os.path.join(SCHEMAS_DIR, name)
+    with open(path) as f:
+        return json.load(f)
 
 
 def load_json(path: str) -> dict | list | None:
+    """Load a JSON file, returning None and printing an error on failure."""
     try:
         with open(path) as f:
             return json.load(f)
@@ -62,47 +63,70 @@ def load_json(path: str) -> dict | list | None:
         return None
 
 
-def validate_json_against_schema(data: dict | list, schema: dict, filepath: str) -> list[str]:
-    """Basic schema validation without jsonschema dependency.
+def _validate_with_jsonschema(data: dict | list, schema: dict, filepath: str) -> list[str] | None:
+    """Attempt validation using the jsonschema library.
 
-    Checks required fields, types, and enum constraints.
-    Falls back gracefully if jsonschema is not installed.
+    Returns a list of errors if jsonschema is available, or None if not installed.
     """
-    errors = []
     try:
         import jsonschema
-        validator = jsonschema.Draft202012Validator(schema)
-        for error in validator.iter_errors(data):
-            errors.append(f"  {filepath}: {error.message} (at {'/'.join(str(p) for p in error.absolute_path)})")
-        return errors
     except ImportError:
-        pass
+        return None
 
-    # Fallback: manual validation of required fields and enums
-    if schema.get("type") == "object" and isinstance(data, dict):
-        for field in schema.get("required", []):
-            if field not in data:
-                errors.append(f"  {filepath}: missing required field '{field}'")
-        for field, prop in schema.get("properties", {}).items():
-            if field in data and "enum" in prop:
-                if data[field] not in prop["enum"]:
-                    errors.append(f"  {filepath}: '{field}' must be one of {prop['enum']}, got '{data[field]}'")
-    elif schema.get("type") == "array" and isinstance(data, list):
-        min_items = schema.get("minItems", 0)
-        if len(data) < min_items:
-            errors.append(f"  {filepath}: array must have at least {min_items} items, got {len(data)}")
-
+    errors = []
+    validator = jsonschema.Draft202012Validator(schema)
+    for error in validator.iter_errors(data):
+        path_str = "/".join(str(p) for p in error.absolute_path)
+        errors.append(f"  {filepath}: {error.message} (at {path_str})")
     return errors
+
+
+def _validate_fallback_object(data: dict, schema: dict, filepath: str) -> list[str]:
+    """Fallback validation for object types: check required fields and enums."""
+    errors = []
+    for field in schema.get("required", []):
+        if field not in data:
+            errors.append(f"  {filepath}: missing required field '{field}'")
+    for field, prop in schema.get("properties", {}).items():
+        if field not in data or "enum" not in prop:
+            continue
+        if data[field] not in prop["enum"]:
+            errors.append(f"  {filepath}: '{field}' must be one of {prop['enum']}, got '{data[field]}'")
+    return errors
+
+
+def _validate_fallback_array(data: list, schema: dict, filepath: str) -> list[str]:
+    """Fallback validation for array types: check minItems constraint."""
+    min_items = schema.get("minItems", 0)
+    if len(data) < min_items:
+        return [f"  {filepath}: array must have at least {min_items} items, got {len(data)}"]
+    return []
+
+
+def validate_json_against_schema(data: dict | list, schema: dict, filepath: str) -> list[str]:
+    """Validate data against a JSON schema.
+
+    Checks required fields, types, and enum constraints.
+    Uses jsonschema library if available, otherwise falls back to manual checks.
+    """
+    result = _validate_with_jsonschema(data, schema, filepath)
+    if result is not None:
+        return result
+
+    if schema.get("type") == "object" and isinstance(data, dict):
+        return _validate_fallback_object(data, schema, filepath)
+    if schema.get("type") == "array" and isinstance(data, list):
+        return _validate_fallback_array(data, schema, filepath)
+    return []
 
 
 def check_tool_safety(filepath: str) -> list[str]:
     """Check a tool file for unsafe patterns based on its language."""
-    errors = []
     try:
         with open(filepath, "r") as f:
             content = f.read()
     except OSError:
-        return errors
+        return []
 
     ext = os.path.splitext(filepath)[1].lower()
     if ext == ".py":
@@ -110,77 +134,108 @@ def check_tool_safety(filepath: str) -> list[str]:
     elif ext in (".js", ".ts", ".mjs"):
         patterns = UNSAFE_PATTERNS_JS
     else:
-        return errors
+        return []
 
-    for pattern, name in patterns:
-        if re.search(pattern, content):
-            errors.append(f"  UNSAFE: {filepath} contains {name}")
+    return [
+        f"  UNSAFE: {filepath} contains {name}"
+        for pattern, name in patterns
+        if re.search(pattern, content)
+    ]
+
+
+def _validate_nerve_bundle(nerve_dir: str, name: str) -> tuple[list[str], dict | None]:
+    """Validate the bundle.json file in a nerve directory.
+
+    Returns a tuple of (errors, bundle_data). bundle_data is None if missing or invalid.
+    """
+    bundle_path = os.path.join(nerve_dir, "bundle.json")
+    if not os.path.exists(bundle_path):
+        return ([f"  {name}: missing bundle.json"], None)
+
+    bundle = load_json(bundle_path)
+    if bundle is None:
+        return ([], None)
+
+    schema = load_schema("bundle.schema.json")
+    errors = validate_json_against_schema(bundle, schema, bundle_path)
+    return (errors, bundle)
+
+
+def _validate_nerve_tests(nerve_dir: str, name: str) -> list[str]:
+    """Validate test_cases.json in a nerve directory for structure and required test types."""
+    tests_path = os.path.join(nerve_dir, "test_cases.json")
+    if not os.path.exists(tests_path):
+        return [f"  {name}: missing test_cases.json"]
+
+    tests = load_json(tests_path)
+    if tests is None:
+        return []
+
+    errors = []
+    test_schema = load_schema("test_cases.schema.json")
+    errors.extend(validate_json_against_schema(tests, test_schema, tests_path))
+
+    types = [t.get("type") for t in tests if isinstance(t, dict)]
+    if "core" not in types:
+        errors.append(f"  {name}: test_cases.json must have at least 1 'core' test")
+    if "negative" not in types:
+        errors.append(f"  {name}: test_cases.json must have at least 1 'negative' test")
+    return errors
+
+
+def _validate_nerve_tools(nerve_dir: str, name: str, bundle: dict) -> list[str]:
+    """Validate tool specs and implementations referenced from a nerve bundle."""
+    errors = []
+    for tool in bundle.get("tools", []):
+        tool_name = tool.get("name", "")
+        errors.extend(_validate_nerve_tool_spec(nerve_dir, name, tool, tool_name))
+        errors.extend(_validate_nerve_tool_impls(nerve_dir, name, tool, tool_name))
+    return errors
+
+
+def _validate_nerve_tool_spec(nerve_dir: str, name: str, tool: dict, tool_name: str) -> list[str]:
+    """Validate a single tool's spec file exists and conforms to schema."""
+    spec_path = os.path.join(nerve_dir, tool.get("spec", ""))
+    if not os.path.exists(spec_path):
+        return [f"  {name}: tool '{tool_name}' missing spec at {tool.get('spec', '')}"]
+
+    spec = load_json(spec_path)
+    if spec is None:
+        return []
+
+    spec_schema = load_schema("tool_spec.schema.json")
+    return validate_json_against_schema(spec, spec_schema, spec_path)
+
+
+def _validate_nerve_tool_impls(nerve_dir: str, name: str, tool: dict, tool_name: str) -> list[str]:
+    """Validate that a tool's implementation files exist and are safe."""
+    errors = []
+    for lang, impl_path in tool.get("implementations", {}).items():
+        full_path = os.path.join(nerve_dir, impl_path)
+        if not os.path.exists(full_path):
+            errors.append(f"  {name}: tool '{tool_name}' missing {lang} implementation at {impl_path}")
+        else:
+            errors.extend(check_tool_safety(full_path))
     return errors
 
 
 def validate_nerve(nerve_dir: str) -> list[str]:
     """Validate a nerve bundle directory."""
-    errors = []
     name = os.path.basename(nerve_dir)
 
-    # bundle.json must exist
-    bundle_path = os.path.join(nerve_dir, "bundle.json")
-    if not os.path.exists(bundle_path):
-        errors.append(f"  {name}: missing bundle.json")
-        return errors
-
-    bundle = load_json(bundle_path)
+    bundle_errors, bundle = _validate_nerve_bundle(nerve_dir, name)
     if bundle is None:
-        return errors
+        return bundle_errors
 
-    schema = load_schema("bundle.schema.json")
-    errors.extend(validate_json_against_schema(bundle, schema, bundle_path))
-
-    # test_cases.json must exist with >= 4 cases
-    tests_path = os.path.join(nerve_dir, "test_cases.json")
-    if not os.path.exists(tests_path):
-        errors.append(f"  {name}: missing test_cases.json")
-    else:
-        tests = load_json(tests_path)
-        if tests is not None:
-            test_schema = load_schema("test_cases.schema.json")
-            errors.extend(validate_json_against_schema(tests, test_schema, tests_path))
-            # Check for core and negative tests
-            types = [t.get("type") for t in tests if isinstance(t, dict)]
-            if "core" not in types:
-                errors.append(f"  {name}: test_cases.json must have at least 1 'core' test")
-            if "negative" not in types:
-                errors.append(f"  {name}: test_cases.json must have at least 1 'negative' test")
-
-    # Validate tools
-    for tool in bundle.get("tools", []):
-        tool_name = tool.get("name", "")
-        spec_path = os.path.join(nerve_dir, tool.get("spec", ""))
-        if not os.path.exists(spec_path):
-            errors.append(f"  {name}: tool '{tool_name}' missing spec at {tool.get('spec', '')}")
-        else:
-            spec = load_json(spec_path)
-            if spec is not None:
-                spec_schema = load_schema("tool_spec.schema.json")
-                errors.extend(validate_json_against_schema(spec, spec_schema, spec_path))
-
-        # Check implementations (any language)
-        for lang, impl_path in tool.get("implementations", {}).items():
-            full_path = os.path.join(nerve_dir, impl_path)
-            if not os.path.exists(full_path):
-                errors.append(f"  {name}: tool '{tool_name}' missing {lang} implementation at {impl_path}")
-            else:
-                errors.extend(check_tool_safety(full_path))
-
+    errors = list(bundle_errors)
+    errors.extend(_validate_nerve_tests(nerve_dir, name))
+    errors.extend(_validate_nerve_tools(nerve_dir, name, bundle))
     return errors
 
 
-def validate_adapter(adapter_dir: str) -> list[str]:
-    """Validate a brain adapter directory."""
+def _validate_adapter_required_files(adapter_dir: str, name: str) -> list[str]:
+    """Validate required files (meta.json, context.json) in an adapter directory."""
     errors = []
-    name = os.path.basename(adapter_dir)
-
-    # Required files
     for required, schema_name in [
         ("meta.json", "adapter_meta.schema.json"),
         ("context.json", "adapter_context.schema.json"),
@@ -193,101 +248,105 @@ def validate_adapter(adapter_dir: str) -> list[str]:
         if data is not None:
             schema = load_schema(schema_name)
             errors.extend(validate_json_against_schema(data, schema, path))
+    return errors
 
-    # Optional: qualification.json (generated by running system, not by contributors)
-    qual_schema_path = os.path.join(adapter_dir, "qualification.json")
-    if os.path.exists(qual_schema_path):
-        data = load_json(qual_schema_path)
-        if data is not None:
-            schema = load_schema("adapter_qualification.schema.json")
-            errors.extend(validate_json_against_schema(data, schema, qual_schema_path))
 
-    # Check score range in qualification
+def _validate_adapter_qualification(adapter_dir: str, name: str) -> list[str]:
+    """Validate optional qualification.json against schema and score range."""
     qual_path = os.path.join(adapter_dir, "qualification.json")
-    if os.path.exists(qual_path):
-        qual = load_json(qual_path)
-        if qual and isinstance(qual, dict):
-            score = qual.get("overall_score", -1)
-            if not (0.0 <= score <= 1.0):
-                errors.append(f"  {name}: qualification score must be 0.0-1.0, got {score}")
+    if not os.path.exists(qual_path):
+        return []
 
-    # Check size_class validity
+    qual = load_json(qual_path)
+    if qual is None:
+        return []
+
+    errors = []
+    schema = load_schema("adapter_qualification.schema.json")
+    errors.extend(validate_json_against_schema(qual, schema, qual_path))
+
+    if not isinstance(qual, dict):
+        return errors
+
+    score = qual.get("overall_score", -1)
+    if not (0.0 <= score <= 1.0):
+        errors.append(f"  {name}: qualification score must be 0.0-1.0, got {score}")
+    return errors
+
+
+def _validate_adapter_size_class(adapter_dir: str, name: str, meta: dict) -> list[str]:
+    """Validate that the size_class field in meta.json is a recognized value."""
+    sc = meta.get("size_class", "")
+    if sc and sc not in ("tinylm", "small", "medium", "large"):
+        return [f"  {name}: invalid size_class '{sc}'"]
+    return []
+
+
+def _validate_adapter_tuning(adapter_dir: str, name: str, meta: dict) -> list[str]:
+    """Validate tuning target_modules and lora_rank against the role profile."""
+    tuning = meta.get("tuning", {})
+    if not tuning:
+        return []
+
+    role = os.path.basename(os.path.dirname(adapter_dir))
+    profiles = load_role_tuning_profiles()
+    profile = profiles.get(role)
+    if not profile:
+        return []
+
+    errors = []
+    errors.extend(_validate_tuning_target_modules(name, role, tuning, profile))
+    errors.extend(_validate_tuning_lora_rank(name, role, tuning, profile))
+    return errors
+
+
+def _validate_tuning_target_modules(name: str, role: str, tuning: dict, profile: dict) -> list[str]:
+    """Check that lora_target_modules are in the allowed set for the role."""
+    target_modules = tuning.get("lora_target_modules", [])
+    allowed = set(profile.get("allowed_target_modules", []))
+    return [
+        f"  {name}: lora_target_module '{mod}' not allowed for role '{role}'. "
+        f"Allowed: {sorted(allowed)}"
+        for mod in target_modules
+        if mod not in allowed
+    ]
+
+
+def _validate_tuning_lora_rank(name: str, role: str, tuning: dict, profile: dict) -> list[str]:
+    """Check that lora_rank does not exceed the maximum for the role."""
+    rank = tuning.get("lora_rank", 0)
+    max_rank = profile.get("max_lora_rank", 999)
+    if rank > max_rank:
+        return [f"  {name}: lora_rank {rank} exceeds max {max_rank} for role '{role}'"]
+    return []
+
+
+def validate_adapter(adapter_dir: str) -> list[str]:
+    """Validate a brain adapter directory."""
+    name = os.path.basename(adapter_dir)
+
+    errors = _validate_adapter_required_files(adapter_dir, name)
+    errors.extend(_validate_adapter_qualification(adapter_dir, name))
+
     meta_path = os.path.join(adapter_dir, "meta.json")
-    if os.path.exists(meta_path):
-        meta = load_json(meta_path)
-        if meta and isinstance(meta, dict):
-            sc = meta.get("size_class", "")
-            if sc and sc not in ("tinylm", "small", "medium", "large"):
-                errors.append(f"  {name}: invalid size_class '{sc}'")
+    meta = load_json(meta_path) if os.path.exists(meta_path) else None
+    if not meta or not isinstance(meta, dict):
+        return errors
 
-    # Validate tuning target_modules against role profile
-    if os.path.exists(meta_path):
-        meta = meta if meta else load_json(meta_path)
-        if meta and isinstance(meta, dict):
-            # Derive role from directory structure: adapters/{role}/{size_class}
-            role = os.path.basename(os.path.dirname(adapter_dir))
-            profiles = load_role_tuning_profiles()
-            profile = profiles.get(role)
-            tuning = meta.get("tuning", {})
-            if profile and tuning:
-                # Validate lora_target_modules
-                target_modules = tuning.get("lora_target_modules", [])
-                allowed = set(profile.get("allowed_target_modules", []))
-                for mod in target_modules:
-                    if mod not in allowed:
-                        errors.append(
-                            f"  {name}: lora_target_module '{mod}' not allowed for role '{role}'. "
-                            f"Allowed: {sorted(allowed)}"
-                        )
-                # Validate lora_rank
-                rank = tuning.get("lora_rank", 0)
-                max_rank = profile.get("max_lora_rank", 999)
-                if rank > max_rank:
-                    errors.append(
-                        f"  {name}: lora_rank {rank} exceeds max {max_rank} for role '{role}'"
-                    )
-
+    errors.extend(_validate_adapter_size_class(adapter_dir, name, meta))
+    errors.extend(_validate_adapter_tuning(adapter_dir, name, meta))
     return errors
 
 
 def validate_tool(tool_dir: str) -> list[str]:
-    """Validate a community tool directory."""
+    """Validate a community tool directory for required files, schema, and safety."""
     errors = []
     name = os.path.basename(tool_dir)
 
-    # meta.json must exist and validate against schema
-    meta_path = os.path.join(tool_dir, "meta.json")
-    if not os.path.exists(meta_path):
-        errors.append(f"  {name}: missing meta.json")
-    else:
-        meta = load_json(meta_path)
-        if meta is not None:
-            schema = load_schema("tool_meta.schema.json")
-            errors.extend(validate_json_against_schema(meta, schema, meta_path))
+    errors.extend(_validate_tool_meta(tool_dir, name))
+    errors.extend(_validate_tool_implementations(tool_dir, name))
+    errors.extend(_validate_tool_tests(tool_dir, name))
 
-    # Implementation files listed in meta.json must exist and be safe
-    meta = load_json(meta_path) if os.path.exists(meta_path) else None
-    implementations = meta.get("implementations", {}) if meta else {}
-    if not implementations:
-        errors.append(f"  {name}: no implementations listed in meta.json")
-    for lang, impl_file in implementations.items():
-        impl_path = os.path.join(tool_dir, impl_file)
-        if not os.path.exists(impl_path):
-            errors.append(f"  {name}: missing {lang} implementation: {impl_file}")
-        else:
-            errors.extend(check_tool_safety(impl_path))
-
-    # tests.json must exist and validate
-    tests_path = os.path.join(tool_dir, "tests.json")
-    if not os.path.exists(tests_path):
-        errors.append(f"  {name}: missing tests.json")
-    else:
-        tests = load_json(tests_path)
-        if tests is not None:
-            tests_schema = load_schema("tool_tests.schema.json")
-            errors.extend(validate_json_against_schema(tests, tests_schema, tests_path))
-
-    # README.md must exist
     readme_path = os.path.join(tool_dir, "README.md")
     if not os.path.exists(readme_path):
         errors.append(f"  {name}: missing README.md")
@@ -295,12 +354,58 @@ def validate_tool(tool_dir: str) -> list[str]:
     return errors
 
 
+def _validate_tool_meta(tool_dir: str, name: str) -> list[str]:
+    """Validate that meta.json exists and conforms to the tool_meta schema."""
+    meta_path = os.path.join(tool_dir, "meta.json")
+    if not os.path.exists(meta_path):
+        return [f"  {name}: missing meta.json"]
+
+    meta = load_json(meta_path)
+    if meta is None:
+        return []
+
+    schema = load_schema("tool_meta.schema.json")
+    return validate_json_against_schema(meta, schema, meta_path)
+
+
+def _validate_tool_implementations(tool_dir: str, name: str) -> list[str]:
+    """Validate that tool implementations listed in meta.json exist and are safe."""
+    meta_path = os.path.join(tool_dir, "meta.json")
+    meta = load_json(meta_path) if os.path.exists(meta_path) else None
+    implementations = meta.get("implementations", {}) if meta else {}
+
+    if not implementations:
+        return [f"  {name}: no implementations listed in meta.json"]
+
+    errors = []
+    for lang, impl_file in implementations.items():
+        impl_path = os.path.join(tool_dir, impl_file)
+        if not os.path.exists(impl_path):
+            errors.append(f"  {name}: missing {lang} implementation: {impl_file}")
+        else:
+            errors.extend(check_tool_safety(impl_path))
+    return errors
+
+
+def _validate_tool_tests(tool_dir: str, name: str) -> list[str]:
+    """Validate that tests.json exists and conforms to the tool_tests schema."""
+    tests_path = os.path.join(tool_dir, "tests.json")
+    if not os.path.exists(tests_path):
+        return [f"  {name}: missing tests.json"]
+
+    tests = load_json(tests_path)
+    if tests is None:
+        return []
+
+    tests_schema = load_schema("tool_tests.schema.json")
+    return validate_json_against_schema(tests, tests_schema, tests_path)
+
+
 def validate_mcp(mcp_dir: str) -> list[str]:
-    """Validate an external MCP server directory."""
+    """Validate an external MCP server directory for required meta.json and README."""
     errors = []
     name = os.path.basename(mcp_dir)
 
-    # meta.json must exist and validate against schema
     meta_path = os.path.join(mcp_dir, "meta.json")
     if not os.path.exists(meta_path):
         errors.append(f"  {name}: missing meta.json")
@@ -310,7 +415,6 @@ def validate_mcp(mcp_dir: str) -> list[str]:
             schema = load_schema("mcp_meta.schema.json")
             errors.extend(validate_json_against_schema(meta, schema, meta_path))
 
-    # README.md must exist
     readme_path = os.path.join(mcp_dir, "README.md")
     if not os.path.exists(readme_path):
         errors.append(f"  {name}: missing README.md")
@@ -319,11 +423,10 @@ def validate_mcp(mcp_dir: str) -> list[str]:
 
 
 def validate_connector(connector_dir: str) -> list[str]:
-    """Validate a connector directory."""
+    """Validate a connector directory for required files and implementation."""
     errors = []
     name = os.path.basename(connector_dir)
 
-    # Required files
     meta_path = os.path.join(connector_dir, "meta.json")
     if not os.path.exists(meta_path):
         errors.append(f"  {name}: missing meta.json")
@@ -341,7 +444,6 @@ def validate_connector(connector_dir: str) -> list[str]:
     if not os.path.exists(readme_path):
         errors.append(f"  {name}: missing README.md")
 
-    # Must have at least one implementation file
     has_impl = any(
         f.startswith("connector.") for f in os.listdir(connector_dir) if os.path.isfile(os.path.join(connector_dir, f))
     )
@@ -351,67 +453,80 @@ def validate_connector(connector_dir: str) -> list[str]:
     return errors
 
 
-def main():
+def _collect_subdirs(parent: str) -> list[str]:
+    """Return sorted subdirectory names within a parent directory."""
+    if not os.path.isdir(parent):
+        return []
+    return [
+        name for name in sorted(os.listdir(parent))
+        if os.path.isdir(os.path.join(parent, name))
+    ]
+
+
+def _validate_all_nerves() -> list[str]:
+    """Validate all nerve bundles in the nerves/ directory."""
     errors = []
-
-    # Validate all nerves
     nerves_dir = os.path.join(REPO_ROOT, "nerves")
-    if os.path.isdir(nerves_dir):
-        for name in sorted(os.listdir(nerves_dir)):
-            nerve_dir = os.path.join(nerves_dir, name)
-            if os.path.isdir(nerve_dir):
-                print(f"Validating nerve: {name}")
-                errors.extend(validate_nerve(nerve_dir))
+    for name in _collect_subdirs(nerves_dir):
+        print(f"Validating nerve: {name}")
+        errors.extend(validate_nerve(os.path.join(nerves_dir, name)))
+    return errors
 
-    # Validate all adapters (across all roles, size classes, and model-specific)
-    # Structure: adapters/{role}/{size_class}/[context.json, meta.json]
-    #            adapters/{role}/{size_class}/{model_name}/[context.json, meta.json]
+
+def _validate_all_adapters() -> list[str]:
+    """Validate all adapters across roles, size classes, and model-specific dirs."""
+    errors = []
     adapters_root = os.path.join(REPO_ROOT, "adapters")
-    if os.path.isdir(adapters_root):
-        for role in sorted(os.listdir(adapters_root)):
-            role_dir = os.path.join(adapters_root, role)
-            if not os.path.isdir(role_dir):
-                continue
-            for size_class in sorted(os.listdir(role_dir)):
-                size_dir = os.path.join(role_dir, size_class)
-                if not os.path.isdir(size_dir):
-                    continue
-                # Validate the size-class level adapter
-                print(f"Validating adapter: {role}/{size_class}")
-                errors.extend(validate_adapter(size_dir))
-                # Validate model-specific adapters within this size class
-                for model_name in sorted(os.listdir(size_dir)):
-                    model_dir = os.path.join(size_dir, model_name)
-                    if os.path.isdir(model_dir):
-                        print(f"Validating adapter: {role}/{size_class}/{model_name}")
-                        errors.extend(validate_adapter(model_dir))
+    for role in _collect_subdirs(adapters_root):
+        role_dir = os.path.join(adapters_root, role)
+        for size_class in _collect_subdirs(role_dir):
+            size_dir = os.path.join(role_dir, size_class)
+            print(f"Validating adapter: {role}/{size_class}")
+            errors.extend(validate_adapter(size_dir))
+            for model_name in _collect_subdirs(size_dir):
+                print(f"Validating adapter: {role}/{size_class}/{model_name}")
+                errors.extend(validate_adapter(os.path.join(size_dir, model_name)))
+    return errors
 
-    # Validate all connectors
+
+def _validate_all_connectors() -> list[str]:
+    """Validate all connectors in the connectors/ directory."""
+    errors = []
     connectors_dir = os.path.join(REPO_ROOT, "connectors")
-    if os.path.isdir(connectors_dir):
-        for name in sorted(os.listdir(connectors_dir)):
-            connector_dir = os.path.join(connectors_dir, name)
-            if os.path.isdir(connector_dir):
-                print(f"Validating connector: {name}")
-                errors.extend(validate_connector(connector_dir))
+    for name in _collect_subdirs(connectors_dir):
+        print(f"Validating connector: {name}")
+        errors.extend(validate_connector(os.path.join(connectors_dir, name)))
+    return errors
 
-    # Validate all tools
+
+def _validate_all_tools() -> list[str]:
+    """Validate all tools in the tools/ directory."""
+    errors = []
     tools_dir = os.path.join(REPO_ROOT, "tools")
-    if os.path.isdir(tools_dir):
-        for name in sorted(os.listdir(tools_dir)):
-            tool_dir = os.path.join(tools_dir, name)
-            if os.path.isdir(tool_dir):
-                print(f"Validating tool: {name}")
-                errors.extend(validate_tool(tool_dir))
+    for name in _collect_subdirs(tools_dir):
+        print(f"Validating tool: {name}")
+        errors.extend(validate_tool(os.path.join(tools_dir, name)))
+    return errors
 
-    # Validate all external MCPs
+
+def _validate_all_mcps() -> list[str]:
+    """Validate all external MCP servers in the mcps/ directory."""
+    errors = []
     mcps_dir = os.path.join(REPO_ROOT, "mcps")
-    if os.path.isdir(mcps_dir):
-        for name in sorted(os.listdir(mcps_dir)):
-            mcp_dir = os.path.join(mcps_dir, name)
-            if os.path.isdir(mcp_dir):
-                print(f"Validating mcp: {name}")
-                errors.extend(validate_mcp(mcp_dir))
+    for name in _collect_subdirs(mcps_dir):
+        print(f"Validating mcp: {name}")
+        errors.extend(validate_mcp(os.path.join(mcps_dir, name)))
+    return errors
+
+
+def main():
+    """Run all validations and exit with status code 1 on failure, 0 on success."""
+    errors = []
+    errors.extend(_validate_all_nerves())
+    errors.extend(_validate_all_adapters())
+    errors.extend(_validate_all_connectors())
+    errors.extend(_validate_all_tools())
+    errors.extend(_validate_all_mcps())
 
     if errors:
         print(f"\nVALIDATION FAILED — {len(errors)} error(s):")

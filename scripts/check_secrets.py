@@ -29,50 +29,79 @@ ABS_PATH_PATTERNS = [
 ]
 
 
-def check_file(filepath: str) -> list[str]:
-    """Check a single file for secrets. Returns list of violation messages."""
+def find_pattern_violations(
+    content: str,
+    patterns: list[tuple[str, str]],
+    filepath: str,
+    truncate: int = 40,
+    suffix: str = "",
+) -> list[str]:
+    """Match a list of (regex, description) patterns against content.
+
+    Returns violation messages with matches truncated to the given length.
+    A fixed suffix (e.g. '...') is appended after the truncated match text.
+    """
     violations = []
+    for pattern, desc in patterns:
+        for match in re.findall(pattern, content):
+            violations.append(f"  {desc}: {filepath} ({match[:truncate]}{suffix})")
+    return violations
+
+
+def check_forbidden(filepath: str) -> list[str]:
+    """Check whether a file is forbidden by name or extension.
+
+    Returns a single-element list with a violation message, or an empty list.
+    """
     basename = os.path.basename(filepath)
     _, ext = os.path.splitext(basename)
-
-    # Check forbidden filenames
     if basename in FORBIDDEN_FILES or ext in FORBIDDEN_EXTENSIONS:
-        violations.append(f"  FORBIDDEN FILE: {filepath}")
-        return violations
+        return [f"  FORBIDDEN FILE: {filepath}"]
+    return []
 
-    # Skip binary files
+
+def read_text(filepath: str) -> str | None:
+    """Read a file as UTF-8 text, returning None on failure."""
     try:
         with open(filepath, "r", encoding="utf-8", errors="ignore") as f:
-            content = f.read()
+            return f.read()
     except (OSError, UnicodeDecodeError):
-        return violations
+        return None
 
-    for pattern, desc in SECRET_PATTERNS:
-        matches = re.findall(pattern, content)
-        for match in matches:
-            violations.append(f"  {desc}: {filepath} ({match[:40]}...)")
 
-    for pattern, desc in ABS_PATH_PATTERNS:
-        matches = re.findall(pattern, content)
-        for match in matches:
-            violations.append(f"  {desc}: {filepath} ({match[:60]})")
+def check_file(filepath: str) -> list[str]:
+    """Check a single file for secrets. Returns list of violation messages."""
+    forbidden = check_forbidden(filepath)
+    if forbidden:
+        return forbidden
 
+    content = read_text(filepath)
+    if content is None:
+        return []
+
+    violations = find_pattern_violations(content, SECRET_PATTERNS, filepath, truncate=40, suffix="...")
+    violations += find_pattern_violations(content, ABS_PATH_PATTERNS, filepath, truncate=60)
     return violations
+
+
+def iter_files(path: str):
+    """Yield file paths under a directory, skipping hidden dirs and node_modules."""
+    for root, dirs, files in os.walk(path):
+        dirs[:] = [d for d in dirs if not d.startswith(".") and d != "node_modules"]
+        for fname in files:
+            yield os.path.join(root, fname)
 
 
 def scan_directory(path: str) -> list[str]:
     """Scan a directory tree for secrets. Returns list of violations."""
     violations = []
-    for root, dirs, files in os.walk(path):
-        # Skip hidden directories and node_modules
-        dirs[:] = [d for d in dirs if not d.startswith(".") and d != "node_modules"]
-        for fname in files:
-            filepath = os.path.join(root, fname)
-            violations.extend(check_file(filepath))
+    for filepath in iter_files(path):
+        violations.extend(check_file(filepath))
     return violations
 
 
 def main():
+    """Entry point — scan paths from argv (or cwd) and report violations."""
     paths = sys.argv[1:] if len(sys.argv) > 1 else ["."]
     all_violations = []
 

@@ -14,61 +14,93 @@ Examples:
 import argparse
 import json
 import os
+import re
 import sys
-import textwrap
+from dataclasses import dataclass, field
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-def create_meta(mcp_dir: str, name: str, package: str, description: str,
-                category: str, auth_type: str, auth_env: str, auth_provider: str,
-                tools: list[str], capabilities: list[str], author: str) -> None:
-    meta = {
-        "name": name,
-        "version": "1.0.0",
-        "description": description,
-        "source": "npm",
-        "package": package,
-        "command": ["npx", "-y", package],
-        "auth_type": auth_type,
-        "tools": tools,
-        "capabilities": capabilities,
-        "category": category,
-    }
-    if auth_env:
-        meta["auth_env"] = auth_env
-    if auth_provider:
-        meta["auth_provider"] = auth_provider
-    if author:
-        meta["author"] = {"github": author}
+@dataclass
+class McpConfig:
+    """All parameters needed to scaffold an MCP server entry."""
 
-    with open(os.path.join(mcp_dir, "meta.json"), "w") as f:
+    name: str
+    package: str
+    description: str = ""
+    category: str = "utilities"
+    auth_type: str = "none"
+    auth_env: str = ""
+    auth_provider: str = ""
+    tools: list[str] = field(default_factory=list)
+    capabilities: list[str] = field(default_factory=list)
+    author: str = ""
+
+    @property
+    def mcp_dir(self) -> str:
+        """Return the absolute path to this MCP server's directory."""
+        return os.path.join(REPO_ROOT, "mcps", self.name)
+
+
+def create_meta(config: McpConfig) -> None:
+    """Write meta.json with server metadata into the MCP directory."""
+    meta = {
+        "name": config.name,
+        "version": "1.0.0",
+        "description": config.description,
+        "source": "npm",
+        "package": config.package,
+        "command": ["npx", "-y", config.package],
+        "auth_type": config.auth_type,
+        "tools": config.tools,
+        "capabilities": config.capabilities,
+        "category": config.category,
+    }
+    if config.auth_env:
+        meta["auth_env"] = config.auth_env
+    if config.auth_provider:
+        meta["auth_provider"] = config.auth_provider
+    if config.author:
+        meta["author"] = {"github": config.author}
+
+    with open(os.path.join(config.mcp_dir, "meta.json"), "w") as f:
         json.dump(meta, f, indent=2)
         f.write("\n")
 
 
-def create_readme(mcp_dir: str, name: str, package: str, description: str,
-                  auth_type: str, auth_env: str, auth_provider: str,
-                  tools: list[str], capabilities: list[str]) -> None:
-    auth_section = "No authentication required."
-    if auth_type == "api_key":
-        auth_section = f"Requires an API key. Set the `{auth_env}` environment variable."
-    elif auth_type == "oauth2":
-        auth_section = f"Requires OAuth2 authentication with {auth_provider}."
+def _build_auth_section(config: McpConfig) -> str:
+    """Return the authentication section text for the README."""
+    if config.auth_type == "api_key":
+        return f"Requires an API key. Set the `{config.auth_env}` environment variable."
+    if config.auth_type == "oauth2":
+        return f"Requires OAuth2 authentication with {config.auth_provider}."
+    return "No authentication required."
 
-    tools_section = "\n".join(f"- `{t}`" for t in tools) if tools else "- Tools not yet enumerated."
-    caps_section = " ".join(f"`{c}`" for c in capabilities) if capabilities else "N/A"
 
-    readme = f"""# {name}
+def create_readme(config: McpConfig) -> None:
+    """Write README.md with setup instructions into the MCP directory."""
+    auth_section = _build_auth_section(config)
+    tools_section = (
+        "\n".join(f"- `{t}`" for t in config.tools)
+        if config.tools
+        else "- Tools not yet enumerated."
+    )
+    caps_section = (
+        " ".join(f"`{c}`" for c in config.capabilities)
+        if config.capabilities
+        else "N/A"
+    )
 
-{description}
+    readme = f"""# {config.name}
+
+{config.description}
 
 ## Installation
 
 This MCP server is installed automatically by sentient-core. To use it manually:
 
 ```bash
-npx -y {package}
+npx -y {config.package}
 ```
 
 ## Authentication
@@ -84,11 +116,12 @@ npx -y {package}
 {caps_section}
 """
 
-    with open(os.path.join(mcp_dir, "README.md"), "w") as f:
+    with open(os.path.join(config.mcp_dir, "README.md"), "w") as f:
         f.write(readme)
 
 
-def main():
+def parse_args() -> argparse.Namespace:
+    """Parse and return command-line arguments."""
     parser = argparse.ArgumentParser(description="Scaffold a new external MCP server entry")
     parser.add_argument("name", help="MCP server name (lowercase, underscores, e.g., brave_search)")
     parser.add_argument("--package", "-p", required=True, help="npm package name (e.g., brave-search-mcp)")
@@ -100,23 +133,18 @@ def main():
     parser.add_argument("--tools", nargs="*", default=[], help="Tool names exposed by this server")
     parser.add_argument("--capabilities", nargs="*", default=[], help="Capability keywords for runtime matching")
     parser.add_argument("--author", "-a", default="", help="GitHub username of the contributor")
-    args = parser.parse_args()
+    return parser.parse_args()
 
-    name = args.name.lower().replace("-", "_").replace(" ", "_")
 
-    # Validate name pattern
-    import re
+def validate_name(name: str) -> None:
+    """Exit with an error if the name does not match the required pattern."""
     if not re.match(r"^[a-z][a-z0-9_]*$", name):
         print(f"Error: name must match ^[a-z][a-z0-9_]*$ — got '{name}'")
         sys.exit(1)
 
-    mcp_dir = os.path.join(REPO_ROOT, "mcps", name)
 
-    if os.path.exists(mcp_dir):
-        print(f"Error: mcps/{name}/ already exists")
-        sys.exit(1)
-
-    # Validate auth args
+def validate_auth(args: argparse.Namespace) -> None:
+    """Exit with an error if auth-related arguments are inconsistent."""
     if args.auth == "api_key" and not args.auth_env:
         print("Error: --auth-env is required when --auth is api_key")
         sys.exit(1)
@@ -124,22 +152,43 @@ def main():
         print("Error: --auth-provider is required when --auth is oauth2")
         sys.exit(1)
 
+
+def build_config(args: argparse.Namespace) -> McpConfig:
+    """Construct an McpConfig from parsed CLI arguments."""
+    name = args.name.lower().replace("-", "_").replace(" ", "_")
+    validate_name(name)
+
     description = args.description or f"{name.replace('_', ' ').title()} MCP server — {args.package}"
     capabilities = args.capabilities or [name.replace("_", " ")]
 
-    os.makedirs(mcp_dir)
-    print(f"Creating MCP server: {name}")
+    return McpConfig(
+        name=name,
+        package=args.package,
+        description=description,
+        category=args.category,
+        auth_type=args.auth,
+        auth_env=args.auth_env,
+        auth_provider=args.auth_provider,
+        tools=args.tools,
+        capabilities=capabilities,
+        author=args.author,
+    )
 
-    create_meta(mcp_dir, name, args.package, description, args.category,
-                args.auth, args.auth_env, args.auth_provider,
-                args.tools, capabilities, args.author)
 
-    create_readme(mcp_dir, name, args.package, description,
-                  args.auth, args.auth_env, args.auth_provider,
-                  args.tools, capabilities)
+def scaffold_mcp(config: McpConfig) -> None:
+    """Create the MCP directory and write all scaffold files."""
+    if os.path.exists(config.mcp_dir):
+        print(f"Error: mcps/{config.name}/ already exists")
+        sys.exit(1)
+
+    os.makedirs(config.mcp_dir)
+    print(f"Creating MCP server: {config.name}")
+
+    create_meta(config)
+    create_readme(config)
 
     print(f"""
-MCP server scaffolded at: mcps/{name}/
+MCP server scaffolded at: mcps/{config.name}/
 
 Files created:
   meta.json  — Server metadata (edit to refine tools, capabilities, description)
@@ -147,9 +196,17 @@ Files created:
 
 Next steps:
   1. Edit meta.json — add specific tools and capabilities for better runtime matching
-  2. Verify the package works: npx -y {args.package}
+  2. Verify the package works: npx -y {config.package}
   3. Submit a PR using the mcp PR template
 """)
+
+
+def main() -> None:
+    """Entry point: parse arguments, validate, and scaffold the MCP server."""
+    args = parse_args()
+    validate_auth(args)
+    config = build_config(args)
+    scaffold_mcp(config)
 
 
 if __name__ == "__main__":
