@@ -4,6 +4,12 @@ on:
   push:
     branches: [main]
 
+# Prevent concurrent runs — each merge to main triggers this,
+# so we need to queue them to avoid race conditions
+concurrency:
+  group: auto-rebase
+  cancel-in-progress: false
+
 permissions:
   contents: write
   pull-requests: write
@@ -32,33 +38,78 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open',
-              base: 'main'
+              base: 'main',
+              sort: 'created',
+              direction: 'asc'
             });
+
+            if (prs.length === 0) {
+              console.log('No open PRs to rebase');
+              return;
+            }
+
+            // Refresh main
+            execSync('git fetch origin main', { stdio: 'pipe' });
+            execSync('git checkout main', { stdio: 'pipe' });
+            execSync('git reset --hard origin/main', { stdio: 'pipe' });
 
             for (const pr of prs) {
               const branch = pr.head.ref;
               console.log(`\nProcessing PR #${pr.number}: ${pr.title} (${branch})`);
 
               try {
+                // Fetch the PR branch
                 execSync(`git fetch origin ${branch}`, { stdio: 'pipe' });
-                execSync(`git checkout ${branch}`, { stdio: 'pipe' });
-                execSync(`git rebase origin/main`, { stdio: 'pipe' });
-                execSync(`git push origin ${branch} --force-with-lease`, { stdio: 'pipe' });
-                console.log(`  Rebased and pushed PR #${pr.number}`);
-              } catch (err) {
-                // Rebase failed — abort and notify
-                try { execSync(`git rebase --abort`, { stdio: 'pipe' }); } catch {}
-                try { execSync(`git checkout main`, { stdio: 'pipe' }); } catch {}
 
-                console.log(`  PR #${pr.number} has conflicts, posting comment`);
-                await github.rest.issues.createComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: pr.number,
-                  body: `## Rebase Conflict\n\nThis PR has conflicts with \`main\` that could not be auto-rebased. Please rebase manually:\n\n\`\`\`bash\ngit fetch origin main\ngit rebase origin/main\n# resolve conflicts\ngit push --force-with-lease\n\`\`\``
-                });
+                // Check if already up to date
+                const mergeBase = execSync(`git merge-base origin/main origin/${branch}`, { encoding: 'utf8' }).trim();
+                const mainHead = execSync('git rev-parse origin/main', { encoding: 'utf8' }).trim();
+                if (mergeBase === mainHead) {
+                  console.log(`  Already up to date`);
+                  continue;
+                }
+
+                // Try rebase
+                execSync(`git checkout -B _rebase_${pr.number} origin/${branch}`, { stdio: 'pipe' });
+                execSync('git rebase origin/main', { stdio: 'pipe' });
+                execSync(`git push origin _rebase_${pr.number}:${branch} --force-with-lease`, { stdio: 'pipe' });
+                console.log(`  Rebased successfully`);
+              } catch (rebaseErr) {
+                // Rebase failed — abort
+                try { execSync('git rebase --abort', { stdio: 'pipe' }); } catch {}
+
+                // Try merge instead
+                try {
+                  execSync(`git checkout -B _merge_${pr.number} origin/${branch}`, { stdio: 'pipe' });
+                  execSync('git merge origin/main --no-edit', { stdio: 'pipe' });
+                  execSync(`git push origin _merge_${pr.number}:${branch} --force-with-lease`, { stdio: 'pipe' });
+                  console.log(`  Merged main into branch (rebase had conflicts)`);
+                } catch (mergeErr) {
+                  // Both failed — real conflict
+                  try { execSync('git merge --abort', { stdio: 'pipe' }); } catch {}
+
+                  console.log(`  PR #${pr.number} has unresolvable conflicts`);
+
+                  // Check if we already commented about conflicts
+                  const { data: comments } = await github.rest.issues.listComments({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: pr.number,
+                    per_page: 5
+                  });
+                  const alreadyNotified = comments.some(c => c.body?.includes('Rebase Conflict'));
+
+                  if (!alreadyNotified) {
+                    await github.rest.issues.createComment({
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      issue_number: pr.number,
+                      body: `## Rebase Conflict\n\nThis PR has conflicts with \`main\` that could not be auto-resolved.\n\nPlease rebase manually:\n\`\`\`bash\ngit fetch origin main\ngit rebase origin/main\n# resolve conflicts\ngit push --force-with-lease\n\`\`\`\n\nIf the conflict persists, this PR may be auto-closed.`
+                    });
+                  }
+                }
               }
 
               // Return to main for next PR
-              try { execSync(`git checkout main`, { stdio: 'pipe' }); } catch {}
+              try { execSync('git checkout main', { stdio: 'pipe' }); } catch {}
             }
