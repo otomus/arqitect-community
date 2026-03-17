@@ -1,7 +1,1462 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-17T16:29:46.810598+00:00",
+  "generated_at": "2026-03-17T17:17:02.857349+00:00",
   "nerves": {
+    "actuator_read_nerve": {
+      "description": "Read the current state of any actuator.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "actuator"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "actuator_get"
+      ],
+      "model_scores": {}
+    },
+    "actuator_set_nerve": {
+      "description": "Set any actuator to a specified value.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "actuator"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "actuator_set"
+      ],
+      "model_scores": {}
+    },
+    "audio_convert_nerve": {
+      "description": "Convert audio files between different formats.",
+      "role": "tool",
+      "tags": [
+        "audio",
+        "convert",
+        "format"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "audio_convert"
+      ],
+      "model_scores": {}
+    },
+    "audio_record_nerve": {
+      "description": "Record audio from the system microphone.",
+      "role": "tool",
+      "tags": [
+        "audio",
+        "record",
+        "microphone"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "audio_record"
+      ],
+      "model_scores": {}
+    },
+    "audio_synthesize_nerve": {
+      "description": "Convert text to speech audio.",
+      "role": "tool",
+      "tags": [
+        "audio",
+        "tts",
+        "speech"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "text_to_speech"
+      ],
+      "model_scores": {}
+    },
+    "audio_transcribe_nerve": {
+      "description": "Convert speech in audio files to text.",
+      "role": "tool",
+      "tags": [
+        "audio",
+        "transcribe",
+        "speech"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "speech_to_text"
+      ],
+      "model_scores": {}
+    },
+    "barcode_generate_nerve": {
+      "description": "Generate a barcode",
+      "role": "tool",
+      "tags": [
+        "visualization",
+        "barcode"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "barcode_generate"
+      ],
+      "model_scores": {}
+    },
+    "barcode_read_nerve": {
+      "description": "Read a barcode from an image",
+      "role": "tool",
+      "tags": [
+        "visualization",
+        "barcode"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "barcode_read"
+      ],
+      "model_scores": {}
+    },
+    "calendar_add_nerve": {
+      "description": "Create a new calendar event with title, date, and time.",
+      "role": "tool",
+      "tags": [
+        "calendar",
+        "productivity",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "calendar_create_event"
+      ],
+      "model_scores": {}
+    },
+    "calendar_check_nerve": {
+      "description": "List upcoming calendar events for a given time range.",
+      "role": "tool",
+      "tags": [
+        "calendar",
+        "productivity",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "calendar_events"
+      ],
+      "model_scores": {}
+    },
+    "calendar_remove_nerve": {
+      "description": "Delete a calendar event by its identifier or title.",
+      "role": "tool",
+      "tags": [
+        "calendar",
+        "productivity",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "calendar_delete_event"
+      ],
+      "model_scores": {}
+    },
+    "camera_snapshot_nerve": {
+      "description": "Capture an image from a connected camera.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "camera"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "take_photo"
+      ],
+      "model_scores": {}
+    },
+    "cert_check_nerve": {
+      "description": "Check SSL certificate status",
+      "role": "tool",
+      "tags": [
+        "security",
+        "ssl",
+        "certificate"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "cert_check"
+      ],
+      "model_scores": {}
+    },
+    "chart_nerve": {
+      "description": "Create a chart from data",
+      "role": "tool",
+      "tags": [
+        "visualization",
+        "chart"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "chart_create"
+      ],
+      "model_scores": {}
+    },
+    "click_nerve": {
+      "description": "Click at a screen position",
+      "role": "tool",
+      "tags": [
+        "desktop",
+        "mouse",
+        "click"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "mouse_click"
+      ],
+      "model_scores": {}
+    },
+    "clipboard_read_nerve": {
+      "description": "Read the clipboard contents",
+      "role": "tool",
+      "tags": [
+        "desktop",
+        "clipboard",
+        "read"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "clipboard_read"
+      ],
+      "model_scores": {}
+    },
+    "clipboard_write_nerve": {
+      "description": "Write content to the clipboard",
+      "role": "tool",
+      "tags": [
+        "desktop",
+        "clipboard",
+        "write"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "clipboard_write"
+      ],
+      "model_scores": {}
+    },
+    "crypto_price_nerve": {
+      "description": "Get the current price of a cryptocurrency.",
+      "role": "tool",
+      "tags": [
+        "finance",
+        "crypto",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "get_price"
+      ],
+      "model_scores": {}
+    },
+    "csv_export_nerve": {
+      "description": "Export structured data to CSV format files.",
+      "role": "tool",
+      "tags": [
+        "document",
+        "csv",
+        "write"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "csv_write"
+      ],
+      "model_scores": {}
+    },
+    "csv_import_nerve": {
+      "description": "Read and parse CSV data from files.",
+      "role": "tool",
+      "tags": [
+        "document",
+        "csv",
+        "read"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "csv_read"
+      ],
+      "model_scores": {}
+    },
+    "currency_convert_nerve": {
+      "description": "Convert an amount between two currencies.",
+      "role": "tool",
+      "tags": [
+        "finance",
+        "currency",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "currency_convert"
+      ],
+      "model_scores": {}
+    },
+    "currency_rate_nerve": {
+      "description": "Get the current exchange rate between two currencies.",
+      "role": "tool",
+      "tags": [
+        "finance",
+        "currency",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "currency_rate"
+      ],
+      "model_scores": {}
+    },
+    "decrypt_nerve": {
+      "description": "Decrypt encrypted text",
+      "role": "tool",
+      "tags": [
+        "security",
+        "encryption",
+        "decrypt"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "decrypt_text"
+      ],
+      "model_scores": {}
+    },
+    "device_list_nerve": {
+      "description": "List all connected devices in the IoT network.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "device"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "device_list"
+      ],
+      "model_scores": {}
+    },
+    "device_status_nerve": {
+      "description": "Check the health and status of a connected IoT device.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "device"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "device_status"
+      ],
+      "model_scores": {}
+    },
+    "diagram_nerve": {
+      "description": "Create a diagram from a definition",
+      "role": "tool",
+      "tags": [
+        "visualization",
+        "diagram"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "diagram_create"
+      ],
+      "model_scores": {}
+    },
+    "diff_nerve": {
+      "description": "Compare two texts and show differences",
+      "role": "tool",
+      "tags": [
+        "data",
+        "text",
+        "diff"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "diff_compute"
+      ],
+      "model_scores": {}
+    },
+    "dns_check_nerve": {
+      "description": "Look up DNS records for a domain",
+      "role": "tool",
+      "tags": [
+        "web",
+        "dns"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "dns_lookup"
+      ],
+      "model_scores": {}
+    },
+    "doc_convert_nerve": {
+      "description": "Convert documents between formats such as Markdown to HTML or PDF.",
+      "role": "tool",
+      "tags": [
+        "document",
+        "convert",
+        "format"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "markdown_to_html",
+        "markdown_to_pdf",
+        "docx_read",
+        "pdf_create"
+      ],
+      "model_scores": {}
+    },
+    "docker_build_nerve": {
+      "description": "Build a Docker image from a Dockerfile",
+      "role": "code",
+      "tags": [
+        "docker",
+        "image",
+        "build"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "docker_build"
+      ],
+      "model_scores": {}
+    },
+    "docker_exec_nerve": {
+      "description": "Execute a command inside a running container",
+      "role": "code",
+      "tags": [
+        "docker",
+        "container",
+        "exec"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "docker_exec"
+      ],
+      "model_scores": {}
+    },
+    "docker_list_nerve": {
+      "description": "List running Docker containers",
+      "role": "code",
+      "tags": [
+        "docker",
+        "container",
+        "list"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "docker_ps"
+      ],
+      "model_scores": {}
+    },
+    "docker_logs_nerve": {
+      "description": "Get logs from a Docker container",
+      "role": "code",
+      "tags": [
+        "docker",
+        "container",
+        "logs"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "docker_logs"
+      ],
+      "model_scores": {}
+    },
+    "docker_pull_nerve": {
+      "description": "Pull a Docker image from a registry",
+      "role": "code",
+      "tags": [
+        "docker",
+        "image",
+        "pull"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "docker_pull"
+      ],
+      "model_scores": {}
+    },
+    "docker_run_nerve": {
+      "description": "Start a Docker container from an image",
+      "role": "code",
+      "tags": [
+        "docker",
+        "container",
+        "run"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "docker_run"
+      ],
+      "model_scores": {}
+    },
+    "docker_stop_nerve": {
+      "description": "Stop a running Docker container",
+      "role": "code",
+      "tags": [
+        "docker",
+        "container",
+        "stop"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "docker_stop"
+      ],
+      "model_scores": {}
+    },
+    "docx_create_nerve": {
+      "description": "Create Microsoft Word documents from text content.",
+      "role": "tool",
+      "tags": [
+        "document",
+        "docx",
+        "create"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "docx_create"
+      ],
+      "model_scores": {}
+    },
+    "docx_read_nerve": {
+      "description": "Extract text content from Microsoft Word documents.",
+      "role": "tool",
+      "tags": [
+        "document",
+        "docx",
+        "read"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "docx_read"
+      ],
+      "model_scores": {}
+    },
+    "domain_info_nerve": {
+      "description": "Get registration info for a domain",
+      "role": "tool",
+      "tags": [
+        "web",
+        "domain"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "whois_lookup"
+      ],
+      "model_scores": {}
+    },
+    "email_check_nerve": {
+      "description": "Check for new or unread emails",
+      "role": "tool",
+      "tags": [
+        "communication",
+        "email"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "read_emails"
+      ],
+      "model_scores": {}
+    },
+    "email_read_nerve": {
+      "description": "Read a specific email by ID",
+      "role": "tool",
+      "tags": [
+        "communication",
+        "email"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "read_emails"
+      ],
+      "model_scores": {}
+    },
+    "email_reply_nerve": {
+      "description": "Reply to an email",
+      "role": "tool",
+      "tags": [
+        "communication",
+        "email"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "email_reply"
+      ],
+      "model_scores": {}
+    },
+    "email_search_nerve": {
+      "description": "Find emails matching a query",
+      "role": "tool",
+      "tags": [
+        "communication",
+        "email"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "search_emails"
+      ],
+      "model_scores": {}
+    },
+    "email_send_nerve": {
+      "description": "Compose and send an email",
+      "role": "tool",
+      "tags": [
+        "communication",
+        "email"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "send_email"
+      ],
+      "model_scores": {}
+    },
+    "encode_nerve": {
+      "description": "Encode or decode base64 data",
+      "role": "tool",
+      "tags": [
+        "data",
+        "encoding"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "base64_encode",
+        "base64_decode"
+      ],
+      "model_scores": {}
+    },
+    "encrypt_nerve": {
+      "description": "Encrypt text using a specified method",
+      "role": "tool",
+      "tags": [
+        "security",
+        "encryption",
+        "encrypt"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "encrypt_text"
+      ],
+      "model_scores": {}
+    },
+    "file_backup_nerve": {
+      "description": "Copy files to a backup location",
+      "role": "tool",
+      "tags": [
+        "file",
+        "backup"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "file_copy",
+        "dir_create"
+      ],
+      "model_scores": {}
+    },
+    "file_diff_nerve": {
+      "description": "Compare two files",
+      "role": "tool",
+      "tags": [
+        "file",
+        "comparison"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "file_read",
+        "diff_compute"
+      ],
+      "model_scores": {}
+    },
+    "file_find_nerve": {
+      "description": "Find files matching a pattern",
+      "role": "tool",
+      "tags": [
+        "file",
+        "search"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "file_search",
+        "file_grep"
+      ],
+      "model_scores": {}
+    },
+    "file_organize_nerve": {
+      "description": "Move and rename files to target structure",
+      "role": "tool",
+      "tags": [
+        "file",
+        "organization"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "dir_list",
+        "file_move",
+        "dir_create"
+      ],
+      "model_scores": {}
+    },
+    "file_read_nerve": {
+      "description": "Read and return file contents",
+      "role": "tool",
+      "tags": [
+        "file",
+        "io"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "file_read",
+        "file_exists"
+      ],
+      "model_scores": {}
+    },
+    "file_watch_nerve": {
+      "description": "Monitor a path and report changes",
+      "role": "tool",
+      "tags": [
+        "file",
+        "monitoring"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "file_watch"
+      ],
+      "model_scores": {}
+    },
+    "file_write_nerve": {
+      "description": "Write content to a file",
+      "role": "tool",
+      "tags": [
+        "file",
+        "io"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "file_write",
+        "dir_create"
+      ],
+      "model_scores": {}
+    },
+    "gif_create_nerve": {
+      "description": "Create animated GIF images from a sequence of frames.",
+      "role": "creative",
+      "tags": [
+        "gif",
+        "create",
+        "animation"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "gif_create"
+      ],
+      "model_scores": {}
+    },
+    "gif_find_nerve": {
+      "description": "Search for and find relevant GIF animations.",
+      "role": "creative",
+      "tags": [
+        "gif",
+        "search",
+        "media"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "search_gifs"
+      ],
+      "model_scores": {}
+    },
+    "git_branch_nerve": {
+      "description": "Create and switch to a new branch",
+      "role": "code",
+      "tags": [
+        "git",
+        "version-control"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "git_branch_create",
+        "git_checkout"
+      ],
+      "model_scores": {}
+    },
+    "git_cleanup_nerve": {
+      "description": "Delete merged and stale branches",
+      "role": "code",
+      "tags": [
+        "git",
+        "version-control"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "git_branch_list",
+        "git_branch_delete"
+      ],
+      "model_scores": {}
+    },
+    "git_clone_nerve": {
+      "description": "Clone a remote repository",
+      "role": "code",
+      "tags": [
+        "git",
+        "version-control"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "git_clone"
+      ],
+      "model_scores": {}
+    },
+    "git_commit_nerve": {
+      "description": "Stage and commit clean changes",
+      "role": "code",
+      "tags": [
+        "git",
+        "version-control"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "git_status",
+        "git_diff",
+        "git_add",
+        "git_commit"
+      ],
+      "model_scores": {}
+    },
+    "git_conflict_nerve": {
+      "description": "Detect and surface merge conflicts",
+      "role": "code",
+      "tags": [
+        "git",
+        "version-control"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "git_status",
+        "git_diff",
+        "file_read"
+      ],
+      "model_scores": {}
+    },
+    "git_history_nerve": {
+      "description": "Investigate commit history",
+      "role": "code",
+      "tags": [
+        "git",
+        "version-control"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "git_log",
+        "git_diff"
+      ],
+      "model_scores": {}
+    },
+    "git_merge_nerve": {
+      "description": "Merge a branch into current",
+      "role": "code",
+      "tags": [
+        "git",
+        "version-control"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "git_status",
+        "git_merge",
+        "git_log"
+      ],
+      "model_scores": {}
+    },
+    "git_pull_nerve": {
+      "description": "Pull and integrate remote changes",
+      "role": "code",
+      "tags": [
+        "git",
+        "version-control"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "git_pull",
+        "git_status"
+      ],
+      "model_scores": {}
+    },
+    "git_push_nerve": {
+      "description": "Push local commits to remote",
+      "role": "code",
+      "tags": [
+        "git",
+        "version-control"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "git_status",
+        "git_push"
+      ],
+      "model_scores": {}
+    },
+    "git_rebase_nerve": {
+      "description": "Rebase current branch onto target",
+      "role": "code",
+      "tags": [
+        "git",
+        "version-control"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "git_status",
+        "git_rebase",
+        "git_log"
+      ],
+      "model_scores": {}
+    },
+    "git_stash_nerve": {
+      "description": "Stash or restore work in progress",
+      "role": "code",
+      "tags": [
+        "git",
+        "version-control"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "git_stash",
+        "git_stash_pop",
+        "git_status"
+      ],
+      "model_scores": {}
+    },
+    "git_tag_nerve": {
+      "description": "Tag a release point",
+      "role": "code",
+      "tags": [
+        "git",
+        "version-control"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "git_log",
+        "git_tag"
+      ],
+      "model_scores": {}
+    },
+    "hash_nerve": {
+      "description": "Compute a hash of input data",
+      "role": "tool",
+      "tags": [
+        "data",
+        "hash",
+        "security"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "hash_compute"
+      ],
+      "model_scores": {}
+    },
+    "hash_verify_nerve": {
+      "description": "Verify a value against a hash",
+      "role": "tool",
+      "tags": [
+        "data",
+        "hash",
+        "security"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "hash_verify"
+      ],
+      "model_scores": {}
+    },
+    "hotkey_nerve": {
+      "description": "Press a keyboard shortcut",
+      "role": "tool",
+      "tags": [
+        "desktop",
+        "keyboard",
+        "shortcut"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "keyboard_press"
+      ],
+      "model_scores": {}
+    },
+    "id_generate_nerve": {
+      "description": "Generate a unique identifier",
+      "role": "tool",
+      "tags": [
+        "data",
+        "uuid",
+        "id"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "uuid_generate"
+      ],
+      "model_scores": {}
+    },
+    "image_capture_nerve": {
+      "description": "Capture a screenshot of the current screen.",
+      "role": "tool",
+      "tags": [
+        "image",
+        "screenshot",
+        "capture"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "capture_screen"
+      ],
+      "model_scores": {}
+    },
+    "image_convert_nerve": {
+      "description": "Convert images between formats such as PNG, JPEG, and WebP.",
+      "role": "tool",
+      "tags": [
+        "image",
+        "convert",
+        "format"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "image_convert"
+      ],
+      "model_scores": {}
+    },
+    "image_crop_nerve": {
+      "description": "Crop images to a specified rectangular region.",
+      "role": "tool",
+      "tags": [
+        "image",
+        "crop",
+        "transform"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "image_crop"
+      ],
+      "model_scores": {}
+    },
+    "image_generate_nerve": {
+      "description": "Generate images from text descriptions using AI.",
+      "role": "creative",
+      "tags": [
+        "image",
+        "generate",
+        "ai"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "generate_image"
+      ],
+      "model_scores": {}
+    },
+    "image_ocr_nerve": {
+      "description": "Extract text from images using optical character recognition.",
+      "role": "tool",
+      "tags": [
+        "image",
+        "ocr",
+        "text"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "image_to_text"
+      ],
+      "model_scores": {}
+    },
+    "image_resize_nerve": {
+      "description": "Resize images to specified dimensions.",
+      "role": "tool",
+      "tags": [
+        "image",
+        "resize",
+        "transform"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "image_resize"
+      ],
+      "model_scores": {}
+    },
     "joke_nerve": {
       "description": "Generate jokes, puns, and comedic content across various topics. Ensure the humor is appropriate for all audiences.",
       "role": "creative",
@@ -16,12 +1471,1511 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "joke_fetcher",
-        "generate_joke",
-        "search_wikipedia",
-        "voice_recognition",
-        "get_article_content",
-        "random_joke"
+        "joke_fetcher"
+      ],
+      "model_scores": {}
+    },
+    "json_extract_nerve": {
+      "description": "Parse and query JSON data",
+      "role": "tool",
+      "tags": [
+        "data",
+        "json"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "json_parse",
+        "json_query"
+      ],
+      "model_scores": {}
+    },
+    "json_format_nerve": {
+      "description": "Format data as JSON",
+      "role": "tool",
+      "tags": [
+        "data",
+        "json"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "json_format"
+      ],
+      "model_scores": {}
+    },
+    "light_color_nerve": {
+      "description": "Set light color in the smart home.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "light"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "set_light"
+      ],
+      "model_scores": {}
+    },
+    "light_dim_nerve": {
+      "description": "Set light brightness level in the smart home.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "light"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "set_light"
+      ],
+      "model_scores": {}
+    },
+    "light_off_nerve": {
+      "description": "Turn a light off in the smart home.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "light"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "set_light"
+      ],
+      "model_scores": {}
+    },
+    "light_on_nerve": {
+      "description": "Turn a light on in the smart home.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "light"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "set_light"
+      ],
+      "model_scores": {}
+    },
+    "light_status_nerve": {
+      "description": "Check the current state of a light.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "light"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "list_lights"
+      ],
+      "model_scores": {}
+    },
+    "link_check_nerve": {
+      "description": "Check if a URL is alive",
+      "role": "tool",
+      "tags": [
+        "web",
+        "monitoring"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "fetch"
+      ],
+      "model_scores": {}
+    },
+    "lock_nerve": {
+      "description": "Lock or unlock a smart door lock.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "lock"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "lock_set"
+      ],
+      "model_scores": {}
+    },
+    "math_eval_nerve": {
+      "description": "Evaluate a mathematical expression",
+      "role": "tool",
+      "tags": [
+        "data",
+        "math"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "math_eval"
+      ],
+      "model_scores": {}
+    },
+    "music_identify_nerve": {
+      "description": "Identify a song that is currently playing or from an audio clip.",
+      "role": "tool",
+      "tags": [
+        "audio",
+        "music",
+        "identify"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "identify_song"
+      ],
+      "model_scores": {}
+    },
+    "news_nerve": {
+      "description": "Fetch latest news on a topic",
+      "role": "tool",
+      "tags": [
+        "news",
+        "fetch",
+        "headlines"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "news_fetch"
+      ],
+      "model_scores": {}
+    },
+    "note_create_nerve": {
+      "description": "Create a new note with a title and content.",
+      "role": "tool",
+      "tags": [
+        "notes",
+        "productivity",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "create_note"
+      ],
+      "model_scores": {}
+    },
+    "note_delete_nerve": {
+      "description": "Delete a note by its title.",
+      "role": "tool",
+      "tags": [
+        "notes",
+        "productivity",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "note_delete"
+      ],
+      "model_scores": {}
+    },
+    "note_read_nerve": {
+      "description": "Read the contents of a note by title.",
+      "role": "tool",
+      "tags": [
+        "notes",
+        "productivity",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "read_note"
+      ],
+      "model_scores": {}
+    },
+    "note_search_nerve": {
+      "description": "Search through notes by keyword or phrase.",
+      "role": "tool",
+      "tags": [
+        "notes",
+        "productivity",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "search_notes"
+      ],
+      "model_scores": {}
+    },
+    "note_update_nerve": {
+      "description": "Update the content of an existing note.",
+      "role": "tool",
+      "tags": [
+        "notes",
+        "productivity",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "update_note"
+      ],
+      "model_scores": {}
+    },
+    "notification_nerve": {
+      "description": "Send a push notification",
+      "role": "tool",
+      "tags": [
+        "communication",
+        "notification"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "notification_send"
+      ],
+      "model_scores": {}
+    },
+    "password_generate_nerve": {
+      "description": "Generate a secure password",
+      "role": "tool",
+      "tags": [
+        "security",
+        "password",
+        "generate"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "password_generate"
+      ],
+      "model_scores": {}
+    },
+    "password_get_nerve": {
+      "description": "Retrieve a credential from a vault",
+      "role": "tool",
+      "tags": [
+        "security",
+        "password",
+        "vault"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "get_item"
+      ],
+      "model_scores": {}
+    },
+    "password_store_nerve": {
+      "description": "Store a credential in a vault",
+      "role": "tool",
+      "tags": [
+        "security",
+        "password",
+        "store"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "list_items"
+      ],
+      "model_scores": {}
+    },
+    "pdf_create_nerve": {
+      "description": "Create PDF documents from text content and structured data.",
+      "role": "tool",
+      "tags": [
+        "document",
+        "pdf",
+        "create"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "pdf_create"
+      ],
+      "model_scores": {}
+    },
+    "pdf_read_nerve": {
+      "description": "Extract text content from PDF files for processing and analysis.",
+      "role": "tool",
+      "tags": [
+        "document",
+        "pdf",
+        "read"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "pdf_read"
+      ],
+      "model_scores": {}
+    },
+    "port_scan_nerve": {
+      "description": "Scan for open ports on a host",
+      "role": "tool",
+      "tags": [
+        "security",
+        "network",
+        "ports"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "port_scan"
+      ],
+      "model_scores": {}
+    },
+    "pptx_create_nerve": {
+      "description": "Create PowerPoint slide presentations from content.",
+      "role": "tool",
+      "tags": [
+        "document",
+        "pptx",
+        "create"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "pptx_create"
+      ],
+      "model_scores": {}
+    },
+    "pptx_read_nerve": {
+      "description": "Extract content from PowerPoint slide presentations.",
+      "role": "tool",
+      "tags": [
+        "document",
+        "pptx",
+        "read"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "pptx_read"
+      ],
+      "model_scores": {}
+    },
+    "process_kill_nerve": {
+      "description": "Kill a running process",
+      "role": "code",
+      "tags": [
+        "process",
+        "kill",
+        "signal"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "process_kill"
+      ],
+      "model_scores": {}
+    },
+    "process_list_nerve": {
+      "description": "List running processes on the host",
+      "role": "code",
+      "tags": [
+        "process",
+        "list",
+        "ps"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "process_list"
+      ],
+      "model_scores": {}
+    },
+    "process_run_nerve": {
+      "description": "Run a shell command on the host",
+      "role": "code",
+      "tags": [
+        "process",
+        "shell",
+        "command"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "process_run"
+      ],
+      "model_scores": {}
+    },
+    "qr_generate_nerve": {
+      "description": "Generate a QR code from content",
+      "role": "tool",
+      "tags": [
+        "visualization",
+        "qr"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "qr_code_generate"
+      ],
+      "model_scores": {}
+    },
+    "qr_read_nerve": {
+      "description": "Read content from a QR code",
+      "role": "tool",
+      "tags": [
+        "visualization",
+        "qr"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "qr_code_read"
+      ],
+      "model_scores": {}
+    },
+    "regex_nerve": {
+      "description": "Match or replace with regular expressions",
+      "role": "tool",
+      "tags": [
+        "data",
+        "regex",
+        "text"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "regex_match",
+        "regex_replace"
+      ],
+      "model_scores": {}
+    },
+    "reminder_check_nerve": {
+      "description": "List pending reminders.",
+      "role": "tool",
+      "tags": [
+        "reminders",
+        "productivity",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "list_reminders"
+      ],
+      "model_scores": {}
+    },
+    "reminder_create_nerve": {
+      "description": "Create a new reminder with a title and optional due date.",
+      "role": "tool",
+      "tags": [
+        "reminders",
+        "productivity",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "create_reminder"
+      ],
+      "model_scores": {}
+    },
+    "reminder_done_nerve": {
+      "description": "Mark a reminder as complete.",
+      "role": "tool",
+      "tags": [
+        "reminders",
+        "productivity",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "complete_reminder"
+      ],
+      "model_scores": {}
+    },
+    "rss_monitor_nerve": {
+      "description": "Fetch and summarize RSS feed updates",
+      "role": "tool",
+      "tags": [
+        "web",
+        "rss"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "get_articles"
+      ],
+      "model_scores": {}
+    },
+    "screen_read_nerve": {
+      "description": "Read text from a screen region",
+      "role": "tool",
+      "tags": [
+        "desktop",
+        "screen",
+        "ocr"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "capture_screen",
+        "ocr_screen"
+      ],
+      "model_scores": {}
+    },
+    "scroll_nerve": {
+      "description": "Scroll in a direction on screen",
+      "role": "tool",
+      "tags": [
+        "desktop",
+        "mouse",
+        "scroll"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "mouse_scroll"
+      ],
+      "model_scores": {}
+    },
+    "sensor_list_nerve": {
+      "description": "List all available sensors in the IoT network.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "sensor"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "sensor_list"
+      ],
+      "model_scores": {}
+    },
+    "sensor_read_nerve": {
+      "description": "Read a sensor value from a connected IoT sensor.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "sensor"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "sensor_read"
+      ],
+      "model_scores": {}
+    },
+    "sleep_data_nerve": {
+      "description": "Read sleep tracker data from a connected sleep device.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "health"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "get_sleep_data"
+      ],
+      "model_scores": {}
+    },
+    "sms_send_nerve": {
+      "description": "Send an SMS message",
+      "role": "tool",
+      "tags": [
+        "communication",
+        "sms"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "sms_send"
+      ],
+      "model_scores": {}
+    },
+    "social_followers_nerve": {
+      "description": "Get follower data for a social media account.",
+      "role": "tool",
+      "tags": [
+        "social",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "social_followers"
+      ],
+      "model_scores": {}
+    },
+    "social_post_nerve": {
+      "description": "Publish a post to a social media platform.",
+      "role": "tool",
+      "tags": [
+        "social",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "post_tweet"
+      ],
+      "model_scores": {}
+    },
+    "social_react_nerve": {
+      "description": "Like or react to a post on a social media platform.",
+      "role": "tool",
+      "tags": [
+        "social",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "social_like"
+      ],
+      "model_scores": {}
+    },
+    "social_read_nerve": {
+      "description": "Read a post or thread from a social media platform.",
+      "role": "tool",
+      "tags": [
+        "social",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "get_timeline"
+      ],
+      "model_scores": {}
+    },
+    "social_reply_nerve": {
+      "description": "Reply to a post on a social media platform.",
+      "role": "tool",
+      "tags": [
+        "social",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "reply_tweet"
+      ],
+      "model_scores": {}
+    },
+    "social_search_nerve": {
+      "description": "Search posts on a social media platform by keyword.",
+      "role": "tool",
+      "tags": [
+        "social",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "search_tweets"
+      ],
+      "model_scores": {}
+    },
+    "social_trending_nerve": {
+      "description": "Get trending topics on a social media platform.",
+      "role": "tool",
+      "tags": [
+        "social",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "social_trending"
+      ],
+      "model_scores": {}
+    },
+    "speaker_pause_nerve": {
+      "description": "Pause playback on a smart speaker.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "speaker"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "pause"
+      ],
+      "model_scores": {}
+    },
+    "speaker_play_nerve": {
+      "description": "Play media on a smart speaker.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "speaker"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "play"
+      ],
+      "model_scores": {}
+    },
+    "speaker_volume_nerve": {
+      "description": "Set the volume level on a smart speaker.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "speaker"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "volume"
+      ],
+      "model_scores": {}
+    },
+    "stock_history_nerve": {
+      "description": "Get historical stock price data for a given ticker symbol.",
+      "role": "tool",
+      "tags": [
+        "finance",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "stock_history"
+      ],
+      "model_scores": {}
+    },
+    "stock_quote_nerve": {
+      "description": "Get the current stock price for a given ticker symbol.",
+      "role": "tool",
+      "tags": [
+        "finance",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "stock_quote"
+      ],
+      "model_scores": {}
+    },
+    "table_nerve": {
+      "description": "Format data as a readable table",
+      "role": "tool",
+      "tags": [
+        "visualization",
+        "table"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "table_format"
+      ],
+      "model_scores": {}
+    },
+    "thermostat_read_nerve": {
+      "description": "Read the current temperature from a thermostat.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "thermostat"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "thermostat_read"
+      ],
+      "model_scores": {}
+    },
+    "thermostat_set_nerve": {
+      "description": "Set the target temperature on a thermostat.",
+      "role": "tool",
+      "tags": [
+        "iot",
+        "thermostat"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "set_temperature"
+      ],
+      "model_scores": {}
+    },
+    "timestamp_nerve": {
+      "description": "Get or convert timestamps",
+      "role": "tool",
+      "tags": [
+        "data",
+        "time"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "get_current_time",
+        "convert_timezone"
+      ],
+      "model_scores": {}
+    },
+    "translate_nerve": {
+      "description": "Translate text to another language",
+      "role": "tool",
+      "tags": [
+        "translate",
+        "language",
+        "text"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "translate_text"
+      ],
+      "model_scores": {}
+    },
+    "type_nerve": {
+      "description": "Type text via keyboard input",
+      "role": "tool",
+      "tags": [
+        "desktop",
+        "keyboard",
+        "type"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "keyboard_type"
+      ],
+      "model_scores": {}
+    },
+    "video_download_nerve": {
+      "description": "Download videos from URLs.",
+      "role": "tool",
+      "tags": [
+        "video",
+        "download",
+        "media"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "video_download"
+      ],
+      "model_scores": {}
+    },
+    "video_extract_frames_nerve": {
+      "description": "Extract individual frames from video files.",
+      "role": "tool",
+      "tags": [
+        "video",
+        "frames",
+        "extract"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "video_extract_frames"
+      ],
+      "model_scores": {}
+    },
+    "video_info_nerve": {
+      "description": "Get metadata and technical details about a video file.",
+      "role": "tool",
+      "tags": [
+        "video",
+        "metadata",
+        "info"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "video_get_info"
+      ],
+      "model_scores": {}
+    },
+    "video_transcribe_nerve": {
+      "description": "Extract text transcript from video content.",
+      "role": "tool",
+      "tags": [
+        "video",
+        "transcribe",
+        "speech"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "video_download",
+        "speech_to_text"
+      ],
+      "model_scores": {}
+    },
+    "video_trim_nerve": {
+      "description": "Cut a specific time segment from a video file.",
+      "role": "tool",
+      "tags": [
+        "video",
+        "trim",
+        "edit"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "video_trim"
+      ],
+      "model_scores": {}
+    },
+    "vuln_scan_nerve": {
+      "description": "Scan for security vulnerabilities",
+      "role": "tool",
+      "tags": [
+        "security",
+        "vulnerability",
+        "scan"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "vuln_scan"
+      ],
+      "model_scores": {}
+    },
+    "weather_forecast_nerve": {
+      "description": "Get weather forecast for a location over upcoming days.",
+      "role": "tool",
+      "tags": [
+        "weather",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "get_forecast"
+      ],
+      "model_scores": {}
+    },
+    "weather_now_nerve": {
+      "description": "Get current weather conditions for a given location.",
+      "role": "tool",
+      "tags": [
+        "weather",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "get_current"
+      ],
+      "model_scores": {}
+    },
+    "web_fetch_nerve": {
+      "description": "Make an HTTP request and return response",
+      "role": "tool",
+      "tags": [
+        "web",
+        "http"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "fetch",
+        "http_post"
+      ],
+      "model_scores": {}
+    },
+    "web_scrape_nerve": {
+      "description": "Extract content from a URL",
+      "role": "tool",
+      "tags": [
+        "web",
+        "scraping"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "fetch_content"
+      ],
+      "model_scores": {}
+    },
+    "web_search_nerve": {
+      "description": "Search the web and return results",
+      "role": "tool",
+      "tags": [
+        "web",
+        "search"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "search"
+      ],
+      "model_scores": {}
+    },
+    "webhook_fire_nerve": {
+      "description": "Fire a webhook with a payload",
+      "role": "tool",
+      "tags": [
+        "communication",
+        "webhook"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "create_webhook"
+      ],
+      "model_scores": {}
+    },
+    "webhook_register_nerve": {
+      "description": "Set up a webhook listener",
+      "role": "tool",
+      "tags": [
+        "communication",
+        "webhook"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "list_webhooks"
+      ],
+      "model_scores": {}
+    },
+    "window_focus_nerve": {
+      "description": "Bring a window to the front",
+      "role": "tool",
+      "tags": [
+        "desktop",
+        "window",
+        "focus"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "window_focus"
+      ],
+      "model_scores": {}
+    },
+    "window_list_nerve": {
+      "description": "List all open windows",
+      "role": "tool",
+      "tags": [
+        "desktop",
+        "window",
+        "list"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "window_list"
+      ],
+      "model_scores": {}
+    },
+    "window_resize_nerve": {
+      "description": "Resize an application window",
+      "role": "tool",
+      "tags": [
+        "desktop",
+        "window",
+        "resize"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "window_resize"
+      ],
+      "model_scores": {}
+    },
+    "xlsx_create_nerve": {
+      "description": "Create Excel spreadsheets from structured data.",
+      "role": "tool",
+      "tags": [
+        "document",
+        "xlsx",
+        "create"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "xlsx_create"
+      ],
+      "model_scores": {}
+    },
+    "xlsx_read_nerve": {
+      "description": "Read and extract data from Excel spreadsheets.",
+      "role": "tool",
+      "tags": [
+        "document",
+        "xlsx",
+        "read"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "xlsx_read"
+      ],
+      "model_scores": {}
+    },
+    "youtube_info_nerve": {
+      "description": "Get metadata for a YouTube video including title, views, and description.",
+      "role": "tool",
+      "tags": [
+        "youtube",
+        "video",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "youtube_info"
+      ],
+      "model_scores": {}
+    },
+    "youtube_search_nerve": {
+      "description": "Search for YouTube videos by keyword.",
+      "role": "tool",
+      "tags": [
+        "youtube",
+        "video",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "youtube_search"
+      ],
+      "model_scores": {}
+    },
+    "youtube_transcript_nerve": {
+      "description": "Get the transcript from a YouTube video.",
+      "role": "tool",
+      "tags": [
+        "youtube",
+        "video",
+        "tool"
+      ],
+      "authors": [
+        {
+          "github": "sentient-community"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "get_transcript"
       ],
       "model_scores": {}
     }
@@ -1339,8 +4293,8 @@
         {
           "name": "device_host",
           "type": "string",
-          "description": "IoT gateway host URL (defaults to SENTIENT_IOT_HOST env var)",
-          "required": false
+          "description": "IoT gateway host URL",
+          "required": true
         }
       ],
       "requires_api_key": false
@@ -1376,8 +4330,8 @@
         {
           "name": "device_host",
           "type": "string",
-          "description": "IoT gateway host URL (defaults to SENTIENT_IOT_HOST env var)",
-          "required": false
+          "description": "IoT gateway host URL",
+          "required": true
         }
       ],
       "requires_api_key": false
@@ -1898,6 +4852,12 @@
           "type": "string",
           "description": "Target currency code (e.g. GBP, JPY)",
           "required": true
+        },
+        {
+          "name": "api_key",
+          "type": "string",
+          "description": "API key for exchangerate-api.com",
+          "required": true
         }
       ],
       "requires_api_key": true
@@ -1928,6 +4888,12 @@
           "name": "to_currency",
           "type": "string",
           "description": "Target currency code (e.g. GBP, JPY)",
+          "required": true
+        },
+        {
+          "name": "api_key",
+          "type": "string",
+          "description": "API key for exchangerate-api.com",
           "required": true
         }
       ],
@@ -1984,8 +4950,8 @@
         {
           "name": "device_host",
           "type": "string",
-          "description": "IoT gateway host URL (defaults to SENTIENT_IOT_HOST env var)",
-          "required": false
+          "description": "IoT gateway host URL",
+          "required": true
         }
       ],
       "requires_api_key": false
@@ -2015,8 +4981,8 @@
         {
           "name": "device_host",
           "type": "string",
-          "description": "IoT gateway host URL (defaults to SENTIENT_IOT_HOST env var)",
-          "required": false
+          "description": "IoT gateway host URL",
+          "required": true
         }
       ],
       "requires_api_key": false
@@ -2514,6 +5480,30 @@
           "type": "string",
           "description": "Reply body text",
           "required": true
+        },
+        {
+          "name": "smtp_host",
+          "type": "string",
+          "description": "SMTP server hostname",
+          "required": true
+        },
+        {
+          "name": "smtp_user",
+          "type": "string",
+          "description": "SMTP authentication username",
+          "required": true
+        },
+        {
+          "name": "smtp_pass",
+          "type": "string",
+          "description": "SMTP authentication password",
+          "required": true
+        },
+        {
+          "name": "imap_host",
+          "type": "string",
+          "description": "IMAP server hostname",
+          "required": true
         }
       ],
       "requires_api_key": true
@@ -2957,6 +5947,637 @@
         }
       ],
       "requires_api_key": false
+    },
+    "git_add": {
+      "name": "git_add",
+      "version": "1.0.0",
+      "description": "Stage specific files for commit",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "staging"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "files",
+          "type": "string",
+          "description": "Comma-separated file paths to stage (wildcard '.' and '-A' are rejected)",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_branch_create": {
+      "name": "git_branch_create",
+      "version": "1.0.0",
+      "description": "Create a new Git branch",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "branch"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Name of the new branch",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_branch_delete": {
+      "name": "git_branch_delete",
+      "version": "1.0.0",
+      "description": "Delete a Git branch",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "branch"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Name of the branch to delete",
+          "required": true
+        },
+        {
+          "name": "force",
+          "type": "boolean",
+          "description": "Force delete even if not fully merged (default: false)",
+          "required": false
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_branch_list": {
+      "name": "git_branch_list",
+      "version": "1.0.0",
+      "description": "List branches in a Git repository",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "branch"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "all",
+          "type": "boolean",
+          "description": "Include remote branches (default: false)",
+          "required": false
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_checkout": {
+      "name": "git_checkout",
+      "version": "1.0.0",
+      "description": "Switch to a different branch or commit",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "branch"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "target",
+          "type": "string",
+          "description": "Branch name or commit SHA to switch to",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_clone": {
+      "name": "git_clone",
+      "version": "1.0.0",
+      "description": "Clone a remote Git repository",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "clone",
+        "remote"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "url",
+          "type": "string",
+          "description": "Repository URL to clone",
+          "required": true
+        },
+        {
+          "name": "destination",
+          "type": "string",
+          "description": "Local directory to clone into (default: derived from URL)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_commit": {
+      "name": "git_commit",
+      "version": "1.0.0",
+      "description": "Create a commit with a message",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "commit"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "message",
+          "type": "string",
+          "description": "Commit message",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_diff": {
+      "name": "git_diff",
+      "version": "1.0.0",
+      "description": "Show changes in the working tree or staging area",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "diff"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        },
+        {
+          "name": "staged",
+          "type": "boolean",
+          "description": "Show only staged changes (default: false)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_log": {
+      "name": "git_log",
+      "version": "1.0.0",
+      "description": "Show commit history of a Git repository",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "history"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "count",
+          "type": "integer",
+          "description": "Number of commits to show (default: 10)",
+          "required": false
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_merge": {
+      "name": "git_merge",
+      "version": "1.0.0",
+      "description": "Merge a branch into the current branch",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "merge"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "branch",
+          "type": "string",
+          "description": "Branch name to merge into the current branch",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_pull": {
+      "name": "git_pull",
+      "version": "1.0.0",
+      "description": "Pull changes from a remote repository",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "remote"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "remote",
+          "type": "string",
+          "description": "Remote name (default: origin)",
+          "required": false
+        },
+        {
+          "name": "branch",
+          "type": "string",
+          "description": "Branch to pull (default: current branch)",
+          "required": false
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_push": {
+      "name": "git_push",
+      "version": "1.0.0",
+      "description": "Push commits to a remote repository",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "remote"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "remote",
+          "type": "string",
+          "description": "Remote name (default: origin)",
+          "required": false
+        },
+        {
+          "name": "branch",
+          "type": "string",
+          "description": "Branch to push (default: current branch)",
+          "required": false
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_rebase": {
+      "name": "git_rebase",
+      "version": "1.0.0",
+      "description": "Rebase the current branch onto another branch",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "rebase"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "branch",
+          "type": "string",
+          "description": "Branch to rebase onto",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_stash": {
+      "name": "git_stash",
+      "version": "1.0.0",
+      "description": "Stash changes in the working directory",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "stash"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "message",
+          "type": "string",
+          "description": "Optional message describing the stash",
+          "required": false
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_stash_pop": {
+      "name": "git_stash_pop",
+      "version": "1.0.0",
+      "description": "Pop a stashed set of changes",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "stash"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "index",
+          "type": "integer",
+          "description": "Stash index to pop (default: 0)",
+          "required": false
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_status": {
+      "name": "git_status",
+      "version": "1.0.0",
+      "description": "Get working tree status of a Git repository",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "status"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
+    },
+    "git_tag": {
+      "name": "git_tag",
+      "version": "1.0.0",
+      "description": "Create a tag in a Git repository",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "git",
+      "tags": [
+        "git",
+        "version-control",
+        "tag"
+      ],
+      "parameters": [
+        {
+          "name": "token",
+          "type": "string",
+          "description": "User's Git access token for authentication",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Tag name",
+          "required": true
+        },
+        {
+          "name": "message",
+          "type": "string",
+          "description": "Tag message (creates an annotated tag if provided)",
+          "required": false
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Path to the Git repository (default: current directory)",
+          "required": false
+        }
+      ],
+      "requires_api_key": true
     },
     "hash_compute": {
       "name": "hash_compute",
@@ -3555,8 +7176,8 @@
         {
           "name": "device_host",
           "type": "string",
-          "description": "IoT gateway host URL (defaults to SENTIENT_IOT_HOST env var)",
-          "required": false
+          "description": "IoT gateway host URL",
+          "required": true
         }
       ],
       "requires_api_key": false
@@ -3784,6 +7405,12 @@
           "name": "query",
           "type": "string",
           "description": "Search query for news articles",
+          "required": true
+        },
+        {
+          "name": "api_key",
+          "type": "string",
+          "description": "API key for NewsAPI",
           "required": true
         },
         {
@@ -4318,8 +7945,8 @@
         {
           "name": "device_host",
           "type": "string",
-          "description": "IoT gateway host URL (defaults to SENTIENT_IOT_HOST env var)",
-          "required": false
+          "description": "IoT gateway host URL",
+          "required": true
         }
       ],
       "requires_api_key": false
@@ -4349,8 +7976,8 @@
         {
           "name": "device_host",
           "type": "string",
-          "description": "IoT gateway host URL (defaults to SENTIENT_IOT_HOST env var)",
-          "required": false
+          "description": "IoT gateway host URL",
+          "required": true
         }
       ],
       "requires_api_key": false
@@ -4383,6 +8010,18 @@
           "type": "string",
           "description": "Message text",
           "required": true
+        },
+        {
+          "name": "provider",
+          "type": "string",
+          "description": "SMS provider name (twilio or vonage)",
+          "required": true
+        },
+        {
+          "name": "api_key",
+          "type": "string",
+          "description": "API key for the SMS provider",
+          "required": true
         }
       ],
       "requires_api_key": true
@@ -4414,6 +8053,18 @@
           "type": "string",
           "description": "Username to look up followers for",
           "required": true
+        },
+        {
+          "name": "api_key",
+          "type": "string",
+          "description": "API key or access token for the platform",
+          "required": true
+        },
+        {
+          "name": "instance_url",
+          "type": "string",
+          "description": "Mastodon instance URL (e.g. https://mastodon.social). Required for Mastodon.",
+          "required": false
         }
       ],
       "requires_api_key": true
@@ -4445,6 +8096,18 @@
           "type": "string",
           "description": "Unique identifier of the post to like",
           "required": true
+        },
+        {
+          "name": "api_key",
+          "type": "string",
+          "description": "API key or access token for the platform",
+          "required": true
+        },
+        {
+          "name": "instance_url",
+          "type": "string",
+          "description": "Mastodon instance URL (e.g. https://mastodon.social). Required for Mastodon.",
+          "required": false
         }
       ],
       "requires_api_key": true
@@ -4472,9 +8135,21 @@
           "required": true
         },
         {
+          "name": "api_key",
+          "type": "string",
+          "description": "API key or access token for the platform",
+          "required": true
+        },
+        {
           "name": "region",
           "type": "string",
           "description": "Region or country code for localized trends (e.g. US, UK)",
+          "required": false
+        },
+        {
+          "name": "instance_url",
+          "type": "string",
+          "description": "Mastodon instance URL (e.g. https://mastodon.social). Required for Mastodon.",
           "required": false
         }
       ],
@@ -4604,8 +8279,8 @@
         {
           "name": "device_host",
           "type": "string",
-          "description": "IoT gateway host URL (defaults to SENTIENT_IOT_HOST env var)",
-          "required": false
+          "description": "IoT gateway host URL",
+          "required": true
         }
       ],
       "requires_api_key": false
@@ -4639,9 +8314,21 @@
           "required": true
         },
         {
+          "name": "api_key",
+          "type": "string",
+          "description": "API key for the translation service",
+          "required": true
+        },
+        {
           "name": "source_language",
           "type": "string",
           "description": "Source language code (auto-detected if omitted)",
+          "required": false
+        },
+        {
+          "name": "api_url",
+          "type": "string",
+          "description": "Translation API endpoint URL (default: https://libretranslate.com/translate)",
           "required": false
         }
       ],
@@ -5203,6 +8890,12 @@
           "name": "query",
           "type": "string",
           "description": "Search query for YouTube videos",
+          "required": true
+        },
+        {
+          "name": "api_key",
+          "type": "string",
+          "description": "API key for the YouTube Data API v3",
           "required": true
         },
         {
@@ -6361,10 +10054,10 @@
     }
   },
   "stats": {
-    "total_nerves": 1,
+    "total_nerves": 159,
     "total_adapters": 31,
     "total_connectors": 15,
-    "total_tools": 122,
+    "total_tools": 139,
     "total_mcps": 43
   },
   "leaderboard": {}
