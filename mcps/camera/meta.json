@@ -1,0 +1,12 @@
+{
+  "name": "camera",
+  "version": "1.0.0",
+  "description": "Photo and video capture — take photos, record video, and list available cameras",
+  "source": "npm",
+  "package": "camera-mcp-server",
+  "command": ["npx", "-y", "camera-mcp-server"],
+  "auth_type": "none",
+  "tools": ["take_photo", "record_video", "list_cameras"],
+  "capabilities": ["camera", "photo", "video", "capture", "webcam"],
+  "category": "media"
+}

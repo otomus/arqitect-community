@@ -1,0 +1,24 @@
+[
+  {
+    "description": "Replace digits with X",
+    "args": {
+      "pattern": "\\\\d",
+      "replacement": "X",
+      "text": "abc123"
+    },
+    "expected_keywords": [
+      "abcXXX"
+    ]
+  },
+  {
+    "description": "No matches leaves text unchanged",
+    "args": {
+      "pattern": "\\\\d",
+      "replacement": "X",
+      "text": "hello"
+    },
+    "expected_keywords": [
+      "hello"
+    ]
+  }
+]

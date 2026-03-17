@@ -1,0 +1,33 @@
+{
+  "name": "calendar_events",
+  "version": "1.0.0",
+  "description": "List calendar events for a given date range",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "external",
+  "tags": [
+    "calendar",
+    "events",
+    "schedule",
+    "agenda"
+  ],
+  "parameters": [
+    {
+      "name": "date",
+      "type": "string",
+      "description": "Start date in ISO format (e.g. 2026-03-17). Defaults to today.",
+      "required": false
+    },
+    {
+      "name": "days",
+      "type": "int",
+      "description": "Number of days to look ahead (default 7)",
+      "required": false
+    }
+  ],
+  "requires_api_key": false
+}

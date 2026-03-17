@@ -1,0 +1,36 @@
+[
+  {
+    "description": "Basic arithmetic",
+    "args": {
+      "expression": "2 + 3 * 4"
+    },
+    "expected_keywords": [
+      "14"
+    ]
+  },
+  {
+    "description": "Square root",
+    "args": {
+      "expression": "sqrt(144)"
+    },
+    "expected_keywords": [
+      "12"
+    ]
+  },
+  {
+    "description": "Division",
+    "args": {
+      "expression": "10 / 3"
+    },
+    "expected_keywords": [
+      "3.3"
+    ]
+  },
+  {
+    "description": "Reject dangerous input",
+    "args": {
+      "expression": "__import__(\"os\")"
+    },
+    "expect_error": true
+  }
+]

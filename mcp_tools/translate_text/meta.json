@@ -1,0 +1,39 @@
+{
+  "name": "translate_text",
+  "version": "1.0.0",
+  "description": "Translate text between languages using a translation API",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "external",
+  "tags": [
+    "translate",
+    "language",
+    "text",
+    "i18n"
+  ],
+  "parameters": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Text to translate",
+      "required": true
+    },
+    {
+      "name": "target_language",
+      "type": "string",
+      "description": "Target language code (e.g. es, fr, de, ja)",
+      "required": true
+    },
+    {
+      "name": "source_language",
+      "type": "string",
+      "description": "Source language code (auto-detected if omitted)",
+      "required": false
+    }
+  ],
+  "requires_api_key": true
+}

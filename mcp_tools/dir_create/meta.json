@@ -1,0 +1,27 @@
+{
+  "name": "dir_create",
+  "version": "1.0.0",
+  "description": "Create a directory, including parent directories if needed",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "tags": [
+    "directory",
+    "create",
+    "mkdir",
+    "folder"
+  ],
+  "parameters": [
+    {
+      "name": "path",
+      "type": "string",
+      "description": "Directory path to create",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

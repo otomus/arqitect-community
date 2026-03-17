@@ -1,0 +1,27 @@
+{
+  "name": "calendar_delete_event",
+  "version": "1.0.0",
+  "description": "Delete a calendar event by its identifier",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "external",
+  "tags": [
+    "calendar",
+    "event",
+    "delete",
+    "remove"
+  ],
+  "parameters": [
+    {
+      "name": "event_id",
+      "type": "string",
+      "description": "Unique identifier of the event to delete",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

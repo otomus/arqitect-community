@@ -1,0 +1,12 @@
+{
+  "name": "webhooks",
+  "version": "1.0.0",
+  "description": "External trigger endpoints — create, list, delete webhooks, and view webhook logs",
+  "source": "npm",
+  "package": "webhooks-mcp-server",
+  "command": ["npx", "-y", "webhooks-mcp-server"],
+  "auth_type": "none",
+  "tools": ["create_webhook", "list_webhooks", "delete_webhook", "get_webhook_logs"],
+  "capabilities": ["webhooks", "triggers", "http", "automation", "events"],
+  "category": "automation"
+}

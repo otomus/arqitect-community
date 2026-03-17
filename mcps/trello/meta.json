@@ -1,0 +1,13 @@
+{
+  "name": "trello",
+  "version": "1.0.0",
+  "description": "Trello kanban boards — manage boards, cards, lists, and comments",
+  "source": "npm",
+  "package": "trello-mcp-server",
+  "command": ["npx", "-y", "trello-mcp-server"],
+  "auth_type": "api_key",
+  "auth_env": "TRELLO_API_KEY",
+  "tools": ["list_boards", "list_cards", "create_card", "move_card", "add_comment"],
+  "capabilities": ["kanban", "boards", "cards", "project_management", "tasks"],
+  "category": "productivity"
+}

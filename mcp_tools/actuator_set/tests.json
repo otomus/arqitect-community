@@ -1,0 +1,27 @@
+[
+  {
+    "description": "Set a relay actuator to on",
+    "args": {
+      "actuator_id": "relay-001",
+      "value": "on",
+      "device_host": "http://localhost:8080"
+    },
+    "expected_keywords": [
+      "actuator_id",
+      "value",
+      "status"
+    ]
+  },
+  {
+    "description": "Set a dimmer actuator to 75%",
+    "args": {
+      "actuator_id": "dimmer-001",
+      "value": "75",
+      "device_host": "http://localhost:8080"
+    },
+    "expected_keywords": [
+      "actuator_id",
+      "value"
+    ]
+  }
+]

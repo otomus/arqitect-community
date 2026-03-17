@@ -1,0 +1,35 @@
+{
+  "name": "json_format",
+  "version": "1.0.0",
+  "description": "Format a JSON object as a pretty-printed string",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "tags": [
+    "json",
+    "format",
+    "pretty",
+    "serialize",
+    "data"
+  ],
+  "parameters": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "JSON string to format",
+      "required": true
+    },
+    {
+      "name": "indent",
+      "type": "number",
+      "description": "Indentation level",
+      "required": false,
+      "default": 2
+    }
+  ],
+  "requires_api_key": false
+}

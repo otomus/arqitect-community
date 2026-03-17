@@ -1,0 +1,16 @@
+[
+  {
+    "description": "Read a nonexistent CSV file returns error",
+    "args": {
+      "file_path": "/nonexistent/data.csv"
+    },
+    "expect_error": true
+  },
+  {
+    "description": "Read CSV with empty path returns error",
+    "args": {
+      "file_path": ""
+    },
+    "expect_error": true
+  }
+]

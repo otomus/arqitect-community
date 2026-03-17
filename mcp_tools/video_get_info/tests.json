@@ -1,0 +1,22 @@
+[
+  {
+    "description": "Get info for nonexistent video returns error",
+    "args": {
+      "input_path": "/nonexistent/video.mp4"
+    },
+    "expected_keywords": [
+      "Error",
+      "not found"
+    ]
+  },
+  {
+    "description": "Get info for another nonexistent path returns error",
+    "args": {
+      "input_path": "/tmp/does_not_exist.avi"
+    },
+    "expected_keywords": [
+      "Error",
+      "not found"
+    ]
+  }
+]

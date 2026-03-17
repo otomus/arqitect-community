@@ -1,0 +1,24 @@
+[
+  {
+    "description": "Read a temperature sensor",
+    "args": {
+      "sensor_id": "temp-001",
+      "device_host": "http://localhost:8080"
+    },
+    "expected_keywords": [
+      "sensor_id",
+      "value"
+    ]
+  },
+  {
+    "description": "Read a humidity sensor",
+    "args": {
+      "sensor_id": "humidity-001",
+      "device_host": "http://localhost:8080"
+    },
+    "expected_keywords": [
+      "sensor_id",
+      "value"
+    ]
+  }
+]

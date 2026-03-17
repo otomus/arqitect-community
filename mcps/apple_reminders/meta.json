@@ -1,0 +1,12 @@
+{
+  "name": "apple_reminders",
+  "version": "1.0.0",
+  "description": "Apple Reminders on macOS — manage reminders, tasks, and to-do lists",
+  "source": "npm",
+  "package": "apple-reminders-mcp-server",
+  "command": ["npx", "-y", "apple-reminders-mcp-server"],
+  "auth_type": "none",
+  "tools": ["list_reminders", "create_reminder", "complete_reminder", "search_reminders"],
+  "capabilities": ["tasks", "reminders", "todo", "apple", "macos"],
+  "category": "productivity"
+}

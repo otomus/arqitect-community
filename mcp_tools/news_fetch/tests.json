@@ -1,0 +1,24 @@
+[
+  {
+    "description": "Fetch technology news",
+    "args": {
+      "query": "artificial intelligence"
+    },
+    "expected_keywords": [
+      "articles",
+      "title",
+      "source"
+    ]
+  },
+  {
+    "description": "Fetch limited news results",
+    "args": {
+      "query": "climate change",
+      "count": 2
+    },
+    "expected_keywords": [
+      "articles",
+      "title"
+    ]
+  }
+]

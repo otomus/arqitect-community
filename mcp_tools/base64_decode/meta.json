@@ -1,0 +1,27 @@
+{
+  "name": "base64_decode",
+  "version": "1.0.0",
+  "description": "Decode a base64 string back to plain text",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "tags": [
+    "base64",
+    "decode",
+    "binary",
+    "data"
+  ],
+  "parameters": [
+    {
+      "name": "input",
+      "type": "string",
+      "description": "Base64 string to decode",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

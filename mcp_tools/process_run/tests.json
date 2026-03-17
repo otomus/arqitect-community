@@ -1,0 +1,18 @@
+[
+  {
+    "description": "Run echo command",
+    "args": {
+      "command": "echo hello world"
+    },
+    "expected_keywords": [
+      "hello world"
+    ]
+  },
+  {
+    "description": "Run nonexistent command returns error",
+    "args": {
+      "command": "nonexistent_command_xyz_999"
+    },
+    "expect_error": true
+  }
+]

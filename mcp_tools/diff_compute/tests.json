@@ -1,0 +1,23 @@
+[
+  {
+    "description": "Simple text change",
+    "args": {
+      "old": "hello world",
+      "new": "hello earth"
+    },
+    "expected_keywords": [
+      "-hello world",
+      "+hello earth"
+    ]
+  },
+  {
+    "description": "Identical texts",
+    "args": {
+      "old": "same",
+      "new": "same"
+    },
+    "expected_keywords": [
+      "No differences"
+    ]
+  }
+]

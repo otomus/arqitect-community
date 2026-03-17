@@ -1,0 +1,18 @@
+[
+  {
+    "description": "Decode base64",
+    "args": {
+      "input": "aGVsbG8gd29ybGQ="
+    },
+    "expected_keywords": [
+      "hello world"
+    ]
+  },
+  {
+    "description": "Invalid base64",
+    "args": {
+      "input": "!!!not-base64!!!"
+    },
+    "expect_error": true
+  }
+]

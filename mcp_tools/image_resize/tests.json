@@ -1,0 +1,41 @@
+[
+  {
+    "description": "Resize with valid parameters",
+    "args": {
+      "input_path": "test_input.png",
+      "output_path": "test_output.png",
+      "width": 100,
+      "height": 100
+    },
+    "expected_keywords": [
+      "resized",
+      "100x100"
+    ]
+  },
+  {
+    "description": "Resize with invalid dimensions returns error",
+    "args": {
+      "input_path": "test_input.png",
+      "output_path": "test_output.png",
+      "width": 0,
+      "height": 100
+    },
+    "expected_keywords": [
+      "Error",
+      "positive"
+    ]
+  },
+  {
+    "description": "Resize nonexistent file returns error",
+    "args": {
+      "input_path": "/nonexistent/image.png",
+      "output_path": "test_output.png",
+      "width": 100,
+      "height": 100
+    },
+    "expected_keywords": [
+      "Error",
+      "not found"
+    ]
+  }
+]

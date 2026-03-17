@@ -1,0 +1,20 @@
+[
+  {
+    "description": "Lookup example.com",
+    "args": {
+      "domain": "example.com"
+    },
+    "expected_keywords": [
+      "Domain"
+    ]
+  },
+  {
+    "description": "Invalid domain",
+    "args": {
+      "domain": "thisisnotavalidtld.zzzzz"
+    },
+    "expected_keywords": [
+      ""
+    ]
+  }
+]

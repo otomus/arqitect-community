@@ -1,0 +1,26 @@
+{
+  "name": "slack",
+  "version": "1.0.0",
+  "description": "Slack connector using Bolt — bridges Slack workspace messages to Sentient brain via Redis",
+  "language": "javascript",
+  "platforms": ["slack"],
+  "author": { "github": "sentient-community" },
+  "capabilities": {
+    "incoming": ["text", "image", "video", "audio", "document"],
+    "outgoing": ["text", "image", "audio", "document", "reaction"]
+  },
+  "config_fields": [
+    { "name": "bot_token", "required": true, "secret": true, "description": "Slack Bot User OAuth Token (xoxb-...)" },
+    { "name": "app_token", "required": true, "secret": true, "description": "Slack App-Level Token for Socket Mode (xapp-...)" },
+    { "name": "signing_secret", "required": true, "secret": true, "description": "Slack app signing secret" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
+    { "name": "whitelisted_users", "required": false, "secret": false, "description": "Slack user IDs allowed to interact" },
+    { "name": "whitelisted_groups", "required": false, "secret": false, "description": "Slack channel IDs to process messages from" },
+    { "name": "monitor_groups", "required": false, "secret": false, "description": "Channel IDs to observe read-only" }
+  ],
+  "redis_channels": {
+    "subscribe": ["brain:response", "brain:audio"],
+    "publish": ["brain:task", "slack:monitor"]
+  }
+}

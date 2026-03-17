@@ -1,0 +1,9 @@
+{
+  "name": "sentient-discord",
+  "private": true,
+  "scripts": { "start": "node connector.js" },
+  "dependencies": {
+    "discord.js": "^14.14.0",
+    "redis": "^4.6.0"
+  }
+}

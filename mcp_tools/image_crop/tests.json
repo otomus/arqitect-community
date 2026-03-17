@@ -1,0 +1,47 @@
+[
+  {
+    "description": "Crop with valid bounding box",
+    "args": {
+      "input_path": "test_input.png",
+      "output_path": "test_output.png",
+      "left": 10,
+      "top": 10,
+      "right": 100,
+      "bottom": 100
+    },
+    "expected_keywords": [
+      "cropped",
+      "90x90"
+    ]
+  },
+  {
+    "description": "Crop with invalid bounding box returns error",
+    "args": {
+      "input_path": "test_input.png",
+      "output_path": "test_output.png",
+      "left": 100,
+      "top": 10,
+      "right": 10,
+      "bottom": 100
+    },
+    "expected_keywords": [
+      "Error",
+      "invalid crop box"
+    ]
+  },
+  {
+    "description": "Crop nonexistent file returns error",
+    "args": {
+      "input_path": "/nonexistent/image.png",
+      "output_path": "test_output.png",
+      "left": 0,
+      "top": 0,
+      "right": 50,
+      "bottom": 50
+    },
+    "expected_keywords": [
+      "Error",
+      "not found"
+    ]
+  }
+]

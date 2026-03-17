@@ -1,0 +1,34 @@
+[
+  {
+    "description": "Press a single key",
+    "args": {
+      "key": "enter"
+    },
+    "expected_keywords": [
+      "Pressed key",
+      "enter"
+    ]
+  },
+  {
+    "description": "Press a key combination",
+    "args": {
+      "key": "c",
+      "modifiers": "ctrl"
+    },
+    "expected_keywords": [
+      "Pressed key combination",
+      "ctrl+c"
+    ]
+  },
+  {
+    "description": "Press with multiple modifiers",
+    "args": {
+      "key": "s",
+      "modifiers": "ctrl,shift"
+    },
+    "expected_keywords": [
+      "Pressed key combination",
+      "ctrl+shift+s"
+    ]
+  }
+]

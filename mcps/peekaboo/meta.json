@@ -1,0 +1,12 @@
+{
+  "name": "peekaboo",
+  "version": "1.0.0",
+  "description": "Screen capture and control — capture screens, windows, list windows, and perform OCR",
+  "source": "npm",
+  "package": "peekaboo-mcp-server",
+  "command": ["npx", "-y", "peekaboo-mcp-server"],
+  "auth_type": "none",
+  "tools": ["capture_screen", "capture_window", "list_windows", "ocr_screen"],
+  "capabilities": ["screenshot", "screen_capture", "ocr", "vision", "desktop"],
+  "category": "utility"
+}

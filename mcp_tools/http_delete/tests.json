@@ -1,0 +1,18 @@
+[
+  {
+    "description": "DELETE to httpbin",
+    "args": {
+      "url": "https://httpbin.org/delete"
+    },
+    "expected_keywords": [
+      "url"
+    ]
+  },
+  {
+    "description": "Invalid URL returns error",
+    "args": {
+      "url": "https://invalid.invalid/x"
+    },
+    "expect_error": true
+  }
+]

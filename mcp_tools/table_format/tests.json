@@ -1,0 +1,37 @@
+[
+  {
+    "description": "Format a simple table with headers in grid format",
+    "args": {
+      "data": "[[\"Alice\", 30], [\"Bob\", 25]]",
+      "headers": "[\"Name\", \"Age\"]",
+      "format": "grid"
+    },
+    "expected_keywords": [
+      "Alice",
+      "Bob",
+      "Name",
+      "Age"
+    ]
+  },
+  {
+    "description": "Format a table in pipe format",
+    "args": {
+      "data": "[[\"X\", 1], [\"Y\", 2]]",
+      "headers": "[\"Key\", \"Value\"]",
+      "format": "pipe"
+    },
+    "expected_keywords": [
+      "Key",
+      "Value",
+      "|"
+    ]
+  },
+  {
+    "description": "Invalid format type",
+    "args": {
+      "data": "[[1, 2]]",
+      "format": "fancy"
+    },
+    "expect_error": true
+  }
+]

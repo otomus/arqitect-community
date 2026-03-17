@@ -1,0 +1,18 @@
+[
+  {
+    "description": "Exec in nonexistent container returns error",
+    "args": {
+      "container_id": "nonexistent_container_xyz",
+      "command": "echo hello"
+    },
+    "expect_error": true
+  },
+  {
+    "description": "Exec with empty command in nonexistent container returns error",
+    "args": {
+      "container_id": "nonexistent_container_xyz",
+      "command": "ls -la"
+    },
+    "expect_error": true
+  }
+]

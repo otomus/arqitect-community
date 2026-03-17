@@ -1,0 +1,13 @@
+{
+  "name": "image_gen",
+  "version": "1.0.0",
+  "description": "AI image generation — generate, edit, and describe images using diffusion models",
+  "source": "npm",
+  "package": "image-gen-mcp-server",
+  "command": ["npx", "-y", "image-gen-mcp-server"],
+  "auth_type": "api_key",
+  "auth_env": "IMAGE_GEN_API_KEY",
+  "tools": ["generate_image", "edit_image", "describe_image"],
+  "capabilities": ["image_generation", "art", "creative", "dall_e", "stable_diffusion"],
+  "category": "creative"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "social_like",
+  "version": "1.0.0",
+  "description": "Like a social media post on a specified platform",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "social",
+  "tags": [
+    "social",
+    "like",
+    "engagement",
+    "post"
+  ],
+  "parameters": [
+    {
+      "name": "platform",
+      "type": "string",
+      "description": "Social media platform (e.g. twitter, instagram, mastodon)",
+      "required": true
+    },
+    {
+      "name": "post_id",
+      "type": "string",
+      "description": "Unique identifier of the post to like",
+      "required": true
+    }
+  ],
+  "requires_api_key": true
+}

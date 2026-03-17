@@ -1,0 +1,10 @@
+[
+  {
+    "description": "Send without config returns error",
+    "args": {
+      "to": "+1234567890",
+      "body": "test"
+    },
+    "expect_error": true
+  }
+]

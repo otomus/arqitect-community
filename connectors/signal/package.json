@@ -1,0 +1,10 @@
+{
+  "name": "sentient-signal",
+  "private": true,
+  "scripts": {
+    "start": "node connector.js"
+  },
+  "dependencies": {
+    "redis": "^4.6.0"
+  }
+}

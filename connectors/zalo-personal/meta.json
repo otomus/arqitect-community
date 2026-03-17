@@ -1,0 +1,23 @@
+{
+  "name": "zalo-personal",
+  "version": "1.0.0",
+  "description": "Zalo Personal connector via QR login — bridges personal Zalo messages to Sentient brain via Redis",
+  "language": "javascript",
+  "platforms": ["zalo"],
+  "author": { "github": "sentient-community" },
+  "capabilities": {
+    "incoming": ["text", "image", "document"],
+    "outgoing": ["text", "image"]
+  },
+  "config_fields": [
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
+    { "name": "whitelisted_users", "required": false, "secret": false, "description": "Zalo user IDs allowed to interact" },
+    { "name": "whitelisted_groups", "required": false, "secret": false, "description": "Zalo group IDs to process messages from" },
+    { "name": "monitor_groups", "required": false, "secret": false, "description": "Group IDs to observe read-only" }
+  ],
+  "redis_channels": {
+    "subscribe": ["brain:response", "brain:audio"],
+    "publish": ["brain:task", "zalo-personal:monitor"]
+  }
+}

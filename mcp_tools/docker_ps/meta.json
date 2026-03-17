@@ -1,0 +1,29 @@
+{
+  "name": "docker_ps",
+  "version": "1.0.0",
+  "description": "List Docker containers",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "docker",
+  "tags": [
+    "docker",
+    "container",
+    "list",
+    "ps",
+    "infrastructure"
+  ],
+  "parameters": [
+    {
+      "name": "all",
+      "type": "boolean",
+      "description": "Show all containers including stopped ones",
+      "required": false,
+      "default": false
+    }
+  ],
+  "requires_api_key": false
+}

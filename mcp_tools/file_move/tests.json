@@ -1,0 +1,10 @@
+[
+  {
+    "description": "Move nonexistent file returns error",
+    "args": {
+      "source": "/tmp/sentient_no_such.txt",
+      "dest": "/tmp/sentient_moved.txt"
+    },
+    "expect_error": true
+  }
+]

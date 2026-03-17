@@ -1,0 +1,18 @@
+[
+  {
+    "description": "Lookup google.com",
+    "args": {
+      "domain": "google.com"
+    },
+    "expected_keywords": [
+      "records"
+    ]
+  },
+  {
+    "description": "Invalid domain returns error",
+    "args": {
+      "domain": "this.domain.does.not.exist.invalid"
+    },
+    "expect_error": true
+  }
+]

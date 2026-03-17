@@ -1,0 +1,24 @@
+[
+  {
+    "description": "Search for pattern in current dir",
+    "args": {
+      "pattern": "file_grep",
+      "path": ".",
+      "glob": "*.json"
+    },
+    "expected_keywords": [
+      "file_grep"
+    ]
+  },
+  {
+    "description": "No matches",
+    "args": {
+      "pattern": "xyznonexistent123",
+      "path": "."
+    },
+    "expected_keywords": [
+      "count",
+      "0"
+    ]
+  }
+]

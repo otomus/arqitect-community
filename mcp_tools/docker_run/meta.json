@@ -1,0 +1,46 @@
+{
+  "name": "docker_run",
+  "version": "1.0.0",
+  "description": "Run a Docker container from a specified image",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "docker",
+  "tags": [
+    "docker",
+    "container",
+    "run",
+    "infrastructure"
+  ],
+  "parameters": [
+    {
+      "name": "image",
+      "type": "string",
+      "description": "Docker image to run (e.g. 'nginx:latest')",
+      "required": true
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "description": "Optional name for the container",
+      "required": false
+    },
+    {
+      "name": "ports",
+      "type": "string",
+      "description": "Port mapping in host:container format (e.g. '8080:80')",
+      "required": false
+    },
+    {
+      "name": "detach",
+      "type": "boolean",
+      "description": "Run container in detached mode",
+      "required": false,
+      "default": true
+    }
+  ],
+  "requires_api_key": false
+}

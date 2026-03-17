@@ -1,0 +1,13 @@
+{
+  "name": "philips_hue",
+  "version": "1.0.0",
+  "description": "Philips Hue smart lighting — control lights, scenes, and rooms",
+  "source": "npm",
+  "package": "philips-hue-mcp-server",
+  "command": ["npx", "-y", "philips-hue-mcp-server"],
+  "auth_type": "api_key",
+  "auth_env": "HUE_BRIDGE_TOKEN",
+  "tools": ["list_lights", "set_light", "set_scene", "list_rooms", "toggle_light"],
+  "capabilities": ["lighting", "smart_home", "hue", "automation", "scenes"],
+  "category": "smart_home"
+}

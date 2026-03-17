@@ -1,0 +1,45 @@
+{
+  "name": "calendar_create_event",
+  "version": "1.0.0",
+  "description": "Create a new calendar event",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "external",
+  "tags": [
+    "calendar",
+    "event",
+    "create",
+    "schedule"
+  ],
+  "parameters": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": "Event title",
+      "required": true
+    },
+    {
+      "name": "start",
+      "type": "string",
+      "description": "Start datetime in ISO format (e.g. 2026-03-17T10:00:00)",
+      "required": true
+    },
+    {
+      "name": "end",
+      "type": "string",
+      "description": "End datetime in ISO format (e.g. 2026-03-17T11:00:00)",
+      "required": true
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "description": "Event description or notes",
+      "required": false
+    }
+  ],
+  "requires_api_key": false
+}

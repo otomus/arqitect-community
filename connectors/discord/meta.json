@@ -1,0 +1,24 @@
+{
+  "name": "discord",
+  "version": "1.0.0",
+  "description": "Discord connector using discord.js — bridges Discord server and DM messages to Sentient brain via Redis",
+  "language": "javascript",
+  "platforms": ["discord"],
+  "author": { "github": "sentient-community" },
+  "capabilities": {
+    "incoming": ["text", "image", "video", "audio", "document", "sticker"],
+    "outgoing": ["text", "image", "video", "audio", "document", "sticker", "reaction"]
+  },
+  "config_fields": [
+    { "name": "bot_token", "required": true, "secret": true, "description": "Discord bot token from Developer Portal" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
+    { "name": "whitelisted_users", "required": false, "secret": false, "description": "Discord user IDs allowed to interact" },
+    { "name": "whitelisted_groups", "required": false, "secret": false, "description": "Discord channel IDs to process messages from" },
+    { "name": "monitor_groups", "required": false, "secret": false, "description": "Channel IDs to observe read-only" }
+  ],
+  "redis_channels": {
+    "subscribe": ["brain:response", "brain:audio"],
+    "publish": ["brain:task", "discord:monitor"]
+  }
+}

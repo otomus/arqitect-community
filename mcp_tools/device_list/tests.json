@@ -1,0 +1,19 @@
+[
+  {
+    "description": "List all connected devices",
+    "args": {
+      "device_host": "http://localhost:8080"
+    },
+    "expected_keywords": [
+      "devices",
+      "count"
+    ]
+  },
+  {
+    "description": "List devices with default host",
+    "args": {},
+    "expected_keywords": [
+      "devices"
+    ]
+  }
+]

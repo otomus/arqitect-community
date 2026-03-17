@@ -1,0 +1,25 @@
+[
+  {
+    "description": "Generate UUID v4",
+    "args": {},
+    "expected_keywords": [
+      "-"
+    ]
+  },
+  {
+    "description": "Generate UUID v1",
+    "args": {
+      "version": "1"
+    },
+    "expected_keywords": [
+      "-"
+    ]
+  },
+  {
+    "description": "Invalid version",
+    "args": {
+      "version": "9"
+    },
+    "expect_error": true
+  }
+]

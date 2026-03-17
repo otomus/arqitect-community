@@ -1,0 +1,27 @@
+{
+  "name": "stock_quote",
+  "version": "1.0.0",
+  "description": "Get the current stock quote for a given ticker symbol",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "external",
+  "tags": [
+    "stock",
+    "quote",
+    "finance",
+    "market"
+  ],
+  "parameters": [
+    {
+      "name": "symbol",
+      "type": "string",
+      "description": "Stock ticker symbol (e.g. AAPL, MSFT)",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

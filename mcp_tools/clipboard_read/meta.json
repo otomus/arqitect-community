@@ -1,0 +1,21 @@
+{
+  "name": "clipboard_read",
+  "version": "1.0.0",
+  "description": "Read the current contents of the system clipboard",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "desktop",
+  "tags": [
+    "clipboard",
+    "read",
+    "paste",
+    "desktop",
+    "automation"
+  ],
+  "parameters": [],
+  "requires_api_key": false
+}

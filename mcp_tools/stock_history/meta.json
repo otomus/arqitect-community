@@ -1,0 +1,34 @@
+{
+  "name": "stock_history",
+  "version": "1.0.0",
+  "description": "Get historical stock price data for a given ticker symbol",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "external",
+  "tags": [
+    "stock",
+    "history",
+    "finance",
+    "market",
+    "chart"
+  ],
+  "parameters": [
+    {
+      "name": "symbol",
+      "type": "string",
+      "description": "Stock ticker symbol (e.g. AAPL, MSFT)",
+      "required": true
+    },
+    {
+      "name": "period",
+      "type": "string",
+      "description": "Time period: 1d, 5d, 1mo, 3mo, or 1y",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

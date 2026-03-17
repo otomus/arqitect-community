@@ -1,0 +1,11 @@
+{
+  "_instructions": "Copy this file to config.json and fill in your values. config.json is gitignored.",
+  "access_token": "",
+  "refresh_token": "",
+  "app_id": "",
+  "secret_key": "",
+  "webhook_port": 3200,
+  "bot_name": "Sentient",
+  "bot_aliases": [],
+  "whitelisted_users": []
+}

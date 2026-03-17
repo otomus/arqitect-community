@@ -1,0 +1,40 @@
+[
+  {
+    "description": "Single left click at coordinates",
+    "args": {
+      "x": 100,
+      "y": 200
+    },
+    "expected_keywords": [
+      "Clicked",
+      "left",
+      "(100, 200)"
+    ]
+  },
+  {
+    "description": "Double right click",
+    "args": {
+      "x": 500,
+      "y": 300,
+      "button": "right",
+      "clicks": 2
+    },
+    "expected_keywords": [
+      "right",
+      "2 time(s)",
+      "(500, 300)"
+    ]
+  },
+  {
+    "description": "Invalid button value",
+    "args": {
+      "x": 100,
+      "y": 100,
+      "button": "invalid"
+    },
+    "expected_keywords": [
+      "Error",
+      "button must be one of"
+    ]
+  }
+]

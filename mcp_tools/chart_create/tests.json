@@ -1,0 +1,36 @@
+[
+  {
+    "description": "Create a bar chart",
+    "args": {
+      "chart_type": "bar",
+      "data": "{\"labels\": [\"A\", \"B\", \"C\"], \"values\": [10, 20, 30]}",
+      "output_path": "/tmp/test_bar_chart.png",
+      "title": "Test Bar Chart"
+    },
+    "expected_keywords": [
+      "Chart saved to",
+      "/tmp/test_bar_chart.png"
+    ]
+  },
+  {
+    "description": "Create a pie chart",
+    "args": {
+      "chart_type": "pie",
+      "data": "{\"labels\": [\"X\", \"Y\", \"Z\"], \"values\": [40, 35, 25]}",
+      "output_path": "/tmp/test_pie_chart.png"
+    },
+    "expected_keywords": [
+      "Chart saved to",
+      "/tmp/test_pie_chart.png"
+    ]
+  },
+  {
+    "description": "Invalid chart type",
+    "args": {
+      "chart_type": "histogram",
+      "data": "{\"labels\": [\"A\"], \"values\": [1]}",
+      "output_path": "/tmp/test.png"
+    },
+    "expect_error": true
+  }
+]

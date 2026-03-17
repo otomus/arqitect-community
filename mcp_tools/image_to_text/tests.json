@@ -1,0 +1,23 @@
+[
+  {
+    "description": "OCR on nonexistent file returns error",
+    "args": {
+      "image_path": "/nonexistent/image.png"
+    },
+    "expected_keywords": [
+      "Error",
+      "not found"
+    ]
+  },
+  {
+    "description": "OCR with explicit language parameter",
+    "args": {
+      "image_path": "/nonexistent/image.png",
+      "language": "fra"
+    },
+    "expected_keywords": [
+      "Error",
+      "not found"
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "name": "mouse_move",
+  "version": "1.0.0",
+  "description": "Move the mouse cursor to specified screen coordinates",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "desktop",
+  "tags": [
+    "mouse",
+    "move",
+    "cursor",
+    "automation",
+    "desktop"
+  ],
+  "parameters": [
+    {
+      "name": "x",
+      "type": "integer",
+      "description": "X coordinate to move to",
+      "required": true
+    },
+    {
+      "name": "y",
+      "type": "integer",
+      "description": "Y coordinate to move to",
+      "required": true
+    },
+    {
+      "name": "duration",
+      "type": "number",
+      "description": "Duration of movement in seconds",
+      "required": false
+    }
+  ],
+  "requires_api_key": false
+}

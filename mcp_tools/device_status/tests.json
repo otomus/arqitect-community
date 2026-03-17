@@ -1,0 +1,25 @@
+[
+  {
+    "description": "Get status of a sensor device",
+    "args": {
+      "device_id": "sensor-hub-01",
+      "device_host": "http://localhost:8080"
+    },
+    "expected_keywords": [
+      "device_id",
+      "status",
+      "online"
+    ]
+  },
+  {
+    "description": "Get status of a gateway device",
+    "args": {
+      "device_id": "gateway-main",
+      "device_host": "http://localhost:8080"
+    },
+    "expected_keywords": [
+      "device_id",
+      "status"
+    ]
+  }
+]

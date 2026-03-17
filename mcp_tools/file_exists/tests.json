@@ -1,0 +1,20 @@
+[
+  {
+    "description": "Check existing file",
+    "args": {
+      "path": "meta.json"
+    },
+    "expected_keywords": [
+      "true"
+    ]
+  },
+  {
+    "description": "Check nonexistent path",
+    "args": {
+      "path": "/nonexistent/path"
+    },
+    "expected_keywords": [
+      "false"
+    ]
+  }
+]

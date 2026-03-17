@@ -1,0 +1,18 @@
+[
+  {
+    "description": "List running containers",
+    "args": {},
+    "expected_keywords": [
+      "CONTAINER ID"
+    ]
+  },
+  {
+    "description": "List all containers including stopped",
+    "args": {
+      "all": true
+    },
+    "expected_keywords": [
+      "CONTAINER ID"
+    ]
+  }
+]

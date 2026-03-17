@@ -1,0 +1,13 @@
+{
+  "name": "spotify",
+  "version": "1.0.0",
+  "description": "Spotify music playback — control playback, search, and manage queue",
+  "source": "npm",
+  "package": "spotify-mcp-server",
+  "command": ["npx", "-y", "spotify-mcp-server"],
+  "auth_type": "oauth2",
+  "auth_provider": "spotify",
+  "tools": ["play", "pause", "next", "previous", "search", "queue", "now_playing"],
+  "capabilities": ["music", "playback", "playlist", "streaming", "audio"],
+  "category": "music"
+}

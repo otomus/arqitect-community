@@ -1,9 +1,8 @@
 {
-  "model": "qwen2.5-coder-7b",
+  "model": "medium",
   "description": "Generate jokes, puns, and comedic content across various topics.",
   "size_class": "medium",
   "provider": "gguf",
-  "has_lora": false,
   "contributor": {
     "github": "otomus"
   },

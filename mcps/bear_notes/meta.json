@@ -1,0 +1,12 @@
+{
+  "name": "bear_notes",
+  "version": "1.0.0",
+  "description": "Bear markdown notes — search, create, read, and tag notes",
+  "source": "npm",
+  "package": "bear-notes-mcp-server",
+  "command": ["npx", "-y", "bear-notes-mcp-server"],
+  "auth_type": "none",
+  "tools": ["search_notes", "create_note", "read_note", "add_tag"],
+  "capabilities": ["notes", "markdown", "writing", "tags", "macos"],
+  "category": "productivity"
+}

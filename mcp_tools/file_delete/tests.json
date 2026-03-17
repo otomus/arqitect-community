@@ -1,0 +1,9 @@
+[
+  {
+    "description": "Delete nonexistent file returns error",
+    "args": {
+      "path": "/tmp/sentient_nonexistent_delete.txt"
+    },
+    "expect_error": true
+  }
+]

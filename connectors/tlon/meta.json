@@ -1,0 +1,25 @@
+{
+  "name": "tlon",
+  "version": "1.0.0",
+  "description": "Tlon Messenger connector — bridges Tlon peer-to-peer chat messages to Sentient brain via Redis",
+  "language": "javascript",
+  "platforms": ["tlon"],
+  "author": { "github": "sentient-community" },
+  "capabilities": {
+    "incoming": ["text"],
+    "outgoing": ["text"]
+  },
+  "config_fields": [
+    { "name": "ship_url", "required": true, "secret": false, "description": "Urbit ship URL (e.g. http://localhost:8080)" },
+    { "name": "ship_code", "required": true, "secret": true, "description": "Urbit ship access code (+code)" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
+    { "name": "whitelisted_users", "required": false, "secret": false, "description": "Urbit ship names allowed to interact (e.g. ~zod)" },
+    { "name": "whitelisted_groups", "required": false, "secret": false, "description": "Tlon group/channel paths to process messages from" },
+    { "name": "monitor_groups", "required": false, "secret": false, "description": "Group/channel paths to observe read-only" }
+  ],
+  "redis_channels": {
+    "subscribe": ["brain:response", "brain:audio"],
+    "publish": ["brain:task", "tlon:monitor"]
+  }
+}

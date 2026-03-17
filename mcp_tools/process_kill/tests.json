@@ -1,0 +1,18 @@
+[
+  {
+    "description": "Kill nonexistent PID returns error",
+    "args": {
+      "pid": 999999999,
+      "signal": "TERM"
+    },
+    "expect_error": true
+  },
+  {
+    "description": "Kill with invalid signal returns error",
+    "args": {
+      "pid": 1,
+      "signal": "INVALID"
+    },
+    "expect_error": true
+  }
+]

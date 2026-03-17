@@ -1,0 +1,16 @@
+[
+  {
+    "description": "Pull a nonexistent image returns error",
+    "args": {
+      "image": "nonexistent_image_xyz_999:latest"
+    },
+    "expect_error": true
+  },
+  {
+    "description": "Pull with empty image name returns error",
+    "args": {
+      "image": ""
+    },
+    "expect_error": true
+  }
+]

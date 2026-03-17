@@ -1,0 +1,11 @@
+{
+  "name": "sentient-matrix",
+  "private": true,
+  "scripts": {
+    "start": "node connector.js"
+  },
+  "dependencies": {
+    "matrix-js-sdk": "^34.0.0",
+    "redis": "^4.6.0"
+  }
+}

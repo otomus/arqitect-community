@@ -1,0 +1,13 @@
+{
+  "name": "perplexity",
+  "version": "1.0.0",
+  "description": "Perplexity AI — search-augmented generation with real-time knowledge",
+  "source": "npm",
+  "package": "perplexity-mcp-server",
+  "command": ["npx", "-y", "perplexity-mcp-server"],
+  "auth_type": "api_key",
+  "auth_env": "PERPLEXITY_API_KEY",
+  "tools": ["search", "ask"],
+  "capabilities": ["search", "qa", "research", "knowledge"],
+  "category": "ai"
+}

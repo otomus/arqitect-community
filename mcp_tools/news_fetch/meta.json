@@ -1,0 +1,33 @@
+{
+  "name": "news_fetch",
+  "version": "1.0.0",
+  "description": "Fetch news articles matching a search query",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "external",
+  "tags": [
+    "news",
+    "articles",
+    "search",
+    "media"
+  ],
+  "parameters": [
+    {
+      "name": "query",
+      "type": "string",
+      "description": "Search query for news articles",
+      "required": true
+    },
+    {
+      "name": "count",
+      "type": "int",
+      "description": "Number of articles to return (default 5)",
+      "required": false
+    }
+  ],
+  "requires_api_key": true
+}

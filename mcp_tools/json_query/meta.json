@@ -1,0 +1,34 @@
+{
+  "name": "json_query",
+  "version": "1.0.0",
+  "description": "Query a JSON object using dot-notation path and return the matched value",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "tags": [
+    "json",
+    "query",
+    "jmespath",
+    "extract",
+    "data"
+  ],
+  "parameters": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "JSON string to query",
+      "required": true
+    },
+    {
+      "name": "query",
+      "type": "string",
+      "description": "Dot-notation path (e.g. \"user.name\" or \"items.0.id\")",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

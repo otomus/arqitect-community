@@ -1,0 +1,23 @@
+[
+  {
+    "description": "Search for JSON files",
+    "args": {
+      "pattern": "*.json",
+      "path": "."
+    },
+    "expected_keywords": [
+      "meta.json"
+    ]
+  },
+  {
+    "description": "No matches returns empty list",
+    "args": {
+      "pattern": "*.xyz",
+      "path": "."
+    },
+    "expected_keywords": [
+      "count",
+      "0"
+    ]
+  }
+]

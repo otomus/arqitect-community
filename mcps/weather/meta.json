@@ -1,0 +1,13 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Weather forecasts and conditions — get current weather, forecasts, alerts, and hourly data",
+  "source": "npm",
+  "package": "weather-mcp-server",
+  "command": ["npx", "-y", "weather-mcp-server"],
+  "auth_type": "api_key",
+  "auth_env": "WEATHER_API_KEY",
+  "tools": ["get_forecast", "get_current", "get_alerts", "get_hourly"],
+  "capabilities": ["weather", "forecast", "temperature", "conditions", "climate"],
+  "category": "weather"
+}

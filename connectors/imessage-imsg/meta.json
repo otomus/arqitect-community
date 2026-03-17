@@ -1,0 +1,24 @@
+{
+  "name": "imessage-imsg",
+  "version": "1.0.0",
+  "description": "iMessage connector via imsg AppleScript bridge — bridges iMessage on macOS to Sentient brain via Redis",
+  "language": "javascript",
+  "platforms": ["imessage"],
+  "author": { "github": "sentient-community" },
+  "capabilities": {
+    "incoming": ["text", "image", "audio", "document"],
+    "outgoing": ["text", "image"]
+  },
+  "config_fields": [
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
+    { "name": "whitelisted_users", "required": false, "secret": false, "description": "Phone numbers or iMessage addresses allowed to interact" },
+    { "name": "whitelisted_groups", "required": false, "secret": false, "description": "Group chat names to process messages from" },
+    { "name": "monitor_groups", "required": false, "secret": false, "description": "Group chat names to observe read-only" },
+    { "name": "poll_interval_ms", "required": false, "secret": false, "description": "Polling interval in milliseconds (default: 2000)" }
+  ],
+  "redis_channels": {
+    "subscribe": ["brain:response", "brain:audio"],
+    "publish": ["brain:task", "imessage-imsg:monitor"]
+  }
+}

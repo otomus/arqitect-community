@@ -1,0 +1,29 @@
+[
+  {
+    "description": "Convert USD to EUR",
+    "args": {
+      "amount": 100.0,
+      "from_currency": "USD",
+      "to_currency": "EUR"
+    },
+    "expected_keywords": [
+      "USD",
+      "EUR",
+      "rate",
+      "converted"
+    ]
+  },
+  {
+    "description": "Convert GBP to JPY",
+    "args": {
+      "amount": 50.0,
+      "from_currency": "GBP",
+      "to_currency": "JPY"
+    },
+    "expected_keywords": [
+      "GBP",
+      "JPY",
+      "rate"
+    ]
+  }
+]

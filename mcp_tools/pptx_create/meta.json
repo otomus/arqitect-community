@@ -1,0 +1,35 @@
+{
+  "name": "pptx_create",
+  "version": "1.0.0",
+  "description": "Create a PowerPoint PPTX file from JSON slide data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "documents",
+  "tags": [
+    "pptx",
+    "powerpoint",
+    "create",
+    "write",
+    "presentation",
+    "document"
+  ],
+  "parameters": [
+    {
+      "name": "file_path",
+      "type": "string",
+      "description": "Output path for the PowerPoint file",
+      "required": true
+    },
+    {
+      "name": "slides",
+      "type": "string",
+      "description": "JSON array of slide objects, each with 'title' and 'content' fields",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

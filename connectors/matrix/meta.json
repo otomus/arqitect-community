@@ -1,0 +1,26 @@
+{
+  "name": "matrix",
+  "version": "1.0.0",
+  "description": "Matrix connector using matrix-js-sdk — bridges Matrix room messages to Sentient brain via Redis",
+  "language": "javascript",
+  "platforms": ["matrix"],
+  "author": { "github": "sentient-community" },
+  "capabilities": {
+    "incoming": ["text", "image", "video", "audio", "document"],
+    "outgoing": ["text", "image", "audio", "document", "reaction"]
+  },
+  "config_fields": [
+    { "name": "homeserver_url", "required": true, "secret": false, "description": "Matrix homeserver URL (e.g. https://matrix.org)" },
+    { "name": "access_token", "required": true, "secret": true, "description": "Matrix bot user access token" },
+    { "name": "user_id", "required": true, "secret": false, "description": "Matrix bot user ID (e.g. @bot:matrix.org)" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
+    { "name": "whitelisted_users", "required": false, "secret": false, "description": "Matrix user IDs allowed to interact" },
+    { "name": "whitelisted_groups", "required": false, "secret": false, "description": "Matrix room IDs to process messages from" },
+    { "name": "monitor_groups", "required": false, "secret": false, "description": "Room IDs to observe read-only" }
+  ],
+  "redis_channels": {
+    "subscribe": ["brain:response", "brain:audio"],
+    "publish": ["brain:task", "matrix:monitor"]
+  }
+}

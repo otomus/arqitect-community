@@ -1,0 +1,34 @@
+{
+  "name": "file_append",
+  "version": "1.0.0",
+  "description": "Append content to the end of a file",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "tags": [
+    "file",
+    "append",
+    "add",
+    "write",
+    "log"
+  ],
+  "parameters": [
+    {
+      "name": "path",
+      "type": "string",
+      "description": "Path to the file",
+      "required": true
+    },
+    {
+      "name": "content",
+      "type": "string",
+      "description": "Content to append",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "description": "List all processes",
+    "args": {},
+    "expected_keywords": [
+      "PID"
+    ]
+  },
+  {
+    "description": "List processes filtered by a common name",
+    "args": {
+      "filter": "python"
+    },
+    "expected_keywords": [
+      "PID"
+    ]
+  }
+]

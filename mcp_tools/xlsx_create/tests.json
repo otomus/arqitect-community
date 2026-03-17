@@ -1,0 +1,20 @@
+[
+  {
+    "description": "Create an Excel file with header and data rows",
+    "args": {
+      "file_path": "/tmp/test_xlsx_create.xlsx",
+      "data": "[[\"Name\", \"Age\"], [\"Alice\", 30], [\"Bob\", 25]]"
+    },
+    "expected_keywords": [
+      "Excel file created successfully"
+    ]
+  },
+  {
+    "description": "Invalid JSON data returns error",
+    "args": {
+      "file_path": "/tmp/test_xlsx_invalid.xlsx",
+      "data": "not valid json"
+    },
+    "expect_error": true
+  }
+]

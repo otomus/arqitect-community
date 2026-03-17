@@ -1,0 +1,27 @@
+{
+  "name": "nextcloud-talk",
+  "version": "1.0.0",
+  "description": "Nextcloud Talk connector — bridges Nextcloud Talk chat messages to Sentient brain via Redis",
+  "language": "javascript",
+  "platforms": ["nextcloud-talk"],
+  "author": { "github": "sentient-community" },
+  "capabilities": {
+    "incoming": ["text", "image", "document"],
+    "outgoing": ["text", "image", "document"]
+  },
+  "config_fields": [
+    { "name": "nextcloud_url", "required": true, "secret": false, "description": "Nextcloud server URL (e.g. https://cloud.example.com)" },
+    { "name": "username", "required": true, "secret": false, "description": "Nextcloud bot user account username" },
+    { "name": "password", "required": true, "secret": true, "description": "Nextcloud bot user account password or app token" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
+    { "name": "whitelisted_users", "required": false, "secret": false, "description": "Nextcloud user IDs allowed to interact" },
+    { "name": "whitelisted_groups", "required": false, "secret": false, "description": "Talk room tokens to process messages from" },
+    { "name": "monitor_groups", "required": false, "secret": false, "description": "Room tokens to observe read-only" },
+    { "name": "poll_interval_ms", "required": false, "secret": false, "description": "Polling interval in milliseconds (default: 3000)" }
+  ],
+  "redis_channels": {
+    "subscribe": ["brain:response", "brain:audio"],
+    "publish": ["brain:task", "nextcloud-talk:monitor"]
+  }
+}

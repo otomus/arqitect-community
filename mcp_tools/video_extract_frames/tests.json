@@ -1,0 +1,25 @@
+[
+  {
+    "description": "Extract frames from nonexistent video returns error",
+    "args": {
+      "input_path": "/nonexistent/video.mp4",
+      "output_dir": "/tmp/frames"
+    },
+    "expected_keywords": [
+      "Error",
+      "not found"
+    ]
+  },
+  {
+    "description": "Extract frames with invalid fps returns error",
+    "args": {
+      "input_path": "/nonexistent/video.mp4",
+      "output_dir": "/tmp/frames",
+      "fps": 0
+    },
+    "expected_keywords": [
+      "Error",
+      "positive"
+    ]
+  }
+]

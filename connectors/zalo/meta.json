@@ -1,0 +1,26 @@
+{
+  "name": "zalo",
+  "version": "1.0.0",
+  "description": "Zalo connector using Zalo Official Account API — bridges Zalo OA messages to Sentient brain via Redis",
+  "language": "javascript",
+  "platforms": ["zalo"],
+  "author": { "github": "sentient-community" },
+  "capabilities": {
+    "incoming": ["text", "image", "document"],
+    "outgoing": ["text", "image", "document"]
+  },
+  "config_fields": [
+    { "name": "access_token", "required": true, "secret": true, "description": "Zalo OA access token" },
+    { "name": "refresh_token", "required": true, "secret": true, "description": "Zalo OA refresh token for auto-renewal" },
+    { "name": "app_id", "required": true, "secret": false, "description": "Zalo app ID" },
+    { "name": "secret_key", "required": true, "secret": true, "description": "Zalo app secret key" },
+    { "name": "webhook_port", "required": false, "secret": false, "description": "Port for Zalo webhook callbacks (default: 3200)" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
+    { "name": "whitelisted_users", "required": false, "secret": false, "description": "Zalo user IDs allowed to interact" }
+  ],
+  "redis_channels": {
+    "subscribe": ["brain:response", "brain:audio"],
+    "publish": ["brain:task"]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "youtube_info",
+  "version": "1.0.0",
+  "description": "Get detailed information about a YouTube video",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "social",
+  "tags": [
+    "youtube",
+    "video",
+    "info",
+    "metadata"
+  ],
+  "parameters": [
+    {
+      "name": "video_id",
+      "type": "string",
+      "description": "YouTube video ID (e.g. dQw4w9WgXcQ)",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

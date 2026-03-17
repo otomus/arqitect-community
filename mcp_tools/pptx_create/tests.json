@@ -1,0 +1,20 @@
+[
+  {
+    "description": "Create a PowerPoint with two slides",
+    "args": {
+      "file_path": "/tmp/test_pptx_create.pptx",
+      "slides": "[{\"title\": \"Slide 1\", \"content\": \"Hello World\"}, {\"title\": \"Slide 2\", \"content\": \"Second slide\"}]"
+    },
+    "expected_keywords": [
+      "PowerPoint file created successfully"
+    ]
+  },
+  {
+    "description": "Invalid JSON slides data returns error",
+    "args": {
+      "file_path": "/tmp/test_pptx_invalid.pptx",
+      "slides": "not valid json"
+    },
+    "expect_error": true
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "sonos",
+  "version": "1.0.0",
+  "description": "Sonos multi-room audio — control playback, volume, and room grouping",
+  "source": "npm",
+  "package": "sonos-mcp-server",
+  "command": ["npx", "-y", "sonos-mcp-server"],
+  "auth_type": "none",
+  "tools": ["play", "pause", "volume", "list_rooms", "group_rooms", "now_playing"],
+  "capabilities": ["music", "audio", "multiroom", "speakers", "smart_home"],
+  "category": "music"
+}

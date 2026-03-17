@@ -1,0 +1,23 @@
+[
+  {
+    "description": "Send local notification",
+    "args": {
+      "title": "Test",
+      "body": "Hello"
+    },
+    "expected_keywords": [
+      "Test"
+    ]
+  },
+  {
+    "description": "Send to custom target",
+    "args": {
+      "title": "Alert",
+      "body": "Heads up",
+      "target": "slack"
+    },
+    "expected_keywords": [
+      "slack"
+    ]
+  }
+]

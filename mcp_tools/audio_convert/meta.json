@@ -1,0 +1,43 @@
+{
+  "name": "audio_convert",
+  "version": "1.0.0",
+  "description": "Convert audio to a different format (mp3, wav, ogg, flac) using ffmpeg",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "tags": [
+    "audio",
+    "convert",
+    "format",
+    "mp3",
+    "wav",
+    "ogg",
+    "flac",
+    "ffmpeg"
+  ],
+  "parameters": [
+    {
+      "name": "input_path",
+      "type": "string",
+      "description": "Path to the source audio file",
+      "required": true
+    },
+    {
+      "name": "output_path",
+      "type": "string",
+      "description": "Path where the converted audio will be saved",
+      "required": true
+    },
+    {
+      "name": "format",
+      "type": "string",
+      "description": "Target format: mp3, wav, ogg, or flac",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

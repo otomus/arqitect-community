@@ -1,0 +1,28 @@
+[
+  {
+    "description": "Lock the front door",
+    "args": {
+      "device_id": "lock-front-door",
+      "state": "lock",
+      "device_host": "http://localhost:8080"
+    },
+    "expected_keywords": [
+      "device_id",
+      "lock",
+      "status"
+    ]
+  },
+  {
+    "description": "Unlock the garage door",
+    "args": {
+      "device_id": "lock-garage",
+      "state": "unlock",
+      "device_host": "http://localhost:8080"
+    },
+    "expected_keywords": [
+      "device_id",
+      "unlock",
+      "status"
+    ]
+  }
+]

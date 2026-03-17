@@ -1,0 +1,33 @@
+{
+  "name": "social_followers",
+  "version": "1.0.0",
+  "description": "Get follower count and list for a social media user",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "social",
+  "tags": [
+    "social",
+    "followers",
+    "analytics",
+    "profile"
+  ],
+  "parameters": [
+    {
+      "name": "platform",
+      "type": "string",
+      "description": "Social media platform (e.g. twitter, instagram, mastodon)",
+      "required": true
+    },
+    {
+      "name": "username",
+      "type": "string",
+      "description": "Username to look up followers for",
+      "required": true
+    }
+  ],
+  "requires_api_key": true
+}

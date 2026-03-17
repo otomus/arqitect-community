@@ -1,0 +1,23 @@
+[
+  {
+    "description": "Get info for a known video",
+    "args": {
+      "video_id": "dQw4w9WgXcQ"
+    },
+    "expected_keywords": [
+      "title",
+      "channel",
+      "duration_seconds"
+    ]
+  },
+  {
+    "description": "Get info for another video",
+    "args": {
+      "video_id": "jNQXAC9IVRw"
+    },
+    "expected_keywords": [
+      "title",
+      "view_count"
+    ]
+  }
+]

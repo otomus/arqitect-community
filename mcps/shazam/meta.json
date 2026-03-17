@@ -1,0 +1,13 @@
+{
+  "name": "shazam",
+  "version": "1.0.0",
+  "description": "Shazam song recognition — identify and search for songs",
+  "source": "npm",
+  "package": "shazam-mcp-server",
+  "command": ["npx", "-y", "shazam-mcp-server"],
+  "auth_type": "api_key",
+  "auth_env": "SHAZAM_API_KEY",
+  "tools": ["identify_song", "search_songs"],
+  "capabilities": ["music", "recognition", "identify", "song", "audio"],
+  "category": "music"
+}

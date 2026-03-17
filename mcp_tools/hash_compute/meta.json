@@ -1,0 +1,35 @@
+{
+  "name": "hash_compute",
+  "version": "1.0.0",
+  "description": "Compute a cryptographic hash of the input string using the specified algorithm",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "tags": [
+    "hash",
+    "sha256",
+    "md5",
+    "checksum",
+    "crypto"
+  ],
+  "parameters": [
+    {
+      "name": "input",
+      "type": "string",
+      "description": "String to hash",
+      "required": true
+    },
+    {
+      "name": "algorithm",
+      "type": "string",
+      "description": "Hash algorithm: md5, sha1, sha256, sha512",
+      "required": false,
+      "default": "sha256"
+    }
+  ],
+  "requires_api_key": false
+}

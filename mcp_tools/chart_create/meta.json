@@ -1,0 +1,51 @@
+{
+  "name": "chart_create",
+  "version": "1.0.0",
+  "description": "Create a chart image (bar, line, pie, or scatter) from JSON data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "visualization",
+  "tags": [
+    "chart",
+    "plot",
+    "graph",
+    "bar",
+    "line",
+    "pie",
+    "scatter",
+    "visualization",
+    "matplotlib"
+  ],
+  "parameters": [
+    {
+      "name": "chart_type",
+      "type": "string",
+      "description": "Type of chart: bar, line, pie, or scatter",
+      "required": true
+    },
+    {
+      "name": "data",
+      "type": "string",
+      "description": "JSON string with chart data. For bar/line/scatter: {\"labels\": [...], \"values\": [...]}. For pie: {\"labels\": [...], \"values\": [...]}",
+      "required": true
+    },
+    {
+      "name": "output_path",
+      "type": "string",
+      "description": "File path to save the chart image (e.g. chart.png)",
+      "required": true
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "description": "Optional chart title",
+      "required": false,
+      "default": ""
+    }
+  ],
+  "requires_api_key": false
+}

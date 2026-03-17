@@ -1,0 +1,33 @@
+{
+  "name": "currency_rate",
+  "version": "1.0.0",
+  "description": "Get the current exchange rate between two currencies",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "external",
+  "tags": [
+    "currency",
+    "exchange",
+    "rate",
+    "finance"
+  ],
+  "parameters": [
+    {
+      "name": "from_currency",
+      "type": "string",
+      "description": "Source currency code (e.g. USD, EUR)",
+      "required": true
+    },
+    {
+      "name": "to_currency",
+      "type": "string",
+      "description": "Target currency code (e.g. GBP, JPY)",
+      "required": true
+    }
+  ],
+  "requires_api_key": true
+}

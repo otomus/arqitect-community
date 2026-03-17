@@ -1,0 +1,22 @@
+[
+  {
+    "description": "List events for today",
+    "args": {},
+    "expected_keywords": [
+      "events",
+      "start",
+      "end"
+    ]
+  },
+  {
+    "description": "List events for a specific date range",
+    "args": {
+      "date": "2026-03-17",
+      "days": 3
+    },
+    "expected_keywords": [
+      "events",
+      "count"
+    ]
+  }
+]

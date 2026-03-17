@@ -1,0 +1,19 @@
+[
+  {
+    "description": "Check google.com cert",
+    "args": {
+      "domain": "google.com"
+    },
+    "expected_keywords": [
+      "issuer",
+      "days_remaining"
+    ]
+  },
+  {
+    "description": "Invalid domain returns error",
+    "args": {
+      "domain": "invalid.invalid"
+    },
+    "expect_error": true
+  }
+]

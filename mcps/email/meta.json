@@ -1,0 +1,13 @@
+{
+  "name": "email",
+  "version": "1.0.0",
+  "description": "General email via SMTP and IMAP — send, read, search emails, and list folders",
+  "source": "npm",
+  "package": "email-mcp-server",
+  "command": ["npx", "-y", "email-mcp-server"],
+  "auth_type": "api_key",
+  "auth_env": "EMAIL_CREDENTIALS",
+  "tools": ["send_email", "read_emails", "search_emails", "list_folders"],
+  "capabilities": ["email", "smtp", "imap", "send", "inbox"],
+  "category": "communication"
+}

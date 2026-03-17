@@ -1,0 +1,33 @@
+{
+  "name": "social_trending",
+  "version": "1.0.0",
+  "description": "Get trending topics on a social media platform",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "social",
+  "tags": [
+    "social",
+    "trending",
+    "topics",
+    "viral"
+  ],
+  "parameters": [
+    {
+      "name": "platform",
+      "type": "string",
+      "description": "Social media platform (e.g. twitter, mastodon)",
+      "required": true
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "description": "Region or country code for localized trends (e.g. US, UK)",
+      "required": false
+    }
+  ],
+  "requires_api_key": true
+}

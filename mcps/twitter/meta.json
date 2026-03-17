@@ -1,0 +1,13 @@
+{
+  "name": "twitter",
+  "version": "1.0.0",
+  "description": "Twitter/X integration — post tweets, search, get timelines, and reply",
+  "source": "npm",
+  "package": "twitter-mcp-server",
+  "command": ["npx", "-y", "twitter-mcp-server"],
+  "auth_type": "api_key",
+  "auth_env": "TWITTER_BEARER_TOKEN",
+  "tools": ["post_tweet", "search_tweets", "get_timeline", "reply_tweet", "get_user"],
+  "capabilities": ["twitter", "social", "tweets", "posting", "search"],
+  "category": "social"
+}

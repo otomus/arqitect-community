@@ -1,0 +1,23 @@
+[
+  {
+    "description": "Append to file",
+    "args": {
+      "path": "/tmp/sentient_test_append.txt",
+      "content": "line1\\n"
+    },
+    "expected_keywords": [
+      "Appended"
+    ]
+  },
+  {
+    "description": "Append to new file",
+    "args": {
+      "path": "/tmp/sentient_test_append_new.txt",
+      "content": "first"
+    },
+    "expected_keywords": [
+      "Appended",
+      "5"
+    ]
+  }
+]

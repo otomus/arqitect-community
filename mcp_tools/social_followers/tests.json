@@ -1,0 +1,25 @@
+[
+  {
+    "description": "Get Twitter follower count",
+    "args": {
+      "platform": "twitter",
+      "username": "elonmusk"
+    },
+    "expected_keywords": [
+      "followers",
+      "twitter",
+      "username"
+    ]
+  },
+  {
+    "description": "Get Mastodon follower count",
+    "args": {
+      "platform": "mastodon",
+      "username": "Gargron"
+    },
+    "expected_keywords": [
+      "followers",
+      "mastodon"
+    ]
+  }
+]

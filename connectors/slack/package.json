@@ -1,0 +1,12 @@
+{
+  "name": "sentient-slack",
+  "private": true,
+  "scripts": {
+    "start": "node connector.js"
+  },
+  "dependencies": {
+    "@slack/bolt": "^4.1.0",
+    "@slack/web-api": "^7.8.0",
+    "redis": "^4.6.0"
+  }
+}

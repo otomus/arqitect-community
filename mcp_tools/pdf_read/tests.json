@@ -1,0 +1,16 @@
+[
+  {
+    "description": "Read a nonexistent PDF file returns error",
+    "args": {
+      "file_path": "/nonexistent/document.pdf"
+    },
+    "expect_error": true
+  },
+  {
+    "description": "Read PDF with empty path returns error",
+    "args": {
+      "file_path": ""
+    },
+    "expect_error": true
+  }
+]

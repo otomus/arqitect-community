@@ -1,0 +1,25 @@
+[
+  {
+    "description": "Scroll up at current position",
+    "args": {
+      "clicks": 3
+    },
+    "expected_keywords": [
+      "Scrolled up",
+      "3 click(s)"
+    ]
+  },
+  {
+    "description": "Scroll down at specific position",
+    "args": {
+      "clicks": -5,
+      "x": 400,
+      "y": 300
+    },
+    "expected_keywords": [
+      "Scrolled down",
+      "5 click(s)",
+      "(400, 300)"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "cron",
+  "version": "1.0.0",
+  "description": "Scheduled task execution — create, list, delete schedules, and trigger jobs on demand",
+  "source": "npm",
+  "package": "cron-mcp-server",
+  "command": ["npx", "-y", "cron-mcp-server"],
+  "auth_type": "none",
+  "tools": ["create_schedule", "list_schedules", "delete_schedule", "trigger_now"],
+  "capabilities": ["scheduling", "cron", "timer", "automation", "recurring"],
+  "category": "automation"
+}

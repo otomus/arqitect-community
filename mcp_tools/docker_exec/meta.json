@@ -1,0 +1,34 @@
+{
+  "name": "docker_exec",
+  "version": "1.0.0",
+  "description": "Execute a command inside a running Docker container",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "docker",
+  "tags": [
+    "docker",
+    "container",
+    "exec",
+    "command",
+    "infrastructure"
+  ],
+  "parameters": [
+    {
+      "name": "container_id",
+      "type": "string",
+      "description": "Container ID or name to execute the command in",
+      "required": true
+    },
+    {
+      "name": "command",
+      "type": "string",
+      "description": "Command to execute inside the container",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "description": "Get info for existing file",
+    "args": {
+      "path": "meta.json"
+    },
+    "expected_keywords": [
+      "size_bytes",
+      "modified"
+    ]
+  },
+  {
+    "description": "Nonexistent file returns error",
+    "args": {
+      "path": "/nonexistent/file"
+    },
+    "expect_error": true
+  }
+]

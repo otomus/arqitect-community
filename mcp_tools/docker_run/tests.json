@@ -1,0 +1,17 @@
+[
+  {
+    "description": "Run an alpine container that exits immediately",
+    "args": {
+      "image": "alpine:latest",
+      "detach": true
+    },
+    "expected_keywords": []
+  },
+  {
+    "description": "Run a nonexistent image returns error",
+    "args": {
+      "image": "nonexistent_image_xyz_999:latest"
+    },
+    "expect_error": true
+  }
+]

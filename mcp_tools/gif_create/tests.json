@@ -1,0 +1,35 @@
+[
+  {
+    "description": "Create GIF with invalid JSON returns error",
+    "args": {
+      "image_paths": "not-json",
+      "output_path": "output.gif"
+    },
+    "expected_keywords": [
+      "Error",
+      "valid JSON"
+    ]
+  },
+  {
+    "description": "Create GIF with too few images returns error",
+    "args": {
+      "image_paths": "[\"single.png\"]",
+      "output_path": "output.gif"
+    },
+    "expected_keywords": [
+      "Error",
+      "at least 2"
+    ]
+  },
+  {
+    "description": "Create GIF with nonexistent files returns error",
+    "args": {
+      "image_paths": "[\"/nonexistent/a.png\", \"/nonexistent/b.png\"]",
+      "output_path": "output.gif"
+    },
+    "expected_keywords": [
+      "Error",
+      "not found"
+    ]
+  }
+]

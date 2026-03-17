@@ -1,0 +1,12 @@
+{
+  "name": "apple_notes",
+  "version": "1.0.0",
+  "description": "Apple Notes on macOS — search, create, read, and update notes",
+  "source": "npm",
+  "package": "apple-notes-mcp-server",
+  "command": ["npx", "-y", "apple-notes-mcp-server"],
+  "auth_type": "none",
+  "tools": ["search_notes", "create_note", "read_note", "update_note"],
+  "capabilities": ["notes", "writing", "organization", "apple", "macos"],
+  "category": "productivity"
+}

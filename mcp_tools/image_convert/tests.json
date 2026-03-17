@@ -1,0 +1,38 @@
+[
+  {
+    "description": "Convert image to a supported format",
+    "args": {
+      "input_path": "test_input.png",
+      "output_path": "test_output.webp",
+      "format": "webp"
+    },
+    "expected_keywords": [
+      "converted",
+      "webp"
+    ]
+  },
+  {
+    "description": "Convert with unsupported format returns error",
+    "args": {
+      "input_path": "test_input.png",
+      "output_path": "test_output.tiff",
+      "format": "tiff"
+    },
+    "expected_keywords": [
+      "Error",
+      "unsupported"
+    ]
+  },
+  {
+    "description": "Convert nonexistent file returns error",
+    "args": {
+      "input_path": "/nonexistent/image.png",
+      "output_path": "test_output.jpg",
+      "format": "jpg"
+    },
+    "expected_keywords": [
+      "Error",
+      "not found"
+    ]
+  }
+]

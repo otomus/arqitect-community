@@ -1,0 +1,23 @@
+[
+  {
+    "description": "Scan common ports on localhost",
+    "args": {
+      "host": "127.0.0.1",
+      "ports": "80,443"
+    },
+    "expected_keywords": [
+      "host",
+      "details"
+    ]
+  },
+  {
+    "description": "Scan with range",
+    "args": {
+      "host": "127.0.0.1",
+      "ports": "79-81"
+    },
+    "expected_keywords": [
+      "details"
+    ]
+  }
+]

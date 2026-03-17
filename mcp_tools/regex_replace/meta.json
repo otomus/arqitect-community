@@ -1,0 +1,40 @@
+{
+  "name": "regex_replace",
+  "version": "1.0.0",
+  "description": "Find and replace text using a regular expression pattern",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "tags": [
+    "regex",
+    "replace",
+    "substitute",
+    "pattern",
+    "text"
+  ],
+  "parameters": [
+    {
+      "name": "pattern",
+      "type": "string",
+      "description": "Regular expression pattern to find",
+      "required": true
+    },
+    {
+      "name": "replacement",
+      "type": "string",
+      "description": "Replacement string",
+      "required": true
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Text to modify",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "description": "Move mouse to coordinates",
+    "args": {
+      "x": 400,
+      "y": 300
+    },
+    "expected_keywords": [
+      "Mouse moved to",
+      "(400, 300)"
+    ]
+  },
+  {
+    "description": "Move mouse with duration",
+    "args": {
+      "x": 800,
+      "y": 600,
+      "duration": 0.5
+    },
+    "expected_keywords": [
+      "Mouse moved to",
+      "(800, 600)"
+    ]
+  }
+]

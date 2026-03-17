@@ -1,0 +1,46 @@
+{
+  "name": "video_trim",
+  "version": "1.0.0",
+  "description": "Trim a video by start and end time using ffmpeg",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "tags": [
+    "video",
+    "trim",
+    "cut",
+    "clip",
+    "ffmpeg"
+  ],
+  "parameters": [
+    {
+      "name": "input_path",
+      "type": "string",
+      "description": "Path to the source video file",
+      "required": true
+    },
+    {
+      "name": "output_path",
+      "type": "string",
+      "description": "Path where the trimmed video will be saved",
+      "required": true
+    },
+    {
+      "name": "start",
+      "type": "string",
+      "description": "Start time in HH:MM:SS format",
+      "required": true
+    },
+    {
+      "name": "end",
+      "type": "string",
+      "description": "End time in HH:MM:SS format",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

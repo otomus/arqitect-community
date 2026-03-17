@@ -1,0 +1,13 @@
+{
+  "name": "gmail",
+  "version": "1.0.0",
+  "description": "Gmail email with Pub/Sub triggers — send, search, read emails, and watch inbox notifications",
+  "source": "npm",
+  "package": "gmail-mcp-server",
+  "command": ["npx", "-y", "gmail-mcp-server"],
+  "auth_type": "oauth2",
+  "auth_provider": "google",
+  "tools": ["send_email", "search_emails", "read_email", "list_labels", "watch_inbox"],
+  "capabilities": ["email", "gmail", "send", "inbox", "notifications"],
+  "category": "communication"
+}

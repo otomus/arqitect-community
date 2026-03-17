@@ -1,0 +1,26 @@
+{
+  "name": "teams",
+  "version": "1.0.0",
+  "description": "Microsoft Teams connector using Bot Framework — bridges Teams messages to Sentient brain via Redis",
+  "language": "javascript",
+  "platforms": ["teams"],
+  "author": { "github": "sentient-community" },
+  "capabilities": {
+    "incoming": ["text", "image", "document"],
+    "outgoing": ["text", "image", "document", "card"]
+  },
+  "config_fields": [
+    { "name": "app_id", "required": true, "secret": false, "description": "Microsoft App ID from Azure Bot registration" },
+    { "name": "app_password", "required": true, "secret": true, "description": "Microsoft App password/secret" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
+    { "name": "whitelisted_users", "required": false, "secret": false, "description": "Azure AD user IDs allowed to interact" },
+    { "name": "whitelisted_groups", "required": false, "secret": false, "description": "Teams channel IDs to process messages from" },
+    { "name": "monitor_groups", "required": false, "secret": false, "description": "Channel IDs to observe read-only" },
+    { "name": "port", "required": false, "secret": false, "description": "HTTP port for incoming webhooks (default: 3978)" }
+  ],
+  "redis_channels": {
+    "subscribe": ["brain:response", "brain:audio"],
+    "publish": ["brain:task", "teams:monitor"]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "video_get_info",
+  "version": "1.0.0",
+  "description": "Get video metadata (duration, resolution, codec, etc.) using ffprobe",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "tags": [
+    "video",
+    "metadata",
+    "info",
+    "ffprobe",
+    "duration",
+    "resolution"
+  ],
+  "parameters": [
+    {
+      "name": "input_path",
+      "type": "string",
+      "description": "Path to the video file",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

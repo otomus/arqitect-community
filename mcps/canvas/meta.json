@@ -1,0 +1,12 @@
+{
+  "name": "canvas",
+  "version": "1.0.0",
+  "description": "Visual workspace and app-to-UI generation — create canvases, draw, render components, and export images",
+  "source": "npm",
+  "package": "canvas-mcp-server",
+  "command": ["npx", "-y", "canvas-mcp-server"],
+  "auth_type": "none",
+  "tools": ["create_canvas", "draw", "render_component", "export_image"],
+  "capabilities": ["visual", "drawing", "ui_generation", "design", "workspace"],
+  "category": "creative"
+}

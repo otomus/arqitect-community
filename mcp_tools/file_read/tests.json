@@ -1,0 +1,18 @@
+[
+  {
+    "description": "Read an existing file",
+    "args": {
+      "path": "meta.json"
+    },
+    "expected_keywords": [
+      "file_read"
+    ]
+  },
+  {
+    "description": "Read nonexistent file returns error",
+    "args": {
+      "path": "/nonexistent/file.txt"
+    },
+    "expect_error": true
+  }
+]

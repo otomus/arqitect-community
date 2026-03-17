@@ -1,0 +1,10 @@
+[
+  {
+    "description": "Reply without config returns error",
+    "args": {
+      "id": "123",
+      "body": "thanks"
+    },
+    "expect_error": true
+  }
+]

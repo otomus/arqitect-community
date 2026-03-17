@@ -1,0 +1,28 @@
+[
+  {
+    "description": "List current directory",
+    "args": {
+      "path": "."
+    },
+    "expected_keywords": [
+      "meta.json"
+    ]
+  },
+  {
+    "description": "Filter by pattern",
+    "args": {
+      "path": ".",
+      "pattern": "*.json"
+    },
+    "expected_keywords": [
+      "meta.json"
+    ]
+  },
+  {
+    "description": "Nonexistent directory returns error",
+    "args": {
+      "path": "/nonexistent/dir"
+    },
+    "expect_error": true
+  }
+]

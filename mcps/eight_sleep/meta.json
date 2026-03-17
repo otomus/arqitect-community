@@ -1,0 +1,13 @@
+{
+  "name": "eight_sleep",
+  "version": "1.0.0",
+  "description": "8Sleep smart mattress — sleep data, temperature control, and alarms",
+  "source": "npm",
+  "package": "eight-sleep-mcp-server",
+  "command": ["npx", "-y", "eight-sleep-mcp-server"],
+  "auth_type": "api_key",
+  "auth_env": "EIGHT_SLEEP_TOKEN",
+  "tools": ["get_sleep_data", "set_temperature", "get_status", "set_alarm"],
+  "capabilities": ["sleep", "temperature", "health", "smart_home", "wellness"],
+  "category": "smart_home"
+}

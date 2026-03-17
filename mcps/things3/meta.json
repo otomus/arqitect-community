@@ -1,0 +1,12 @@
+{
+  "name": "things3",
+  "version": "1.0.0",
+  "description": "Things 3 GTD task manager — manage to-dos, projects, and task workflows",
+  "source": "npm",
+  "package": "things3-mcp-server",
+  "command": ["npx", "-y", "things3-mcp-server"],
+  "auth_type": "none",
+  "tools": ["list_todos", "create_todo", "complete_todo", "search_todos", "list_projects"],
+  "capabilities": ["tasks", "gtd", "todo", "projects", "productivity"],
+  "category": "productivity"
+}

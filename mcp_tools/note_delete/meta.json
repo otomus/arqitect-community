@@ -1,0 +1,27 @@
+{
+  "name": "note_delete",
+  "version": "1.0.0",
+  "description": "Delete a note by its identifier using the platform-specific notes app",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "external",
+  "tags": [
+    "notes",
+    "delete",
+    "remove",
+    "productivity"
+  ],
+  "parameters": [
+    {
+      "name": "note_id",
+      "type": "string",
+      "description": "Unique identifier (title) of the note to delete",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,34 @@
+{
+  "name": "xlsx_read",
+  "version": "1.0.0",
+  "description": "Read data from an Excel XLSX file",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "documents",
+  "tags": [
+    "xlsx",
+    "excel",
+    "read",
+    "spreadsheet",
+    "document"
+  ],
+  "parameters": [
+    {
+      "name": "file_path",
+      "type": "string",
+      "description": "Path to the Excel file to read",
+      "required": true
+    },
+    {
+      "name": "sheet",
+      "type": "string",
+      "description": "Name of the sheet to read (defaults to the active sheet)",
+      "required": false
+    }
+  ],
+  "requires_api_key": false
+}

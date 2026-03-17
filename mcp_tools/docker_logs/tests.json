@@ -1,0 +1,17 @@
+[
+  {
+    "description": "Get logs from nonexistent container returns error",
+    "args": {
+      "container_id": "nonexistent_container_xyz"
+    },
+    "expect_error": true
+  },
+  {
+    "description": "Get logs with tail option from nonexistent container returns error",
+    "args": {
+      "container_id": "nonexistent_container_xyz",
+      "tail": 10
+    },
+    "expect_error": true
+  }
+]

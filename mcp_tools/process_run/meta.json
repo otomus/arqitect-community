@@ -1,0 +1,35 @@
+{
+  "name": "process_run",
+  "version": "1.0.0",
+  "description": "Run a system process safely using subprocess",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "docker",
+  "tags": [
+    "process",
+    "subprocess",
+    "run",
+    "system",
+    "infrastructure"
+  ],
+  "parameters": [
+    {
+      "name": "command",
+      "type": "string",
+      "description": "Command to execute (parsed safely with shlex.split)",
+      "required": true
+    },
+    {
+      "name": "timeout",
+      "type": "number",
+      "description": "Timeout in seconds for the command",
+      "required": false,
+      "default": 30
+    }
+  ],
+  "requires_api_key": false
+}

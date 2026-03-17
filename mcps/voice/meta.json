@@ -1,0 +1,12 @@
+{
+  "name": "voice",
+  "version": "1.0.0",
+  "description": "Voice wake word and talk mode — listen, speak, and convert between text and speech",
+  "source": "npm",
+  "package": "voice-mcp-server",
+  "command": ["npx", "-y", "voice-mcp-server"],
+  "auth_type": "none",
+  "tools": ["start_listening", "stop_listening", "text_to_speech", "speech_to_text"],
+  "capabilities": ["voice", "speech", "tts", "stt", "wake_word"],
+  "category": "voice"
+}

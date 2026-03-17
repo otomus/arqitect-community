@@ -1,0 +1,33 @@
+[
+  {
+    "description": "Type a simple string",
+    "args": {
+      "text": "hello world"
+    },
+    "expected_keywords": [
+      "Typed",
+      "11 character(s)"
+    ]
+  },
+  {
+    "description": "Type with interval",
+    "args": {
+      "text": "abc",
+      "interval": 0.05
+    },
+    "expected_keywords": [
+      "Typed",
+      "3 character(s)"
+    ]
+  },
+  {
+    "description": "Empty text rejected",
+    "args": {
+      "text": ""
+    },
+    "expected_keywords": [
+      "Error",
+      "empty"
+    ]
+  }
+]

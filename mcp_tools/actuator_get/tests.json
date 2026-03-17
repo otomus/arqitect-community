@@ -1,0 +1,25 @@
+[
+  {
+    "description": "Get relay actuator state",
+    "args": {
+      "actuator_id": "relay-001",
+      "device_host": "http://localhost:8080"
+    },
+    "expected_keywords": [
+      "actuator_id",
+      "value",
+      "status"
+    ]
+  },
+  {
+    "description": "Get dimmer actuator state",
+    "args": {
+      "actuator_id": "dimmer-001",
+      "device_host": "http://localhost:8080"
+    },
+    "expected_keywords": [
+      "actuator_id",
+      "value"
+    ]
+  }
+]

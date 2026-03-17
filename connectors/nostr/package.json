@@ -1,0 +1,12 @@
+{
+  "name": "sentient-nostr",
+  "private": true,
+  "scripts": {
+    "start": "node connector.js"
+  },
+  "dependencies": {
+    "nostr-tools": "^2.7.0",
+    "websocket-polyfill": "^0.0.3",
+    "redis": "^4.6.0"
+  }
+}

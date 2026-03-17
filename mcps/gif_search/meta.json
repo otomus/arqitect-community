@@ -1,0 +1,13 @@
+{
+  "name": "gif_search",
+  "version": "1.0.0",
+  "description": "GIF search via Giphy and Tenor — search, browse trending, and get random GIFs",
+  "source": "npm",
+  "package": "gif-search-mcp-server",
+  "command": ["npx", "-y", "gif-search-mcp-server"],
+  "auth_type": "api_key",
+  "auth_env": "GIPHY_API_KEY",
+  "tools": ["search_gifs", "trending_gifs", "random_gif"],
+  "capabilities": ["gif", "animation", "meme", "media", "fun"],
+  "category": "media"
+}

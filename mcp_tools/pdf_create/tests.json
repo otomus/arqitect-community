@@ -1,0 +1,22 @@
+[
+  {
+    "description": "Create a PDF with simple text content",
+    "args": {
+      "file_path": "/tmp/test_pdf_create.pdf",
+      "content": "Hello, this is a test PDF document."
+    },
+    "expected_keywords": [
+      "PDF created successfully"
+    ]
+  },
+  {
+    "description": "Create a PDF with multiline content",
+    "args": {
+      "file_path": "/tmp/test_pdf_multiline.pdf",
+      "content": "Line one\nLine two\nLine three"
+    },
+    "expected_keywords": [
+      "PDF created successfully"
+    ]
+  }
+]

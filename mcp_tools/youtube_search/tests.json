@@ -1,0 +1,24 @@
+[
+  {
+    "description": "Search for Python tutorials",
+    "args": {
+      "query": "python tutorial"
+    },
+    "expected_keywords": [
+      "videos",
+      "title",
+      "url"
+    ]
+  },
+  {
+    "description": "Search with limited results",
+    "args": {
+      "query": "machine learning",
+      "max_results": 2
+    },
+    "expected_keywords": [
+      "videos",
+      "count"
+    ]
+  }
+]

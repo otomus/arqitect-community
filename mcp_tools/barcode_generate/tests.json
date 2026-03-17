@@ -1,0 +1,32 @@
+[
+  {
+    "description": "Generate a Code128 barcode",
+    "args": {
+      "data": "ABC-12345",
+      "output_path": "/tmp/test_barcode.png",
+      "barcode_type": "code128"
+    },
+    "expected_keywords": [
+      "Barcode saved to"
+    ]
+  },
+  {
+    "description": "Generate a barcode with default type",
+    "args": {
+      "data": "Hello123",
+      "output_path": "/tmp/test_barcode_default.png"
+    },
+    "expected_keywords": [
+      "Barcode saved to"
+    ]
+  },
+  {
+    "description": "Unsupported barcode type",
+    "args": {
+      "data": "12345",
+      "output_path": "/tmp/test.png",
+      "barcode_type": "qr"
+    },
+    "expect_error": true
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "description": "Download with empty URL returns error",
+    "args": {
+      "url": "",
+      "output_path": "video.mp4"
+    },
+    "expected_keywords": [
+      "Error",
+      "required"
+    ]
+  },
+  {
+    "description": "Download with invalid URL returns error",
+    "args": {
+      "url": "not-a-valid-url",
+      "output_path": "video.mp4"
+    },
+    "expected_keywords": [
+      "Error"
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "description": "Watch current directory",
+    "args": {
+      "path": "."
+    },
+    "expected_keywords": [
+      "directory",
+      "entries"
+    ]
+  },
+  {
+    "description": "Watch nonexistent path returns error",
+    "args": {
+      "path": "/nonexistent"
+    },
+    "expect_error": true
+  }
+]

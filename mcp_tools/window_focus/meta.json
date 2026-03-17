@@ -1,0 +1,28 @@
+{
+  "name": "window_focus",
+  "version": "1.0.0",
+  "description": "Focus and activate a window by its title",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "desktop",
+  "tags": [
+    "window",
+    "focus",
+    "activate",
+    "desktop",
+    "automation"
+  ],
+  "parameters": [
+    {
+      "name": "title",
+      "type": "string",
+      "description": "Title (or partial title) of the window to focus",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "description": "Translate English to Spanish",
+    "args": {
+      "text": "Hello world",
+      "target_language": "es"
+    },
+    "expected_keywords": [
+      "translated",
+      "target_language",
+      "es"
+    ]
+  },
+  {
+    "description": "Translate with explicit source language",
+    "args": {
+      "text": "Bonjour",
+      "target_language": "en",
+      "source_language": "fr"
+    },
+    "expected_keywords": [
+      "translated",
+      "en"
+    ]
+  }
+]

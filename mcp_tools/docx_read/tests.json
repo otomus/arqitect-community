@@ -1,0 +1,16 @@
+[
+  {
+    "description": "Read a nonexistent DOCX file returns error",
+    "args": {
+      "file_path": "/nonexistent/document.docx"
+    },
+    "expect_error": true
+  },
+  {
+    "description": "Read DOCX with empty path returns error",
+    "args": {
+      "file_path": ""
+    },
+    "expect_error": true
+  }
+]

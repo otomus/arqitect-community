@@ -1,0 +1,29 @@
+[
+  {
+    "description": "SHA256 hash",
+    "args": {
+      "input": "hello"
+    },
+    "expected_keywords": [
+      "2cf24dba"
+    ]
+  },
+  {
+    "description": "MD5 hash",
+    "args": {
+      "input": "hello",
+      "algorithm": "md5"
+    },
+    "expected_keywords": [
+      "5d41402a"
+    ]
+  },
+  {
+    "description": "Invalid algorithm",
+    "args": {
+      "input": "x",
+      "algorithm": "fake"
+    },
+    "expect_error": true
+  }
+]

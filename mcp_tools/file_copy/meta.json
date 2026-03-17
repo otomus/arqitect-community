@@ -1,0 +1,33 @@
+{
+  "name": "file_copy",
+  "version": "1.0.0",
+  "description": "Copy a file from source to destination",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "tags": [
+    "file",
+    "copy",
+    "duplicate",
+    "backup"
+  ],
+  "parameters": [
+    {
+      "name": "source",
+      "type": "string",
+      "description": "Source file path",
+      "required": true
+    },
+    {
+      "name": "dest",
+      "type": "string",
+      "description": "Destination file path",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,11 @@
+{
+  "name": "sentient-imessage-imsg",
+  "private": true,
+  "scripts": {
+    "start": "node connector.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "redis": "^4.6.0"
+  }
+}

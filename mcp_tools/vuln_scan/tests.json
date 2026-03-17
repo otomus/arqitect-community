@@ -1,0 +1,18 @@
+[
+  {
+    "description": "Scan current directory",
+    "args": {
+      "path": "."
+    },
+    "expected_keywords": [
+      "finding_count"
+    ]
+  },
+  {
+    "description": "Nonexistent path returns error",
+    "args": {
+      "path": "/nonexistent"
+    },
+    "expect_error": true
+  }
+]

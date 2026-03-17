@@ -1,0 +1,24 @@
+[
+  {
+    "description": "Record with zero duration returns error",
+    "args": {
+      "output_path": "recording.wav",
+      "duration": 0
+    },
+    "expected_keywords": [
+      "Error",
+      "positive"
+    ]
+  },
+  {
+    "description": "Record with negative duration returns error",
+    "args": {
+      "output_path": "recording.wav",
+      "duration": -5
+    },
+    "expected_keywords": [
+      "Error",
+      "positive"
+    ]
+  }
+]

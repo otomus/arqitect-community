@@ -1,0 +1,20 @@
+[
+  {
+    "description": "POST to httpbin",
+    "args": {
+      "url": "https://httpbin.org/post",
+      "body": "{\"test\":1}"
+    },
+    "expected_keywords": [
+      "test"
+    ]
+  },
+  {
+    "description": "Invalid URL returns error",
+    "args": {
+      "url": "https://invalid.invalid/x",
+      "body": "{}"
+    },
+    "expect_error": true
+  }
+]

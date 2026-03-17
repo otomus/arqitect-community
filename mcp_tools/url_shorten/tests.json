@@ -1,0 +1,18 @@
+[
+  {
+    "description": "Shorten a URL",
+    "args": {
+      "url": "https://www.example.com/very/long/path"
+    },
+    "expected_keywords": [
+      "is.gd"
+    ]
+  },
+  {
+    "description": "Invalid URL returns error",
+    "args": {
+      "url": "not-a-url"
+    },
+    "expect_error": true
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "name": "barcode_generate",
+  "version": "1.0.0",
+  "description": "Generate a barcode image (Code128, EAN-13, or UPC-A)",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "visualization",
+  "tags": [
+    "barcode",
+    "code128",
+    "ean13",
+    "upc",
+    "generate",
+    "image",
+    "visualization"
+  ],
+  "parameters": [
+    {
+      "name": "data",
+      "type": "string",
+      "description": "The data to encode in the barcode",
+      "required": true
+    },
+    {
+      "name": "barcode_type",
+      "type": "string",
+      "description": "Barcode type: code128, ean13, or upc",
+      "required": false,
+      "default": "code128"
+    },
+    {
+      "name": "output_path",
+      "type": "string",
+      "description": "File path to save the barcode image",
+      "required": true
+    }
+  ],
+  "requires_api_key": false
+}

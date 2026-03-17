@@ -1,0 +1,13 @@
+{
+  "name": "onepassword",
+  "version": "1.0.0",
+  "description": "1Password secure credentials — retrieve, list, and search items across vaults",
+  "source": "npm",
+  "package": "1password-mcp-server",
+  "command": ["npx", "-y", "1password-mcp-server"],
+  "auth_type": "api_key",
+  "auth_env": "OP_SERVICE_ACCOUNT_TOKEN",
+  "tools": ["get_item", "list_items", "list_vaults", "search_items"],
+  "capabilities": ["passwords", "secrets", "credentials", "security", "vault"],
+  "category": "security"
+}

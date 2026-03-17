@@ -1,0 +1,20 @@
+[
+  {
+    "description": "PUT to httpbin",
+    "args": {
+      "url": "https://httpbin.org/put",
+      "body": "{\"update\":true}"
+    },
+    "expected_keywords": [
+      "update"
+    ]
+  },
+  {
+    "description": "Invalid URL returns error",
+    "args": {
+      "url": "https://invalid.invalid/x",
+      "body": "{}"
+    },
+    "expect_error": true
+  }
+]

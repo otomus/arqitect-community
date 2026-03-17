@@ -1,0 +1,9 @@
+[
+  {
+    "description": "Delete nonexistent directory returns error",
+    "args": {
+      "path": "/tmp/sentient_no_such_dir"
+    },
+    "expect_error": true
+  }
+]

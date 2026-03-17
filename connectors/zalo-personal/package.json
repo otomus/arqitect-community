@@ -1,0 +1,11 @@
+{
+  "name": "sentient-zalo-personal",
+  "private": true,
+  "scripts": {
+    "start": "node connector.js"
+  },
+  "dependencies": {
+    "zca-js": "^1.0.0",
+    "redis": "^4.6.0"
+  }
+}

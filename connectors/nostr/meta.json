@@ -1,0 +1,23 @@
+{
+  "name": "nostr",
+  "version": "1.0.0",
+  "description": "Nostr connector using NIP-04 encrypted DMs — bridges Nostr direct messages to Sentient brain via Redis",
+  "language": "javascript",
+  "platforms": ["nostr"],
+  "author": { "github": "sentient-community" },
+  "capabilities": {
+    "incoming": ["text"],
+    "outgoing": ["text"]
+  },
+  "config_fields": [
+    { "name": "private_key", "required": true, "secret": true, "description": "Nostr private key in hex or nsec format" },
+    { "name": "relays", "required": true, "secret": false, "description": "Array of Nostr relay WebSocket URLs" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
+    { "name": "whitelisted_users", "required": false, "secret": false, "description": "Nostr public keys (npub or hex) allowed to interact" }
+  ],
+  "redis_channels": {
+    "subscribe": ["brain:response", "brain:audio"],
+    "publish": ["brain:task"]
+  }
+}

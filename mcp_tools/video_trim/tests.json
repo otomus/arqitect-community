@@ -1,0 +1,41 @@
+[
+  {
+    "description": "Trim nonexistent video returns error",
+    "args": {
+      "input_path": "/nonexistent/video.mp4",
+      "output_path": "trimmed.mp4",
+      "start": "00:00:10",
+      "end": "00:01:00"
+    },
+    "expected_keywords": [
+      "Error",
+      "not found"
+    ]
+  },
+  {
+    "description": "Trim with invalid start timestamp returns error",
+    "args": {
+      "input_path": "/nonexistent/video.mp4",
+      "output_path": "trimmed.mp4",
+      "start": "bad-time",
+      "end": "00:01:00"
+    },
+    "expected_keywords": [
+      "Error",
+      "invalid start time"
+    ]
+  },
+  {
+    "description": "Trim with invalid end timestamp returns error",
+    "args": {
+      "input_path": "/nonexistent/video.mp4",
+      "output_path": "trimmed.mp4",
+      "start": "00:00:00",
+      "end": "1:2:3"
+    },
+    "expected_keywords": [
+      "Error",
+      "invalid end time"
+    ]
+  }
+]

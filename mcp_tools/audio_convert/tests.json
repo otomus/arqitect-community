@@ -1,0 +1,26 @@
+[
+  {
+    "description": "Convert with unsupported format returns error",
+    "args": {
+      "input_path": "audio.wav",
+      "output_path": "audio.aac",
+      "format": "aac"
+    },
+    "expected_keywords": [
+      "Error",
+      "unsupported"
+    ]
+  },
+  {
+    "description": "Convert nonexistent file returns error",
+    "args": {
+      "input_path": "/nonexistent/audio.wav",
+      "output_path": "audio.mp3",
+      "format": "mp3"
+    },
+    "expected_keywords": [
+      "Error",
+      "not found"
+    ]
+  }
+]

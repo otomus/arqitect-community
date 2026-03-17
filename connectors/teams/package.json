@@ -1,0 +1,13 @@
+{
+  "name": "sentient-teams",
+  "private": true,
+  "scripts": {
+    "start": "node connector.js"
+  },
+  "dependencies": {
+    "botbuilder": "^4.22.0",
+    "botframework-connector": "^4.22.0",
+    "redis": "^4.6.0",
+    "restify": "^11.1.0"
+  }
+}

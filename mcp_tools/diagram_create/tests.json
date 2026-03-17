@@ -1,0 +1,35 @@
+[
+  {
+    "description": "Create a flowchart diagram",
+    "args": {
+      "diagram_type": "flowchart",
+      "definition": "Start -> Process -> Decision -> End",
+      "output_path": "/tmp/test_flowchart.svg"
+    },
+    "expected_keywords": [
+      "Diagram saved to",
+      "/tmp/test_flowchart.svg"
+    ]
+  },
+  {
+    "description": "Create a sequence diagram",
+    "args": {
+      "diagram_type": "sequence",
+      "definition": "Client -> Server: request\nServer -> Client: response",
+      "output_path": "/tmp/test_sequence.svg"
+    },
+    "expected_keywords": [
+      "Diagram saved to",
+      "/tmp/test_sequence.svg"
+    ]
+  },
+  {
+    "description": "Invalid diagram type",
+    "args": {
+      "diagram_type": "gantt",
+      "definition": "A -> B",
+      "output_path": "/tmp/test.svg"
+    },
+    "expect_error": true
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "description": "File not found should raise error",
+    "args": {
+      "image_path": "/tmp/nonexistent_barcode_image.png"
+    },
+    "expect_error": true
+  },
+  {
+    "description": "Empty path should raise error",
+    "args": {
+      "image_path": ""
+    },
+    "expect_error": true
+  }
+]

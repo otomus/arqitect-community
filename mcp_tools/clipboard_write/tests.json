@@ -1,0 +1,23 @@
+[
+  {
+    "description": "Write text to clipboard",
+    "args": {
+      "text": "hello world"
+    },
+    "expected_keywords": [
+      "Copied",
+      "11 character(s)",
+      "clipboard"
+    ]
+  },
+  {
+    "description": "Empty text rejected",
+    "args": {
+      "text": ""
+    },
+    "expected_keywords": [
+      "Error",
+      "empty"
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "description": "Get Apple stock quote",
+    "args": {
+      "symbol": "AAPL"
+    },
+    "expected_keywords": [
+      "AAPL",
+      "price"
+    ]
+  },
+  {
+    "description": "Get Microsoft stock quote",
+    "args": {
+      "symbol": "MSFT"
+    },
+    "expected_keywords": [
+      "MSFT",
+      "price"
+    ]
+  }
+]
