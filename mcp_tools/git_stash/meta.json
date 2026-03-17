@@ -1,0 +1,43 @@
+{
+  "name": "git_stash",
+  "version": "1.0.0",
+  "description": "Stash changes in the working directory",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "git",
+  "tags": [
+    "git",
+    "version-control",
+    "stash"
+  ],
+  "parameters": [
+    {
+      "name": "token",
+      "type": "string",
+      "description": "User's Git access token for authentication",
+      "required": true
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "description": "Optional message describing the stash",
+      "required": false
+    },
+    {
+      "name": "path",
+      "type": "string",
+      "description": "Path to the Git repository (default: current directory)",
+      "required": false
+    }
+  ],
+  "requires_api_key": true,
+  "dependencies": {
+    "python": [
+      "gitpython"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "git_stash_pop",
+  "version": "1.0.0",
+  "description": "Pop a stashed set of changes",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "git",
+  "tags": [
+    "git",
+    "version-control",
+    "stash"
+  ],
+  "parameters": [
+    {
+      "name": "token",
+      "type": "string",
+      "description": "User's Git access token for authentication",
+      "required": true
+    },
+    {
+      "name": "index",
+      "type": "integer",
+      "description": "Stash index to pop (default: 0)",
+      "required": false
+    },
+    {
+      "name": "path",
+      "type": "string",
+      "description": "Path to the Git repository (default: current directory)",
+      "required": false
+    }
+  ],
+  "requires_api_key": true,
+  "dependencies": {
+    "python": [
+      "gitpython"
+    ]
+  }
+}

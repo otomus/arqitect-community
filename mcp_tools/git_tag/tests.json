@@ -1,0 +1,14 @@
+[
+  {
+    "input": {"token": "", "name": "v1.0.0"},
+    "expected_output_contains": "Git token is required"
+  },
+  {
+    "input": {"token": "test-token", "name": ""},
+    "expected_output_contains": "Tag name is required"
+  },
+  {
+    "input": {"token": "test-token", "name": "v1.0.0", "path": "/nonexistent"},
+    "expected_output_contains": "does not exist"
+  }
+]

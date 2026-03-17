@@ -1,0 +1,10 @@
+[
+  {
+    "input": {"token": "", "url": "https://github.com/user/repo.git"},
+    "expected_output_contains": "Git token is required"
+  },
+  {
+    "input": {"token": "test-token", "url": ""},
+    "expected_output_contains": "Repository URL is required"
+  }
+]

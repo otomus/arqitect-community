@@ -1,0 +1,44 @@
+{
+  "name": "git_clone",
+  "version": "1.0.0",
+  "description": "Clone a remote Git repository",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "git",
+  "tags": [
+    "git",
+    "version-control",
+    "clone",
+    "remote"
+  ],
+  "parameters": [
+    {
+      "name": "token",
+      "type": "string",
+      "description": "User's Git access token for authentication",
+      "required": true
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "description": "Repository URL to clone",
+      "required": true
+    },
+    {
+      "name": "destination",
+      "type": "string",
+      "description": "Local directory to clone into (default: derived from URL)",
+      "required": false
+    }
+  ],
+  "requires_api_key": true,
+  "dependencies": {
+    "python": [
+      "gitpython"
+    ]
+  }
+}

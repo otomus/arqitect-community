@@ -1,0 +1,37 @@
+{
+  "name": "git_status",
+  "version": "1.0.0",
+  "description": "Get working tree status of a Git repository",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "git",
+  "tags": [
+    "git",
+    "version-control",
+    "status"
+  ],
+  "parameters": [
+    {
+      "name": "token",
+      "type": "string",
+      "description": "User's Git access token for authentication",
+      "required": true
+    },
+    {
+      "name": "path",
+      "type": "string",
+      "description": "Path to the Git repository (default: current directory)",
+      "required": false
+    }
+  ],
+  "requires_api_key": true,
+  "dependencies": {
+    "python": [
+      "gitpython"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "input": {"token": "", "target": "main"},
+    "expected_output_contains": "Git token is required"
+  },
+  {
+    "input": {"token": "test-token", "target": ""},
+    "expected_output_contains": "Checkout target is required"
+  },
+  {
+    "input": {"token": "test-token", "target": "main", "path": "/nonexistent"},
+    "expected_output_contains": "does not exist"
+  }
+]

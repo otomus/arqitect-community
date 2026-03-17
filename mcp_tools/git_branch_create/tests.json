@@ -1,0 +1,14 @@
+[
+  {
+    "input": {"token": "", "name": "feature-branch"},
+    "expected_output_contains": "Git token is required"
+  },
+  {
+    "input": {"token": "test-token", "name": ""},
+    "expected_output_contains": "Branch name is required"
+  },
+  {
+    "input": {"token": "test-token", "name": "test-branch", "path": "/nonexistent"},
+    "expected_output_contains": "does not exist"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "input": {"token": "", "path": "."},
+    "expected_output_contains": "Git token is required"
+  },
+  {
+    "input": {"token": "test-token", "path": "/nonexistent"},
+    "expected_output_contains": "does not exist"
+  }
+]

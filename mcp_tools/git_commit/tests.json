@@ -1,0 +1,14 @@
+[
+  {
+    "input": {"token": "", "message": "test commit"},
+    "expected_output_contains": "Git token is required"
+  },
+  {
+    "input": {"token": "test-token", "message": ""},
+    "expected_output_contains": "Commit message is required"
+  },
+  {
+    "input": {"token": "test-token", "message": "test commit", "path": "/nonexistent"},
+    "expected_output_contains": "does not exist"
+  }
+]

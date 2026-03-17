@@ -1,0 +1,14 @@
+[
+  {
+    "input": {"token": "", "files": "file.txt"},
+    "expected_output_contains": "Git token is required"
+  },
+  {
+    "input": {"token": "test-token", "files": "."},
+    "expected_output_contains": "not allowed"
+  },
+  {
+    "input": {"token": "test-token", "files": "-A"},
+    "expected_output_contains": "not allowed"
+  }
+]
