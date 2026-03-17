@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-17T13:46:05.864924+00:00",
+  "generated_at": "2026-03-17T13:47:58.906206+00:00",
   "nerves": {
     "joke_nerve": {
       "description": "Generate jokes, puns, and comedic content across various topics. Ensure the humor is appropriate for all audiences.",
@@ -448,7 +448,218 @@
       ]
     }
   },
-  "tools": {},
+  "tools": {
+    "gif_animation_tool": {
+      "name": "gif_animation_tool",
+      "version": "1.0.0",
+      "description": "Generate animated GIFs from text descriptions using an external service",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "media",
+      "tags": [
+        "gif",
+        "animation",
+        "image",
+        "media",
+        "generation"
+      ],
+      "parameters": [
+        {
+          "name": "query",
+          "type": "string",
+          "description": "Text description of the animation to generate",
+          "required": true
+        }
+      ],
+      "requires_api_key": false
+    },
+    "image_to_ascii": {
+      "name": "image_to_ascii",
+      "version": "1.0.0",
+      "description": "Convert images to ASCII art from a URL",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "media",
+      "tags": [
+        "image",
+        "ascii",
+        "art",
+        "conversion",
+        "text"
+      ],
+      "parameters": [
+        {
+          "name": "query",
+          "type": "string",
+          "description": "URL of the image to convert to ASCII art",
+          "required": true
+        }
+      ],
+      "requires_api_key": false
+    },
+    "joke_fetcher": {
+      "name": "joke_fetcher",
+      "version": "1.0.0",
+      "description": "Fetch random jokes from a free API \u2014 supports categories like programming, general, and knock-knock",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "entertainment",
+      "tags": [
+        "joke",
+        "humor",
+        "funny",
+        "random",
+        "entertainment"
+      ],
+      "parameters": [
+        {
+          "name": "category",
+          "type": "string",
+          "description": "Joke category: Any, Programming, Misc, Pun, Spooky, Christmas",
+          "required": false,
+          "default": "Any"
+        }
+      ],
+      "requires_api_key": false
+    },
+    "personalized_greeting": {
+      "name": "personalized_greeting",
+      "version": "1.0.0",
+      "description": "Generate personalized greetings based on the time of day",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "entertainment",
+      "tags": [
+        "greeting",
+        "personalized",
+        "time",
+        "motivation"
+      ],
+      "parameters": [
+        {
+          "name": "query",
+          "type": "string",
+          "description": "Optional user name for personalization",
+          "required": false,
+          "default": ""
+        }
+      ],
+      "requires_api_key": false
+    },
+    "user_preference_analysis": {
+      "name": "user_preference_analysis",
+      "version": "1.0.0",
+      "description": "Analyze user data for demographic insights and preference profiling",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "analytics",
+      "tags": [
+        "user",
+        "preference",
+        "analysis",
+        "demographics",
+        "profiling"
+      ],
+      "parameters": [
+        {
+          "name": "query",
+          "type": "string",
+          "description": "Query describing the user data to analyze",
+          "required": true
+        }
+      ],
+      "requires_api_key": false
+    },
+    "video_editing_tool": {
+      "name": "video_editing_tool",
+      "version": "1.0.0",
+      "description": "Generate animated GIFs from text descriptions using external video editing services",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "media",
+      "tags": [
+        "video",
+        "editing",
+        "gif",
+        "animation",
+        "media"
+      ],
+      "parameters": [
+        {
+          "name": "query",
+          "type": "string",
+          "description": "Text description of the video or animation to generate",
+          "required": true
+        }
+      ],
+      "requires_api_key": false
+    },
+    "voice_recognition": {
+      "name": "voice_recognition",
+      "version": "1.0.0",
+      "description": "Process voice recognition queries using an external API",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "audio",
+      "tags": [
+        "voice",
+        "recognition",
+        "speech",
+        "audio",
+        "transcription"
+      ],
+      "parameters": [
+        {
+          "name": "query",
+          "type": "string",
+          "description": "Voice recognition query to process",
+          "required": true
+        }
+      ],
+      "requires_api_key": false
+    },
+    "word_problem_solver": {
+      "name": "word_problem_solver",
+      "version": "1.0.0",
+      "description": "Solve mathematical problems including arithmetic, algebra, and word problems",
+      "implementations": {
+        "python": "tool.py"
+      },
+      "author": "sentient-community",
+      "category": "education",
+      "tags": [
+        "math",
+        "solver",
+        "arithmetic",
+        "algebra",
+        "word-problems",
+        "education"
+      ],
+      "parameters": [
+        {
+          "name": "query",
+          "type": "string",
+          "description": "Mathematical problem or word problem to solve",
+          "required": true
+        }
+      ],
+      "requires_api_key": false
+    }
+  },
   "mcps": {
     "airbnb": {
       "name": "airbnb",
@@ -907,7 +1118,7 @@
     "total_nerves": 1,
     "total_adapters": 31,
     "total_connectors": 2,
-    "total_tools": 0,
+    "total_tools": 8,
     "total_mcps": 18
   },
   "leaderboard": {}
