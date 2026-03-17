@@ -1,0 +1,24 @@
+{
+  "name": "crypto_price_nerve",
+  "version": "1.0.0",
+  "description": "Get the current price of a cryptocurrency.",
+  "role": "tool",
+  "tags": [
+    "finance",
+    "crypto",
+    "tool"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "get_price",
+      "mcp": "coincap",
+      "implementations": {}
+    }
+  ]
+}

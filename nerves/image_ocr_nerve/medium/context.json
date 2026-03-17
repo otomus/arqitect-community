@@ -1,0 +1,33 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Extract text from images using optical character recognition. Use the available tools to complete user requests accurately. Always validate inputs before processing. Provide clear error messages when operations cannot be completed. Return structured results that include relevant metadata about the operation performed.",
+  "few_shot_examples": [
+    {
+      "input": "Extract text from /tmp/receipt.jpg",
+      "output": "{\"action\": \"image_to_text\", \"args\": {\"file_path\": \"/tmp/receipt.jpg\"}}",
+      "response": "Store: SuperMart\nDate: 2025-01-15\nTotal: $42.99"
+    },
+    {
+      "input": "OCR the whiteboard photo at /docs/whiteboard.png",
+      "output": "{\"action\": \"image_to_text\", \"args\": {\"file_path\": \"/docs/whiteboard.png\"}}",
+      "response": "Sprint Goals:\n1. Complete API integration\n2. Fix login bug\n3. Deploy v2.0"
+    },
+    {
+      "input": "Extract text from a blank image",
+      "output": "{\"action\": \"image_to_text\", \"args\": {\"file_path\": \"/tmp/blank.png\"}}",
+      "response": "No text detected in the image."
+    },
+    {
+      "input": "OCR a non-image file",
+      "output": "{\"action\": \"image_to_text\", \"args\": {\"file_path\": \"/tmp/data.bin\"}}",
+      "response": "Error: The file is not a valid image format."
+    },
+    {
+      "input": "Please extract text from /tmp/receipt.jpg",
+      "output": "{\"action\": \"image_to_text\", \"args\": {\"file_path\": \"/tmp/receipt.jpg\"}}",
+      "response": "Store: SuperMart\nDate: 2025-01-15\nTotal: $42.99"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

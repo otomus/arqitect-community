@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Send SMS to +15551112222 saying 'On my way'",
+    "context": {},
+    "output": {
+      "tool": "sms_send",
+      "params": {
+        "to": "+15551112222",
+        "message": "On my way"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Text +15553334444 that dinner is ready",
+    "context": {},
+    "output": {
+      "tool": "sms_send",
+      "params": {
+        "to": "+15553334444",
+        "message": "Dinner is ready."
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Send a text message",
+    "context": {},
+    "output": "I need a phone number and message content. Please provide both.",
+    "category": "edge"
+  },
+  {
+    "input": "Call +15551234567",
+    "context": {},
+    "output": "I can only send SMS messages, not make calls.",
+    "category": "negative"
+  }
+]

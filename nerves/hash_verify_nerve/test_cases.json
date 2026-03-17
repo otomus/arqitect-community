@@ -1,0 +1,40 @@
+[
+  {
+    "input": "Verify 'abc' against SHA-256 hash ba7816bf",
+    "context": {},
+    "output": {
+      "tool": "hash_verify",
+      "params": {
+        "data": "abc",
+        "hash": "ba7816bf",
+        "algorithm": "sha256"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Does MD5 of 'test' equal 098f6bcd?",
+    "context": {},
+    "output": {
+      "tool": "hash_verify",
+      "params": {
+        "data": "test",
+        "hash": "098f6bcd",
+        "algorithm": "md5"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Verify this hash",
+    "context": {},
+    "output": "I need the original data, the hash to verify against, and the algorithm. Please provide all three.",
+    "category": "edge"
+  },
+  {
+    "input": "Hash the string 'hello'",
+    "context": {},
+    "output": "I can only verify data against existing hashes, not compute new hashes.",
+    "category": "negative"
+  }
+]

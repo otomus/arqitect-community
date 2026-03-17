@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Show last 10 commits",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_log\",\"args\":{\"limit\":10}}",
+    "category": "core"
+  },
+  {
+    "input": "What changed in the last commit?",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_diff\",\"args\":{\"ref\":\"HEAD~1\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Show commits by author John",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_log\",\"args\":{\"author\":\"John\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Diff between two branches",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_diff\",\"args\":{\"ref\":\"main..develop\"}}",
+    "category": "negative"
+  }
+]

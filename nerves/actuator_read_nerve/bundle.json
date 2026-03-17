@@ -1,0 +1,24 @@
+{
+  "name": "actuator_read_nerve",
+  "version": "1.0.0",
+  "description": "Read the current state of any actuator.",
+  "role": "tool",
+  "tags": [
+    "iot",
+    "actuator"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "actuator_get",
+      "implementations": {
+        "python": "mcp_tools/actuator_get/tool.py"
+      }
+    }
+  ]
+}

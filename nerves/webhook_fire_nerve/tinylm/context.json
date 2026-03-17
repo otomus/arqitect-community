@@ -1,0 +1,34 @@
+{
+  "system_prompt": "You fire webhooks. Extract URL and payload, call webhook_send.",
+  "few_shot_examples": [
+    {
+      "input": "Fire webhook to https://hooks.example.com/deploy with payload {\"status\":\"success\"}",
+      "output": {
+        "tool": "webhook_send",
+        "params": {
+          "url": "https://hooks.example.com/deploy",
+          "payload": {
+            "status": "success"
+          }
+        }
+      }
+    },
+    {
+      "input": "Send webhook to https://api.service.com/hook with {\"event\":\"user.created\",\"id\":123}",
+      "output": {
+        "tool": "webhook_send",
+        "params": {
+          "url": "https://api.service.com/hook",
+          "payload": {
+            "event": "user.created",
+            "id": 123
+          }
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

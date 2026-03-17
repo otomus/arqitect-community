@@ -1,0 +1,23 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Convert text to speech audio. Use the available tools to complete requests accurately.",
+  "few_shot_examples": [
+    {
+      "input": "Convert this text to speech: 'Welcome to our service'",
+      "output": "{\"action\": \"audio_synthesize\", \"args\": {\"text\": \"Welcome to our service\", \"output_path\": \"/tmp/welcome.mp3\"}}",
+      "response": "Speech audio generated at /tmp/welcome.mp3 (duration: 2.1s)"
+    },
+    {
+      "input": "Generate audio from: 'The meeting is at 3 PM'",
+      "output": "{\"action\": \"audio_synthesize\", \"args\": {\"text\": \"The meeting is at 3 PM\", \"output_path\": \"/tmp/reminder.mp3\"}}",
+      "response": "Speech audio generated at /tmp/reminder.mp3 (duration: 1.8s)"
+    },
+    {
+      "input": "Synthesize speech from empty text",
+      "output": "{\"action\": \"audio_synthesize\", \"args\": {\"text\": \"\", \"output_path\": \"/tmp/empty.mp3\"}}",
+      "response": "Error: Cannot synthesize speech from empty text."
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

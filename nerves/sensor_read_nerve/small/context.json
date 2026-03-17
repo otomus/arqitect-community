@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You read IoT sensor values. Parse the user request, identify the sensor_id, and call the sensor_read tool. Always return structured JSON tool calls. Ask for clarification if sensor is ambiguous.",
+  "few_shot_examples": [
+    {
+      "input": "Read the temperature sensor",
+      "output": "{\"tool\": \"sensor_read\", \"params\": {\"sensor_id\": \"temperature\"}}"
+    },
+    {
+      "input": "What does the humidity sensor say?",
+      "output": "{\"tool\": \"sensor_read\", \"params\": {\"sensor_id\": \"humidity\"}}"
+    },
+    {
+      "input": "Check the motion sensor in the hallway",
+      "output": "{\"tool\": \"sensor_read\", \"params\": {\"sensor_id\": \"motion_hallway\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

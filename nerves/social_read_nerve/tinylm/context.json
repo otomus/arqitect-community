@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Read a social media post by URL. Return tool call JSON.",
+  "few_shot_examples": [
+    {
+      "input": "Read https://twitter.com/elonmusk/status/999",
+      "output": "{\"tool\": \"social_read\", \"params\": {\"url\": \"https://twitter.com/elonmusk/status/999\"}}"
+    },
+    {
+      "input": "Show this Bluesky post: https://bsky.app/profile/test/post/111",
+      "output": "{\"tool\": \"social_read\", \"params\": {\"url\": \"https://bsky.app/profile/test/post/111\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

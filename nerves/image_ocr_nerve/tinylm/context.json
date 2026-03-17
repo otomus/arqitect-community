@@ -1,0 +1,18 @@
+{
+  "system_prompt": "You are a tool assistant. Extract text from images using optical character recognition.",
+  "few_shot_examples": [
+    {
+      "input": "Extract text from /tmp/receipt.jpg",
+      "output": "{\"action\": \"image_to_text\", \"args\": {\"file_path\": \"/tmp/receipt.jpg\"}}",
+      "response": "Store: SuperMart\nDate: 2025-01-15\nTotal: $42.99"
+    },
+    {
+      "input": "OCR the whiteboard photo at /docs/whiteboard.png",
+      "output": "{\"action\": \"image_to_text\", \"args\": {\"file_path\": \"/docs/whiteboard.png\"}}",
+      "response": "Sprint Goals:\n1. Complete API integration\n2. Fix login bug\n3. Deploy v2.0"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

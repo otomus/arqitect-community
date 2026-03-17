@@ -1,0 +1,25 @@
+{
+  "name": "window_focus_nerve",
+  "version": "1.0.0",
+  "description": "Bring a window to the front",
+  "role": "tool",
+  "tags": [
+    "desktop",
+    "window",
+    "focus"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "window_focus",
+      "implementations": {
+        "python": "mcp_tools/window_focus/tool.py"
+      }
+    }
+  ]
+}

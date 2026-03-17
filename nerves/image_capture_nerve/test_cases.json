@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Take a screenshot and save it to /tmp/screen.png",
+    "context": {},
+    "output": "Screenshot captured successfully at /tmp/screen.png",
+    "category": "core"
+  },
+  {
+    "input": "Capture my screen to /docs/capture.png",
+    "context": {},
+    "output": "Screenshot captured successfully at /docs/capture.png",
+    "category": "core"
+  },
+  {
+    "input": "Take a screenshot on a headless server",
+    "context": {},
+    "output": "Error: No display available. Cannot capture screenshot on a headless system.",
+    "category": "edge"
+  },
+  {
+    "input": "Capture screenshot to invalid path",
+    "context": {},
+    "output": "Error: Directory /no/dir does not exist.",
+    "category": "negative"
+  }
+]

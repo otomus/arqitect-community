@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Tag current commit as v1.0.0",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_tag\",\"args\":{\"name\":\"v1.0.0\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Create annotated tag v2.0.0",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_tag\",\"args\":{\"name\":\"v2.0.0\",\"message\":\"Release 2.0.0\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Show recent commits to decide where to tag",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_log\",\"args\":{\"limit\":5}}",
+    "category": "edge"
+  },
+  {
+    "input": "Tag a specific commit",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_tag\",\"args\":{\"name\":\"v1.1.0\",\"commit\":\"abc123\"}}",
+    "category": "negative"
+  }
+]

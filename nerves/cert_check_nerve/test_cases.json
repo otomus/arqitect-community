@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Check cert for google.com",
+    "context": {},
+    "output": "Certificate valid: google.com (expires in 60 days, issued by GTS CA)",
+    "category": "core"
+  },
+  {
+    "input": "Check expiring cert",
+    "context": {},
+    "output": "Warning: certificate for example.com expires in 7 days",
+    "category": "core"
+  },
+  {
+    "input": "Check unreachable domain",
+    "context": {},
+    "output": "Error: could not connect to nonexistent.invalid",
+    "category": "boundary"
+  },
+  {
+    "input": "Check self-signed cert",
+    "context": {},
+    "output": "Warning: certificate for dev.local is self-signed (not trusted by default)",
+    "category": "edge"
+  },
+  {
+    "input": "Check cert chain",
+    "context": {},
+    "output": "Certificate chain valid: 3 certificates, root CA: DigiCert",
+    "category": "core"
+  }
+]

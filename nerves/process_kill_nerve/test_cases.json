@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Kill process 1234",
+    "context": {},
+    "output": "Process 1234 terminated successfully",
+    "category": "core"
+  },
+  {
+    "input": "Kill all node processes",
+    "context": {},
+    "output": "Killed 3 processes matching 'node'",
+    "category": "core"
+  },
+  {
+    "input": "Kill non-existent PID",
+    "context": {},
+    "output": "Error: process with PID 99999 not found",
+    "category": "boundary"
+  },
+  {
+    "input": "Send SIGHUP to process",
+    "context": {},
+    "output": "Signal SIGHUP sent to process 1234",
+    "category": "core"
+  },
+  {
+    "input": "Kill protected system process",
+    "context": {},
+    "output": "Error: permission denied to kill PID 1 (system process)",
+    "category": "edge"
+  }
+]

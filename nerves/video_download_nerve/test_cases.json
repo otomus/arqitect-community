@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Download the video at https://example.com/tutorial.mp4",
+    "context": {},
+    "output": "Video downloaded successfully to /tmp/tutorial.mp4 (45MB)",
+    "category": "core"
+  },
+  {
+    "input": "Save video from https://videos.example.com/demo.mp4 to /docs/demo.mp4",
+    "context": {},
+    "output": "Video downloaded successfully to /docs/demo.mp4 (120MB)",
+    "category": "core"
+  },
+  {
+    "input": "Download from an invalid URL",
+    "context": {},
+    "output": "Error: Invalid URL format.",
+    "category": "edge"
+  },
+  {
+    "input": "Download from a URL that returns 404",
+    "context": {},
+    "output": "Error: Video not found at the specified URL (HTTP 404).",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "dns_check_nerve",
+  "version": "1.0.0",
+  "description": "Look up DNS records for a domain",
+  "role": "tool",
+  "tags": [
+    "web",
+    "dns"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "dns_lookup",
+      "implementations": {
+        "python": "mcp_tools/dns_lookup/tool.py"
+      }
+    }
+  ]
+}

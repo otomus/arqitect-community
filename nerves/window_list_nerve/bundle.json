@@ -1,0 +1,25 @@
+{
+  "name": "window_list_nerve",
+  "version": "1.0.0",
+  "description": "List all open windows",
+  "role": "tool",
+  "tags": [
+    "desktop",
+    "window",
+    "list"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "window_list",
+      "implementations": {
+        "python": "mcp_tools/window_list/tool.py"
+      }
+    }
+  ]
+}

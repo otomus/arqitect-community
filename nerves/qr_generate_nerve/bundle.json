@@ -1,0 +1,24 @@
+{
+  "name": "qr_generate_nerve",
+  "version": "1.0.0",
+  "description": "Generate a QR code from content",
+  "role": "tool",
+  "tags": [
+    "visualization",
+    "qr"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "qr_code_generate",
+      "implementations": {
+        "python": "mcp_tools/qr_code_generate/tool.py"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Write 'hello world' to output.txt",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_write\",\"args\":{\"path\":\"output.txt\",\"content\":\"hello world\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Create the config directory first",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"dir_create\",\"args\":{\"path\":\"config\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Save JSON config to config/settings.json",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_write\",\"args\":{\"path\":\"config/settings.json\",\"content\":\"{\\\"key\\\":\\\"value\\\"}\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Create an empty .gitkeep file",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_write\",\"args\":{\"path\":\".gitkeep\",\"content\":\"\"}}",
+    "category": "negative"
+  }
+]

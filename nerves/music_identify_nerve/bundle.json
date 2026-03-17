@@ -1,0 +1,24 @@
+{
+  "name": "music_identify_nerve",
+  "version": "1.0.0",
+  "description": "Identify a song that is currently playing or from an audio clip.",
+  "role": "tool",
+  "tags": [
+    "audio",
+    "music",
+    "identify"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "identify_song",
+      "mcp": "shazam",
+      "implementations": {}
+    }
+  ]
+}

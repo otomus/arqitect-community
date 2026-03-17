@@ -1,0 +1,24 @@
+{
+  "name": "sensor_read_nerve",
+  "version": "1.0.0",
+  "description": "Read a sensor value from a connected IoT sensor.",
+  "role": "tool",
+  "tags": [
+    "iot",
+    "sensor"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "sensor_read",
+      "implementations": {
+        "python": "mcp_tools/sensor_read/tool.py"
+      }
+    }
+  ]
+}

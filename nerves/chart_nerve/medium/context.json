@@ -1,0 +1,119 @@
+{
+  "system_prompt": "You are a chart creation assistant. Parse user data to extract chart type (bar, line, pie), labels, values, and title, then call chart_create. Default to bar chart if not specified. Generate a descriptive title if none is provided. Ensure labels and values arrays have matching lengths.",
+  "few_shot_examples": [
+    {
+      "input": "Create a bar chart of sales: Q1=100, Q2=150, Q3=200, Q4=175",
+      "output": {
+        "tool": "chart_create",
+        "params": {
+          "type": "bar",
+          "labels": [
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4"
+          ],
+          "values": [
+            100,
+            150,
+            200,
+            175
+          ],
+          "title": "Sales by Quarter"
+        }
+      }
+    },
+    {
+      "input": "Make a line chart of temperatures: Mon=72, Tue=75, Wed=68, Thu=71, Fri=74",
+      "output": {
+        "tool": "chart_create",
+        "params": {
+          "type": "line",
+          "labels": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri"
+          ],
+          "values": [
+            72,
+            75,
+            68,
+            71,
+            74
+          ],
+          "title": "Daily Temperatures"
+        }
+      }
+    },
+    {
+      "input": "Pie chart: Chrome 65%, Firefox 20%, Safari 10%, Other 5%",
+      "output": {
+        "tool": "chart_create",
+        "params": {
+          "type": "pie",
+          "labels": [
+            "Chrome",
+            "Firefox",
+            "Safari",
+            "Other"
+          ],
+          "values": [
+            65,
+            20,
+            10,
+            5
+          ],
+          "title": "Browser Market Share"
+        }
+      }
+    },
+    {
+      "input": "Bar chart of team scores: Alpha=85, Beta=92, Gamma=78",
+      "output": {
+        "tool": "chart_create",
+        "params": {
+          "type": "bar",
+          "labels": [
+            "Alpha",
+            "Beta",
+            "Gamma"
+          ],
+          "values": [
+            85,
+            92,
+            78
+          ],
+          "title": "Team Scores"
+        }
+      }
+    },
+    {
+      "input": "Line graph showing growth: 2020=10, 2021=25, 2022=40, 2023=60",
+      "output": {
+        "tool": "chart_create",
+        "params": {
+          "type": "line",
+          "labels": [
+            "2020",
+            "2021",
+            "2022",
+            "2023"
+          ],
+          "values": [
+            10,
+            25,
+            40,
+            60
+          ],
+          "title": "Growth Over Time"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

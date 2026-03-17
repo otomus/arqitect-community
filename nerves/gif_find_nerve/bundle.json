@@ -1,0 +1,24 @@
+{
+  "name": "gif_find_nerve",
+  "version": "1.0.0",
+  "description": "Search for and find relevant GIF animations.",
+  "role": "creative",
+  "tags": [
+    "gif",
+    "search",
+    "media"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "search_gifs",
+      "mcp": "gif_search",
+      "implementations": {}
+    }
+  ]
+}

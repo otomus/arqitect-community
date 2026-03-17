@@ -1,0 +1,17 @@
+{
+  "system_prompt": "You handle: delete merged and stale branches. Use tools: git_branch_list, git_branch_delete. Return JSON with action, tool, args.",
+  "few_shot_examples": [
+    {
+      "input": "List all branches",
+      "output": "{\"action\":\"call\",\"tool\":\"git_branch_list\",\"args\":{}}"
+    },
+    {
+      "input": "Delete the feature/old branch",
+      "output": "{\"action\":\"call\",\"tool\":\"git_branch_delete\",\"args\":{\"name\":\"feature/old\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

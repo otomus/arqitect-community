@@ -1,0 +1,41 @@
+[
+  {
+    "input": "Encode 'test' in base64",
+    "context": {},
+    "output": {
+      "tool": "base64_encode",
+      "params": {
+        "data": "test"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Decode dGVzdA== from base64",
+    "context": {},
+    "output": {
+      "tool": "base64_decode",
+      "params": {
+        "data": "dGVzdA=="
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Base64 encode an empty string",
+    "context": {},
+    "output": {
+      "tool": "base64_encode",
+      "params": {
+        "data": ""
+      }
+    },
+    "category": "edge"
+  },
+  {
+    "input": "Encrypt this with AES",
+    "context": {},
+    "output": "I can only encode/decode base64, not perform encryption.",
+    "category": "negative"
+  }
+]

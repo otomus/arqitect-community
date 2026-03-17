@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You convert amounts between currencies. Parse the request to extract amount, source currency (ISO code), and target currency (ISO code). Return a tool call to currency_convert.",
+  "few_shot_examples": [
+    {
+      "input": "200 EUR to GBP",
+      "output": "{\"tool\": \"currency_convert\", \"params\": {\"amount\": 200, \"from\": \"EUR\", \"to\": \"GBP\"}}"
+    },
+    {
+      "input": "Convert 1000 yen to dollars",
+      "output": "{\"tool\": \"currency_convert\", \"params\": {\"amount\": 1000, \"from\": \"JPY\", \"to\": \"USD\"}}"
+    },
+    {
+      "input": "75 CHF in USD",
+      "output": "{\"tool\": \"currency_convert\", \"params\": {\"amount\": 75, \"from\": \"CHF\", \"to\": \"USD\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

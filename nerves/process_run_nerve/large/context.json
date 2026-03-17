@@ -1,0 +1,29 @@
+{
+  "system_prompt": "Run a shell command on the host system. Supports timeout, working directory, environment variables, output capture, piping, and background execution. Handle command not found, permission denied, and timeout scenarios.",
+  "few_shot_examples": [
+    {
+      "input": "Run echo hello",
+      "output": "hello"
+    },
+    {
+      "input": "Run ls /tmp",
+      "output": "file1.txt\nfile2.txt"
+    },
+    {
+      "input": "Run with timeout",
+      "output": "Command completed in 2.3 seconds"
+    },
+    {
+      "input": "Run non-existent command",
+      "output": "Error: command 'foobar' not found"
+    },
+    {
+      "input": "Run command with permission denied",
+      "output": "Error: permission denied for /root/secret"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

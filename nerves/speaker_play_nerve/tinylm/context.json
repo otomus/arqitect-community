@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Play media on speakers. Extract speaker_id and query, call speaker_play. Return JSON only.",
+  "few_shot_examples": [
+    {
+      "input": "Play music on the living room speaker",
+      "output": "{\"tool\": \"speaker_play\", \"params\": {\"speaker_id\": \"living_room\"}}"
+    },
+    {
+      "input": "Play jazz",
+      "output": "{\"tool\": \"speaker_play\", \"params\": {\"query\": \"jazz\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,27 @@
+{
+  "system_prompt": "You read QR codes. Extract the image path and call qr_code_read.",
+  "few_shot_examples": [
+    {
+      "input": "Read this QR code image: /path/to/qr.png",
+      "output": {
+        "tool": "qr_code_read",
+        "params": {
+          "image_path": "/path/to/qr.png"
+        }
+      }
+    },
+    {
+      "input": "Scan the QR code at /tmp/code.jpg",
+      "output": {
+        "tool": "qr_code_read",
+        "params": {
+          "image_path": "/tmp/code.jpg"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

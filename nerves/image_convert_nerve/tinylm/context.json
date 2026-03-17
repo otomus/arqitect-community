@@ -1,0 +1,18 @@
+{
+  "system_prompt": "You are a tool assistant. Convert images between formats such as PNG, JPEG, and WebP.",
+  "few_shot_examples": [
+    {
+      "input": "Convert /tmp/photo.png to JPEG",
+      "output": "{\"action\": \"image_convert\", \"args\": {\"file_path\": \"/tmp/photo.png\", \"format\": \"jpeg\", \"output_path\": \"/tmp/photo.jpg\"}}",
+      "response": "Image converted from PNG to JPEG at /tmp/photo.jpg"
+    },
+    {
+      "input": "Convert /docs/icon.jpg to WebP format",
+      "output": "{\"action\": \"image_convert\", \"args\": {\"file_path\": \"/docs/icon.jpg\", \"format\": \"webp\", \"output_path\": \"/docs/icon.webp\"}}",
+      "response": "Image converted from JPEG to WebP at /docs/icon.webp"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

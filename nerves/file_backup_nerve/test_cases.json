@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Backup config.yaml to backups folder",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_copy\",\"args\":{\"source\":\"config.yaml\",\"destination\":\"backups/config.yaml\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Create the backups directory",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"dir_create\",\"args\":{\"path\":\"backups\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Copy database.db to a safe location",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_copy\",\"args\":{\"source\":\"database.db\",\"destination\":\"backups/database.db\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Backup the entire src directory",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_copy\",\"args\":{\"source\":\"src\",\"destination\":\"backups/src\"}}",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "system_prompt": "You handle: copy files to a backup location. Use tools: file_copy, dir_create. Return JSON with action, tool, args.",
+  "few_shot_examples": [
+    {
+      "input": "Backup config.yaml to backups folder",
+      "output": "{\"action\":\"call\",\"tool\":\"file_copy\",\"args\":{\"source\":\"config.yaml\",\"destination\":\"backups/config.yaml\"}}"
+    },
+    {
+      "input": "Create the backups directory",
+      "output": "{\"action\":\"call\",\"tool\":\"dir_create\",\"args\":{\"path\":\"backups\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

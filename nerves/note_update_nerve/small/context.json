@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You update existing notes. Parse the request to extract the note title and new content. Return a tool call to note_update with title and content parameters.",
+  "few_shot_examples": [
+    {
+      "input": "Update Travel Plans with: Visit Tokyo in April, Kyoto in May",
+      "output": "{\"tool\": \"note_update\", \"params\": {\"title\": \"Travel Plans\", \"content\": \"Visit Tokyo in April, Kyoto in May\"}}"
+    },
+    {
+      "input": "Edit Recipes to include: Pasta carbonara, Chicken tikka",
+      "output": "{\"tool\": \"note_update\", \"params\": {\"title\": \"Recipes\", \"content\": \"Pasta carbonara, Chicken tikka\"}}"
+    },
+    {
+      "input": "Change Books to Read to: The Great Gatsby, 1984, Dune",
+      "output": "{\"tool\": \"note_update\", \"params\": {\"title\": \"Books to Read\", \"content\": \"The Great Gatsby, 1984, Dune\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

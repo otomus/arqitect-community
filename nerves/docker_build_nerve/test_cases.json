@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Build image from current directory",
+    "context": {},
+    "output": "Successfully built image myapp:latest",
+    "category": "core"
+  },
+  {
+    "input": "Build with custom tag",
+    "context": {},
+    "output": "Successfully built image myapp:v1.2.3",
+    "category": "core"
+  },
+  {
+    "input": "Build with missing Dockerfile",
+    "context": {},
+    "output": "Error: Dockerfile not found in specified path",
+    "category": "boundary"
+  },
+  {
+    "input": "Build with build args",
+    "context": {},
+    "output": "Successfully built image myapp:latest with 2 build arguments",
+    "category": "core"
+  },
+  {
+    "input": "Build with syntax error in Dockerfile",
+    "context": {},
+    "output": "Error: Dockerfile parse error on line 5: unknown instruction COPY_FROM",
+    "category": "edge"
+  }
+]

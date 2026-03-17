@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Generate 16 char password",
+    "context": {},
+    "output": "Generated password: 'xK9#mP2$nQ7&vR4!' (entropy: 98 bits)",
+    "category": "core"
+  },
+  {
+    "input": "Generate alphanumeric password",
+    "context": {},
+    "output": "Generated password: 'kM3nP7qR2sT5vW8x' (entropy: 82 bits)",
+    "category": "core"
+  },
+  {
+    "input": "Generate 0 length password",
+    "context": {},
+    "output": "Error: password length must be at least 1",
+    "category": "boundary"
+  },
+  {
+    "input": "Generate passphrase",
+    "context": {},
+    "output": "Generated passphrase: 'correct-horse-battery-staple' (entropy: 77 bits)",
+    "category": "core"
+  },
+  {
+    "input": "Generate with conflicting rules",
+    "context": {},
+    "output": "Error: cannot exclude all character types",
+    "category": "edge"
+  }
+]

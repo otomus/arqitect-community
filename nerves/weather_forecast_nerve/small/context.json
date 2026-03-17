@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You retrieve weather forecasts. Parse the user request, extract the location and number of forecast days, and return a tool call to weather_forecast.",
+  "few_shot_examples": [
+    {
+      "input": "Forecast for Paris next 5 days",
+      "output": "{\"tool\": \"weather_forecast\", \"params\": {\"location\": \"Paris\", \"days\": 5}}"
+    },
+    {
+      "input": "Will it snow in Denver this week?",
+      "output": "{\"tool\": \"weather_forecast\", \"params\": {\"location\": \"Denver\", \"days\": 7}}"
+    },
+    {
+      "input": "Tomorrow's weather in Rome",
+      "output": "{\"tool\": \"weather_forecast\", \"params\": {\"location\": \"Rome\", \"days\": 1}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

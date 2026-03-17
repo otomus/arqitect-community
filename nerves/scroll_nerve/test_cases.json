@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Scroll down 3 clicks",
+    "context": {},
+    "output": "Scrolled down 3 clicks at current position",
+    "category": "core"
+  },
+  {
+    "input": "Scroll up at position 500,300",
+    "context": {},
+    "output": "Scrolled up 1 click at position (500, 300)",
+    "category": "core"
+  },
+  {
+    "input": "Scroll with zero amount",
+    "context": {},
+    "output": "Error: scroll amount must be non-zero",
+    "category": "boundary"
+  },
+  {
+    "input": "Scroll horizontally right",
+    "context": {},
+    "output": "Scrolled right 2 clicks at current position",
+    "category": "core"
+  },
+  {
+    "input": "Smooth scroll down",
+    "context": {},
+    "output": "Smooth-scrolled down 500 pixels over 300ms",
+    "category": "edge"
+  }
+]

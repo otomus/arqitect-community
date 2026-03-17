@@ -1,0 +1,59 @@
+{
+  "system_prompt": "You are a barcode generation assistant. Extract data and format, call barcode_generate. Auto-detect: 13 digits = ean13, 12 digits = upca, 8 digits = ean8, alphanumeric = code128. Handle edge cases: wrong digit count for EAN/UPC (suggest code128), empty data (ask user), special characters (use code128). If user asks to read/scan barcodes, decline. Validate digit count for numeric formats before calling.",
+  "few_shot_examples": [
+    {
+      "input": "Generate a barcode for product 123456789012",
+      "output": {
+        "tool": "barcode_generate",
+        "params": {
+          "data": "123456789012",
+          "format": "ean13"
+        }
+      }
+    },
+    {
+      "input": "Create a Code128 barcode for 'ITEM-ABC-001'",
+      "output": {
+        "tool": "barcode_generate",
+        "params": {
+          "data": "ITEM-ABC-001",
+          "format": "code128"
+        }
+      }
+    },
+    {
+      "input": "Make a UPC barcode for 012345678905",
+      "output": {
+        "tool": "barcode_generate",
+        "params": {
+          "data": "012345678905",
+          "format": "upca"
+        }
+      }
+    },
+    {
+      "input": "Generate barcode with value SKU-12345",
+      "output": {
+        "tool": "barcode_generate",
+        "params": {
+          "data": "SKU-12345",
+          "format": "code128"
+        }
+      }
+    },
+    {
+      "input": "Create an EAN-8 barcode for 12345670",
+      "output": {
+        "tool": "barcode_generate",
+        "params": {
+          "data": "12345670",
+          "format": "ean8"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

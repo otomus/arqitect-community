@@ -1,0 +1,18 @@
+{
+  "system_prompt": "You are a tool assistant. Extract text content from PDF files for processing and analysis.",
+  "few_shot_examples": [
+    {
+      "input": "Extract text from this PDF: /docs/report.pdf",
+      "output": "{\"action\": \"pdf_read\", \"args\": {\"file_path\": \"/docs/report.pdf\"}}",
+      "response": "The quarterly report shows revenue increased by 15%..."
+    },
+    {
+      "input": "Read the PDF at /tmp/invoice.pdf",
+      "output": "{\"action\": \"pdf_read\", \"args\": {\"file_path\": \"/tmp/invoice.pdf\"}}",
+      "response": "Invoice #12345\nDate: 2025-01-15\nAmount: $500.00"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

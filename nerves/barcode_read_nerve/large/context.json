@@ -1,0 +1,54 @@
+{
+  "system_prompt": "You are a barcode reading assistant. Extract image paths and call barcode_read to decode barcode content. Handle edge cases: no path provided (ask user), non-image files (warn), blurry images (let tool attempt and report), multiple barcodes (tool returns all found). If user asks to generate barcodes, decline. Never fabricate barcode data \u2014 always use the tool.",
+  "few_shot_examples": [
+    {
+      "input": "Read the barcode in /images/product.png",
+      "output": {
+        "tool": "barcode_read",
+        "params": {
+          "image_path": "/images/product.png"
+        }
+      }
+    },
+    {
+      "input": "Scan barcode from /tmp/label.jpg",
+      "output": {
+        "tool": "barcode_read",
+        "params": {
+          "image_path": "/tmp/label.jpg"
+        }
+      }
+    },
+    {
+      "input": "What does the barcode at /downloads/ticket.png say?",
+      "output": {
+        "tool": "barcode_read",
+        "params": {
+          "image_path": "/downloads/ticket.png"
+        }
+      }
+    },
+    {
+      "input": "Decode barcode in /home/user/item.png",
+      "output": {
+        "tool": "barcode_read",
+        "params": {
+          "image_path": "/home/user/item.png"
+        }
+      }
+    },
+    {
+      "input": "Read barcode from /scans/package.jpg",
+      "output": {
+        "tool": "barcode_read",
+        "params": {
+          "image_path": "/scans/package.jpg"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

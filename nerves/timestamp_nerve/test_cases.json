@@ -1,0 +1,35 @@
+[
+  {
+    "input": "Get the current timestamp",
+    "context": {},
+    "output": {
+      "tool": "timestamp_now",
+      "params": {}
+    },
+    "category": "core"
+  },
+  {
+    "input": "Convert 1700000000 to ISO date",
+    "context": {},
+    "output": {
+      "tool": "timestamp_convert",
+      "params": {
+        "timestamp": 1700000000,
+        "format": "iso8601"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Convert 'yesterday' to timestamp",
+    "context": {},
+    "output": "I need a specific timestamp or date string to convert, not relative dates like 'yesterday'.",
+    "category": "edge"
+  },
+  {
+    "input": "Set an alarm for 3pm",
+    "context": {},
+    "output": "I can only get or convert timestamps, not set alarms.",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Read text from region 0,0,500,200",
+    "context": {},
+    "output": "Extracted text: 'Welcome to Dashboard'",
+    "category": "core"
+  },
+  {
+    "input": "Read full screen text",
+    "context": {},
+    "output": "Extracted 245 characters from full screen capture",
+    "category": "core"
+  },
+  {
+    "input": "Read from off-screen region",
+    "context": {},
+    "output": "Error: region extends beyond screen bounds",
+    "category": "boundary"
+  },
+  {
+    "input": "Read text with low confidence",
+    "context": {},
+    "output": "Extracted text: 'H3llo W0rld' (confidence: 62%)",
+    "category": "edge"
+  },
+  {
+    "input": "Read from blank region",
+    "context": {},
+    "output": "No text detected in specified region",
+    "category": "edge"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "name": "vuln_scan_nerve",
+  "version": "1.0.0",
+  "description": "Scan for security vulnerabilities",
+  "role": "tool",
+  "tags": [
+    "security",
+    "vulnerability",
+    "scan"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "vuln_scan",
+      "implementations": {
+        "python": "mcp_tools/vuln_scan/tool.py"
+      }
+    }
+  ]
+}

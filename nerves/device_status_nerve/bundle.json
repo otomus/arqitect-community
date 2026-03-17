@@ -1,0 +1,24 @@
+{
+  "name": "device_status_nerve",
+  "version": "1.0.0",
+  "description": "Check the health and status of a connected IoT device.",
+  "role": "tool",
+  "tags": [
+    "iot",
+    "device"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "device_status",
+      "implementations": {
+        "python": "mcp_tools/device_status/tool.py"
+      }
+    }
+  ]
+}

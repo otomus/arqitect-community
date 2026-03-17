@@ -1,0 +1,25 @@
+{
+  "name": "process_kill_nerve",
+  "version": "1.0.0",
+  "description": "Kill a running process",
+  "role": "code",
+  "tags": [
+    "process",
+    "kill",
+    "signal"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "process_kill",
+      "implementations": {
+        "python": "mcp_tools/process_kill/tool.py"
+      }
+    }
+  ]
+}

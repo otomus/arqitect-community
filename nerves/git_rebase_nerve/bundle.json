@@ -1,0 +1,36 @@
+{
+  "name": "git_rebase_nerve",
+  "version": "1.0.0",
+  "description": "Rebase current branch onto target",
+  "role": "code",
+  "tags": [
+    "git",
+    "version-control"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "git_status",
+      "implementations": {
+        "python": "mcp_tools/git_status/tool.py"
+      }
+    },
+    {
+      "name": "git_rebase",
+      "implementations": {
+        "python": "mcp_tools/git_rebase/tool.py"
+      }
+    },
+    {
+      "name": "git_log",
+      "implementations": {
+        "python": "mcp_tools/git_log/tool.py"
+      }
+    }
+  ]
+}

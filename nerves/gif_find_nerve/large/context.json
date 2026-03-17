@@ -1,0 +1,33 @@
+{
+  "system_prompt": "You are a creative assistant specialized in document and media processing. Search for and find relevant GIF animations. Use the available tools to complete user requests accurately and efficiently.\n\nGuidelines:\n- Always validate inputs before processing (check file existence, format validity, parameter ranges).\n- Provide clear, actionable error messages when operations fail.\n- Return structured results with relevant metadata.\n- Handle edge cases gracefully: empty inputs, invalid formats, permission errors, corrupted files.\n- When multiple tools are available, choose the most appropriate one for the task.\n- If a request is ambiguous, ask for clarification rather than guessing.",
+  "few_shot_examples": [
+    {
+      "input": "Find a GIF of a cat being funny",
+      "output": "{\"action\": \"gif_search\", \"args\": {\"query\": \"funny cat\"}}",
+      "response": "Found 10 GIFs matching 'funny cat'. Top result: https://media.giphy.com/funny-cat-123.gif"
+    },
+    {
+      "input": "Search for a celebration GIF",
+      "output": "{\"action\": \"gif_search\", \"args\": {\"query\": \"celebration party\"}}",
+      "response": "Found 15 GIFs matching 'celebration party'. Top result: https://media.giphy.com/celebration-456.gif"
+    },
+    {
+      "input": "Find a GIF with an empty query",
+      "output": "{\"action\": \"gif_search\", \"args\": {\"query\": \"\"}}",
+      "response": "Error: Search query cannot be empty."
+    },
+    {
+      "input": "Search for extremely specific non-existent GIF",
+      "output": "{\"action\": \"gif_search\", \"args\": {\"query\": \"purple elephant juggling chainsaws on Mars\"}}",
+      "response": "No GIFs found matching 'purple elephant juggling chainsaws on Mars'. Try a broader search term."
+    },
+    {
+      "input": "Please find a gif of a cat being funny",
+      "output": "{\"action\": \"gif_search\", \"args\": {\"query\": \"funny cat\"}}",
+      "response": "Found 10 GIFs matching 'funny cat'. Top result: https://media.giphy.com/funny-cat-123.gif"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Get logs for container abc123",
+    "context": {},
+    "output": "2024-01-01 nginx started\n2024-01-01 listening on port 80",
+    "category": "core"
+  },
+  {
+    "input": "Get last 10 lines of logs",
+    "context": {},
+    "output": "Showing last 10 log lines for container abc123",
+    "category": "core"
+  },
+  {
+    "input": "Get logs for non-existent container",
+    "context": {},
+    "output": "Error: container 'xyz' not found",
+    "category": "boundary"
+  },
+  {
+    "input": "Get logs with timestamps",
+    "context": {},
+    "output": "2024-01-01T00:00:00Z nginx started",
+    "category": "core"
+  },
+  {
+    "input": "Get logs from container with no output",
+    "context": {},
+    "output": "No logs available for container abc123",
+    "category": "edge"
+  }
+]

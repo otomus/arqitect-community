@@ -1,0 +1,23 @@
+{
+  "name": "weather_forecast_nerve",
+  "version": "1.0.0",
+  "description": "Get weather forecast for a location over upcoming days.",
+  "role": "tool",
+  "tags": [
+    "weather",
+    "tool"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "get_forecast",
+      "mcp": "weather",
+      "implementations": {}
+    }
+  ]
+}

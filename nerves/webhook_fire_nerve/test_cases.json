@@ -1,0 +1,42 @@
+[
+  {
+    "input": "Fire webhook to https://hooks.test.com/build with {\"status\":\"done\"}",
+    "context": {},
+    "output": {
+      "tool": "webhook_send",
+      "params": {
+        "url": "https://hooks.test.com/build",
+        "payload": {
+          "status": "done"
+        }
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Send POST to https://api.example.com/event with {\"type\":\"ping\"}",
+    "context": {},
+    "output": {
+      "tool": "webhook_send",
+      "params": {
+        "url": "https://api.example.com/event",
+        "payload": {
+          "type": "ping"
+        }
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Fire a webhook",
+    "context": {},
+    "output": "I need a URL and payload. Please provide both.",
+    "category": "edge"
+  },
+  {
+    "input": "Listen for incoming webhooks",
+    "context": {},
+    "output": "I can only fire outgoing webhooks, not listen for incoming ones.",
+    "category": "negative"
+  }
+]

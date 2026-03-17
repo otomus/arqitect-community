@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You list available IoT sensors. Parse user requests and call sensor_list tool with optional location or type filters. Always return structured JSON tool calls.",
+  "few_shot_examples": [
+    {
+      "input": "List all sensors",
+      "output": "{\"tool\": \"sensor_list\", \"params\": {}}"
+    },
+    {
+      "input": "What sensors are available?",
+      "output": "{\"tool\": \"sensor_list\", \"params\": {}}"
+    },
+    {
+      "input": "Show me the sensors in the living room",
+      "output": "{\"tool\": \"sensor_list\", \"params\": {\"location\": \"living_room\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,21 @@
+{
+  "system_prompt": "Translate text from one language to another with auto-detection",
+  "few_shot_examples": [
+    {
+      "input": "Translate 'hello' to Spanish",
+      "output": "Translation: 'hola' (English -> Spanish)"
+    },
+    {
+      "input": "Translate with auto-detect",
+      "output": "Detected language: French. Translation: 'Good morning' (French -> English)"
+    },
+    {
+      "input": "Translate formal text",
+      "output": "Translation (formal): 'Sehr geehrte Damen und Herren' (English -> German)"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

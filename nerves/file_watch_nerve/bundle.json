@@ -1,0 +1,24 @@
+{
+  "name": "file_watch_nerve",
+  "version": "1.0.0",
+  "description": "Monitor a path and report changes",
+  "role": "tool",
+  "tags": [
+    "file",
+    "monitoring"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "file_watch",
+      "implementations": {
+        "python": "mcp_tools/file_watch/tool.py"
+      }
+    }
+  ]
+}

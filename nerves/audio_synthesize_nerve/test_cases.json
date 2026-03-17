@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Convert this text to speech: 'Welcome to our service'",
+    "context": {},
+    "output": "Speech audio generated at /tmp/welcome.mp3 (duration: 2.1s)",
+    "category": "core"
+  },
+  {
+    "input": "Generate audio from: 'The meeting is at 3 PM'",
+    "context": {},
+    "output": "Speech audio generated at /tmp/reminder.mp3 (duration: 1.8s)",
+    "category": "core"
+  },
+  {
+    "input": "Synthesize speech from empty text",
+    "context": {},
+    "output": "Error: Cannot synthesize speech from empty text.",
+    "category": "edge"
+  },
+  {
+    "input": "Generate speech to read-only path",
+    "context": {},
+    "output": "Error: Permission denied. Cannot write to /sys/speech.mp3",
+    "category": "negative"
+  }
+]

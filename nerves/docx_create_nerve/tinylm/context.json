@@ -1,0 +1,18 @@
+{
+  "system_prompt": "You are a tool assistant. Create Microsoft Word documents from text content.",
+  "few_shot_examples": [
+    {
+      "input": "Create a Word doc with meeting minutes at /tmp/minutes.docx",
+      "output": "{\"action\": \"docx_create\", \"args\": {\"content\": \"Meeting Minutes\\nDate: 2025-03-01\\nAttendees: Alice, Bob\", \"output_path\": \"/tmp/minutes.docx\"}}",
+      "response": "Word document created successfully at /tmp/minutes.docx"
+    },
+    {
+      "input": "Generate a letter at /docs/letter.docx",
+      "output": "{\"action\": \"docx_create\", \"args\": {\"content\": \"Dear Sir/Madam,\\n\\nI am writing to...\", \"output_path\": \"/docs/letter.docx\"}}",
+      "response": "Word document created successfully at /docs/letter.docx"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

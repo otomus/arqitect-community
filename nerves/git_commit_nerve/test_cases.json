@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Commit my changes with message 'fix login bug'",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_status\",\"args\":{}}",
+    "category": "core"
+  },
+  {
+    "input": "Stage and commit all modified files",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_add\",\"args\":{\"path\":\".\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Commit only the README file",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_add\",\"args\":{\"path\":\"README.md\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Show me what changed before committing",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_diff\",\"args\":{}}",
+    "category": "negative"
+  }
+]

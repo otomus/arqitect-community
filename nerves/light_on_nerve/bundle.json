@@ -1,0 +1,23 @@
+{
+  "name": "light_on_nerve",
+  "version": "1.0.0",
+  "description": "Turn a light on in the smart home.",
+  "role": "tool",
+  "tags": [
+    "iot",
+    "light"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "set_light",
+      "mcp": "philips_hue",
+      "implementations": {}
+    }
+  ]
+}

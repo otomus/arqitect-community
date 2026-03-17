@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Clone https://github.com/user/repo",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_clone\",\"args\":{\"url\":\"https://github.com/user/repo\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Clone repo into specific directory",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_clone\",\"args\":{\"url\":\"https://github.com/user/repo\",\"directory\":\"my-repo\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Shallow clone with depth 1",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_clone\",\"args\":{\"url\":\"https://github.com/user/repo\",\"depth\":1}}",
+    "category": "edge"
+  },
+  {
+    "input": "Clone a specific branch",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_clone\",\"args\":{\"url\":\"https://github.com/user/repo\",\"branch\":\"develop\"}}",
+    "category": "negative"
+  }
+]

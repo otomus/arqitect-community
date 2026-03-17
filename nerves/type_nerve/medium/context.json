@@ -1,0 +1,29 @@
+{
+  "system_prompt": "Type text via keyboard input. Supports typing speed control, special characters, and modifier key combinations.",
+  "few_shot_examples": [
+    {
+      "input": "Type hello world",
+      "output": "Typed 'hello world' (11 characters)"
+    },
+    {
+      "input": "Type with slow speed",
+      "output": "Typed 'test' at 50ms per character"
+    },
+    {
+      "input": "Type special characters @#$",
+      "output": "Typed '@#$' (3 special characters)"
+    },
+    {
+      "input": "Type empty string",
+      "output": "Error: no text provided to type"
+    },
+    {
+      "input": "Type Unicode emoji",
+      "output": "Typed Unicode text successfully"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

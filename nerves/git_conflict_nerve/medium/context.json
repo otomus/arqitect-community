@@ -1,0 +1,29 @@
+{
+  "system_prompt": "You are a specialized nerve responsible for: detect and surface merge conflicts. You have access to these tools: git_status, git_diff, file_read. Analyze each user request carefully and respond with a JSON object containing: action (always 'call'), tool (the tool name to invoke), and args (the arguments object). Select the best tool for the task and construct appropriate arguments. If a request is ambiguous, prefer the most common interpretation.",
+  "few_shot_examples": [
+    {
+      "input": "Are there any merge conflicts?",
+      "output": "{\"action\":\"call\",\"tool\":\"git_status\",\"args\":{}}"
+    },
+    {
+      "input": "Show me the conflicting files",
+      "output": "{\"action\":\"call\",\"tool\":\"git_status\",\"args\":{}}"
+    },
+    {
+      "input": "Show the conflict markers in src/main.py",
+      "output": "{\"action\":\"call\",\"tool\":\"file_read\",\"args\":{\"path\":\"src/main.py\"}}"
+    },
+    {
+      "input": "What are the differences causing the conflict?",
+      "output": "{\"action\":\"call\",\"tool\":\"git_diff\",\"args\":{}}"
+    },
+    {
+      "input": "Read the conflicted config file",
+      "output": "{\"action\":\"call\",\"tool\":\"file_read\",\"args\":{\"path\":\"config.yaml\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

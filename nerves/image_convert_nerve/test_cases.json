@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Convert /tmp/photo.png to JPEG",
+    "context": {},
+    "output": "Image converted from PNG to JPEG at /tmp/photo.jpg",
+    "category": "core"
+  },
+  {
+    "input": "Convert /docs/icon.jpg to WebP format",
+    "context": {},
+    "output": "Image converted from JPEG to WebP at /docs/icon.webp",
+    "category": "core"
+  },
+  {
+    "input": "Convert to an unsupported format",
+    "context": {},
+    "output": "Error: Unsupported format 'bmp2000'. Supported: png, jpeg, webp, gif, tiff.",
+    "category": "edge"
+  },
+  {
+    "input": "Convert a non-existent image",
+    "context": {},
+    "output": "Error: File not found at /tmp/missing.png",
+    "category": "negative"
+  }
+]

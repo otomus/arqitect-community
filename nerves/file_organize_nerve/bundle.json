@@ -1,0 +1,36 @@
+{
+  "name": "file_organize_nerve",
+  "version": "1.0.0",
+  "description": "Move and rename files to target structure",
+  "role": "tool",
+  "tags": [
+    "file",
+    "organization"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "dir_list",
+      "implementations": {
+        "python": "mcp_tools/dir_list/tool.py"
+      }
+    },
+    {
+      "name": "file_move",
+      "implementations": {
+        "python": "mcp_tools/file_move/tool.py"
+      }
+    },
+    {
+      "name": "dir_create",
+      "implementations": {
+        "python": "mcp_tools/dir_create/tool.py"
+      }
+    }
+  ]
+}

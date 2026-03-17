@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Read sleep tracker data. Extract period and call sleep_tracker_read. Return JSON only.",
+  "few_shot_examples": [
+    {
+      "input": "How did I sleep last night?",
+      "output": "{\"tool\": \"sleep_tracker_read\", \"params\": {\"period\": \"last_night\"}}"
+    },
+    {
+      "input": "Show my sleep data",
+      "output": "{\"tool\": \"sleep_tracker_read\", \"params\": {}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Is the living room light on?",
+    "context": {},
+    "output": "{\"tool\": \"light_get\", \"params\": {\"light_id\": \"living_room\"}}",
+    "category": "core"
+  },
+  {
+    "input": "What's the bedroom light doing?",
+    "context": {},
+    "output": "{\"tool\": \"light_get\", \"params\": {\"light_id\": \"bedroom\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Check kitchen light status",
+    "context": {},
+    "output": "{\"tool\": \"light_get\", \"params\": {\"light_id\": \"kitchen\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Check light",
+    "context": {},
+    "output": "Which light would you like to check? Please specify a room or light name.",
+    "category": "boundary"
+  },
+  {
+    "input": "Turn on the light",
+    "context": {},
+    "output": "I can only check light status. Use the light on nerve to control lights.",
+    "category": "negative"
+  },
+  {
+    "input": "What's the light brightness?",
+    "context": {},
+    "output": "Which light? Please specify a room or light name.",
+    "category": "boundary"
+  }
+]

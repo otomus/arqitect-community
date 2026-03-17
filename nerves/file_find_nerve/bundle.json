@@ -1,0 +1,30 @@
+{
+  "name": "file_find_nerve",
+  "version": "1.0.0",
+  "description": "Find files matching a pattern",
+  "role": "tool",
+  "tags": [
+    "file",
+    "search"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "file_search",
+      "implementations": {
+        "python": "mcp_tools/file_search/tool.py"
+      }
+    },
+    {
+      "name": "file_grep",
+      "implementations": {
+        "python": "mcp_tools/file_grep/tool.py"
+      }
+    }
+  ]
+}

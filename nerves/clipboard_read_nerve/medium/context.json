@@ -1,0 +1,29 @@
+{
+  "system_prompt": "Read the current contents of the system clipboard. Supports text, rich text, and detecting content type.",
+  "few_shot_examples": [
+    {
+      "input": "Read clipboard",
+      "output": "Clipboard contains: 'Hello World'"
+    },
+    {
+      "input": "Read clipboard type",
+      "output": "Clipboard content type: plain text (11 characters)"
+    },
+    {
+      "input": "Read clipboard with HTML",
+      "output": "Clipboard contains HTML: '<b>Hello</b>'"
+    },
+    {
+      "input": "Read empty clipboard",
+      "output": "Clipboard is empty"
+    },
+    {
+      "input": "Read clipboard with image",
+      "output": "Clipboard contains image data (PNG, 1920x1080)"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

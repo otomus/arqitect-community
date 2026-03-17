@@ -1,0 +1,26 @@
+[
+  {
+    "input": "What song is in this audio clip /tmp/song_clip.wav?",
+    "context": {},
+    "output": "Identified: 'Bohemian Rhapsody' by Queen (1975)",
+    "category": "core"
+  },
+  {
+    "input": "Identify the music in /docs/background.mp3",
+    "context": {},
+    "output": "Identified: 'Clair de Lune' by Claude Debussy",
+    "category": "core"
+  },
+  {
+    "input": "Identify music from a silent clip",
+    "context": {},
+    "output": "No music detected in the audio clip.",
+    "category": "edge"
+  },
+  {
+    "input": "Identify music from a non-audio file",
+    "context": {},
+    "output": "Error: The file is not a valid audio format.",
+    "category": "negative"
+  }
+]

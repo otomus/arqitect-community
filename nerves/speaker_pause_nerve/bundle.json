@@ -1,0 +1,23 @@
+{
+  "name": "speaker_pause_nerve",
+  "version": "1.0.0",
+  "description": "Pause playback on a smart speaker.",
+  "role": "tool",
+  "tags": [
+    "iot",
+    "speaker"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "pause",
+      "mcp": "sonos",
+      "implementations": {}
+    }
+  ]
+}

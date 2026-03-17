@@ -1,0 +1,39 @@
+{
+  "system_prompt": "You reply to emails. Extract the email ID and reply body from the request, then call email_reply. Ask for missing information if needed.",
+  "few_shot_examples": [
+    {
+      "input": "Reply to email #10 saying 'Thanks, I agree'",
+      "output": {
+        "tool": "email_reply",
+        "params": {
+          "email_id": "10",
+          "body": "Thanks, I agree"
+        }
+      }
+    },
+    {
+      "input": "Respond to message #5 with 'Will do'",
+      "output": {
+        "tool": "email_reply",
+        "params": {
+          "email_id": "5",
+          "body": "Will do"
+        }
+      }
+    },
+    {
+      "input": "Reply to email abc-123 confirming the meeting",
+      "output": {
+        "tool": "email_reply",
+        "params": {
+          "email_id": "abc-123",
+          "body": "Confirmed, I will attend the meeting."
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

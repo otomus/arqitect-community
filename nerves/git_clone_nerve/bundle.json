@@ -1,0 +1,24 @@
+{
+  "name": "git_clone_nerve",
+  "version": "1.0.0",
+  "description": "Clone a remote repository",
+  "role": "code",
+  "tags": [
+    "git",
+    "version-control"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "git_clone",
+      "implementations": {
+        "python": "mcp_tools/git_clone/tool.py"
+      }
+    }
+  ]
+}

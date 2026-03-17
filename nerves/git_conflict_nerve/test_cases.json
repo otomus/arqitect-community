@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Are there any merge conflicts?",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_status\",\"args\":{}}",
+    "category": "core"
+  },
+  {
+    "input": "Show me the conflicting files",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_status\",\"args\":{}}",
+    "category": "core"
+  },
+  {
+    "input": "Show the conflict markers in src/main.py",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_read\",\"args\":{\"path\":\"src/main.py\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "What are the differences causing the conflict?",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_diff\",\"args\":{}}",
+    "category": "negative"
+  }
+]

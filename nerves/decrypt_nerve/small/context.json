@@ -1,0 +1,21 @@
+{
+  "system_prompt": "Decrypt encrypted text using the corresponding key and algorithm",
+  "few_shot_examples": [
+    {
+      "input": "Decrypt AES ciphertext",
+      "output": "Decrypted text: 'hello world'"
+    },
+    {
+      "input": "Decrypt with password",
+      "output": "Decrypted text using password-derived key successfully"
+    },
+    {
+      "input": "Decrypt RSA ciphertext",
+      "output": "Decrypted text using RSA private key successfully"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

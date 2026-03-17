@@ -1,0 +1,25 @@
+{
+  "name": "translate_nerve",
+  "version": "1.0.0",
+  "description": "Translate text to another language",
+  "role": "tool",
+  "tags": [
+    "translate",
+    "language",
+    "text"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "translate_text",
+      "implementations": {
+        "python": "mcp_tools/translate_text/tool.py"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Get news about AI",
+    "context": {},
+    "output": "[{\"title\":\"New AI breakthrough\",\"source\":\"TechNews\",\"date\":\"2026-03-17\"}]",
+    "category": "core"
+  },
+  {
+    "input": "Get news from last 24 hours",
+    "context": {},
+    "output": "Found 15 articles about 'climate' from the last 24 hours",
+    "category": "core"
+  },
+  {
+    "input": "Get news on nonsense topic",
+    "context": {},
+    "output": "No news articles found for 'xyzzy123nonsense'",
+    "category": "boundary"
+  },
+  {
+    "input": "Get news with source filter",
+    "context": {},
+    "output": "Found 5 articles about 'space' from Reuters and AP",
+    "category": "core"
+  },
+  {
+    "input": "Get news behind paywall",
+    "context": {},
+    "output": "Article available (summary only - full content requires subscription)",
+    "category": "edge"
+  }
+]

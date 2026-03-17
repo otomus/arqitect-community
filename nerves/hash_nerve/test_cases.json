@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Hash 'abc' with SHA-256",
+    "context": {},
+    "output": {
+      "tool": "hash_compute",
+      "params": {
+        "data": "abc",
+        "algorithm": "sha256"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "MD5 of 'hello'",
+    "context": {},
+    "output": {
+      "tool": "hash_compute",
+      "params": {
+        "data": "hello",
+        "algorithm": "md5"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Hash this",
+    "context": {},
+    "output": "I need the data to hash. Please provide the input string.",
+    "category": "edge"
+  },
+  {
+    "input": "Encrypt this message",
+    "context": {},
+    "output": "I can only compute hashes, not encrypt data. Hashing is one-way and not reversible.",
+    "category": "negative"
+  }
+]

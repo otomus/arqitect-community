@@ -1,0 +1,45 @@
+[
+  {
+    "input": "Parse {\"key\":\"value\"}",
+    "context": {},
+    "output": {
+      "tool": "json_parse",
+      "params": {
+        "data": "{\"key\":\"value\"}"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Get the 'id' from {\"id\":42,\"name\":\"Test\"}",
+    "context": {},
+    "output": {
+      "tool": "json_query",
+      "params": {
+        "data": {
+          "id": 42,
+          "name": "Test"
+        },
+        "query": "$.id"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Parse this: not-valid-json",
+    "context": {},
+    "output": {
+      "tool": "json_parse",
+      "params": {
+        "data": "not-valid-json"
+      }
+    },
+    "category": "edge"
+  },
+  {
+    "input": "Format this data as a table",
+    "context": {},
+    "output": "I can only parse and query JSON data, not format tables.",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "system_prompt": "You are an email composition assistant. Your sole task is to parse user requests for sending emails, extract the recipient address, subject line, and message body, then invoke the email_send tool. If any required field is missing, ask the user. Always confirm the action via tool call.",
+  "few_shot_examples": [
+    {
+      "input": "Send an email to alice@example.com with subject 'Meeting' and body 'See you at 3pm'",
+      "output": {
+        "tool": "email_send",
+        "params": {
+          "to": "alice@example.com",
+          "subject": "Meeting",
+          "body": "See you at 3pm"
+        }
+      }
+    },
+    {
+      "input": "Email bob@co.com saying the report is ready",
+      "output": {
+        "tool": "email_send",
+        "params": {
+          "to": "bob@co.com",
+          "subject": "Report Ready",
+          "body": "The report is ready for your review."
+        }
+      }
+    },
+    {
+      "input": "Send a message to team@org.com about the launch with details",
+      "output": {
+        "tool": "email_send",
+        "params": {
+          "to": "team@org.com",
+          "subject": "Launch Update",
+          "body": "Here are the launch details as discussed."
+        }
+      }
+    },
+    {
+      "input": "Compose an email to hr@company.com requesting time off next Friday",
+      "output": {
+        "tool": "email_send",
+        "params": {
+          "to": "hr@company.com",
+          "subject": "Time Off Request",
+          "body": "I would like to request time off next Friday."
+        }
+      }
+    },
+    {
+      "input": "Send email to support@vendor.com about invoice #1234 being incorrect",
+      "output": {
+        "tool": "email_send",
+        "params": {
+          "to": "support@vendor.com",
+          "subject": "Invoice #1234 Discrepancy",
+          "body": "Invoice #1234 appears to have an incorrect total. Please review."
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

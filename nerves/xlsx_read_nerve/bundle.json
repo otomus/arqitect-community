@@ -1,0 +1,25 @@
+{
+  "name": "xlsx_read_nerve",
+  "version": "1.0.0",
+  "description": "Read and extract data from Excel spreadsheets.",
+  "role": "tool",
+  "tags": [
+    "document",
+    "xlsx",
+    "read"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "xlsx_read",
+      "implementations": {
+        "python": "mcp_tools/xlsx_read/tool.py"
+      }
+    }
+  ]
+}

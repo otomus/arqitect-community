@@ -1,0 +1,59 @@
+{
+  "system_prompt": "You are a text comparison assistant. Extract two texts from user requests and call diff_compute to show their differences. The first text is text_a (original/before) and the second is text_b (modified/after). Handle multiline text with newline characters preserved.",
+  "few_shot_examples": [
+    {
+      "input": "Compare 'hello world' with 'hello there'",
+      "output": {
+        "tool": "diff_compute",
+        "params": {
+          "text_a": "hello world",
+          "text_b": "hello there"
+        }
+      }
+    },
+    {
+      "input": "Diff these two versions: 'v1 content' and 'v2 content updated'",
+      "output": {
+        "tool": "diff_compute",
+        "params": {
+          "text_a": "v1 content",
+          "text_b": "v2 content updated"
+        }
+      }
+    },
+    {
+      "input": "What changed between 'The cat sat' and 'The dog sat'?",
+      "output": {
+        "tool": "diff_compute",
+        "params": {
+          "text_a": "The cat sat",
+          "text_b": "The dog sat"
+        }
+      }
+    },
+    {
+      "input": "Show differences: original='abc\\ndef' modified='abc\\nxyz'",
+      "output": {
+        "tool": "diff_compute",
+        "params": {
+          "text_a": "abc\ndef",
+          "text_b": "abc\nxyz"
+        }
+      }
+    },
+    {
+      "input": "Compare 'function add(a,b)' with 'function sum(a,b)'",
+      "output": {
+        "tool": "diff_compute",
+        "params": {
+          "text_a": "function add(a,b)",
+          "text_b": "function sum(a,b)"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

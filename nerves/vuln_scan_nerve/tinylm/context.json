@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Scan vulnerabilities",
+  "few_shot_examples": [
+    {
+      "input": "Scan dependencies for vulns",
+      "output": "Found 3 vulnerabilities: 1 critical, 2 medium"
+    },
+    {
+      "input": "Scan with CVE details",
+      "output": "CVE-2024-1234: Critical - Remote code execution in libfoo < 2.1"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

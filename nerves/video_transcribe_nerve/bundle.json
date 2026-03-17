@@ -1,0 +1,30 @@
+{
+  "name": "video_transcribe_nerve",
+  "version": "1.0.0",
+  "description": "Extract text transcript from video content.",
+  "role": "tool",
+  "tags": [
+    "video",
+    "transcribe",
+    "speech"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "video_download",
+      "implementations": {
+        "python": "mcp_tools/video_download/tool.py"
+      }
+    },
+    {
+      "name": "speech_to_text",
+      "mcp": "voice",
+      "implementations": {}
+    }
+  ]
+}

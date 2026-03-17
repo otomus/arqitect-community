@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Encrypt 'hello' with AES",
+    "context": {},
+    "output": "Encrypted text (AES-256-GCM): 'a1b2c3d4....' (base64)",
+    "category": "core"
+  },
+  {
+    "input": "Encrypt with password",
+    "context": {},
+    "output": "Encrypted text using password-derived key (PBKDF2, 100000 iterations)",
+    "category": "core"
+  },
+  {
+    "input": "Encrypt empty text",
+    "context": {},
+    "output": "Error: plaintext cannot be empty",
+    "category": "boundary"
+  },
+  {
+    "input": "Encrypt with RSA public key",
+    "context": {},
+    "output": "Encrypted text (RSA-2048): 'x9y8z7...' (base64)",
+    "category": "core"
+  },
+  {
+    "input": "Encrypt very large input",
+    "context": {},
+    "output": "Encrypted 5MB of text using AES-256-GCM with chunked processing",
+    "category": "edge"
+  }
+]

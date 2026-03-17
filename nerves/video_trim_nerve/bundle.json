@@ -1,0 +1,25 @@
+{
+  "name": "video_trim_nerve",
+  "version": "1.0.0",
+  "description": "Cut a specific time segment from a video file.",
+  "role": "tool",
+  "tags": [
+    "video",
+    "trim",
+    "edit"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "video_trim",
+      "implementations": {
+        "python": "mcp_tools/video_trim/tool.py"
+      }
+    }
+  ]
+}

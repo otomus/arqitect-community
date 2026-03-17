@@ -1,0 +1,32 @@
+[
+  {
+    "input": "What's the USD to EUR exchange rate?",
+    "context": {},
+    "output": "{\"tool\": \"currency_rate\", \"params\": {\"from\": \"USD\", \"to\": \"EUR\"}}",
+    "category": "core"
+  },
+  {
+    "input": "GBP/JPY rate",
+    "context": {},
+    "output": "{\"tool\": \"currency_rate\", \"params\": {\"from\": \"GBP\", \"to\": \"JPY\"}}",
+    "category": "core"
+  },
+  {
+    "input": "How many pesos per dollar?",
+    "context": {},
+    "output": "{\"tool\": \"currency_rate\", \"params\": {\"from\": \"USD\", \"to\": \"MXN\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Exchange rate",
+    "context": {},
+    "output": "{\"error\": \"Please specify the two currencies for the exchange rate.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "Convert 100 USD to EUR",
+    "context": {},
+    "output": "{\"error\": \"I provide exchange rates. For amount conversion, use the currency convert nerve.\"}",
+    "category": "negative"
+  }
+]

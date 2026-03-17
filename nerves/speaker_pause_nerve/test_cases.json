@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Pause the music",
+    "context": {},
+    "output": "{\"tool\": \"speaker_pause\", \"params\": {}}",
+    "category": "core"
+  },
+  {
+    "input": "Pause the living room speaker",
+    "context": {},
+    "output": "{\"tool\": \"speaker_pause\", \"params\": {\"speaker_id\": \"living_room\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Stop playing",
+    "context": {},
+    "output": "{\"tool\": \"speaker_pause\", \"params\": {}}",
+    "category": "core"
+  },
+  {
+    "input": "Pause",
+    "context": {},
+    "output": "{\"tool\": \"speaker_pause\", \"params\": {}}",
+    "category": "boundary"
+  },
+  {
+    "input": "Play some music",
+    "context": {},
+    "output": "I can only pause playback. Use the speaker play nerve to play media.",
+    "category": "negative"
+  },
+  {
+    "input": "Turn up the volume",
+    "context": {},
+    "output": "I can only pause playback. Use the speaker volume nerve to adjust volume.",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "name": "web_fetch_nerve",
+  "version": "1.0.0",
+  "description": "Make an HTTP request and return response",
+  "role": "tool",
+  "tags": [
+    "web",
+    "http"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "fetch",
+      "mcp": "fetch",
+      "implementations": {}
+    },
+    {
+      "name": "http_post",
+      "implementations": {
+        "python": "mcp_tools/http_post/tool.py"
+      }
+    }
+  ]
+}

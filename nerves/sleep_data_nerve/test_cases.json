@@ -1,0 +1,38 @@
+[
+  {
+    "input": "How did I sleep last night?",
+    "context": {},
+    "output": "{\"tool\": \"sleep_tracker_read\", \"params\": {\"period\": \"last_night\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Show my sleep data",
+    "context": {},
+    "output": "{\"tool\": \"sleep_tracker_read\", \"params\": {}}",
+    "category": "core"
+  },
+  {
+    "input": "What was my sleep score?",
+    "context": {},
+    "output": "{\"tool\": \"sleep_tracker_read\", \"params\": {}}",
+    "category": "core"
+  },
+  {
+    "input": "Sleep",
+    "context": {},
+    "output": "{\"tool\": \"sleep_tracker_read\", \"params\": {}}",
+    "category": "boundary"
+  },
+  {
+    "input": "Set the thermostat for sleep",
+    "context": {},
+    "output": "I can only read sleep tracker data. Use the thermostat nerve for temperature control.",
+    "category": "negative"
+  },
+  {
+    "input": "Show my deep sleep from last week",
+    "context": {},
+    "output": "{\"tool\": \"sleep_tracker_read\", \"params\": {\"period\": \"last_week\", \"metric\": \"deep_sleep\"}}",
+    "category": "core"
+  }
+]

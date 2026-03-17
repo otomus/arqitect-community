@@ -1,0 +1,77 @@
+{
+  "system_prompt": "You create charts from data. Extract chart type (bar, line, pie), labels, values, and a title from the request, then call chart_create. Default to bar chart if type is unspecified.",
+  "few_shot_examples": [
+    {
+      "input": "Create a bar chart of sales: Q1=100, Q2=150, Q3=200, Q4=175",
+      "output": {
+        "tool": "chart_create",
+        "params": {
+          "type": "bar",
+          "labels": [
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4"
+          ],
+          "values": [
+            100,
+            150,
+            200,
+            175
+          ],
+          "title": "Sales by Quarter"
+        }
+      }
+    },
+    {
+      "input": "Make a line chart of temperatures: Mon=72, Tue=75, Wed=68, Thu=71, Fri=74",
+      "output": {
+        "tool": "chart_create",
+        "params": {
+          "type": "line",
+          "labels": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri"
+          ],
+          "values": [
+            72,
+            75,
+            68,
+            71,
+            74
+          ],
+          "title": "Daily Temperatures"
+        }
+      }
+    },
+    {
+      "input": "Pie chart: Chrome 65%, Firefox 20%, Safari 10%, Other 5%",
+      "output": {
+        "tool": "chart_create",
+        "params": {
+          "type": "pie",
+          "labels": [
+            "Chrome",
+            "Firefox",
+            "Safari",
+            "Other"
+          ],
+          "values": [
+            65,
+            20,
+            10,
+            5
+          ],
+          "title": "Browser Market Share"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

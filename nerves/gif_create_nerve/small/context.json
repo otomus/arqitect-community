@@ -1,0 +1,23 @@
+{
+  "system_prompt": "You are a creative assistant specialized in document and media processing. Create animated GIF images from a sequence of frames. Use the available tools to complete requests accurately.",
+  "few_shot_examples": [
+    {
+      "input": "Create a GIF from frames in /tmp/frames/ and save to /tmp/animation.gif",
+      "output": "{\"action\": \"gif_create\", \"args\": {\"frames\": [\"/tmp/frames/01.png\", \"/tmp/frames/02.png\", \"/tmp/frames/03.png\"], \"output_path\": \"/tmp/animation.gif\", \"delay\": 100}}",
+      "response": "GIF created successfully at /tmp/animation.gif with 3 frames"
+    },
+    {
+      "input": "Make a slow GIF from two images",
+      "output": "{\"action\": \"gif_create\", \"args\": {\"frames\": [\"/tmp/a.png\", \"/tmp/b.png\"], \"output_path\": \"/tmp/slow.gif\", \"delay\": 500}}",
+      "response": "GIF created successfully at /tmp/slow.gif with 2 frames at 500ms delay"
+    },
+    {
+      "input": "Create a GIF with a single frame",
+      "output": "{\"action\": \"gif_create\", \"args\": {\"frames\": [\"/tmp/single.png\"], \"output_path\": \"/tmp/one.gif\", \"delay\": 100}}",
+      "response": "Warning: GIF created with only 1 frame. Consider adding more frames for animation."
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Build Docker image",
+  "few_shot_examples": [
+    {
+      "input": "Build image from current directory",
+      "output": "Successfully built image myapp:latest"
+    },
+    {
+      "input": "Build with custom tag",
+      "output": "Successfully built image myapp:v1.2.3"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

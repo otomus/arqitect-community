@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Scrape the content of https://example.com",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"web_scrape\",\"args\":{\"url\":\"https://example.com\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Extract text from a blog post URL",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"web_scrape\",\"args\":{\"url\":\"https://blog.example.com/post\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Get the title and body from a news article",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"web_scrape\",\"args\":{\"url\":\"https://news.example.com/article\",\"selectors\":[\"title\",\"body\"]}}",
+    "category": "edge"
+  },
+  {
+    "input": "Scrape an invalid URL",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"web_scrape\",\"args\":{\"url\":\"not-a-url\"}}",
+    "category": "negative"
+  }
+]

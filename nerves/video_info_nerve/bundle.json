@@ -1,0 +1,25 @@
+{
+  "name": "video_info_nerve",
+  "version": "1.0.0",
+  "description": "Get metadata and technical details about a video file.",
+  "role": "tool",
+  "tags": [
+    "video",
+    "metadata",
+    "info"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "video_get_info",
+      "implementations": {
+        "python": "mcp_tools/video_get_info/tool.py"
+      }
+    }
+  ]
+}

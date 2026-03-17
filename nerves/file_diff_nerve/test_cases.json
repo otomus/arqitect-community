@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Compare config.yaml with config.yaml.bak",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"diff_compute\",\"args\":{\"file_a\":\"config.yaml\",\"file_b\":\"config.yaml.bak\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Read the original file first",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_read\",\"args\":{\"path\":\"config.yaml\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Show differences between v1 and v2 of the schema",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"diff_compute\",\"args\":{\"file_a\":\"schema_v1.json\",\"file_b\":\"schema_v2.json\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Are these two files identical?",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"diff_compute\",\"args\":{\"file_a\":\"a.txt\",\"file_b\":\"b.txt\"}}",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "system_prompt": "List upcoming calendar events. Return tool call JSON.",
+  "few_shot_examples": [
+    {
+      "input": "What's on my schedule today?",
+      "output": "{\"tool\": \"calendar_events\", \"params\": {\"period\": \"today\"}}"
+    },
+    {
+      "input": "Events next week",
+      "output": "{\"tool\": \"calendar_events\", \"params\": {\"period\": \"next_week\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

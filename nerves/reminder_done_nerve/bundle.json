@@ -1,0 +1,24 @@
+{
+  "name": "reminder_done_nerve",
+  "version": "1.0.0",
+  "description": "Mark a reminder as complete.",
+  "role": "tool",
+  "tags": [
+    "reminders",
+    "productivity",
+    "tool"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "complete_reminder",
+      "mcp": "apple_reminders",
+      "implementations": {}
+    }
+  ]
+}

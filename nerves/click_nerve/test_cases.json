@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Click at 500,300",
+    "context": {},
+    "output": "Clicked at position (500, 300) with left button",
+    "category": "core"
+  },
+  {
+    "input": "Double click at 200,150",
+    "context": {},
+    "output": "Double-clicked at position (200, 150)",
+    "category": "core"
+  },
+  {
+    "input": "Click at negative coordinates",
+    "context": {},
+    "output": "Error: coordinates (-10, 50) are out of screen bounds",
+    "category": "boundary"
+  },
+  {
+    "input": "Right click at 400,400",
+    "context": {},
+    "output": "Right-clicked at position (400, 400)",
+    "category": "core"
+  },
+  {
+    "input": "Click with shift held",
+    "context": {},
+    "output": "Shift+click at position (500, 300)",
+    "category": "edge"
+  }
+]

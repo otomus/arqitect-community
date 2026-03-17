@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Play music",
+    "context": {},
+    "output": "{\"tool\": \"speaker_play\", \"params\": {}}",
+    "category": "core"
+  },
+  {
+    "input": "Play jazz on the living room speaker",
+    "context": {},
+    "output": "{\"tool\": \"speaker_play\", \"params\": {\"speaker_id\": \"living_room\", \"query\": \"jazz\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Play Beatles",
+    "context": {},
+    "output": "{\"tool\": \"speaker_play\", \"params\": {\"query\": \"Beatles\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Play",
+    "context": {},
+    "output": "{\"tool\": \"speaker_play\", \"params\": {}}",
+    "category": "boundary"
+  },
+  {
+    "input": "Pause the music",
+    "context": {},
+    "output": "I can only play media. Use the speaker pause nerve to pause playback.",
+    "category": "negative"
+  },
+  {
+    "input": "Set volume to 50",
+    "context": {},
+    "output": "I can only play media. Use the speaker volume nerve to adjust volume.",
+    "category": "negative"
+  }
+]

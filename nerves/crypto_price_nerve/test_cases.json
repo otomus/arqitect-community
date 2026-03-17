@@ -1,0 +1,32 @@
+[
+  {
+    "input": "What's the price of Bitcoin?",
+    "context": {},
+    "output": "{\"tool\": \"crypto_price\", \"params\": {\"coin\": \"bitcoin\"}}",
+    "category": "core"
+  },
+  {
+    "input": "ETH price",
+    "context": {},
+    "output": "{\"tool\": \"crypto_price\", \"params\": {\"coin\": \"ethereum\"}}",
+    "category": "core"
+  },
+  {
+    "input": "How much is Solana worth?",
+    "context": {},
+    "output": "{\"tool\": \"crypto_price\", \"params\": {\"coin\": \"solana\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Crypto price",
+    "context": {},
+    "output": "{\"error\": \"Please specify which cryptocurrency you want the price for.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "What was Bitcoin's price in 2020?",
+    "context": {},
+    "output": "{\"error\": \"I provide current prices only, not historical data.\"}",
+    "category": "negative"
+  }
+]

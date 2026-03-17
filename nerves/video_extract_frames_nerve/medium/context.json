@@ -1,0 +1,33 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Extract individual frames from video files. Use the available tools to complete user requests accurately. Always validate inputs before processing. Provide clear error messages when operations cannot be completed. Return structured results that include relevant metadata about the operation performed.",
+  "few_shot_examples": [
+    {
+      "input": "Extract frames from /tmp/clip.mp4 every 2 seconds",
+      "output": "{\"action\": \"video_extract_frames\", \"args\": {\"file_path\": \"/tmp/clip.mp4\", \"output_dir\": \"/tmp/frames\", \"interval\": 2.0}}",
+      "response": "Extracted 15 frames from /tmp/clip.mp4 to /tmp/frames/"
+    },
+    {
+      "input": "Get frames from /docs/demo.mp4 at 1fps",
+      "output": "{\"action\": \"video_extract_frames\", \"args\": {\"file_path\": \"/docs/demo.mp4\", \"output_dir\": \"/docs/frames\", \"interval\": 1.0}}",
+      "response": "Extracted 60 frames from /docs/demo.mp4 to /docs/frames/"
+    },
+    {
+      "input": "Extract frames with 0 interval",
+      "output": "{\"action\": \"video_extract_frames\", \"args\": {\"file_path\": \"/tmp/vid.mp4\", \"output_dir\": \"/tmp/frames\", \"interval\": 0}}",
+      "response": "Error: Frame interval must be a positive number."
+    },
+    {
+      "input": "Extract frames from non-video file",
+      "output": "{\"action\": \"video_extract_frames\", \"args\": {\"file_path\": \"/tmp/data.txt\", \"output_dir\": \"/tmp/frames\", \"interval\": 1.0}}",
+      "response": "Error: The file is not a valid video format."
+    },
+    {
+      "input": "Please extract frames from /tmp/clip.mp4 every 2 seconds",
+      "output": "{\"action\": \"video_extract_frames\", \"args\": {\"file_path\": \"/tmp/clip.mp4\", \"output_dir\": \"/tmp/frames\", \"interval\": 2.0}}",
+      "response": "Extracted 15 frames from /tmp/clip.mp4 to /tmp/frames/"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

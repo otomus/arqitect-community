@@ -1,0 +1,33 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Create PDF documents from text content and structured data. Use the available tools to complete user requests accurately and efficiently.\n\nGuidelines:\n- Always validate inputs before processing (check file existence, format validity, parameter ranges).\n- Provide clear, actionable error messages when operations fail.\n- Return structured results with relevant metadata.\n- Handle edge cases gracefully: empty inputs, invalid formats, permission errors, corrupted files.\n- When multiple tools are available, choose the most appropriate one for the task.\n- If a request is ambiguous, ask for clarification rather than guessing.",
+  "few_shot_examples": [
+    {
+      "input": "Create a PDF with the text 'Meeting Notes' and save to /tmp/notes.pdf",
+      "output": "{\"action\": \"pdf_create\", \"args\": {\"content\": \"Meeting Notes\", \"output_path\": \"/tmp/notes.pdf\"}}",
+      "response": "PDF created successfully at /tmp/notes.pdf"
+    },
+    {
+      "input": "Generate a PDF report at /docs/report.pdf with quarterly results",
+      "output": "{\"action\": \"pdf_create\", \"args\": {\"content\": \"Quarterly Results\\n\\nRevenue: $1.2M\\nProfit: $300K\", \"output_path\": \"/docs/report.pdf\"}}",
+      "response": "PDF created successfully at /docs/report.pdf"
+    },
+    {
+      "input": "Create a PDF at a read-only path /sys/output.pdf",
+      "output": "{\"action\": \"pdf_create\", \"args\": {\"content\": \"Test\", \"output_path\": \"/sys/output.pdf\"}}",
+      "response": "Error: Permission denied. Cannot write to /sys/output.pdf"
+    },
+    {
+      "input": "Create a PDF with no content",
+      "output": "{\"action\": \"pdf_create\", \"args\": {\"content\": \"\", \"output_path\": \"/tmp/empty.pdf\"}}",
+      "response": "Error: Cannot create a PDF with empty content."
+    },
+    {
+      "input": "Please create a pdf with the text 'meeting notes' and save to /tmp/notes.pdf",
+      "output": "{\"action\": \"pdf_create\", \"args\": {\"content\": \"Meeting Notes\", \"output_path\": \"/tmp/notes.pdf\"}}",
+      "response": "PDF created successfully at /tmp/notes.pdf"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

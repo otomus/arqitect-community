@@ -1,0 +1,27 @@
+{
+  "system_prompt": "You generate QR codes. Extract content and call qr_code_generate.",
+  "few_shot_examples": [
+    {
+      "input": "Generate a QR code for https://example.com",
+      "output": {
+        "tool": "qr_code_generate",
+        "params": {
+          "content": "https://example.com"
+        }
+      }
+    },
+    {
+      "input": "Create QR code with text 'Hello World'",
+      "output": {
+        "tool": "qr_code_generate",
+        "params": {
+          "content": "Hello World"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

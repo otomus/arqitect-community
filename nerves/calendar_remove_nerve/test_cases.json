@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Delete the Team Standup event",
+    "context": {},
+    "output": "{\"tool\": \"calendar_delete_event\", \"params\": {\"title\": \"Team Standup\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Cancel my dentist appointment",
+    "context": {},
+    "output": "{\"tool\": \"calendar_delete_event\", \"params\": {\"title\": \"Dentist appointment\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Remove the meeting tomorrow",
+    "context": {},
+    "output": "{\"tool\": \"calendar_delete_event\", \"params\": {\"title\": \"meeting\", \"date\": \"tomorrow\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Delete event",
+    "context": {},
+    "output": "{\"error\": \"Please specify which event to delete by name or date.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "Add a meeting on Friday",
+    "context": {},
+    "output": "{\"error\": \"I delete events. To create events, use the calendar add nerve.\"}",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Lock the front door",
+    "context": {},
+    "output": "{\"tool\": \"lock_set\", \"params\": {\"lock_id\": \"front_door\", \"state\": \"locked\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Unlock the back door",
+    "context": {},
+    "output": "{\"tool\": \"lock_set\", \"params\": {\"lock_id\": \"back_door\", \"state\": \"unlocked\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Secure the garage",
+    "context": {},
+    "output": "{\"tool\": \"lock_set\", \"params\": {\"lock_id\": \"garage\", \"state\": \"locked\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Lock the door",
+    "context": {},
+    "output": "Which door would you like to lock? Please specify.",
+    "category": "boundary"
+  },
+  {
+    "input": "Is the front door locked?",
+    "context": {},
+    "output": "I can only lock or unlock doors. Use the device status nerve to check lock state.",
+    "category": "negative"
+  },
+  {
+    "input": "Lock all doors",
+    "context": {},
+    "output": "{\"tool\": \"lock_set\", \"params\": {\"lock_id\": \"all\", \"state\": \"locked\"}}",
+    "category": "core"
+  }
+]

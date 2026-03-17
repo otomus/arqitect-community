@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Search for Python async best practices",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"web_search\",\"args\":{\"query\":\"Python async best practices\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Find information about Rust ownership model",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"web_search\",\"args\":{\"query\":\"Rust ownership model explained\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Look up the latest Node.js LTS version",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"web_search\",\"args\":{\"query\":\"latest Node.js LTS version 2024\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Search for nothing",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"web_search\",\"args\":{\"query\":\"\"}}",
+    "category": "negative"
+  }
+]

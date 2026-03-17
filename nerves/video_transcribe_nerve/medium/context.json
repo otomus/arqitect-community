@@ -1,0 +1,33 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Extract text transcript from video content. Use the available tools to complete user requests accurately. Always validate inputs before processing. Provide clear error messages when operations cannot be completed. Return structured results that include relevant metadata about the operation performed.",
+  "few_shot_examples": [
+    {
+      "input": "Transcribe the video at /tmp/lecture.mp4",
+      "output": "{\"action\": \"audio_transcribe\", \"args\": {\"file_path\": \"/tmp/lecture_audio.wav\"}}",
+      "response": "Welcome to today's lecture on machine learning. We'll cover supervised learning..."
+    },
+    {
+      "input": "Get the transcript from /docs/interview.mp4",
+      "output": "{\"action\": \"audio_transcribe\", \"args\": {\"file_path\": \"/docs/interview_audio.wav\"}}",
+      "response": "Interviewer: Tell me about your experience.\nCandidate: I've worked in software for 5 years..."
+    },
+    {
+      "input": "Transcribe a video with no spoken audio",
+      "output": "{\"action\": \"audio_transcribe\", \"args\": {\"file_path\": \"/tmp/silent_audio.wav\"}}",
+      "response": "No speech detected in the audio track."
+    },
+    {
+      "input": "Transcribe a non-existent video",
+      "output": "{\"action\": \"video_download\", \"args\": {\"url\": \"/tmp/missing.mp4\", \"output_path\": \"/tmp/missing_dl.mp4\"}}",
+      "response": "Error: File not found at the specified path."
+    },
+    {
+      "input": "Please transcribe the video at /tmp/lecture.mp4",
+      "output": "{\"action\": \"audio_transcribe\", \"args\": {\"file_path\": \"/tmp/lecture_audio.wav\"}}",
+      "response": "Welcome to today's lecture on machine learning. We'll cover supervised learning..."
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

@@ -1,0 +1,24 @@
+{
+  "name": "barcode_read_nerve",
+  "version": "1.0.0",
+  "description": "Read a barcode from an image",
+  "role": "tool",
+  "tags": [
+    "visualization",
+    "barcode"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "barcode_read",
+      "implementations": {
+        "python": "mcp_tools/barcode_read/tool.py"
+      }
+    }
+  ]
+}

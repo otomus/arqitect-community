@@ -1,0 +1,29 @@
+{
+  "system_prompt": "Build a Docker image from a Dockerfile. Supports custom tags, build arguments, multi-stage builds, specifying build context, cache control, target stages, and platform specification. Handle missing Dockerfiles, syntax errors, and build failures.",
+  "few_shot_examples": [
+    {
+      "input": "Build image from current directory",
+      "output": "Successfully built image myapp:latest"
+    },
+    {
+      "input": "Build with custom tag",
+      "output": "Successfully built image myapp:v1.2.3"
+    },
+    {
+      "input": "Build with build args",
+      "output": "Successfully built image myapp:latest with 2 build arguments"
+    },
+    {
+      "input": "Build with missing Dockerfile",
+      "output": "Error: Dockerfile not found in specified path"
+    },
+    {
+      "input": "Build with syntax error in Dockerfile",
+      "output": "Error: Dockerfile parse error on line 5: unknown instruction COPY_FROM"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Scan dependencies for vulns",
+    "context": {},
+    "output": "Found 3 vulnerabilities: 1 critical, 2 medium",
+    "category": "core"
+  },
+  {
+    "input": "Scan with CVE details",
+    "context": {},
+    "output": "CVE-2024-1234: Critical - Remote code execution in libfoo < 2.1",
+    "category": "core"
+  },
+  {
+    "input": "Scan empty project",
+    "context": {},
+    "output": "No dependencies found to scan",
+    "category": "boundary"
+  },
+  {
+    "input": "Scan with remediation",
+    "context": {},
+    "output": "CVE-2024-5678: Upgrade libbar from 1.0 to 1.2 to fix",
+    "category": "core"
+  },
+  {
+    "input": "Scan with false positive",
+    "context": {},
+    "output": "Found 5 issues, 1 marked as false positive by previous audit",
+    "category": "edge"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "name": "email_read_nerve",
+  "version": "1.0.0",
+  "description": "Read a specific email by ID",
+  "role": "tool",
+  "tags": [
+    "communication",
+    "email"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "read_emails",
+      "mcp": "email",
+      "implementations": {}
+    }
+  ]
+}

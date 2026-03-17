@@ -1,0 +1,54 @@
+{
+  "system_prompt": "You format data as JSON. Use json_format to pretty-print or minify JSON data. Default to indent=2 for pretty printing, indent=0 for minification.",
+  "few_shot_examples": [
+    {
+      "input": "Format this as pretty JSON: {\"a\":1,\"b\":2}",
+      "output": {
+        "tool": "json_format",
+        "params": {
+          "data": {
+            "a": 1,
+            "b": 2
+          },
+          "indent": 2
+        }
+      }
+    },
+    {
+      "input": "Minify this JSON: { \"name\": \"test\", \"value\": 42 }",
+      "output": {
+        "tool": "json_format",
+        "params": {
+          "data": {
+            "name": "test",
+            "value": 42
+          },
+          "indent": 0
+        }
+      }
+    },
+    {
+      "input": "Pretty print {\"users\":[{\"id\":1},{\"id\":2}]}",
+      "output": {
+        "tool": "json_format",
+        "params": {
+          "data": {
+            "users": [
+              {
+                "id": 1
+              },
+              {
+                "id": 2
+              }
+            ]
+          },
+          "indent": 2
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

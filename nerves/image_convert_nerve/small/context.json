@@ -1,0 +1,23 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Convert images between formats such as PNG, JPEG, and WebP. Use the available tools to complete requests accurately.",
+  "few_shot_examples": [
+    {
+      "input": "Convert /tmp/photo.png to JPEG",
+      "output": "{\"action\": \"image_convert\", \"args\": {\"file_path\": \"/tmp/photo.png\", \"format\": \"jpeg\", \"output_path\": \"/tmp/photo.jpg\"}}",
+      "response": "Image converted from PNG to JPEG at /tmp/photo.jpg"
+    },
+    {
+      "input": "Convert /docs/icon.jpg to WebP format",
+      "output": "{\"action\": \"image_convert\", \"args\": {\"file_path\": \"/docs/icon.jpg\", \"format\": \"webp\", \"output_path\": \"/docs/icon.webp\"}}",
+      "response": "Image converted from JPEG to WebP at /docs/icon.webp"
+    },
+    {
+      "input": "Convert to an unsupported format",
+      "output": "{\"action\": \"image_convert\", \"args\": {\"file_path\": \"/tmp/img.png\", \"format\": \"bmp2000\", \"output_path\": \"/tmp/img.bmp2000\"}}",
+      "response": "Error: Unsupported format 'bmp2000'. Supported: png, jpeg, webp, gif, tiff."
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

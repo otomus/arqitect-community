@@ -1,0 +1,25 @@
+{
+  "name": "type_nerve",
+  "version": "1.0.0",
+  "description": "Type text via keyboard input",
+  "role": "tool",
+  "tags": [
+    "desktop",
+    "keyboard",
+    "type"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "keyboard_type",
+      "implementations": {
+        "python": "mcp_tools/keyboard_type/tool.py"
+      }
+    }
+  ]
+}

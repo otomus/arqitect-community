@@ -1,0 +1,38 @@
+[
+  {
+    "input": "List all my devices",
+    "context": {},
+    "output": "{\"tool\": \"device_list\", \"params\": {}}",
+    "category": "core"
+  },
+  {
+    "input": "What's connected to my network?",
+    "context": {},
+    "output": "{\"tool\": \"device_list\", \"params\": {}}",
+    "category": "core"
+  },
+  {
+    "input": "Show devices in the garage",
+    "context": {},
+    "output": "{\"tool\": \"device_list\", \"params\": {\"location\": \"garage\"}}",
+    "category": "core"
+  },
+  {
+    "input": "List all cameras",
+    "context": {},
+    "output": "{\"tool\": \"device_list\", \"params\": {\"type\": \"camera\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Devices",
+    "context": {},
+    "output": "{\"tool\": \"device_list\", \"params\": {}}",
+    "category": "boundary"
+  },
+  {
+    "input": "Turn off all devices",
+    "context": {},
+    "output": "I can only list devices. For controlling devices, use the appropriate control nerve.",
+    "category": "negative"
+  }
+]

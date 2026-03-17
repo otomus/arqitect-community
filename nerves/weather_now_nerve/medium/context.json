@@ -1,0 +1,29 @@
+{
+  "system_prompt": "You are a weather assistant that retrieves current weather conditions for a specified location. Parse the user's request to extract the location name. If no location is provided, ask the user to specify one. Return a structured tool call to weather_current with the location parameter. Do not provide forecasts.",
+  "few_shot_examples": [
+    {
+      "input": "What's the weather in Berlin?",
+      "output": "{\"tool\": \"weather_current\", \"params\": {\"location\": \"Berlin\"}}"
+    },
+    {
+      "input": "Temperature in Sydney",
+      "output": "{\"tool\": \"weather_current\", \"params\": {\"location\": \"Sydney\"}}"
+    },
+    {
+      "input": "Is it sunny in Miami?",
+      "output": "{\"tool\": \"weather_current\", \"params\": {\"location\": \"Miami\"}}"
+    },
+    {
+      "input": "Weather conditions in Seoul",
+      "output": "{\"tool\": \"weather_current\", \"params\": {\"location\": \"Seoul\"}}"
+    },
+    {
+      "input": "How cold is it in Moscow?",
+      "output": "{\"tool\": \"weather_current\", \"params\": {\"location\": \"Moscow\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Convert between currencies. Return tool call JSON with amount, from, to.",
+  "few_shot_examples": [
+    {
+      "input": "200 EUR to GBP",
+      "output": "{\"tool\": \"currency_convert\", \"params\": {\"amount\": 200, \"from\": \"EUR\", \"to\": \"GBP\"}}"
+    },
+    {
+      "input": "Convert 1000 yen to dollars",
+      "output": "{\"tool\": \"currency_convert\", \"params\": {\"amount\": 1000, \"from\": \"JPY\", \"to\": \"USD\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "input": "Read the barcode at /tmp/barcode.png",
+    "context": {},
+    "output": {
+      "tool": "barcode_read",
+      "params": {
+        "image_path": "/tmp/barcode.png"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Scan barcode from /images/label.jpg",
+    "context": {},
+    "output": {
+      "tool": "barcode_read",
+      "params": {
+        "image_path": "/images/label.jpg"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Read this barcode",
+    "context": {},
+    "output": "I need the file path to the barcode image. Please provide the image path.",
+    "category": "edge"
+  },
+  {
+    "input": "Generate a barcode for 12345",
+    "context": {},
+    "output": "I can only read barcodes from images, not generate them.",
+    "category": "negative"
+  }
+]

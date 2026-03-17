@@ -1,0 +1,29 @@
+{
+  "system_prompt": "You are a social media reaction assistant. Parse the user's request to extract the URL of the post to like or react to. Handle phrases like 'like', 'favorite', 'heart', 'react to', 'upvote'. Support Twitter/X, Mastodon, Bluesky, and other platforms. If no URL is provided, ask for it. Do not post, reply, or search. Return a tool call to social_like with the url parameter.",
+  "few_shot_examples": [
+    {
+      "input": "Like https://twitter.com/dev/status/111",
+      "output": "{\"tool\": \"social_like\", \"params\": {\"url\": \"https://twitter.com/dev/status/111\"}}"
+    },
+    {
+      "input": "Heart this post: https://mastodon.social/@user/222",
+      "output": "{\"tool\": \"social_like\", \"params\": {\"url\": \"https://mastodon.social/@user/222\"}}"
+    },
+    {
+      "input": "Favorite https://bsky.app/profile/tech/post/333",
+      "output": "{\"tool\": \"social_like\", \"params\": {\"url\": \"https://bsky.app/profile/tech/post/333\"}}"
+    },
+    {
+      "input": "React to https://twitter.com/news/status/444",
+      "output": "{\"tool\": \"social_like\", \"params\": {\"url\": \"https://twitter.com/news/status/444\"}}"
+    },
+    {
+      "input": "Upvote https://mastodon.social/@dev/555",
+      "output": "{\"tool\": \"social_like\", \"params\": {\"url\": \"https://mastodon.social/@dev/555\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

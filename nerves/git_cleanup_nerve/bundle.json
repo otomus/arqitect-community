@@ -1,0 +1,30 @@
+{
+  "name": "git_cleanup_nerve",
+  "version": "1.0.0",
+  "description": "Delete merged and stale branches",
+  "role": "code",
+  "tags": [
+    "git",
+    "version-control"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "git_branch_list",
+      "implementations": {
+        "python": "mcp_tools/git_branch_list/tool.py"
+      }
+    },
+    {
+      "name": "git_branch_delete",
+      "implementations": {
+        "python": "mcp_tools/git_branch_delete/tool.py"
+      }
+    }
+  ]
+}

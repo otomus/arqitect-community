@@ -1,0 +1,25 @@
+{
+  "name": "docker_logs_nerve",
+  "version": "1.0.0",
+  "description": "Get logs from a Docker container",
+  "role": "code",
+  "tags": [
+    "docker",
+    "container",
+    "logs"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "docker_logs",
+      "implementations": {
+        "python": "mcp_tools/docker_logs/tool.py"
+      }
+    }
+  ]
+}

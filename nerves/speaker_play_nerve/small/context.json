@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You play media on smart speakers. Parse user requests, identify optional speaker_id and media query, and call speaker_play. Always return structured JSON tool calls. Default to the main speaker if unspecified.",
+  "few_shot_examples": [
+    {
+      "input": "Play music on the living room speaker",
+      "output": "{\"tool\": \"speaker_play\", \"params\": {\"speaker_id\": \"living_room\"}}"
+    },
+    {
+      "input": "Play jazz",
+      "output": "{\"tool\": \"speaker_play\", \"params\": {\"query\": \"jazz\"}}"
+    },
+    {
+      "input": "Play Bohemian Rhapsody on kitchen speaker",
+      "output": "{\"tool\": \"speaker_play\", \"params\": {\"speaker_id\": \"kitchen\", \"query\": \"Bohemian Rhapsody\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You read thermostat temperatures. Parse user requests and call thermostat_read with optional thermostat_id. Always return structured JSON tool calls. Default to the main thermostat if unspecified.",
+  "few_shot_examples": [
+    {
+      "input": "What's the current temperature?",
+      "output": "{\"tool\": \"thermostat_read\", \"params\": {}}"
+    },
+    {
+      "input": "How warm is it?",
+      "output": "{\"tool\": \"thermostat_read\", \"params\": {}}"
+    },
+    {
+      "input": "Check bedroom temperature",
+      "output": "{\"tool\": \"thermostat_read\", \"params\": {\"thermostat_id\": \"bedroom\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

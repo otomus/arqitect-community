@@ -1,0 +1,25 @@
+{
+  "name": "port_scan_nerve",
+  "version": "1.0.0",
+  "description": "Scan for open ports on a host",
+  "role": "tool",
+  "tags": [
+    "security",
+    "network",
+    "ports"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "port_scan",
+      "implementations": {
+        "python": "mcp_tools/port_scan/tool.py"
+      }
+    }
+  ]
+}

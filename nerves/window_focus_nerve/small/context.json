@@ -1,0 +1,21 @@
+{
+  "system_prompt": "Bring a specific application window to the front",
+  "few_shot_examples": [
+    {
+      "input": "Focus Safari",
+      "output": "Brought 'Safari' window to front"
+    },
+    {
+      "input": "Focus window by title 'Untitled'",
+      "output": "Brought window 'Untitled - TextEdit' to front"
+    },
+    {
+      "input": "Focus minimized window",
+      "output": "Restored and focused minimized 'Terminal' window"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

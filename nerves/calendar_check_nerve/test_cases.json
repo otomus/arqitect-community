@@ -1,0 +1,32 @@
+[
+  {
+    "input": "What's on my calendar today?",
+    "context": {},
+    "output": "{\"tool\": \"calendar_events\", \"params\": {\"period\": \"today\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Show my meetings this week",
+    "context": {},
+    "output": "{\"tool\": \"calendar_events\", \"params\": {\"period\": \"this_week\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Any events tomorrow?",
+    "context": {},
+    "output": "{\"tool\": \"calendar_events\", \"params\": {\"period\": \"tomorrow\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Calendar",
+    "context": {},
+    "output": "{\"tool\": \"calendar_events\", \"params\": {\"period\": \"today\"}}",
+    "category": "boundary"
+  },
+  {
+    "input": "Create a meeting for Monday",
+    "context": {},
+    "output": "{\"error\": \"I list events. To create events, use the calendar add nerve.\"}",
+    "category": "negative"
+  }
+]

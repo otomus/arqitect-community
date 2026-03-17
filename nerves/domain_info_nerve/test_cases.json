@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Get WHOIS info for example.com",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"whois_lookup\",\"args\":{\"domain\":\"example.com\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Who owns google.com?",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"whois_lookup\",\"args\":{\"domain\":\"google.com\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Check domain expiration for mysite.org",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"whois_lookup\",\"args\":{\"domain\":\"mysite.org\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "WHOIS for an invalid domain",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"whois_lookup\",\"args\":{\"domain\":\"not a domain\"}}",
+    "category": "negative"
+  }
+]

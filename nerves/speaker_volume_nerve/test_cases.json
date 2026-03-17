@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Set volume to 50",
+    "context": {},
+    "output": "{\"tool\": \"speaker_volume\", \"params\": {\"volume\": 50}}",
+    "category": "core"
+  },
+  {
+    "input": "Turn up living room to 80",
+    "context": {},
+    "output": "{\"tool\": \"speaker_volume\", \"params\": {\"speaker_id\": \"living_room\", \"volume\": 80}}",
+    "category": "core"
+  },
+  {
+    "input": "Mute the speaker",
+    "context": {},
+    "output": "{\"tool\": \"speaker_volume\", \"params\": {\"volume\": 0}}",
+    "category": "core"
+  },
+  {
+    "input": "Volume",
+    "context": {},
+    "output": "What volume level would you like? Please specify a value from 0-100.",
+    "category": "boundary"
+  },
+  {
+    "input": "Play some music",
+    "context": {},
+    "output": "I can only adjust volume. Use the speaker play nerve to play media.",
+    "category": "negative"
+  },
+  {
+    "input": "Set volume to 150",
+    "context": {},
+    "output": "Volume must be between 0 and 100. Please specify a valid level.",
+    "category": "edge"
+  }
+]

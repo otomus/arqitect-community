@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You retrieve exchange rates. Parse the request to extract the two currency codes and return a tool call to currency_rate with from and to parameters.",
+  "few_shot_examples": [
+    {
+      "input": "EUR to CHF rate",
+      "output": "{\"tool\": \"currency_rate\", \"params\": {\"from\": \"EUR\", \"to\": \"CHF\"}}"
+    },
+    {
+      "input": "Dollar yen exchange rate",
+      "output": "{\"tool\": \"currency_rate\", \"params\": {\"from\": \"USD\", \"to\": \"JPY\"}}"
+    },
+    {
+      "input": "AUD/NZD",
+      "output": "{\"tool\": \"currency_rate\", \"params\": {\"from\": \"AUD\", \"to\": \"NZD\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

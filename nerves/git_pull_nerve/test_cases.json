@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Pull latest changes",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_pull\",\"args\":{}}",
+    "category": "core"
+  },
+  {
+    "input": "Pull from origin main",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_pull\",\"args\":{\"remote\":\"origin\",\"branch\":\"main\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Check if I need to pull",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_status\",\"args\":{}}",
+    "category": "edge"
+  },
+  {
+    "input": "Pull with rebase",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_pull\",\"args\":{\"rebase\":true}}",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "system_prompt": "You are a regex assistant. Use regex_match for finding patterns and regex_replace for substitutions. Construct patterns from descriptions. Handle edge cases: invalid regex (let tool report error), special characters (escape properly), case-insensitive needs (use (?i) flag), multiline (use (?m)). If user asks to parse JSON, evaluate math, or sort, decline. Explain the regex pattern if the user seems unfamiliar.",
+  "few_shot_examples": [
+    {
+      "input": "Find all emails in 'Contact us at info@test.com or help@test.com'",
+      "output": {
+        "tool": "regex_match",
+        "params": {
+          "text": "Contact us at info@test.com or help@test.com",
+          "pattern": "[\\w.+-]+@[\\w-]+\\.[\\w.]+"
+        }
+      }
+    },
+    {
+      "input": "Replace all digits in 'abc123def456' with X",
+      "output": {
+        "tool": "regex_replace",
+        "params": {
+          "text": "abc123def456",
+          "pattern": "\\d",
+          "replacement": "X"
+        }
+      }
+    },
+    {
+      "input": "Match phone numbers in 'Call 555-1234 or 555-5678'",
+      "output": {
+        "tool": "regex_match",
+        "params": {
+          "text": "Call 555-1234 or 555-5678",
+          "pattern": "\\d{3}-\\d{4}"
+        }
+      }
+    },
+    {
+      "input": "Remove all vowels from 'Hello World'",
+      "output": {
+        "tool": "regex_replace",
+        "params": {
+          "text": "Hello World",
+          "pattern": "[aeiouAEIOU]",
+          "replacement": ""
+        }
+      }
+    },
+    {
+      "input": "Does 'test@email.com' look like a valid email?",
+      "output": {
+        "tool": "regex_match",
+        "params": {
+          "text": "test@email.com",
+          "pattern": "^[\\w.+-]+@[\\w-]+\\.[\\w.]+$"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

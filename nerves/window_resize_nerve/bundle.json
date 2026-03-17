@@ -1,0 +1,25 @@
+{
+  "name": "window_resize_nerve",
+  "version": "1.0.0",
+  "description": "Resize an application window",
+  "role": "tool",
+  "tags": [
+    "desktop",
+    "window",
+    "resize"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "window_resize",
+      "implementations": {
+        "python": "mcp_tools/window_resize/tool.py"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "cert_check_nerve",
+  "version": "1.0.0",
+  "description": "Check SSL certificate status",
+  "role": "tool",
+  "tags": [
+    "security",
+    "ssl",
+    "certificate"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "cert_check",
+      "implementations": {
+        "python": "mcp_tools/cert_check/tool.py"
+      }
+    }
+  ]
+}

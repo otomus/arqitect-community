@@ -1,0 +1,30 @@
+{
+  "name": "file_diff_nerve",
+  "version": "1.0.0",
+  "description": "Compare two files",
+  "role": "tool",
+  "tags": [
+    "file",
+    "comparison"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "file_read",
+      "implementations": {
+        "python": "mcp_tools/file_read/tool.py"
+      }
+    },
+    {
+      "name": "diff_compute",
+      "implementations": {
+        "python": "mcp_tools/diff_compute/tool.py"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "input": "AAPL stock price over the last month",
+    "context": {},
+    "output": "{\"tool\": \"stock_history\", \"params\": {\"symbol\": \"AAPL\", \"period\": \"1mo\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Tesla stock history for the past year",
+    "context": {},
+    "output": "{\"tool\": \"stock_history\", \"params\": {\"symbol\": \"TSLA\", \"period\": \"1y\"}}",
+    "category": "core"
+  },
+  {
+    "input": "MSFT last 5 days",
+    "context": {},
+    "output": "{\"tool\": \"stock_history\", \"params\": {\"symbol\": \"MSFT\", \"period\": \"5d\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Historical stock data",
+    "context": {},
+    "output": "{\"error\": \"Please specify a ticker symbol and time period.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "What's AAPL trading at right now?",
+    "context": {},
+    "output": "{\"error\": \"I provide historical data. For current prices, use the stock quote nerve.\"}",
+    "category": "negative"
+  }
+]

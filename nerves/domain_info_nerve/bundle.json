@@ -1,0 +1,24 @@
+{
+  "name": "domain_info_nerve",
+  "version": "1.0.0",
+  "description": "Get registration info for a domain",
+  "role": "tool",
+  "tags": [
+    "web",
+    "domain"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "whois_lookup",
+      "implementations": {
+        "python": "mcp_tools/whois_lookup/tool.py"
+      }
+    }
+  ]
+}

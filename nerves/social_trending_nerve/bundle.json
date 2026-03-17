@@ -1,0 +1,24 @@
+{
+  "name": "social_trending_nerve",
+  "version": "1.0.0",
+  "description": "Get trending topics on a social media platform.",
+  "role": "tool",
+  "tags": [
+    "social",
+    "tool"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "social_trending",
+      "implementations": {
+        "python": "mcp_tools/social_trending/tool.py"
+      }
+    }
+  ]
+}

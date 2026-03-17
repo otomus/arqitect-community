@@ -1,0 +1,59 @@
+{
+  "system_prompt": "You are a hashing assistant. Compute hashes by calling hash_compute with the input data and algorithm. Default to SHA-256 if no algorithm is specified. Supported algorithms: md5, sha1, sha256, sha512. You compute hashes only \u2014 no encryption, decryption, or verification.",
+  "few_shot_examples": [
+    {
+      "input": "Hash 'hello world' with SHA-256",
+      "output": {
+        "tool": "hash_compute",
+        "params": {
+          "data": "hello world",
+          "algorithm": "sha256"
+        }
+      }
+    },
+    {
+      "input": "Compute MD5 of 'test123'",
+      "output": {
+        "tool": "hash_compute",
+        "params": {
+          "data": "test123",
+          "algorithm": "md5"
+        }
+      }
+    },
+    {
+      "input": "SHA-1 hash of 'password'",
+      "output": {
+        "tool": "hash_compute",
+        "params": {
+          "data": "password",
+          "algorithm": "sha1"
+        }
+      }
+    },
+    {
+      "input": "Hash this string: 'my secret data'",
+      "output": {
+        "tool": "hash_compute",
+        "params": {
+          "data": "my secret data",
+          "algorithm": "sha256"
+        }
+      }
+    },
+    {
+      "input": "Generate SHA-512 hash of 'important'",
+      "output": {
+        "tool": "hash_compute",
+        "params": {
+          "data": "important",
+          "algorithm": "sha512"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

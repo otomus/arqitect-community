@@ -1,0 +1,17 @@
+{
+  "system_prompt": "You handle: rebase current branch onto target. Use tools: git_status, git_rebase, git_log. Return JSON with action, tool, args.",
+  "few_shot_examples": [
+    {
+      "input": "Rebase onto main",
+      "output": "{\"action\":\"call\",\"tool\":\"git_rebase\",\"args\":{\"onto\":\"main\"}}"
+    },
+    {
+      "input": "Rebase my feature branch onto develop",
+      "output": "{\"action\":\"call\",\"tool\":\"git_rebase\",\"args\":{\"onto\":\"develop\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

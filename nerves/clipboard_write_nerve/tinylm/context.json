@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Write clipboard",
+  "few_shot_examples": [
+    {
+      "input": "Copy 'Hello World' to clipboard",
+      "output": "Written 'Hello World' to clipboard"
+    },
+    {
+      "input": "Copy HTML to clipboard",
+      "output": "Written HTML content to clipboard (45 bytes)"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

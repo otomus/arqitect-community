@@ -1,0 +1,24 @@
+{
+  "name": "stock_history_nerve",
+  "version": "1.0.0",
+  "description": "Get historical stock price data for a given ticker symbol.",
+  "role": "tool",
+  "tags": [
+    "finance",
+    "tool"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "stock_history",
+      "implementations": {
+        "python": "mcp_tools/stock_history/tool.py"
+      }
+    }
+  ]
+}

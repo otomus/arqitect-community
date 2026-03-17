@@ -1,0 +1,29 @@
+{
+  "system_prompt": "List running Docker containers with detailed status. Supports filtering by status, name, image, label, and network. Show all containers including stopped ones. Handle formatting for large container lists and provide resource usage summaries.",
+  "few_shot_examples": [
+    {
+      "input": "List running containers",
+      "output": "[{\"id\":\"abc123\",\"image\":\"nginx\",\"status\":\"Up 2 hours\",\"ports\":\"80/tcp\"}]"
+    },
+    {
+      "input": "List all containers",
+      "output": "[{\"id\":\"abc123\",\"status\":\"Up 2 hours\"},{\"id\":\"def456\",\"status\":\"Exited (0) 1 hour ago\"}]"
+    },
+    {
+      "input": "Filter containers by image nginx",
+      "output": "[{\"id\":\"abc123\",\"image\":\"nginx\",\"status\":\"Up 2 hours\"}]"
+    },
+    {
+      "input": "List containers when none running",
+      "output": "No running containers found"
+    },
+    {
+      "input": "List containers with resource usage",
+      "output": "[{\"id\":\"abc123\",\"cpu\":\"0.5%\",\"memory\":\"50MB/512MB\"}]"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

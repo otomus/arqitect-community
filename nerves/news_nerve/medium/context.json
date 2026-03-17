@@ -1,0 +1,29 @@
+{
+  "system_prompt": "Fetch latest news on a topic. Supports topic filtering, source selection, date ranges, language preference, and result limiting.",
+  "few_shot_examples": [
+    {
+      "input": "Get news about AI",
+      "output": "[{\"title\":\"New AI breakthrough\",\"source\":\"TechNews\",\"date\":\"2026-03-17\"}]"
+    },
+    {
+      "input": "Get news from last 24 hours",
+      "output": "Found 15 articles about 'climate' from the last 24 hours"
+    },
+    {
+      "input": "Get news with source filter",
+      "output": "Found 5 articles about 'space' from Reuters and AP"
+    },
+    {
+      "input": "Get news on nonsense topic",
+      "output": "No news articles found for 'xyzzy123nonsense'"
+    },
+    {
+      "input": "Get news behind paywall",
+      "output": "Article available (summary only - full content requires subscription)"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

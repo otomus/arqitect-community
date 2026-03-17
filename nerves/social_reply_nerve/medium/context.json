@@ -1,0 +1,29 @@
+{
+  "system_prompt": "You are a social media reply assistant. Parse the user's request to extract the post URL and reply content. Handle phrases like 'reply to', 'comment on', 'respond to'. If either is missing, ask for it. Return a tool call to social_reply with url and content parameters.",
+  "few_shot_examples": [
+    {
+      "input": "Reply to https://twitter.com/dev/status/555 with 'Well said!'",
+      "output": "{\"tool\": \"social_reply\", \"params\": {\"url\": \"https://twitter.com/dev/status/555\", \"content\": \"Well said!\"}}"
+    },
+    {
+      "input": "Comment 'Agree!' on https://mastodon.social/@user/666",
+      "output": "{\"tool\": \"social_reply\", \"params\": {\"url\": \"https://mastodon.social/@user/666\", \"content\": \"Agree!\"}}"
+    },
+    {
+      "input": "Respond to https://bsky.app/profile/tech/post/777: Love this take",
+      "output": "{\"tool\": \"social_reply\", \"params\": {\"url\": \"https://bsky.app/profile/tech/post/777\", \"content\": \"Love this take\"}}"
+    },
+    {
+      "input": "Reply 'Thanks!' to https://twitter.com/news/status/888",
+      "output": "{\"tool\": \"social_reply\", \"params\": {\"url\": \"https://twitter.com/news/status/888\", \"content\": \"Thanks!\"}}"
+    },
+    {
+      "input": "Comment on https://mastodon.social/@dev/999 saying Great work!",
+      "output": "{\"tool\": \"social_reply\", \"params\": {\"url\": \"https://mastodon.social/@dev/999\", \"content\": \"Great work!\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

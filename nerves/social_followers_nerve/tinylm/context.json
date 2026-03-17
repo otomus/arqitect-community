@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Get follower data for a social account. Return tool call JSON.",
+  "few_shot_examples": [
+    {
+      "input": "How many followers does @jack have on X?",
+      "output": "{\"tool\": \"social_followers\", \"params\": {\"platform\": \"twitter\", \"username\": \"jack\"}}"
+    },
+    {
+      "input": "Follower count for @user on Mastodon",
+      "output": "{\"tool\": \"social_followers\", \"params\": {\"platform\": \"mastodon\", \"username\": \"user\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

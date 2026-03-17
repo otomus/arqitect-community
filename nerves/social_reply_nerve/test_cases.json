@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Reply to https://twitter.com/user/status/123 with 'Great point!'",
+    "context": {},
+    "output": "{\"tool\": \"social_reply\", \"params\": {\"url\": \"https://twitter.com/user/status/123\", \"content\": \"Great point!\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Comment on this Mastodon post https://mastodon.social/@dev/456: Thanks for sharing!",
+    "context": {},
+    "output": "{\"tool\": \"social_reply\", \"params\": {\"url\": \"https://mastodon.social/@dev/456\", \"content\": \"Thanks for sharing!\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Respond to https://bsky.app/profile/user/post/789 saying 'Interesting thread'",
+    "context": {},
+    "output": "{\"tool\": \"social_reply\", \"params\": {\"url\": \"https://bsky.app/profile/user/post/789\", \"content\": \"Interesting thread\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Reply to a post",
+    "context": {},
+    "output": "{\"error\": \"Please provide the post URL and your reply content.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "Search for posts about AI",
+    "context": {},
+    "output": "{\"error\": \"I reply to posts. To search, use the social search nerve.\"}",
+    "category": "negative"
+  }
+]

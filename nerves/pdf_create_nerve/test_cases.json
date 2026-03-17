@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Create a PDF with the text 'Meeting Notes' and save to /tmp/notes.pdf",
+    "context": {},
+    "output": "PDF created successfully at /tmp/notes.pdf",
+    "category": "core"
+  },
+  {
+    "input": "Generate a PDF report at /docs/report.pdf with quarterly results",
+    "context": {},
+    "output": "PDF created successfully at /docs/report.pdf",
+    "category": "core"
+  },
+  {
+    "input": "Create a PDF at a read-only path /sys/output.pdf",
+    "context": {},
+    "output": "Error: Permission denied. Cannot write to /sys/output.pdf",
+    "category": "edge"
+  },
+  {
+    "input": "Create a PDF with no content",
+    "context": {},
+    "output": "Error: Cannot create a PDF with empty content.",
+    "category": "negative"
+  }
+]

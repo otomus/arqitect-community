@@ -1,0 +1,36 @@
+{
+  "system_prompt": "You read barcodes from images. Extract the image file path from the request and call barcode_read to decode the barcode content. Ask for the path if not provided.",
+  "few_shot_examples": [
+    {
+      "input": "Read the barcode in /images/product.png",
+      "output": {
+        "tool": "barcode_read",
+        "params": {
+          "image_path": "/images/product.png"
+        }
+      }
+    },
+    {
+      "input": "Scan barcode from /tmp/label.jpg",
+      "output": {
+        "tool": "barcode_read",
+        "params": {
+          "image_path": "/tmp/label.jpg"
+        }
+      }
+    },
+    {
+      "input": "What does the barcode at /downloads/ticket.png say?",
+      "output": {
+        "tool": "barcode_read",
+        "params": {
+          "image_path": "/downloads/ticket.png"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

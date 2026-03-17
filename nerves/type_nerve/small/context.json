@@ -1,0 +1,21 @@
+{
+  "system_prompt": "Type text via keyboard with configurable speed and modifiers",
+  "few_shot_examples": [
+    {
+      "input": "Type hello world",
+      "output": "Typed 'hello world' (11 characters)"
+    },
+    {
+      "input": "Type with slow speed",
+      "output": "Typed 'test' at 50ms per character"
+    },
+    {
+      "input": "Type special characters @#$",
+      "output": "Typed '@#$' (3 special characters)"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

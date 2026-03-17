@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Create a new note. Return tool call JSON with title and content.",
+  "few_shot_examples": [
+    {
+      "input": "Create note: Travel Plans - Visit Tokyo in April",
+      "output": "{\"tool\": \"note_create\", \"params\": {\"title\": \"Travel Plans\", \"content\": \"Visit Tokyo in April\"}}"
+    },
+    {
+      "input": "New note titled Recipes with content: Pasta carbonara recipe",
+      "output": "{\"tool\": \"note_create\", \"params\": {\"title\": \"Recipes\", \"content\": \"Pasta carbonara recipe\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

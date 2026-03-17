@@ -1,0 +1,23 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Export structured data to CSV format files. Use the available tools to complete requests accurately.",
+  "few_shot_examples": [
+    {
+      "input": "Export this data to CSV at /tmp/report.csv: Name, Score - Alice, 95 - Bob, 87",
+      "output": "{\"action\": \"csv_write\", \"args\": {\"data\": [[\"Name\", \"Score\"], [\"Alice\", \"95\"], [\"Bob\", \"87\"]], \"output_path\": \"/tmp/report.csv\"}}",
+      "response": "CSV exported successfully at /tmp/report.csv with 2 data rows"
+    },
+    {
+      "input": "Save user list to /docs/users.csv",
+      "output": "{\"action\": \"csv_write\", \"args\": {\"data\": [[\"id\", \"name\", \"email\"], [\"1\", \"Alice\", \"alice@example.com\"]], \"output_path\": \"/docs/users.csv\"}}",
+      "response": "CSV exported successfully at /docs/users.csv with 1 data row"
+    },
+    {
+      "input": "Export empty data to CSV",
+      "output": "{\"action\": \"csv_write\", \"args\": {\"data\": [], \"output_path\": \"/tmp/empty.csv\"}}",
+      "response": "Error: Cannot export empty data to CSV."
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

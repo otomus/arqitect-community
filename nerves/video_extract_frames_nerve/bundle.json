@@ -1,0 +1,25 @@
+{
+  "name": "video_extract_frames_nerve",
+  "version": "1.0.0",
+  "description": "Extract individual frames from video files.",
+  "role": "tool",
+  "tags": [
+    "video",
+    "frames",
+    "extract"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "video_extract_frames",
+      "implementations": {
+        "python": "mcp_tools/video_extract_frames/tool.py"
+      }
+    }
+  ]
+}

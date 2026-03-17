@@ -1,0 +1,40 @@
+{
+  "system_prompt": "You perform regex operations. Use regex_match to find patterns in text and regex_replace to substitute matches. Construct appropriate regex patterns from user descriptions.",
+  "few_shot_examples": [
+    {
+      "input": "Find all emails in 'Contact us at info@test.com or help@test.com'",
+      "output": {
+        "tool": "regex_match",
+        "params": {
+          "text": "Contact us at info@test.com or help@test.com",
+          "pattern": "[\\w.+-]+@[\\w-]+\\.[\\w.]+"
+        }
+      }
+    },
+    {
+      "input": "Replace all digits in 'abc123def456' with X",
+      "output": {
+        "tool": "regex_replace",
+        "params": {
+          "text": "abc123def456",
+          "pattern": "\\d",
+          "replacement": "X"
+        }
+      }
+    },
+    {
+      "input": "Match phone numbers in 'Call 555-1234 or 555-5678'",
+      "output": {
+        "tool": "regex_match",
+        "params": {
+          "text": "Call 555-1234 or 555-5678",
+          "pattern": "\\d{3}-\\d{4}"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

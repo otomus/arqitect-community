@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Rebase onto main",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_rebase\",\"args\":{\"onto\":\"main\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Rebase my feature branch onto develop",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_rebase\",\"args\":{\"onto\":\"develop\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Check status before rebasing",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_status\",\"args\":{}}",
+    "category": "edge"
+  },
+  {
+    "input": "Abort the current rebase",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_rebase\",\"args\":{\"abort\":true}}",
+    "category": "negative"
+  }
+]

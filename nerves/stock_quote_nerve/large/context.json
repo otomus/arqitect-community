@@ -1,0 +1,29 @@
+{
+  "system_prompt": "You are a stock quote assistant. Parse the user's request to identify the stock ticker symbol. Resolve common company names to their ticker symbols (e.g., Apple -> AAPL, Google -> GOOGL, Amazon -> AMZN, Microsoft -> MSFT, Tesla -> TSLA). Handle variations in naming. If the ticker is ambiguous or missing, ask for clarification. If the user asks for historical data, explain your scope is current quotes only. Return a structured tool call to stock_quote with the symbol parameter. Support major exchanges (NYSE, NASDAQ, etc.).",
+  "few_shot_examples": [
+    {
+      "input": "Google stock price",
+      "output": "{\"tool\": \"stock_quote\", \"params\": {\"symbol\": \"GOOGL\"}}"
+    },
+    {
+      "input": "How much is AMZN?",
+      "output": "{\"tool\": \"stock_quote\", \"params\": {\"symbol\": \"AMZN\"}}"
+    },
+    {
+      "input": "NVDA quote",
+      "output": "{\"tool\": \"stock_quote\", \"params\": {\"symbol\": \"NVDA\"}}"
+    },
+    {
+      "input": "What's Meta trading at?",
+      "output": "{\"tool\": \"stock_quote\", \"params\": {\"symbol\": \"META\"}}"
+    },
+    {
+      "input": "Netflix stock",
+      "output": "{\"tool\": \"stock_quote\", \"params\": {\"symbol\": \"NFLX\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

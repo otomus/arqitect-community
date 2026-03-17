@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Scan localhost common ports",
+    "context": {},
+    "output": "Open ports on localhost: 22 (SSH), 80 (HTTP), 443 (HTTPS)",
+    "category": "core"
+  },
+  {
+    "input": "Scan ports 8000-9000",
+    "context": {},
+    "output": "Open ports on target: 8080 (HTTP-ALT), 8443 (HTTPS-ALT)",
+    "category": "core"
+  },
+  {
+    "input": "Scan unreachable host",
+    "context": {},
+    "output": "Error: host 10.0.0.999 is unreachable",
+    "category": "boundary"
+  },
+  {
+    "input": "Scan with service detection",
+    "context": {},
+    "output": "Port 3306: MySQL 8.0.32 detected",
+    "category": "core"
+  },
+  {
+    "input": "Scan firewalled port",
+    "context": {},
+    "output": "Port 22: filtered (no response, possibly firewalled)",
+    "category": "edge"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "name": "timestamp_nerve",
+  "version": "1.0.0",
+  "description": "Get or convert timestamps",
+  "role": "tool",
+  "tags": [
+    "data",
+    "time"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "get_current_time",
+      "mcp": "chrono",
+      "implementations": {}
+    },
+    {
+      "name": "convert_timezone",
+      "mcp": "chrono",
+      "implementations": {}
+    }
+  ]
+}

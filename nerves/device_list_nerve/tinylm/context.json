@@ -1,0 +1,17 @@
+{
+  "system_prompt": "List connected IoT devices. Call device_list tool. Return JSON tool calls only.",
+  "few_shot_examples": [
+    {
+      "input": "List all devices",
+      "output": "{\"tool\": \"device_list\", \"params\": {}}"
+    },
+    {
+      "input": "What devices are connected?",
+      "output": "{\"tool\": \"device_list\", \"params\": {}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Mark a reminder as complete. Return tool call JSON.",
+  "few_shot_examples": [
+    {
+      "input": "I finished picking up dry cleaning",
+      "output": "{\"tool\": \"reminder_complete\", \"params\": {\"title\": \"Pick up dry cleaning\"}}"
+    },
+    {
+      "input": "Mark water plants as done",
+      "output": "{\"tool\": \"reminder_complete\", \"params\": {\"title\": \"Water plants\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

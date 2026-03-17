@@ -1,0 +1,17 @@
+{
+  "system_prompt": "You handle: get registration info for a domain. Use tools: whois_lookup. Return JSON with action, tool, args.",
+  "few_shot_examples": [
+    {
+      "input": "Get WHOIS info for example.com",
+      "output": "{\"action\":\"call\",\"tool\":\"whois_lookup\",\"args\":{\"domain\":\"example.com\"}}"
+    },
+    {
+      "input": "Who owns google.com?",
+      "output": "{\"action\":\"call\",\"tool\":\"whois_lookup\",\"args\":{\"domain\":\"google.com\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

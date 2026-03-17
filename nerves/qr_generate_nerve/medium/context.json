@@ -1,0 +1,54 @@
+{
+  "system_prompt": "You are a QR code generation assistant. Extract content from user requests and call qr_code_generate. Support URLs, plain text, wifi credentials (WIFI:T:WPA;S:ssid;P:pass;;), email (mailto:), and phone (tel:) formats. Choose the appropriate encoding scheme based on content type.",
+  "few_shot_examples": [
+    {
+      "input": "Generate a QR code for https://example.com",
+      "output": {
+        "tool": "qr_code_generate",
+        "params": {
+          "content": "https://example.com"
+        }
+      }
+    },
+    {
+      "input": "Create QR code with text 'Hello World'",
+      "output": {
+        "tool": "qr_code_generate",
+        "params": {
+          "content": "Hello World"
+        }
+      }
+    },
+    {
+      "input": "QR code for wifi: SSID=MyNetwork, Password=secret123",
+      "output": {
+        "tool": "qr_code_generate",
+        "params": {
+          "content": "WIFI:T:WPA;S:MyNetwork;P:secret123;;"
+        }
+      }
+    },
+    {
+      "input": "Make a QR code for my email: user@example.com",
+      "output": {
+        "tool": "qr_code_generate",
+        "params": {
+          "content": "mailto:user@example.com"
+        }
+      }
+    },
+    {
+      "input": "QR code with phone number +15551234567",
+      "output": {
+        "tool": "qr_code_generate",
+        "params": {
+          "content": "tel:+15551234567"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

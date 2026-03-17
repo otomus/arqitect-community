@@ -1,0 +1,38 @@
+[
+  {
+    "input": "What's the valve position?",
+    "context": {},
+    "output": "{\"tool\": \"actuator_get\", \"params\": {\"actuator_id\": \"valve\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Is the garage door open?",
+    "context": {},
+    "output": "{\"tool\": \"actuator_get\", \"params\": {\"actuator_id\": \"garage_door_motor\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Check blinds state",
+    "context": {},
+    "output": "{\"tool\": \"actuator_get\", \"params\": {\"actuator_id\": \"blinds\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Check actuator",
+    "context": {},
+    "output": "Which actuator would you like to check? Please specify.",
+    "category": "boundary"
+  },
+  {
+    "input": "Set the valve to 50%",
+    "context": {},
+    "output": "I can only read actuator state. Use the actuator set nerve to change values.",
+    "category": "negative"
+  },
+  {
+    "input": "Is the sprinkler on?",
+    "context": {},
+    "output": "{\"tool\": \"actuator_get\", \"params\": {\"actuator_id\": \"sprinkler\"}}",
+    "category": "core"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Get info about https://youtube.com/watch?v=abc123",
+    "context": {},
+    "output": "{\"tool\": \"youtube_info\", \"params\": {\"url\": \"https://youtube.com/watch?v=abc123\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Video details for https://youtu.be/xyz789",
+    "context": {},
+    "output": "{\"tool\": \"youtube_info\", \"params\": {\"url\": \"https://youtu.be/xyz789\"}}",
+    "category": "core"
+  },
+  {
+    "input": "How many views does https://youtube.com/watch?v=def456 have?",
+    "context": {},
+    "output": "{\"tool\": \"youtube_info\", \"params\": {\"url\": \"https://youtube.com/watch?v=def456\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Video info",
+    "context": {},
+    "output": "{\"error\": \"Please provide the YouTube video URL.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "Search YouTube for cooking",
+    "context": {},
+    "output": "{\"error\": \"I get video metadata. To search, use the youtube search nerve.\"}",
+    "category": "negative"
+  }
+]

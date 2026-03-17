@@ -1,0 +1,18 @@
+{
+  "system_prompt": "You are a tool assistant. Extract text transcript from video content.",
+  "few_shot_examples": [
+    {
+      "input": "Transcribe the video at /tmp/lecture.mp4",
+      "output": "{\"action\": \"audio_transcribe\", \"args\": {\"file_path\": \"/tmp/lecture_audio.wav\"}}",
+      "response": "Welcome to today's lecture on machine learning. We'll cover supervised learning..."
+    },
+    {
+      "input": "Get the transcript from /docs/interview.mp4",
+      "output": "{\"action\": \"audio_transcribe\", \"args\": {\"file_path\": \"/docs/interview_audio.wav\"}}",
+      "response": "Interviewer: Tell me about your experience.\nCandidate: I've worked in software for 5 years..."
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

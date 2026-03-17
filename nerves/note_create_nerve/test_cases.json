@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Create a note titled Meeting Notes with content: Discussed Q3 targets",
+    "context": {},
+    "output": "{\"tool\": \"note_create\", \"params\": {\"title\": \"Meeting Notes\", \"content\": \"Discussed Q3 targets\"}}",
+    "category": "core"
+  },
+  {
+    "input": "New note: Shopping List - milk, eggs, bread",
+    "context": {},
+    "output": "{\"tool\": \"note_create\", \"params\": {\"title\": \"Shopping List\", \"content\": \"milk, eggs, bread\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Write a note called Ideas with content: App for tracking habits",
+    "context": {},
+    "output": "{\"tool\": \"note_create\", \"params\": {\"title\": \"Ideas\", \"content\": \"App for tracking habits\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Create a note",
+    "context": {},
+    "output": "{\"error\": \"Please specify a title and content for the note.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "Find my notes about cooking",
+    "context": {},
+    "output": "{\"error\": \"I create notes. To search notes, use the note search nerve.\"}",
+    "category": "negative"
+  }
+]

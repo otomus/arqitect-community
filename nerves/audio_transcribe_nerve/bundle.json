@@ -1,0 +1,24 @@
+{
+  "name": "audio_transcribe_nerve",
+  "version": "1.0.0",
+  "description": "Convert speech in audio files to text.",
+  "role": "tool",
+  "tags": [
+    "audio",
+    "transcribe",
+    "speech"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "speech_to_text",
+      "mcp": "voice",
+      "implementations": {}
+    }
+  ]
+}

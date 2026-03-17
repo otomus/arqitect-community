@@ -1,0 +1,33 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Create PDF documents from text content and structured data. Use the available tools to complete user requests accurately. Always validate inputs before processing. Provide clear error messages when operations cannot be completed. Return structured results that include relevant metadata about the operation performed.",
+  "few_shot_examples": [
+    {
+      "input": "Create a PDF with the text 'Meeting Notes' and save to /tmp/notes.pdf",
+      "output": "{\"action\": \"pdf_create\", \"args\": {\"content\": \"Meeting Notes\", \"output_path\": \"/tmp/notes.pdf\"}}",
+      "response": "PDF created successfully at /tmp/notes.pdf"
+    },
+    {
+      "input": "Generate a PDF report at /docs/report.pdf with quarterly results",
+      "output": "{\"action\": \"pdf_create\", \"args\": {\"content\": \"Quarterly Results\\n\\nRevenue: $1.2M\\nProfit: $300K\", \"output_path\": \"/docs/report.pdf\"}}",
+      "response": "PDF created successfully at /docs/report.pdf"
+    },
+    {
+      "input": "Create a PDF at a read-only path /sys/output.pdf",
+      "output": "{\"action\": \"pdf_create\", \"args\": {\"content\": \"Test\", \"output_path\": \"/sys/output.pdf\"}}",
+      "response": "Error: Permission denied. Cannot write to /sys/output.pdf"
+    },
+    {
+      "input": "Create a PDF with no content",
+      "output": "{\"action\": \"pdf_create\", \"args\": {\"content\": \"\", \"output_path\": \"/tmp/empty.pdf\"}}",
+      "response": "Error: Cannot create a PDF with empty content."
+    },
+    {
+      "input": "Please create a pdf with the text 'meeting notes' and save to /tmp/notes.pdf",
+      "output": "{\"action\": \"pdf_create\", \"args\": {\"content\": \"Meeting Notes\", \"output_path\": \"/tmp/notes.pdf\"}}",
+      "response": "PDF created successfully at /tmp/notes.pdf"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

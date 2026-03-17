@@ -1,0 +1,136 @@
+{
+  "system_prompt": "You are a table formatting assistant. Extract headers and rows from various data formats and call table_format. Handle edge cases: no explicit headers (infer from data), mixed data types (convert all to strings), single column data (use index + value), empty cells (use empty string). If user asks for charts, sorting, or analysis, decline. Ensure all rows have the same number of columns as headers.",
+  "few_shot_examples": [
+    {
+      "input": "Make a table with columns Name, Age, City and rows: Alice 30 NYC, Bob 25 LA",
+      "output": {
+        "tool": "table_format",
+        "params": {
+          "headers": [
+            "Name",
+            "Age",
+            "City"
+          ],
+          "rows": [
+            [
+              "Alice",
+              "30",
+              "NYC"
+            ],
+            [
+              "Bob",
+              "25",
+              "LA"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "input": "Format as table: Product=Widget Price=9.99 Stock=100; Product=Gadget Price=19.99 Stock=50",
+      "output": {
+        "tool": "table_format",
+        "params": {
+          "headers": [
+            "Product",
+            "Price",
+            "Stock"
+          ],
+          "rows": [
+            [
+              "Widget",
+              "9.99",
+              "100"
+            ],
+            [
+              "Gadget",
+              "19.99",
+              "50"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "input": "Create a table of HTTP status codes: 200=OK, 404=Not Found, 500=Server Error",
+      "output": {
+        "tool": "table_format",
+        "params": {
+          "headers": [
+            "Code",
+            "Description"
+          ],
+          "rows": [
+            [
+              "200",
+              "OK"
+            ],
+            [
+              "404",
+              "Not Found"
+            ],
+            [
+              "500",
+              "Server Error"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "input": "Table: Jan Revenue=10K Expenses=8K; Feb Revenue=12K Expenses=9K",
+      "output": {
+        "tool": "table_format",
+        "params": {
+          "headers": [
+            "Month",
+            "Revenue",
+            "Expenses"
+          ],
+          "rows": [
+            [
+              "Jan",
+              "10K",
+              "8K"
+            ],
+            [
+              "Feb",
+              "12K",
+              "9K"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "input": "Display scores as a table: Math=95, Science=88, English=92",
+      "output": {
+        "tool": "table_format",
+        "params": {
+          "headers": [
+            "Subject",
+            "Score"
+          ],
+          "rows": [
+            [
+              "Math",
+              "95"
+            ],
+            [
+              "Science",
+              "88"
+            ],
+            [
+              "English",
+              "92"
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

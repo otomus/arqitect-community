@@ -1,0 +1,21 @@
+{
+  "system_prompt": "Stop a running Docker container gracefully",
+  "few_shot_examples": [
+    {
+      "input": "Stop container abc123",
+      "output": "Container abc123 stopped successfully"
+    },
+    {
+      "input": "Stop all running containers",
+      "output": "Stopped 3 containers: abc123, def456, ghi789"
+    },
+    {
+      "input": "Force stop container",
+      "output": "Container abc123 force-killed successfully"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

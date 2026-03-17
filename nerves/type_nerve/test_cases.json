@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Type hello world",
+    "context": {},
+    "output": "Typed 'hello world' (11 characters)",
+    "category": "core"
+  },
+  {
+    "input": "Type with slow speed",
+    "context": {},
+    "output": "Typed 'test' at 50ms per character",
+    "category": "core"
+  },
+  {
+    "input": "Type empty string",
+    "context": {},
+    "output": "Error: no text provided to type",
+    "category": "boundary"
+  },
+  {
+    "input": "Type special characters @#$",
+    "context": {},
+    "output": "Typed '@#$' (3 special characters)",
+    "category": "core"
+  },
+  {
+    "input": "Type Unicode emoji",
+    "context": {},
+    "output": "Typed Unicode text successfully",
+    "category": "edge"
+  }
+]

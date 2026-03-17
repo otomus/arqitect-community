@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Take a snapshot from the front door",
+    "context": {},
+    "output": "{\"tool\": \"camera_capture\", \"params\": {\"camera_id\": \"front_door\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Capture backyard camera",
+    "context": {},
+    "output": "{\"tool\": \"camera_capture\", \"params\": {\"camera_id\": \"backyard\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Show me the garage cam",
+    "context": {},
+    "output": "{\"tool\": \"camera_capture\", \"params\": {\"camera_id\": \"garage\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Take a picture",
+    "context": {},
+    "output": "Which camera should I capture from? Please specify.",
+    "category": "boundary"
+  },
+  {
+    "input": "Turn on the camera",
+    "context": {},
+    "output": "I can only capture snapshots. For device control, use the appropriate nerve.",
+    "category": "negative"
+  },
+  {
+    "input": "Record video from front door",
+    "context": {},
+    "output": "I can only capture still images, not video. Please request a snapshot instead.",
+    "category": "edge"
+  }
+]

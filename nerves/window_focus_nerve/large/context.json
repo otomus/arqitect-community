@@ -1,0 +1,29 @@
+{
+  "system_prompt": "Bring a window to the front by title or application name. Supports partial matching, window index selection, minimized window restoration, multi-monitor awareness, and workspace switching. Handle non-existent windows, permission restrictions, and fullscreen conflicts.",
+  "few_shot_examples": [
+    {
+      "input": "Focus Safari",
+      "output": "Brought 'Safari' window to front"
+    },
+    {
+      "input": "Focus window by title 'Untitled'",
+      "output": "Brought window 'Untitled - TextEdit' to front"
+    },
+    {
+      "input": "Focus minimized window",
+      "output": "Restored and focused minimized 'Terminal' window"
+    },
+    {
+      "input": "Focus non-existent app",
+      "output": "Error: no window found matching 'FakeApp'"
+    },
+    {
+      "input": "Focus window on second monitor",
+      "output": "Focused 'Code' window on monitor 2"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

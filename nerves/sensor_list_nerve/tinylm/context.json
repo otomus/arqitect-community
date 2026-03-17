@@ -1,0 +1,17 @@
+{
+  "system_prompt": "List available IoT sensors. Call sensor_list tool. Return JSON tool calls only.",
+  "few_shot_examples": [
+    {
+      "input": "List all sensors",
+      "output": "{\"tool\": \"sensor_list\", \"params\": {}}"
+    },
+    {
+      "input": "What sensors are available?",
+      "output": "{\"tool\": \"sensor_list\", \"params\": {}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

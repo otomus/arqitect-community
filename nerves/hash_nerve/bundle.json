@@ -1,0 +1,25 @@
+{
+  "name": "hash_nerve",
+  "version": "1.0.0",
+  "description": "Compute a hash of input data",
+  "role": "tool",
+  "tags": [
+    "data",
+    "hash",
+    "security"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "hash_compute",
+      "implementations": {
+        "python": "mcp_tools/hash_compute/tool.py"
+      }
+    }
+  ]
+}

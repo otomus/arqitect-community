@@ -1,0 +1,25 @@
+{
+  "name": "video_download_nerve",
+  "version": "1.0.0",
+  "description": "Download videos from URLs.",
+  "role": "tool",
+  "tags": [
+    "video",
+    "download",
+    "media"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "video_download",
+      "implementations": {
+        "python": "mcp_tools/video_download/tool.py"
+      }
+    }
+  ]
+}

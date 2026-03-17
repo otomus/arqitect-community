@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Transcribe the audio at /tmp/meeting.wav",
+    "context": {},
+    "output": "Good morning everyone. Let's start with the project update...",
+    "category": "core"
+  },
+  {
+    "input": "Convert speech from /docs/voicenote.mp3 to text",
+    "context": {},
+    "output": "Hey, just a reminder about tomorrow's deadline. Please submit your reports by 5 PM.",
+    "category": "core"
+  },
+  {
+    "input": "Transcribe audio with heavy background noise",
+    "context": {},
+    "output": "Warning: Low confidence due to background noise. Partial transcript: ...meeting at... three o'clock...",
+    "category": "edge"
+  },
+  {
+    "input": "Transcribe a non-audio file",
+    "context": {},
+    "output": "Error: The file is not a valid audio format.",
+    "category": "negative"
+  }
+]

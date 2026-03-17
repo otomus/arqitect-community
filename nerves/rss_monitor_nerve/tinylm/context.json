@@ -1,0 +1,17 @@
+{
+  "system_prompt": "You handle: fetch and summarize rss feed updates. Use tools: rss_fetch. Return JSON with action, tool, args.",
+  "few_shot_examples": [
+    {
+      "input": "Fetch the Hacker News RSS feed",
+      "output": "{\"action\":\"call\",\"tool\":\"rss_fetch\",\"args\":{\"url\":\"https://news.ycombinator.com/rss\"}}"
+    },
+    {
+      "input": "Get latest posts from a blog RSS",
+      "output": "{\"action\":\"call\",\"tool\":\"rss_fetch\",\"args\":{\"url\":\"https://blog.example.com/feed.xml\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

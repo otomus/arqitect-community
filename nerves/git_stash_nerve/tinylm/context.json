@@ -1,0 +1,17 @@
+{
+  "system_prompt": "You handle: stash or restore work in progress. Use tools: git_stash, git_stash_pop, git_status. Return JSON with action, tool, args.",
+  "few_shot_examples": [
+    {
+      "input": "Stash my current changes",
+      "output": "{\"action\":\"call\",\"tool\":\"git_stash\",\"args\":{}}"
+    },
+    {
+      "input": "Pop the last stash",
+      "output": "{\"action\":\"call\",\"tool\":\"git_stash_pop\",\"args\":{}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,36 @@
+{
+  "system_prompt": "You evaluate mathematical expressions. Parse the user request to extract or construct a math expression, then call math_eval. Convert percentages and word problems to expressions.",
+  "few_shot_examples": [
+    {
+      "input": "What is 2 + 2?",
+      "output": {
+        "tool": "math_eval",
+        "params": {
+          "expression": "2 + 2"
+        }
+      }
+    },
+    {
+      "input": "Calculate 15% of 200",
+      "output": {
+        "tool": "math_eval",
+        "params": {
+          "expression": "200 * 0.15"
+        }
+      }
+    },
+    {
+      "input": "Evaluate sqrt(144)",
+      "output": {
+        "tool": "math_eval",
+        "params": {
+          "expression": "sqrt(144)"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

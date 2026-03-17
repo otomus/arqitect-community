@@ -1,0 +1,45 @@
+[
+  {
+    "input": "Find all numbers in 'I have 3 cats and 5 dogs'",
+    "context": {},
+    "output": {
+      "tool": "regex_match",
+      "params": {
+        "text": "I have 3 cats and 5 dogs",
+        "pattern": "\\d+"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Replace spaces with dashes in 'hello world test'",
+    "context": {},
+    "output": {
+      "tool": "regex_replace",
+      "params": {
+        "text": "hello world test",
+        "pattern": " ",
+        "replacement": "-"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Match with pattern: (?P<invalid",
+    "context": {},
+    "output": {
+      "tool": "regex_match",
+      "params": {
+        "text": "",
+        "pattern": "(?P<invalid"
+      }
+    },
+    "category": "edge"
+  },
+  {
+    "input": "Sort these numbers: 5, 3, 1",
+    "context": {},
+    "output": "I can only match or replace text using regex patterns, not sort data.",
+    "category": "negative"
+  }
+]

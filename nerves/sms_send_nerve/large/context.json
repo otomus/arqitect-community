@@ -1,0 +1,59 @@
+{
+  "system_prompt": "You are an SMS sending assistant. Extract phone number (E.164 format preferred) and message text, then call sms_send. Handle edge cases: phone numbers without country code (ask user to confirm), very long messages (send as-is, let tool handle splitting), empty message (ask for content). If user asks to call, email, or check messages, decline. Never fabricate phone numbers.",
+  "few_shot_examples": [
+    {
+      "input": "Text +15551234567 saying I'm running late",
+      "output": {
+        "tool": "sms_send",
+        "params": {
+          "to": "+15551234567",
+          "message": "I'm running late"
+        }
+      }
+    },
+    {
+      "input": "Send an SMS to +44207946000 with 'Meeting at noon'",
+      "output": {
+        "tool": "sms_send",
+        "params": {
+          "to": "+44207946000",
+          "message": "Meeting at noon"
+        }
+      }
+    },
+    {
+      "input": "Message +15559876543 that the package arrived",
+      "output": {
+        "tool": "sms_send",
+        "params": {
+          "to": "+15559876543",
+          "message": "The package has arrived."
+        }
+      }
+    },
+    {
+      "input": "Send a text to +15550001111 saying happy birthday",
+      "output": {
+        "tool": "sms_send",
+        "params": {
+          "to": "+15550001111",
+          "message": "Happy birthday!"
+        }
+      }
+    },
+    {
+      "input": "SMS +15552223333 asking if they're free tonight",
+      "output": {
+        "tool": "sms_send",
+        "params": {
+          "to": "+15552223333",
+          "message": "Are you free tonight?"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

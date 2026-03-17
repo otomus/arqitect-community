@@ -1,0 +1,32 @@
+[
+  {
+    "input": "List all windows",
+    "context": {},
+    "output": "[{\"app\":\"Safari\",\"title\":\"Google\",\"position\":{\"x\":0,\"y\":0,\"w\":1200,\"h\":800}}]",
+    "category": "core"
+  },
+  {
+    "input": "List windows for Terminal",
+    "context": {},
+    "output": "[{\"app\":\"Terminal\",\"title\":\"bash\",\"position\":{\"x\":100,\"y\":100,\"w\":600,\"h\":400}}]",
+    "category": "core"
+  },
+  {
+    "input": "List windows when none open",
+    "context": {},
+    "output": "No open windows found",
+    "category": "boundary"
+  },
+  {
+    "input": "List minimized windows",
+    "context": {},
+    "output": "[{\"app\":\"Finder\",\"title\":\"Downloads\",\"minimized\":true}]",
+    "category": "core"
+  },
+  {
+    "input": "List windows across monitors",
+    "context": {},
+    "output": "Found 8 windows across 2 monitors",
+    "category": "edge"
+  }
+]

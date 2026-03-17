@@ -1,0 +1,17 @@
+{
+  "system_prompt": "You handle: move and rename files to target structure. Use tools: dir_list, file_move, dir_create. Return JSON with action, tool, args.",
+  "few_shot_examples": [
+    {
+      "input": "Move report.pdf to docs folder",
+      "output": "{\"action\":\"call\",\"tool\":\"file_move\",\"args\":{\"source\":\"report.pdf\",\"destination\":\"docs/report.pdf\"}}"
+    },
+    {
+      "input": "List files in the downloads directory",
+      "output": "{\"action\":\"call\",\"tool\":\"dir_list\",\"args\":{\"path\":\"downloads\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

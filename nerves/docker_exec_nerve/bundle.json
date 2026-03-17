@@ -1,0 +1,25 @@
+{
+  "name": "docker_exec_nerve",
+  "version": "1.0.0",
+  "description": "Execute a command inside a running container",
+  "role": "code",
+  "tags": [
+    "docker",
+    "container",
+    "exec"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "docker_exec",
+      "implementations": {
+        "python": "mcp_tools/docker_exec/tool.py"
+      }
+    }
+  ]
+}

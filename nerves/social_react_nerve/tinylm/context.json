@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Like a social media post. Return tool call JSON with URL.",
+  "few_shot_examples": [
+    {
+      "input": "Like https://twitter.com/dev/status/111",
+      "output": "{\"tool\": \"social_like\", \"params\": {\"url\": \"https://twitter.com/dev/status/111\"}}"
+    },
+    {
+      "input": "Heart this post: https://mastodon.social/@user/222",
+      "output": "{\"tool\": \"social_like\", \"params\": {\"url\": \"https://mastodon.social/@user/222\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

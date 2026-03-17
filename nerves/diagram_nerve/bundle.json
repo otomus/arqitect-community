@@ -1,0 +1,24 @@
+{
+  "name": "diagram_nerve",
+  "version": "1.0.0",
+  "description": "Create a diagram from a definition",
+  "role": "tool",
+  "tags": [
+    "visualization",
+    "diagram"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "diagram_create",
+      "implementations": {
+        "python": "mcp_tools/diagram_create/tool.py"
+      }
+    }
+  ]
+}

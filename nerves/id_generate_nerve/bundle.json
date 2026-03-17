@@ -1,0 +1,25 @@
+{
+  "name": "id_generate_nerve",
+  "version": "1.0.0",
+  "description": "Generate a unique identifier",
+  "role": "tool",
+  "tags": [
+    "data",
+    "uuid",
+    "id"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "uuid_generate",
+      "implementations": {
+        "python": "mcp_tools/uuid_generate/tool.py"
+      }
+    }
+  ]
+}

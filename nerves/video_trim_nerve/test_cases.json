@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Trim /tmp/lecture.mp4 from 5:00 to 10:00",
+    "context": {},
+    "output": "Video trimmed from 00:05:00 to 00:10:00. Saved to /tmp/lecture_trimmed.mp4",
+    "category": "core"
+  },
+  {
+    "input": "Cut the first 30 seconds of /docs/intro.mp4",
+    "context": {},
+    "output": "Video trimmed from 00:00:00 to 00:00:30. Saved to /docs/intro_short.mp4",
+    "category": "core"
+  },
+  {
+    "input": "Trim with end before start",
+    "context": {},
+    "output": "Error: End time must be after start time.",
+    "category": "edge"
+  },
+  {
+    "input": "Trim a non-existent video",
+    "context": {},
+    "output": "Error: File not found at /tmp/missing.mp4",
+    "category": "negative"
+  }
+]

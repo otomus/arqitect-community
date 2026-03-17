@@ -1,0 +1,25 @@
+{
+  "name": "scroll_nerve",
+  "version": "1.0.0",
+  "description": "Scroll in a direction on screen",
+  "role": "tool",
+  "tags": [
+    "desktop",
+    "mouse",
+    "scroll"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "mouse_scroll",
+      "implementations": {
+        "python": "mcp_tools/mouse_scroll/tool.py"
+      }
+    }
+  ]
+}

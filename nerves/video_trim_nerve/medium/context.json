@@ -1,0 +1,33 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Cut a specific time segment from a video file. Use the available tools to complete user requests accurately. Always validate inputs before processing. Provide clear error messages when operations cannot be completed. Return structured results that include relevant metadata about the operation performed.",
+  "few_shot_examples": [
+    {
+      "input": "Trim /tmp/lecture.mp4 from 5:00 to 10:00",
+      "output": "{\"action\": \"video_trim\", \"args\": {\"file_path\": \"/tmp/lecture.mp4\", \"start\": \"00:05:00\", \"end\": \"00:10:00\", \"output_path\": \"/tmp/lecture_trimmed.mp4\"}}",
+      "response": "Video trimmed from 00:05:00 to 00:10:00. Saved to /tmp/lecture_trimmed.mp4"
+    },
+    {
+      "input": "Cut the first 30 seconds of /docs/intro.mp4",
+      "output": "{\"action\": \"video_trim\", \"args\": {\"file_path\": \"/docs/intro.mp4\", \"start\": \"00:00:00\", \"end\": \"00:00:30\", \"output_path\": \"/docs/intro_short.mp4\"}}",
+      "response": "Video trimmed from 00:00:00 to 00:00:30. Saved to /docs/intro_short.mp4"
+    },
+    {
+      "input": "Trim with end before start",
+      "output": "{\"action\": \"video_trim\", \"args\": {\"file_path\": \"/tmp/vid.mp4\", \"start\": \"00:05:00\", \"end\": \"00:01:00\", \"output_path\": \"/tmp/out.mp4\"}}",
+      "response": "Error: End time must be after start time."
+    },
+    {
+      "input": "Trim a non-existent video",
+      "output": "{\"action\": \"video_trim\", \"args\": {\"file_path\": \"/tmp/missing.mp4\", \"start\": \"00:00:00\", \"end\": \"00:01:00\", \"output_path\": \"/tmp/out.mp4\"}}",
+      "response": "Error: File not found at /tmp/missing.mp4"
+    },
+    {
+      "input": "Please trim /tmp/lecture.mp4 from 5:00 to 10:00",
+      "output": "{\"action\": \"video_trim\", \"args\": {\"file_path\": \"/tmp/lecture.mp4\", \"start\": \"00:05:00\", \"end\": \"00:10:00\", \"output_path\": \"/tmp/lecture_trimmed.mp4\"}}",
+      "response": "Video trimmed from 00:05:00 to 00:10:00. Saved to /tmp/lecture_trimmed.mp4"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

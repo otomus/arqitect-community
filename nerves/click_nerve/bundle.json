@@ -1,0 +1,25 @@
+{
+  "name": "click_nerve",
+  "version": "1.0.0",
+  "description": "Click at a screen position",
+  "role": "tool",
+  "tags": [
+    "desktop",
+    "mouse",
+    "click"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "mouse_click",
+      "implementations": {
+        "python": "mcp_tools/mouse_click/tool.py"
+      }
+    }
+  ]
+}

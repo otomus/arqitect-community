@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Create a presentation about AI at /tmp/ai_talk.pptx",
+    "context": {},
+    "output": "Presentation created successfully at /tmp/ai_talk.pptx with 1 slide",
+    "category": "core"
+  },
+  {
+    "input": "Generate a 3-slide deck at /docs/quarterly.pptx",
+    "context": {},
+    "output": "Presentation created successfully at /docs/quarterly.pptx with 3 slides",
+    "category": "core"
+  },
+  {
+    "input": "Create a presentation with no slides",
+    "context": {},
+    "output": "Error: Cannot create a presentation with no slides.",
+    "category": "edge"
+  },
+  {
+    "input": "Create pptx at invalid path",
+    "context": {},
+    "output": "Error: Directory /no/such/dir does not exist.",
+    "category": "negative"
+  }
+]

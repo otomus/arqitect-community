@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Pull nginx latest",
+    "context": {},
+    "output": "Successfully pulled nginx:latest (150MB)",
+    "category": "core"
+  },
+  {
+    "input": "Pull specific version",
+    "context": {},
+    "output": "Successfully pulled postgres:15.2 (380MB)",
+    "category": "core"
+  },
+  {
+    "input": "Pull non-existent image",
+    "context": {},
+    "output": "Error: image 'fakerepo/fakeimage' not found in registry",
+    "category": "boundary"
+  },
+  {
+    "input": "Pull from private registry",
+    "context": {},
+    "output": "Successfully pulled registry.example.com/myapp:latest",
+    "category": "core"
+  },
+  {
+    "input": "Pull with auth failure",
+    "context": {},
+    "output": "Error: authentication required for registry.example.com",
+    "category": "edge"
+  }
+]

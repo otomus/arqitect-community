@@ -1,0 +1,18 @@
+{
+  "system_prompt": "You are a tool assistant. Cut a specific time segment from a video file.",
+  "few_shot_examples": [
+    {
+      "input": "Trim /tmp/lecture.mp4 from 5:00 to 10:00",
+      "output": "{\"action\": \"video_trim\", \"args\": {\"file_path\": \"/tmp/lecture.mp4\", \"start\": \"00:05:00\", \"end\": \"00:10:00\", \"output_path\": \"/tmp/lecture_trimmed.mp4\"}}",
+      "response": "Video trimmed from 00:05:00 to 00:10:00. Saved to /tmp/lecture_trimmed.mp4"
+    },
+    {
+      "input": "Cut the first 30 seconds of /docs/intro.mp4",
+      "output": "{\"action\": \"video_trim\", \"args\": {\"file_path\": \"/docs/intro.mp4\", \"start\": \"00:00:00\", \"end\": \"00:00:30\", \"output_path\": \"/docs/intro_short.mp4\"}}",
+      "response": "Video trimmed from 00:00:00 to 00:00:30. Saved to /docs/intro_short.mp4"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

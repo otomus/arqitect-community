@@ -1,0 +1,37 @@
+[
+  {
+    "input": "What's the weather in New York?",
+    "context": {},
+    "output": "{\"tool\": \"weather_current\", \"params\": {\"location\": \"New York\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Current weather in Tokyo",
+    "context": {
+      "userDetails": {
+        "name": "Alex",
+        "language": "en"
+      }
+    },
+    "output": "{\"tool\": \"weather_current\", \"params\": {\"location\": \"Tokyo\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Is it raining in London right now?",
+    "context": {},
+    "output": "{\"tool\": \"weather_current\", \"params\": {\"location\": \"London\"}}",
+    "category": "core"
+  },
+  {
+    "input": "How's the weather?",
+    "context": {},
+    "output": "{\"error\": \"Please specify a location to check the weather for.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "What will the weather be next week in Paris?",
+    "context": {},
+    "output": "{\"error\": \"I can only check current weather. For forecasts, use the weather forecast nerve.\"}",
+    "category": "negative"
+  }
+]

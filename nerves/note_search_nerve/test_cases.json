@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Search my notes for 'meeting'",
+    "context": {},
+    "output": "{\"tool\": \"note_search\", \"params\": {\"query\": \"meeting\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Find notes about recipes",
+    "context": {},
+    "output": "{\"tool\": \"note_search\", \"params\": {\"query\": \"recipes\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Look for notes mentioning Tokyo",
+    "context": {},
+    "output": "{\"tool\": \"note_search\", \"params\": {\"query\": \"Tokyo\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Search notes",
+    "context": {},
+    "output": "{\"error\": \"Please specify a search term or keyword.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "Delete my cooking notes",
+    "context": {},
+    "output": "{\"error\": \"I search notes. To delete a note, use the note delete nerve.\"}",
+    "category": "negative"
+  }
+]

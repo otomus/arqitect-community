@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Generate an image of a cat sitting on a couch",
+    "context": {},
+    "output": "Image generated successfully at /tmp/cat.png",
+    "category": "core"
+  },
+  {
+    "input": "Create a picture of a futuristic city at night",
+    "context": {},
+    "output": "Image generated successfully at /tmp/city.png",
+    "category": "core"
+  },
+  {
+    "input": "Generate an image with an extremely long prompt of 5000 words",
+    "context": {},
+    "output": "Warning: Prompt truncated to 500 characters. Image generated at /tmp/long.png",
+    "category": "edge"
+  },
+  {
+    "input": "Generate an image with empty prompt",
+    "context": {},
+    "output": "Error: Cannot generate an image without a text prompt.",
+    "category": "negative"
+  }
+]

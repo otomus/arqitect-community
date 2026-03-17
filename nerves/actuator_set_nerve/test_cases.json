@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Set valve to 50%",
+    "context": {},
+    "output": "{\"tool\": \"actuator_set\", \"params\": {\"actuator_id\": \"valve\", \"value\": 50}}",
+    "category": "core"
+  },
+  {
+    "input": "Open the garage door",
+    "context": {},
+    "output": "{\"tool\": \"actuator_set\", \"params\": {\"actuator_id\": \"garage_door_motor\", \"value\": \"open\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Close the blinds",
+    "context": {},
+    "output": "{\"tool\": \"actuator_set\", \"params\": {\"actuator_id\": \"blinds\", \"value\": \"closed\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Set actuator",
+    "context": {},
+    "output": "Which actuator and what value? Please specify.",
+    "category": "boundary"
+  },
+  {
+    "input": "What is the valve reading?",
+    "context": {},
+    "output": "I can only set actuator values. Use the actuator read nerve to check current state.",
+    "category": "negative"
+  },
+  {
+    "input": "Turn on the sprinkler",
+    "context": {},
+    "output": "{\"tool\": \"actuator_set\", \"params\": {\"actuator_id\": \"sprinkler\", \"value\": \"on\"}}",
+    "category": "core"
+  }
+]

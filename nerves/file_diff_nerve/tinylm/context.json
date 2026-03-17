@@ -1,0 +1,17 @@
+{
+  "system_prompt": "You handle: compare two files. Use tools: file_read, diff_compute. Return JSON with action, tool, args.",
+  "few_shot_examples": [
+    {
+      "input": "Compare config.yaml with config.yaml.bak",
+      "output": "{\"action\":\"call\",\"tool\":\"diff_compute\",\"args\":{\"file_a\":\"config.yaml\",\"file_b\":\"config.yaml.bak\"}}"
+    },
+    {
+      "input": "Read the original file first",
+      "output": "{\"action\":\"call\",\"tool\":\"file_read\",\"args\":{\"path\":\"config.yaml\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

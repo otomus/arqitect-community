@@ -1,0 +1,23 @@
+{
+  "name": "web_search_nerve",
+  "version": "1.0.0",
+  "description": "Search the web and return results",
+  "role": "tool",
+  "tags": [
+    "web",
+    "search"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "search",
+      "mcp": "duckduckgo",
+      "implementations": {}
+    }
+  ]
+}

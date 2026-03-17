@@ -1,0 +1,33 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Extract content from PowerPoint slide presentations. Use the available tools to complete user requests accurately. Always validate inputs before processing. Provide clear error messages when operations cannot be completed. Return structured results that include relevant metadata about the operation performed.",
+  "few_shot_examples": [
+    {
+      "input": "Read the presentation at /docs/pitch.pptx",
+      "output": "{\"action\": \"pptx_read\", \"args\": {\"file_path\": \"/docs/pitch.pptx\"}}",
+      "response": "Slide 1: Company Overview\nSlide 2: Market Opportunity\nSlide 3: Product Demo"
+    },
+    {
+      "input": "Extract slides from /tmp/training.pptx",
+      "output": "{\"action\": \"pptx_read\", \"args\": {\"file_path\": \"/tmp/training.pptx\"}}",
+      "response": "Slide 1: Welcome\nSlide 2: Agenda\nSlide 3: Module 1 - Introduction"
+    },
+    {
+      "input": "Read a pptx with embedded media",
+      "output": "{\"action\": \"pptx_read\", \"args\": {\"file_path\": \"/docs/media.pptx\"}}",
+      "response": "Slide 1: Title [contains embedded video]\nSlide 2: Charts [contains 2 charts]\nNote: Media content extracted as references only."
+    },
+    {
+      "input": "Read a non-existent pptx",
+      "output": "{\"action\": \"pptx_read\", \"args\": {\"file_path\": \"/tmp/missing.pptx\"}}",
+      "response": "Error: File not found at /tmp/missing.pptx"
+    },
+    {
+      "input": "Please read the presentation at /docs/pitch.pptx",
+      "output": "{\"action\": \"pptx_read\", \"args\": {\"file_path\": \"/docs/pitch.pptx\"}}",
+      "response": "Slide 1: Company Overview\nSlide 2: Market Opportunity\nSlide 3: Product Demo"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

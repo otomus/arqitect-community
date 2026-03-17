@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Search Twitter for AI news",
+    "context": {},
+    "output": "{\"tool\": \"social_search\", \"params\": {\"platform\": \"twitter\", \"query\": \"AI news\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Find posts about Rust on Mastodon",
+    "context": {},
+    "output": "{\"tool\": \"social_search\", \"params\": {\"platform\": \"mastodon\", \"query\": \"Rust\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Search Bluesky for climate change",
+    "context": {},
+    "output": "{\"tool\": \"social_search\", \"params\": {\"platform\": \"bluesky\", \"query\": \"climate change\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Search social media",
+    "context": {},
+    "output": "{\"error\": \"Please specify the platform and search terms.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "Post about AI on Twitter",
+    "context": {},
+    "output": "{\"error\": \"I search posts. To publish a post, use the social post nerve.\"}",
+    "category": "negative"
+  }
+]

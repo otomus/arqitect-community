@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Set living room light to blue",
+    "context": {},
+    "output": "{\"tool\": \"light_set\", \"params\": {\"light_id\": \"living_room\", \"color\": \"blue\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Make the bedroom red",
+    "context": {},
+    "output": "{\"tool\": \"light_set\", \"params\": {\"light_id\": \"bedroom\", \"color\": \"red\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Change kitchen to warm white",
+    "context": {},
+    "output": "{\"tool\": \"light_set\", \"params\": {\"light_id\": \"kitchen\", \"color\": \"warm_white\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Change the light color",
+    "context": {},
+    "output": "Which light and what color? Please specify.",
+    "category": "boundary"
+  },
+  {
+    "input": "Turn on the light",
+    "context": {},
+    "output": "I only set light colors. Use the light on nerve to turn lights on.",
+    "category": "negative"
+  },
+  {
+    "input": "Set brightness to 50%",
+    "context": {},
+    "output": "I only set light colors. Use the light dim nerve to adjust brightness.",
+    "category": "negative"
+  }
+]

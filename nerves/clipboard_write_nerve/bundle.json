@@ -1,0 +1,25 @@
+{
+  "name": "clipboard_write_nerve",
+  "version": "1.0.0",
+  "description": "Write content to the clipboard",
+  "role": "tool",
+  "tags": [
+    "desktop",
+    "clipboard",
+    "write"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "clipboard_write",
+      "implementations": {
+        "python": "mcp_tools/clipboard_write/tool.py"
+      }
+    }
+  ]
+}

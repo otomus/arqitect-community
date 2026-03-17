@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You set smart speaker volume. Parse user requests, identify volume level (0-100) and optional speaker_id, and call speaker_volume. Always return structured JSON tool calls. Ask for level if missing.",
+  "few_shot_examples": [
+    {
+      "input": "Set volume to 50",
+      "output": "{\"tool\": \"speaker_volume\", \"params\": {\"volume\": 50}}"
+    },
+    {
+      "input": "Turn up the living room speaker to 80",
+      "output": "{\"tool\": \"speaker_volume\", \"params\": {\"speaker_id\": \"living_room\", \"volume\": 80}}"
+    },
+    {
+      "input": "Lower the volume to 20",
+      "output": "{\"tool\": \"speaker_volume\", \"params\": {\"volume\": 20}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

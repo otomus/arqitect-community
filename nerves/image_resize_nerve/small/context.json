@@ -1,0 +1,23 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Resize images to specified dimensions. Use the available tools to complete requests accurately.",
+  "few_shot_examples": [
+    {
+      "input": "Resize /tmp/photo.jpg to 1024x768",
+      "output": "{\"action\": \"image_resize\", \"args\": {\"file_path\": \"/tmp/photo.jpg\", \"width\": 1024, \"height\": 768}}",
+      "response": "Image resized to 1024x768 at /tmp/photo.jpg"
+    },
+    {
+      "input": "Scale /docs/banner.png to 300x100",
+      "output": "{\"action\": \"image_resize\", \"args\": {\"file_path\": \"/docs/banner.png\", \"width\": 300, \"height\": 100}}",
+      "response": "Image resized to 300x100 at /docs/banner.png"
+    },
+    {
+      "input": "Resize image to 0x0 dimensions",
+      "output": "{\"action\": \"image_resize\", \"args\": {\"file_path\": \"/tmp/img.png\", \"width\": 0, \"height\": 0}}",
+      "response": "Error: Width and height must be positive integers."
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

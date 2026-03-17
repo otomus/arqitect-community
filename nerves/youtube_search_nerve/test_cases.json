@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Search YouTube for Python tutorials",
+    "context": {},
+    "output": "{\"tool\": \"youtube_search\", \"params\": {\"query\": \"Python tutorials\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Find YouTube videos about cooking pasta",
+    "context": {},
+    "output": "{\"tool\": \"youtube_search\", \"params\": {\"query\": \"cooking pasta\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Look for guitar lessons on YouTube",
+    "context": {},
+    "output": "{\"tool\": \"youtube_search\", \"params\": {\"query\": \"guitar lessons\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Search YouTube",
+    "context": {},
+    "output": "{\"error\": \"Please specify what to search for on YouTube.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "Get the transcript of this video",
+    "context": {},
+    "output": "{\"error\": \"I search for videos. To get a transcript, use the youtube transcript nerve.\"}",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Crop /tmp/photo.jpg to region 100,100 with size 500x400",
+    "context": {},
+    "output": "Image cropped to 500x400 starting at (100,100)",
+    "category": "core"
+  },
+  {
+    "input": "Crop the top-left corner of /docs/map.png",
+    "context": {},
+    "output": "Image cropped to 256x256 starting at (0,0)",
+    "category": "core"
+  },
+  {
+    "input": "Crop with coordinates outside image bounds",
+    "context": {},
+    "output": "Error: Crop region exceeds image boundaries (image is 640x480).",
+    "category": "edge"
+  },
+  {
+    "input": "Crop a non-image file",
+    "context": {},
+    "output": "Error: The file is not a valid image format.",
+    "category": "negative"
+  }
+]

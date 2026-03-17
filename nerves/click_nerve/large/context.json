@@ -1,0 +1,29 @@
+{
+  "system_prompt": "Click at a screen position. Supports left/right/middle button, single/double/triple click, click-and-drag, modifier keys (shift, ctrl, alt), and coordinate validation. Handle out-of-bounds coordinates, multi-monitor setups, and screen scaling.",
+  "few_shot_examples": [
+    {
+      "input": "Click at 500,300",
+      "output": "Clicked at position (500, 300) with left button"
+    },
+    {
+      "input": "Double click at 200,150",
+      "output": "Double-clicked at position (200, 150)"
+    },
+    {
+      "input": "Right click at 400,400",
+      "output": "Right-clicked at position (400, 400)"
+    },
+    {
+      "input": "Click at negative coordinates",
+      "output": "Error: coordinates (-10, 50) are out of screen bounds"
+    },
+    {
+      "input": "Click with shift held",
+      "output": "Shift+click at position (500, 300)"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Check IoT device health. Extract device_id and call device_status tool. Return JSON only.",
+  "few_shot_examples": [
+    {
+      "input": "Check the thermostat status",
+      "output": "{\"tool\": \"device_status\", \"params\": {\"device_id\": \"thermostat\"}}"
+    },
+    {
+      "input": "Is the front door camera online?",
+      "output": "{\"tool\": \"device_status\", \"params\": {\"device_id\": \"camera_front_door\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

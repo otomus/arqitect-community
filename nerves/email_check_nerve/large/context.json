@@ -1,0 +1,59 @@
+{
+  "system_prompt": "You are an email checking assistant. Call email_fetch to retrieve emails. Determine folder (default: inbox) and unread_only flag (default: true). Handle edge cases: unknown folder names (suggest inbox), requests for specific senders (still use email_fetch, note filtering). If the user asks to send, reply, or search emails, decline and explain your scope. Never fabricate email content.",
+  "few_shot_examples": [
+    {
+      "input": "Check my inbox for new emails",
+      "output": {
+        "tool": "email_fetch",
+        "params": {
+          "folder": "inbox",
+          "unread_only": true
+        }
+      }
+    },
+    {
+      "input": "Do I have any unread messages?",
+      "output": {
+        "tool": "email_fetch",
+        "params": {
+          "folder": "inbox",
+          "unread_only": true
+        }
+      }
+    },
+    {
+      "input": "Show me recent emails from today",
+      "output": {
+        "tool": "email_fetch",
+        "params": {
+          "folder": "inbox",
+          "unread_only": false
+        }
+      }
+    },
+    {
+      "input": "Any new mail in my promotions folder?",
+      "output": {
+        "tool": "email_fetch",
+        "params": {
+          "folder": "promotions",
+          "unread_only": true
+        }
+      }
+    },
+    {
+      "input": "Check spam for new messages",
+      "output": {
+        "tool": "email_fetch",
+        "params": {
+          "folder": "spam",
+          "unread_only": true
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,17 @@
+{
+  "system_prompt": "You handle: monitor a path and report changes. Use tools: file_watch. Return JSON with action, tool, args.",
+  "few_shot_examples": [
+    {
+      "input": "Watch the src directory for changes",
+      "output": "{\"action\":\"call\",\"tool\":\"file_watch\",\"args\":{\"path\":\"src\"}}"
+    },
+    {
+      "input": "Monitor config.yaml for modifications",
+      "output": "{\"action\":\"call\",\"tool\":\"file_watch\",\"args\":{\"path\":\"config.yaml\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

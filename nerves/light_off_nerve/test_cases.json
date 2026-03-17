@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Turn off the living room light",
+    "context": {},
+    "output": "{\"tool\": \"light_set\", \"params\": {\"light_id\": \"living_room\", \"state\": \"off\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Switch off bedroom lights",
+    "context": {},
+    "output": "{\"tool\": \"light_set\", \"params\": {\"light_id\": \"bedroom\", \"state\": \"off\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Kill the kitchen light",
+    "context": {},
+    "output": "{\"tool\": \"light_set\", \"params\": {\"light_id\": \"kitchen\", \"state\": \"off\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Turn off the light",
+    "context": {},
+    "output": "Which light would you like to turn off? Please specify a room or light name.",
+    "category": "boundary"
+  },
+  {
+    "input": "Turn on the light",
+    "context": {},
+    "output": "I only turn lights off. Use the light on nerve to turn lights on.",
+    "category": "negative"
+  },
+  {
+    "input": "Dim the lights",
+    "context": {},
+    "output": "I only turn lights off. Use the light dim nerve to adjust brightness.",
+    "category": "negative"
+  }
+]

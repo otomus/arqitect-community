@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Stop container abc123",
+    "context": {},
+    "output": "Container abc123 stopped successfully",
+    "category": "core"
+  },
+  {
+    "input": "Stop all running containers",
+    "context": {},
+    "output": "Stopped 3 containers: abc123, def456, ghi789",
+    "category": "core"
+  },
+  {
+    "input": "Stop non-existent container",
+    "context": {},
+    "output": "Error: container 'xyz999' not found",
+    "category": "boundary"
+  },
+  {
+    "input": "Force stop container",
+    "context": {},
+    "output": "Container abc123 force-killed successfully",
+    "category": "core"
+  },
+  {
+    "input": "Stop already stopped container",
+    "context": {},
+    "output": "Container abc123 is already stopped",
+    "category": "edge"
+  }
+]

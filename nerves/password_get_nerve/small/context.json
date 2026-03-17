@@ -1,0 +1,21 @@
+{
+  "system_prompt": "Retrieve a stored credential from a secure vault by key",
+  "few_shot_examples": [
+    {
+      "input": "Get password for github",
+      "output": "Retrieved credential for 'github': ******* (last updated 30 days ago)"
+    },
+    {
+      "input": "Get API key for aws",
+      "output": "Retrieved credential for 'aws-api-key': ******* (expires in 60 days)"
+    },
+    {
+      "input": "Get non-existent credential",
+      "output": "Error: no credential found for key 'nonexistent'"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

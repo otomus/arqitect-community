@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Look up DNS records for example.com",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"dns_lookup\",\"args\":{\"domain\":\"example.com\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Get the MX records for gmail.com",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"dns_lookup\",\"args\":{\"domain\":\"gmail.com\",\"type\":\"MX\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Check A record for api.example.com",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"dns_lookup\",\"args\":{\"domain\":\"api.example.com\",\"type\":\"A\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Look up a non-existent domain",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"dns_lookup\",\"args\":{\"domain\":\"thisdoesnotexist12345.com\"}}",
+    "category": "negative"
+  }
+]

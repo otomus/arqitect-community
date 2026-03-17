@@ -1,0 +1,30 @@
+{
+  "name": "json_extract_nerve",
+  "version": "1.0.0",
+  "description": "Parse and query JSON data",
+  "role": "tool",
+  "tags": [
+    "data",
+    "json"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "json_parse",
+      "implementations": {
+        "python": "mcp_tools/json_parse/tool.py"
+      }
+    },
+    {
+      "name": "json_query",
+      "implementations": {
+        "python": "mcp_tools/json_query/tool.py"
+      }
+    }
+  ]
+}

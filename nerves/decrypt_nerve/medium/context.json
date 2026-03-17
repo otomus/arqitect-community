@@ -1,0 +1,29 @@
+{
+  "system_prompt": "Decrypt encrypted text. Supports AES-256, RSA, automatic algorithm detection, and key validation.",
+  "few_shot_examples": [
+    {
+      "input": "Decrypt AES ciphertext",
+      "output": "Decrypted text: 'hello world'"
+    },
+    {
+      "input": "Decrypt with password",
+      "output": "Decrypted text using password-derived key successfully"
+    },
+    {
+      "input": "Decrypt RSA ciphertext",
+      "output": "Decrypted text using RSA private key successfully"
+    },
+    {
+      "input": "Decrypt with wrong key",
+      "output": "Error: decryption failed - invalid key or corrupted data"
+    },
+    {
+      "input": "Decrypt corrupted data",
+      "output": "Error: integrity check failed - ciphertext may be tampered with"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

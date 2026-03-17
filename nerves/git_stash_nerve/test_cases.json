@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Stash my current changes",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_stash\",\"args\":{}}",
+    "category": "core"
+  },
+  {
+    "input": "Pop the last stash",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_stash_pop\",\"args\":{}}",
+    "category": "core"
+  },
+  {
+    "input": "Stash with a message",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_stash\",\"args\":{\"message\":\"WIP: auth refactor\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Check status after stashing",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_status\",\"args\":{}}",
+    "category": "negative"
+  }
+]

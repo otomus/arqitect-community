@@ -1,0 +1,24 @@
+{
+  "name": "table_nerve",
+  "version": "1.0.0",
+  "description": "Format data as a readable table",
+  "role": "tool",
+  "tags": [
+    "visualization",
+    "table"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "table_format",
+      "implementations": {
+        "python": "mcp_tools/table_format/tool.py"
+      }
+    }
+  ]
+}

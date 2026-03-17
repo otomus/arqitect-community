@@ -1,0 +1,66 @@
+[
+  {
+    "input": "Table: Name=Alice Score=95; Name=Bob Score=87",
+    "context": {},
+    "output": {
+      "tool": "table_format",
+      "params": {
+        "headers": [
+          "Name",
+          "Score"
+        ],
+        "rows": [
+          [
+            "Alice",
+            "95"
+          ],
+          [
+            "Bob",
+            "87"
+          ]
+        ]
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Format as table: Red=5, Blue=3, Green=8",
+    "context": {},
+    "output": {
+      "tool": "table_format",
+      "params": {
+        "headers": [
+          "Color",
+          "Count"
+        ],
+        "rows": [
+          [
+            "Red",
+            "5"
+          ],
+          [
+            "Blue",
+            "3"
+          ],
+          [
+            "Green",
+            "8"
+          ]
+        ]
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Make a table",
+    "context": {},
+    "output": "I need data to format. Please provide headers and row data.",
+    "category": "edge"
+  },
+  {
+    "input": "Create a bar chart from this data",
+    "context": {},
+    "output": "I can only format data as text tables, not create charts.",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Convert this markdown to HTML: # Title\nSome text",
+    "context": {},
+    "output": "Markdown converted to HTML successfully at /tmp/output.html",
+    "category": "core"
+  },
+  {
+    "input": "Convert markdown to PDF at /docs/report.pdf",
+    "context": {},
+    "output": "Markdown converted to PDF successfully at /docs/report.pdf",
+    "category": "core"
+  },
+  {
+    "input": "Convert an empty markdown string to HTML",
+    "context": {},
+    "output": "Error: Cannot convert empty content.",
+    "category": "edge"
+  },
+  {
+    "input": "Convert a binary file to PDF",
+    "context": {},
+    "output": "Error: Input contains invalid characters for Markdown conversion.",
+    "category": "negative"
+  }
+]

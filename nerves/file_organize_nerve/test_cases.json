@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Move report.pdf to docs folder",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_move\",\"args\":{\"source\":\"report.pdf\",\"destination\":\"docs/report.pdf\"}}",
+    "category": "core"
+  },
+  {
+    "input": "List files in the downloads directory",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"dir_list\",\"args\":{\"path\":\"downloads\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Create an archive folder",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"dir_create\",\"args\":{\"path\":\"archive\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Rename old_name.txt to new_name.txt",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_move\",\"args\":{\"source\":\"old_name.txt\",\"destination\":\"new_name.txt\"}}",
+    "category": "negative"
+  }
+]

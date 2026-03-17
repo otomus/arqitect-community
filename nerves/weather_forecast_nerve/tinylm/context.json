@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Get weather forecast for a location. Return tool call JSON.",
+  "few_shot_examples": [
+    {
+      "input": "Forecast for Paris next 5 days",
+      "output": "{\"tool\": \"weather_forecast\", \"params\": {\"location\": \"Paris\", \"days\": 5}}"
+    },
+    {
+      "input": "Will it snow in Denver this week?",
+      "output": "{\"tool\": \"weather_forecast\", \"params\": {\"location\": \"Denver\", \"days\": 7}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

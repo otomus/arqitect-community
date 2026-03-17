@@ -1,0 +1,24 @@
+{
+  "name": "notification_nerve",
+  "version": "1.0.0",
+  "description": "Send a push notification",
+  "role": "tool",
+  "tags": [
+    "communication",
+    "notification"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "notification_send",
+      "implementations": {
+        "python": "mcp_tools/notification_send/tool.py"
+      }
+    }
+  ]
+}

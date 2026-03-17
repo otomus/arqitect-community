@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Watch the src directory for changes",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_watch\",\"args\":{\"path\":\"src\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Monitor config.yaml for modifications",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_watch\",\"args\":{\"path\":\"config.yaml\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Watch for new files in uploads folder",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_watch\",\"args\":{\"path\":\"uploads\",\"events\":[\"create\"]}}",
+    "category": "edge"
+  },
+  {
+    "input": "Stop watching a path",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_watch\",\"args\":{\"path\":\"src\",\"stop\":true}}",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Copy 'Hello World' to clipboard",
+    "context": {},
+    "output": "Written 'Hello World' to clipboard",
+    "category": "core"
+  },
+  {
+    "input": "Copy HTML to clipboard",
+    "context": {},
+    "output": "Written HTML content to clipboard (45 bytes)",
+    "category": "core"
+  },
+  {
+    "input": "Copy empty string",
+    "context": {},
+    "output": "Error: cannot write empty content to clipboard",
+    "category": "boundary"
+  },
+  {
+    "input": "Copy multiline text",
+    "context": {},
+    "output": "Written 5 lines of text to clipboard",
+    "category": "core"
+  },
+  {
+    "input": "Copy very large text",
+    "context": {},
+    "output": "Written 1.5MB of text to clipboard (truncation warning: some apps may not support large clipboard)",
+    "category": "edge"
+  }
+]

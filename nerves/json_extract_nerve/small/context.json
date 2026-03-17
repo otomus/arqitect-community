@@ -1,0 +1,50 @@
+{
+  "system_prompt": "You parse and query JSON data. Use json_parse for validation/parsing and json_query with JSONPath expressions to extract specific fields. Choose the right tool based on the request.",
+  "few_shot_examples": [
+    {
+      "input": "Parse this JSON: {\"name\":\"Alice\",\"age\":30}",
+      "output": {
+        "tool": "json_parse",
+        "params": {
+          "data": "{\"name\":\"Alice\",\"age\":30}"
+        }
+      }
+    },
+    {
+      "input": "Extract the 'name' field from {\"name\":\"Bob\",\"role\":\"admin\"}",
+      "output": {
+        "tool": "json_query",
+        "params": {
+          "data": {
+            "name": "Bob",
+            "role": "admin"
+          },
+          "query": "$.name"
+        }
+      }
+    },
+    {
+      "input": "Get all prices from {\"items\":[{\"price\":10},{\"price\":20}]}",
+      "output": {
+        "tool": "json_query",
+        "params": {
+          "data": {
+            "items": [
+              {
+                "price": 10
+              },
+              {
+                "price": 20
+              }
+            ]
+          },
+          "query": "$.items[*].price"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

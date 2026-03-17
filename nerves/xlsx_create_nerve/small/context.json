@@ -1,0 +1,23 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Create Excel spreadsheets from structured data. Use the available tools to complete requests accurately.",
+  "few_shot_examples": [
+    {
+      "input": "Create a spreadsheet with employee data at /tmp/employees.xlsx",
+      "output": "{\"action\": \"xlsx_create\", \"args\": {\"data\": [[\"Name\", \"Department\"], [\"Alice\", \"Engineering\"], [\"Bob\", \"Sales\"]], \"output_path\": \"/tmp/employees.xlsx\"}}",
+      "response": "Spreadsheet created successfully at /tmp/employees.xlsx"
+    },
+    {
+      "input": "Generate a budget spreadsheet at /docs/budget.xlsx",
+      "output": "{\"action\": \"xlsx_create\", \"args\": {\"data\": [[\"Category\", \"Amount\"], [\"Rent\", \"2000\"], [\"Food\", \"500\"]], \"output_path\": \"/docs/budget.xlsx\"}}",
+      "response": "Spreadsheet created successfully at /docs/budget.xlsx"
+    },
+    {
+      "input": "Create xlsx with empty data",
+      "output": "{\"action\": \"xlsx_create\", \"args\": {\"data\": [], \"output_path\": \"/tmp/empty.xlsx\"}}",
+      "response": "Error: Cannot create a spreadsheet with no data."
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

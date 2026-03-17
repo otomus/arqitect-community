@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Delete a note by title. Return tool call JSON.",
+  "few_shot_examples": [
+    {
+      "input": "Remove Travel Plans note",
+      "output": "{\"tool\": \"note_delete\", \"params\": {\"title\": \"Travel Plans\"}}"
+    },
+    {
+      "input": "Delete Recipes",
+      "output": "{\"tool\": \"note_delete\", \"params\": {\"title\": \"Recipes\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

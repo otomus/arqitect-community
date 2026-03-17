@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Get the transcript for https://youtube.com/watch?v=abc123",
+    "context": {},
+    "output": "{\"tool\": \"youtube_transcript\", \"params\": {\"url\": \"https://youtube.com/watch?v=abc123\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Transcribe this video: https://youtu.be/xyz789",
+    "context": {},
+    "output": "{\"tool\": \"youtube_transcript\", \"params\": {\"url\": \"https://youtu.be/xyz789\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Show captions for https://youtube.com/watch?v=def456",
+    "context": {},
+    "output": "{\"tool\": \"youtube_transcript\", \"params\": {\"url\": \"https://youtube.com/watch?v=def456\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Get transcript",
+    "context": {},
+    "output": "{\"error\": \"Please provide the YouTube video URL.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "Search YouTube for cooking videos",
+    "context": {},
+    "output": "{\"error\": \"I extract transcripts. To search YouTube, use the youtube search nerve.\"}",
+    "category": "negative"
+  }
+]

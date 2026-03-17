@@ -1,0 +1,23 @@
+{
+  "name": "social_read_nerve",
+  "version": "1.0.0",
+  "description": "Read a post or thread from a social media platform.",
+  "role": "tool",
+  "tags": [
+    "social",
+    "tool"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "get_timeline",
+      "mcp": "twitter",
+      "implementations": {}
+    }
+  ]
+}

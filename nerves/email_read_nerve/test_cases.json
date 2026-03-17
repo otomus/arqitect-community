@@ -1,0 +1,36 @@
+[
+  {
+    "input": "Read email #15",
+    "context": {},
+    "output": {
+      "tool": "email_read",
+      "params": {
+        "email_id": "15"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Show me email msg-def456",
+    "context": {},
+    "output": {
+      "tool": "email_read",
+      "params": {
+        "email_id": "msg-def456"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Read the latest email",
+    "context": {},
+    "output": "I need a specific email ID to read. Please provide the email ID.",
+    "category": "edge"
+  },
+  {
+    "input": "Delete email #5",
+    "context": {},
+    "output": "I can only read emails, not delete them.",
+    "category": "negative"
+  }
+]

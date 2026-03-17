@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Like this tweet: https://twitter.com/user/status/123",
+    "context": {},
+    "output": "{\"tool\": \"social_like\", \"params\": {\"url\": \"https://twitter.com/user/status/123\"}}",
+    "category": "core"
+  },
+  {
+    "input": "React to this Mastodon post: https://mastodon.social/@dev/456",
+    "context": {},
+    "output": "{\"tool\": \"social_like\", \"params\": {\"url\": \"https://mastodon.social/@dev/456\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Favorite https://bsky.app/profile/user/post/789",
+    "context": {},
+    "output": "{\"tool\": \"social_like\", \"params\": {\"url\": \"https://bsky.app/profile/user/post/789\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Like a post",
+    "context": {},
+    "output": "{\"error\": \"Please provide the URL of the post to like.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "Reply to this post with thanks",
+    "context": {},
+    "output": "{\"error\": \"I like/react to posts. To reply, use the social reply nerve.\"}",
+    "category": "negative"
+  }
+]

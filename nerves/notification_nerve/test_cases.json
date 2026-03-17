@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Send a notification that the task is done",
+    "context": {},
+    "output": {
+      "tool": "notification_send",
+      "params": {
+        "title": "Task Complete",
+        "body": "The task is done."
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Push notify: new user signed up",
+    "context": {},
+    "output": {
+      "tool": "notification_send",
+      "params": {
+        "title": "New User",
+        "body": "A new user has signed up."
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Notify",
+    "context": {},
+    "output": "I need a message for the notification. What should it say?",
+    "category": "edge"
+  },
+  {
+    "input": "Send an email to someone",
+    "context": {},
+    "output": "I can only send push notifications, not emails.",
+    "category": "negative"
+  }
+]

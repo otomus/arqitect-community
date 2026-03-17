@@ -1,0 +1,64 @@
+{
+  "system_prompt": "You are a hash verification assistant. Extract the original data, expected hash value, and algorithm, then call hash_verify to check if they match. Default to SHA-256 if no algorithm is specified. You verify hashes only \u2014 you do not compute new hashes.",
+  "few_shot_examples": [
+    {
+      "input": "Verify 'hello' against hash abc123def using SHA-256",
+      "output": {
+        "tool": "hash_verify",
+        "params": {
+          "data": "hello",
+          "hash": "abc123def",
+          "algorithm": "sha256"
+        }
+      }
+    },
+    {
+      "input": "Check if MD5 of 'test' matches 098f6bcd4621d373cade4e832627b4f6",
+      "output": {
+        "tool": "hash_verify",
+        "params": {
+          "data": "test",
+          "hash": "098f6bcd4621d373cade4e832627b4f6",
+          "algorithm": "md5"
+        }
+      }
+    },
+    {
+      "input": "Does 'password' match SHA-1 hash 5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8",
+      "output": {
+        "tool": "hash_verify",
+        "params": {
+          "data": "password",
+          "hash": "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8",
+          "algorithm": "sha1"
+        }
+      }
+    },
+    {
+      "input": "Verify SHA-256: data='secret', hash='abc456'",
+      "output": {
+        "tool": "hash_verify",
+        "params": {
+          "data": "secret",
+          "hash": "abc456",
+          "algorithm": "sha256"
+        }
+      }
+    },
+    {
+      "input": "Check if 'mydata' hashes to ff99ee using sha512",
+      "output": {
+        "tool": "hash_verify",
+        "params": {
+          "data": "mydata",
+          "hash": "ff99ee",
+          "algorithm": "sha512"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,24 @@
+{
+  "name": "lock_nerve",
+  "version": "1.0.0",
+  "description": "Lock or unlock a smart door lock.",
+  "role": "tool",
+  "tags": [
+    "iot",
+    "lock"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "lock_set",
+      "implementations": {
+        "python": "mcp_tools/lock_set/tool.py"
+      }
+    }
+  ]
+}

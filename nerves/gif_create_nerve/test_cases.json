@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Create a GIF from frames in /tmp/frames/ and save to /tmp/animation.gif",
+    "context": {},
+    "output": "GIF created successfully at /tmp/animation.gif with 3 frames",
+    "category": "core"
+  },
+  {
+    "input": "Make a slow GIF from two images",
+    "context": {},
+    "output": "GIF created successfully at /tmp/slow.gif with 2 frames at 500ms delay",
+    "category": "core"
+  },
+  {
+    "input": "Create a GIF with a single frame",
+    "context": {},
+    "output": "Warning: GIF created with only 1 frame. Consider adding more frames for animation.",
+    "category": "edge"
+  },
+  {
+    "input": "Create a GIF with no frames",
+    "context": {},
+    "output": "Error: Cannot create a GIF with no frames.",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "name": "email_search_nerve",
+  "version": "1.0.0",
+  "description": "Find emails matching a query",
+  "role": "tool",
+  "tags": [
+    "communication",
+    "email"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "search_emails",
+      "mcp": "email",
+      "implementations": {}
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "system_prompt": "You are a tool assistant. Download videos from URLs.",
+  "few_shot_examples": [
+    {
+      "input": "Download the video at https://example.com/tutorial.mp4",
+      "output": "{\"action\": \"video_download\", \"args\": {\"url\": \"https://example.com/tutorial.mp4\", \"output_path\": \"/tmp/tutorial.mp4\"}}",
+      "response": "Video downloaded successfully to /tmp/tutorial.mp4 (45MB)"
+    },
+    {
+      "input": "Save video from https://videos.example.com/demo.mp4 to /docs/demo.mp4",
+      "output": "{\"action\": \"video_download\", \"args\": {\"url\": \"https://videos.example.com/demo.mp4\", \"output_path\": \"/docs/demo.mp4\"}}",
+      "response": "Video downloaded successfully to /docs/demo.mp4 (120MB)"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

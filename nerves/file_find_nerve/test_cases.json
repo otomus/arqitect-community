@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Find all Python files",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_search\",\"args\":{\"pattern\":\"*.py\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Search for TODO comments in source files",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_grep\",\"args\":{\"pattern\":\"TODO\",\"path\":\"src\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Find files named config",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_search\",\"args\":{\"pattern\":\"*config*\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Grep for 'import os' across the project",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"file_grep\",\"args\":{\"pattern\":\"import os\"}}",
+    "category": "negative"
+  }
+]

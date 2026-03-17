@@ -1,0 +1,25 @@
+{
+  "name": "calendar_remove_nerve",
+  "version": "1.0.0",
+  "description": "Delete a calendar event by its identifier or title.",
+  "role": "tool",
+  "tags": [
+    "calendar",
+    "productivity",
+    "tool"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "calendar_delete_event",
+      "implementations": {
+        "python": "mcp_tools/calendar_delete_event/tool.py"
+      }
+    }
+  ]
+}

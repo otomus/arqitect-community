@@ -1,0 +1,25 @@
+{
+  "name": "image_resize_nerve",
+  "version": "1.0.0",
+  "description": "Resize images to specified dimensions.",
+  "role": "tool",
+  "tags": [
+    "image",
+    "resize",
+    "transform"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "image_resize",
+      "implementations": {
+        "python": "mcp_tools/image_resize/tool.py"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Set speaker volume. Extract volume level and optional speaker_id, call speaker_volume. Return JSON only.",
+  "few_shot_examples": [
+    {
+      "input": "Set volume to 50",
+      "output": "{\"tool\": \"speaker_volume\", \"params\": {\"volume\": 50}}"
+    },
+    {
+      "input": "Turn up the living room speaker to 80",
+      "output": "{\"tool\": \"speaker_volume\", \"params\": {\"speaker_id\": \"living_room\", \"volume\": 80}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

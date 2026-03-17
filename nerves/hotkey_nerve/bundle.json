@@ -1,0 +1,25 @@
+{
+  "name": "hotkey_nerve",
+  "version": "1.0.0",
+  "description": "Press a keyboard shortcut",
+  "role": "tool",
+  "tags": [
+    "desktop",
+    "keyboard",
+    "shortcut"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "keyboard_press",
+      "implementations": {
+        "python": "mcp_tools/keyboard_press/tool.py"
+      }
+    }
+  ]
+}

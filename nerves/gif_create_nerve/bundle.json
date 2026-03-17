@@ -1,0 +1,25 @@
+{
+  "name": "gif_create_nerve",
+  "version": "1.0.0",
+  "description": "Create animated GIF images from a sequence of frames.",
+  "role": "creative",
+  "tags": [
+    "gif",
+    "create",
+    "animation"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "gif_create",
+      "implementations": {
+        "python": "mcp_tools/gif_create/tool.py"
+      }
+    }
+  ]
+}

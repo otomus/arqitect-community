@@ -1,0 +1,26 @@
+[
+  {
+    "input": "List all branches",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_branch_list\",\"args\":{}}",
+    "category": "core"
+  },
+  {
+    "input": "Delete the feature/old branch",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_branch_delete\",\"args\":{\"name\":\"feature/old\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Show merged branches",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_branch_list\",\"args\":{\"merged\":true}}",
+    "category": "edge"
+  },
+  {
+    "input": "Force delete an unmerged branch",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_branch_delete\",\"args\":{\"name\":\"experiment\",\"force\":true}}",
+    "category": "negative"
+  }
+]

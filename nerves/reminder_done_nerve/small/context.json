@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You mark reminders as complete. Parse the request to identify the reminder by title. Return a tool call to reminder_complete with the title parameter.",
+  "few_shot_examples": [
+    {
+      "input": "I finished picking up dry cleaning",
+      "output": "{\"tool\": \"reminder_complete\", \"params\": {\"title\": \"Pick up dry cleaning\"}}"
+    },
+    {
+      "input": "Mark water plants as done",
+      "output": "{\"tool\": \"reminder_complete\", \"params\": {\"title\": \"Water plants\"}}"
+    },
+    {
+      "input": "Done with the invoice",
+      "output": "{\"tool\": \"reminder_complete\", \"params\": {\"title\": \"Send invoice\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

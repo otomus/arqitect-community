@@ -1,0 +1,32 @@
+[
+  {
+    "input": "List running containers",
+    "context": {},
+    "output": "[{\"id\":\"abc123\",\"image\":\"nginx\",\"status\":\"Up 2 hours\",\"ports\":\"80/tcp\"}]",
+    "category": "core"
+  },
+  {
+    "input": "List all containers",
+    "context": {},
+    "output": "[{\"id\":\"abc123\",\"status\":\"Up 2 hours\"},{\"id\":\"def456\",\"status\":\"Exited (0) 1 hour ago\"}]",
+    "category": "core"
+  },
+  {
+    "input": "List containers when none running",
+    "context": {},
+    "output": "No running containers found",
+    "category": "boundary"
+  },
+  {
+    "input": "Filter containers by image nginx",
+    "context": {},
+    "output": "[{\"id\":\"abc123\",\"image\":\"nginx\",\"status\":\"Up 2 hours\"}]",
+    "category": "core"
+  },
+  {
+    "input": "List containers with resource usage",
+    "context": {},
+    "output": "[{\"id\":\"abc123\",\"cpu\":\"0.5%\",\"memory\":\"50MB/512MB\"}]",
+    "category": "edge"
+  }
+]

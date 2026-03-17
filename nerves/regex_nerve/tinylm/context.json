@@ -1,0 +1,30 @@
+{
+  "system_prompt": "You match/replace with regex. Use regex_match or regex_replace.",
+  "few_shot_examples": [
+    {
+      "input": "Find all emails in 'Contact us at info@test.com or help@test.com'",
+      "output": {
+        "tool": "regex_match",
+        "params": {
+          "text": "Contact us at info@test.com or help@test.com",
+          "pattern": "[\\w.+-]+@[\\w-]+\\.[\\w.]+"
+        }
+      }
+    },
+    {
+      "input": "Replace all digits in 'abc123def456' with X",
+      "output": {
+        "tool": "regex_replace",
+        "params": {
+          "text": "abc123def456",
+          "pattern": "\\d",
+          "replacement": "X"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

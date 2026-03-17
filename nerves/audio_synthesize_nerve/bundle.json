@@ -1,0 +1,24 @@
+{
+  "name": "audio_synthesize_nerve",
+  "version": "1.0.0",
+  "description": "Convert text to speech audio.",
+  "role": "tool",
+  "tags": [
+    "audio",
+    "tts",
+    "speech"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "text_to_speech",
+      "mcp": "voice",
+      "implementations": {}
+    }
+  ]
+}

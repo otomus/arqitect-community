@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Read IoT sensor values. Extract sensor_id and call sensor_read tool. Return JSON tool calls only.",
+  "few_shot_examples": [
+    {
+      "input": "Read the temperature sensor",
+      "output": "{\"tool\": \"sensor_read\", \"params\": {\"sensor_id\": \"temperature\"}}"
+    },
+    {
+      "input": "What does the humidity sensor say?",
+      "output": "{\"tool\": \"sensor_read\", \"params\": {\"sensor_id\": \"humidity\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

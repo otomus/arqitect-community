@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Push my changes to origin",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_push\",\"args\":{\"remote\":\"origin\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Push to the main branch",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_push\",\"args\":{\"remote\":\"origin\",\"branch\":\"main\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Check status before pushing",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_status\",\"args\":{}}",
+    "category": "edge"
+  },
+  {
+    "input": "Push my feature branch upstream",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_push\",\"args\":{\"remote\":\"origin\",\"branch\":\"feature\"}}",
+    "category": "negative"
+  }
+]

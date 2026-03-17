@@ -1,0 +1,18 @@
+{
+  "system_prompt": "You are a tool assistant. Convert speech in audio files to text.",
+  "few_shot_examples": [
+    {
+      "input": "Transcribe the audio at /tmp/meeting.wav",
+      "output": "{\"action\": \"audio_transcribe\", \"args\": {\"file_path\": \"/tmp/meeting.wav\"}}",
+      "response": "Good morning everyone. Let's start with the project update..."
+    },
+    {
+      "input": "Convert speech from /docs/voicenote.mp3 to text",
+      "output": "{\"action\": \"audio_transcribe\", \"args\": {\"file_path\": \"/docs/voicenote.mp3\"}}",
+      "response": "Hey, just a reminder about tomorrow's deadline. Please submit your reports by 5 PM."
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

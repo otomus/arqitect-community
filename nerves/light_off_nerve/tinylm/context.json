@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Turn lights off. Extract light_id and call light_set with state=off. Return JSON only.",
+  "few_shot_examples": [
+    {
+      "input": "Turn off the living room light",
+      "output": "{\"tool\": \"light_set\", \"params\": {\"light_id\": \"living_room\", \"state\": \"off\"}}"
+    },
+    {
+      "input": "Switch off the bedroom light",
+      "output": "{\"tool\": \"light_set\", \"params\": {\"light_id\": \"bedroom\", \"state\": \"off\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

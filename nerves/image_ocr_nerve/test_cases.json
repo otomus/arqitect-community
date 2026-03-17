@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Extract text from /tmp/receipt.jpg",
+    "context": {},
+    "output": "Store: SuperMart\nDate: 2025-01-15\nTotal: $42.99",
+    "category": "core"
+  },
+  {
+    "input": "OCR the whiteboard photo at /docs/whiteboard.png",
+    "context": {},
+    "output": "Sprint Goals:\n1. Complete API integration\n2. Fix login bug\n3. Deploy v2.0",
+    "category": "core"
+  },
+  {
+    "input": "Extract text from a blank image",
+    "context": {},
+    "output": "No text detected in the image.",
+    "category": "edge"
+  },
+  {
+    "input": "OCR a non-image file",
+    "context": {},
+    "output": "Error: The file is not a valid image format.",
+    "category": "negative"
+  }
+]

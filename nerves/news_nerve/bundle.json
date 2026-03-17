@@ -1,0 +1,25 @@
+{
+  "name": "news_nerve",
+  "version": "1.0.0",
+  "description": "Fetch latest news on a topic",
+  "role": "tool",
+  "tags": [
+    "news",
+    "fetch",
+    "headlines"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "news_fetch",
+      "implementations": {
+        "python": "mcp_tools/news_fetch/tool.py"
+      }
+    }
+  ]
+}

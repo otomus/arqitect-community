@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Fetch the Hacker News RSS feed",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"rss_fetch\",\"args\":{\"url\":\"https://news.ycombinator.com/rss\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Get latest posts from a blog RSS",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"rss_fetch\",\"args\":{\"url\":\"https://blog.example.com/feed.xml\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Check for new items in a podcast feed",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"rss_fetch\",\"args\":{\"url\":\"https://podcast.example.com/feed\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Fetch from an invalid feed URL",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"rss_fetch\",\"args\":{\"url\":\"https://example.com/not-a-feed\"}}",
+    "category": "negative"
+  }
+]

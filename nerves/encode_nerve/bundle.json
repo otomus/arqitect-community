@@ -1,0 +1,30 @@
+{
+  "name": "encode_nerve",
+  "version": "1.0.0",
+  "description": "Encode or decode base64 data",
+  "role": "tool",
+  "tags": [
+    "data",
+    "encoding"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "base64_encode",
+      "implementations": {
+        "python": "mcp_tools/base64_encode/tool.py"
+      }
+    },
+    {
+      "name": "base64_decode",
+      "implementations": {
+        "python": "mcp_tools/base64_decode/tool.py"
+      }
+    }
+  ]
+}

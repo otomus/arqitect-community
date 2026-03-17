@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Read this tweet: https://twitter.com/user/status/123",
+    "context": {},
+    "output": "{\"tool\": \"social_read\", \"params\": {\"url\": \"https://twitter.com/user/status/123\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Show me this Mastodon post: https://mastodon.social/@user/456",
+    "context": {},
+    "output": "{\"tool\": \"social_read\", \"params\": {\"url\": \"https://mastodon.social/@user/456\"}}",
+    "category": "core"
+  },
+  {
+    "input": "What does this post say? https://bsky.app/profile/user/post/789",
+    "context": {},
+    "output": "{\"tool\": \"social_read\", \"params\": {\"url\": \"https://bsky.app/profile/user/post/789\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Read a post",
+    "context": {},
+    "output": "{\"error\": \"Please provide the URL of the post to read.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "Post something on Twitter",
+    "context": {},
+    "output": "{\"error\": \"I read posts. To publish a post, use the social post nerve.\"}",
+    "category": "negative"
+  }
+]

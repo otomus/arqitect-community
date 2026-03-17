@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You create calendar events. Parse the request to extract the event title, date, and time. Return a tool call to calendar_create_event with those parameters.",
+  "few_shot_examples": [
+    {
+      "input": "Schedule yoga class Wednesday 7am",
+      "output": "{\"tool\": \"calendar_create_event\", \"params\": {\"title\": \"Yoga class\", \"date\": \"Wednesday\", \"time\": \"07:00\"}}"
+    },
+    {
+      "input": "Add team review Friday at 3:30pm",
+      "output": "{\"tool\": \"calendar_create_event\", \"params\": {\"title\": \"Team review\", \"date\": \"Friday\", \"time\": \"15:30\"}}"
+    },
+    {
+      "input": "Create dentist appointment next Tuesday 10am",
+      "output": "{\"tool\": \"calendar_create_event\", \"params\": {\"title\": \"Dentist appointment\", \"date\": \"next Tuesday\", \"time\": \"10:00\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

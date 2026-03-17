@@ -1,0 +1,29 @@
+{
+  "system_prompt": "Execute a command inside a running Docker container. Supports interactive mode, environment variables, working directory, and user specification.",
+  "few_shot_examples": [
+    {
+      "input": "Run ls in container abc123",
+      "output": "/app\n/etc\n/var"
+    },
+    {
+      "input": "Run bash in container",
+      "output": "Opened interactive shell in container abc123"
+    },
+    {
+      "input": "Run command as specific user",
+      "output": "Executed 'whoami' as user www-data in container abc123"
+    },
+    {
+      "input": "Exec in stopped container",
+      "output": "Error: container abc123 is not running"
+    },
+    {
+      "input": "Exec missing command",
+      "output": "Error: executable 'python4' not found in container abc123"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

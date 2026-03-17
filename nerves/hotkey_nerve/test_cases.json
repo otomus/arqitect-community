@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Press Ctrl+C",
+    "context": {},
+    "output": "Pressed keyboard shortcut Ctrl+C",
+    "category": "core"
+  },
+  {
+    "input": "Press Cmd+V",
+    "context": {},
+    "output": "Pressed keyboard shortcut Cmd+V",
+    "category": "core"
+  },
+  {
+    "input": "Press invalid key combo",
+    "context": {},
+    "output": "Error: unknown key 'SuperDuper'",
+    "category": "boundary"
+  },
+  {
+    "input": "Press F5",
+    "context": {},
+    "output": "Pressed function key F5",
+    "category": "core"
+  },
+  {
+    "input": "Press Ctrl+Shift+Alt+Delete",
+    "context": {},
+    "output": "Pressed keyboard shortcut Ctrl+Shift+Alt+Delete",
+    "category": "edge"
+  }
+]

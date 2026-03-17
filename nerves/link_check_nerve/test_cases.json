@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Is https://example.com alive?",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"http_get\",\"args\":{\"url\":\"https://example.com\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Check if https://api.example.com/health responds",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"http_get\",\"args\":{\"url\":\"https://api.example.com/health\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Verify this documentation link works",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"http_get\",\"args\":{\"url\":\"https://docs.example.com/guide\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Check a broken link",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"http_get\",\"args\":{\"url\":\"https://example.com/nonexistent-page\"}}",
+    "category": "negative"
+  }
+]

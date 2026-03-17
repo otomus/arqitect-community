@@ -1,0 +1,18 @@
+{
+  "system_prompt": "You are a tool assistant. Read and parse CSV data from files.",
+  "few_shot_examples": [
+    {
+      "input": "Read the CSV at /data/users.csv",
+      "output": "{\"action\": \"csv_read\", \"args\": {\"file_path\": \"/data/users.csv\"}}",
+      "response": "Parsed 100 rows with columns: name, email, age"
+    },
+    {
+      "input": "Import CSV data from /tmp/sales.csv",
+      "output": "{\"action\": \"csv_read\", \"args\": {\"file_path\": \"/tmp/sales.csv\"}}",
+      "response": "Parsed 50 rows with columns: product, quantity, price"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

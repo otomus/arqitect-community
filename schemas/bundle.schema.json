@@ -47,10 +47,9 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["name", "spec"],
+        "required": ["name"],
         "properties": {
-          "name": { "type": "string" },
-          "spec": { "type": "string", "description": "Relative path to spec.json" },
+          "name": { "type": "string", "description": "Tool name — resolved from mcp_tools/{name}/meta.json or mcps/{name}/meta.json" },
           "implementations": {
             "type": "object",
             "description": "Language -> relative path to implementation file",

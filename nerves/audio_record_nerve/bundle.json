@@ -1,0 +1,25 @@
+{
+  "name": "audio_record_nerve",
+  "version": "1.0.0",
+  "description": "Record audio from the system microphone.",
+  "role": "tool",
+  "tags": [
+    "audio",
+    "record",
+    "microphone"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "audio_record",
+      "implementations": {
+        "python": "mcp_tools/audio_record/tool.py"
+      }
+    }
+  ]
+}

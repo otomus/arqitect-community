@@ -1,0 +1,26 @@
+[
+  {
+    "input": "GET https://api.example.com/users",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"http_get\",\"args\":{\"url\":\"https://api.example.com/users\"}}",
+    "category": "core"
+  },
+  {
+    "input": "POST data to https://api.example.com/submit",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"http_post\",\"args\":{\"url\":\"https://api.example.com/submit\",\"body\":{\"key\":\"value\"}}}",
+    "category": "core"
+  },
+  {
+    "input": "Fetch JSON from an API endpoint",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"http_get\",\"args\":{\"url\":\"https://api.example.com/data\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Send a POST with empty body",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"http_post\",\"args\":{\"url\":\"https://api.example.com/ping\",\"body\":{}}}",
+    "category": "negative"
+  }
+]

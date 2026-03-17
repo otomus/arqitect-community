@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Extract frames from /tmp/clip.mp4 every 2 seconds",
+    "context": {},
+    "output": "Extracted 15 frames from /tmp/clip.mp4 to /tmp/frames/",
+    "category": "core"
+  },
+  {
+    "input": "Get frames from /docs/demo.mp4 at 1fps",
+    "context": {},
+    "output": "Extracted 60 frames from /docs/demo.mp4 to /docs/frames/",
+    "category": "core"
+  },
+  {
+    "input": "Extract frames with 0 interval",
+    "context": {},
+    "output": "Error: Frame interval must be a positive number.",
+    "category": "edge"
+  },
+  {
+    "input": "Extract frames from non-video file",
+    "context": {},
+    "output": "Error: The file is not a valid video format.",
+    "category": "negative"
+  }
+]

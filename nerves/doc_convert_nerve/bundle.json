@@ -1,0 +1,43 @@
+{
+  "name": "doc_convert_nerve",
+  "version": "1.0.0",
+  "description": "Convert documents between formats such as Markdown to HTML or PDF.",
+  "role": "tool",
+  "tags": [
+    "document",
+    "convert",
+    "format"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "markdown_to_html",
+      "implementations": {
+        "python": "mcp_tools/markdown_to_html/tool.py"
+      }
+    },
+    {
+      "name": "markdown_to_pdf",
+      "implementations": {
+        "python": "mcp_tools/markdown_to_pdf/tool.py"
+      }
+    },
+    {
+      "name": "docx_read",
+      "implementations": {
+        "python": "mcp_tools/docx_read/tool.py"
+      }
+    },
+    {
+      "name": "pdf_create",
+      "implementations": {
+        "python": "mcp_tools/pdf_create/tool.py"
+      }
+    }
+  ]
+}

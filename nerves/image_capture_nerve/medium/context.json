@@ -1,0 +1,33 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Capture a screenshot of the current screen. Use the available tools to complete user requests accurately. Always validate inputs before processing. Provide clear error messages when operations cannot be completed. Return structured results that include relevant metadata about the operation performed.",
+  "few_shot_examples": [
+    {
+      "input": "Take a screenshot and save it to /tmp/screen.png",
+      "output": "{\"action\": \"image_capture\", \"args\": {\"output_path\": \"/tmp/screen.png\"}}",
+      "response": "Screenshot captured successfully at /tmp/screen.png"
+    },
+    {
+      "input": "Capture my screen to /docs/capture.png",
+      "output": "{\"action\": \"image_capture\", \"args\": {\"output_path\": \"/docs/capture.png\"}}",
+      "response": "Screenshot captured successfully at /docs/capture.png"
+    },
+    {
+      "input": "Take a screenshot on a headless server",
+      "output": "{\"action\": \"image_capture\", \"args\": {\"output_path\": \"/tmp/screen.png\"}}",
+      "response": "Error: No display available. Cannot capture screenshot on a headless system."
+    },
+    {
+      "input": "Capture screenshot to invalid path",
+      "output": "{\"action\": \"image_capture\", \"args\": {\"output_path\": \"/no/dir/shot.png\"}}",
+      "response": "Error: Directory /no/dir does not exist."
+    },
+    {
+      "input": "Please take a screenshot and save it to /tmp/screen.png",
+      "output": "{\"action\": \"image_capture\", \"args\": {\"output_path\": \"/tmp/screen.png\"}}",
+      "response": "Screenshot captured successfully at /tmp/screen.png"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

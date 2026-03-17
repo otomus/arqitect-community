@@ -1,0 +1,18 @@
+{
+  "system_prompt": "You are a tool assistant. Convert documents between formats such as Markdown to HTML or PDF.",
+  "few_shot_examples": [
+    {
+      "input": "Convert this markdown to HTML: # Title\nSome text",
+      "output": "{\"action\": \"markdown_to_html\", \"args\": {\"markdown\": \"# Title\\nSome text\", \"output_path\": \"/tmp/output.html\"}}",
+      "response": "Markdown converted to HTML successfully at /tmp/output.html"
+    },
+    {
+      "input": "Convert markdown to PDF at /docs/report.pdf",
+      "output": "{\"action\": \"markdown_to_pdf\", \"args\": {\"markdown\": \"# Report\\n\\n## Summary\\nKey findings...\", \"output_path\": \"/docs/report.pdf\"}}",
+      "response": "Markdown converted to PDF successfully at /docs/report.pdf"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

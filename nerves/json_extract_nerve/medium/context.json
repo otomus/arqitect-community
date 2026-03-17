@@ -1,0 +1,73 @@
+{
+  "system_prompt": "You are a JSON parsing and querying assistant. Use json_parse to validate and parse raw JSON strings. Use json_query with JSONPath expressions ($.field, $.array[*].prop) to extract specific values from JSON objects. Choose the appropriate tool based on whether the user wants parsing/validation or data extraction.",
+  "few_shot_examples": [
+    {
+      "input": "Parse this JSON: {\"name\":\"Alice\",\"age\":30}",
+      "output": {
+        "tool": "json_parse",
+        "params": {
+          "data": "{\"name\":\"Alice\",\"age\":30}"
+        }
+      }
+    },
+    {
+      "input": "Extract the 'name' field from {\"name\":\"Bob\",\"role\":\"admin\"}",
+      "output": {
+        "tool": "json_query",
+        "params": {
+          "data": {
+            "name": "Bob",
+            "role": "admin"
+          },
+          "query": "$.name"
+        }
+      }
+    },
+    {
+      "input": "Get all prices from {\"items\":[{\"price\":10},{\"price\":20}]}",
+      "output": {
+        "tool": "json_query",
+        "params": {
+          "data": {
+            "items": [
+              {
+                "price": 10
+              },
+              {
+                "price": 20
+              }
+            ]
+          },
+          "query": "$.items[*].price"
+        }
+      }
+    },
+    {
+      "input": "Parse and validate: [1,2,3]",
+      "output": {
+        "tool": "json_parse",
+        "params": {
+          "data": "[1,2,3]"
+        }
+      }
+    },
+    {
+      "input": "Query the status from {\"response\":{\"status\":\"ok\"}}",
+      "output": {
+        "tool": "json_query",
+        "params": {
+          "data": {
+            "response": {
+              "status": "ok"
+            }
+          },
+          "query": "$.response.status"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

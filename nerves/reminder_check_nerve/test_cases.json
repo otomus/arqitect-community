@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Show my reminders",
+    "context": {},
+    "output": "{\"tool\": \"reminder_list\", \"params\": {}}",
+    "category": "core"
+  },
+  {
+    "input": "What reminders do I have?",
+    "context": {},
+    "output": "{\"tool\": \"reminder_list\", \"params\": {}}",
+    "category": "core"
+  },
+  {
+    "input": "List pending tasks",
+    "context": {},
+    "output": "{\"tool\": \"reminder_list\", \"params\": {}}",
+    "category": "core"
+  },
+  {
+    "input": "Reminders",
+    "context": {},
+    "output": "{\"tool\": \"reminder_list\", \"params\": {}}",
+    "category": "boundary"
+  },
+  {
+    "input": "Remind me to call the bank",
+    "context": {},
+    "output": "{\"error\": \"I list reminders. To create a reminder, use the reminder create nerve.\"}",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Remind me to buy groceries tomorrow",
+    "context": {},
+    "output": "{\"tool\": \"reminder_create\", \"params\": {\"title\": \"Buy groceries\", \"due\": \"tomorrow\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Set a reminder to call mom at 5pm",
+    "context": {},
+    "output": "{\"tool\": \"reminder_create\", \"params\": {\"title\": \"Call mom\", \"due\": \"17:00\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Add reminder: submit report by Friday",
+    "context": {},
+    "output": "{\"tool\": \"reminder_create\", \"params\": {\"title\": \"Submit report\", \"due\": \"Friday\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Remind me",
+    "context": {},
+    "output": "{\"error\": \"Please specify what to be reminded about.\"}",
+    "category": "boundary"
+  },
+  {
+    "input": "Show my reminders",
+    "context": {},
+    "output": "{\"error\": \"I create reminders. To list reminders, use the reminder check nerve.\"}",
+    "category": "negative"
+  }
+]

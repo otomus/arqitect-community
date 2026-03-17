@@ -1,0 +1,29 @@
+{
+  "system_prompt": "Scroll in a direction on screen. Supports vertical and horizontal scrolling, configurable scroll amount, smooth scrolling, pixel-precise scrolling, and scroll-to-element. Handle scroll boundaries, nested scrollable areas, and momentum scrolling.",
+  "few_shot_examples": [
+    {
+      "input": "Scroll down 3 clicks",
+      "output": "Scrolled down 3 clicks at current position"
+    },
+    {
+      "input": "Scroll up at position 500,300",
+      "output": "Scrolled up 1 click at position (500, 300)"
+    },
+    {
+      "input": "Scroll horizontally right",
+      "output": "Scrolled right 2 clicks at current position"
+    },
+    {
+      "input": "Scroll with zero amount",
+      "output": "Error: scroll amount must be non-zero"
+    },
+    {
+      "input": "Smooth scroll down",
+      "output": "Smooth-scrolled down 500 pixels over 300ms"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

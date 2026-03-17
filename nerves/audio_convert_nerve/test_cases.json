@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Convert /tmp/recording.wav to MP3",
+    "context": {},
+    "output": "Audio converted from WAV to MP3 at /tmp/recording.mp3",
+    "category": "core"
+  },
+  {
+    "input": "Convert /docs/podcast.mp3 to WAV format",
+    "context": {},
+    "output": "Audio converted from MP3 to WAV at /docs/podcast.wav",
+    "category": "core"
+  },
+  {
+    "input": "Convert to unsupported format",
+    "context": {},
+    "output": "Error: Unsupported format 'xyz'. Supported: mp3, wav, ogg, flac, aac.",
+    "category": "edge"
+  },
+  {
+    "input": "Convert non-existent audio file",
+    "context": {},
+    "output": "Error: File not found at /tmp/missing.wav",
+    "category": "negative"
+  }
+]

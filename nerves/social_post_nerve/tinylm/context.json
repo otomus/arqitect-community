@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Publish a social media post. Return tool call JSON.",
+  "few_shot_examples": [
+    {
+      "input": "Tweet: Working on something exciting!",
+      "output": "{\"tool\": \"social_post\", \"params\": {\"platform\": \"twitter\", \"content\": \"Working on something exciting!\"}}"
+    },
+    {
+      "input": "Post on Bluesky: Loving the decentralized web",
+      "output": "{\"tool\": \"social_post\", \"params\": {\"platform\": \"bluesky\", \"content\": \"Loving the decentralized web\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

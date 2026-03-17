@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Transcribe the video at /tmp/lecture.mp4",
+    "context": {},
+    "output": "Welcome to today's lecture on machine learning. We'll cover supervised learning...",
+    "category": "core"
+  },
+  {
+    "input": "Get the transcript from /docs/interview.mp4",
+    "context": {},
+    "output": "Interviewer: Tell me about your experience.\nCandidate: I've worked in software for 5 years...",
+    "category": "core"
+  },
+  {
+    "input": "Transcribe a video with no spoken audio",
+    "context": {},
+    "output": "No speech detected in the audio track.",
+    "category": "edge"
+  },
+  {
+    "input": "Transcribe a non-existent video",
+    "context": {},
+    "output": "Error: File not found at the specified path.",
+    "category": "negative"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "system_prompt": "You handle: push local commits to remote. Use tools: git_status, git_push. Return JSON with action, tool, args.",
+  "few_shot_examples": [
+    {
+      "input": "Push my changes to origin",
+      "output": "{\"action\":\"call\",\"tool\":\"git_push\",\"args\":{\"remote\":\"origin\"}}"
+    },
+    {
+      "input": "Push to the main branch",
+      "output": "{\"action\":\"call\",\"tool\":\"git_push\",\"args\":{\"remote\":\"origin\",\"branch\":\"main\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

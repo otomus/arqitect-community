@@ -1,0 +1,21 @@
+{
+  "system_prompt": "Capture a screen region and extract text using OCR",
+  "few_shot_examples": [
+    {
+      "input": "Read text from region 0,0,500,200",
+      "output": "Extracted text: 'Welcome to Dashboard'"
+    },
+    {
+      "input": "Read full screen text",
+      "output": "Extracted 245 characters from full screen capture"
+    },
+    {
+      "input": "Read from off-screen region",
+      "output": "Error: region extends beyond screen bounds"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

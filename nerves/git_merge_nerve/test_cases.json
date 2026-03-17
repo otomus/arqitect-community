@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Merge feature/auth into current branch",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_merge\",\"args\":{\"branch\":\"feature/auth\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Merge develop into main",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_merge\",\"args\":{\"branch\":\"develop\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Check status before merging",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_status\",\"args\":{}}",
+    "category": "edge"
+  },
+  {
+    "input": "Show merge history",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_log\",\"args\":{\"merges\":true}}",
+    "category": "negative"
+  }
+]

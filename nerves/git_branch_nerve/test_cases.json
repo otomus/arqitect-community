@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Create a branch called feature/auth",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_branch_create\",\"args\":{\"name\":\"feature/auth\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Switch to the develop branch",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_checkout\",\"args\":{\"branch\":\"develop\"}}",
+    "category": "core"
+  },
+  {
+    "input": "Create and switch to bugfix/login",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_branch_create\",\"args\":{\"name\":\"bugfix/login\"}}",
+    "category": "edge"
+  },
+  {
+    "input": "Go back to main branch",
+    "context": {},
+    "output": "{\"action\":\"call\",\"tool\":\"git_checkout\",\"args\":{\"branch\":\"main\"}}",
+    "category": "negative"
+  }
+]

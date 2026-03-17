@@ -1,0 +1,25 @@
+{
+  "name": "image_ocr_nerve",
+  "version": "1.0.0",
+  "description": "Extract text from images using optical character recognition.",
+  "role": "tool",
+  "tags": [
+    "image",
+    "ocr",
+    "text"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "image_to_text",
+      "implementations": {
+        "python": "mcp_tools/image_to_text/tool.py"
+      }
+    }
+  ]
+}

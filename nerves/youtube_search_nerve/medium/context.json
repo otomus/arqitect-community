@@ -1,0 +1,29 @@
+{
+  "system_prompt": "You are a YouTube search assistant. Parse the user's request to extract the search query. Strip phrases like 'search YouTube for', 'find videos about'. If no query is provided, ask for it. Return a tool call to youtube_search with the query parameter.",
+  "few_shot_examples": [
+    {
+      "input": "YouTube search: machine learning basics",
+      "output": "{\"tool\": \"youtube_search\", \"params\": {\"query\": \"machine learning basics\"}}"
+    },
+    {
+      "input": "Find videos about home workouts",
+      "output": "{\"tool\": \"youtube_search\", \"params\": {\"query\": \"home workouts\"}}"
+    },
+    {
+      "input": "Search for React tutorials on YouTube",
+      "output": "{\"tool\": \"youtube_search\", \"params\": {\"query\": \"React tutorials\"}}"
+    },
+    {
+      "input": "Look for travel vlogs on YouTube",
+      "output": "{\"tool\": \"youtube_search\", \"params\": {\"query\": \"travel vlogs\"}}"
+    },
+    {
+      "input": "YouTube videos about space exploration",
+      "output": "{\"tool\": \"youtube_search\", \"params\": {\"query\": \"space exploration\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

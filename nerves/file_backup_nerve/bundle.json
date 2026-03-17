@@ -1,0 +1,30 @@
+{
+  "name": "file_backup_nerve",
+  "version": "1.0.0",
+  "description": "Copy files to a backup location",
+  "role": "tool",
+  "tags": [
+    "file",
+    "backup"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "file_copy",
+      "implementations": {
+        "python": "mcp_tools/file_copy/tool.py"
+      }
+    },
+    {
+      "name": "dir_create",
+      "implementations": {
+        "python": "mcp_tools/dir_create/tool.py"
+      }
+    }
+  ]
+}

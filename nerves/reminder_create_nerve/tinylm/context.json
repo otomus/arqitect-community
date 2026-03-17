@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Create a reminder. Return tool call JSON with title and due date.",
+  "few_shot_examples": [
+    {
+      "input": "Remind me to water plants",
+      "output": "{\"tool\": \"reminder_create\", \"params\": {\"title\": \"Water plants\"}}"
+    },
+    {
+      "input": "Set reminder: pick up dry cleaning tomorrow",
+      "output": "{\"tool\": \"reminder_create\", \"params\": {\"title\": \"Pick up dry cleaning\", \"due\": \"tomorrow\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

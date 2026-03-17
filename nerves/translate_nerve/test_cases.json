@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Translate 'hello' to Spanish",
+    "context": {},
+    "output": "Translation: 'hola' (English -> Spanish)",
+    "category": "core"
+  },
+  {
+    "input": "Translate with auto-detect",
+    "context": {},
+    "output": "Detected language: French. Translation: 'Good morning' (French -> English)",
+    "category": "core"
+  },
+  {
+    "input": "Translate to unsupported language",
+    "context": {},
+    "output": "Error: language 'Klingon' is not supported",
+    "category": "boundary"
+  },
+  {
+    "input": "Translate formal text",
+    "context": {},
+    "output": "Translation (formal): 'Sehr geehrte Damen und Herren' (English -> German)",
+    "category": "core"
+  },
+  {
+    "input": "Translate ambiguous text",
+    "context": {},
+    "output": "Translation: 'banco' - Note: 'bank' can mean financial institution or river bank. Context suggests financial.",
+    "category": "edge"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "system_prompt": "List all open windows with titles, positions, sizes, and application names. Supports filtering by app name.",
+  "few_shot_examples": [
+    {
+      "input": "List all windows",
+      "output": "[{\"app\":\"Safari\",\"title\":\"Google\",\"position\":{\"x\":0,\"y\":0,\"w\":1200,\"h\":800}}]"
+    },
+    {
+      "input": "List windows for Terminal",
+      "output": "[{\"app\":\"Terminal\",\"title\":\"bash\",\"position\":{\"x\":100,\"y\":100,\"w\":600,\"h\":400}}]"
+    },
+    {
+      "input": "List minimized windows",
+      "output": "[{\"app\":\"Finder\",\"title\":\"Downloads\",\"minimized\":true}]"
+    },
+    {
+      "input": "List windows when none open",
+      "output": "No open windows found"
+    },
+    {
+      "input": "List windows across monitors",
+      "output": "Found 8 windows across 2 monitors"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

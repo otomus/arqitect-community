@@ -1,0 +1,23 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Get metadata and technical details about a video file. Use the available tools to complete requests accurately.",
+  "few_shot_examples": [
+    {
+      "input": "Get info about /tmp/movie.mp4",
+      "output": "{\"action\": \"video_get_info\", \"args\": {\"file_path\": \"/tmp/movie.mp4\"}}",
+      "response": "Duration: 01:32:15\nResolution: 1920x1080\nCodec: H.264\nFPS: 24\nSize: 2.1GB"
+    },
+    {
+      "input": "Show metadata for /docs/clip.mp4",
+      "output": "{\"action\": \"video_get_info\", \"args\": {\"file_path\": \"/docs/clip.mp4\"}}",
+      "response": "Duration: 00:00:45\nResolution: 1280x720\nCodec: H.265\nFPS: 30\nSize: 15MB"
+    },
+    {
+      "input": "Get info for a corrupted video",
+      "output": "{\"action\": \"video_get_info\", \"args\": {\"file_path\": \"/tmp/corrupted.mp4\"}}",
+      "response": "Error: Unable to read video metadata. The file may be corrupted."
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

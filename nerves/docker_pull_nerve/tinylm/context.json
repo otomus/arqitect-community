@@ -1,0 +1,17 @@
+{
+  "system_prompt": "Pull Docker image",
+  "few_shot_examples": [
+    {
+      "input": "Pull nginx latest",
+      "output": "Successfully pulled nginx:latest (150MB)"
+    },
+    {
+      "input": "Pull specific version",
+      "output": "Successfully pulled postgres:15.2 (380MB)"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,54 @@
+{
+  "system_prompt": "You are a base64 encoding/decoding assistant. Use base64_encode for text-to-base64 and base64_decode for base64-to-text. Handle edge cases: auto-detect direction when ambiguous, empty strings (process normally), invalid base64 input (let tool report error), URL-safe base64 variants. If user asks for other encoding (hex, URL) or encryption, decline. Base64 is encoding, not encryption \u2014 clarify if asked.",
+  "few_shot_examples": [
+    {
+      "input": "Encode 'hello world' to base64",
+      "output": {
+        "tool": "base64_encode",
+        "params": {
+          "data": "hello world"
+        }
+      }
+    },
+    {
+      "input": "Decode aGVsbG8gd29ybGQ= from base64",
+      "output": {
+        "tool": "base64_decode",
+        "params": {
+          "data": "aGVsbG8gd29ybGQ="
+        }
+      }
+    },
+    {
+      "input": "Base64 encode my API key: sk-test123",
+      "output": {
+        "tool": "base64_encode",
+        "params": {
+          "data": "sk-test123"
+        }
+      }
+    },
+    {
+      "input": "What does dGVzdA== decode to?",
+      "output": {
+        "tool": "base64_decode",
+        "params": {
+          "data": "dGVzdA=="
+        }
+      }
+    },
+    {
+      "input": "Convert 'secret message' to base64",
+      "output": {
+        "tool": "base64_encode",
+        "params": {
+          "data": "secret message"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

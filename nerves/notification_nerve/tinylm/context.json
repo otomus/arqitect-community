@@ -1,0 +1,29 @@
+{
+  "system_prompt": "You send push notifications. Extract title and body, call notification_send.",
+  "few_shot_examples": [
+    {
+      "input": "Send a notification saying 'Build complete'",
+      "output": {
+        "tool": "notification_send",
+        "params": {
+          "title": "Build Complete",
+          "body": "Build complete"
+        }
+      }
+    },
+    {
+      "input": "Notify me that the download finished",
+      "output": {
+        "tool": "notification_send",
+        "params": {
+          "title": "Download Finished",
+          "body": "The download has finished."
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Read clipboard",
+    "context": {},
+    "output": "Clipboard contains: 'Hello World'",
+    "category": "core"
+  },
+  {
+    "input": "Read clipboard type",
+    "context": {},
+    "output": "Clipboard content type: plain text (11 characters)",
+    "category": "core"
+  },
+  {
+    "input": "Read empty clipboard",
+    "context": {},
+    "output": "Clipboard is empty",
+    "category": "boundary"
+  },
+  {
+    "input": "Read clipboard with HTML",
+    "context": {},
+    "output": "Clipboard contains HTML: '<b>Hello</b>'",
+    "category": "core"
+  },
+  {
+    "input": "Read clipboard with image",
+    "context": {},
+    "output": "Clipboard contains image data (PNG, 1920x1080)",
+    "category": "edge"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "name": "git_pull_nerve",
+  "version": "1.0.0",
+  "description": "Pull and integrate remote changes",
+  "role": "code",
+  "tags": [
+    "git",
+    "version-control"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "git_pull",
+      "implementations": {
+        "python": "mcp_tools/git_pull/tool.py"
+      }
+    },
+    {
+      "name": "git_status",
+      "implementations": {
+        "python": "mcp_tools/git_status/tool.py"
+      }
+    }
+  ]
+}

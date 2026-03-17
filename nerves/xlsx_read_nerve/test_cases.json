@@ -1,0 +1,30 @@
+[
+  {
+    "input": "Read the spreadsheet at /data/sales.xlsx",
+    "context": {},
+    "output": "Sheet1:\nA1: Product | B1: Revenue\nA2: Widget | B2: $10,000",
+    "category": "core"
+  },
+  {
+    "input": "Extract data from /tmp/budget.xlsx",
+    "context": {},
+    "output": "Sheet1:\nA1: Category | B1: Amount\nA2: Marketing | B2: $5,000",
+    "category": "core"
+  },
+  {
+    "input": "Read an xlsx file with multiple sheets",
+    "context": {
+      "userDetails": {
+        "name": "User"
+      }
+    },
+    "output": "Sheet1: Sales data (50 rows)\nSheet2: Inventory (30 rows)\nSheet3: Summary (5 rows)",
+    "category": "edge"
+  },
+  {
+    "input": "Read a CSV file as xlsx",
+    "context": {},
+    "output": "Error: The file is not a valid Excel spreadsheet. Use csv_read for CSV files.",
+    "category": "negative"
+  }
+]

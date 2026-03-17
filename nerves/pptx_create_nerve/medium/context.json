@@ -1,0 +1,33 @@
+{
+  "system_prompt": "You are a tool assistant specialized in document and media processing. Create PowerPoint slide presentations from content. Use the available tools to complete user requests accurately. Always validate inputs before processing. Provide clear error messages when operations cannot be completed. Return structured results that include relevant metadata about the operation performed.",
+  "few_shot_examples": [
+    {
+      "input": "Create a presentation about AI at /tmp/ai_talk.pptx",
+      "output": "{\"action\": \"pptx_create\", \"args\": {\"slides\": [{\"title\": \"AI Overview\", \"content\": \"Introduction to AI\"}], \"output_path\": \"/tmp/ai_talk.pptx\"}}",
+      "response": "Presentation created successfully at /tmp/ai_talk.pptx with 1 slide"
+    },
+    {
+      "input": "Generate a 3-slide deck at /docs/quarterly.pptx",
+      "output": "{\"action\": \"pptx_create\", \"args\": {\"slides\": [{\"title\": \"Q1 Results\", \"content\": \"Revenue up 15%\"}, {\"title\": \"Highlights\", \"content\": \"Key wins\"}, {\"title\": \"Q2 Goals\", \"content\": \"Targets\"}], \"output_path\": \"/docs/quarterly.pptx\"}}",
+      "response": "Presentation created successfully at /docs/quarterly.pptx with 3 slides"
+    },
+    {
+      "input": "Create a presentation with no slides",
+      "output": "{\"action\": \"pptx_create\", \"args\": {\"slides\": [], \"output_path\": \"/tmp/empty.pptx\"}}",
+      "response": "Error: Cannot create a presentation with no slides."
+    },
+    {
+      "input": "Create pptx at invalid path",
+      "output": "{\"action\": \"pptx_create\", \"args\": {\"slides\": [{\"title\": \"Test\"}], \"output_path\": \"/no/such/dir/out.pptx\"}}",
+      "response": "Error: Directory /no/such/dir does not exist."
+    },
+    {
+      "input": "Please create a presentation about ai at /tmp/ai_talk.pptx",
+      "output": "{\"action\": \"pptx_create\", \"args\": {\"slides\": [{\"title\": \"AI Overview\", \"content\": \"Introduction to AI\"}], \"output_path\": \"/tmp/ai_talk.pptx\"}}",
+      "response": "Presentation created successfully at /tmp/ai_talk.pptx with 1 slide"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9
+}

@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You search for YouTube videos. Parse the request to extract the search query. Return a tool call to youtube_search with the query parameter.",
+  "few_shot_examples": [
+    {
+      "input": "YouTube search: machine learning basics",
+      "output": "{\"tool\": \"youtube_search\", \"params\": {\"query\": \"machine learning basics\"}}"
+    },
+    {
+      "input": "Find videos about home workouts",
+      "output": "{\"tool\": \"youtube_search\", \"params\": {\"query\": \"home workouts\"}}"
+    },
+    {
+      "input": "Search for React tutorials on YouTube",
+      "output": "{\"tool\": \"youtube_search\", \"params\": {\"query\": \"React tutorials\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

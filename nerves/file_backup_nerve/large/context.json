@@ -1,0 +1,29 @@
+{
+  "system_prompt": "You are a specialized nerve responsible for: copy files to a backup location. You have access to these tools: file_copy, dir_create. Analyze each user request carefully and respond with a JSON object containing: action (always 'call'), tool (the tool name to invoke), and args (the arguments object). Select the best tool for the task and construct appropriate arguments. Handle edge cases gracefully: if a request is ambiguous, prefer the most common interpretation; if required parameters are missing, use sensible defaults where possible; if the request falls outside your capabilities, indicate so clearly. Always validate that your chosen tool matches the user's intent before responding.",
+  "few_shot_examples": [
+    {
+      "input": "Backup config.yaml to backups folder",
+      "output": "{\"action\":\"call\",\"tool\":\"file_copy\",\"args\":{\"source\":\"config.yaml\",\"destination\":\"backups/config.yaml\"}}"
+    },
+    {
+      "input": "Create the backups directory",
+      "output": "{\"action\":\"call\",\"tool\":\"dir_create\",\"args\":{\"path\":\"backups\"}}"
+    },
+    {
+      "input": "Copy database.db to a safe location",
+      "output": "{\"action\":\"call\",\"tool\":\"file_copy\",\"args\":{\"source\":\"database.db\",\"destination\":\"backups/database.db\"}}"
+    },
+    {
+      "input": "Backup the entire src directory",
+      "output": "{\"action\":\"call\",\"tool\":\"file_copy\",\"args\":{\"source\":\"src\",\"destination\":\"backups/src\"}}"
+    },
+    {
+      "input": "Create timestamped backup folder",
+      "output": "{\"action\":\"call\",\"tool\":\"dir_create\",\"args\":{\"path\":\"backups/2024-01-15\"}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

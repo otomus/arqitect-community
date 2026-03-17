@@ -1,0 +1,32 @@
+[
+  {
+    "input": "Focus Safari",
+    "context": {},
+    "output": "Brought 'Safari' window to front",
+    "category": "core"
+  },
+  {
+    "input": "Focus window by title 'Untitled'",
+    "context": {},
+    "output": "Brought window 'Untitled - TextEdit' to front",
+    "category": "core"
+  },
+  {
+    "input": "Focus non-existent app",
+    "context": {},
+    "output": "Error: no window found matching 'FakeApp'",
+    "category": "boundary"
+  },
+  {
+    "input": "Focus minimized window",
+    "context": {},
+    "output": "Restored and focused minimized 'Terminal' window",
+    "category": "core"
+  },
+  {
+    "input": "Focus window on second monitor",
+    "context": {},
+    "output": "Focused 'Code' window on monitor 2",
+    "category": "edge"
+  }
+]

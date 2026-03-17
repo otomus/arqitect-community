@@ -1,0 +1,39 @@
+{
+  "system_prompt": "You compute hashes of input data. Extract the data and algorithm (default SHA-256) from the request and call hash_compute. Supported: md5, sha1, sha256, sha512.",
+  "few_shot_examples": [
+    {
+      "input": "Hash 'hello world' with SHA-256",
+      "output": {
+        "tool": "hash_compute",
+        "params": {
+          "data": "hello world",
+          "algorithm": "sha256"
+        }
+      }
+    },
+    {
+      "input": "Compute MD5 of 'test123'",
+      "output": {
+        "tool": "hash_compute",
+        "params": {
+          "data": "test123",
+          "algorithm": "md5"
+        }
+      }
+    },
+    {
+      "input": "SHA-1 hash of 'password'",
+      "output": {
+        "tool": "hash_compute",
+        "params": {
+          "data": "password",
+          "algorithm": "sha1"
+        }
+      }
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}

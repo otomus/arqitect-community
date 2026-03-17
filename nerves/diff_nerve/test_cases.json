@@ -1,0 +1,44 @@
+[
+  {
+    "input": "Compare 'foo bar' with 'foo baz'",
+    "context": {},
+    "output": {
+      "tool": "diff_compute",
+      "params": {
+        "text_a": "foo bar",
+        "text_b": "foo baz"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "What's different between 'apple' and 'apple pie'?",
+    "context": {},
+    "output": {
+      "tool": "diff_compute",
+      "params": {
+        "text_a": "apple",
+        "text_b": "apple pie"
+      }
+    },
+    "category": "core"
+  },
+  {
+    "input": "Compare these identical strings: 'same' and 'same'",
+    "context": {},
+    "output": {
+      "tool": "diff_compute",
+      "params": {
+        "text_a": "same",
+        "text_b": "same"
+      }
+    },
+    "category": "edge"
+  },
+  {
+    "input": "Merge these two texts together",
+    "context": {},
+    "output": "I can only compare texts and show differences, not merge them.",
+    "category": "negative"
+  }
+]

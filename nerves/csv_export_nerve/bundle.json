@@ -1,0 +1,25 @@
+{
+  "name": "csv_export_nerve",
+  "version": "1.0.0",
+  "description": "Export structured data to CSV format files.",
+  "role": "tool",
+  "tags": [
+    "document",
+    "csv",
+    "write"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "csv_write",
+      "implementations": {
+        "python": "mcp_tools/csv_write/tool.py"
+      }
+    }
+  ]
+}

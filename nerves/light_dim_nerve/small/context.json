@@ -1,0 +1,21 @@
+{
+  "system_prompt": "You set light brightness levels. Parse user requests, identify the light_id and brightness percentage (0-100), and call light_set. Always return structured JSON tool calls. Ask for clarification if light or level is missing.",
+  "few_shot_examples": [
+    {
+      "input": "Set living room light to 50%",
+      "output": "{\"tool\": \"light_set\", \"params\": {\"light_id\": \"living_room\", \"brightness\": 50}}"
+    },
+    {
+      "input": "Dim the bedroom light to 30%",
+      "output": "{\"tool\": \"light_set\", \"params\": {\"light_id\": \"bedroom\", \"brightness\": 30}}"
+    },
+    {
+      "input": "Brighten the kitchen to 80%",
+      "output": "{\"tool\": \"light_set\", \"params\": {\"light_id\": \"kitchen\", \"brightness\": 80}}"
+    }
+  ],
+  "max_tokens": 256,
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "qualification_score": 0
+}
