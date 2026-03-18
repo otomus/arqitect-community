@@ -1,0 +1,22 @@
+{
+  "name": "stock_nerve",
+  "version": "1.0.0",
+  "description": "Get current and historical stock data",
+  "role": "brain",
+  "tags": [
+    "finance",
+    "stock"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "stock",
+      "implementations": {}
+    }
+  ]
+}

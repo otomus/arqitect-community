@@ -1,0 +1,44 @@
+{
+  "name": "form_fill_nerve",
+  "version": "1.0.0",
+  "description": "Fill and submit a web form",
+  "role": "brain",
+  "tags": [
+    "browser",
+    "web",
+    "form",
+    "automation"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "browser_open",
+      "implementations": {
+        "python": "mcp_tools/browser_open/tool.py"
+      }
+    },
+    {
+      "name": "browser_fill",
+      "implementations": {
+        "python": "mcp_tools/browser_fill/tool.py"
+      }
+    },
+    {
+      "name": "browser_click",
+      "implementations": {
+        "python": "mcp_tools/browser_click/tool.py"
+      }
+    },
+    {
+      "name": "browser_close",
+      "implementations": {
+        "python": "mcp_tools/browser_close/tool.py"
+      }
+    }
+  ]
+}

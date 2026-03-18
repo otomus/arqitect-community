@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>social — Arqitect</title>
+  <link rel="stylesheet" href="../css/arqitect.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">ARQITECT</a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <div class="nav-links"><a href="../index.html">Home</a><a href="../tools/index.html" class="active">Tools</a><a href="../nerves/index.html">Nerves</a><a href="../connectors/index.html">Connectors</a><a href="../mcps/index.html">MCPs</a><a href="../adapters/index.html">Adapters</a></div>
+  </div>
+</nav>
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">Tools</a><span class="sep">/</span>social
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">social</h1>
+    <p class="detail-desc">Unified social media management: post, read, search, reply, like, followers, and trending</p>
+    <div class="detail-tags mt-1"><span class="tag tag--cyan">social</span><span class="tag tag--cyan">post</span><span class="tag tag--cyan">read</span><span class="tag tag--cyan">search</span><span class="tag tag--cyan">reply</span><span class="tag tag--cyan">like</span><span class="tag tag--cyan">followers</span><span class="tag tag--cyan">trending</span></div>
+  </div>
+  <div class="info-grid"><div class="info-item"><div class="info-label">Runtime</div><div class="info-value">python</div></div><div class="info-item"><div class="info-label">Category</div><div class="info-value">social</div></div><div class="info-item"><div class="info-label">Entry</div><div class="info-value">tool.py</div></div><div class="info-item"><div class="info-label">Timeout</div><div class="info-value">30s</div></div><div class="info-item"><div class="info-label">API Key</div><div class="info-value">Required</div></div><div class="info-item"><div class="info-label">Deps (python)</div><div class="info-value">requests</div></div></div>
+  
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Parameters</h2>
+      <div class="section-line"></div>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Name</th><th>Type</th><th>Description</th><th>Required</th></tr></thead>
+      <tbody><tr><td class="param-name">operation</td><td class="param-type">string</td><td>Operation to perform: post, read, search, reply, like, followers, trending</td><td class="required">required</td></tr><tr><td class="param-name">platform</td><td class="param-type">string</td><td>Social media platform (e.g. twitter, mastodon)</td><td class="required">required</td></tr><tr><td class="param-name">post_id</td><td class="param-type">string</td><td>Post identifier (used for read, reply, like)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">content</td><td class="param-type">string</td><td>Post or reply content text (used for post, reply)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">query</td><td class="param-type">string</td><td>Search query string (used for search)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">user</td><td class="param-type">string</td><td>Username (used for followers, read)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">media</td><td class="param-type">string</td><td>Media attachment path or URL (used for post)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">reaction</td><td class="param-type">string</td><td>Reaction type (used for like; default &#x27;like&#x27;)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">region</td><td class="param-type">string</td><td>Region code for localized trends (used for trending; e.g. US, UK)</td><td class="text-dim">optional</td></tr></tbody>
+    </table>
+  </div>
+</div>
+<footer class="footer">
+  Arqitect &mdash; autonomous agent ecosystem
+</footer>
+<script src="../js/arqitect.js"></script>
+</body>
+</html>

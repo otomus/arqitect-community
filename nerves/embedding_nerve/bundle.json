@@ -1,0 +1,31 @@
+{
+  "name": "embedding_nerve",
+  "version": "1.0.0",
+  "description": "Create and search embeddings",
+  "role": "brain",
+  "tags": [
+    "ai",
+    "embedding",
+    "vector"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "embedding_create",
+      "implementations": {
+        "python": "mcp_tools/embedding_create/tool.py"
+      }
+    },
+    {
+      "name": "embedding_search",
+      "implementations": {
+        "python": "mcp_tools/embedding_search/tool.py"
+      }
+    }
+  ]
+}

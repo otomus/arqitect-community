@@ -1,0 +1,44 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Get current weather or a forecast for a location",
+  "params": {
+    "location": {
+      "type": "string",
+      "description": "City name or coordinates",
+      "required": true
+    },
+    "days": {
+      "type": "string",
+      "description": "Number of forecast days (optional, forecast only)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: current or forecast",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "weather",
+    "current",
+    "forecast",
+    "climate"
+  ],
+  "requires_api_key": true,
+  "dependencies": {
+    "python": [
+      "requests"
+    ]
+  }
+}

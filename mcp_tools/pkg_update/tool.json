@@ -1,0 +1,21 @@
+{
+  "name": "pkg_update",
+  "version": "1.0.0",
+  "description": "Update a package to its latest version",
+  "params": {
+    "name": {
+      "type": "string",
+      "description": "Package name to update (omit to update all with pip)",
+      "required": false
+    },
+    "manager": {
+      "type": "string",
+      "description": "Package manager to use (pip, npm, etc.)",
+      "required": false,
+      "default": "pip"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 120
+}

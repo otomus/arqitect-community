@@ -1,0 +1,34 @@
+{
+    "name": "faq_answer_nerve",
+    "version": "1.0.0",
+    "description": "Find answer from FAQ/knowledge base",
+    "role": "communication",
+    "tags": [
+        "support",
+        "faq",
+        "knowledge-base"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "file_grep",
+            "mcp": "file_grep",
+            "implementations": {}
+        },
+        {
+            "name": "embedding_search",
+            "mcp": "embedding_search",
+            "implementations": {}
+        },
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        }
+    ]
+}

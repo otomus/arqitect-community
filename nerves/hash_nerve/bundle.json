@@ -1,8 +1,8 @@
 {
   "name": "hash_nerve",
   "version": "1.0.0",
-  "description": "Compute a hash of input data",
-  "role": "tool",
+  "description": "Compute and verify hashes",
+  "role": "brain",
   "tags": [
     "data",
     "hash",
@@ -16,7 +16,7 @@
   "sentient_version": ">=0.1.0",
   "tools": [
     {
-      "name": "hash_compute",
+      "name": "hash",
       "implementations": {
         "python": "mcp_tools/hash_compute/tool.py"
       }

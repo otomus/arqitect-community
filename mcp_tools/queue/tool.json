@@ -1,0 +1,25 @@
+{
+  "name": "queue",
+  "version": "1.0.0",
+  "description": "Push to or pop from a named queue (JSON lines file)",
+  "params": {
+    "queue": {
+      "type": "string",
+      "description": "Queue name or file path",
+      "required": true
+    },
+    "payload": {
+      "type": "string",
+      "description": "JSON payload to enqueue (required for push)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: push or pop",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

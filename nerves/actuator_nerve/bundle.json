@@ -1,0 +1,22 @@
+{
+  "name": "actuator_nerve",
+  "version": "1.0.0",
+  "description": "Control and read any actuator",
+  "role": "nerve",
+  "tags": [
+    "iot",
+    "actuator"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "actuator",
+      "implementations": {}
+    }
+  ]
+}

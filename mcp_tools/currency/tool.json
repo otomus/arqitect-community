@@ -1,0 +1,50 @@
+{
+  "name": "currency",
+  "version": "1.0.0",
+  "description": "Convert between currencies or get exchange rates",
+  "params": {
+    "amount": {
+      "type": "string",
+      "description": "Amount to convert (optional, convert only)",
+      "required": false
+    },
+    "from_currency": {
+      "type": "string",
+      "description": "ISO 4217 source currency code (e.g. USD)",
+      "required": true
+    },
+    "to_currency": {
+      "type": "string",
+      "description": "ISO 4217 target currency code (e.g. EUR)",
+      "required": true
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: convert or rate",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "finance",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "currency",
+    "exchange",
+    "convert",
+    "rate",
+    "finance"
+  ],
+  "requires_api_key": true,
+  "dependencies": {
+    "python": [
+      "requests"
+    ]
+  }
+}

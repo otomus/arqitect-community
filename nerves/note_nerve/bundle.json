@@ -1,0 +1,22 @@
+{
+  "name": "note_nerve",
+  "version": "1.0.0",
+  "description": "Full CRUD operations on notes",
+  "role": "brain",
+  "tags": [
+    "notes",
+    "productivity"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "note",
+      "implementations": {}
+    }
+  ]
+}

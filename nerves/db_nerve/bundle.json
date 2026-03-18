@@ -1,0 +1,54 @@
+{
+  "name": "db_nerve",
+  "version": "1.0.0",
+  "description": "Query, write, and inspect databases",
+  "role": "brain",
+  "tags": [
+    "database",
+    "sql"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "db_connect",
+      "implementations": {
+        "python": "mcp_tools/db_connect/tool.py"
+      }
+    },
+    {
+      "name": "db_query",
+      "implementations": {
+        "python": "mcp_tools/db_query/tool.py"
+      }
+    },
+    {
+      "name": "db_execute",
+      "implementations": {
+        "python": "mcp_tools/db_execute/tool.py"
+      }
+    },
+    {
+      "name": "db_tables",
+      "implementations": {
+        "python": "mcp_tools/db_tables/tool.py"
+      }
+    },
+    {
+      "name": "db_schema",
+      "implementations": {
+        "python": "mcp_tools/db_schema/tool.py"
+      }
+    },
+    {
+      "name": "db_close",
+      "implementations": {
+        "python": "mcp_tools/db_close/tool.py"
+      }
+    }
+  ]
+}

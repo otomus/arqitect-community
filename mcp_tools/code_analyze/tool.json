@@ -1,0 +1,20 @@
+{
+  "name": "code_analyze",
+  "version": "1.0.0",
+  "description": "Run deep static analysis on source code",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to file or directory to analyze",
+      "required": true
+    },
+    "language": {
+      "type": "string",
+      "description": "Language (python, javascript). Auto-detected if omitted",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 60
+}

@@ -1,0 +1,45 @@
+{
+  "name": "window",
+  "version": "1.0.0",
+  "description": "List, focus, or resize desktop windows",
+  "params": {
+    "window_id": {
+      "type": "string",
+      "description": "Window title or partial title (required for focus and resize)",
+      "required": false
+    },
+    "w": {
+      "type": "string",
+      "description": "Target width in pixels (required for resize)",
+      "required": false
+    },
+    "h": {
+      "type": "string",
+      "description": "Target height in pixels (required for resize)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: list, focus, or resize",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "system",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "window",
+    "desktop",
+    "focus",
+    "resize",
+    "list"
+  ],
+  "requires_api_key": false
+}

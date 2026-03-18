@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>image_crop — Arqitect</title>
+  <link rel="stylesheet" href="../css/arqitect.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">ARQITECT</a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <div class="nav-links"><a href="../index.html">Home</a><a href="../tools/index.html" class="active">Tools</a><a href="../nerves/index.html">Nerves</a><a href="../connectors/index.html">Connectors</a><a href="../mcps/index.html">MCPs</a><a href="../adapters/index.html">Adapters</a></div>
+  </div>
+</nav>
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">Tools</a><span class="sep">/</span>image_crop
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">image_crop</h1>
+    <p class="detail-desc">Crop an image to the specified bounding box</p>
+    <div class="detail-tags mt-1"><span class="tag tag--cyan">image</span><span class="tag tag--cyan">crop</span><span class="tag tag--cyan">trim</span><span class="tag tag--cyan">cut</span><span class="tag tag--cyan">pillow</span></div>
+  </div>
+  <div class="info-grid"><div class="info-item"><div class="info-label">Runtime</div><div class="info-value">python</div></div><div class="info-item"><div class="info-label">Category</div><div class="info-value">media</div></div><div class="info-item"><div class="info-label">Entry</div><div class="info-value">tool.py</div></div><div class="info-item"><div class="info-label">Timeout</div><div class="info-value">30s</div></div><div class="info-item"><div class="info-label">API Key</div><div class="info-value">Not required</div></div><div class="info-item"><div class="info-label">Deps (python)</div><div class="info-value">Pillow</div></div></div>
+  
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Parameters</h2>
+      <div class="section-line"></div>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Name</th><th>Type</th><th>Description</th><th>Required</th></tr></thead>
+      <tbody><tr><td class="param-name">input_path</td><td class="param-type">string</td><td>Path to the source image file</td><td class="required">required</td></tr><tr><td class="param-name">output_path</td><td class="param-type">string</td><td>Path where the cropped image will be saved</td><td class="required">required</td></tr><tr><td class="param-name">left</td><td class="param-type">number</td><td>Left edge of the crop box in pixels</td><td class="required">required</td></tr><tr><td class="param-name">top</td><td class="param-type">number</td><td>Top edge of the crop box in pixels</td><td class="required">required</td></tr><tr><td class="param-name">right</td><td class="param-type">number</td><td>Right edge of the crop box in pixels</td><td class="required">required</td></tr><tr><td class="param-name">bottom</td><td class="param-type">number</td><td>Bottom edge of the crop box in pixels</td><td class="required">required</td></tr></tbody>
+    </table>
+  </div>
+</div>
+<footer class="footer">
+  Arqitect &mdash; autonomous agent ecosystem
+</footer>
+<script src="../js/arqitect.js"></script>
+</body>
+</html>

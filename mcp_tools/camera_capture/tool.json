@@ -1,0 +1,31 @@
+{
+  "name": "camera_capture",
+  "version": "1.0.0",
+  "description": "Capture an image from a connected camera",
+  "params": {
+    "device_id": {
+      "type": "string",
+      "description": "Camera device identifier",
+      "required": false,
+      "default": ""
+    },
+    "resolution": {
+      "type": "string",
+      "description": "Image resolution (e.g. '1920x1080')",
+      "required": false,
+      "default": ""
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 15,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["camera", "capture", "photo", "webcam"],
+  "requires_api_key": false
+}

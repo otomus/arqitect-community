@@ -1,0 +1,40 @@
+{
+  "name": "embedding",
+  "version": "1.0.0",
+  "description": "Create embedding vectors or search a collection by similarity",
+  "params": {
+    "text": {
+      "type": "string",
+      "description": "Text to embed (required for create)",
+      "required": false
+    },
+    "query": {
+      "type": "string",
+      "description": "JSON array embedding vector to search with (required for search)",
+      "required": false
+    },
+    "collection": {
+      "type": "string",
+      "description": "Path to a JSON collection file (required for search)",
+      "required": false
+    },
+    "model": {
+      "type": "string",
+      "description": "Model name for embedding (optional, create only)",
+      "required": false
+    },
+    "top_k": {
+      "type": "string",
+      "description": "Number of top results to return (optional, search only, default 5)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: create or search",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 60
+}

@@ -1,0 +1,16 @@
+{
+  "name": "pkg_list",
+  "version": "1.0.0",
+  "description": "List installed packages",
+  "params": {
+    "manager": {
+      "type": "string",
+      "description": "Package manager to use (pip, npm, etc.)",
+      "required": false,
+      "default": "pip"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

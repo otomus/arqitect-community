@@ -1,0 +1,22 @@
+{
+  "name": "webhook_nerve",
+  "version": "1.0.0",
+  "description": "Send and register webhooks",
+  "role": "communication",
+  "tags": [
+    "webhook",
+    "integration"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "webhook",
+      "implementations": {}
+    }
+  ]
+}

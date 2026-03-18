@@ -1,0 +1,34 @@
+{
+    "name": "data_clean_nerve",
+    "version": "1.0.0",
+    "description": "Clean and normalize a dataset",
+    "role": "brain",
+    "tags": [
+        "data",
+        "cleaning",
+        "normalization"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "csv_read",
+            "mcp": "csv_read",
+            "implementations": {}
+        },
+        {
+            "name": "regex_replace",
+            "mcp": "regex_replace",
+            "implementations": {}
+        },
+        {
+            "name": "csv_write",
+            "mcp": "csv_write",
+            "implementations": {}
+        }
+    ]
+}

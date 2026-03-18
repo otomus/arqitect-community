@@ -1,0 +1,34 @@
+{
+    "name": "health_summary_nerve",
+    "version": "1.0.0",
+    "description": "Summarize health metrics",
+    "role": "brain",
+    "tags": [
+        "health",
+        "wellness",
+        "metrics"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "sleep_tracker_read",
+            "mcp": "sleep_tracker_read",
+            "implementations": {}
+        },
+        {
+            "name": "json_format",
+            "mcp": "json_format",
+            "implementations": {}
+        },
+        {
+            "name": "chart_create",
+            "mcp": "chart_create",
+            "implementations": {}
+        }
+    ]
+}

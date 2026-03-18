@@ -1,0 +1,24 @@
+{
+  "name": "rss_fetch",
+  "version": "1.0.0",
+  "description": "Fetch and parse an RSS or Atom feed",
+  "params": {
+    "url": {
+      "type": "string",
+      "description": "URL of the RSS/Atom feed",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "web",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["rss", "feed", "atom", "news", "xml"],
+  "requires_api_key": false
+}

@@ -1,0 +1,51 @@
+{
+  "name": "barcode",
+  "version": "1.0.0",
+  "description": "Generate or read barcodes",
+  "params": {
+    "content": {
+      "type": "string",
+      "description": "Data to encode into a barcode (required for generate)",
+      "required": false
+    },
+    "image_path": {
+      "type": "string",
+      "description": "Path for the output image (generate) or input image (read)",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "description": "Barcode format: code128, ean13, or upc (optional, generate only)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: generate or read",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "barcode",
+    "generate",
+    "read",
+    "scan"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "python-barcode",
+      "Pillow",
+      "pyzbar"
+    ]
+  }
+}

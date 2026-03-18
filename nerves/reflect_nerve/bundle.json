@@ -1,0 +1,24 @@
+{
+    "name": "reflect_nerve",
+    "version": "1.0.0",
+    "description": "Generate a reflection prompt",
+    "role": "brain",
+    "tags": [
+        "self-improvement",
+        "reflection",
+        "mindfulness"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        }
+    ]
+}

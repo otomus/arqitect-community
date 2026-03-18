@@ -1,0 +1,22 @@
+{
+  "name": "csv_nerve",
+  "version": "1.0.0",
+  "description": "Read and write CSV data",
+  "role": "brain",
+  "tags": [
+    "data",
+    "csv"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "csv",
+      "implementations": {}
+    }
+  ]
+}

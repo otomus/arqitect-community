@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>email — Arqitect</title>
+  <link rel="stylesheet" href="../css/arqitect.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">ARQITECT</a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <div class="nav-links"><a href="../index.html">Home</a><a href="../tools/index.html" class="active">Tools</a><a href="../nerves/index.html">Nerves</a><a href="../connectors/index.html">Connectors</a><a href="../mcps/index.html">MCPs</a><a href="../adapters/index.html">Adapters</a></div>
+  </div>
+</nav>
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">Tools</a><span class="sep">/</span>email
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">email</h1>
+    <p class="detail-desc">Unified email management: send, fetch, read, reply, and search emails</p>
+    <div class="detail-tags mt-1"><span class="tag tag--cyan">email</span><span class="tag tag--cyan">send</span><span class="tag tag--cyan">fetch</span><span class="tag tag--cyan">read</span><span class="tag tag--cyan">reply</span><span class="tag tag--cyan">search</span><span class="tag tag--cyan">imap</span><span class="tag tag--cyan">smtp</span></div>
+  </div>
+  <div class="info-grid"><div class="info-item"><div class="info-label">Runtime</div><div class="info-value">python</div></div><div class="info-item"><div class="info-label">Category</div><div class="info-value">communication</div></div><div class="info-item"><div class="info-label">Entry</div><div class="info-value">tool.py</div></div><div class="info-item"><div class="info-label">Timeout</div><div class="info-value">60s</div></div><div class="info-item"><div class="info-label">API Key</div><div class="info-value">Required</div></div></div>
+  
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Parameters</h2>
+      <div class="section-line"></div>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Name</th><th>Type</th><th>Description</th><th>Required</th></tr></thead>
+      <tbody><tr><td class="param-name">operation</td><td class="param-type">string</td><td>Operation to perform: send, fetch, read, reply, search</td><td class="required">required</td></tr><tr><td class="param-name">id</td><td class="param-type">string</td><td>Message ID (used for read, reply)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">to</td><td class="param-type">string</td><td>Recipient email address (used for send)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">subject</td><td class="param-type">string</td><td>Email subject (used for send)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">body</td><td class="param-type">string</td><td>Email body text (used for send, reply)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">folder</td><td class="param-type">string</td><td>Mailbox folder (used for fetch, search; default INBOX)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">count</td><td class="param-type">string</td><td>Number of messages to fetch (used for fetch; default 10)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">filter_str</td><td class="param-type">string</td><td>IMAP filter string (used for fetch)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">query</td><td class="param-type">string</td><td>Search query string (used for search)</td><td class="text-dim">optional</td></tr></tbody>
+    </table>
+  </div>
+</div>
+<footer class="footer">
+  Arqitect &mdash; autonomous agent ecosystem
+</footer>
+<script src="../js/arqitect.js"></script>
+</body>
+</html>

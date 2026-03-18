@@ -1,0 +1,25 @@
+{
+  "name": "metric_record",
+  "version": "1.0.0",
+  "description": "Record a metric data point to a JSON lines file",
+  "params": {
+    "name": {
+      "type": "string",
+      "description": "Metric name",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "description": "Metric value",
+      "required": true
+    },
+    "tags": {
+      "type": "string",
+      "description": "JSON object of tags/labels for the metric",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

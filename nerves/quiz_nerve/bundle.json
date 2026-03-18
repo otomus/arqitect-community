@@ -1,0 +1,29 @@
+{
+    "name": "quiz_nerve",
+    "version": "1.0.0",
+    "description": "Generate a quiz on a topic",
+    "role": "brain",
+    "tags": [
+        "education",
+        "quiz",
+        "assessment"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        },
+        {
+            "name": "json_format",
+            "mcp": "json_format",
+            "implementations": {}
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "currency_nerve",
+  "version": "1.0.0",
+  "description": "Convert currencies and get exchange rates",
+  "role": "brain",
+  "tags": [
+    "finance",
+    "currency"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "currency",
+      "implementations": {}
+    }
+  ]
+}

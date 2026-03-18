@@ -1,0 +1,39 @@
+{
+    "name": "contract_review_nerve",
+    "version": "1.0.0",
+    "description": "Review a contract and flag risks",
+    "role": "brain",
+    "tags": [
+        "legal",
+        "contract",
+        "review"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "pdf_read",
+            "mcp": "pdf_read",
+            "implementations": {}
+        },
+        {
+            "name": "docx_read",
+            "mcp": "docx_read",
+            "implementations": {}
+        },
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        },
+        {
+            "name": "json_format",
+            "mcp": "json_format",
+            "implementations": {}
+        }
+    ]
+}

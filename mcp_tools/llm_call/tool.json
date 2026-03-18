@@ -1,0 +1,26 @@
+{
+  "name": "llm_call",
+  "version": "1.0.0",
+  "description": "Send a prompt to a local LLM endpoint and return the completion",
+  "params": {
+    "prompt": {
+      "type": "string",
+      "description": "The prompt text to send to the LLM",
+      "required": true
+    },
+    "model": {
+      "type": "string",
+      "description": "Model name to use",
+      "required": false
+    },
+    "temperature": {
+      "type": "string",
+      "description": "Sampling temperature (e.g. '0.7')",
+      "required": false,
+      "default": "0.7"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 60
+}

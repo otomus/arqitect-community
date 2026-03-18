@@ -1,0 +1,23 @@
+{
+  "name": "pptx_nerve",
+  "version": "1.0.0",
+  "description": "Read from and create PowerPoint presentations",
+  "role": "brain",
+  "tags": [
+    "document",
+    "pptx",
+    "powerpoint"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "pptx",
+      "implementations": {}
+    }
+  ]
+}

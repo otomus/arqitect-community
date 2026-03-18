@@ -1,0 +1,26 @@
+{
+  "name": "test_run",
+  "version": "1.0.0",
+  "description": "Run tests using pytest or another test framework",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to test file or directory",
+      "required": false
+    },
+    "pattern": {
+      "type": "string",
+      "description": "Test name pattern to match",
+      "required": false
+    },
+    "framework": {
+      "type": "string",
+      "description": "Test framework to use (pytest, unittest, etc.)",
+      "required": false,
+      "default": "pytest"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 120
+}

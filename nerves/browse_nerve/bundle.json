@@ -1,0 +1,37 @@
+{
+  "name": "browse_nerve",
+  "version": "1.0.0",
+  "description": "Open a URL and extract its content",
+  "role": "brain",
+  "tags": [
+    "browser",
+    "web",
+    "scraping"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "browser_open",
+      "implementations": {
+        "python": "mcp_tools/browser_open/tool.py"
+      }
+    },
+    {
+      "name": "browser_text",
+      "implementations": {
+        "python": "mcp_tools/browser_text/tool.py"
+      }
+    },
+    {
+      "name": "browser_close",
+      "implementations": {
+        "python": "mcp_tools/browser_close/tool.py"
+      }
+    }
+  ]
+}

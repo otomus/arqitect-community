@@ -1,0 +1,30 @@
+{
+  "name": "http_get",
+  "version": "1.0.0",
+  "description": "Send an HTTP GET request to a URL",
+  "params": {
+    "url": {
+      "type": "string",
+      "description": "URL to send the GET request to",
+      "required": true
+    },
+    "headers": {
+      "type": "string",
+      "description": "JSON string of headers to include",
+      "required": false,
+      "default": "{}"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "web",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["http", "get", "request", "api", "web"],
+  "requires_api_key": false
+}

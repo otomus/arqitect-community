@@ -1,0 +1,35 @@
+{
+  "name": "browser_close",
+  "version": "1.0.0",
+  "description": "Close a browser page and remove it from the page registry",
+  "params": {
+    "page_id": {
+      "type": "string",
+      "description": "UUID of the page returned by browser_open",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "browser",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "browser",
+    "automation",
+    "playwright",
+    "close",
+    "cleanup"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "playwright"
+    ]
+  }
+}

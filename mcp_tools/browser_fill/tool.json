@@ -1,0 +1,46 @@
+{
+  "name": "browser_fill",
+  "version": "1.0.0",
+  "description": "Fill a form input on a browser page with a given value",
+  "params": {
+    "page_id": {
+      "type": "string",
+      "description": "UUID of the page returned by browser_open",
+      "required": true
+    },
+    "selector": {
+      "type": "string",
+      "description": "CSS selector of the input element to fill",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "description": "Value to type into the input",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "browser",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "browser",
+    "automation",
+    "playwright",
+    "fill",
+    "form",
+    "input"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "playwright"
+    ]
+  }
+}

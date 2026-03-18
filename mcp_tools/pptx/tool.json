@@ -1,0 +1,46 @@
+{
+  "name": "pptx",
+  "version": "1.0.0",
+  "description": "Read or create PowerPoint PPTX files",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to the PPTX file to read or create",
+      "required": true
+    },
+    "slides": {
+      "type": "string",
+      "description": "JSON array of slide objects with 'title' and 'content' fields (required for create)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: read or create",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "documents",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "pptx",
+    "powerpoint",
+    "read",
+    "create",
+    "presentation",
+    "document"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "python-pptx"
+    ]
+  }
+}

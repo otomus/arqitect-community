@@ -1,0 +1,21 @@
+{
+  "name": "weather_nerve",
+  "version": "1.0.0",
+  "description": "Get current weather and forecasts",
+  "role": "brain",
+  "tags": [
+    "weather"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "weather",
+      "implementations": {}
+    }
+  ]
+}

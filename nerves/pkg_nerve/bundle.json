@@ -1,0 +1,48 @@
+{
+  "name": "pkg_nerve",
+  "version": "1.0.0",
+  "description": "Install, search, and update packages",
+  "role": "code",
+  "tags": [
+    "package",
+    "dependencies"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "pkg_install",
+      "implementations": {
+        "python": "mcp_tools/pkg_install/tool.py"
+      }
+    },
+    {
+      "name": "pkg_search",
+      "implementations": {
+        "python": "mcp_tools/pkg_search/tool.py"
+      }
+    },
+    {
+      "name": "pkg_update",
+      "implementations": {
+        "python": "mcp_tools/pkg_update/tool.py"
+      }
+    },
+    {
+      "name": "pkg_info",
+      "implementations": {
+        "python": "mcp_tools/pkg_info/tool.py"
+      }
+    },
+    {
+      "name": "pkg_list",
+      "implementations": {
+        "python": "mcp_tools/pkg_list/tool.py"
+      }
+    }
+  ]
+}

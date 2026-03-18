@@ -1,0 +1,39 @@
+{
+    "name": "incident_nerve",
+    "version": "1.0.0",
+    "description": "Investigate and triage an incident",
+    "role": "code",
+    "tags": [
+        "devops",
+        "incident",
+        "triage"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "log_read",
+            "mcp": "log_read",
+            "implementations": {}
+        },
+        {
+            "name": "docker_logs",
+            "mcp": "docker_logs",
+            "implementations": {}
+        },
+        {
+            "name": "process_list",
+            "mcp": "process_list",
+            "implementations": {}
+        },
+        {
+            "name": "alert_send",
+            "mcp": "alert_send",
+            "implementations": {}
+        }
+    ]
+}

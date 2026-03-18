@@ -1,0 +1,23 @@
+{
+  "name": "light_nerve",
+  "version": "1.0.0",
+  "description": "Control and query light state (on/off/brightness/color)",
+  "role": "nerve",
+  "tags": [
+    "iot",
+    "light"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "light",
+      "mcp": "philips_hue",
+      "implementations": {}
+    }
+  ]
+}

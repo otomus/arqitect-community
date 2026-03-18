@@ -1,0 +1,23 @@
+{
+  "name": "docx_nerve",
+  "version": "1.0.0",
+  "description": "Read from and create Word documents",
+  "role": "brain",
+  "tags": [
+    "document",
+    "docx",
+    "word"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "docx",
+      "implementations": {}
+    }
+  ]
+}

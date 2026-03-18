@@ -1,0 +1,31 @@
+{
+  "name": "sleep_tracker_read",
+  "version": "1.0.0",
+  "description": "Read sleep tracking data (requires device configuration)",
+  "params": {
+    "device_id": {
+      "type": "string",
+      "description": "Sleep tracker device ID",
+      "required": false,
+      "default": ""
+    },
+    "date": {
+      "type": "string",
+      "description": "Date to query (YYYY-MM-DD format)",
+      "required": false,
+      "default": ""
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 15,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "health",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["sleep", "tracker", "health", "eight-sleep"],
+  "requires_api_key": true
+}

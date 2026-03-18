@@ -1,0 +1,25 @@
+{
+  "name": "lint_nerve",
+  "version": "1.0.0",
+  "description": "Lint source files and report issues",
+  "role": "brain",
+  "tags": [
+    "code",
+    "lint",
+    "quality"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "code_lint",
+      "implementations": {
+        "python": "mcp_tools/code_lint/tool.py"
+      }
+    }
+  ]
+}

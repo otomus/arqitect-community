@@ -1,0 +1,1028 @@
+#!/usr/bin/env python3
+"""
+Build the Arqitect static site from project data.
+
+Reads tool.json, bundle.json, connector meta.json, MCP meta.json,
+and adapter files, then generates complete static HTML in docs/.
+"""
+
+from __future__ import annotations
+
+import html
+import json
+import os
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+DOCS = ROOT / "docs"
+
+# ---------------------------------------------------------------------------
+# Data loading
+# ---------------------------------------------------------------------------
+
+def load_json(path: Path) -> dict | list | None:
+    """Load a JSON file, returning None on failure."""
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, FileNotFoundError, OSError):
+        return None
+
+
+def load_tools() -> list[dict]:
+    """Load all MCP tools from mcp_tools/*/tool.json."""
+    tools_dir = ROOT / "mcp_tools"
+    if not tools_dir.is_dir():
+        return []
+    results = []
+    for d in sorted(tools_dir.iterdir()):
+        if not d.is_dir():
+            continue
+        tj = load_json(d / "tool.json")
+        if tj and isinstance(tj, dict):
+            tj.setdefault("name", d.name)
+            tj["_dir"] = d.name
+            results.append(tj)
+    return results
+
+
+def load_nerves() -> list[dict]:
+    """Load all nerves from nerves/*/bundle.json."""
+    nerves_dir = ROOT / "nerves"
+    if not nerves_dir.is_dir():
+        return []
+    results = []
+    for d in sorted(nerves_dir.iterdir()):
+        if not d.is_dir():
+            continue
+        bj = load_json(d / "bundle.json")
+        if bj and isinstance(bj, dict):
+            bj.setdefault("name", d.name)
+            bj["_dir"] = d.name
+            # detect available model sizes
+            sizes = []
+            for size in ("tinylm", "small", "medium", "large"):
+                if (d / size).is_dir():
+                    sizes.append(size)
+            bj["_sizes"] = sizes
+            # load test cases count
+            tc = load_json(d / "test_cases.json")
+            bj["_test_count"] = len(tc) if isinstance(tc, list) else 0
+            results.append(bj)
+    return results
+
+
+def load_connectors() -> list[dict]:
+    """Load all connectors from connectors/*/meta.json."""
+    cdir = ROOT / "connectors"
+    if not cdir.is_dir():
+        return []
+    results = []
+    for d in sorted(cdir.iterdir()):
+        if not d.is_dir():
+            continue
+        mj = load_json(d / "meta.json")
+        if mj and isinstance(mj, dict):
+            mj.setdefault("name", d.name)
+            mj["_dir"] = d.name
+            results.append(mj)
+    return results
+
+
+def load_mcps() -> list[dict]:
+    """Load all external MCPs from mcps/*/meta.json."""
+    mdir = ROOT / "mcps"
+    if not mdir.is_dir():
+        return []
+    results = []
+    for d in sorted(mdir.iterdir()):
+        if not d.is_dir():
+            continue
+        mj = load_json(d / "meta.json")
+        if mj and isinstance(mj, dict):
+            mj.setdefault("name", d.name)
+            mj["_dir"] = d.name
+            results.append(mj)
+    return results
+
+
+def load_adapters() -> list[dict]:
+    """Load all adapters from adapters/*/."""
+    adir = ROOT / "adapters"
+    if not adir.is_dir():
+        return []
+    results = []
+    for d in sorted(adir.iterdir()):
+        if not d.is_dir():
+            continue
+        adapter = {"name": d.name, "_dir": d.name, "_sizes": []}
+        for size in ("tinylm", "small", "medium", "large"):
+            sd = d / size
+            if sd.is_dir():
+                adapter["_sizes"].append(size)
+                ctx = load_json(sd / "context.json")
+                meta = load_json(sd / "meta.json")
+                if ctx and "description" not in adapter:
+                    # extract first line of system_prompt as description
+                    sp = ctx.get("system_prompt", "")
+                    first = sp.split("\n")[0][:200] if sp else ""
+                    adapter["description"] = first
+                if meta:
+                    adapter.setdefault("_meta_sample", meta)
+        results.append(adapter)
+    return results
+
+
+# ---------------------------------------------------------------------------
+# HTML helpers
+# ---------------------------------------------------------------------------
+
+E = html.escape
+
+
+def tags_html(tags: list[str], css_class: str = "tag--cyan") -> str:
+    """Render a list of tags as HTML."""
+    return "".join(
+        f'<span class="tag {css_class}">{E(t)}</span>' for t in tags
+    )
+
+
+def nav_html(active: str, depth: int = 0) -> str:
+    """Generate the navigation bar. depth=0 for root, 1 for one level deep."""
+    prefix = "../" * depth
+    links = [
+        ("index.html", "Home"),
+        ("tools/index.html", "Tools"),
+        ("nerves/index.html", "Nerves"),
+        ("connectors/index.html", "Connectors"),
+        ("mcps/index.html", "MCPs"),
+        ("adapters/index.html", "Adapters"),
+    ]
+    items = []
+    for href, label in links:
+        cls = ' class="active"' if label.lower() == active.lower() else ""
+        items.append(f'<a href="{prefix}{href}"{cls}>{label}</a>')
+    return f"""<nav class="nav">
+  <div class="nav-inner">
+    <a href="{prefix}index.html" class="nav-logo">ARQITECT</a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <div class="nav-links">{"".join(items)}</div>
+  </div>
+</nav>"""
+
+
+def page_head(title: str, depth: int = 0) -> str:
+    """Return the <head> content."""
+    prefix = "../" * depth
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{E(title)} — Arqitect</title>
+  <link rel="stylesheet" href="{prefix}css/arqitect.css">
+</head>
+<body>"""
+
+
+def page_foot(depth: int = 0) -> str:
+    """Return the footer and closing tags."""
+    prefix = "../" * depth
+    return f"""<footer class="footer">
+  Arqitect &mdash; autonomous agent ecosystem
+</footer>
+<script src="{prefix}js/arqitect.js"></script>
+</body>
+</html>"""
+
+
+def write_page(rel_path: str, content: str) -> None:
+    """Write an HTML page to docs/rel_path."""
+    out = DOCS / rel_path
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(content, encoding="utf-8")
+
+
+# ---------------------------------------------------------------------------
+# Page builders
+# ---------------------------------------------------------------------------
+
+def build_index(
+    tools: list[dict],
+    nerves: list[dict],
+    connectors: list[dict],
+    mcps: list[dict],
+    adapters: list[dict],
+) -> None:
+    """Build the homepage."""
+    stats = [
+        (str(len(tools)), "Tools"),
+        (str(len(nerves)), "Nerves"),
+        (str(len(connectors)), "Connectors"),
+        (str(len(mcps)), "MCP Servers"),
+        (str(len(adapters)), "Adapters"),
+    ]
+    stats_html = "".join(
+        f'<div class="stat-item"><span class="stat-number">{n}</span>'
+        f'<span class="stat-label">{l}</span></div>'
+        for n, l in stats
+    )
+
+    type_cards = [
+        ("tools/index.html", "&#9881;", "Tools", f"{len(tools)} utilities",
+         "Python, Go, and Node functions that agents invoke to interact with the world."),
+        ("nerves/index.html", "&#9889;", "Nerves", f"{len(nerves)} behaviors",
+         "Modular agent behaviors with system prompts, few-shot examples, and test cases."),
+        ("connectors/index.html", "&#128268;", "Connectors", f"{len(connectors)} platforms",
+         "Messaging platform bridges — Discord, Slack, Telegram, WhatsApp, and more."),
+        ("mcps/index.html", "&#9741;", "MCP Servers", f"{len(mcps)} integrations",
+         "External MCP server references for search, email, calendar, smart home, and more."),
+        ("adapters/index.html", "&#129504;", "Adapters", f"{len(adapters)} roles",
+         "Per-role, per-model-size system prompts that shape how the brain routes tasks."),
+    ]
+    type_html = "".join(
+        f'<a href="{href}" class="type-card">'
+        f'<span class="type-card-icon">{icon}</span>'
+        f'<div class="type-card-name">{name}</div>'
+        f'<div class="card-desc">{desc}</div>'
+        f'<div class="type-card-count">{count}</div></a>'
+        for href, icon, name, count, desc in type_cards
+    )
+
+    content = f"""{page_head("Home")}
+{nav_html("home")}
+<div class="hero">
+  <h1 class="hero-title">ARQITECT</h1>
+  <p class="hero-subtitle">
+    The open ecosystem for autonomous agents.
+    Discover, share, and compose tools, nerves, connectors, and adapters.
+  </p>
+  <div class="hero-line"></div>
+  <div class="stats-bar">{stats_html}</div>
+</div>
+<div class="container page-content">
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">What is Arqitect?</h2>
+      <div class="section-line"></div>
+    </div>
+    <p class="section-desc">
+      Arqitect is a community hub for the autonomous agent framework.
+      It hosts modular components that let you build, extend, and share
+      agent capabilities — from IoT control to document processing,
+      from web browsing to smart home integration.
+    </p>
+    <div class="steps">
+      <div class="step">
+        <span class="step-number">01</span>
+        <div class="step-title">Discover</div>
+        <p class="step-text">Browse the catalog of tools, nerves, connectors, and MCP integrations available for your agent.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">02</span>
+        <div class="step-title">Compose</div>
+        <p class="step-text">Nerves combine system prompts, tools, and test cases into modular behaviors. Mix and match to build your agent's skill set.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">03</span>
+        <div class="step-title">Connect</div>
+        <p class="step-text">Deploy connectors to bridge your agent to messaging platforms — Discord, Slack, Telegram, WhatsApp, and more.</p>
+      </div>
+      <div class="step">
+        <span class="step-number">04</span>
+        <div class="step-title">Contribute</div>
+        <p class="step-text">Submit new connectors, tools, and MCP server references via PR. All contributions are validated by CI.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Components</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="type-grid">{type_html}</div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Quick Start</h2>
+      <div class="section-line"></div>
+    </div>
+    <p class="section-desc" style="color: var(--orange);">TBD — usage instructions coming soon.</p>
+  </div>
+</div>
+{page_foot()}"""
+    write_page("index.html", content)
+
+
+# ---- TOOLS ----
+
+def build_tools_gallery(tools: list[dict]) -> None:
+    """Build the tools gallery page."""
+    # collect all unique categories and tags
+    categories = sorted({t.get("category", "") for t in tools if t.get("category")})
+    cat_options = '<option value="">All categories</option>' + "".join(
+        f'<option value="{E(c)}">{E(c)}</option>' for c in categories
+    )
+
+    cards = []
+    for t in tools:
+        name = t.get("name", t.get("_dir", "unknown"))
+        desc = t.get("description", "")
+        tgs = t.get("tags", [])
+        cat = t.get("category", "")
+        runtime = t.get("runtime", "")
+        search_text = f"{name} {desc} {' '.join(tgs)} {cat} {runtime}"
+        tag_str = " ".join(tgs)
+
+        meta_bits = []
+        if runtime:
+            meta_bits.append(f'<span class="tag tag--teal">{E(runtime)}</span>')
+        if cat:
+            meta_bits.append(f'<span class="tag tag--orange">{E(cat)}</span>')
+        for tg in tgs[:3]:
+            meta_bits.append(f'<span class="tag tag--cyan">{E(tg)}</span>')
+
+        cards.append(
+            f'<div class="card fade-in" data-search="{E(search_text)}" '
+            f'data-tags="{E(tag_str)}" data-category="{E(cat)}">'
+            f'<div class="card-name"><a href="{E(name)}.html">{E(name)}</a></div>'
+            f'<div class="card-desc">{E(desc)}</div>'
+            f'<div class="card-meta">{"".join(meta_bits)}</div></div>'
+        )
+
+    content = f"""{page_head("Tools", depth=1)}
+{nav_html("tools", depth=1)}
+<div class="container page-content">
+  <div class="section-header">
+    <h1 class="section-title">Tools</h1>
+    <div class="section-line"></div>
+  </div>
+  <p class="section-desc">Utility functions that agents invoke — Python, Go, and Node implementations for everything from IoT to document processing.</p>
+  <div class="filter-bar">
+    <input type="text" class="search-input" placeholder="Search tools...">
+    <select class="filter-select">{cat_options}</select>
+  </div>
+  <div class="result-count">{len(tools)} results</div>
+  <div class="card-grid">{"".join(cards)}</div>
+</div>
+{page_foot(depth=1)}"""
+    write_page("tools/index.html", content)
+
+
+def build_tool_detail(tool: dict) -> None:
+    """Build a single tool detail page."""
+    name = tool.get("name", tool.get("_dir", "unknown"))
+    desc = tool.get("description", "")
+    params = tool.get("params", {})
+    runtime = tool.get("runtime", "")
+    category = tool.get("category", "")
+    tags = tool.get("tags", [])
+    timeout = tool.get("timeout", "")
+    entry = tool.get("entry", "")
+    deps = tool.get("dependencies", {})
+    requires_key = tool.get("requires_api_key", False)
+
+    # params table
+    param_rows = ""
+    if params:
+        for pname, pinfo in params.items():
+            if isinstance(pinfo, dict):
+                ptype = pinfo.get("type", "")
+                pdesc = pinfo.get("description", "")
+                preq = "required" if pinfo.get("required") else "optional"
+                req_cls = "required" if pinfo.get("required") else "text-dim"
+            else:
+                ptype = str(pinfo)
+                pdesc = ""
+                preq = ""
+                req_cls = "text-dim"
+            param_rows += (
+                f'<tr><td class="param-name">{E(pname)}</td>'
+                f'<td class="param-type">{E(ptype)}</td>'
+                f'<td>{E(pdesc)}</td>'
+                f'<td class="{req_cls}">{E(preq)}</td></tr>'
+            )
+
+    params_section = ""
+    if param_rows:
+        params_section = f"""
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Parameters</h2>
+      <div class="section-line"></div>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Name</th><th>Type</th><th>Description</th><th>Required</th></tr></thead>
+      <tbody>{param_rows}</tbody>
+    </table>
+  </div>"""
+
+    # info grid
+    info_items = []
+    if runtime:
+        info_items.append(("Runtime", runtime))
+    if category:
+        info_items.append(("Category", category))
+    if entry:
+        info_items.append(("Entry", entry))
+    if timeout:
+        info_items.append(("Timeout", f"{timeout}s"))
+    info_items.append(("API Key", "Required" if requires_key else "Not required"))
+    if deps:
+        for lang, pkgs in deps.items():
+            if isinstance(pkgs, list):
+                info_items.append((f"Deps ({lang})", ", ".join(pkgs)))
+
+    info_html = "".join(
+        f'<div class="info-item"><div class="info-label">{E(l)}</div>'
+        f'<div class="info-value">{E(v)}</div></div>'
+        for l, v in info_items
+    )
+
+    content = f"""{page_head(name, depth=1)}
+{nav_html("tools", depth=1)}
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">Tools</a><span class="sep">/</span>{E(name)}
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">{E(name)}</h1>
+    <p class="detail-desc">{E(desc)}</p>
+    <div class="detail-tags mt-1">{tags_html(tags)}</div>
+  </div>
+  <div class="info-grid">{info_html}</div>
+  {params_section}
+</div>
+{page_foot(depth=1)}"""
+    write_page(f"tools/{name}.html", content)
+
+
+# ---- NERVES ----
+
+def build_nerves_gallery(nerves: list[dict]) -> None:
+    """Build the nerves gallery page."""
+    roles = sorted({n.get("role", "") for n in nerves if n.get("role")})
+    role_options = '<option value="">All roles</option>' + "".join(
+        f'<option value="{E(r)}">{E(r)}</option>' for r in roles
+    )
+
+    cards = []
+    for n in nerves:
+        name = n.get("name", n.get("_dir", "unknown"))
+        desc = n.get("description", "")
+        tgs = n.get("tags", [])
+        role = n.get("role", "")
+        sizes = n.get("_sizes", [])
+        tools_list = n.get("tools", [])
+        tool_count = len(tools_list)
+        search_text = f"{name} {desc} {' '.join(tgs)} {role}"
+        tag_str = " ".join(tgs)
+
+        meta_bits = []
+        if role:
+            meta_bits.append(f'<span class="tag tag--orange">{E(role)}</span>')
+        for tg in tgs[:3]:
+            meta_bits.append(f'<span class="tag tag--cyan">{E(tg)}</span>')
+        if sizes:
+            meta_bits.append(f'<span class="tag tag--teal">{len(sizes)} sizes</span>')
+        if tool_count:
+            meta_bits.append(f'<span class="tag tag--dim">{tool_count} tool{"s" if tool_count != 1 else ""}</span>')
+
+        cards.append(
+            f'<div class="card fade-in" data-search="{E(search_text)}" '
+            f'data-tags="{E(tag_str)}" data-category="{E(role)}">'
+            f'<div class="card-name"><a href="{E(name)}.html">{E(name)}</a></div>'
+            f'<div class="card-desc">{E(desc)}</div>'
+            f'<div class="card-meta">{"".join(meta_bits)}</div></div>'
+        )
+
+    content = f"""{page_head("Nerves", depth=1)}
+{nav_html("nerves", depth=1)}
+<div class="container page-content">
+  <div class="section-header">
+    <h1 class="section-title">Nerves</h1>
+    <div class="section-line"></div>
+  </div>
+  <p class="section-desc">Modular agent behaviors — each nerve bundles a system prompt, tools, few-shot examples, and test cases into a single composable unit.</p>
+  <div class="filter-bar">
+    <input type="text" class="search-input" placeholder="Search nerves...">
+    <select class="filter-select">{role_options}</select>
+  </div>
+  <div class="result-count">{len(nerves)} results</div>
+  <div class="card-grid">{"".join(cards)}</div>
+</div>
+{page_foot(depth=1)}"""
+    write_page("nerves/index.html", content)
+
+
+def build_nerve_detail(nerve: dict) -> None:
+    """Build a single nerve detail page."""
+    name = nerve.get("name", nerve.get("_dir", "unknown"))
+    desc = nerve.get("description", "")
+    role = nerve.get("role", "")
+    tags = nerve.get("tags", [])
+    version = nerve.get("version", "")
+    sizes = nerve.get("_sizes", [])
+    test_count = nerve.get("_test_count", 0)
+    tools_list = nerve.get("tools", [])
+
+    info_items = []
+    if role:
+        info_items.append(("Role", role))
+    if version:
+        info_items.append(("Version", version))
+    if sizes:
+        info_items.append(("Model Sizes", ", ".join(sizes)))
+    info_items.append(("Test Cases", str(test_count)))
+
+    info_html = "".join(
+        f'<div class="info-item"><div class="info-label">{E(l)}</div>'
+        f'<div class="info-value">{E(v)}</div></div>'
+        for l, v in info_items
+    )
+
+    # tools table
+    tools_section = ""
+    if tools_list:
+        rows = ""
+        for t in tools_list:
+            if isinstance(t, dict):
+                tname = t.get("name", "")
+                tmcp = t.get("mcp", "")
+                rows += f'<tr><td class="param-name">{E(tname)}</td><td>{E(tmcp)}</td></tr>'
+            else:
+                rows += f'<tr><td class="param-name">{E(str(t))}</td><td></td></tr>'
+        tools_section = f"""
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Tools</h2>
+      <div class="section-line"></div>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Tool Name</th><th>MCP Server</th></tr></thead>
+      <tbody>{rows}</tbody>
+    </table>
+  </div>"""
+
+    content = f"""{page_head(name, depth=1)}
+{nav_html("nerves", depth=1)}
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">Nerves</a><span class="sep">/</span>{E(name)}
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">{E(name)}</h1>
+    <p class="detail-desc">{E(desc)}</p>
+    <div class="detail-tags mt-1">{tags_html(tags)}</div>
+  </div>
+  <div class="info-grid">{info_html}</div>
+  {tools_section}
+</div>
+{page_foot(depth=1)}"""
+    write_page(f"nerves/{name}.html", content)
+
+
+# ---- CONNECTORS ----
+
+def build_connectors_gallery(connectors: list[dict]) -> None:
+    """Build the connectors gallery page."""
+    cards = []
+    for c in connectors:
+        name = c.get("name", c.get("_dir", "unknown"))
+        desc = c.get("description", "")
+        lang = c.get("language", "")
+        platforms = c.get("platforms", [])
+        caps_in = c.get("capabilities", {}).get("incoming", [])
+        search_text = f"{name} {desc} {lang} {' '.join(platforms)}"
+
+        meta_bits = []
+        if lang:
+            meta_bits.append(f'<span class="tag tag--teal">{E(lang)}</span>')
+        for p in platforms:
+            meta_bits.append(f'<span class="tag tag--cyan">{E(p)}</span>')
+        if caps_in:
+            meta_bits.append(f'<span class="tag tag--dim">{len(caps_in)} input types</span>')
+
+        cards.append(
+            f'<div class="card fade-in" data-search="{E(search_text)}" '
+            f'data-tags="{E(" ".join(platforms))}" data-category="{E(lang)}">'
+            f'<div class="card-name"><a href="{E(name)}.html">{E(name)}</a></div>'
+            f'<div class="card-desc">{E(desc)}</div>'
+            f'<div class="card-meta">{"".join(meta_bits)}</div></div>'
+        )
+
+    content = f"""{page_head("Connectors", depth=1)}
+{nav_html("connectors", depth=1)}
+<div class="container page-content">
+  <div class="section-header">
+    <h1 class="section-title">Connectors</h1>
+    <div class="section-line"></div>
+  </div>
+  <p class="section-desc">Messaging platform bridges — community-contributed implementations that connect your agent to Discord, Slack, Telegram, WhatsApp, and more.</p>
+  <div class="filter-bar">
+    <input type="text" class="search-input" placeholder="Search connectors...">
+  </div>
+  <div class="result-count">{len(connectors)} results</div>
+  <div class="card-grid">{"".join(cards)}</div>
+</div>
+{page_foot(depth=1)}"""
+    write_page("connectors/index.html", content)
+
+
+def build_connector_detail(connector: dict) -> None:
+    """Build a single connector detail page."""
+    name = connector.get("name", connector.get("_dir", "unknown"))
+    desc = connector.get("description", "")
+    lang = connector.get("language", "")
+    version = connector.get("version", "")
+    platforms = connector.get("platforms", [])
+    caps = connector.get("capabilities", {})
+    config_fields = connector.get("config_fields", [])
+    redis = connector.get("redis_channels", {})
+
+    info_items = []
+    if lang:
+        info_items.append(("Language", lang))
+    if version:
+        info_items.append(("Version", version))
+    if platforms:
+        info_items.append(("Platforms", ", ".join(platforms)))
+
+    info_html = "".join(
+        f'<div class="info-item"><div class="info-label">{E(l)}</div>'
+        f'<div class="info-value">{E(v)}</div></div>'
+        for l, v in info_items
+    )
+
+    # capabilities
+    caps_section = ""
+    cap_in = caps.get("incoming", [])
+    cap_out = caps.get("outgoing", [])
+    if cap_in or cap_out:
+        in_html = "".join(f'<span class="cap-badge">{E(c)}</span>' for c in cap_in)
+        out_html = "".join(f'<span class="cap-badge cap-badge--out">{E(c)}</span>' for c in cap_out)
+        caps_section = f"""
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Capabilities</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="mb-3">
+      <div class="info-label mb-2">Incoming</div>
+      <div class="cap-grid">{in_html}</div>
+    </div>
+    <div>
+      <div class="info-label mb-2">Outgoing</div>
+      <div class="cap-grid">{out_html}</div>
+    </div>
+  </div>"""
+
+    # config fields table
+    config_section = ""
+    if config_fields:
+        rows = ""
+        for cf in config_fields:
+            cname = cf.get("name", "")
+            cdesc = cf.get("description", "")
+            creq = "required" if cf.get("required") else "optional"
+            csec = "secret" if cf.get("secret") else ""
+            req_cls = "required" if cf.get("required") else "text-dim"
+            rows += (
+                f'<tr><td class="param-name">{E(cname)}</td>'
+                f'<td>{E(cdesc)}</td>'
+                f'<td class="{req_cls}">{E(creq)}</td>'
+                f'<td class="text-orange">{E(csec)}</td></tr>'
+            )
+        config_section = f"""
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Configuration</h2>
+      <div class="section-line"></div>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Field</th><th>Description</th><th>Required</th><th>Secret</th></tr></thead>
+      <tbody>{rows}</tbody>
+    </table>
+  </div>"""
+
+    content = f"""{page_head(name, depth=1)}
+{nav_html("connectors", depth=1)}
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">Connectors</a><span class="sep">/</span>{E(name)}
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">{E(name)}</h1>
+    <p class="detail-desc">{E(desc)}</p>
+  </div>
+  <div class="info-grid">{info_html}</div>
+  {caps_section}
+  {config_section}
+</div>
+{page_foot(depth=1)}"""
+    write_page(f"connectors/{name}.html", content)
+
+
+# ---- MCPs ----
+
+def build_mcps_gallery(mcps: list[dict]) -> None:
+    """Build the external MCPs gallery page."""
+    categories = sorted({m.get("category", "") for m in mcps if m.get("category")})
+    cat_options = '<option value="">All categories</option>' + "".join(
+        f'<option value="{E(c)}">{E(c)}</option>' for c in categories
+    )
+
+    cards = []
+    for m in mcps:
+        name = m.get("name", m.get("_dir", "unknown"))
+        desc = m.get("description", "")
+        cat = m.get("category", "")
+        source = m.get("source", "")
+        mtools = m.get("tools", [])
+        auth = m.get("auth_type", "none")
+        search_text = f"{name} {desc} {cat} {source} {' '.join(mtools) if isinstance(mtools, list) else ''}"
+
+        meta_bits = []
+        if source:
+            meta_bits.append(f'<span class="tag tag--teal">{E(source)}</span>')
+        if cat:
+            meta_bits.append(f'<span class="tag tag--orange">{E(cat)}</span>')
+        if auth and auth != "none":
+            meta_bits.append(f'<span class="tag tag--dim">auth: {E(auth)}</span>')
+        if isinstance(mtools, list):
+            meta_bits.append(f'<span class="tag tag--cyan">{len(mtools)} tools</span>')
+
+        cards.append(
+            f'<div class="card fade-in" data-search="{E(search_text)}" '
+            f'data-tags="{E(cat)}" data-category="{E(cat)}">'
+            f'<div class="card-name"><a href="{E(name)}.html">{E(name)}</a></div>'
+            f'<div class="card-desc">{E(desc)}</div>'
+            f'<div class="card-meta">{"".join(meta_bits)}</div></div>'
+        )
+
+    content = f"""{page_head("MCP Servers", depth=1)}
+{nav_html("mcps", depth=1)}
+<div class="container page-content">
+  <div class="section-header">
+    <h1 class="section-title">MCP Servers</h1>
+    <div class="section-line"></div>
+  </div>
+  <p class="section-desc">External MCP server references — pre-built integrations for search, email, calendar, smart home, and more.</p>
+  <div class="filter-bar">
+    <input type="text" class="search-input" placeholder="Search MCP servers...">
+    <select class="filter-select">{cat_options}</select>
+  </div>
+  <div class="result-count">{len(mcps)} results</div>
+  <div class="card-grid">{"".join(cards)}</div>
+</div>
+{page_foot(depth=1)}"""
+    write_page("mcps/index.html", content)
+
+
+def build_mcp_detail(mcp: dict) -> None:
+    """Build a single MCP detail page."""
+    name = mcp.get("name", mcp.get("_dir", "unknown"))
+    desc = mcp.get("description", "")
+    source = mcp.get("source", "")
+    package = mcp.get("package", "")
+    command = mcp.get("command", [])
+    auth = mcp.get("auth_type", "none")
+    category = mcp.get("category", "")
+    mtools = mcp.get("tools", [])
+    caps = mcp.get("capabilities", [])
+    env_vars = mcp.get("env", [])
+
+    info_items = []
+    if source:
+        info_items.append(("Source", source))
+    if package:
+        info_items.append(("Package", package))
+    if category:
+        info_items.append(("Category", category))
+    info_items.append(("Auth", auth))
+
+    info_html = "".join(
+        f'<div class="info-item"><div class="info-label">{E(l)}</div>'
+        f'<div class="info-value">{E(v)}</div></div>'
+        for l, v in info_items
+    )
+
+    cmd_section = ""
+    if command:
+        cmd_str = " ".join(command) if isinstance(command, list) else str(command)
+        cmd_section = f"""
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Command</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="code-block">{E(cmd_str)}</div>
+  </div>"""
+
+    tools_section = ""
+    if isinstance(mtools, list) and mtools:
+        tools_badges = "".join(f'<span class="tag tag--cyan">{E(t)}</span>' for t in mtools)
+        tools_section = f"""
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Available Tools</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="cap-grid">{tools_badges}</div>
+  </div>"""
+
+    caps_section = ""
+    if isinstance(caps, list) and caps:
+        caps_badges = "".join(f'<span class="cap-badge">{E(c)}</span>' for c in caps)
+        caps_section = f"""
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Capabilities</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="cap-grid">{caps_badges}</div>
+  </div>"""
+
+    env_section = ""
+    if isinstance(env_vars, list) and env_vars:
+        rows = ""
+        for ev in env_vars:
+            if isinstance(ev, dict):
+                ename = ev.get("name", "")
+                edesc = ev.get("description", "")
+                ereq = "required" if ev.get("required") else "optional"
+                req_cls = "required" if ev.get("required") else "text-dim"
+                rows += (
+                    f'<tr><td class="param-name">{E(ename)}</td>'
+                    f'<td>{E(edesc)}</td>'
+                    f'<td class="{req_cls}">{E(ereq)}</td></tr>'
+                )
+        if rows:
+            env_section = f"""
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Environment Variables</h2>
+      <div class="section-line"></div>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Variable</th><th>Description</th><th>Required</th></tr></thead>
+      <tbody>{rows}</tbody>
+    </table>
+  </div>"""
+
+    content = f"""{page_head(name, depth=1)}
+{nav_html("mcps", depth=1)}
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">MCP Servers</a><span class="sep">/</span>{E(name)}
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">{E(name)}</h1>
+    <p class="detail-desc">{E(desc)}</p>
+  </div>
+  <div class="info-grid">{info_html}</div>
+  {cmd_section}
+  {tools_section}
+  {caps_section}
+  {env_section}
+</div>
+{page_foot(depth=1)}"""
+    write_page(f"mcps/{name}.html", content)
+
+
+# ---- ADAPTERS ----
+
+def build_adapters_gallery(adapters: list[dict]) -> None:
+    """Build the adapters gallery page."""
+    cards = []
+    for a in adapters:
+        name = a.get("name", a.get("_dir", "unknown"))
+        desc = a.get("description", name)
+        sizes = a.get("_sizes", [])
+        search_text = f"{name} {desc} {' '.join(sizes)}"
+
+        meta_bits = []
+        meta_bits.append(f'<span class="tag tag--orange">{E(name)}</span>')
+        if sizes:
+            meta_bits.append(f'<span class="tag tag--teal">{len(sizes)} sizes</span>')
+
+        cards.append(
+            f'<div class="card fade-in" data-search="{E(search_text)}" '
+            f'data-tags="{E(name)}" data-category="{E(name)}">'
+            f'<div class="card-name"><a href="{E(name)}.html">{E(name)}</a></div>'
+            f'<div class="card-desc">{E(desc[:200])}</div>'
+            f'<div class="card-meta">{"".join(meta_bits)}</div></div>'
+        )
+
+    content = f"""{page_head("Adapters", depth=1)}
+{nav_html("adapters", depth=1)}
+<div class="container page-content">
+  <div class="section-header">
+    <h1 class="section-title">Adapters</h1>
+    <div class="section-line"></div>
+  </div>
+  <p class="section-desc">Per-role, per-model-size system prompts that shape how the brain routes and handles tasks. Each adapter is tuned for a specific role and model class.</p>
+  <div class="filter-bar">
+    <input type="text" class="search-input" placeholder="Search adapters...">
+  </div>
+  <div class="result-count">{len(adapters)} results</div>
+  <div class="card-grid">{"".join(cards)}</div>
+</div>
+{page_foot(depth=1)}"""
+    write_page("adapters/index.html", content)
+
+
+def build_adapter_detail(adapter: dict) -> None:
+    """Build a single adapter detail page."""
+    name = adapter.get("name", adapter.get("_dir", "unknown"))
+    desc = adapter.get("description", "")
+    sizes = adapter.get("_sizes", [])
+    meta_sample = adapter.get("_meta_sample", {})
+
+    info_items = [
+        ("Role", name),
+        ("Model Sizes", ", ".join(sizes) if sizes else "none"),
+    ]
+    caps = meta_sample.get("capabilities", {})
+    if caps:
+        for ck, cv in caps.items():
+            info_items.append((ck, str(cv)))
+
+    tuning = meta_sample.get("tuning", {})
+    if tuning:
+        for tk, tv in tuning.items():
+            info_items.append((tk.replace("_", " ").title(), str(tv)))
+
+    info_html = "".join(
+        f'<div class="info-item"><div class="info-label">{E(l)}</div>'
+        f'<div class="info-value">{E(str(v))}</div></div>'
+        for l, v in info_items
+    )
+
+    content = f"""{page_head(name, depth=1)}
+{nav_html("adapters", depth=1)}
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">Adapters</a><span class="sep">/</span>{E(name)}
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">{E(name)}</h1>
+    <p class="detail-desc">{E(desc[:300])}</p>
+  </div>
+  <div class="info-grid">{info_html}</div>
+</div>
+{page_foot(depth=1)}"""
+    write_page(f"adapters/{name}.html", content)
+
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
+
+def main() -> None:
+    """Build the complete Arqitect static site."""
+    print("Loading data...")
+    tools = load_tools()
+    nerves = load_nerves()
+    connectors = load_connectors()
+    mcps = load_mcps()
+    adapters = load_adapters()
+
+    print(f"  {len(tools)} tools, {len(nerves)} nerves, {len(connectors)} connectors, "
+          f"{len(mcps)} MCPs, {len(adapters)} adapters")
+
+    print("Building homepage...")
+    build_index(tools, nerves, connectors, mcps, adapters)
+
+    print("Building tools...")
+    build_tools_gallery(tools)
+    for t in tools:
+        build_tool_detail(t)
+
+    print("Building nerves...")
+    build_nerves_gallery(nerves)
+    for n in nerves:
+        build_nerve_detail(n)
+
+    print("Building connectors...")
+    build_connectors_gallery(connectors)
+    for c in connectors:
+        build_connector_detail(c)
+
+    print("Building MCP servers...")
+    build_mcps_gallery(mcps)
+    for m in mcps:
+        build_mcp_detail(m)
+
+    print("Building adapters...")
+    build_adapters_gallery(adapters)
+    for a in adapters:
+        build_adapter_detail(a)
+
+    total = 1 + 2 + len(tools) + 2 + len(nerves) + 2 + len(connectors) + 2 + len(mcps) + 2 + len(adapters)
+    print(f"Done — {total} pages written to docs/")
+
+
+if __name__ == "__main__":
+    main()

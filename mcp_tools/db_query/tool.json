@@ -1,0 +1,22 @@
+{
+  "name": "db_query",
+  "version": "1.0.0",
+  "description": "Execute a SELECT query against a connected database and return rows as a JSON array of dicts.",
+  "params": {
+    "connection_id": {
+      "type": "string",
+      "description": "Connection token returned by db_connect"
+    },
+    "sql": {
+      "type": "string",
+      "description": "SQL SELECT statement to execute"
+    },
+    "params": {
+      "type": "string",
+      "description": "Optional JSON array of bind parameters"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

@@ -1,0 +1,24 @@
+{
+  "name": "gif_search",
+  "version": "1.0.0",
+  "description": "Search for GIFs using Tenor API",
+  "params": {
+    "query": {
+      "type": "string",
+      "description": "Search query for GIFs",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 15,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["gif", "search", "tenor", "animation"],
+  "requires_api_key": false
+}

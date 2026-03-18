@@ -1,0 +1,35 @@
+{
+  "name": "base64",
+  "version": "1.0.0",
+  "description": "Encode or decode a base64 string",
+  "params": {
+    "input": {
+      "type": "string",
+      "description": "String to encode or base64 string to decode",
+      "required": true
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: encode or decode",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "base64",
+    "encode",
+    "decode",
+    "binary",
+    "data"
+  ],
+  "requires_api_key": false
+}

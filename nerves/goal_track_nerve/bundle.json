@@ -1,0 +1,34 @@
+{
+    "name": "goal_track_nerve",
+    "version": "1.0.0",
+    "description": "Track progress toward a goal",
+    "role": "brain",
+    "tags": [
+        "self-improvement",
+        "goals",
+        "tracking"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "json_parse",
+            "mcp": "json_parse",
+            "implementations": {}
+        },
+        {
+            "name": "math_eval",
+            "mcp": "math_eval",
+            "implementations": {}
+        },
+        {
+            "name": "chart_create",
+            "mcp": "chart_create",
+            "implementations": {}
+        }
+    ]
+}

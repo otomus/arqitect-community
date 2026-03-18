@@ -1,0 +1,25 @@
+{
+  "name": "coverage_nerve",
+  "version": "1.0.0",
+  "description": "Generate test coverage report",
+  "role": "brain",
+  "tags": [
+    "code",
+    "test",
+    "coverage"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "coverage_report",
+      "implementations": {
+        "python": "mcp_tools/coverage_report/tool.py"
+      }
+    }
+  ]
+}

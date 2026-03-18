@@ -1,0 +1,45 @@
+{
+  "name": "hash",
+  "version": "1.0.0",
+  "description": "Compute or verify cryptographic hashes",
+  "params": {
+    "input": {
+      "type": "string",
+      "description": "String to hash",
+      "required": true
+    },
+    "algorithm": {
+      "type": "string",
+      "description": "Hash algorithm: md5, sha1, sha256, or sha512",
+      "required": true
+    },
+    "hash": {
+      "type": "string",
+      "description": "Expected hash to verify against (required for verify)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: compute or verify",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "security",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "hash",
+    "compute",
+    "verify",
+    "checksum",
+    "crypto"
+  ],
+  "requires_api_key": false
+}

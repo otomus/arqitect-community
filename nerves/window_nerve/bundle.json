@@ -1,0 +1,22 @@
+{
+  "name": "window_nerve",
+  "version": "1.0.0",
+  "description": "List, focus, and resize windows",
+  "role": "nerve",
+  "tags": [
+    "window",
+    "system"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "window",
+      "implementations": {}
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "xlsx_nerve",
+  "version": "1.0.0",
+  "description": "Read from and create Excel spreadsheets",
+  "role": "brain",
+  "tags": [
+    "document",
+    "xlsx",
+    "excel"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "xlsx",
+      "implementations": {}
+    }
+  ]
+}

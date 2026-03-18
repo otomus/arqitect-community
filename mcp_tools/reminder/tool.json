@@ -1,0 +1,56 @@
+{
+  "name": "reminder",
+  "version": "1.0.0",
+  "description": "Unified reminder management: create, list, and complete reminders",
+  "params": {
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: create, list, complete",
+      "required": true
+    },
+    "id": {
+      "type": "string",
+      "description": "Reminder identifier (used for complete)",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "description": "Reminder title (used for create)",
+      "required": false
+    },
+    "due": {
+      "type": "string",
+      "description": "Due date/time in ISO format (used for create)",
+      "required": false
+    },
+    "list_name": {
+      "type": "string",
+      "description": "List name for grouping reminders (used for create, list)",
+      "required": false
+    },
+    "completed": {
+      "type": "string",
+      "description": "Filter by completion status: true or false (used for list)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "productivity",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "reminder",
+    "create",
+    "list",
+    "complete",
+    "productivity",
+    "tasks"
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,45 @@
+{
+  "name": "json_tool",
+  "version": "1.0.0",
+  "description": "Parse, format, or query JSON data",
+  "params": {
+    "input": {
+      "type": "string",
+      "description": "JSON string to process",
+      "required": true
+    },
+    "query": {
+      "type": "string",
+      "description": "Dot-notation path to extract a value (required for query)",
+      "required": false
+    },
+    "indent": {
+      "type": "string",
+      "description": "Number of spaces for indentation (optional, format only)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: parse, format, or query",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "json",
+    "parse",
+    "format",
+    "query",
+    "data"
+  ],
+  "requires_api_key": false
+}

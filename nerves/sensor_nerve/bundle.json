@@ -1,0 +1,22 @@
+{
+  "name": "sensor_nerve",
+  "version": "1.0.0",
+  "description": "Read sensor values and list available sensors",
+  "role": "nerve",
+  "tags": [
+    "iot",
+    "sensor"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "sensor",
+      "implementations": {}
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "cron_create",
+  "version": "1.0.0",
+  "description": "Create a scheduled job entry in a JSON jobs file",
+  "params": {
+    "schedule": {
+      "type": "string",
+      "description": "Cron expression (e.g. '*/5 * * * *')",
+      "required": true
+    },
+    "command": {
+      "type": "string",
+      "description": "Command to execute on schedule",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

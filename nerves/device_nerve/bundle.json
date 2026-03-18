@@ -1,0 +1,22 @@
+{
+  "name": "device_nerve",
+  "version": "1.0.0",
+  "description": "List and check health of connected devices",
+  "role": "nerve",
+  "tags": [
+    "iot",
+    "device"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "device",
+      "implementations": {}
+    }
+  ]
+}

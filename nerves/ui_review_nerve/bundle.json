@@ -1,0 +1,34 @@
+{
+    "name": "ui_review_nerve",
+    "version": "1.0.0",
+    "description": "Review a UI design for usability",
+    "role": "vision",
+    "tags": [
+        "design",
+        "ui",
+        "review"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "browser_screenshot",
+            "mcp": "browser_screenshot",
+            "implementations": {}
+        },
+        {
+            "name": "image_to_text",
+            "mcp": "image_to_text",
+            "implementations": {}
+        },
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        }
+    ]
+}

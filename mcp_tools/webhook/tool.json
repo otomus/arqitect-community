@@ -1,0 +1,50 @@
+{
+  "name": "webhook",
+  "version": "1.0.0",
+  "description": "Unified webhook management: send webhook requests and register listeners",
+  "params": {
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: send, listen",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "description": "Webhook URL to send to (used for send)",
+      "required": false
+    },
+    "payload": {
+      "type": "string",
+      "description": "JSON payload string to send (used for send)",
+      "required": false
+    },
+    "path": {
+      "type": "string",
+      "description": "Path to listen on (used for listen; e.g. /hooks/github)",
+      "required": false
+    },
+    "events": {
+      "type": "string",
+      "description": "Comma-separated event types to filter (used for listen)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "integration",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "webhook",
+    "send",
+    "listen",
+    "http",
+    "integration"
+  ],
+  "requires_api_key": false
+}

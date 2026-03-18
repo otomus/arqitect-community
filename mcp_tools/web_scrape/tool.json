@@ -1,0 +1,30 @@
+{
+  "name": "web_scrape",
+  "version": "1.0.0",
+  "description": "Fetch a web page and extract its text content",
+  "params": {
+    "url": {
+      "type": "string",
+      "description": "URL of the page to scrape",
+      "required": true
+    },
+    "selector": {
+      "type": "string",
+      "description": "Optional CSS selector to filter elements (supports tag, .class, #id)",
+      "required": false,
+      "default": ""
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "web",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["web", "scrape", "fetch", "html", "extract"],
+  "requires_api_key": false
+}

@@ -1,0 +1,23 @@
+{
+  "name": "password_nerve",
+  "version": "1.0.0",
+  "description": "Generate, store, and retrieve credentials",
+  "role": "brain",
+  "tags": [
+    "security",
+    "password",
+    "credentials"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "password",
+      "implementations": {}
+    }
+  ]
+}

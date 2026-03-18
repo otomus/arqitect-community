@@ -1,0 +1,25 @@
+{
+  "name": "format_nerve",
+  "version": "1.0.0",
+  "description": "Format source files",
+  "role": "brain",
+  "tags": [
+    "code",
+    "format",
+    "style"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "code_format",
+      "implementations": {
+        "python": "mcp_tools/code_format/tool.py"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "llm_tokenize",
+  "version": "1.0.0",
+  "description": "Count approximate tokens in text using whitespace and punctuation splitting",
+  "params": {
+    "text": {
+      "type": "string",
+      "description": "Text to tokenize",
+      "required": true
+    },
+    "model": {
+      "type": "string",
+      "description": "Model name (informational, does not change counting)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

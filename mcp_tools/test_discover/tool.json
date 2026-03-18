@@ -1,0 +1,22 @@
+{
+  "name": "test_discover",
+  "version": "1.0.0",
+  "description": "Discover test files matching a pattern in a directory",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Root directory to search",
+      "required": false,
+      "default": "."
+    },
+    "pattern": {
+      "type": "string",
+      "description": "Filename pattern to match",
+      "required": false,
+      "default": "test_*.py"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

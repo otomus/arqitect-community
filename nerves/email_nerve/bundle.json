@@ -1,0 +1,23 @@
+{
+  "name": "email_nerve",
+  "version": "1.0.0",
+  "description": "Full email operations (send, receive, read, reply, search)",
+  "role": "communication",
+  "tags": [
+    "communication",
+    "email"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "email",
+      "mcp": "email",
+      "implementations": {}
+    }
+  ]
+}

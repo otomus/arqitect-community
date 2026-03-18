@@ -1,0 +1,61 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "Unified calendar management: list, create, and delete calendar events",
+  "params": {
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: list, create, delete",
+      "required": true
+    },
+    "event_id": {
+      "type": "string",
+      "description": "Event identifier (used for delete)",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "description": "Event title (used for create)",
+      "required": false
+    },
+    "start": {
+      "type": "string",
+      "description": "Start datetime in ISO format (used for create, list)",
+      "required": false
+    },
+    "end": {
+      "type": "string",
+      "description": "End datetime in ISO format (used for create)",
+      "required": false
+    },
+    "date_range": {
+      "type": "string",
+      "description": "Number of days to look ahead when listing (default 7)",
+      "required": false
+    },
+    "calendar_name": {
+      "type": "string",
+      "description": "Name of the calendar to use",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "external",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "calendar",
+    "events",
+    "schedule",
+    "create",
+    "delete",
+    "agenda"
+  ],
+  "requires_api_key": false
+}

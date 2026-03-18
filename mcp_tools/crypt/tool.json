@@ -1,0 +1,40 @@
+{
+  "name": "crypt",
+  "version": "1.0.0",
+  "description": "Encrypt or decrypt text using a symmetric key",
+  "params": {
+    "text": {
+      "type": "string",
+      "description": "Text to encrypt, or ciphertext to decrypt",
+      "required": true
+    },
+    "key": {
+      "type": "string",
+      "description": "Encryption key (will be hashed to 32 bytes)",
+      "required": true
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: encrypt or decrypt",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "security",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "encrypt",
+    "decrypt",
+    "crypto",
+    "secret",
+    "cipher"
+  ],
+  "requires_api_key": false
+}

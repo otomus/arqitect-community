@@ -1,0 +1,34 @@
+{
+    "name": "compliance_check_nerve",
+    "version": "1.0.0",
+    "description": "Check content against compliance rules",
+    "role": "brain",
+    "tags": [
+        "legal",
+        "compliance",
+        "audit"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "file_read",
+            "mcp": "file_read",
+            "implementations": {}
+        },
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        },
+        {
+            "name": "json_format",
+            "mcp": "json_format",
+            "implementations": {}
+        }
+    ]
+}

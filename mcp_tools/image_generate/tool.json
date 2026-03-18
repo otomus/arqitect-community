@@ -1,0 +1,30 @@
+{
+  "name": "image_generate",
+  "version": "1.0.0",
+  "description": "Generate an image from a text prompt (requires API configuration)",
+  "params": {
+    "prompt": {
+      "type": "string",
+      "description": "Text description of the image to generate",
+      "required": true
+    },
+    "model": {
+      "type": "string",
+      "description": "Model to use for generation",
+      "required": false,
+      "default": ""
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 60,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["image", "generate", "ai", "art"],
+  "requires_api_key": true
+}

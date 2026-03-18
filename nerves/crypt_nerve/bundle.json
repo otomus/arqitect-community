@@ -1,0 +1,22 @@
+{
+  "name": "crypt_nerve",
+  "version": "1.0.0",
+  "description": "Encrypt and decrypt text",
+  "role": "brain",
+  "tags": [
+    "security",
+    "encryption"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "crypt",
+      "implementations": {}
+    }
+  ]
+}

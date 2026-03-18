@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>spotify — Arqitect</title>
+  <link rel="stylesheet" href="../css/arqitect.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">ARQITECT</a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <div class="nav-links"><a href="../index.html">Home</a><a href="../tools/index.html">Tools</a><a href="../nerves/index.html">Nerves</a><a href="../connectors/index.html">Connectors</a><a href="../mcps/index.html" class="active">MCPs</a><a href="../adapters/index.html">Adapters</a></div>
+  </div>
+</nav>
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">MCP Servers</a><span class="sep">/</span>spotify
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">spotify</h1>
+    <p class="detail-desc">Spotify music playback — control playback, search, and manage queue</p>
+  </div>
+  <div class="info-grid"><div class="info-item"><div class="info-label">Source</div><div class="info-value">npm</div></div><div class="info-item"><div class="info-label">Package</div><div class="info-value">spotify-mcp-server</div></div><div class="info-item"><div class="info-label">Category</div><div class="info-value">music</div></div><div class="info-item"><div class="info-label">Auth</div><div class="info-value">oauth2</div></div></div>
+  
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Command</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="code-block">npx -y spotify-mcp-server</div>
+  </div>
+  
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Available Tools</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="cap-grid"><span class="tag tag--cyan">play</span><span class="tag tag--cyan">pause</span><span class="tag tag--cyan">next</span><span class="tag tag--cyan">previous</span><span class="tag tag--cyan">search</span><span class="tag tag--cyan">queue</span><span class="tag tag--cyan">now_playing</span></div>
+  </div>
+  
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Capabilities</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="cap-grid"><span class="cap-badge">music</span><span class="cap-badge">playback</span><span class="cap-badge">playlist</span><span class="cap-badge">streaming</span><span class="cap-badge">audio</span></div>
+  </div>
+  
+</div>
+<footer class="footer">
+  Arqitect &mdash; autonomous agent ecosystem
+</footer>
+<script src="../js/arqitect.js"></script>
+</body>
+</html>

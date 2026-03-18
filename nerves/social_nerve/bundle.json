@@ -1,0 +1,22 @@
+{
+  "name": "social_nerve",
+  "version": "1.0.0",
+  "description": "Full social media operations on any platform",
+  "role": "communication",
+  "tags": [
+    "communication",
+    "social"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "social",
+      "implementations": {}
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "stock",
+  "version": "1.0.0",
+  "description": "Get stock quotes or historical price data",
+  "params": {
+    "symbol": {
+      "type": "string",
+      "description": "Stock ticker symbol (e.g. AAPL)",
+      "required": true
+    },
+    "period": {
+      "type": "string",
+      "description": "Time period for history: 1d, 5d, 1mo, 3mo, 1y (optional, history only)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: quote or history",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "finance",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "stock",
+    "quote",
+    "history",
+    "finance",
+    "market"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "yfinance"
+    ]
+  }
+}

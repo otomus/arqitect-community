@@ -1,0 +1,16 @@
+{
+  "name": "coverage_report",
+  "version": "1.0.0",
+  "description": "Run tests with coverage reporting",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to source or test directory",
+      "required": false,
+      "default": "."
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 120
+}

@@ -1,0 +1,40 @@
+{
+  "name": "clipboard",
+  "version": "1.0.0",
+  "description": "Read from or write to the system clipboard",
+  "params": {
+    "content": {
+      "type": "string",
+      "description": "Text to write to the clipboard (required for write)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: read or write",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "system",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "clipboard",
+    "read",
+    "write",
+    "copy",
+    "paste"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "pyperclip"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "gif_nerve",
+  "version": "1.0.0",
+  "description": "Find and create GIFs",
+  "role": "creative",
+  "tags": [
+    "gif",
+    "media"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "gif_search",
+      "implementations": {
+        "python": "mcp_tools/gif_search/tool.py"
+      }
+    },
+    {
+      "name": "gif_create",
+      "implementations": {
+        "python": "mcp_tools/gif_create/tool.py"
+      }
+    }
+  ]
+}

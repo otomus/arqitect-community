@@ -1,0 +1,40 @@
+{
+  "name": "log",
+  "version": "1.0.0",
+  "description": "Read from or write to a log file",
+  "params": {
+    "source": {
+      "type": "string",
+      "description": "Path to the log file",
+      "required": true
+    },
+    "message": {
+      "type": "string",
+      "description": "Log message to write (required for write)",
+      "required": false
+    },
+    "level": {
+      "type": "string",
+      "description": "Log level, e.g. INFO, WARN, ERROR (optional, write only, default INFO)",
+      "required": false
+    },
+    "count": {
+      "type": "string",
+      "description": "Number of recent lines to read (optional, read only, default 100)",
+      "required": false
+    },
+    "filter": {
+      "type": "string",
+      "description": "Substring filter for read results (optional, read only)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: read or write",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

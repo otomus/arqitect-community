@@ -1,0 +1,49 @@
+{
+  "name": "sensor",
+  "version": "1.0.0",
+  "description": "Read a sensor value or list available sensors",
+  "params": {
+    "sensor_id": {
+      "type": "string",
+      "description": "Unique identifier of the sensor (required for read)",
+      "required": false
+    },
+    "type": {
+      "type": "string",
+      "description": "Filter sensors by type (optional, list only)",
+      "required": false
+    },
+    "device": {
+      "type": "string",
+      "description": "Filter sensors by parent device (optional, list only)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: read or list",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "iot",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "iot",
+    "sensor",
+    "read",
+    "list"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "requests"
+    ]
+  }
+}

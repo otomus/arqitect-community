@@ -1,0 +1,25 @@
+{
+  "name": "test_nerve",
+  "version": "1.0.0",
+  "description": "Run tests and report results",
+  "role": "brain",
+  "tags": [
+    "code",
+    "test",
+    "quality"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "test_run",
+      "implementations": {
+        "python": "mcp_tools/test_run/tool.py"
+      }
+    }
+  ]
+}

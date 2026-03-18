@@ -1,0 +1,34 @@
+{
+    "name": "nutrition_nerve",
+    "version": "1.0.0",
+    "description": "Analyze nutrition intake",
+    "role": "brain",
+    "tags": [
+        "health",
+        "nutrition",
+        "analysis"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "web_search",
+            "mcp": "duckduckgo",
+            "implementations": {}
+        },
+        {
+            "name": "math_eval",
+            "mcp": "math_eval",
+            "implementations": {}
+        },
+        {
+            "name": "json_format",
+            "mcp": "json_format",
+            "implementations": {}
+        }
+    ]
+}

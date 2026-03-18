@@ -1,0 +1,45 @@
+{
+  "name": "regex",
+  "version": "1.0.0",
+  "description": "Match or replace text using regular expressions",
+  "params": {
+    "pattern": {
+      "type": "string",
+      "description": "Regular expression pattern",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "description": "Text to search or transform",
+      "required": true
+    },
+    "replacement": {
+      "type": "string",
+      "description": "Replacement string (required for replace)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: match or replace",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "regex",
+    "match",
+    "replace",
+    "pattern",
+    "text"
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,30 @@
+{
+  "name": "audio_synthesize",
+  "version": "1.0.0",
+  "description": "Convert text to speech audio",
+  "params": {
+    "text": {
+      "type": "string",
+      "description": "Text to convert to speech",
+      "required": true
+    },
+    "voice": {
+      "type": "string",
+      "description": "Voice name (macOS voices, e.g. 'Alex', 'Samantha')",
+      "required": false,
+      "default": ""
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 60,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["audio", "synthesize", "tts", "speech", "voice"],
+  "requires_api_key": false
+}

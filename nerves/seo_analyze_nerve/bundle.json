@@ -1,0 +1,34 @@
+{
+    "name": "seo_analyze_nerve",
+    "version": "1.0.0",
+    "description": "Analyze SEO for a URL or keyword",
+    "role": "brain",
+    "tags": [
+        "marketing",
+        "seo",
+        "analysis"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "web_search",
+            "mcp": "duckduckgo",
+            "implementations": {}
+        },
+        {
+            "name": "web_scrape",
+            "mcp": "web_scrape",
+            "implementations": {}
+        },
+        {
+            "name": "json_format",
+            "mcp": "json_format",
+            "implementations": {}
+        }
+    ]
+}

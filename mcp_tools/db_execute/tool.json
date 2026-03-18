@@ -1,0 +1,22 @@
+{
+  "name": "db_execute",
+  "version": "1.0.0",
+  "description": "Execute an INSERT, UPDATE, or DELETE statement and return the affected row count.",
+  "params": {
+    "connection_id": {
+      "type": "string",
+      "description": "Connection token returned by db_connect"
+    },
+    "sql": {
+      "type": "string",
+      "description": "SQL INSERT/UPDATE/DELETE statement to execute"
+    },
+    "params": {
+      "type": "string",
+      "description": "Optional JSON array of bind parameters"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

@@ -1,0 +1,24 @@
+{
+  "name": "youtube_transcript",
+  "version": "1.0.0",
+  "description": "Download the transcript of a YouTube video",
+  "params": {
+    "video_id": {
+      "type": "string",
+      "description": "YouTube video ID (e.g. 'dQw4w9WgXcQ')",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 60,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["youtube", "transcript", "subtitles", "captions"],
+  "requires_api_key": false
+}

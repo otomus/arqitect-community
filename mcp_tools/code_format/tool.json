@@ -1,0 +1,20 @@
+{
+  "name": "code_format",
+  "version": "1.0.0",
+  "description": "Format source code files using ruff or prettier",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to file or directory to format",
+      "required": true
+    },
+    "language": {
+      "type": "string",
+      "description": "Language (python, javascript). Auto-detected if omitted",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 60
+}

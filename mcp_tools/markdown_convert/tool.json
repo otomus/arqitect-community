@@ -1,0 +1,41 @@
+{
+  "name": "markdown_convert",
+  "version": "1.0.0",
+  "description": "Convert Markdown to HTML or PDF",
+  "params": {
+    "content": {
+      "type": "string",
+      "description": "Markdown text to convert",
+      "required": true
+    },
+    "format": {
+      "type": "string",
+      "description": "Output format: html or pdf",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "documents",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "markdown",
+    "html",
+    "pdf",
+    "convert",
+    "document"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "markdown",
+      "reportlab"
+    ]
+  }
+}

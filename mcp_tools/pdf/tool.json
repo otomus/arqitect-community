@@ -1,0 +1,55 @@
+{
+  "name": "pdf",
+  "version": "1.0.0",
+  "description": "Read or create PDF files",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to the PDF file to read or create",
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "description": "Text content to write into the PDF (required for create)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: read or create",
+      "required": true
+    },
+    "pages": {
+      "type": "string",
+      "description": "Page range to read, e.g. '1-5' (optional, read only)",
+      "required": false
+    },
+    "format": {
+      "type": "string",
+      "description": "Output format hint (optional)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "documents",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "pdf",
+    "read",
+    "create",
+    "document"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "pdfplumber",
+      "reportlab"
+    ]
+  }
+}

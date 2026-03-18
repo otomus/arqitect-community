@@ -1,0 +1,20 @@
+{
+  "name": "prompt_template",
+  "version": "1.0.0",
+  "description": "Render a template string with variable substitution",
+  "params": {
+    "template": {
+      "type": "string",
+      "description": "Template string with {var} placeholders",
+      "required": true
+    },
+    "vars": {
+      "type": "string",
+      "description": "JSON object of variable names to values",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

@@ -1,0 +1,45 @@
+{
+  "name": "csv",
+  "version": "1.0.0",
+  "description": "Read or write CSV files",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to the CSV file to read or write",
+      "required": true
+    },
+    "data": {
+      "type": "string",
+      "description": "JSON string containing an array of arrays (required for write)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: read or write",
+      "required": true
+    },
+    "delimiter": {
+      "type": "string",
+      "description": "Column delimiter character (defaults to comma)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "csv",
+    "read",
+    "write",
+    "data",
+    "tabular"
+  ],
+  "requires_api_key": false
+}

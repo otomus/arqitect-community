@@ -1,0 +1,34 @@
+{
+    "name": "expense_track_nerve",
+    "version": "1.0.0",
+    "description": "Log and categorize an expense",
+    "role": "brain",
+    "tags": [
+        "finance",
+        "expense",
+        "tracking"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "json_parse",
+            "mcp": "json_parse",
+            "implementations": {}
+        },
+        {
+            "name": "csv_write",
+            "mcp": "csv_write",
+            "implementations": {}
+        },
+        {
+            "name": "math_eval",
+            "mcp": "math_eval",
+            "implementations": {}
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "barcode_nerve",
+  "version": "1.0.0",
+  "description": "Generate and read barcodes",
+  "role": "brain",
+  "tags": [
+    "barcode"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "barcode",
+      "implementations": {}
+    }
+  ]
+}

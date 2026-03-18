@@ -1,0 +1,73 @@
+{
+  "name": "email",
+  "version": "1.0.0",
+  "description": "Unified email management: send, fetch, read, reply, and search emails",
+  "params": {
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: send, fetch, read, reply, search",
+      "required": true
+    },
+    "id": {
+      "type": "string",
+      "description": "Message ID (used for read, reply)",
+      "required": false
+    },
+    "to": {
+      "type": "string",
+      "description": "Recipient email address (used for send)",
+      "required": false
+    },
+    "subject": {
+      "type": "string",
+      "description": "Email subject (used for send)",
+      "required": false
+    },
+    "body": {
+      "type": "string",
+      "description": "Email body text (used for send, reply)",
+      "required": false
+    },
+    "folder": {
+      "type": "string",
+      "description": "Mailbox folder (used for fetch, search; default INBOX)",
+      "required": false
+    },
+    "count": {
+      "type": "string",
+      "description": "Number of messages to fetch (used for fetch; default 10)",
+      "required": false
+    },
+    "filter_str": {
+      "type": "string",
+      "description": "IMAP filter string (used for fetch)",
+      "required": false
+    },
+    "query": {
+      "type": "string",
+      "description": "Search query string (used for search)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 60,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "communication",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "email",
+    "send",
+    "fetch",
+    "read",
+    "reply",
+    "search",
+    "imap",
+    "smtp"
+  ],
+  "requires_api_key": true
+}

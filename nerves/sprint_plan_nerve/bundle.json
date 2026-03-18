@@ -1,0 +1,34 @@
+{
+    "name": "sprint_plan_nerve",
+    "version": "1.0.0",
+    "description": "Plan sprint tasks from backlog",
+    "role": "brain",
+    "tags": [
+        "project-management",
+        "sprint",
+        "planning"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "json_parse",
+            "mcp": "json_parse",
+            "implementations": {}
+        },
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        },
+        {
+            "name": "json_format",
+            "mcp": "json_format",
+            "implementations": {}
+        }
+    ]
+}

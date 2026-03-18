@@ -1,0 +1,41 @@
+{
+  "name": "browser_text",
+  "version": "1.0.0",
+  "description": "Extract text content from a browser page, optionally scoped to a CSS selector",
+  "params": {
+    "page_id": {
+      "type": "string",
+      "description": "UUID of the page returned by browser_open",
+      "required": true
+    },
+    "selector": {
+      "type": "string",
+      "description": "CSS selector to scope text extraction (returns full page text if omitted)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "browser",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "browser",
+    "automation",
+    "playwright",
+    "text",
+    "extract",
+    "scrape"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "playwright"
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "xlsx",
+  "version": "1.0.0",
+  "description": "Read or create Excel XLSX files",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to the Excel file to read or create",
+      "required": true
+    },
+    "data": {
+      "type": "string",
+      "description": "JSON string containing an array of arrays for rows and cells (required for create)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: read or create",
+      "required": true
+    },
+    "sheet": {
+      "type": "string",
+      "description": "Name of the sheet to read (defaults to the active sheet)",
+      "required": false
+    },
+    "headers": {
+      "type": "string",
+      "description": "Comma-separated header names (optional, create only)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "documents",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "xlsx",
+    "excel",
+    "read",
+    "create",
+    "spreadsheet",
+    "document"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "openpyxl"
+    ]
+  }
+}

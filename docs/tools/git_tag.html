@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>git_tag — Arqitect</title>
+  <link rel="stylesheet" href="../css/arqitect.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">ARQITECT</a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <div class="nav-links"><a href="../index.html">Home</a><a href="../tools/index.html" class="active">Tools</a><a href="../nerves/index.html">Nerves</a><a href="../connectors/index.html">Connectors</a><a href="../mcps/index.html">MCPs</a><a href="../adapters/index.html">Adapters</a></div>
+  </div>
+</nav>
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">Tools</a><span class="sep">/</span>git_tag
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">git_tag</h1>
+    <p class="detail-desc">Create a tag in a Git repository</p>
+    <div class="detail-tags mt-1"><span class="tag tag--cyan">git</span><span class="tag tag--cyan">version-control</span><span class="tag tag--cyan">tag</span></div>
+  </div>
+  <div class="info-grid"><div class="info-item"><div class="info-label">Runtime</div><div class="info-value">python</div></div><div class="info-item"><div class="info-label">Category</div><div class="info-value">git</div></div><div class="info-item"><div class="info-label">Entry</div><div class="info-value">tool.py</div></div><div class="info-item"><div class="info-label">Timeout</div><div class="info-value">30s</div></div><div class="info-item"><div class="info-label">API Key</div><div class="info-value">Required</div></div><div class="info-item"><div class="info-label">Deps (python)</div><div class="info-value">gitpython</div></div></div>
+  
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Parameters</h2>
+      <div class="section-line"></div>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Name</th><th>Type</th><th>Description</th><th>Required</th></tr></thead>
+      <tbody><tr><td class="param-name">token</td><td class="param-type">string</td><td>User&#x27;s Git access token for authentication</td><td class="required">required</td></tr><tr><td class="param-name">name</td><td class="param-type">string</td><td>Tag name</td><td class="required">required</td></tr><tr><td class="param-name">message</td><td class="param-type">string</td><td>Tag message (creates an annotated tag if provided)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">path</td><td class="param-type">string</td><td>Path to the Git repository (default: current directory)</td><td class="text-dim">optional</td></tr></tbody>
+    </table>
+  </div>
+</div>
+<footer class="footer">
+  Arqitect &mdash; autonomous agent ecosystem
+</footer>
+<script src="../js/arqitect.js"></script>
+</body>
+</html>

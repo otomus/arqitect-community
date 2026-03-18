@@ -1,0 +1,25 @@
+{
+  "name": "screen_ocr",
+  "version": "1.0.0",
+  "description": "Capture a screenshot and extract text via OCR",
+  "params": {
+    "region": {
+      "type": "string",
+      "description": "Screen region as 'x,y,w,h' or empty for full screen",
+      "required": false,
+      "default": ""
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["screen", "ocr", "text", "recognition", "tesseract"],
+  "requires_api_key": false
+}

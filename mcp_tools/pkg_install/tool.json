@@ -1,0 +1,26 @@
+{
+  "name": "pkg_install",
+  "version": "1.0.0",
+  "description": "Install a package using pip, npm, or another package manager",
+  "params": {
+    "name": {
+      "type": "string",
+      "description": "Package name to install",
+      "required": true
+    },
+    "manager": {
+      "type": "string",
+      "description": "Package manager to use (pip, npm, etc.)",
+      "required": false,
+      "default": "pip"
+    },
+    "version": {
+      "type": "string",
+      "description": "Specific version to install",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 120
+}

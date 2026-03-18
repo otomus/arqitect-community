@@ -1,0 +1,39 @@
+{
+    "name": "code_review_nerve",
+    "version": "1.0.0",
+    "description": "Review code for quality and bugs",
+    "role": "code",
+    "tags": [
+        "code",
+        "review",
+        "quality"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "file_read",
+            "mcp": "file_read",
+            "implementations": {}
+        },
+        {
+            "name": "code_lint",
+            "mcp": "code_lint",
+            "implementations": {}
+        },
+        {
+            "name": "code_analyze",
+            "mcp": "code_analyze",
+            "implementations": {}
+        },
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "name": "license_check_nerve",
+    "version": "1.0.0",
+    "description": "Check software license compatibility",
+    "role": "brain",
+    "tags": [
+        "legal",
+        "license",
+        "compliance"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "code_deps",
+            "mcp": "code_deps",
+            "implementations": {}
+        },
+        {
+            "name": "web_search",
+            "mcp": "duckduckgo",
+            "implementations": {}
+        },
+        {
+            "name": "json_format",
+            "mcp": "json_format",
+            "implementations": {}
+        }
+    ]
+}

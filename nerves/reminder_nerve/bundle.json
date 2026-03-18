@@ -1,0 +1,22 @@
+{
+  "name": "reminder_nerve",
+  "version": "1.0.0",
+  "description": "Create, list, and complete reminders",
+  "role": "brain",
+  "tags": [
+    "reminder",
+    "productivity"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "reminder",
+      "implementations": {}
+    }
+  ]
+}

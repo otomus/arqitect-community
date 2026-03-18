@@ -1,0 +1,22 @@
+{
+  "name": "clipboard_nerve",
+  "version": "1.0.0",
+  "description": "Read from and write to the clipboard",
+  "role": "nerve",
+  "tags": [
+    "clipboard",
+    "system"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "clipboard",
+      "implementations": {}
+    }
+  ]
+}

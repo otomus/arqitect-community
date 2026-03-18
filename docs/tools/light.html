@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>light — Arqitect</title>
+  <link rel="stylesheet" href="../css/arqitect.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">ARQITECT</a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <div class="nav-links"><a href="../index.html">Home</a><a href="../tools/index.html" class="active">Tools</a><a href="../nerves/index.html">Nerves</a><a href="../connectors/index.html">Connectors</a><a href="../mcps/index.html">MCPs</a><a href="../adapters/index.html">Adapters</a></div>
+  </div>
+</nav>
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">Tools</a><span class="sep">/</span>light
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">light</h1>
+    <p class="detail-desc">Set or get the state of a smart light</p>
+    <div class="detail-tags mt-1"><span class="tag tag--cyan">iot</span><span class="tag tag--cyan">light</span><span class="tag tag--cyan">smart-home</span><span class="tag tag--cyan">hue</span></div>
+  </div>
+  <div class="info-grid"><div class="info-item"><div class="info-label">Runtime</div><div class="info-value">python</div></div><div class="info-item"><div class="info-label">Category</div><div class="info-value">iot</div></div><div class="info-item"><div class="info-label">Entry</div><div class="info-value">tool.py</div></div><div class="info-item"><div class="info-label">Timeout</div><div class="info-value">30s</div></div><div class="info-item"><div class="info-label">API Key</div><div class="info-value">Not required</div></div><div class="info-item"><div class="info-label">Deps (python)</div><div class="info-value">requests</div></div></div>
+  
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Parameters</h2>
+      <div class="section-line"></div>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Name</th><th>Type</th><th>Description</th><th>Required</th></tr></thead>
+      <tbody><tr><td class="param-name">light_id</td><td class="param-type">string</td><td>Unique identifier of the light device</td><td class="required">required</td></tr><tr><td class="param-name">brightness</td><td class="param-type">string</td><td>Brightness level 0-100 (optional, set only)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">color</td><td class="param-type">string</td><td>Color value, e.g. hex code or color name (optional, set only)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">on</td><td class="param-type">string</td><td>Power state: &#x27;true&#x27; or &#x27;false&#x27; (optional, set only)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">operation</td><td class="param-type">string</td><td>Operation to perform: set or get</td><td class="required">required</td></tr></tbody>
+    </table>
+  </div>
+</div>
+<footer class="footer">
+  Arqitect &mdash; autonomous agent ecosystem
+</footer>
+<script src="../js/arqitect.js"></script>
+</body>
+</html>

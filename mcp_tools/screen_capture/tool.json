@@ -1,0 +1,25 @@
+{
+  "name": "screen_capture",
+  "version": "1.0.0",
+  "description": "Capture a screenshot of the screen",
+  "params": {
+    "region": {
+      "type": "string",
+      "description": "Screen region as 'x,y,w,h' or empty for full screen",
+      "required": false,
+      "default": ""
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 15,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["screen", "capture", "screenshot"],
+  "requires_api_key": false
+}

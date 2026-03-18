@@ -1,0 +1,55 @@
+{
+  "name": "password",
+  "version": "1.0.0",
+  "description": "Unified password management: generate, get, and store passwords",
+  "params": {
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: generate, get, store",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "description": "Entry name / label (used for get, store)",
+      "required": false
+    },
+    "value": {
+      "type": "string",
+      "description": "Password value to store (used for store)",
+      "required": false
+    },
+    "vault": {
+      "type": "string",
+      "description": "Vault namespace (used for get, store; default 'default')",
+      "required": false
+    },
+    "length": {
+      "type": "string",
+      "description": "Password length (used for generate; default 20)",
+      "required": false
+    },
+    "charset": {
+      "type": "string",
+      "description": "Character set: alphanumeric, ascii, digits, hex (used for generate; default ascii)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "security",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "password",
+    "generate",
+    "vault",
+    "credential",
+    "security"
+  ],
+  "requires_api_key": false
+}

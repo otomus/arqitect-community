@@ -1,0 +1,34 @@
+{
+    "name": "backup_nerve",
+    "version": "1.0.0",
+    "description": "Create and verify a system backup",
+    "role": "code",
+    "tags": [
+        "devops",
+        "backup",
+        "infrastructure"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "file_copy",
+            "mcp": "file_copy",
+            "implementations": {}
+        },
+        {
+            "name": "db_query",
+            "mcp": "db_query",
+            "implementations": {}
+        },
+        {
+            "name": "json_format",
+            "mcp": "json_format",
+            "implementations": {}
+        }
+    ]
+}

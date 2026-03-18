@@ -1,0 +1,23 @@
+{
+  "name": "thermostat_nerve",
+  "version": "1.0.0",
+  "description": "Control and read thermostat temperature",
+  "role": "nerve",
+  "tags": [
+    "iot",
+    "thermostat",
+    "temperature"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "thermostat",
+      "implementations": {}
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+    "name": "data_explore_nerve",
+    "version": "1.0.0",
+    "description": "Explore a dataset and summarize findings",
+    "role": "brain",
+    "tags": [
+        "data",
+        "analysis",
+        "exploration"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "csv_read",
+            "mcp": "csv_read",
+            "implementations": {}
+        },
+        {
+            "name": "xlsx_read",
+            "mcp": "xlsx_read",
+            "implementations": {}
+        },
+        {
+            "name": "json_format",
+            "mcp": "json_format",
+            "implementations": {}
+        },
+        {
+            "name": "chart_create",
+            "mcp": "chart_create",
+            "implementations": {}
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "image_edit_nerve",
+  "version": "1.0.0",
+  "description": "Resize, crop, and convert images",
+  "role": "brain",
+  "tags": [
+    "image",
+    "editing"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "image_resize",
+      "implementations": {
+        "python": "mcp_tools/image_resize/tool.py"
+      }
+    },
+    {
+      "name": "image_crop",
+      "implementations": {
+        "python": "mcp_tools/image_crop/tool.py"
+      }
+    },
+    {
+      "name": "image_convert",
+      "implementations": {
+        "python": "mcp_tools/image_convert/tool.py"
+      }
+    }
+  ]
+}

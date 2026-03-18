@@ -1,0 +1,34 @@
+{
+    "name": "ticket_triage_nerve",
+    "version": "1.0.0",
+    "description": "Triage a support ticket",
+    "role": "communication",
+    "tags": [
+        "support",
+        "triage",
+        "customer"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "json_parse",
+            "mcp": "json_parse",
+            "implementations": {}
+        },
+        {
+            "name": "web_search",
+            "mcp": "duckduckgo",
+            "implementations": {}
+        },
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        }
+    ]
+}

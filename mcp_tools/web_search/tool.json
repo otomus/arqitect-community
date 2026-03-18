@@ -1,0 +1,30 @@
+{
+  "name": "web_search",
+  "version": "1.0.0",
+  "description": "Search the web using DuckDuckGo and return top results",
+  "params": {
+    "query": {
+      "type": "string",
+      "description": "Search query string",
+      "required": true
+    },
+    "engine": {
+      "type": "string",
+      "description": "Search engine to use",
+      "required": false,
+      "default": "duckduckgo"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "web",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["web", "search", "duckduckgo", "query"],
+  "requires_api_key": false
+}

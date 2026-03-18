@@ -1,0 +1,36 @@
+{
+  "name": "process_nerve",
+  "version": "1.0.0",
+  "description": "Run, list, and kill system processes",
+  "role": "code",
+  "tags": [
+    "process",
+    "system"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "process_run",
+      "implementations": {
+        "python": "mcp_tools/process_run/tool.py"
+      }
+    },
+    {
+      "name": "process_list",
+      "implementations": {
+        "python": "mcp_tools/process_list/tool.py"
+      }
+    },
+    {
+      "name": "process_kill",
+      "implementations": {
+        "python": "mcp_tools/process_kill/tool.py"
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "qr_code",
+  "version": "1.0.0",
+  "description": "Generate or read QR codes",
+  "params": {
+    "content": {
+      "type": "string",
+      "description": "Data to encode into a QR code (required for generate)",
+      "required": false
+    },
+    "image_path": {
+      "type": "string",
+      "description": "Path for the output image (generate) or input image (read)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: generate or read",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "qr",
+    "qrcode",
+    "generate",
+    "read",
+    "barcode"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "qrcode",
+      "Pillow"
+    ]
+  }
+}

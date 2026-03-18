@@ -1,0 +1,15 @@
+{
+  "name": "cron_delete",
+  "version": "1.0.0",
+  "description": "Delete a scheduled cron job by ID",
+  "params": {
+    "job_id": {
+      "type": "string",
+      "description": "ID of the job to delete",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>currency — Arqitect</title>
+  <link rel="stylesheet" href="../css/arqitect.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">ARQITECT</a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <div class="nav-links"><a href="../index.html">Home</a><a href="../tools/index.html" class="active">Tools</a><a href="../nerves/index.html">Nerves</a><a href="../connectors/index.html">Connectors</a><a href="../mcps/index.html">MCPs</a><a href="../adapters/index.html">Adapters</a></div>
+  </div>
+</nav>
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">Tools</a><span class="sep">/</span>currency
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">currency</h1>
+    <p class="detail-desc">Convert between currencies or get exchange rates</p>
+    <div class="detail-tags mt-1"><span class="tag tag--cyan">currency</span><span class="tag tag--cyan">exchange</span><span class="tag tag--cyan">convert</span><span class="tag tag--cyan">rate</span><span class="tag tag--cyan">finance</span></div>
+  </div>
+  <div class="info-grid"><div class="info-item"><div class="info-label">Runtime</div><div class="info-value">python</div></div><div class="info-item"><div class="info-label">Category</div><div class="info-value">finance</div></div><div class="info-item"><div class="info-label">Entry</div><div class="info-value">tool.py</div></div><div class="info-item"><div class="info-label">Timeout</div><div class="info-value">30s</div></div><div class="info-item"><div class="info-label">API Key</div><div class="info-value">Required</div></div><div class="info-item"><div class="info-label">Deps (python)</div><div class="info-value">requests</div></div></div>
+  
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Parameters</h2>
+      <div class="section-line"></div>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Name</th><th>Type</th><th>Description</th><th>Required</th></tr></thead>
+      <tbody><tr><td class="param-name">amount</td><td class="param-type">string</td><td>Amount to convert (optional, convert only)</td><td class="text-dim">optional</td></tr><tr><td class="param-name">from_currency</td><td class="param-type">string</td><td>ISO 4217 source currency code (e.g. USD)</td><td class="required">required</td></tr><tr><td class="param-name">to_currency</td><td class="param-type">string</td><td>ISO 4217 target currency code (e.g. EUR)</td><td class="required">required</td></tr><tr><td class="param-name">operation</td><td class="param-type">string</td><td>Operation to perform: convert or rate</td><td class="required">required</td></tr></tbody>
+    </table>
+  </div>
+</div>
+<footer class="footer">
+  Arqitect &mdash; autonomous agent ecosystem
+</footer>
+<script src="../js/arqitect.js"></script>
+</body>
+</html>

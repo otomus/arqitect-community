@@ -1,0 +1,34 @@
+{
+    "name": "crypto_analyze_nerve",
+    "version": "1.0.0",
+    "description": "Analyze a cryptocurrency",
+    "role": "brain",
+    "tags": [
+        "finance",
+        "crypto",
+        "analysis"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "crypto_price",
+            "mcp": "crypto_price",
+            "implementations": {}
+        },
+        {
+            "name": "web_search",
+            "mcp": "duckduckgo",
+            "implementations": {}
+        },
+        {
+            "name": "chart_create",
+            "mcp": "chart_create",
+            "implementations": {}
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "browser_open",
+  "version": "1.0.0",
+  "description": "Open a headless browser and navigate to a URL, optionally waiting for a CSS selector",
+  "params": {
+    "url": {
+      "type": "string",
+      "description": "URL to open",
+      "required": true
+    },
+    "wait": {
+      "type": "string",
+      "description": "CSS selector to wait for before returning",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "browser",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "browser",
+    "automation",
+    "playwright",
+    "navigate",
+    "open"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "playwright"
+    ]
+  }
+}

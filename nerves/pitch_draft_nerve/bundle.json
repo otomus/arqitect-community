@@ -1,0 +1,34 @@
+{
+    "name": "pitch_draft_nerve",
+    "version": "1.0.0",
+    "description": "Draft a sales pitch or proposal",
+    "role": "communication",
+    "tags": [
+        "sales",
+        "pitch",
+        "proposal"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "web_search",
+            "mcp": "duckduckgo",
+            "implementations": {}
+        },
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        },
+        {
+            "name": "file_write",
+            "mcp": "file_write",
+            "implementations": {}
+        }
+    ]
+}

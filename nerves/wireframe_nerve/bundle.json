@@ -1,0 +1,29 @@
+{
+    "name": "wireframe_nerve",
+    "version": "1.0.0",
+    "description": "Generate a wireframe description",
+    "role": "creative",
+    "tags": [
+        "design",
+        "wireframe",
+        "ui"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        },
+        {
+            "name": "diagram_create",
+            "mcp": "diagram_create",
+            "implementations": {}
+        }
+    ]
+}

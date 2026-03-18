@@ -1,0 +1,50 @@
+{
+  "name": "docx",
+  "version": "1.0.0",
+  "description": "Read or create DOCX files",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to the DOCX file to read or create",
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "description": "Text content to write into the DOCX file (required for create)",
+      "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: read or create",
+      "required": true
+    },
+    "template": {
+      "type": "string",
+      "description": "Path to a DOCX template file (optional, create only)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "documents",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "docx",
+    "word",
+    "read",
+    "create",
+    "document"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "python-docx"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "audio_transcribe",
+  "version": "1.0.0",
+  "description": "Transcribe audio to text using whisper CLI",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to the audio file",
+      "required": true
+    },
+    "language": {
+      "type": "string",
+      "description": "Language code (e.g. 'en', 'es')",
+      "required": false,
+      "default": ""
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 120,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": ["audio", "transcribe", "speech", "whisper"],
+  "requires_api_key": false
+}

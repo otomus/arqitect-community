@@ -1,0 +1,61 @@
+{
+  "name": "docker_nerve",
+  "version": "1.0.0",
+  "description": "Manage Docker containers and images",
+  "role": "code",
+  "tags": [
+    "docker",
+    "container",
+    "devops"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "docker_run",
+      "implementations": {
+        "python": "mcp_tools/docker_run/tool.py"
+      }
+    },
+    {
+      "name": "docker_stop",
+      "implementations": {
+        "python": "mcp_tools/docker_stop/tool.py"
+      }
+    },
+    {
+      "name": "docker_ps",
+      "implementations": {
+        "python": "mcp_tools/docker_ps/tool.py"
+      }
+    },
+    {
+      "name": "docker_logs",
+      "implementations": {
+        "python": "mcp_tools/docker_logs/tool.py"
+      }
+    },
+    {
+      "name": "docker_build",
+      "implementations": {
+        "python": "mcp_tools/docker_build/tool.py"
+      }
+    },
+    {
+      "name": "docker_pull",
+      "implementations": {
+        "python": "mcp_tools/docker_pull/tool.py"
+      }
+    },
+    {
+      "name": "docker_exec",
+      "implementations": {
+        "python": "mcp_tools/docker_exec/tool.py"
+      }
+    }
+  ]
+}

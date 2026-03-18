@@ -1,0 +1,14 @@
+{
+  "name": "db_close",
+  "version": "1.0.0",
+  "description": "Close a database connection and release its resources.",
+  "params": {
+    "connection_id": {
+      "type": "string",
+      "description": "Connection token returned by db_connect"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

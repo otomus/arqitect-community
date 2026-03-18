@@ -1,0 +1,34 @@
+{
+    "name": "standup_nerve",
+    "version": "1.0.0",
+    "description": "Generate standup report from recent activity",
+    "role": "brain",
+    "tags": [
+        "project-management",
+        "standup",
+        "reporting"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "git_log",
+            "mcp": "git_log",
+            "implementations": {}
+        },
+        {
+            "name": "json_format",
+            "mcp": "json_format",
+            "implementations": {}
+        },
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        }
+    ]
+}

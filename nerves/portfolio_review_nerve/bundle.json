@@ -1,0 +1,34 @@
+{
+    "name": "portfolio_review_nerve",
+    "version": "1.0.0",
+    "description": "Review portfolio allocation and performance",
+    "role": "brain",
+    "tags": [
+        "finance",
+        "portfolio",
+        "review"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "stock_quote",
+            "mcp": "stock_quote",
+            "implementations": {}
+        },
+        {
+            "name": "stock_history",
+            "mcp": "stock_history",
+            "implementations": {}
+        },
+        {
+            "name": "chart_create",
+            "mcp": "chart_create",
+            "implementations": {}
+        }
+    ]
+}

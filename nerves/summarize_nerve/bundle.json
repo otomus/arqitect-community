@@ -1,0 +1,34 @@
+{
+    "name": "summarize_nerve",
+    "version": "1.0.0",
+    "description": "Summarize a document or URL",
+    "role": "brain",
+    "tags": [
+        "writing",
+        "summary",
+        "content"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "web_scrape",
+            "mcp": "web_scrape",
+            "implementations": {}
+        },
+        {
+            "name": "pdf_read",
+            "mcp": "pdf_read",
+            "implementations": {}
+        },
+        {
+            "name": "llm_call",
+            "mcp": "llm_call",
+            "implementations": {}
+        }
+    ]
+}

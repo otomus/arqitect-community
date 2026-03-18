@@ -1,0 +1,21 @@
+{
+  "name": "pkg_info",
+  "version": "1.0.0",
+  "description": "Show metadata for an installed package",
+  "params": {
+    "name": {
+      "type": "string",
+      "description": "Package name to get info for",
+      "required": true
+    },
+    "manager": {
+      "type": "string",
+      "description": "Package manager to use (pip, npm, etc.)",
+      "required": false,
+      "default": "pip"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

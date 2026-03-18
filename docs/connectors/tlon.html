@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tlon — Arqitect</title>
+  <link rel="stylesheet" href="../css/arqitect.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">ARQITECT</a>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    <div class="nav-links"><a href="../index.html">Home</a><a href="../tools/index.html">Tools</a><a href="../nerves/index.html">Nerves</a><a href="../connectors/index.html" class="active">Connectors</a><a href="../mcps/index.html">MCPs</a><a href="../adapters/index.html">Adapters</a></div>
+  </div>
+</nav>
+<div class="container page-content">
+  <div class="breadcrumb">
+    <a href="index.html">Connectors</a><span class="sep">/</span>tlon
+  </div>
+  <div class="detail-header">
+    <h1 class="detail-title">tlon</h1>
+    <p class="detail-desc">Tlon Messenger connector — bridges Tlon peer-to-peer chat messages to Sentient brain via Redis</p>
+  </div>
+  <div class="info-grid"><div class="info-item"><div class="info-label">Language</div><div class="info-value">javascript</div></div><div class="info-item"><div class="info-label">Version</div><div class="info-value">1.0.0</div></div><div class="info-item"><div class="info-label">Platforms</div><div class="info-value">tlon</div></div></div>
+  
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Capabilities</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="mb-3">
+      <div class="info-label mb-2">Incoming</div>
+      <div class="cap-grid"><span class="cap-badge">text</span></div>
+    </div>
+    <div>
+      <div class="info-label mb-2">Outgoing</div>
+      <div class="cap-grid"><span class="cap-badge cap-badge--out">text</span></div>
+    </div>
+  </div>
+  
+  <div class="section">
+    <div class="section-header">
+      <h2 class="section-title">Configuration</h2>
+      <div class="section-line"></div>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Field</th><th>Description</th><th>Required</th><th>Secret</th></tr></thead>
+      <tbody><tr><td class="param-name">ship_url</td><td>Urbit ship URL (e.g. http://localhost:8080)</td><td class="required">required</td><td class="text-orange"></td></tr><tr><td class="param-name">ship_code</td><td>Urbit ship access code (+code)</td><td class="required">required</td><td class="text-orange">secret</td></tr><tr><td class="param-name">bot_name</td><td>Bot display name (default: Sentient)</td><td class="text-dim">optional</td><td class="text-orange"></td></tr><tr><td class="param-name">bot_aliases</td><td>Alternative names the bot responds to</td><td class="text-dim">optional</td><td class="text-orange"></td></tr><tr><td class="param-name">whitelisted_users</td><td>Urbit ship names allowed to interact (e.g. ~zod)</td><td class="text-dim">optional</td><td class="text-orange"></td></tr><tr><td class="param-name">whitelisted_groups</td><td>Tlon group/channel paths to process messages from</td><td class="text-dim">optional</td><td class="text-orange"></td></tr><tr><td class="param-name">monitor_groups</td><td>Group/channel paths to observe read-only</td><td class="text-dim">optional</td><td class="text-orange"></td></tr></tbody>
+    </table>
+  </div>
+</div>
+<footer class="footer">
+  Arqitect &mdash; autonomous agent ecosystem
+</footer>
+<script src="../js/arqitect.js"></script>
+</body>
+</html>

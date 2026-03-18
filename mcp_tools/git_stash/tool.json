@@ -1,22 +1,22 @@
 {
   "name": "git_stash",
   "version": "1.0.0",
-  "description": "Stash changes in the working directory",
+  "description": "Stash or pop changes in a Git working directory",
   "params": {
-    "token": {
-      "type": "string",
-      "description": "User's Git access token for authentication",
-      "required": true
-    },
     "message": {
       "type": "string",
-      "description": "Optional message describing the stash",
+      "description": "Optional message describing the stash (stash only)",
       "required": false
     },
-    "path": {
+    "ref": {
       "type": "string",
-      "description": "Path to the Git repository (default: current directory)",
+      "description": "Stash index to pop, e.g. '0' (optional, pop only, default 0)",
       "required": false
+    },
+    "operation": {
+      "type": "string",
+      "description": "Operation to perform: stash or pop",
+      "required": true
     }
   },
   "runtime": "python",
@@ -32,9 +32,10 @@
   "tags": [
     "git",
     "version-control",
-    "stash"
+    "stash",
+    "pop"
   ],
-  "requires_api_key": true,
+  "requires_api_key": false,
   "dependencies": {
     "python": [
       "gitpython"

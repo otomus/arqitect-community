@@ -1,0 +1,34 @@
+{
+    "name": "budget_nerve",
+    "version": "1.0.0",
+    "description": "Create or review a budget",
+    "role": "brain",
+    "tags": [
+        "finance",
+        "budget",
+        "planning"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "csv_read",
+            "mcp": "csv_read",
+            "implementations": {}
+        },
+        {
+            "name": "math_eval",
+            "mcp": "math_eval",
+            "implementations": {}
+        },
+        {
+            "name": "chart_create",
+            "mcp": "chart_create",
+            "implementations": {}
+        }
+    ]
+}

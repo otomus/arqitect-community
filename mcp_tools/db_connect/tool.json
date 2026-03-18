@@ -1,0 +1,18 @@
+{
+  "name": "db_connect",
+  "version": "1.0.0",
+  "description": "Connect to a SQLite database and return a connection token for use with other db_* tools.",
+  "params": {
+    "url": {
+      "type": "string",
+      "description": "Database URL (e.g. sqlite:///path/to/db.sqlite)"
+    },
+    "driver": {
+      "type": "string",
+      "description": "Database driver (optional, defaults to sqlite3)"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30
+}

@@ -1,0 +1,37 @@
+{
+  "name": "schedule_nerve",
+  "version": "1.0.0",
+  "description": "Create, list, and cancel scheduled tasks",
+  "role": "brain",
+  "tags": [
+    "workflow",
+    "schedule",
+    "cron"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "cron_create",
+      "implementations": {
+        "python": "mcp_tools/cron_create/tool.py"
+      }
+    },
+    {
+      "name": "cron_list",
+      "implementations": {
+        "python": "mcp_tools/cron_list/tool.py"
+      }
+    },
+    {
+      "name": "cron_delete",
+      "implementations": {
+        "python": "mcp_tools/cron_delete/tool.py"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "code_lint",
+  "version": "1.0.0",
+  "description": "Run a linter on source code files",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to file or directory to lint",
+      "required": true
+    },
+    "language": {
+      "type": "string",
+      "description": "Language (python, javascript). Auto-detected if omitted",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 60
+}

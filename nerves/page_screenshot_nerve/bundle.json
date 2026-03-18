@@ -1,0 +1,37 @@
+{
+  "name": "page_screenshot_nerve",
+  "version": "1.0.0",
+  "description": "Screenshot a web page",
+  "role": "vision",
+  "tags": [
+    "browser",
+    "web",
+    "screenshot"
+  ],
+  "authors": [
+    {
+      "github": "sentient-community"
+    }
+  ],
+  "sentient_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "browser_open",
+      "implementations": {
+        "python": "mcp_tools/browser_open/tool.py"
+      }
+    },
+    {
+      "name": "browser_screenshot",
+      "implementations": {
+        "python": "mcp_tools/browser_screenshot/tool.py"
+      }
+    },
+    {
+      "name": "browser_close",
+      "implementations": {
+        "python": "mcp_tools/browser_close/tool.py"
+      }
+    }
+  ]
+}
