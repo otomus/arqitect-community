@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-18T15:54:17.772530+00:00",
+  "generated_at": "2026-03-18T16:10:24.055147+00:00",
   "nerves": {
     "academic_research_nerve": {
       "description": "Find and summarize academic papers on a topic",
@@ -4752,6 +4752,59 @@
       "category": "cloud",
       "auth_env": "CLOUDFLARE_API_TOKEN"
     },
+    "code_sandbox": {
+      "name": "code_sandbox",
+      "version": "1.0.0",
+      "description": "Sandboxed code execution \u2014 run Python and JavaScript in isolated cloud VMs",
+      "source": "npm",
+      "package": "@e2b/mcp-server",
+      "command": [
+        "npx",
+        "-y",
+        "@e2b/mcp-server"
+      ],
+      "auth_type": "api_key",
+      "tools": [
+        "execute_python",
+        "execute_javascript",
+        "create_file",
+        "read_file",
+        "install_packages"
+      ],
+      "capabilities": [
+        "code_execution",
+        "sandboxing",
+        "python",
+        "javascript"
+      ],
+      "category": "coding",
+      "auth_env": "E2B_API_KEY"
+    },
+    "code_search": {
+      "name": "code_search",
+      "version": "1.0.0",
+      "description": "Semantic code search \u2014 ripgrep combined with tree-sitter AST parsing for intelligent code navigation",
+      "source": "npm",
+      "package": "@probelabs/probe",
+      "command": [
+        "npx",
+        "-y",
+        "@probelabs/probe",
+        "mcp"
+      ],
+      "auth_type": "none",
+      "tools": [
+        "search",
+        "query",
+        "extract"
+      ],
+      "capabilities": [
+        "code_search",
+        "ast_parsing",
+        "semantic_search"
+      ],
+      "category": "coding"
+    },
     "coincap": {
       "name": "coincap",
       "version": "1.0.0",
@@ -4996,6 +5049,29 @@
       "category": "communication",
       "auth_env": "EMAIL_CREDENTIALS"
     },
+    "eslint": {
+      "name": "eslint",
+      "version": "1.0.0",
+      "description": "Official ESLint MCP server \u2014 lint and fix code using project config",
+      "source": "npm",
+      "package": "@eslint/mcp",
+      "command": [
+        "npx",
+        "-y",
+        "@eslint/mcp"
+      ],
+      "auth_type": "none",
+      "tools": [
+        "lint_files",
+        "fix_files"
+      ],
+      "capabilities": [
+        "linting",
+        "code_quality",
+        "auto_fix"
+      ],
+      "category": "coding"
+    },
     "feishu": {
       "name": "feishu",
       "version": "1.0.0",
@@ -5041,6 +5117,42 @@
       ],
       "category": "utilities"
     },
+    "filesystem": {
+      "name": "filesystem",
+      "version": "1.0.0",
+      "description": "Official MCP filesystem server \u2014 read, write, edit, search, and manage files and directories",
+      "source": "npm",
+      "package": "@modelcontextprotocol/server-filesystem",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/path/to/project"
+      ],
+      "auth_type": "none",
+      "tools": [
+        "read_text_file",
+        "read_media_file",
+        "read_multiple_files",
+        "write_file",
+        "edit_file",
+        "create_directory",
+        "list_directory",
+        "list_directory_with_sizes",
+        "move_file",
+        "search_files",
+        "directory_tree",
+        "get_file_info",
+        "list_allowed_directories"
+      ],
+      "capabilities": [
+        "file_read",
+        "file_write",
+        "file_search",
+        "directory_management"
+      ],
+      "category": "coding"
+    },
     "gif_search": {
       "name": "gif_search",
       "version": "1.0.0",
@@ -5067,6 +5179,57 @@
       ],
       "category": "media",
       "auth_env": "GIPHY_API_KEY"
+    },
+    "git": {
+      "name": "git",
+      "version": "1.0.0",
+      "description": "Comprehensive git operations \u2014 branching, merging, rebasing, stashing, and changelog analysis",
+      "source": "npm",
+      "package": "@cyanheads/git-mcp-server",
+      "command": [
+        "npx",
+        "-y",
+        "@cyanheads/git-mcp-server"
+      ],
+      "auth_type": "none",
+      "tools": [
+        "git_init",
+        "git_clone",
+        "git_status",
+        "git_add",
+        "git_commit",
+        "git_diff",
+        "git_log",
+        "git_show",
+        "git_blame",
+        "git_reflog",
+        "git_branch",
+        "git_checkout",
+        "git_merge",
+        "git_rebase",
+        "git_cherry_pick",
+        "git_remote",
+        "git_fetch",
+        "git_pull",
+        "git_push",
+        "git_tag",
+        "git_stash",
+        "git_reset",
+        "git_worktree",
+        "git_clean",
+        "git_changelog_analyze",
+        "git_set_working_dir",
+        "git_clear_working_dir",
+        "git_wrapup_instructions"
+      ],
+      "capabilities": [
+        "git",
+        "version_control",
+        "branching",
+        "merging",
+        "changelog"
+      ],
+      "category": "coding"
     },
     "github": {
       "name": "github",
@@ -5322,6 +5485,34 @@
       "category": "social",
       "auth_provider": "linkedin"
     },
+    "lsp": {
+      "name": "lsp",
+      "version": "1.0.0",
+      "description": "Language Server Protocol bridge \u2014 IDE-independent, multi-language code intelligence",
+      "source": "npm",
+      "package": "cclsp",
+      "command": [
+        "npx",
+        "-y",
+        "cclsp"
+      ],
+      "auth_type": "none",
+      "tools": [
+        "find_definition",
+        "find_references",
+        "rename_symbol",
+        "rename_symbol_strict",
+        "get_diagnostics",
+        "restart_server"
+      ],
+      "capabilities": [
+        "lsp",
+        "code_navigation",
+        "refactoring",
+        "diagnostics"
+      ],
+      "category": "coding"
+    },
     "notion": {
       "name": "notion",
       "version": "1.0.0",
@@ -5343,6 +5534,40 @@
       ],
       "category": "productivity",
       "auth_env": "NOTION_API_KEY"
+    },
+    "npm_manage": {
+      "name": "npm_manage",
+      "version": "1.0.0",
+      "description": "Full npm package management \u2014 init, install, audit, publish, and manage dependencies",
+      "source": "npm",
+      "package": "@devlimelabs/npm-manage-mcp",
+      "command": [
+        "npx",
+        "-y",
+        "@devlimelabs/npm-manage-mcp"
+      ],
+      "auth_type": "none",
+      "tools": [
+        "npm_init",
+        "npm_install",
+        "npm_uninstall",
+        "npm_list_deps",
+        "npm_update",
+        "npm_run_script",
+        "npm_audit",
+        "npm_search",
+        "npm_info",
+        "npm_publish",
+        "npm_version",
+        "npm_set_scripts",
+        "npm_set_config"
+      ],
+      "capabilities": [
+        "npm",
+        "package_management",
+        "dependency_management"
+      ],
+      "category": "coding"
     },
     "obsidian": {
       "name": "obsidian",
@@ -5655,6 +5880,30 @@
       "category": "music",
       "auth_env": "SHAZAM_API_KEY"
     },
+    "shell": {
+      "name": "shell",
+      "version": "1.0.0",
+      "description": "Shell command execution \u2014 run commands and manage processes",
+      "source": "npm",
+      "package": "@mako10k/mcp-shell-server",
+      "command": [
+        "npx",
+        "-y",
+        "@mako10k/mcp-shell-server"
+      ],
+      "auth_type": "none",
+      "tools": [
+        "shell_execute",
+        "list_processes",
+        "terminate_process"
+      ],
+      "capabilities": [
+        "shell",
+        "command_execution",
+        "process_management"
+      ],
+      "category": "coding"
+    },
     "slack": {
       "name": "slack",
       "version": "1.0.0",
@@ -5845,6 +6094,29 @@
         "infrastructure"
       ],
       "category": "devops"
+    },
+    "test_runner": {
+      "name": "test_runner",
+      "version": "1.0.0",
+      "description": "Unified test runner \u2014 run and parse results for Jest, Vitest, Pytest, Go, Rust, and more",
+      "source": "npm",
+      "package": "@iflow-mcp/mcp-test-runner",
+      "command": [
+        "npx",
+        "-y",
+        "@iflow-mcp/mcp-test-runner"
+      ],
+      "auth_type": "none",
+      "tools": [
+        "run_tests",
+        "parse_results"
+      ],
+      "capabilities": [
+        "testing",
+        "test_execution",
+        "test_results"
+      ],
+      "category": "coding"
     },
     "things3": {
       "name": "things3",
@@ -6174,7 +6446,7 @@
     "total_adapters": 31,
     "total_connectors": 15,
     "total_tools": 0,
-    "total_mcps": 68
+    "total_mcps": 77
   },
   "leaderboard": {}
 }
