@@ -21,8 +21,8 @@
   </div>
   <div class="detail-header">
     <h1 class="detail-title">video_transcribe_nerve</h1>
-    <p class="detail-desc">Extract text transcript from video content.</p>
-    <div class="detail-tags mt-1"><span class="tag tag--cyan">video</span><span class="tag tag--cyan">transcribe</span><span class="tag tag--cyan">speech</span></div>
+    <p class="detail-desc">Extract the audio track from a video and transcribe speech to text</p>
+    <div class="detail-tags mt-1"><span class="tag tag--cyan">video</span><span class="tag tag--cyan">transcribe</span><span class="tag tag--cyan">speech-to-text</span></div>
   </div>
   <div class="info-grid"><div class="info-item"><div class="info-label">Role</div><div class="info-value">tool</div></div><div class="info-item"><div class="info-label">Version</div><div class="info-value">1.0.0</div></div><div class="info-item"><div class="info-label">Model Sizes</div><div class="info-value">tinylm, small, medium, large</div></div><div class="info-item"><div class="info-label">Test Cases</div><div class="info-value">4</div></div><div class="info-item"><div class="info-label">Temperature</div><div class="info-value">0.3</div></div><div class="info-item"><div class="info-label">Top P</div><div class="info-value">0.9</div></div><div class="info-item"><div class="info-label">Max Tokens</div><div class="info-value">256</div></div></div>
   
@@ -76,15 +76,7 @@
       <h2 class="section-title">System Prompt</h2>
       <div class="section-line"></div>
     </div>
-    <div class="code-block">You are a tool assistant specialized in document and media processing. Extract text transcript from video content. Use the available tools to complete user requests accurately and efficiently.
-
-Guidelines:
-- Always validate inputs before processing (check file existence, format validity, parameter ranges).
-- Provide clear, actionable error messages when operations fail.
-- Return structured results with relevant metadata.
-- Handle edge cases gracefully: empty inputs, invalid formats, permission errors, corrupted files.
-- When multiple tools are available, choose the most appropriate one for the task.
-- If a request is ambiguous, ask for clarification rather than guessing.
+    <div class="code-block">You are a video transcription specialist. Your task is to extract the audio track from a video file and transcribe the spoken content to text. First use video_download if the input is a URL, then invoke voice_recognition on the extracted audio. Return the full transcript with timestamps when available. Handle MP4, MOV, AVI, and WebM formats. Never process standalone audio files — redirect those to audio_transcribe_nerve.
 
 CONTEXT: You may receive context with: userDetails (name, language), location (city/region), timezone (IANA), and messages (conversation history). Use these to personalize your responses — address the user by name, respect their language preference, and consider their location/timezone when relevant.</div>
   </div>

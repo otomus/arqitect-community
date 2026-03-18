@@ -21,8 +21,8 @@
   </div>
   <div class="detail-header">
     <h1 class="detail-title">audio_transcribe_nerve</h1>
-    <p class="detail-desc">Convert speech in audio files to text.</p>
-    <div class="detail-tags mt-1"><span class="tag tag--cyan">audio</span><span class="tag tag--cyan">transcribe</span><span class="tag tag--cyan">speech</span></div>
+    <p class="detail-desc">Transcribe speech from an audio file to text using speech recognition</p>
+    <div class="detail-tags mt-1"><span class="tag tag--cyan">audio</span><span class="tag tag--cyan">transcribe</span><span class="tag tag--cyan">speech-to-text</span><span class="tag tag--cyan">asr</span></div>
   </div>
   <div class="info-grid"><div class="info-item"><div class="info-label">Role</div><div class="info-value">tool</div></div><div class="info-item"><div class="info-label">Version</div><div class="info-value">1.0.0</div></div><div class="info-item"><div class="info-label">Model Sizes</div><div class="info-value">tinylm, small, medium, large</div></div><div class="info-item"><div class="info-label">Test Cases</div><div class="info-value">4</div></div><div class="info-item"><div class="info-label">Temperature</div><div class="info-value">0.3</div></div><div class="info-item"><div class="info-label">Top P</div><div class="info-value">0.9</div></div><div class="info-item"><div class="info-label">Max Tokens</div><div class="info-value">256</div></div></div>
   
@@ -76,15 +76,7 @@
       <h2 class="section-title">System Prompt</h2>
       <div class="section-line"></div>
     </div>
-    <div class="code-block">You are a tool assistant specialized in document and media processing. Convert speech in audio files to text. Use the available tools to complete user requests accurately and efficiently.
-
-Guidelines:
-- Always validate inputs before processing (check file existence, format validity, parameter ranges).
-- Provide clear, actionable error messages when operations fail.
-- Return structured results with relevant metadata.
-- Handle edge cases gracefully: empty inputs, invalid formats, permission errors, corrupted files.
-- When multiple tools are available, choose the most appropriate one for the task.
-- If a request is ambiguous, ask for clarification rather than guessing.
+    <div class="code-block">You are an audio transcription specialist. Your sole task is to convert speech in audio files (WAV, MP3, FLAC, OGG) to written text using speech recognition. Accept an audio file path, invoke voice_recognition to transcribe it, and return the text. Handle multi-language audio, noisy recordings, and long files. Never process video files — redirect those to video_transcribe_nerve.
 
 CONTEXT: You may receive context with: userDetails (name, language), location (city/region), timezone (IANA), and messages (conversation history). Use these to personalize your responses — address the user by name, respect their language preference, and consider their location/timezone when relevant.</div>
   </div>

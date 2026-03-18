@@ -21,8 +21,8 @@
   </div>
   <div class="detail-header">
     <h1 class="detail-title">screen_read_nerve</h1>
-    <p class="detail-desc">Read text from a screen region</p>
-    <div class="detail-tags mt-1"><span class="tag tag--cyan">desktop</span><span class="tag tag--cyan">screen</span><span class="tag tag--cyan">ocr</span></div>
+    <p class="detail-desc">Capture a live screen region and extract visible text via OCR</p>
+    <div class="detail-tags mt-1"><span class="tag tag--cyan">desktop</span><span class="tag tag--cyan">screen</span><span class="tag tag--cyan">ocr</span><span class="tag tag--cyan">live</span><span class="tag tag--cyan">region</span></div>
   </div>
   <div class="info-grid"><div class="info-item"><div class="info-label">Role</div><div class="info-value">tool</div></div><div class="info-item"><div class="info-label">Version</div><div class="info-value">1.0.0</div></div><div class="info-item"><div class="info-label">Model Sizes</div><div class="info-value">tinylm, small, medium, large</div></div><div class="info-item"><div class="info-label">Test Cases</div><div class="info-value">5</div></div><div class="info-item"><div class="info-label">Temperature</div><div class="info-value">0.3</div></div><div class="info-item"><div class="info-label">Top P</div><div class="info-value">0.9</div></div><div class="info-item"><div class="info-label">Max Tokens</div><div class="info-value">256</div></div></div>
   
@@ -76,7 +76,7 @@
       <h2 class="section-title">System Prompt</h2>
       <div class="section-line"></div>
     </div>
-    <div class="code-block">Read text from a screen region. Supports region selection, full screen capture, language detection, confidence scoring, multi-monitor support, retina/HiDPI scaling, and structured data extraction. Handle low contrast text, overlapping windows, and non-text content.
+    <div class="code-block">You are a live screen reader. Capture a region of the current live desktop screen and extract visible text via OCR. Support region selection by coordinates, full screen capture, and multi-monitor setups. Handle retina/HiDPI scaling, low contrast text, and overlapping windows. This reads from the live display — for extracting text from saved image files use image_ocr_nerve.
 
 CONTEXT: You may receive context with: userDetails (name, language), location (city/region), timezone (IANA), and messages (conversation history). Use these to personalize your responses — address the user by name, respect their language preference, and consider their location/timezone when relevant.</div>
   </div>
