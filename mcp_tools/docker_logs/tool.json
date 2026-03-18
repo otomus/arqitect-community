@@ -1,0 +1,35 @@
+{
+  "name": "docker_logs",
+  "version": "1.0.0",
+  "description": "Get logs from a Docker container",
+  "params": {
+    "container_id": {
+      "type": "string",
+      "description": "Container ID or name to get logs from",
+      "required": true
+    },
+    "tail": {
+      "type": "number",
+      "description": "Number of lines to show from the end of the logs",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "docker",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "docker",
+    "container",
+    "logs",
+    "debugging",
+    "infrastructure"
+  ],
+  "requires_api_key": false
+}

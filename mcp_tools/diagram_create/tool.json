@@ -1,0 +1,47 @@
+{
+  "name": "diagram_create",
+  "version": "1.0.0",
+  "description": "Create a diagram image from a text definition (flowchart, sequence, or class)",
+  "params": {
+    "diagram_type": {
+      "type": "string",
+      "description": "Type of diagram: flowchart, sequence, or class",
+      "required": true
+    },
+    "definition": {
+      "type": "string",
+      "description": "Diagram definition in a simple text syntax. For flowchart: 'A -> B -> C'. For sequence: 'A -> B: message'. For class: 'ClassName: method1, method2'",
+      "required": true
+    },
+    "output_path": {
+      "type": "string",
+      "description": "File path to save the diagram (supports .svg and .png)",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "visualization",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "diagram",
+    "flowchart",
+    "sequence",
+    "class",
+    "graphviz",
+    "svg",
+    "visualization"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "cairosvg"
+    ]
+  }
+}

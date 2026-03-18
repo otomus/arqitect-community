@@ -1,0 +1,30 @@
+{
+  "name": "math_eval",
+  "version": "1.0.0",
+  "description": "Safely evaluate a mathematical expression and return the numeric result",
+  "params": {
+    "expression": {
+      "type": "string",
+      "description": "Mathematical expression to evaluate (e.g. \"2 + 3 * 4\")",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "math",
+    "calculate",
+    "expression",
+    "arithmetic",
+    "compute"
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,35 @@
+{
+  "name": "regex_match",
+  "version": "1.0.0",
+  "description": "Test a regular expression pattern against text and return all matches",
+  "params": {
+    "pattern": {
+      "type": "string",
+      "description": "Regular expression pattern",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "description": "Text to match against",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "regex",
+    "match",
+    "pattern",
+    "search",
+    "text"
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,48 @@
+{
+  "name": "image_convert",
+  "version": "1.0.0",
+  "description": "Convert an image to a different format (png, jpg, webp, bmp)",
+  "params": {
+    "input_path": {
+      "type": "string",
+      "description": "Path to the source image file",
+      "required": true
+    },
+    "output_path": {
+      "type": "string",
+      "description": "Path where the converted image will be saved",
+      "required": true
+    },
+    "format": {
+      "type": "string",
+      "description": "Target format: png, jpg, webp, or bmp",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "image",
+    "convert",
+    "format",
+    "png",
+    "jpg",
+    "webp",
+    "bmp",
+    "pillow"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "Pillow"
+    ]
+  }
+}

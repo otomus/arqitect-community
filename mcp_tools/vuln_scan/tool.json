@@ -1,0 +1,36 @@
+{
+  "name": "vuln_scan",
+  "version": "1.0.0",
+  "description": "Scan a file or directory for common security vulnerabilities",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "File or directory to scan",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "description": "Scan type: secrets, code, dependencies",
+      "required": false,
+      "default": "secrets"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "security",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "vulnerability",
+    "scan",
+    "security",
+    "audit",
+    "code"
+  ],
+  "requires_api_key": false
+}

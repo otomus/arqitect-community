@@ -1,0 +1,45 @@
+{
+  "name": "mouse_scroll",
+  "version": "1.0.0",
+  "description": "Scroll the mouse wheel at an optional position",
+  "params": {
+    "clicks": {
+      "type": "integer",
+      "description": "Number of scroll clicks (positive=up, negative=down)",
+      "required": true
+    },
+    "x": {
+      "type": "integer",
+      "description": "X coordinate to scroll at",
+      "required": false
+    },
+    "y": {
+      "type": "integer",
+      "description": "Y coordinate to scroll at",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "desktop",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "mouse",
+    "scroll",
+    "wheel",
+    "automation",
+    "desktop"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "pyautogui"
+    ]
+  }
+}

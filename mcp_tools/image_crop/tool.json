@@ -1,0 +1,60 @@
+{
+  "name": "image_crop",
+  "version": "1.0.0",
+  "description": "Crop an image to the specified bounding box",
+  "params": {
+    "input_path": {
+      "type": "string",
+      "description": "Path to the source image file",
+      "required": true
+    },
+    "output_path": {
+      "type": "string",
+      "description": "Path where the cropped image will be saved",
+      "required": true
+    },
+    "left": {
+      "type": "number",
+      "description": "Left edge of the crop box in pixels",
+      "required": true
+    },
+    "top": {
+      "type": "number",
+      "description": "Top edge of the crop box in pixels",
+      "required": true
+    },
+    "right": {
+      "type": "number",
+      "description": "Right edge of the crop box in pixels",
+      "required": true
+    },
+    "bottom": {
+      "type": "number",
+      "description": "Bottom edge of the crop box in pixels",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "image",
+    "crop",
+    "trim",
+    "cut",
+    "pillow"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "Pillow"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "file_grep",
+  "version": "1.0.0",
+  "description": "Search for a text pattern inside files",
+  "params": {
+    "pattern": {
+      "type": "string",
+      "description": "Text or regex pattern to search for",
+      "required": true
+    },
+    "path": {
+      "type": "string",
+      "description": "File or directory to search in",
+      "required": false,
+      "default": "."
+    },
+    "glob": {
+      "type": "string",
+      "description": "File glob filter (e.g. \"*.py\")",
+      "required": false,
+      "default": "*"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "file",
+    "grep",
+    "search",
+    "content",
+    "pattern",
+    "text"
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,30 @@
+{
+  "name": "docker_pull",
+  "version": "1.0.0",
+  "description": "Pull a Docker image from a registry",
+  "params": {
+    "image": {
+      "type": "string",
+      "description": "Image name to pull (e.g. 'nginx:latest')",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "docker",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "docker",
+    "image",
+    "pull",
+    "registry",
+    "infrastructure"
+  ],
+  "requires_api_key": false
+}

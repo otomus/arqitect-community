@@ -1,0 +1,44 @@
+{
+  "name": "window_resize",
+  "version": "1.0.0",
+  "description": "Resize a window by its title to specified dimensions",
+  "params": {
+    "title": {
+      "type": "string",
+      "description": "Title (or partial title) of the window to resize",
+      "required": true
+    },
+    "width": {
+      "type": "integer",
+      "description": "Target width in pixels",
+      "required": true
+    },
+    "height": {
+      "type": "integer",
+      "description": "Target height in pixels",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "desktop",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "window",
+    "resize",
+    "desktop",
+    "automation"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "pyautogui"
+    ]
+  }
+}

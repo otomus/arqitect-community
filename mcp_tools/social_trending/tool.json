@@ -1,0 +1,49 @@
+{
+  "name": "social_trending",
+  "version": "1.0.0",
+  "description": "Get trending topics on a social media platform",
+  "params": {
+    "platform": {
+      "type": "string",
+      "description": "Social media platform (e.g. twitter, mastodon)",
+      "required": true
+    },
+    "api_key": {
+      "type": "string",
+      "description": "API key or access token for the platform",
+      "required": true
+    },
+    "region": {
+      "type": "string",
+      "description": "Region or country code for localized trends (e.g. US, UK)",
+      "required": false
+    },
+    "instance_url": {
+      "type": "string",
+      "description": "Mastodon instance URL (e.g. https://mastodon.social). Required for Mastodon.",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "social",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "social",
+    "trending",
+    "topics",
+    "viral"
+  ],
+  "requires_api_key": true,
+  "dependencies": {
+    "python": [
+      "requests"
+    ]
+  }
+}

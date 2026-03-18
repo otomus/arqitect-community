@@ -1,0 +1,43 @@
+{
+  "name": "git_log",
+  "version": "1.0.0",
+  "description": "Show commit history of a Git repository",
+  "params": {
+    "token": {
+      "type": "string",
+      "description": "User's Git access token for authentication",
+      "required": true
+    },
+    "count": {
+      "type": "integer",
+      "description": "Number of commits to show (default: 10)",
+      "required": false
+    },
+    "path": {
+      "type": "string",
+      "description": "Path to the Git repository (default: current directory)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "git",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "git",
+    "version-control",
+    "history"
+  ],
+  "requires_api_key": true,
+  "dependencies": {
+    "python": [
+      "gitpython"
+    ]
+  }
+}

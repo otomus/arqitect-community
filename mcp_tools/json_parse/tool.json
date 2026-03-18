@@ -1,0 +1,29 @@
+{
+  "name": "json_parse",
+  "version": "1.0.0",
+  "description": "Parse a JSON string into a structured object and return the result",
+  "params": {
+    "text": {
+      "type": "string",
+      "description": "JSON string to parse",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "json",
+    "parse",
+    "deserialize",
+    "data"
+  ],
+  "requires_api_key": false
+}

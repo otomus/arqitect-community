@@ -1,0 +1,30 @@
+{
+  "name": "file_watch",
+  "version": "1.0.0",
+  "description": "Watch a file or directory for changes and report the current state",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "File or directory to watch",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "file",
+    "watch",
+    "monitor",
+    "changes",
+    "poll"
+  ],
+  "requires_api_key": false
+}

@@ -4313,7 +4313,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "actuator_set": {
       "name": "actuator_set",
@@ -4350,7 +4356,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "audio_convert": {
       "name": "audio_convert",
@@ -4391,7 +4403,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "audio_record": {
       "name": "audio_record",
@@ -4423,7 +4441,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "barcode_generate": {
       "name": "barcode_generate",
@@ -4464,7 +4488,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "barcode_read": {
       "name": "barcode_read",
@@ -4491,7 +4521,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "base64_decode": {
       "name": "base64_decode",
@@ -4516,7 +4552,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "base64_encode": {
       "name": "base64_encode",
@@ -4541,7 +4583,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "calendar_create_event": {
       "name": "calendar_create_event",
@@ -4584,7 +4632,13 @@
           "required": false
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "calendar_delete_event": {
       "name": "calendar_delete_event",
@@ -4609,7 +4663,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "calendar_events": {
       "name": "calendar_events",
@@ -4640,7 +4700,13 @@
           "required": false
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "cert_check": {
       "name": "cert_check",
@@ -4666,7 +4732,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "chart_create": {
       "name": "chart_create",
@@ -4715,7 +4787,13 @@
           "default": ""
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "clipboard_read": {
       "name": "clipboard_read",
@@ -4734,7 +4812,13 @@
         "automation"
       ],
       "parameters": [],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "clipboard_write": {
       "name": "clipboard_write",
@@ -4760,7 +4844,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "csv_read": {
       "name": "csv_read",
@@ -4793,7 +4883,13 @@
           "default": ","
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "csv_write": {
       "name": "csv_write",
@@ -4833,7 +4929,13 @@
           "default": ","
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "currency_convert": {
       "name": "currency_convert",
@@ -4876,7 +4978,13 @@
           "required": true
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "currency_rate": {
       "name": "currency_rate",
@@ -4913,7 +5021,13 @@
           "required": true
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "decrypt_text": {
       "name": "decrypt_text",
@@ -4945,7 +5059,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "device_list": {
       "name": "device_list",
@@ -4970,7 +5090,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "device_status": {
       "name": "device_status",
@@ -5001,7 +5127,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "diagram_create": {
       "name": "diagram_create",
@@ -5041,7 +5173,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "diff_compute": {
       "name": "diff_compute",
@@ -5073,7 +5211,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "dir_create": {
       "name": "dir_create",
@@ -5098,7 +5242,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "dir_delete": {
       "name": "dir_delete",
@@ -5124,7 +5274,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "dir_list": {
       "name": "dir_list",
@@ -5157,7 +5313,13 @@
           "default": "*"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "dns_lookup": {
       "name": "dns_lookup",
@@ -5190,7 +5352,13 @@
           "default": "A"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "docker_build": {
       "name": "docker_build",
@@ -5222,7 +5390,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "docker_exec": {
       "name": "docker_exec",
@@ -5254,7 +5428,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "docker_logs": {
       "name": "docker_logs",
@@ -5286,7 +5466,13 @@
           "required": false
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "docker_ps": {
       "name": "docker_ps",
@@ -5313,7 +5499,13 @@
           "default": false
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "docker_pull": {
       "name": "docker_pull",
@@ -5339,7 +5531,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "docker_run": {
       "name": "docker_run",
@@ -5383,7 +5581,13 @@
           "default": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "docker_stop": {
       "name": "docker_stop",
@@ -5408,7 +5612,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "docx_create": {
       "name": "docx_create",
@@ -5440,7 +5650,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "docx_read": {
       "name": "docx_read",
@@ -5466,7 +5682,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "email_reply": {
       "name": "email_reply",
@@ -5522,7 +5744,13 @@
           "required": true
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "encrypt_text": {
       "name": "encrypt_text",
@@ -5554,7 +5782,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "file_append": {
       "name": "file_append",
@@ -5586,7 +5820,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "file_copy": {
       "name": "file_copy",
@@ -5617,7 +5857,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "file_delete": {
       "name": "file_delete",
@@ -5642,7 +5888,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "file_exists": {
       "name": "file_exists",
@@ -5667,7 +5919,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "file_grep": {
       "name": "file_grep",
@@ -5708,7 +5966,13 @@
           "default": "*"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "file_info": {
       "name": "file_info",
@@ -5735,7 +5999,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "file_move": {
       "name": "file_move",
@@ -5766,7 +6036,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "file_read": {
       "name": "file_read",
@@ -5806,7 +6082,13 @@
           "default": 0
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "file_search": {
       "name": "file_search",
@@ -5839,7 +6121,13 @@
           "default": "."
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "file_watch": {
       "name": "file_watch",
@@ -5865,7 +6153,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "file_write": {
       "name": "file_write",
@@ -5897,7 +6191,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "gif_animation_tool": {
       "name": "gif_animation_tool",
@@ -5923,7 +6223,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "gif_create": {
       "name": "gif_create",
@@ -5962,7 +6268,13 @@
           "default": 500
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_add": {
       "name": "git_add",
@@ -5998,7 +6310,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_branch_create": {
       "name": "git_branch_create",
@@ -6034,7 +6352,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_branch_delete": {
       "name": "git_branch_delete",
@@ -6076,7 +6400,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_branch_list": {
       "name": "git_branch_list",
@@ -6112,7 +6442,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_checkout": {
       "name": "git_checkout",
@@ -6148,7 +6484,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_clone": {
       "name": "git_clone",
@@ -6185,7 +6527,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_commit": {
       "name": "git_commit",
@@ -6221,7 +6569,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_diff": {
       "name": "git_diff",
@@ -6257,7 +6611,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_log": {
       "name": "git_log",
@@ -6293,7 +6653,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_merge": {
       "name": "git_merge",
@@ -6329,7 +6695,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_pull": {
       "name": "git_pull",
@@ -6371,7 +6743,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_push": {
       "name": "git_push",
@@ -6413,7 +6791,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_rebase": {
       "name": "git_rebase",
@@ -6449,7 +6833,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_stash": {
       "name": "git_stash",
@@ -6485,7 +6875,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_stash_pop": {
       "name": "git_stash_pop",
@@ -6521,7 +6917,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_status": {
       "name": "git_status",
@@ -6551,7 +6953,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "git_tag": {
       "name": "git_tag",
@@ -6593,7 +7001,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "hash_compute": {
       "name": "hash_compute",
@@ -6626,7 +7040,13 @@
           "default": "sha256"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "hash_verify": {
       "name": "hash_verify",
@@ -6665,7 +7085,13 @@
           "default": "sha256"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "http_delete": {
       "name": "http_delete",
@@ -6698,7 +7124,13 @@
           "default": "{}"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "http_post": {
       "name": "http_post",
@@ -6737,7 +7169,13 @@
           "default": "{}"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "http_put": {
       "name": "http_put",
@@ -6776,7 +7214,13 @@
           "default": "{}"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "image_convert": {
       "name": "image_convert",
@@ -6817,7 +7261,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "image_crop": {
       "name": "image_crop",
@@ -6873,7 +7323,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "image_resize": {
       "name": "image_resize",
@@ -6917,7 +7373,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "image_to_ascii": {
       "name": "image_to_ascii",
@@ -6943,7 +7405,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "image_to_text": {
       "name": "image_to_text",
@@ -6977,7 +7445,13 @@
           "default": "eng"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "joke_fetcher": {
       "name": "joke_fetcher",
@@ -7004,7 +7478,13 @@
           "default": "Any"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "json_format": {
       "name": "json_format",
@@ -7037,7 +7517,13 @@
           "default": 2
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "json_parse": {
       "name": "json_parse",
@@ -7062,7 +7548,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "json_query": {
       "name": "json_query",
@@ -7094,7 +7586,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "keyboard_press": {
       "name": "keyboard_press",
@@ -7127,7 +7625,13 @@
           "required": false
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "keyboard_type": {
       "name": "keyboard_type",
@@ -7159,7 +7663,13 @@
           "required": false
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "lock_set": {
       "name": "lock_set",
@@ -7196,7 +7706,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "markdown_to_html": {
       "name": "markdown_to_html",
@@ -7222,7 +7738,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "markdown_to_pdf": {
       "name": "markdown_to_pdf",
@@ -7254,7 +7776,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "math_eval": {
       "name": "math_eval",
@@ -7280,7 +7808,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "mouse_click": {
       "name": "mouse_click",
@@ -7323,7 +7857,13 @@
           "required": false
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "mouse_move": {
       "name": "mouse_move",
@@ -7361,7 +7901,13 @@
           "required": false
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "mouse_scroll": {
       "name": "mouse_scroll",
@@ -7399,7 +7945,13 @@
           "required": false
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "news_fetch": {
       "name": "news_fetch",
@@ -7436,7 +7988,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "note_delete": {
       "name": "note_delete",
@@ -7461,7 +8019,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "notification_send": {
       "name": "notification_send",
@@ -7499,7 +8063,13 @@
           "default": "local"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "password_generate": {
       "name": "password_generate",
@@ -7533,7 +8103,13 @@
           "default": "ascii"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "pdf_create": {
       "name": "pdf_create",
@@ -7565,7 +8141,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "pdf_read": {
       "name": "pdf_read",
@@ -7591,7 +8173,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "personalized_greeting": {
       "name": "personalized_greeting",
@@ -7617,7 +8205,13 @@
           "default": ""
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "port_scan": {
       "name": "port_scan",
@@ -7650,7 +8244,13 @@
           "default": "22,80,443,8080,8443"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "pptx_create": {
       "name": "pptx_create",
@@ -7683,7 +8283,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "pptx_read": {
       "name": "pptx_read",
@@ -7710,7 +8316,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "process_kill": {
       "name": "process_kill",
@@ -7743,7 +8355,13 @@
           "default": "TERM"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "process_list": {
       "name": "process_list",
@@ -7769,7 +8387,13 @@
           "required": false
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "process_run": {
       "name": "process_run",
@@ -7802,7 +8426,13 @@
           "default": 30
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "qr_code_generate": {
       "name": "qr_code_generate",
@@ -7842,7 +8472,13 @@
           "default": 10
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "qr_code_read": {
       "name": "qr_code_read",
@@ -7870,7 +8506,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "regex_match": {
       "name": "regex_match",
@@ -7902,7 +8544,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "regex_replace": {
       "name": "regex_replace",
@@ -7940,7 +8588,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "sensor_list": {
       "name": "sensor_list",
@@ -7965,7 +8619,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "sensor_read": {
       "name": "sensor_read",
@@ -7996,7 +8656,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "sms_send": {
       "name": "sms_send",
@@ -8040,7 +8706,13 @@
           "required": true
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "social_followers": {
       "name": "social_followers",
@@ -8083,7 +8755,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "social_like": {
       "name": "social_like",
@@ -8126,7 +8804,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "social_trending": {
       "name": "social_trending",
@@ -8169,7 +8853,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "stock_history": {
       "name": "stock_history",
@@ -8201,7 +8891,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "stock_quote": {
       "name": "stock_quote",
@@ -8226,7 +8922,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "table_format": {
       "name": "table_format",
@@ -8268,7 +8970,13 @@
           "default": "grid"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "thermostat_read": {
       "name": "thermostat_read",
@@ -8299,7 +9007,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "translate_text": {
       "name": "translate_text",
@@ -8348,7 +9062,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "url_shorten": {
       "name": "url_shorten",
@@ -8373,7 +9093,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "user_preference_analysis": {
       "name": "user_preference_analysis",
@@ -8399,7 +9125,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "uuid_generate": {
       "name": "uuid_generate",
@@ -8426,7 +9158,13 @@
           "default": "4"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "video_download": {
       "name": "video_download",
@@ -8465,7 +9203,13 @@
           "default": "best"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "video_editing_tool": {
       "name": "video_editing_tool",
@@ -8491,7 +9235,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "video_extract_frames": {
       "name": "video_extract_frames",
@@ -8530,7 +9280,13 @@
           "default": 1
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "video_get_info": {
       "name": "video_get_info",
@@ -8557,7 +9313,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "video_trim": {
       "name": "video_trim",
@@ -8601,7 +9363,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "voice_recognition": {
       "name": "voice_recognition",
@@ -8627,7 +9395,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "vuln_scan": {
       "name": "vuln_scan",
@@ -8660,7 +9434,13 @@
           "default": "secrets"
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "whois_lookup": {
       "name": "whois_lookup",
@@ -8686,7 +9466,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "window_focus": {
       "name": "window_focus",
@@ -8712,7 +9498,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "window_list": {
       "name": "window_list",
@@ -8730,7 +9522,13 @@
         "automation"
       ],
       "parameters": [],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "window_resize": {
       "name": "window_resize",
@@ -8767,7 +9565,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "word_problem_solver": {
       "name": "word_problem_solver",
@@ -8794,7 +9598,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "xlsx_create": {
       "name": "xlsx_create",
@@ -8827,7 +9637,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "xlsx_read": {
       "name": "xlsx_read",
@@ -8859,7 +9675,13 @@
           "required": false
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "youtube_info": {
       "name": "youtube_info",
@@ -8884,7 +9706,13 @@
           "required": true
         }
       ],
-      "requires_api_key": false
+      "requires_api_key": false,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     },
     "youtube_search": {
       "name": "youtube_search",
@@ -8921,7 +9749,13 @@
           "required": false
         }
       ],
-      "requires_api_key": true
+      "requires_api_key": true,
+      "runtime": "python",
+      "files": [
+        "tool.json",
+        "tool.py",
+        "tests.json"
+      ]
     }
   },
   "mcps": {

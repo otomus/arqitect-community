@@ -1,0 +1,29 @@
+{
+  "name": "docker_stop",
+  "version": "1.0.0",
+  "description": "Stop a running Docker container",
+  "params": {
+    "container_id": {
+      "type": "string",
+      "description": "Container ID or name to stop",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "docker",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "docker",
+    "container",
+    "stop",
+    "infrastructure"
+  ],
+  "requires_api_key": false
+}

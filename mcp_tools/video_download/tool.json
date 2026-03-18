@@ -1,0 +1,46 @@
+{
+  "name": "video_download",
+  "version": "1.0.0",
+  "description": "Download a video from a URL using yt-dlp",
+  "params": {
+    "url": {
+      "type": "string",
+      "description": "URL of the video to download",
+      "required": true
+    },
+    "output_path": {
+      "type": "string",
+      "description": "Path where the downloaded video will be saved",
+      "required": true
+    },
+    "format": {
+      "type": "string",
+      "description": "Video format or yt-dlp format selector (e.g. 'mp4', 'best', 'bestvideo+bestaudio')",
+      "required": false,
+      "default": "best"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "video",
+    "download",
+    "yt-dlp",
+    "youtube",
+    "url"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "yt-dlp"
+    ]
+  }
+}

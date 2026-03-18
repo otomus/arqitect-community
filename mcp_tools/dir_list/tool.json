@@ -1,0 +1,36 @@
+{
+  "name": "dir_list",
+  "version": "1.0.0",
+  "description": "List contents of a directory",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Directory path",
+      "required": true
+    },
+    "pattern": {
+      "type": "string",
+      "description": "Glob pattern to filter (e.g. \"*.py\")",
+      "required": false,
+      "default": "*"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "directory",
+    "list",
+    "ls",
+    "files",
+    "folders"
+  ],
+  "requires_api_key": false
+}

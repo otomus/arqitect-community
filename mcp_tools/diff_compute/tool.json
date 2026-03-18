@@ -1,0 +1,35 @@
+{
+  "name": "diff_compute",
+  "version": "1.0.0",
+  "description": "Compute a unified diff between two text strings",
+  "params": {
+    "old": {
+      "type": "string",
+      "description": "Original text",
+      "required": true
+    },
+    "new": {
+      "type": "string",
+      "description": "Modified text",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "diff",
+    "compare",
+    "text",
+    "changes",
+    "delta"
+  ],
+  "requires_api_key": false
+}

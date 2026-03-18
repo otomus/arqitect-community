@@ -1,0 +1,30 @@
+{
+  "name": "cert_check",
+  "version": "1.0.0",
+  "description": "Check the SSL/TLS certificate of a domain",
+  "params": {
+    "domain": {
+      "type": "string",
+      "description": "Domain to check",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "security",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "ssl",
+    "tls",
+    "certificate",
+    "https",
+    "security"
+  ],
+  "requires_api_key": false
+}

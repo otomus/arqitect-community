@@ -1,0 +1,29 @@
+{
+  "name": "base64_encode",
+  "version": "1.0.0",
+  "description": "Encode a string to base64",
+  "params": {
+    "input": {
+      "type": "string",
+      "description": "String to encode",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "base64",
+    "encode",
+    "binary",
+    "data"
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,46 @@
+{
+  "name": "gif_create",
+  "version": "1.0.0",
+  "description": "Create an animated GIF from a list of image files",
+  "params": {
+    "image_paths": {
+      "type": "string",
+      "description": "JSON array of image file paths (e.g. '[\"frame1.png\", \"frame2.png\"]')",
+      "required": true
+    },
+    "output_path": {
+      "type": "string",
+      "description": "Path where the GIF will be saved",
+      "required": true
+    },
+    "duration": {
+      "type": "number",
+      "description": "Duration per frame in milliseconds (default: 500)",
+      "required": false,
+      "default": 500
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "gif",
+    "animation",
+    "image",
+    "create",
+    "pillow"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "Pillow"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "git_checkout",
+  "version": "1.0.0",
+  "description": "Switch to a different branch or commit",
+  "params": {
+    "token": {
+      "type": "string",
+      "description": "User's Git access token for authentication",
+      "required": true
+    },
+    "target": {
+      "type": "string",
+      "description": "Branch name or commit SHA to switch to",
+      "required": true
+    },
+    "path": {
+      "type": "string",
+      "description": "Path to the Git repository (default: current directory)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "git",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "git",
+    "version-control",
+    "branch"
+  ],
+  "requires_api_key": true,
+  "dependencies": {
+    "python": [
+      "gitpython"
+    ]
+  }
+}

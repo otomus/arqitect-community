@@ -1,0 +1,30 @@
+{
+  "name": "dir_delete",
+  "version": "1.0.0",
+  "description": "Delete a directory and all its contents",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Directory path to delete",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "directory",
+    "delete",
+    "remove",
+    "rmdir",
+    "cleanup"
+  ],
+  "requires_api_key": false
+}

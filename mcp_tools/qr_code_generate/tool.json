@@ -1,0 +1,47 @@
+{
+  "name": "qr_code_generate",
+  "version": "1.0.0",
+  "description": "Generate a QR code image from text or URL data",
+  "params": {
+    "data": {
+      "type": "string",
+      "description": "The data to encode in the QR code (text, URL, etc.)",
+      "required": true
+    },
+    "output_path": {
+      "type": "string",
+      "description": "File path to save the QR code image",
+      "required": true
+    },
+    "size": {
+      "type": "integer",
+      "description": "Box size in pixels for each QR module",
+      "required": false,
+      "default": 10
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "visualization",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "qr",
+    "qrcode",
+    "barcode",
+    "generate",
+    "image",
+    "visualization"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "qrcode"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "uuid_generate",
+  "version": "1.0.0",
+  "description": "Generate a new universally unique identifier (UUID)",
+  "params": {
+    "version": {
+      "type": "string",
+      "description": "UUID version: 4 (random) or 1 (time-based)",
+      "required": false,
+      "default": "4"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "data",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "uuid",
+    "id",
+    "unique",
+    "generate",
+    "identifier"
+  ],
+  "requires_api_key": false
+}

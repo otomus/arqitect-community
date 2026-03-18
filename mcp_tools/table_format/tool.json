@@ -1,0 +1,49 @@
+{
+  "name": "table_format",
+  "version": "1.0.0",
+  "description": "Format data as a text table with optional headers and multiple styles",
+  "params": {
+    "data": {
+      "type": "string",
+      "description": "JSON array of arrays representing table rows",
+      "required": true
+    },
+    "headers": {
+      "type": "string",
+      "description": "JSON array of header strings",
+      "required": false,
+      "default": ""
+    },
+    "format": {
+      "type": "string",
+      "description": "Table format: plain, grid, or pipe",
+      "required": false,
+      "default": "grid"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "visualization",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "table",
+    "format",
+    "text",
+    "tabulate",
+    "grid",
+    "markdown",
+    "visualization"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "tabulate"
+    ]
+  }
+}

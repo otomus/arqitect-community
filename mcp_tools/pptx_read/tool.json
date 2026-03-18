@@ -1,0 +1,36 @@
+{
+  "name": "pptx_read",
+  "version": "1.0.0",
+  "description": "Read text content from a PowerPoint PPTX file",
+  "params": {
+    "file_path": {
+      "type": "string",
+      "description": "Path to the PowerPoint file to read",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "documents",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "pptx",
+    "powerpoint",
+    "read",
+    "extract",
+    "presentation",
+    "document"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "python-pptx"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "dns_lookup",
+  "version": "1.0.0",
+  "description": "Perform a DNS lookup for a domain name",
+  "params": {
+    "domain": {
+      "type": "string",
+      "description": "Domain name to look up",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "description": "Record type: A, AAAA, MX, TXT, CNAME, NS",
+      "required": false,
+      "default": "A"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "web",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "dns",
+    "lookup",
+    "domain",
+    "resolve",
+    "network"
+  ],
+  "requires_api_key": false
+}

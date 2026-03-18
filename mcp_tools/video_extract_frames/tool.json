@@ -1,0 +1,41 @@
+{
+  "name": "video_extract_frames",
+  "version": "1.0.0",
+  "description": "Extract frames from a video at a specified frame rate using ffmpeg",
+  "params": {
+    "input_path": {
+      "type": "string",
+      "description": "Path to the source video file",
+      "required": true
+    },
+    "output_dir": {
+      "type": "string",
+      "description": "Directory where extracted frames will be saved",
+      "required": true
+    },
+    "fps": {
+      "type": "number",
+      "description": "Frames per second to extract (default: 1)",
+      "required": false,
+      "default": 1
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "video",
+    "frames",
+    "extract",
+    "ffmpeg",
+    "screenshot"
+  ],
+  "requires_api_key": false
+}

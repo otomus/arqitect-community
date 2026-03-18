@@ -1,0 +1,36 @@
+{
+  "name": "csv_read",
+  "version": "1.0.0",
+  "description": "Read data from a CSV file",
+  "params": {
+    "file_path": {
+      "type": "string",
+      "description": "Path to the CSV file to read",
+      "required": true
+    },
+    "delimiter": {
+      "type": "string",
+      "description": "Column delimiter character (defaults to comma)",
+      "required": false,
+      "default": ","
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "documents",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "csv",
+    "read",
+    "data",
+    "tabular",
+    "document"
+  ],
+  "requires_api_key": false
+}

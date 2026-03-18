@@ -1,0 +1,36 @@
+{
+  "name": "process_kill",
+  "version": "1.0.0",
+  "description": "Kill a process by PID with a specified signal",
+  "params": {
+    "pid": {
+      "type": "number",
+      "description": "Process ID to send the signal to",
+      "required": true
+    },
+    "signal": {
+      "type": "string",
+      "description": "Signal name to send (e.g. 'TERM', 'KILL', 'HUP')",
+      "required": false,
+      "default": "TERM"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "docker",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "process",
+    "kill",
+    "signal",
+    "system",
+    "infrastructure"
+  ],
+  "requires_api_key": false
+}

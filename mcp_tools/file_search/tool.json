@@ -1,0 +1,36 @@
+{
+  "name": "file_search",
+  "version": "1.0.0",
+  "description": "Search for files matching a glob pattern in a directory tree",
+  "params": {
+    "pattern": {
+      "type": "string",
+      "description": "Glob pattern (e.g. \"**/*.py\")",
+      "required": true
+    },
+    "path": {
+      "type": "string",
+      "description": "Root directory to search from",
+      "required": false,
+      "default": "."
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "file",
+    "search",
+    "find",
+    "glob",
+    "pattern"
+  ],
+  "requires_api_key": false
+}

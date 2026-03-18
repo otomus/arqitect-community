@@ -1,0 +1,35 @@
+{
+  "name": "docker_build",
+  "version": "1.0.0",
+  "description": "Build a Docker image from a Dockerfile",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to the build context directory containing the Dockerfile",
+      "required": true
+    },
+    "tag": {
+      "type": "string",
+      "description": "Tag for the built image (e.g. 'myapp:latest')",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "docker",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "docker",
+    "image",
+    "build",
+    "dockerfile",
+    "infrastructure"
+  ],
+  "requires_api_key": false
+}

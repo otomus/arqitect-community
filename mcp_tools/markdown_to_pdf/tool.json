@@ -1,0 +1,40 @@
+{
+  "name": "markdown_to_pdf",
+  "version": "1.0.0",
+  "description": "Convert Markdown text to a PDF file",
+  "params": {
+    "markdown_text": {
+      "type": "string",
+      "description": "Markdown text to convert to PDF",
+      "required": true
+    },
+    "output_path": {
+      "type": "string",
+      "description": "Output path for the generated PDF file",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "documents",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "markdown",
+    "pdf",
+    "convert",
+    "export",
+    "document"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "reportlab"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "social_like",
+  "version": "1.0.0",
+  "description": "Like a social media post on a specified platform",
+  "params": {
+    "platform": {
+      "type": "string",
+      "description": "Social media platform (e.g. twitter, instagram, mastodon)",
+      "required": true
+    },
+    "post_id": {
+      "type": "string",
+      "description": "Unique identifier of the post to like",
+      "required": true
+    },
+    "api_key": {
+      "type": "string",
+      "description": "API key or access token for the platform",
+      "required": true
+    },
+    "instance_url": {
+      "type": "string",
+      "description": "Mastodon instance URL (e.g. https://mastodon.social). Required for Mastodon.",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "social",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "social",
+    "like",
+    "engagement",
+    "post"
+  ],
+  "requires_api_key": true,
+  "dependencies": {
+    "python": [
+      "requests"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "file_write",
+  "version": "1.0.0",
+  "description": "Write content to a file, creating it if it does not exist",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to the file to write",
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "description": "Content to write",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "file",
+    "write",
+    "create",
+    "save",
+    "output"
+  ],
+  "requires_api_key": false
+}

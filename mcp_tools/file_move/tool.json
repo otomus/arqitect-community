@@ -1,0 +1,34 @@
+{
+  "name": "file_move",
+  "version": "1.0.0",
+  "description": "Move or rename a file",
+  "params": {
+    "source": {
+      "type": "string",
+      "description": "Current file path",
+      "required": true
+    },
+    "dest": {
+      "type": "string",
+      "description": "New file path",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "file",
+    "move",
+    "rename",
+    "relocate"
+  ],
+  "requires_api_key": false
+}

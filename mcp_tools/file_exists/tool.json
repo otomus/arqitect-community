@@ -1,0 +1,29 @@
+{
+  "name": "file_exists",
+  "version": "1.0.0",
+  "description": "Check whether a file exists at the given path",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to check",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "file",
+    "exists",
+    "check",
+    "stat"
+  ],
+  "requires_api_key": false
+}

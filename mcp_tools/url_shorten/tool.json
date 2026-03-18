@@ -1,0 +1,29 @@
+{
+  "name": "url_shorten",
+  "version": "1.0.0",
+  "description": "Shorten a URL using a free URL shortening service",
+  "params": {
+    "url": {
+      "type": "string",
+      "description": "URL to shorten",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "web",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "url",
+    "shorten",
+    "link",
+    "short"
+  ],
+  "requires_api_key": false
+}

@@ -1,0 +1,31 @@
+{
+  "name": "joke_fetcher",
+  "version": "1.0.0",
+  "description": "Fetch random jokes from a free API \u2014 supports categories like programming, general, and knock-knock",
+  "params": {
+    "category": {
+      "type": "string",
+      "description": "Joke category: Any, Programming, Misc, Pun, Spooky, Christmas",
+      "required": false,
+      "default": "Any"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "entertainment",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "joke",
+    "humor",
+    "funny",
+    "random",
+    "entertainment"
+  ],
+  "requires_api_key": false
+}

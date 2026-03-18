@@ -1,0 +1,41 @@
+{
+  "name": "http_post",
+  "version": "1.0.0",
+  "description": "Send an HTTP POST request to a URL",
+  "params": {
+    "url": {
+      "type": "string",
+      "description": "URL to send the request to",
+      "required": true
+    },
+    "body": {
+      "type": "string",
+      "description": "Request body (JSON string)",
+      "required": true
+    },
+    "headers": {
+      "type": "string",
+      "description": "JSON string of headers",
+      "required": false,
+      "default": "{}"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "web",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "http",
+    "post",
+    "request",
+    "api",
+    "web"
+  ],
+  "requires_api_key": false
+}

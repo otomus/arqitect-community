@@ -1,0 +1,41 @@
+{
+  "name": "audio_record",
+  "version": "1.0.0",
+  "description": "Record audio from the microphone for a specified duration",
+  "params": {
+    "output_path": {
+      "type": "string",
+      "description": "Path where the recorded audio will be saved (WAV format)",
+      "required": true
+    },
+    "duration": {
+      "type": "number",
+      "description": "Recording duration in seconds",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "audio",
+    "record",
+    "microphone",
+    "capture",
+    "sounddevice"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "numpy",
+      "sounddevice"
+    ]
+  }
+}

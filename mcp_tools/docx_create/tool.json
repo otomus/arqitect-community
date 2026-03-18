@@ -1,0 +1,40 @@
+{
+  "name": "docx_create",
+  "version": "1.0.0",
+  "description": "Create a DOCX file from text content",
+  "params": {
+    "file_path": {
+      "type": "string",
+      "description": "Output path for the DOCX file",
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "description": "Text content to write into the DOCX file",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "documents",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "docx",
+    "word",
+    "create",
+    "write",
+    "document"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "python-docx"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "translate_text",
+  "version": "1.0.0",
+  "description": "Translate text between languages using a translation API",
+  "params": {
+    "text": {
+      "type": "string",
+      "description": "Text to translate",
+      "required": true
+    },
+    "target_language": {
+      "type": "string",
+      "description": "Target language code (e.g. es, fr, de, ja)",
+      "required": true
+    },
+    "api_key": {
+      "type": "string",
+      "description": "API key for the translation service",
+      "required": true
+    },
+    "source_language": {
+      "type": "string",
+      "description": "Source language code (auto-detected if omitted)",
+      "required": false
+    },
+    "api_url": {
+      "type": "string",
+      "description": "Translation API endpoint URL (default: https://libretranslate.com/translate)",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "external",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "translate",
+    "language",
+    "text",
+    "i18n"
+  ],
+  "requires_api_key": true,
+  "dependencies": {
+    "python": [
+      "requests"
+    ]
+  }
+}

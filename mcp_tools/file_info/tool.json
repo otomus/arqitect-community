@@ -1,0 +1,31 @@
+{
+  "name": "file_info",
+  "version": "1.0.0",
+  "description": "Get metadata about a file including size, modification time, and permissions",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to the file",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "file",
+    "info",
+    "metadata",
+    "stat",
+    "size",
+    "permissions"
+  ],
+  "requires_api_key": false
+}

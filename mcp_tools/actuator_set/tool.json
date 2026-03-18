@@ -1,0 +1,44 @@
+{
+  "name": "actuator_set",
+  "version": "1.0.0",
+  "description": "Set the value of an IoT actuator",
+  "params": {
+    "actuator_id": {
+      "type": "string",
+      "description": "Unique identifier of the actuator",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "description": "Value to set on the actuator",
+      "required": true
+    },
+    "device_host": {
+      "type": "string",
+      "description": "IoT gateway host URL",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "iot",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "iot",
+    "actuator",
+    "set",
+    "control"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "requests"
+    ]
+  }
+}

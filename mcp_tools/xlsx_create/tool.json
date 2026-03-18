@@ -1,0 +1,41 @@
+{
+  "name": "xlsx_create",
+  "version": "1.0.0",
+  "description": "Create an Excel XLSX file from JSON data",
+  "params": {
+    "file_path": {
+      "type": "string",
+      "description": "Output path for the Excel file",
+      "required": true
+    },
+    "data": {
+      "type": "string",
+      "description": "JSON string containing an array of arrays (rows and cells)",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "documents",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "xlsx",
+    "excel",
+    "create",
+    "write",
+    "spreadsheet",
+    "document"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "openpyxl"
+    ]
+  }
+}

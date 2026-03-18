@@ -1,0 +1,37 @@
+{
+  "name": "password_generate",
+  "version": "1.0.0",
+  "description": "Generate a cryptographically secure random password",
+  "params": {
+    "length": {
+      "type": "number",
+      "description": "Password length",
+      "required": false,
+      "default": 20
+    },
+    "charset": {
+      "type": "string",
+      "description": "Character set: alphanumeric, ascii, digits, hex",
+      "required": false,
+      "default": "ascii"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "security",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "password",
+    "generate",
+    "random",
+    "secure",
+    "credential"
+  ],
+  "requires_api_key": false
+}

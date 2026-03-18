@@ -1,0 +1,45 @@
+{
+  "name": "sms_send",
+  "version": "1.0.0",
+  "description": "Send an SMS text message",
+  "params": {
+    "to": {
+      "type": "string",
+      "description": "Phone number to send to",
+      "required": true
+    },
+    "body": {
+      "type": "string",
+      "description": "Message text",
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "description": "SMS provider name (twilio or vonage)",
+      "required": true
+    },
+    "api_key": {
+      "type": "string",
+      "description": "API key for the SMS provider",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "communication",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "sms",
+    "text",
+    "message",
+    "send",
+    "phone"
+  ],
+  "requires_api_key": true
+}

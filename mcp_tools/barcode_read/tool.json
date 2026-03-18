@@ -1,0 +1,37 @@
+{
+  "name": "barcode_read",
+  "version": "1.0.0",
+  "description": "Read and decode a barcode from an image file",
+  "params": {
+    "image_path": {
+      "type": "string",
+      "description": "Path to the image file containing a barcode",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "visualization",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "barcode",
+    "decode",
+    "read",
+    "scan",
+    "image",
+    "visualization"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "Pillow",
+      "pyzbar"
+    ]
+  }
+}

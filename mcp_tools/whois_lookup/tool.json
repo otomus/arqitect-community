@@ -1,0 +1,30 @@
+{
+  "name": "whois_lookup",
+  "version": "1.0.0",
+  "description": "Look up WHOIS registration information for a domain",
+  "params": {
+    "domain": {
+      "type": "string",
+      "description": "Domain name to look up",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "web",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "whois",
+    "domain",
+    "registration",
+    "lookup",
+    "network"
+  ],
+  "requires_api_key": false
+}

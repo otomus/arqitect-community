@@ -1,0 +1,35 @@
+{
+  "name": "decrypt_text",
+  "version": "1.0.0",
+  "description": "Decrypt a string that was encrypted with encrypt_text",
+  "params": {
+    "ciphertext": {
+      "type": "string",
+      "description": "Base64 ciphertext from encrypt_text",
+      "required": true
+    },
+    "key": {
+      "type": "string",
+      "description": "Decryption key (same key used to encrypt)",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "security",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "decrypt",
+    "crypto",
+    "secret",
+    "aes",
+    "cipher"
+  ],
+  "requires_api_key": false
+}

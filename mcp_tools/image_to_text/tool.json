@@ -1,0 +1,43 @@
+{
+  "name": "image_to_text",
+  "version": "1.0.0",
+  "description": "Extract text from an image using OCR (pytesseract)",
+  "params": {
+    "image_path": {
+      "type": "string",
+      "description": "Path to the image file to extract text from",
+      "required": true
+    },
+    "language": {
+      "type": "string",
+      "description": "Tesseract language code (default: eng)",
+      "required": false,
+      "default": "eng"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "media",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "image",
+    "ocr",
+    "text",
+    "extract",
+    "tesseract",
+    "recognition"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "Pillow",
+      "pytesseract"
+    ]
+  }
+}

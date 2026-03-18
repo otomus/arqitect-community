@@ -1,0 +1,49 @@
+{
+  "name": "mouse_click",
+  "version": "1.0.0",
+  "description": "Click the mouse at specified screen coordinates",
+  "params": {
+    "x": {
+      "type": "integer",
+      "description": "X coordinate on screen",
+      "required": true
+    },
+    "y": {
+      "type": "integer",
+      "description": "Y coordinate on screen",
+      "required": true
+    },
+    "button": {
+      "type": "string",
+      "description": "Mouse button to click (left, right, middle)",
+      "required": false
+    },
+    "clicks": {
+      "type": "integer",
+      "description": "Number of clicks to perform",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "desktop",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "mouse",
+    "click",
+    "automation",
+    "desktop"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "pyautogui"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "qr_code_read",
+  "version": "1.0.0",
+  "description": "Read and decode a QR code from an image file",
+  "params": {
+    "image_path": {
+      "type": "string",
+      "description": "Path to the image file containing a QR code",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "visualization",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "qr",
+    "qrcode",
+    "decode",
+    "read",
+    "scan",
+    "image",
+    "visualization"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "Pillow",
+      "opencv-python",
+      "pyzbar"
+    ]
+  }
+}

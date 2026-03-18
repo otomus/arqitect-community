@@ -1,0 +1,40 @@
+{
+  "name": "notification_send",
+  "version": "1.0.0",
+  "description": "Send a push notification",
+  "params": {
+    "title": {
+      "type": "string",
+      "description": "Notification title",
+      "required": true
+    },
+    "body": {
+      "type": "string",
+      "description": "Notification body",
+      "required": true
+    },
+    "target": {
+      "type": "string",
+      "description": "Target platform or device",
+      "required": false,
+      "default": "local"
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "communication",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "notification",
+    "push",
+    "alert",
+    "notify"
+  ],
+  "requires_api_key": false
+}

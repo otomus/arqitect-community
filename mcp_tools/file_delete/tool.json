@@ -1,0 +1,29 @@
+{
+  "name": "file_delete",
+  "version": "1.0.0",
+  "description": "Delete a file at the given path",
+  "params": {
+    "path": {
+      "type": "string",
+      "description": "Path to the file to delete",
+      "required": true
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "filesystem",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "file",
+    "delete",
+    "remove",
+    "cleanup"
+  ],
+  "requires_api_key": false
+}

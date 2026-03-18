@@ -1,0 +1,30 @@
+{
+  "name": "process_list",
+  "version": "1.0.0",
+  "description": "List running system processes with optional filtering",
+  "params": {
+    "filter": {
+      "type": "string",
+      "description": "Optional string to filter process names",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "docker",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "process",
+    "list",
+    "ps",
+    "system",
+    "infrastructure"
+  ],
+  "requires_api_key": false
+}

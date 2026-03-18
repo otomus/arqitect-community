@@ -1,0 +1,40 @@
+{
+  "name": "keyboard_type",
+  "version": "1.0.0",
+  "description": "Type a text string using keyboard simulation",
+  "params": {
+    "text": {
+      "type": "string",
+      "description": "Text string to type",
+      "required": true
+    },
+    "interval": {
+      "type": "number",
+      "description": "Seconds between each keystroke",
+      "required": false
+    }
+  },
+  "runtime": "python",
+  "entry": "tool.py",
+  "timeout": 30,
+  "author": {
+    "github": "sentient-community"
+  },
+  "category": "desktop",
+  "implementations": {
+    "python": "tool.py"
+  },
+  "tags": [
+    "keyboard",
+    "type",
+    "text",
+    "automation",
+    "desktop"
+  ],
+  "requires_api_key": false,
+  "dependencies": {
+    "python": [
+      "pyautogui"
+    ]
+  }
+}
