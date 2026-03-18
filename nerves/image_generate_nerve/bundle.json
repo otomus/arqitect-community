@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Generate images from text descriptions using AI.",
     "role": "creative",
+    "mode": "tool_required",
     "tags": [
         "image",
         "generate",

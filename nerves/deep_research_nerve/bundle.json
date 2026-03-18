@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Research a topic thoroughly and produce a report",
     "role": "brain",
+    "mode": "tool_required",
     "tags": [
         "research",
         "knowledge",

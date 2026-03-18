@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Control and read any actuator",
   "role": "nerve",
+  "mode": "tool_required",
   "tags": [
     "iot",
     "actuator"

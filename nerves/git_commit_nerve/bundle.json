@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Stage and commit clean changes",
   "role": "code",
+  "mode": "reasoning",
   "tags": [
     "git",
     "version-control"

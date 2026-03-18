@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Look up DNS records for a domain",
   "role": "tool",
+  "mode": "tool_required",
   "tags": [
     "web",
     "dns"

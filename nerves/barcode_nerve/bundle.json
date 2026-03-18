@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Generate and read barcodes",
   "role": "brain",
+  "mode": "tool_required",
   "tags": [
     "barcode"
   ],

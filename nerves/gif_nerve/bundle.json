@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Find and create GIFs",
   "role": "creative",
+  "mode": "tool_required",
   "tags": [
     "gif",
     "media"

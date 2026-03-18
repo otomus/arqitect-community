@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Extract, transform, load data between formats",
     "role": "brain",
+    "mode": "tool_required",
     "tags": [
         "data",
         "etl",

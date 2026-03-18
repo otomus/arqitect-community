@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Read text from a screen region",
     "role": "tool",
+    "mode": "reasoning",
     "tags": [
         "desktop",
         "screen",

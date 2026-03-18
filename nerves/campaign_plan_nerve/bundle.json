@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Plan a marketing campaign",
     "role": "creative",
+    "mode": "reasoning",
     "tags": [
         "marketing",
         "campaign",

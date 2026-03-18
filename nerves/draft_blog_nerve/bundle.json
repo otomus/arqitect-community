@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Write a blog post on a topic",
     "role": "creative",
+    "mode": "reasoning",
     "tags": [
         "writing",
         "blog",

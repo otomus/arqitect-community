@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Find and summarize academic papers on a topic",
     "role": "brain",
+    "mode": "tool_required",
     "tags": [
         "research",
         "academic",

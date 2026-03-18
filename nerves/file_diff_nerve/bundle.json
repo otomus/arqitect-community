@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Compare two files",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "file",
     "comparison"

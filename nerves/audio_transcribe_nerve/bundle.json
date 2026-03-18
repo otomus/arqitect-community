@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Convert speech in audio files to text.",
     "role": "tool",
+    "mode": "tool_required",
     "tags": [
         "audio",
         "transcribe",

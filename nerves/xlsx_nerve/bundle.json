@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Read from and create Excel spreadsheets",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "document",
     "xlsx",

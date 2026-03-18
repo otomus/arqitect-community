@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Fill and submit a web form",
   "role": "brain",
+  "mode": "tool_required",
   "tags": [
     "browser",
     "web",

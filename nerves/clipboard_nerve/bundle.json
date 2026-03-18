@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Read from and write to the clipboard",
   "role": "nerve",
+  "mode": "reasoning",
   "tags": [
     "clipboard",
     "system"

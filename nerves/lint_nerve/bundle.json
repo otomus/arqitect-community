@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Lint source files and report issues",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "code",
     "lint",

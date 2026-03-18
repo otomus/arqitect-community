@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Design a system architecture",
     "role": "code",
+    "mode": "reasoning",
     "tags": [
         "architecture",
         "design",

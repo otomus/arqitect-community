@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Check content against compliance rules",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "legal",
         "compliance",

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Clone a remote repository",
   "role": "code",
+  "mode": "tool_required",
   "tags": [
     "git",
     "version-control"

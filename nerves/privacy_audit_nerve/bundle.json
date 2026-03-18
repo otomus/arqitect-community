@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Audit for privacy/data concerns",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "legal",
         "privacy",

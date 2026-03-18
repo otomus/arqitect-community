@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Review portfolio allocation and performance",
     "role": "brain",
+    "mode": "tool_required",
     "tags": [
         "finance",
         "portfolio",

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Send a push notification",
   "role": "tool",
+  "mode": "tool_required",
   "tags": [
     "communication",
     "notification"

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Create and search embeddings",
   "role": "brain",
+  "mode": "tool_required",
   "tags": [
     "ai",
     "embedding",

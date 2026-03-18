@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Generate, store, and retrieve credentials",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "security",
     "password",

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Delete merged and stale branches",
   "role": "code",
+  "mode": "reasoning",
   "tags": [
     "git",
     "version-control"

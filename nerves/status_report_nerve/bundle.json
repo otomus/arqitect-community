@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Generate project status report",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "project-management",
         "status",

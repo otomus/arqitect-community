@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Review and correct text",
     "role": "communication",
+    "mode": "reasoning",
     "tags": [
         "writing",
         "proofread",

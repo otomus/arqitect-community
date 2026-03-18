@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Search for YouTube videos by keyword.",
   "role": "tool",
+  "mode": "tool_required",
   "tags": [
     "youtube",
     "video",

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Convert documents between formats such as Markdown to HTML or PDF.",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "document",
     "convert",

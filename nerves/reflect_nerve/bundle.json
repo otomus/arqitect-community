@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Generate a reflection prompt",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "self-improvement",
         "reflection",

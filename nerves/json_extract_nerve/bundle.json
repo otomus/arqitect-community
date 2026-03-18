@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Parse and query JSON data",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "data",
     "json"

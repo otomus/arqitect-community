@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Generate a wireframe description",
     "role": "creative",
+    "mode": "reasoning",
     "tags": [
         "design",
         "wireframe",

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Stash or restore work in progress",
   "role": "code",
+  "mode": "reasoning",
   "tags": [
     "git",
     "version-control"

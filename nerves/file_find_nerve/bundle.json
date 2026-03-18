@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Find files matching a pattern",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "file",
     "search"

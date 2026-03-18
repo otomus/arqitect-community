@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Convert text to speech audio.",
     "role": "tool",
+    "mode": "tool_required",
     "tags": [
         "audio",
         "tts",

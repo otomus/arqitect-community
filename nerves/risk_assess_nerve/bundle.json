@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Assess project risks",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "project-management",
         "risk",

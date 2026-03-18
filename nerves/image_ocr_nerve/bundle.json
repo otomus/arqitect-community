@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Extract text from images using optical character recognition.",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "image",
     "ocr",

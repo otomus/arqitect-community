@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Write technical documentation",
     "role": "code",
+    "mode": "reasoning",
     "tags": [
         "writing",
         "technical",

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Analyze a cryptocurrency",
     "role": "brain",
+    "mode": "tool_required",
     "tags": [
         "finance",
         "crypto",

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Extract and organize knowledge from a source",
     "role": "brain",
+    "mode": "tool_required",
     "tags": [
         "knowledge",
         "extraction",

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Scan for open ports on a host",
   "role": "tool",
+  "mode": "tool_required",
   "tags": [
     "security",
     "network",

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Scan for security vulnerabilities",
   "role": "tool",
+  "mode": "tool_required",
   "tags": [
     "security",
     "vulnerability",

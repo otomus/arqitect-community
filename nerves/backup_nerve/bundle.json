@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Create and verify a system backup",
     "role": "code",
+    "mode": "tool_required",
     "tags": [
         "devops",
         "backup",

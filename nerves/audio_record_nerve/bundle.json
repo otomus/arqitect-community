@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Record audio from the system microphone.",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "audio",
     "record",

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Extract individual frames from video files.",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "video",
     "frames",

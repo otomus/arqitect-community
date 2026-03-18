@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Write marketing copy for a product",
     "role": "creative",
+    "mode": "reasoning",
     "tags": [
         "writing",
         "marketing",

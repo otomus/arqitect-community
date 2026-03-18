@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Create, list, and cancel scheduled tasks",
   "role": "brain",
+  "mode": "tool_required",
   "tags": [
     "workflow",
     "schedule",

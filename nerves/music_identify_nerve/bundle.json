@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Identify a song that is currently playing or from an audio clip.",
     "role": "tool",
+    "mode": "tool_required",
     "tags": [
         "audio",
         "music",

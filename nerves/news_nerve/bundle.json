@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Fetch latest news on a topic",
   "role": "tool",
+  "mode": "tool_required",
   "tags": [
     "news",
     "fetch",

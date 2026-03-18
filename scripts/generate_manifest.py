@@ -44,11 +44,25 @@ def _extract_model_scores(bundle: dict) -> dict:
     return model_scores
 
 
+def _infer_mode(bundle: dict) -> str:
+    """Infer nerve mode from explicit field or tools array.
+
+    Returns 'tool_required' if the nerve has tools and no explicit mode,
+    'reasoning' otherwise.
+    """
+    explicit = bundle.get("mode")
+    if explicit in ("tool_required", "reasoning"):
+        return explicit
+    tools = bundle.get("tools", [])
+    return "tool_required" if tools else "reasoning"
+
+
 def _build_nerve_entry(bundle: dict) -> dict:
     """Build a single nerve manifest entry from a parsed bundle."""
     return {
         "description": bundle.get("description", ""),
         "role": bundle.get("role", "tool"),
+        "mode": _infer_mode(bundle),
         "tags": bundle.get("tags", []),
         "authors": bundle.get("authors", []),
         "version": bundle.get("version", "1.0"),

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Track progress toward a goal",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "self-improvement",
         "goals",

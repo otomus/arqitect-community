@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Triage a support ticket",
     "role": "communication",
+    "mode": "reasoning",
     "tags": [
         "support",
         "triage",

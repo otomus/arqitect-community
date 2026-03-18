@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Clean and normalize a dataset",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "data",
         "cleaning",

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Scroll in a direction on screen",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "desktop",
     "mouse",

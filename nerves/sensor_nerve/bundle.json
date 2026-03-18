@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Read sensor values and list available sensors",
   "role": "nerve",
+  "mode": "tool_required",
   "tags": [
     "iot",
     "sensor"

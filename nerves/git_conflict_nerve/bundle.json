@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Detect and surface merge conflicts",
   "role": "code",
+  "mode": "reasoning",
   "tags": [
     "git",
     "version-control"

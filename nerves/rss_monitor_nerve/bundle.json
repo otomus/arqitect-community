@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Fetch and summarize RSS feed updates",
     "role": "tool",
+    "mode": "tool_required",
     "tags": [
         "web",
         "rss"

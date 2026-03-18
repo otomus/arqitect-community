@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "List project dependencies",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "code",
     "dependencies"

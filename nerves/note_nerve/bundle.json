@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Full CRUD operations on notes",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "notes",
     "productivity"

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Control speaker playback and volume",
   "role": "nerve",
+  "mode": "tool_required",
   "tags": [
     "iot",
     "speaker",

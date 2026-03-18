@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Push local commits to remote",
   "role": "code",
+  "mode": "tool_required",
   "tags": [
     "git",
     "version-control"

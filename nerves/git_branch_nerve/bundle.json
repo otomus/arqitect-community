@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Create and switch to a new branch",
   "role": "code",
+  "mode": "reasoning",
   "tags": [
     "git",
     "version-control"

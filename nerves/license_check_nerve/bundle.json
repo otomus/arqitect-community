@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Check software license compatibility",
     "role": "brain",
+    "mode": "tool_required",
     "tags": [
         "legal",
         "license",

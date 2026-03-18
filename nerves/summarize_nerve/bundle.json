@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Summarize a document or URL",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "writing",
         "summary",

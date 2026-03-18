@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Convert audio files between different formats.",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "audio",
     "convert",

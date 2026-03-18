@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Check SSL certificate status",
   "role": "tool",
+  "mode": "tool_required",
   "tags": [
     "security",
     "ssl",

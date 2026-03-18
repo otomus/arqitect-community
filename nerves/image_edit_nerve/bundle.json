@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Resize, crop, and convert images",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "image",
     "editing"

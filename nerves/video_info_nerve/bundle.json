@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Get metadata and technical details about a video file.",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "video",
     "metadata",

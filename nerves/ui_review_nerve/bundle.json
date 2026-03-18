@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Review a UI design for usability",
     "role": "vision",
+    "mode": "tool_required",
     "tags": [
         "design",
         "ui",

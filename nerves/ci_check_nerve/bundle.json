@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Check CI/CD pipeline status",
     "role": "code",
+    "mode": "tool_required",
     "tags": [
         "devops",
         "ci-cd",

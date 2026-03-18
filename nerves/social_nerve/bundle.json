@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Full social media operations on any platform",
   "role": "communication",
+  "mode": "tool_required",
   "tags": [
     "communication",
     "social"

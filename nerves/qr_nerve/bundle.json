@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Generate and read QR codes",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "qr",
     "barcode"

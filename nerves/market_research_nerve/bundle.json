@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Analyze market trends and competitors",
     "role": "brain",
+    "mode": "tool_required",
     "tags": [
         "research",
         "market",

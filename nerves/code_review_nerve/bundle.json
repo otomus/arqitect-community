@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Review code for quality and bugs",
     "role": "code",
+    "mode": "reasoning",
     "tags": [
         "code",
         "review",

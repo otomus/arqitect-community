@@ -20,6 +20,11 @@
         "properties": {
           "description": { "type": "string" },
           "role": { "type": "string" },
+          "mode": {
+            "type": "string",
+            "enum": ["tool_required", "reasoning"],
+            "description": "Whether the nerve must call a tool or can answer from LLM knowledge"
+          },
           "tags": { "type": "array", "items": { "type": "string" } },
           "authors": { "type": "array", "items": { "type": "object" } },
           "version": { "type": "string" },

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Analyze a stock with fundamentals and technicals",
     "role": "brain",
+    "mode": "tool_required",
     "tags": [
         "finance",
         "stock",

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Search the web and return results",
     "role": "tool",
+    "mode": "tool_required",
     "tags": [
         "web",
         "search"

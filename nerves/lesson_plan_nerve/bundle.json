@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Create a lesson plan",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "education",
         "teaching",

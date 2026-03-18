@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Control and query light state (on/off/brightness/color)",
   "role": "nerve",
+  "mode": "tool_required",
   "tags": [
     "iot",
     "light"

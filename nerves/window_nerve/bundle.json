@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "List, focus, and resize windows",
   "role": "nerve",
+  "mode": "reasoning",
   "tags": [
     "window",
     "system"

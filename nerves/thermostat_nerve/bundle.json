@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Control and read thermostat temperature",
   "role": "nerve",
+  "mode": "tool_required",
   "tags": [
     "iot",
     "thermostat",

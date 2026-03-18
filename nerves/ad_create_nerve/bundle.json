@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Create ad copy and targeting",
     "role": "creative",
+    "mode": "reasoning",
     "tags": [
         "marketing",
         "advertising",

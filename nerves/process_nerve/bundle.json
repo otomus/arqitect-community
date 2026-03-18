@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Run, list, and kill system processes",
   "role": "code",
+  "mode": "tool_required",
   "tags": [
     "process",
     "system"

@@ -1,10 +1,11 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-18T16:10:24.055147+00:00",
+  "generated_at": "2026-03-18T18:19:40.703634+00:00",
   "nerves": {
     "academic_research_nerve": {
       "description": "Find and summarize academic papers on a topic",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "research",
         "academic",
@@ -27,6 +28,7 @@
     "actuator_nerve": {
       "description": "Control and read any actuator",
       "role": "nerve",
+      "mode": "tool_required",
       "tags": [
         "iot",
         "actuator"
@@ -45,6 +47,7 @@
     "ad_create_nerve": {
       "description": "Create ad copy and targeting",
       "role": "creative",
+      "mode": "reasoning",
       "tags": [
         "marketing",
         "advertising",
@@ -66,6 +69,7 @@
     "audio_convert_nerve": {
       "description": "Convert audio files between different formats.",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "audio",
         "convert",
@@ -85,6 +89,7 @@
     "audio_record_nerve": {
       "description": "Record audio from the system microphone.",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "audio",
         "record",
@@ -104,6 +109,7 @@
     "audio_synthesize_nerve": {
       "description": "Convert text to speech audio.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "audio",
         "tts",
@@ -123,6 +129,7 @@
     "audio_transcribe_nerve": {
       "description": "Convert speech in audio files to text.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "audio",
         "transcribe",
@@ -142,6 +149,7 @@
     "backup_nerve": {
       "description": "Create and verify a system backup",
       "role": "code",
+      "mode": "tool_required",
       "tags": [
         "devops",
         "backup",
@@ -163,6 +171,7 @@
     "barcode_nerve": {
       "description": "Generate and read barcodes",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "barcode"
       ],
@@ -180,6 +189,7 @@
     "browse_nerve": {
       "description": "Open a URL and extract its content",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "browser",
         "web",
@@ -201,6 +211,7 @@
     "budget_nerve": {
       "description": "Create or review a budget",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "finance",
         "budget",
@@ -222,6 +233,7 @@
     "calendar_nerve": {
       "description": "List, create, and delete calendar events",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "calendar",
         "productivity"
@@ -240,6 +252,7 @@
     "camera_snapshot_nerve": {
       "description": "Capture an image from a connected camera.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "iot",
         "camera"
@@ -258,6 +271,7 @@
     "campaign_plan_nerve": {
       "description": "Plan a marketing campaign",
       "role": "creative",
+      "mode": "reasoning",
       "tags": [
         "marketing",
         "campaign",
@@ -279,6 +293,7 @@
     "cert_check_nerve": {
       "description": "Check SSL certificate status",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "security",
         "ssl",
@@ -298,6 +313,7 @@
     "ci_check_nerve": {
       "description": "Check CI/CD pipeline status",
       "role": "code",
+      "mode": "tool_required",
       "tags": [
         "devops",
         "ci-cd",
@@ -319,6 +335,7 @@
     "click_nerve": {
       "description": "Click at a screen position",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "desktop",
         "mouse",
@@ -338,6 +355,7 @@
     "clipboard_nerve": {
       "description": "Read from and write to the clipboard",
       "role": "nerve",
+      "mode": "reasoning",
       "tags": [
         "clipboard",
         "system"
@@ -356,6 +374,7 @@
     "code_review_nerve": {
       "description": "Review code for quality and bugs",
       "role": "code",
+      "mode": "reasoning",
       "tags": [
         "code",
         "review",
@@ -378,6 +397,7 @@
     "compliance_check_nerve": {
       "description": "Check content against compliance rules",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "legal",
         "compliance",
@@ -399,6 +419,7 @@
     "contract_review_nerve": {
       "description": "Review a contract and flag risks",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "legal",
         "contract",
@@ -421,6 +442,7 @@
     "copywrite_nerve": {
       "description": "Write marketing copy for a product",
       "role": "creative",
+      "mode": "reasoning",
       "tags": [
         "writing",
         "marketing",
@@ -442,6 +464,7 @@
     "coverage_nerve": {
       "description": "Generate test coverage report",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "code",
         "test",
@@ -461,6 +484,7 @@
     "crypt_nerve": {
       "description": "Encrypt and decrypt text",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "security",
         "encryption"
@@ -479,6 +503,7 @@
     "crypto_analyze_nerve": {
       "description": "Analyze a cryptocurrency",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "finance",
         "crypto",
@@ -500,6 +525,7 @@
     "crypto_price_nerve": {
       "description": "Get the current price of a cryptocurrency.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "finance",
         "crypto",
@@ -519,6 +545,7 @@
     "csv_nerve": {
       "description": "Read and write CSV data",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "data",
         "csv"
@@ -537,6 +564,7 @@
     "currency_nerve": {
       "description": "Convert currencies and get exchange rates",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "finance",
         "currency"
@@ -555,6 +583,7 @@
     "data_clean_nerve": {
       "description": "Clean and normalize a dataset",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "data",
         "cleaning",
@@ -576,6 +605,7 @@
     "data_explore_nerve": {
       "description": "Explore a dataset and summarize findings",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "data",
         "analysis",
@@ -598,6 +628,7 @@
     "db_nerve": {
       "description": "Query, write, and inspect databases",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "database",
         "sql"
@@ -621,6 +652,7 @@
     "deep_research_nerve": {
       "description": "Research a topic thoroughly and produce a report",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "research",
         "knowledge",
@@ -643,6 +675,7 @@
     "deploy_nerve": {
       "description": "Deploy an application",
       "role": "code",
+      "mode": "tool_required",
       "tags": [
         "devops",
         "deploy",
@@ -665,6 +698,7 @@
     "deps_nerve": {
       "description": "List project dependencies",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "code",
         "dependencies"
@@ -683,6 +717,7 @@
     "device_nerve": {
       "description": "List and check health of connected devices",
       "role": "nerve",
+      "mode": "tool_required",
       "tags": [
         "iot",
         "device"
@@ -701,6 +736,7 @@
     "dns_check_nerve": {
       "description": "Look up DNS records for a domain",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "web",
         "dns"
@@ -719,6 +755,7 @@
     "doc_convert_nerve": {
       "description": "Convert documents between formats such as Markdown to HTML or PDF.",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "document",
         "convert",
@@ -741,6 +778,7 @@
     "docker_nerve": {
       "description": "Manage Docker containers and images",
       "role": "code",
+      "mode": "tool_required",
       "tags": [
         "docker",
         "container",
@@ -766,6 +804,7 @@
     "docx_nerve": {
       "description": "Read from and create Word documents",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "document",
         "docx",
@@ -785,6 +824,7 @@
     "domain_info_nerve": {
       "description": "Get registration info for a domain",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "web",
         "domain"
@@ -803,6 +843,7 @@
     "draft_blog_nerve": {
       "description": "Write a blog post on a topic",
       "role": "creative",
+      "mode": "reasoning",
       "tags": [
         "writing",
         "blog",
@@ -824,6 +865,7 @@
     "draft_email_nerve": {
       "description": "Draft a professional email",
       "role": "communication",
+      "mode": "reasoning",
       "tags": [
         "writing",
         "email",
@@ -844,6 +886,7 @@
     "email_nerve": {
       "description": "Full email operations (send, receive, read, reply, search)",
       "role": "communication",
+      "mode": "tool_required",
       "tags": [
         "communication",
         "email"
@@ -862,6 +905,7 @@
     "embedding_nerve": {
       "description": "Create and search embeddings",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "ai",
         "embedding",
@@ -882,6 +926,7 @@
     "encode_nerve": {
       "description": "Encode or decode base64 data",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "data",
         "encoding"
@@ -901,6 +946,7 @@
     "escalation_nerve": {
       "description": "Determine if a ticket needs escalation",
       "role": "communication",
+      "mode": "reasoning",
       "tags": [
         "support",
         "escalation",
@@ -921,6 +967,7 @@
     "etl_nerve": {
       "description": "Extract, transform, load data between formats",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "data",
         "etl",
@@ -943,6 +990,7 @@
     "expense_track_nerve": {
       "description": "Log and categorize an expense",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "finance",
         "expense",
@@ -964,6 +1012,7 @@
     "explain_nerve": {
       "description": "Explain a concept at the right level",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "education",
         "teaching",
@@ -984,6 +1033,7 @@
     "fact_check_nerve": {
       "description": "Verify claims against multiple sources",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "research",
         "fact-check",
@@ -1005,6 +1055,7 @@
     "faq_answer_nerve": {
       "description": "Find answer from FAQ/knowledge base",
       "role": "communication",
+      "mode": "reasoning",
       "tags": [
         "support",
         "faq",
@@ -1026,6 +1077,7 @@
     "file_backup_nerve": {
       "description": "Copy files to a backup location",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "file",
         "backup"
@@ -1045,6 +1097,7 @@
     "file_diff_nerve": {
       "description": "Compare two files",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "file",
         "comparison"
@@ -1064,6 +1117,7 @@
     "file_find_nerve": {
       "description": "Find files matching a pattern",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "file",
         "search"
@@ -1083,6 +1137,7 @@
     "file_nerve": {
       "description": "Read and write files",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "file",
         "filesystem"
@@ -1104,6 +1159,7 @@
     "file_organize_nerve": {
       "description": "Move and rename files to target structure",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "file",
         "organization"
@@ -1124,6 +1180,7 @@
     "file_watch_nerve": {
       "description": "Monitor a path and report changes",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "file",
         "monitoring"
@@ -1142,6 +1199,7 @@
     "fitness_plan_nerve": {
       "description": "Create a fitness plan",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "health",
         "fitness",
@@ -1162,6 +1220,7 @@
     "form_fill_nerve": {
       "description": "Fill and submit a web form",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "browser",
         "web",
@@ -1185,6 +1244,7 @@
     "format_nerve": {
       "description": "Format source files",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "code",
         "format",
@@ -1204,6 +1264,7 @@
     "gif_nerve": {
       "description": "Find and create GIFs",
       "role": "creative",
+      "mode": "tool_required",
       "tags": [
         "gif",
         "media"
@@ -1223,6 +1284,7 @@
     "git_branch_nerve": {
       "description": "Create and switch to a new branch",
       "role": "code",
+      "mode": "reasoning",
       "tags": [
         "git",
         "version-control"
@@ -1242,6 +1304,7 @@
     "git_cleanup_nerve": {
       "description": "Delete merged and stale branches",
       "role": "code",
+      "mode": "reasoning",
       "tags": [
         "git",
         "version-control"
@@ -1261,6 +1324,7 @@
     "git_clone_nerve": {
       "description": "Clone a remote repository",
       "role": "code",
+      "mode": "tool_required",
       "tags": [
         "git",
         "version-control"
@@ -1279,6 +1343,7 @@
     "git_commit_nerve": {
       "description": "Stage and commit clean changes",
       "role": "code",
+      "mode": "reasoning",
       "tags": [
         "git",
         "version-control"
@@ -1300,6 +1365,7 @@
     "git_conflict_nerve": {
       "description": "Detect and surface merge conflicts",
       "role": "code",
+      "mode": "reasoning",
       "tags": [
         "git",
         "version-control"
@@ -1320,6 +1386,7 @@
     "git_history_nerve": {
       "description": "Investigate commit history",
       "role": "code",
+      "mode": "reasoning",
       "tags": [
         "git",
         "version-control"
@@ -1339,6 +1406,7 @@
     "git_merge_nerve": {
       "description": "Merge a branch into current",
       "role": "code",
+      "mode": "reasoning",
       "tags": [
         "git",
         "version-control"
@@ -1359,6 +1427,7 @@
     "git_pull_nerve": {
       "description": "Pull and integrate remote changes",
       "role": "code",
+      "mode": "tool_required",
       "tags": [
         "git",
         "version-control"
@@ -1378,6 +1447,7 @@
     "git_push_nerve": {
       "description": "Push local commits to remote",
       "role": "code",
+      "mode": "tool_required",
       "tags": [
         "git",
         "version-control"
@@ -1397,6 +1467,7 @@
     "git_rebase_nerve": {
       "description": "Rebase current branch onto target",
       "role": "code",
+      "mode": "reasoning",
       "tags": [
         "git",
         "version-control"
@@ -1417,6 +1488,7 @@
     "git_stash_nerve": {
       "description": "Stash or restore work in progress",
       "role": "code",
+      "mode": "reasoning",
       "tags": [
         "git",
         "version-control"
@@ -1437,6 +1509,7 @@
     "git_tag_nerve": {
       "description": "Tag a release point",
       "role": "code",
+      "mode": "reasoning",
       "tags": [
         "git",
         "version-control"
@@ -1456,6 +1529,7 @@
     "goal_track_nerve": {
       "description": "Track progress toward a goal",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "self-improvement",
         "goals",
@@ -1477,6 +1551,7 @@
     "grade_nerve": {
       "description": "Grade a submission against criteria",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "education",
         "grading",
@@ -1498,6 +1573,7 @@
     "habit_track_nerve": {
       "description": "Track a habit",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "self-improvement",
         "habit",
@@ -1519,6 +1595,7 @@
     "hash_nerve": {
       "description": "Compute and verify hashes",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "data",
         "hash",
@@ -1538,6 +1615,7 @@
     "health_summary_nerve": {
       "description": "Summarize health metrics",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "health",
         "wellness",
@@ -1559,6 +1637,7 @@
     "hotkey_nerve": {
       "description": "Press a keyboard shortcut",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "desktop",
         "keyboard",
@@ -1578,6 +1657,7 @@
     "image_capture_nerve": {
       "description": "Capture a screenshot of the current screen.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "image",
         "screenshot",
@@ -1597,6 +1677,7 @@
     "image_edit_nerve": {
       "description": "Resize, crop, and convert images",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "image",
         "editing"
@@ -1617,6 +1698,7 @@
     "image_generate_nerve": {
       "description": "Generate images from text descriptions using AI.",
       "role": "creative",
+      "mode": "tool_required",
       "tags": [
         "image",
         "generate",
@@ -1636,6 +1718,7 @@
     "image_ocr_nerve": {
       "description": "Extract text from images using optical character recognition.",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "image",
         "ocr",
@@ -1655,6 +1738,7 @@
     "incident_nerve": {
       "description": "Investigate and triage an incident",
       "role": "code",
+      "mode": "tool_required",
       "tags": [
         "devops",
         "incident",
@@ -1677,6 +1761,7 @@
     "infra_audit_nerve": {
       "description": "Audit infrastructure health",
       "role": "code",
+      "mode": "tool_required",
       "tags": [
         "devops",
         "infrastructure",
@@ -1699,6 +1784,7 @@
     "json_extract_nerve": {
       "description": "Parse and query JSON data",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "data",
         "json"
@@ -1718,6 +1804,7 @@
     "knowledge_capture_nerve": {
       "description": "Extract and organize knowledge from a source",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "knowledge",
         "extraction",
@@ -1740,6 +1827,7 @@
     "lead_research_nerve": {
       "description": "Research a potential lead/prospect",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "sales",
         "research",
@@ -1762,6 +1850,7 @@
     "lesson_plan_nerve": {
       "description": "Create a lesson plan",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "education",
         "teaching",
@@ -1783,6 +1872,7 @@
     "license_check_nerve": {
       "description": "Check software license compatibility",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "legal",
         "license",
@@ -1804,6 +1894,7 @@
     "light_nerve": {
       "description": "Control and query light state (on/off/brightness/color)",
       "role": "nerve",
+      "mode": "tool_required",
       "tags": [
         "iot",
         "light"
@@ -1822,6 +1913,7 @@
     "lint_nerve": {
       "description": "Lint source files and report issues",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "code",
         "lint",
@@ -1841,6 +1933,7 @@
     "llm_ask_nerve": {
       "description": "Ask an LLM a question",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "ai",
         "llm",
@@ -1860,6 +1953,7 @@
     "lock_nerve": {
       "description": "Lock or unlock a smart door lock.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "iot",
         "lock"
@@ -1878,6 +1972,7 @@
     "market_research_nerve": {
       "description": "Analyze market trends and competitors",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "research",
         "market",
@@ -1900,6 +1995,7 @@
     "music_identify_nerve": {
       "description": "Identify a song that is currently playing or from an audio clip.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "audio",
         "music",
@@ -1919,6 +2015,7 @@
     "news_nerve": {
       "description": "Fetch latest news on a topic",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "news",
         "fetch",
@@ -1938,6 +2035,7 @@
     "note_nerve": {
       "description": "Full CRUD operations on notes",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "notes",
         "productivity"
@@ -1956,6 +2054,7 @@
     "notification_nerve": {
       "description": "Send a push notification",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "communication",
         "notification"
@@ -1974,6 +2073,7 @@
     "nutrition_nerve": {
       "description": "Analyze nutrition intake",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "health",
         "nutrition",
@@ -1995,6 +2095,7 @@
     "page_screenshot_nerve": {
       "description": "Screenshot a web page",
       "role": "vision",
+      "mode": "tool_required",
       "tags": [
         "browser",
         "web",
@@ -2016,6 +2117,7 @@
     "password_nerve": {
       "description": "Generate, store, and retrieve credentials",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "security",
         "password",
@@ -2035,6 +2137,7 @@
     "pdf_nerve": {
       "description": "Read from and create PDF documents",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "document",
         "pdf"
@@ -2053,6 +2156,7 @@
     "pitch_draft_nerve": {
       "description": "Draft a sales pitch or proposal",
       "role": "communication",
+      "mode": "reasoning",
       "tags": [
         "sales",
         "pitch",
@@ -2074,6 +2178,7 @@
     "pkg_nerve": {
       "description": "Install, search, and update packages",
       "role": "code",
+      "mode": "tool_required",
       "tags": [
         "package",
         "dependencies"
@@ -2096,6 +2201,7 @@
     "port_scan_nerve": {
       "description": "Scan for open ports on a host",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "security",
         "network",
@@ -2115,6 +2221,7 @@
     "portfolio_review_nerve": {
       "description": "Review portfolio allocation and performance",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "finance",
         "portfolio",
@@ -2136,6 +2243,7 @@
     "pptx_nerve": {
       "description": "Read from and create PowerPoint presentations",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "document",
         "pptx",
@@ -2155,6 +2263,7 @@
     "privacy_audit_nerve": {
       "description": "Audit for privacy/data concerns",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "legal",
         "privacy",
@@ -2176,6 +2285,7 @@
     "process_nerve": {
       "description": "Run, list, and kill system processes",
       "role": "code",
+      "mode": "tool_required",
       "tags": [
         "process",
         "system"
@@ -2196,6 +2306,7 @@
     "proofread_nerve": {
       "description": "Review and correct text",
       "role": "communication",
+      "mode": "reasoning",
       "tags": [
         "writing",
         "proofread",
@@ -2217,6 +2328,7 @@
     "qr_nerve": {
       "description": "Generate and read QR codes",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "qr",
         "barcode"
@@ -2235,6 +2347,7 @@
     "quiz_nerve": {
       "description": "Generate a quiz on a topic",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "education",
         "quiz",
@@ -2255,6 +2368,7 @@
     "reflect_nerve": {
       "description": "Generate a reflection prompt",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "self-improvement",
         "reflection",
@@ -2274,6 +2388,7 @@
     "regex_nerve": {
       "description": "Match or replace with regular expressions",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "data",
         "regex",
@@ -2294,6 +2409,7 @@
     "reminder_nerve": {
       "description": "Create, list, and complete reminders",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "reminder",
         "productivity"
@@ -2312,6 +2428,7 @@
     "report_nerve": {
       "description": "Generate a data report with charts",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "data",
         "report",
@@ -2334,6 +2451,7 @@
     "risk_assess_nerve": {
       "description": "Assess project risks",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "project-management",
         "risk",
@@ -2354,6 +2472,7 @@
     "rss_monitor_nerve": {
       "description": "Fetch and summarize RSS feed updates",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "web",
         "rss"
@@ -2372,6 +2491,7 @@
     "schedule_nerve": {
       "description": "Create, list, and cancel scheduled tasks",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "workflow",
         "schedule",
@@ -2393,6 +2513,7 @@
     "screen_read_nerve": {
       "description": "Read text from a screen region",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "desktop",
         "screen",
@@ -2413,6 +2534,7 @@
     "scroll_nerve": {
       "description": "Scroll in a direction on screen",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "desktop",
         "mouse",
@@ -2432,6 +2554,7 @@
     "sensor_nerve": {
       "description": "Read sensor values and list available sensors",
       "role": "nerve",
+      "mode": "tool_required",
       "tags": [
         "iot",
         "sensor"
@@ -2450,6 +2573,7 @@
     "seo_analyze_nerve": {
       "description": "Analyze SEO for a URL or keyword",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "marketing",
         "seo",
@@ -2471,6 +2595,7 @@
     "sleep_data_nerve": {
       "description": "Read sleep tracker data from a connected sleep device.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "iot",
         "health"
@@ -2489,6 +2614,7 @@
     "sms_send_nerve": {
       "description": "Send an SMS message",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "communication",
         "sms"
@@ -2507,6 +2633,7 @@
     "social_nerve": {
       "description": "Full social media operations on any platform",
       "role": "communication",
+      "mode": "tool_required",
       "tags": [
         "communication",
         "social"
@@ -2525,6 +2652,7 @@
     "social_schedule_nerve": {
       "description": "Draft and schedule social media posts",
       "role": "communication",
+      "mode": "tool_required",
       "tags": [
         "marketing",
         "social-media",
@@ -2545,6 +2673,7 @@
     "speaker_nerve": {
       "description": "Control speaker playback and volume",
       "role": "nerve",
+      "mode": "tool_required",
       "tags": [
         "iot",
         "speaker",
@@ -2564,6 +2693,7 @@
     "sprint_plan_nerve": {
       "description": "Plan sprint tasks from backlog",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "project-management",
         "sprint",
@@ -2585,6 +2715,7 @@
     "standup_nerve": {
       "description": "Generate standup report from recent activity",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "project-management",
         "standup",
@@ -2606,6 +2737,7 @@
     "status_report_nerve": {
       "description": "Generate project status report",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "project-management",
         "status",
@@ -2628,6 +2760,7 @@
     "stock_analyze_nerve": {
       "description": "Analyze a stock with fundamentals and technicals",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "finance",
         "stock",
@@ -2650,6 +2783,7 @@
     "stock_nerve": {
       "description": "Get current and historical stock data",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "finance",
         "stock"
@@ -2668,6 +2802,7 @@
     "summarize_nerve": {
       "description": "Summarize a document or URL",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "writing",
         "summary",
@@ -2689,6 +2824,7 @@
     "system_design_nerve": {
       "description": "Design a system architecture",
       "role": "code",
+      "mode": "reasoning",
       "tags": [
         "architecture",
         "design",
@@ -2710,6 +2846,7 @@
     "technical_write_nerve": {
       "description": "Write technical documentation",
       "role": "code",
+      "mode": "reasoning",
       "tags": [
         "writing",
         "technical",
@@ -2732,6 +2869,7 @@
     "test_nerve": {
       "description": "Run tests and report results",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "code",
         "test",
@@ -2751,6 +2889,7 @@
     "thermostat_nerve": {
       "description": "Control and read thermostat temperature",
       "role": "nerve",
+      "mode": "tool_required",
       "tags": [
         "iot",
         "thermostat",
@@ -2770,6 +2909,7 @@
     "ticket_triage_nerve": {
       "description": "Triage a support ticket",
       "role": "communication",
+      "mode": "reasoning",
       "tags": [
         "support",
         "triage",
@@ -2791,6 +2931,7 @@
     "timestamp_nerve": {
       "description": "Get or convert timestamps",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "data",
         "time"
@@ -2810,6 +2951,7 @@
     "translate_nerve": {
       "description": "Translate text to another language",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "translate",
         "language",
@@ -2829,6 +2971,7 @@
     "type_nerve": {
       "description": "Type text via keyboard input",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "desktop",
         "keyboard",
@@ -2848,6 +2991,7 @@
     "ui_review_nerve": {
       "description": "Review a UI design for usability",
       "role": "vision",
+      "mode": "tool_required",
       "tags": [
         "design",
         "ui",
@@ -2869,6 +3013,7 @@
     "video_download_nerve": {
       "description": "Download videos from URLs.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "video",
         "download",
@@ -2888,6 +3033,7 @@
     "video_extract_frames_nerve": {
       "description": "Extract individual frames from video files.",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "video",
         "frames",
@@ -2907,6 +3053,7 @@
     "video_info_nerve": {
       "description": "Get metadata and technical details about a video file.",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "video",
         "metadata",
@@ -2926,6 +3073,7 @@
     "video_transcribe_nerve": {
       "description": "Extract text transcript from video content.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "video",
         "transcribe",
@@ -2946,6 +3094,7 @@
     "video_trim_nerve": {
       "description": "Cut a specific time segment from a video file.",
       "role": "tool",
+      "mode": "reasoning",
       "tags": [
         "video",
         "trim",
@@ -2965,6 +3114,7 @@
     "vuln_scan_nerve": {
       "description": "Scan for security vulnerabilities",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "security",
         "vulnerability",
@@ -2984,6 +3134,7 @@
     "weather_nerve": {
       "description": "Get current weather and forecasts",
       "role": "brain",
+      "mode": "tool_required",
       "tags": [
         "weather"
       ],
@@ -3001,6 +3152,7 @@
     "web_fetch_nerve": {
       "description": "Make an HTTP request and return response",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "web",
         "http"
@@ -3020,6 +3172,7 @@
     "web_scrape_nerve": {
       "description": "Extract content from a URL",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "web",
         "scraping"
@@ -3038,6 +3191,7 @@
     "web_search_nerve": {
       "description": "Search the web and return results",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "web",
         "search"
@@ -3056,6 +3210,7 @@
     "webhook_nerve": {
       "description": "Send and register webhooks",
       "role": "communication",
+      "mode": "tool_required",
       "tags": [
         "webhook",
         "integration"
@@ -3074,6 +3229,7 @@
     "window_nerve": {
       "description": "List, focus, and resize windows",
       "role": "nerve",
+      "mode": "reasoning",
       "tags": [
         "window",
         "system"
@@ -3092,6 +3248,7 @@
     "wireframe_nerve": {
       "description": "Generate a wireframe description",
       "role": "creative",
+      "mode": "reasoning",
       "tags": [
         "design",
         "wireframe",
@@ -3112,6 +3269,7 @@
     "xlsx_nerve": {
       "description": "Read from and create Excel spreadsheets",
       "role": "brain",
+      "mode": "reasoning",
       "tags": [
         "document",
         "xlsx",
@@ -3131,6 +3289,7 @@
     "youtube_info_nerve": {
       "description": "Get metadata for a YouTube video including title, views, and description.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "youtube",
         "video",
@@ -3150,6 +3309,7 @@
     "youtube_search_nerve": {
       "description": "Search for YouTube videos by keyword.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "youtube",
         "video",
@@ -3169,6 +3329,7 @@
     "youtube_transcript_nerve": {
       "description": "Get the transcript from a YouTube video.",
       "role": "tool",
+      "mode": "tool_required",
       "tags": [
         "youtube",
         "video",

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Get current weather and forecasts",
   "role": "brain",
+  "mode": "tool_required",
   "tags": [
     "weather"
   ],

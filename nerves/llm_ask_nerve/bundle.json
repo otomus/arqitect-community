@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Ask an LLM a question",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "ai",
     "llm",

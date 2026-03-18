@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Install, search, and update packages",
   "role": "code",
+  "mode": "tool_required",
   "tags": [
     "package",
     "dependencies"

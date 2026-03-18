@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Match or replace with regular expressions",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "data",
     "regex",

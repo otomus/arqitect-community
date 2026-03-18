@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Determine if a ticket needs escalation",
     "role": "communication",
+    "mode": "reasoning",
     "tags": [
         "support",
         "escalation",

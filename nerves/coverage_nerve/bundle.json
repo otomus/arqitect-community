@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Generate test coverage report",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "code",
     "test",

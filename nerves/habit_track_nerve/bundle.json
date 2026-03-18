@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Track a habit",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "self-improvement",
         "habit",

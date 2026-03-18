@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Encrypt and decrypt text",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "security",
     "encryption"

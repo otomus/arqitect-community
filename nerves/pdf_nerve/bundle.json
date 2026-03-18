@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Read from and create PDF documents",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "document",
     "pdf"

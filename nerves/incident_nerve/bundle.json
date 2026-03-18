@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Investigate and triage an incident",
     "role": "code",
+    "mode": "tool_required",
     "tags": [
         "devops",
         "incident",

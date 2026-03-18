@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "List and check health of connected devices",
   "role": "nerve",
+  "mode": "tool_required",
   "tags": [
     "iot",
     "device"

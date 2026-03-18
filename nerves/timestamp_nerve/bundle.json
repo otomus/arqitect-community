@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Get or convert timestamps",
     "role": "tool",
+    "mode": "tool_required",
     "tags": [
         "data",
         "time"

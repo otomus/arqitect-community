@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Run tests and report results",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "code",
     "test",

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Log and categorize an expense",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "finance",
         "expense",

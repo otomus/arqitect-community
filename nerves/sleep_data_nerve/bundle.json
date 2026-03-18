@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Read sleep tracker data from a connected sleep device.",
     "role": "tool",
+    "mode": "tool_required",
     "tags": [
         "iot",
         "health"

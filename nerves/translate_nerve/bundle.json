@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Translate text to another language",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "translate",
     "language",

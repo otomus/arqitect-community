@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Send an SMS message",
   "role": "tool",
+  "mode": "tool_required",
   "tags": [
     "communication",
     "sms"

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Type text via keyboard input",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "desktop",
     "keyboard",

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Generate a quiz on a topic",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "education",
         "quiz",

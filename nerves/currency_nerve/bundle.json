@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Convert currencies and get exchange rates",
   "role": "brain",
+  "mode": "tool_required",
   "tags": [
     "finance",
     "currency"

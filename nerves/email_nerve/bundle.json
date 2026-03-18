@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Full email operations (send, receive, read, reply, search)",
   "role": "communication",
+  "mode": "tool_required",
   "tags": [
     "communication",
     "email"

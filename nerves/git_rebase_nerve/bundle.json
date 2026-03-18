@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Rebase current branch onto target",
   "role": "code",
+  "mode": "reasoning",
   "tags": [
     "git",
     "version-control"

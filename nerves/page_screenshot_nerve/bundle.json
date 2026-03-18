@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Screenshot a web page",
   "role": "vision",
+  "mode": "tool_required",
   "tags": [
     "browser",
     "web",

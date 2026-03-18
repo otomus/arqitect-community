@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Grade a submission against criteria",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "education",
         "grading",

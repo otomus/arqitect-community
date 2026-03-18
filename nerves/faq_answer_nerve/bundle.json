@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Find answer from FAQ/knowledge base",
     "role": "communication",
+    "mode": "reasoning",
     "tags": [
         "support",
         "faq",

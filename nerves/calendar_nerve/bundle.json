@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "List, create, and delete calendar events",
   "role": "brain",
+  "mode": "tool_required",
   "tags": [
     "calendar",
     "productivity"

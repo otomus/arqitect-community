@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Click at a screen position",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "desktop",
     "mouse",

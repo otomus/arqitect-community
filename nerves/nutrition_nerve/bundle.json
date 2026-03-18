@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Analyze nutrition intake",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "health",
         "nutrition",

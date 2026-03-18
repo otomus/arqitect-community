@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Generate a data report with charts",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "data",
         "report",

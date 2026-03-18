@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Press a keyboard shortcut",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "desktop",
     "keyboard",

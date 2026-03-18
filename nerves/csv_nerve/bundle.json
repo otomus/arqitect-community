@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Read and write CSV data",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "data",
     "csv"

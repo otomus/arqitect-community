@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Make an HTTP request and return response",
     "role": "tool",
+    "mode": "tool_required",
     "tags": [
         "web",
         "http"

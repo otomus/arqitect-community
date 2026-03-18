@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Lock or unlock a smart door lock.",
   "role": "tool",
+  "mode": "tool_required",
   "tags": [
     "iot",
     "lock"

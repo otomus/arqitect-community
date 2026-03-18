@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Draft a sales pitch or proposal",
     "role": "communication",
+    "mode": "reasoning",
     "tags": [
         "sales",
         "pitch",

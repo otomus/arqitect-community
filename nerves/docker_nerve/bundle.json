@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Manage Docker containers and images",
   "role": "code",
+  "mode": "tool_required",
   "tags": [
     "docker",
     "container",

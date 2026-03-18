@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Send and register webhooks",
   "role": "communication",
+  "mode": "tool_required",
   "tags": [
     "webhook",
     "integration"

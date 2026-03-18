@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Extract content from a URL",
     "role": "tool",
+    "mode": "tool_required",
     "tags": [
         "web",
         "scraping"

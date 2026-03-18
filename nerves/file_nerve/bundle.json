@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Read and write files",
   "role": "brain",
+  "mode": "reasoning",
   "tags": [
     "file",
     "filesystem"

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Verify claims against multiple sources",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "research",
         "fact-check",

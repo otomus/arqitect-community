@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Analyze SEO for a URL or keyword",
     "role": "brain",
+    "mode": "tool_required",
     "tags": [
         "marketing",
         "seo",

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Research a potential lead/prospect",
     "role": "brain",
+    "mode": "tool_required",
     "tags": [
         "sales",
         "research",

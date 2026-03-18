@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Audit infrastructure health",
     "role": "code",
+    "mode": "tool_required",
     "tags": [
         "devops",
         "infrastructure",

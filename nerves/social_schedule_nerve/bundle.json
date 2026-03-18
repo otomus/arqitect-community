@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Draft and schedule social media posts",
     "role": "communication",
+    "mode": "tool_required",
     "tags": [
         "marketing",
         "social-media",

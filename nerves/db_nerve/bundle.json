@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Query, write, and inspect databases",
   "role": "brain",
+  "mode": "tool_required",
   "tags": [
     "database",
     "sql"

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Move and rename files to target structure",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "file",
     "organization"

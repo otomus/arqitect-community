@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Copy files to a backup location",
   "role": "tool",
+  "mode": "reasoning",
   "tags": [
     "file",
     "backup"

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Plan sprint tasks from backlog",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "project-management",
         "sprint",

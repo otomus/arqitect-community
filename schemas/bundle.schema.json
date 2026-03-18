@@ -22,6 +22,11 @@
       "type": "string",
       "enum": ["tool", "creative", "code"]
     },
+    "mode": {
+      "type": "string",
+      "enum": ["tool_required", "reasoning"],
+      "description": "Whether the nerve must call a tool (tool_required) or can answer from LLM knowledge (reasoning). Inferred from tools array if omitted."
+    },
     "tags": {
       "type": "array",
       "items": { "type": "string" },

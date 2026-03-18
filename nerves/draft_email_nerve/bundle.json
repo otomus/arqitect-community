@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Draft a professional email",
     "role": "communication",
+    "mode": "reasoning",
     "tags": [
         "writing",
         "email",

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Review a contract and flag risks",
     "role": "brain",
+    "mode": "reasoning",
     "tags": [
         "legal",
         "contract",

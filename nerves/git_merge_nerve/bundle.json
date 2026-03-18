@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Merge a branch into current",
   "role": "code",
+  "mode": "reasoning",
   "tags": [
     "git",
     "version-control"
