@@ -1,24 +1,24 @@
 {
-  "name": "youtube_transcript_nerve",
-  "version": "1.0.0",
-  "description": "Get the transcript from a YouTube video.",
-  "role": "tool",
-  "tags": [
-    "youtube",
-    "video",
-    "tool"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "get_transcript",
-      "mcp": "youtube_transcript",
-      "implementations": {}
-    }
-  ]
+    "name": "youtube_transcript_nerve",
+    "version": "1.0.0",
+    "description": "Get the transcript from a YouTube video.",
+    "role": "tool",
+    "tags": [
+        "youtube",
+        "video",
+        "tool"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "youtube_info",
+            "mcp": "youtube_transcript",
+            "implementations": {}
+        }
+    ]
 }

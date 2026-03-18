@@ -1,23 +1,23 @@
 {
-  "name": "web_scrape_nerve",
-  "version": "1.0.0",
-  "description": "Extract content from a URL",
-  "role": "tool",
-  "tags": [
-    "web",
-    "scraping"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "fetch_content",
-      "mcp": "duckduckgo",
-      "implementations": {}
-    }
-  ]
+    "name": "web_scrape_nerve",
+    "version": "1.0.0",
+    "description": "Extract content from a URL",
+    "role": "tool",
+    "tags": [
+        "web",
+        "scraping"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "fetch_content",
+            "mcp": "duckduckgo",
+            "implementations": {}
+        }
+    ]
 }

@@ -1,29 +1,29 @@
 {
-  "name": "screen_read_nerve",
-  "version": "1.0.0",
-  "description": "Read text from a screen region",
-  "role": "tool",
-  "tags": [
-    "desktop",
-    "screen",
-    "ocr"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "capture_screen",
-      "mcp": "peekaboo",
-      "implementations": {}
-    },
-    {
-      "name": "ocr_screen",
-      "mcp": "peekaboo",
-      "implementations": {}
-    }
-  ]
+    "name": "screen_read_nerve",
+    "version": "1.0.0",
+    "description": "Read text from a screen region",
+    "role": "tool",
+    "tags": [
+        "desktop",
+        "screen",
+        "ocr"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "capture_screen",
+            "mcp": "peekaboo",
+            "implementations": {}
+        },
+        {
+            "name": "image_to_text",
+            "mcp": "peekaboo",
+            "implementations": {}
+        }
+    ]
 }

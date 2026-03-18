@@ -1,23 +1,23 @@
 {
-  "name": "rss_monitor_nerve",
-  "version": "1.0.0",
-  "description": "Fetch and summarize RSS feed updates",
-  "role": "tool",
-  "tags": [
-    "web",
-    "rss"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "get_articles",
-      "mcp": "rss_reader",
-      "implementations": {}
-    }
-  ]
+    "name": "rss_monitor_nerve",
+    "version": "1.0.0",
+    "description": "Fetch and summarize RSS feed updates",
+    "role": "tool",
+    "tags": [
+        "web",
+        "rss"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "news_fetch",
+            "mcp": "rss_reader",
+            "implementations": {}
+        }
+    ]
 }

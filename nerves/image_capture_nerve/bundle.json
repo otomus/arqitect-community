@@ -1,24 +1,24 @@
 {
-  "name": "image_capture_nerve",
-  "version": "1.0.0",
-  "description": "Capture a screenshot of the current screen.",
-  "role": "tool",
-  "tags": [
-    "image",
-    "screenshot",
-    "capture"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "capture_screen",
-      "mcp": "peekaboo",
-      "implementations": {}
-    }
-  ]
+    "name": "image_capture_nerve",
+    "version": "1.0.0",
+    "description": "Capture a screenshot of the current screen.",
+    "role": "tool",
+    "tags": [
+        "image",
+        "screenshot",
+        "capture"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "capture_screen",
+            "mcp": "peekaboo",
+            "implementations": {}
+        }
+    ]
 }

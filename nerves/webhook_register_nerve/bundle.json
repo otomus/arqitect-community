@@ -1,23 +1,23 @@
 {
-  "name": "webhook_register_nerve",
-  "version": "1.0.0",
-  "description": "Set up a webhook listener",
-  "role": "tool",
-  "tags": [
-    "communication",
-    "webhook"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "list_webhooks",
-      "mcp": "webhooks",
-      "implementations": {}
-    }
-  ]
+    "name": "webhook_register_nerve",
+    "version": "1.0.0",
+    "description": "Set up a webhook listener",
+    "role": "tool",
+    "tags": [
+        "communication",
+        "webhook"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "list_webhooks",
+            "mcp": "webhooks",
+            "implementations": {}
+        }
+    ]
 }

@@ -1,24 +1,24 @@
 {
-  "name": "image_generate_nerve",
-  "version": "1.0.0",
-  "description": "Generate images from text descriptions using AI.",
-  "role": "creative",
-  "tags": [
-    "image",
-    "generate",
-    "ai"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "generate_image",
-      "mcp": "image_gen",
-      "implementations": {}
-    }
-  ]
+    "name": "image_generate_nerve",
+    "version": "1.0.0",
+    "description": "Generate images from text descriptions using AI.",
+    "role": "creative",
+    "tags": [
+        "image",
+        "generate",
+        "ai"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "generate_image",
+            "mcp": "image_gen",
+            "implementations": {}
+        }
+    ]
 }

@@ -1,23 +1,23 @@
 {
-  "name": "weather_now_nerve",
-  "version": "1.0.0",
-  "description": "Get current weather conditions for a given location.",
-  "role": "tool",
-  "tags": [
-    "weather",
-    "tool"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "get_current",
-      "mcp": "weather",
-      "implementations": {}
-    }
-  ]
+    "name": "weather_now_nerve",
+    "version": "1.0.0",
+    "description": "Get current weather conditions for a given location.",
+    "role": "tool",
+    "tags": [
+        "weather",
+        "tool"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "get_current",
+            "mcp": "weather",
+            "implementations": {}
+        }
+    ]
 }

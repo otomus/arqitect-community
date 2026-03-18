@@ -1,24 +1,24 @@
 {
-  "name": "reminder_create_nerve",
-  "version": "1.0.0",
-  "description": "Create a new reminder with a title and optional due date.",
-  "role": "tool",
-  "tags": [
-    "reminders",
-    "productivity",
-    "tool"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "create_reminder",
-      "mcp": "apple_reminders",
-      "implementations": {}
-    }
-  ]
+    "name": "reminder_create_nerve",
+    "version": "1.0.0",
+    "description": "Create a new reminder with a title and optional due date.",
+    "role": "tool",
+    "tags": [
+        "reminders",
+        "productivity",
+        "tool"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "create_reminder",
+            "mcp": "apple_reminders",
+            "implementations": {}
+        }
+    ]
 }

@@ -1,24 +1,24 @@
 {
-  "name": "password_store_nerve",
-  "version": "1.0.0",
-  "description": "Store a credential in a vault",
-  "role": "tool",
-  "tags": [
-    "security",
-    "password",
-    "store"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "list_items",
-      "mcp": "onepassword",
-      "implementations": {}
-    }
-  ]
+    "name": "password_store_nerve",
+    "version": "1.0.0",
+    "description": "Store a credential in a vault",
+    "role": "tool",
+    "tags": [
+        "security",
+        "password",
+        "store"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "list_items",
+            "mcp": "onepassword",
+            "implementations": {}
+        }
+    ]
 }

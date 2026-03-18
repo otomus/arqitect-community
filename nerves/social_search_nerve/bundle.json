@@ -1,23 +1,23 @@
 {
-  "name": "social_search_nerve",
-  "version": "1.0.0",
-  "description": "Search posts on a social media platform by keyword.",
-  "role": "tool",
-  "tags": [
-    "social",
-    "tool"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "search_tweets",
-      "mcp": "twitter",
-      "implementations": {}
-    }
-  ]
+    "name": "social_search_nerve",
+    "version": "1.0.0",
+    "description": "Search posts on a social media platform by keyword.",
+    "role": "tool",
+    "tags": [
+        "social",
+        "tool"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "social_trending",
+            "mcp": "twitter",
+            "implementations": {}
+        }
+    ]
 }

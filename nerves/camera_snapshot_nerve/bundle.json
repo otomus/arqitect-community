@@ -1,23 +1,23 @@
 {
-  "name": "camera_snapshot_nerve",
-  "version": "1.0.0",
-  "description": "Capture an image from a connected camera.",
-  "role": "tool",
-  "tags": [
-    "iot",
-    "camera"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "take_photo",
-      "mcp": "camera",
-      "implementations": {}
-    }
-  ]
+    "name": "camera_snapshot_nerve",
+    "version": "1.0.0",
+    "description": "Capture an image from a connected camera.",
+    "role": "tool",
+    "tags": [
+        "iot",
+        "camera"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "take_photo",
+            "mcp": "camera",
+            "implementations": {}
+        }
+    ]
 }

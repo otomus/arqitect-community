@@ -1,23 +1,23 @@
 {
-  "name": "link_check_nerve",
-  "version": "1.0.0",
-  "description": "Check if a URL is alive",
-  "role": "tool",
-  "tags": [
-    "web",
-    "monitoring"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "fetch",
-      "mcp": "fetch",
-      "implementations": {}
-    }
-  ]
+    "name": "link_check_nerve",
+    "version": "1.0.0",
+    "description": "Check if a URL is alive",
+    "role": "tool",
+    "tags": [
+        "web",
+        "monitoring"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "fetch",
+            "mcp": "fetch",
+            "implementations": {}
+        }
+    ]
 }

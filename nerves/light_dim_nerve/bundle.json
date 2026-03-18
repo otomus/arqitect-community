@@ -1,23 +1,23 @@
 {
-  "name": "light_dim_nerve",
-  "version": "1.0.0",
-  "description": "Set light brightness level in the smart home.",
-  "role": "tool",
-  "tags": [
-    "iot",
-    "light"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "set_light",
-      "mcp": "philips_hue",
-      "implementations": {}
-    }
-  ]
+    "name": "light_dim_nerve",
+    "version": "1.0.0",
+    "description": "Set light brightness level in the smart home.",
+    "role": "tool",
+    "tags": [
+        "iot",
+        "light"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "actuator_set",
+            "mcp": "philips_hue",
+            "implementations": {}
+        }
+    ]
 }

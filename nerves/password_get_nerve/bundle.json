@@ -1,24 +1,24 @@
 {
-  "name": "password_get_nerve",
-  "version": "1.0.0",
-  "description": "Retrieve a credential from a vault",
-  "role": "tool",
-  "tags": [
-    "security",
-    "password",
-    "vault"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "get_item",
-      "mcp": "onepassword",
-      "implementations": {}
-    }
-  ]
+    "name": "password_get_nerve",
+    "version": "1.0.0",
+    "description": "Retrieve a credential from a vault",
+    "role": "tool",
+    "tags": [
+        "security",
+        "password",
+        "vault"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "get_item",
+            "mcp": "onepassword",
+            "implementations": {}
+        }
+    ]
 }

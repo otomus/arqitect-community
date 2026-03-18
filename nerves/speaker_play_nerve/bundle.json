@@ -1,23 +1,23 @@
 {
-  "name": "speaker_play_nerve",
-  "version": "1.0.0",
-  "description": "Play media on a smart speaker.",
-  "role": "tool",
-  "tags": [
-    "iot",
-    "speaker"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "play",
-      "mcp": "sonos",
-      "implementations": {}
-    }
-  ]
+    "name": "speaker_play_nerve",
+    "version": "1.0.0",
+    "description": "Play media on a smart speaker.",
+    "role": "tool",
+    "tags": [
+        "iot",
+        "speaker"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "play",
+            "mcp": "sonos",
+            "implementations": {}
+        }
+    ]
 }

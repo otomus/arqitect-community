@@ -1,24 +1,24 @@
 {
-  "name": "note_search_nerve",
-  "version": "1.0.0",
-  "description": "Search through notes by keyword or phrase.",
-  "role": "tool",
-  "tags": [
-    "notes",
-    "productivity",
-    "tool"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "search_notes",
-      "mcp": "apple_notes",
-      "implementations": {}
-    }
-  ]
+    "name": "note_search_nerve",
+    "version": "1.0.0",
+    "description": "Search through notes by keyword or phrase.",
+    "role": "tool",
+    "tags": [
+        "notes",
+        "productivity",
+        "tool"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "search_notes",
+            "mcp": "apple_notes",
+            "implementations": {}
+        }
+    ]
 }

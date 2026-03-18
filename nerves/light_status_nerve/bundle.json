@@ -1,23 +1,23 @@
 {
-  "name": "light_status_nerve",
-  "version": "1.0.0",
-  "description": "Check the current state of a light.",
-  "role": "tool",
-  "tags": [
-    "iot",
-    "light"
-  ],
-  "authors": [
-    {
-      "github": "sentient-community"
-    }
-  ],
-  "sentient_version": ">=0.1.0",
-  "tools": [
-    {
-      "name": "list_lights",
-      "mcp": "philips_hue",
-      "implementations": {}
-    }
-  ]
+    "name": "light_status_nerve",
+    "version": "1.0.0",
+    "description": "Check the current state of a light.",
+    "role": "tool",
+    "tags": [
+        "iot",
+        "light"
+    ],
+    "authors": [
+        {
+            "github": "sentient-community"
+        }
+    ],
+    "sentient_version": ">=0.1.0",
+    "tools": [
+        {
+            "name": "device_list",
+            "mcp": "philips_hue",
+            "implementations": {}
+        }
+    ]
 }
