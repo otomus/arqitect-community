@@ -2,7 +2,7 @@
   "name": "clipboard_nerve",
   "version": "1.0.0",
   "description": "Read from and write to the clipboard",
-  "role": "nerve",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "clipboard",

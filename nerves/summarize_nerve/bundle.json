@@ -2,7 +2,7 @@
   "name": "summarize_nerve",
   "version": "1.0.0",
   "description": "Summarize a document or URL",
-  "role": "brain",
+  "role": "creative",
   "mode": "reasoning",
   "tags": [
     "writing",

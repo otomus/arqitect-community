@@ -2,7 +2,7 @@
   "name": "stock_nerve",
   "version": "1.0.0",
   "description": "Retrieve current quotes and historical price data for stocks",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "finance",

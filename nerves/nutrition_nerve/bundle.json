@@ -2,7 +2,7 @@
   "name": "nutrition_nerve",
   "version": "1.0.0",
   "description": "Analyze nutrition intake",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "health",

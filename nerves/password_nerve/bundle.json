@@ -2,7 +2,7 @@
   "name": "password_nerve",
   "version": "1.0.0",
   "description": "Generate, store, and retrieve credentials",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "security",

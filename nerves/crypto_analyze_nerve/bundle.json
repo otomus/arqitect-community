@@ -2,7 +2,7 @@
   "name": "crypto_analyze_nerve",
   "version": "1.0.0",
   "description": "Research and analyze a cryptocurrency with market trends, news, and charts",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "finance",

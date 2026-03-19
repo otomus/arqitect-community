@@ -2,7 +2,7 @@
   "name": "sprint_plan_nerve",
   "version": "1.0.0",
   "description": "Plan sprint tasks from backlog",
-  "role": "brain",
+  "role": "code",
   "mode": "reasoning",
   "tags": [
     "project-management",

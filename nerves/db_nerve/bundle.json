@@ -2,7 +2,7 @@
   "name": "db_nerve",
   "version": "1.0.0",
   "description": "Query, write, and inspect databases",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "database",

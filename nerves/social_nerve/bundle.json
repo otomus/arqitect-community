@@ -2,7 +2,7 @@
   "name": "social_nerve",
   "version": "1.0.0",
   "description": "Read, post, reply, and manage content across social media platforms",
-  "role": "communication",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "communication",

@@ -2,7 +2,7 @@
   "name": "expense_track_nerve",
   "version": "1.0.0",
   "description": "Log, categorize, and total individual expenses",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "finance",

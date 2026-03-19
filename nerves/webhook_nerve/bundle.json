@@ -2,7 +2,7 @@
   "name": "webhook_nerve",
   "version": "1.0.0",
   "description": "Send and register webhooks",
-  "role": "communication",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "webhook",

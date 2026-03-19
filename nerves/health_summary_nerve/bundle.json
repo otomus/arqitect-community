@@ -2,7 +2,7 @@
   "name": "health_summary_nerve",
   "version": "1.0.0",
   "description": "Summarize health metrics",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "health",

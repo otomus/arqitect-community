@@ -2,7 +2,7 @@
   "name": "portfolio_review_nerve",
   "version": "1.0.0",
   "description": "Review investment portfolio allocation, returns, and rebalancing suggestions",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "finance",

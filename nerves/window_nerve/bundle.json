@@ -2,7 +2,7 @@
   "name": "window_nerve",
   "version": "1.0.0",
   "description": "List, focus, and resize windows",
-  "role": "nerve",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "window",

@@ -2,7 +2,7 @@
   "name": "form_fill_nerve",
   "version": "1.0.0",
   "description": "Fill and submit a web form",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "browser",

@@ -2,7 +2,7 @@
   "name": "email_nerve",
   "version": "1.0.0",
   "description": "Send, receive, read, reply to, and search emails via IMAP and SMTP",
-  "role": "communication",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "communication",

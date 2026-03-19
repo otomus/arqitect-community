@@ -2,7 +2,7 @@
   "name": "file_nerve",
   "version": "1.0.0",
   "description": "Read, write, and check existence of files and create directories",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "file",

@@ -2,7 +2,7 @@
   "name": "ui_review_nerve",
   "version": "1.0.0",
   "description": "Review a UI design for usability",
-  "role": "vision",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "design",

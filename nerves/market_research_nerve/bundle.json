@@ -2,7 +2,7 @@
   "name": "market_research_nerve",
   "version": "1.0.0",
   "description": "Analyze market trends and competitors",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "research",

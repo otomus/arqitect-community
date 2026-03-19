@@ -2,7 +2,7 @@
   "name": "actuator_nerve",
   "version": "1.0.0",
   "description": "Send commands to and read state from any IoT actuator",
-  "role": "nerve",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "actuator",

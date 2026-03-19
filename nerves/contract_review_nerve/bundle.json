@@ -2,7 +2,7 @@
   "name": "contract_review_nerve",
   "version": "1.0.0",
   "description": "Review a contract and flag risks",
-  "role": "brain",
+  "role": "creative",
   "mode": "reasoning",
   "tags": [
     "legal",

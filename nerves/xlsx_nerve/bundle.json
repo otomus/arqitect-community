@@ -2,7 +2,7 @@
   "name": "xlsx_nerve",
   "version": "1.0.0",
   "description": "Read from and create Excel (.xlsx) spreadsheets",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "document",

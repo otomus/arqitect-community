@@ -2,7 +2,7 @@
   "name": "pptx_nerve",
   "version": "1.0.0",
   "description": "Read from and create PowerPoint (.pptx) presentations",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "document",

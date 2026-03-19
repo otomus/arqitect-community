@@ -2,7 +2,7 @@
   "name": "thermostat_nerve",
   "version": "1.0.0",
   "description": "Read and set temperature on a smart thermostat",
-  "role": "nerve",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "thermostat",

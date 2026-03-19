@@ -2,7 +2,7 @@
   "name": "test_nerve",
   "version": "1.0.0",
   "description": "Run tests and report results",
-  "role": "brain",
+  "role": "code",
   "mode": "reasoning",
   "tags": [
     "code",

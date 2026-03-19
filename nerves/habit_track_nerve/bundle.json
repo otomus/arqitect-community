@@ -2,7 +2,7 @@
   "name": "habit_track_nerve",
   "version": "1.0.0",
   "description": "Track a habit",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "self-improvement",

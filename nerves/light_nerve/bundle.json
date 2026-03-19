@@ -2,7 +2,7 @@
   "name": "light_nerve",
   "version": "1.0.0",
   "description": "Control smart lights: on/off, brightness, and color",
-  "role": "nerve",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "light",

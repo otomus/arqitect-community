@@ -2,7 +2,7 @@
   "name": "browse_nerve",
   "version": "1.0.0",
   "description": "Open a URL in a headless browser, render JavaScript, and extract the page content",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "browser",

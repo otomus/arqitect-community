@@ -2,7 +2,7 @@
   "name": "faq_answer_nerve",
   "version": "1.0.0",
   "description": "Find answer from FAQ/knowledge base",
-  "role": "communication",
+  "role": "creative",
   "mode": "reasoning",
   "tags": [
     "support",

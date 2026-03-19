@@ -2,7 +2,7 @@
   "name": "deps_nerve",
   "version": "1.0.0",
   "description": "List project dependencies",
-  "role": "brain",
+  "role": "code",
   "mode": "reasoning",
   "tags": [
     "code",

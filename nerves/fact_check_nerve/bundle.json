@@ -2,7 +2,7 @@
   "name": "fact_check_nerve",
   "version": "1.0.0",
   "description": "Verify claims against multiple sources",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "research",

@@ -2,7 +2,7 @@
   "name": "page_screenshot_nerve",
   "version": "1.0.0",
   "description": "Render a web page in a headless browser and capture a screenshot image",
-  "role": "vision",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "browser",

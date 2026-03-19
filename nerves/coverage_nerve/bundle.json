@@ -2,7 +2,7 @@
   "name": "coverage_nerve",
   "version": "1.0.0",
   "description": "Generate test coverage report",
-  "role": "brain",
+  "role": "code",
   "mode": "reasoning",
   "tags": [
     "code",

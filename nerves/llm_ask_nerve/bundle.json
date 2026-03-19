@@ -2,7 +2,7 @@
   "name": "llm_ask_nerve",
   "version": "1.0.0",
   "description": "Ask an LLM a question",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "ai",

@@ -2,7 +2,7 @@
   "name": "embedding_nerve",
   "version": "1.0.0",
   "description": "Create and search embeddings",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "ai",

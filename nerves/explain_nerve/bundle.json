@@ -2,7 +2,7 @@
   "name": "explain_nerve",
   "version": "1.0.0",
   "description": "Explain a concept at the right level",
-  "role": "brain",
+  "role": "creative",
   "mode": "reasoning",
   "tags": [
     "education",

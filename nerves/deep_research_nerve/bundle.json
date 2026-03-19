@@ -2,7 +2,7 @@
   "name": "deep_research_nerve",
   "version": "1.0.0",
   "description": "Research a topic thoroughly and produce a report",
-  "role": "brain",
+  "role": "creative",
   "mode": "tool_required",
   "tags": [
     "research",

@@ -2,7 +2,7 @@
   "name": "calendar_nerve",
   "version": "1.0.0",
   "description": "List, create, and delete calendar events",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "calendar",

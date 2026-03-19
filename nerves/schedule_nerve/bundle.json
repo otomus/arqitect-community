@@ -2,7 +2,7 @@
   "name": "schedule_nerve",
   "version": "1.0.0",
   "description": "Create, list, and cancel scheduled tasks",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "workflow",

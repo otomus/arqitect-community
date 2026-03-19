@@ -2,7 +2,7 @@
   "name": "goal_track_nerve",
   "version": "1.0.0",
   "description": "Track progress toward a goal",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "self-improvement",

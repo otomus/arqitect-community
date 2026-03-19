@@ -2,7 +2,7 @@
   "name": "privacy_audit_nerve",
   "version": "1.0.0",
   "description": "Audit for privacy/data concerns",
-  "role": "brain",
+  "role": "code",
   "mode": "reasoning",
   "tags": [
     "legal",

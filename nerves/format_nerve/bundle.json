@@ -2,7 +2,7 @@
   "name": "format_nerve",
   "version": "1.0.0",
   "description": "Format source files",
-  "role": "brain",
+  "role": "code",
   "mode": "reasoning",
   "tags": [
     "code",

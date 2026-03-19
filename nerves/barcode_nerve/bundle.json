@@ -2,7 +2,7 @@
   "name": "barcode_nerve",
   "version": "1.0.0",
   "description": "Generate and read barcodes",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "barcode",

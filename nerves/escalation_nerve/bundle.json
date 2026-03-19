@@ -2,7 +2,7 @@
   "name": "escalation_nerve",
   "version": "1.0.0",
   "description": "Determine if a ticket needs escalation",
-  "role": "communication",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "support",

@@ -2,7 +2,7 @@
   "name": "currency_nerve",
   "version": "1.0.0",
   "description": "Convert between fiat currencies and retrieve live exchange rates",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "finance",

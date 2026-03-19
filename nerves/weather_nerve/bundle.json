@@ -2,7 +2,7 @@
   "name": "weather_nerve",
   "version": "1.0.0",
   "description": "Get current weather and forecasts",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "weather",

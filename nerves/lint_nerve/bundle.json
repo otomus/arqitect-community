@@ -2,7 +2,7 @@
   "name": "lint_nerve",
   "version": "1.0.0",
   "description": "Lint source files and report issues",
-  "role": "brain",
+  "role": "code",
   "mode": "reasoning",
   "tags": [
     "code",

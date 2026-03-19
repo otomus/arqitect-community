@@ -2,7 +2,7 @@
   "name": "reminder_nerve",
   "version": "1.0.0",
   "description": "Create, list, and complete reminders",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "reminder",

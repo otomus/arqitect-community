@@ -2,7 +2,7 @@
   "name": "reflect_nerve",
   "version": "1.0.0",
   "description": "Generate a reflection prompt",
-  "role": "brain",
+  "role": "creative",
   "mode": "reasoning",
   "tags": [
     "self-improvement",

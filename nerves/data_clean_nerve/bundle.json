@@ -2,7 +2,7 @@
   "name": "data_clean_nerve",
   "version": "1.0.0",
   "description": "Clean and normalize a dataset",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "data",

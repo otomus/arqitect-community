@@ -2,7 +2,7 @@
   "name": "draft_email_nerve",
   "version": "1.0.0",
   "description": "Compose a polished email draft using AI and save it to a file",
-  "role": "communication",
+  "role": "creative",
   "mode": "reasoning",
   "tags": [
     "writing",

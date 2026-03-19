@@ -2,7 +2,7 @@
   "name": "device_nerve",
   "version": "1.0.0",
   "description": "List connected IoT devices and check their health and status",
-  "role": "nerve",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "device",

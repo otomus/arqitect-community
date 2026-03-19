@@ -2,7 +2,7 @@
   "name": "pdf_nerve",
   "version": "1.0.0",
   "description": "Read text from and create PDF documents",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "document",

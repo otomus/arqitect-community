@@ -2,7 +2,7 @@
   "name": "standup_nerve",
   "version": "1.0.0",
   "description": "Generate standup report from recent activity",
-  "role": "brain",
+  "role": "creative",
   "mode": "reasoning",
   "tags": [
     "project-management",

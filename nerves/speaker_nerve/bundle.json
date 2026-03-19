@@ -2,7 +2,7 @@
   "name": "speaker_nerve",
   "version": "1.0.0",
   "description": "Control smart speaker playback, volume, and audio output",
-  "role": "nerve",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "speaker",

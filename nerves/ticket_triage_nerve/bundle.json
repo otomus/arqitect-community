@@ -2,7 +2,7 @@
   "name": "ticket_triage_nerve",
   "version": "1.0.0",
   "description": "Triage a support ticket",
-  "role": "communication",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "support",

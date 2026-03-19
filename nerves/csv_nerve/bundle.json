@@ -2,7 +2,7 @@
   "name": "csv_nerve",
   "version": "1.0.0",
   "description": "Parse, query, and write CSV tabular data",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "data",

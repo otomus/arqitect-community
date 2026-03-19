@@ -2,7 +2,7 @@
   "name": "seo_analyze_nerve",
   "version": "1.0.0",
   "description": "Analyze SEO for a URL or keyword",
-  "role": "brain",
+  "role": "tool",
   "mode": "tool_required",
   "tags": [
     "marketing",

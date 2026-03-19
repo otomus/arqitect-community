@@ -2,7 +2,7 @@
   "name": "note_nerve",
   "version": "1.0.0",
   "description": "Full CRUD operations on notes",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "notes",

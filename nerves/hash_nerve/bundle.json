@@ -2,7 +2,7 @@
   "name": "hash_nerve",
   "version": "1.0.0",
   "description": "Compute and verify hashes",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "data",

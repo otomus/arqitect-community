@@ -2,7 +2,7 @@
   "name": "qr_nerve",
   "version": "1.0.0",
   "description": "Generate and read QR codes",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "qr",

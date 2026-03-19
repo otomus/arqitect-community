@@ -2,7 +2,7 @@
   "name": "risk_assess_nerve",
   "version": "1.0.0",
   "description": "Assess project risks",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "project-management",

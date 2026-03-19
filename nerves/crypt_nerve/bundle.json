@@ -2,7 +2,7 @@
   "name": "crypt_nerve",
   "version": "1.0.0",
   "description": "Encrypt and decrypt text",
-  "role": "brain",
+  "role": "tool",
   "mode": "reasoning",
   "tags": [
     "security",

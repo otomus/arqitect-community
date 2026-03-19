@@ -2,7 +2,7 @@
   "name": "academic_research_nerve",
   "version": "1.0.0",
   "description": "Find and summarize academic papers on a topic",
-  "role": "brain",
+  "role": "creative",
   "mode": "tool_required",
   "tags": [
     "research",
