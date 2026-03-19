@@ -1,15 +1,15 @@
 # Nextcloud Talk Connector
 
-Bridges Nextcloud Talk chat messages to the Sentient brain via Redis using the [Nextcloud Talk OCS API](https://nextcloud-talk.readthedocs.io/).
+Bridges Nextcloud Talk chat messages to the Arqitect brain via Redis using the [Nextcloud Talk OCS API](https://nextcloud-talk.readthedocs.io/).
 
-This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency.
+This connector runs as a separate Node.js process alongside the Arqitect core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency.
 
 ## Prerequisites
 
 ### 1. Create a Bot User in Nextcloud
 
 1. Log in to your Nextcloud instance as an admin
-2. Create a new user account for the bot (e.g., `sentient-bot`)
+2. Create a new user account for the bot (e.g., `arqitect-bot`)
 3. Optionally, generate an **App Password** under the user's Security settings for better security than using the account password directly
 
 ### 2. Add the Bot to Conversations
@@ -25,7 +25,7 @@ Copy `config-template.json` to `config.json` and fill in your values.
 | `nextcloud_url` | Yes | Nextcloud server URL (e.g., `https://cloud.example.com`) |
 | `username` | Yes | Nextcloud bot user account username |
 | `password` | Yes | Nextcloud bot user password or app token |
-| `bot_name` | No | Bot display name (default: "Sentient") |
+| `bot_name` | No | Bot display name (default: "Arqitect") |
 | `bot_aliases` | No | Alternative names the bot responds to |
 | `whitelisted_users` | No | Nextcloud user IDs allowed to interact (empty = all) |
 | `whitelisted_groups` | No | Talk room tokens to process (empty = all) |

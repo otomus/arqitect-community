@@ -3,7 +3,7 @@
   "title": "Nerve Bundle",
   "description": "Nerve identity, tools, and adapters keyed by size_class → 'default' or model_slug",
   "type": "object",
-  "required": ["name", "version", "description", "role", "tags", "authors", "sentient_version", "tools", "adapters"],
+  "required": ["name", "version", "description", "role", "tags", "authors", "arqitect_version", "tools", "adapters"],
   "properties": {
     "name": {
       "type": "string",
@@ -44,7 +44,7 @@
       },
       "minItems": 1
     },
-    "sentient_version": {
+    "arqitect_version": {
       "type": "string",
       "description": "Semver constraint, e.g. >=0.1.0"
     },

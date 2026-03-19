@@ -38,11 +38,15 @@
   "entry": "tool.py",
   "timeout": 30,
   "author": {
-    "github": "sentient-community"
+    "github": "arqitect-community"
   },
   "category": "security",
   "implementations": {
-    "python": "tool.py"
+    "python": "tool.py",
+    "rust": "tool.rs"
+  },
+  "dependencies": {
+    "rust": ["serde", "serde_json", "getrandom", "chrono", "dirs"]
   },
   "tags": [
     "password",

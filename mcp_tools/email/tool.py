@@ -1,8 +1,8 @@
 """Unified email management: send, fetch, read, reply, and search emails.
 
 Uses imaplib/smtplib for email operations. Requires environment variables:
-  SENTIENT_SMTP_HOST, SENTIENT_SMTP_USER, SENTIENT_SMTP_PASS,
-  SENTIENT_IMAP_HOST, SENTIENT_IMAP_USER, SENTIENT_IMAP_PASS
+  ARQITECT_SMTP_HOST, ARQITECT_SMTP_USER, ARQITECT_SMTP_PASS,
+  ARQITECT_IMAP_HOST, ARQITECT_IMAP_USER, ARQITECT_IMAP_PASS
 Returns descriptive errors if not configured.
 """
 
@@ -17,13 +17,13 @@ from email.mime.text import MIMEText
 
 VALID_OPERATIONS = {"send", "fetch", "read", "reply", "search"}
 
-SMTP_HOST = os.environ.get("SENTIENT_SMTP_HOST", "")
-SMTP_USER = os.environ.get("SENTIENT_SMTP_USER", "")
-SMTP_PASS = os.environ.get("SENTIENT_SMTP_PASS", "")
-SMTP_PORT = int(os.environ.get("SENTIENT_SMTP_PORT", "587"))
-IMAP_HOST = os.environ.get("SENTIENT_IMAP_HOST", "")
-IMAP_USER = os.environ.get("SENTIENT_IMAP_USER", "")
-IMAP_PASS = os.environ.get("SENTIENT_IMAP_PASS", "")
+SMTP_HOST = os.environ.get("ARQITECT_SMTP_HOST", "")
+SMTP_USER = os.environ.get("ARQITECT_SMTP_USER", "")
+SMTP_PASS = os.environ.get("ARQITECT_SMTP_PASS", "")
+SMTP_PORT = int(os.environ.get("ARQITECT_SMTP_PORT", "587"))
+IMAP_HOST = os.environ.get("ARQITECT_IMAP_HOST", "")
+IMAP_USER = os.environ.get("ARQITECT_IMAP_USER", "")
+IMAP_PASS = os.environ.get("ARQITECT_IMAP_PASS", "")
 
 
 def _check_smtp_config() -> None:
@@ -34,8 +34,8 @@ def _check_smtp_config() -> None:
     """
     if not SMTP_HOST or not SMTP_USER or not SMTP_PASS:
         raise RuntimeError(
-            "SMTP not configured. Set SENTIENT_SMTP_HOST, SENTIENT_SMTP_USER, "
-            "and SENTIENT_SMTP_PASS environment variables."
+            "SMTP not configured. Set ARQITECT_SMTP_HOST, ARQITECT_SMTP_USER, "
+            "and ARQITECT_SMTP_PASS environment variables."
         )
 
 
@@ -47,8 +47,8 @@ def _check_imap_config() -> None:
     """
     if not IMAP_HOST or not IMAP_USER or not IMAP_PASS:
         raise RuntimeError(
-            "IMAP not configured. Set SENTIENT_IMAP_HOST, SENTIENT_IMAP_USER, "
-            "and SENTIENT_IMAP_PASS environment variables."
+            "IMAP not configured. Set ARQITECT_IMAP_HOST, ARQITECT_IMAP_USER, "
+            "and ARQITECT_IMAP_PASS environment variables."
         )
 
 

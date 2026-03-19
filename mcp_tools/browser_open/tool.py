@@ -7,8 +7,8 @@ import uuid
 
 from playwright.sync_api import sync_playwright
 
-_CDP_FILE = os.path.expanduser("~/.sentient_browser_cdp.json")
-_PAGES_FILE = os.path.expanduser("~/.sentient_browser_pages.json")
+_CDP_FILE = os.path.expanduser("~/.arqitect_browser_cdp.json")
+_PAGES_FILE = os.path.expanduser("~/.arqitect_browser_pages.json")
 
 # ---------------------------------------------------------------------------
 # Global state: single browser instance shared across calls within this
@@ -24,7 +24,7 @@ def _ensure_browser():
 
     If a CDP endpoint file already exists and the browser is still reachable,
     reconnect to it.  Otherwise launch a fresh browser and persist its CDP
-    websocket endpoint to ``~/.sentient_browser_cdp.json``.
+    websocket endpoint to ``~/.arqitect_browser_cdp.json``.
     """
     global _playwright, _browser
 

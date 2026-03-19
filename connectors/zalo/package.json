@@ -1,5 +1,5 @@
 {
-  "name": "sentient-zalo",
+  "name": "arqitect-zalo",
   "private": true,
   "scripts": {
     "start": "node connector.js"

@@ -1,5 +1,5 @@
 {
-  "name": "sentient-telegram",
+  "name": "arqitect-telegram",
   "private": true,
   "scripts": {
     "start": "node connector.js"

@@ -1,5 +1,5 @@
 /**
- * Connector Base — shared integration wrapper for all Sentient connectors.
+ * Connector Base — shared integration wrapper for all Arqitect connectors.
  *
  * Handles: Redis pub/sub, config loading, access control, brain task building,
  * response dispatch, active chat tracking, and TTS audio delivery.
@@ -30,7 +30,7 @@ class ConnectorBase {
 
     // Config
     this.config = {
-      bot_name: "Sentient",
+      bot_name: "Arqitect",
       bot_aliases: [],
       whitelisted_users: [],
       whitelisted_groups: [],
@@ -501,7 +501,7 @@ class ConnectorBase {
    * start pending chat cleanup.
    */
   async start(extraConfigDefaults = {}) {
-    console.log(`${this.tag} Sentient ${this.config.bot_name} Connector starting...`);
+    console.log(`${this.tag} Arqitect ${this.config.bot_name} Connector starting...`);
     this.loadConfig(extraConfigDefaults);
     await this.setupRedis();
     await this.setupResponseHandler();

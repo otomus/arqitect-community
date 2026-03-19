@@ -1,5 +1,5 @@
 {
-  "name": "sentient-webchat",
+  "name": "arqitect-webchat",
   "private": true,
   "scripts": {
     "start": "node connector.js"

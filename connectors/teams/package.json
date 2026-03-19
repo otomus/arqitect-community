@@ -1,5 +1,5 @@
 {
-  "name": "sentient-teams",
+  "name": "arqitect-teams",
   "private": true,
   "scripts": {
     "start": "node connector.js"

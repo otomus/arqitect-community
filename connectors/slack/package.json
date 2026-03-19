@@ -1,5 +1,5 @@
 {
-  "name": "sentient-slack",
+  "name": "arqitect-slack",
   "private": true,
   "scripts": {
     "start": "node connector.js"

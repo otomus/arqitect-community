@@ -1,8 +1,8 @@
 # iMessage Connector (BlueBubbles)
 
-Bridges iMessage to the Sentient brain via Redis using a [BlueBubbles](https://bluebubbles.app) server.
+Bridges iMessage to the Arqitect brain via Redis using a [BlueBubbles](https://bluebubbles.app) server.
 
-This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub.
+This connector runs as a separate Node.js process alongside the Arqitect core. It communicates with the brain exclusively through Redis pub/sub.
 
 ## Requirements
 
@@ -23,7 +23,7 @@ Copy `config-template.json` to `config.json` and fill in your values.
 |-------|----------|-------------|
 | `server_url` | Yes | BlueBubbles server URL (e.g. `http://localhost:1234`) |
 | `password` | Yes | BlueBubbles server password |
-| `bot_name` | No | Bot display name (default: "Sentient") |
+| `bot_name` | No | Bot display name (default: "Arqitect") |
 | `bot_aliases` | No | Alternative names the bot responds to |
 | `whitelisted_users` | No | Phone numbers or iMessage addresses allowed (empty = all) |
 | `whitelisted_groups` | No | Group chat GUIDs to process (empty = all) |

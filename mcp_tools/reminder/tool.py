@@ -1,6 +1,6 @@
 """Unified reminder management: create, list, and complete reminders.
 
-Uses a JSON file at ~/.sentient_reminders.json as the reminder store.
+Uses a JSON file at ~/.arqitect_reminders.json as the reminder store.
 """
 
 import json
@@ -9,7 +9,7 @@ import sys
 import uuid
 from datetime import datetime, timezone
 
-REMINDERS_FILE = os.path.expanduser("~/.sentient_reminders.json")
+REMINDERS_FILE = os.path.expanduser("~/.arqitect_reminders.json")
 
 VALID_OPERATIONS = {"create", "list", "complete"}
 

@@ -1,8 +1,8 @@
 # Zalo OA Connector
 
-Bridges Zalo Official Account messages to the Sentient brain via Redis using the [Zalo OA API v3](https://developers.zalo.me/docs/official-account).
+Bridges Zalo Official Account messages to the Arqitect brain via Redis using the [Zalo OA API v3](https://developers.zalo.me/docs/official-account).
 
-This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub. Sentient's `start.sh` handles launching it automatically.
+This connector runs as a separate Node.js process alongside the Arqitect core. It communicates with the brain exclusively through Redis pub/sub. Arqitect's `start.sh` handles launching it automatically.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ Copy `config-template.json` to `config.json` and fill in your values.
 | `app_id` | Yes | Zalo app ID |
 | `secret_key` | Yes | Zalo app secret key |
 | `webhook_port` | No | Port for webhook callbacks (default: 3200) |
-| `bot_name` | No | Bot display name (default: "Sentient") |
+| `bot_name` | No | Bot display name (default: "Arqitect") |
 | `bot_aliases` | No | Alternative names the bot responds to |
 | `whitelisted_users` | No | Zalo user IDs allowed to interact (empty = all) |
 

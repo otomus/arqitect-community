@@ -1,5 +1,5 @@
 /**
- * Zalo Personal Connector — bridges personal Zalo messages to the Sentient brain via Redis.
+ * Zalo Personal Connector — bridges personal Zalo messages to the Arqitect brain via Redis.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
  * This file handles Zalo personal account integration via zca-js (Zalo Client API).

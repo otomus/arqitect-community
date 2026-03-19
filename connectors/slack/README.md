@@ -1,6 +1,6 @@
 # Slack Connector
 
-Bridges Slack workspace messages to the Sentient brain via Redis, using [Bolt for JavaScript](https://slack.dev/bolt-js/) in **Socket Mode**.
+Bridges Slack workspace messages to the Arqitect brain via Redis, using [Bolt for JavaScript](https://slack.dev/bolt-js/) in **Socket Mode**.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ Bridges Slack workspace messages to the Sentient brain via Redis, using [Bolt fo
 ## 1. Create a Slack App
 
 1. Go to [api.slack.com/apps](https://api.slack.com/apps) and click **Create New App** > **From scratch**.
-2. Name the app (e.g. "Sentient") and select your workspace.
+2. Name the app (e.g. "Arqitect") and select your workspace.
 
 ## 2. Enable Socket Mode
 
@@ -66,7 +66,7 @@ Fill in `config.json`:
   "bot_token": "xoxb-...",
   "app_token": "xapp-...",
   "signing_secret": "your-signing-secret",
-  "bot_name": "Sentient",
+  "bot_name": "Arqitect",
   "bot_aliases": [],
   "whitelisted_users": [],
   "whitelisted_groups": [],
@@ -101,5 +101,5 @@ npm start
 After starting, invite the bot to channels where it should listen:
 
 ```
-/invite @Sentient
+/invite @Arqitect
 ```

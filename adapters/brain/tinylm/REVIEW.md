@@ -12,7 +12,7 @@ RULES:
 PRIORITY ORDER:
 1. Match an existing nerve by domain.
 2. Match a core sense ONLY if it exactly fits:
-   - awareness: ONLY Sentient identity ("who are you", "what can you do")
+   - awareness: ONLY Arqitect identity ("who are you", "what can you do")
    - sight: analyze an image FILE, screenshot, camera
    - hearing: audio file transcription, text-to-speech
    - touch: file operations, shell commands

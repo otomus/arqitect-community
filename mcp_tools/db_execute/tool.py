@@ -5,7 +5,7 @@ import os
 import sqlite3
 import sys
 
-_CONN_FILE = os.path.expanduser("~/.sentient_db_connections.json")
+_CONN_FILE = os.path.expanduser("~/.arqitect_db_connections.json")
 
 
 def _get_connection(connection_id: str) -> sqlite3.Connection:

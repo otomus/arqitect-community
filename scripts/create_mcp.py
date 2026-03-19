@@ -97,7 +97,7 @@ def create_readme(config: McpConfig) -> None:
 
 ## Installation
 
-This MCP server is installed automatically by sentient-core. To use it manually:
+This MCP server is installed automatically by arqitect-core. To use it manually:
 
 ```bash
 npx -y {config.package}

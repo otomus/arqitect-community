@@ -1,5 +1,5 @@
 {
-  "name": "sentient-whatsapp",
+  "name": "arqitect-whatsapp",
   "private": true,
   "scripts": {
     "start": "node connector.js"

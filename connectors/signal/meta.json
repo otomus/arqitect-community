@@ -1,10 +1,10 @@
 {
   "name": "signal",
   "version": "1.0.0",
-  "description": "Signal connector using signal-cli REST API — bridges Signal messages to Sentient brain via Redis",
+  "description": "Signal connector using signal-cli REST API — bridges Signal messages to Arqitect brain via Redis",
   "language": "javascript",
   "platforms": ["signal"],
-  "author": { "github": "sentient-community" },
+  "author": { "github": "arqitect-community" },
   "capabilities": {
     "incoming": ["text", "image", "video", "audio", "document", "sticker", "contact"],
     "outgoing": ["text", "image", "audio", "document", "sticker", "reaction"]
@@ -12,7 +12,7 @@
   "config_fields": [
     { "name": "signal_cli_url", "required": true, "secret": false, "description": "URL of the signal-cli REST API (e.g. http://localhost:8080)" },
     { "name": "phone_number", "required": true, "secret": true, "description": "Registered Signal phone number (e.g. +1234567890)" },
-    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Arqitect)" },
     { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
     { "name": "whitelisted_users", "required": false, "secret": false, "description": "Phone numbers allowed to interact" },
     { "name": "whitelisted_groups", "required": false, "secret": false, "description": "Signal group IDs to process messages from" },

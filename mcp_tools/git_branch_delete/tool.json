@@ -28,7 +28,7 @@
   "entry": "tool.py",
   "timeout": 30,
   "author": {
-    "github": "sentient-community"
+    "github": "arqitect-community"
   },
   "category": "git",
   "implementations": {

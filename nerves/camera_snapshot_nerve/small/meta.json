@@ -4,7 +4,7 @@
   "size_class": "small",
   "provider": "gguf",
   "contributor": {
-    "github": "sentient-community"
+    "github": "arqitect-community"
   },
   "capabilities": {
     "json_mode": true,

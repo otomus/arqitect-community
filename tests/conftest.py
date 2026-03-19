@@ -1,4 +1,4 @@
-"""Shared fixtures for sentient-community tests."""
+"""Shared fixtures for arqitect-community tests."""
 
 import json
 import os
@@ -97,7 +97,7 @@ def make_nerve_dir(
             "role": "tool",
             "tags": ["test"],
             "authors": [{"github": "tester"}],
-            "sentient_version": ">=0.1.0",
+            "arqitect_version": ">=0.1.0",
             "tools": tools or [],
             "default": {
                 "system_prompt": "You are a test nerve.",

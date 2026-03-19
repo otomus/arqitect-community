@@ -1,5 +1,5 @@
 /**
- * Microsoft Teams Connector — bridges Teams bot messages to the Sentient brain via Redis.
+ * Microsoft Teams Connector — bridges Teams bot messages to the Arqitect brain via Redis.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
  * This file handles Teams-specific Bot Framework integration using BotFrameworkAdapter.
@@ -336,7 +336,7 @@ function removeMentionText(activity) {
 
 // --- HTTP Server ---
 
-const server = restify.createServer({ name: "sentient-teams" });
+const server = restify.createServer({ name: "arqitect-teams" });
 server.use(restify.plugins.bodyParser());
 
 server.post("/api/messages", async (req, res) => {

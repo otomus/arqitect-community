@@ -1,5 +1,5 @@
 /**
- * iMessage Connector (imsg) — bridges iMessage on macOS to Sentient brain via Redis.
+ * iMessage Connector (imsg) — bridges iMessage on macOS to Arqitect brain via Redis.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
  * This file handles macOS-specific iMessage integration via:
@@ -288,7 +288,7 @@ async function sendText(chatId, text) {
  */
 async function sendImage(chatId, caption, imageBuffer, mime) {
   const ext = mime === "image/png" ? ".png" : ".jpg";
-  const tmpPath = path.join(os.tmpdir(), `sentient_img_${Date.now()}${ext}`);
+  const tmpPath = path.join(os.tmpdir(), `arqitect_img_${Date.now()}${ext}`);
   fs.writeFileSync(tmpPath, imageBuffer);
 
   try {

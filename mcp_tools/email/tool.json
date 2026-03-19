@@ -53,7 +53,7 @@
   "entry": "tool.py",
   "timeout": 60,
   "author": {
-    "github": "sentient-community"
+    "github": "arqitect-community"
   },
   "category": "communication",
   "implementations": {

@@ -1,10 +1,10 @@
 {
   "name": "nextcloud-talk",
   "version": "1.0.0",
-  "description": "Nextcloud Talk connector — bridges Nextcloud Talk chat messages to Sentient brain via Redis",
+  "description": "Nextcloud Talk connector — bridges Nextcloud Talk chat messages to Arqitect brain via Redis",
   "language": "javascript",
   "platforms": ["nextcloud-talk"],
-  "author": { "github": "sentient-community" },
+  "author": { "github": "arqitect-community" },
   "capabilities": {
     "incoming": ["text", "image", "document"],
     "outgoing": ["text", "image", "document"]
@@ -13,7 +13,7 @@
     { "name": "nextcloud_url", "required": true, "secret": false, "description": "Nextcloud server URL (e.g. https://cloud.example.com)" },
     { "name": "username", "required": true, "secret": false, "description": "Nextcloud bot user account username" },
     { "name": "password", "required": true, "secret": true, "description": "Nextcloud bot user account password or app token" },
-    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Arqitect)" },
     { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
     { "name": "whitelisted_users", "required": false, "secret": false, "description": "Nextcloud user IDs allowed to interact" },
     { "name": "whitelisted_groups", "required": false, "secret": false, "description": "Talk room tokens to process messages from" },

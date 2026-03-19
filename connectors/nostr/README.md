@@ -1,8 +1,8 @@
 # Nostr Connector
 
-Bridges Nostr NIP-04 encrypted direct messages to the Sentient brain via Redis using [nostr-tools](https://github.com/nbd-wtf/nostr-tools).
+Bridges Nostr NIP-04 encrypted direct messages to the Arqitect brain via Redis using [nostr-tools](https://github.com/nbd-wtf/nostr-tools).
 
-This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency. Sentient's `start.sh` handles launching it automatically.
+This connector runs as a separate Node.js process alongside the Arqitect core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency. Arqitect's `start.sh` handles launching it automatically.
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ Copy `config-template.json` to `config.json` and fill in your values.
 |-------|----------|-------------|
 | `private_key` | Yes | Bot private key in hex or nsec format |
 | `relays` | Yes | Array of relay WebSocket URLs (e.g. `wss://relay.damus.io`) |
-| `bot_name` | No | Bot display name (default: "Sentient") |
+| `bot_name` | No | Bot display name (default: "Arqitect") |
 | `bot_aliases` | No | Alternative names the bot responds to |
 | `whitelisted_users` | No | Nostr public keys (npub or hex) allowed to interact (empty = all) |
 

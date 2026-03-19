@@ -6,7 +6,7 @@ import sys
 import uuid
 from datetime import datetime, timezone
 
-ALERTS_FILE = os.path.expanduser("~/.sentient_alerts.json")
+ALERTS_FILE = os.path.expanduser("~/.arqitect_alerts.json")
 
 sys.stdout.write(json.dumps({"ready": True}) + "\n")
 sys.stdout.flush()

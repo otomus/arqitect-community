@@ -1,7 +1,7 @@
 {
   "_instructions": "Copy this file to config.json and fill in your values. config.json is gitignored.",
   "port": 3100,
-  "bot_name": "Sentient",
+  "bot_name": "Arqitect",
   "bot_aliases": [],
   "whitelisted_users": [],
   "cors_origins": "*"

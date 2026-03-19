@@ -13,7 +13,7 @@
   "entry": "tool.py",
   "timeout": 15,
   "author": {
-    "github": "sentient-community"
+    "github": "arqitect-community"
   },
   "category": "finance",
   "implementations": {

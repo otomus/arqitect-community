@@ -1,5 +1,5 @@
 {
-  "name": "sentient-matrix",
+  "name": "arqitect-matrix",
   "private": true,
   "scripts": {
     "start": "node connector.js"

@@ -1,6 +1,6 @@
 /**
  * Tlon Messenger Connector — bridges Tlon peer-to-peer chat messages to the
- * Sentient brain via Redis.
+ * Arqitect brain via Redis.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
  * This file handles Tlon-specific Urbit HTTP API integration.

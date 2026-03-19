@@ -1,5 +1,5 @@
 /**
- * Telegram Connector — bridges Telegram bot messages to the Sentient brain via Redis.
+ * Telegram Connector — bridges Telegram bot messages to the Arqitect brain via Redis.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
  * This file handles Telegram-specific Telegraf integration.

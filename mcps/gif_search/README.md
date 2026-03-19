@@ -4,7 +4,7 @@ GIF search via Giphy and Tenor.
 
 ## Installation
 
-This MCP server is installed automatically by sentient-core. To use it manually:
+This MCP server is installed automatically by arqitect-core. To use it manually:
 
 ```bash
 npx -y gif-search-mcp-server

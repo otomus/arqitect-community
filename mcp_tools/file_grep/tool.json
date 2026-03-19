@@ -25,11 +25,15 @@
   "entry": "tool.py",
   "timeout": 30,
   "author": {
-    "github": "sentient-community"
+    "github": "arqitect-community"
   },
   "category": "filesystem",
   "implementations": {
-    "python": "tool.py"
+    "python": "tool.py",
+    "rust": "tool.rs"
+  },
+  "dependencies": {
+    "rust": ["serde", "serde_json", "regex", "walkdir", "glob"]
   },
   "tags": [
     "file",

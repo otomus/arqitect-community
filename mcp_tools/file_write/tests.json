@@ -2,7 +2,7 @@
   {
     "description": "Write to a file",
     "args": {
-      "path": "/tmp/sentient_test_write.txt",
+      "path": "/tmp/arqitect_test_write.txt",
       "content": "hello"
     },
     "expected_keywords": [
@@ -13,7 +13,7 @@
   {
     "description": "Write empty content",
     "args": {
-      "path": "/tmp/sentient_test_empty.txt",
+      "path": "/tmp/arqitect_test_empty.txt",
       "content": ""
     },
     "expected_keywords": [

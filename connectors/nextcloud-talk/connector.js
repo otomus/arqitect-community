@@ -1,5 +1,5 @@
 /**
- * Nextcloud Talk Connector — bridges Nextcloud Talk chat messages to the Sentient brain via Redis.
+ * Nextcloud Talk Connector — bridges Nextcloud Talk chat messages to the Arqitect brain via Redis.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
  * This file handles Nextcloud Talk-specific OCS API integration via HTTP polling.
@@ -239,7 +239,7 @@ connector.setSendHooks({
 
   async sendImage(chatId, caption, imageBuffer, mime) {
     const ext = mime === "image/png" ? ".png" : ".jpg";
-    const fileName = `sentient_image_${Date.now()}${ext}`;
+    const fileName = `arqitect_image_${Date.now()}${ext}`;
     await shareFileToRoom(chatId, imageBuffer, fileName, caption);
   },
 
@@ -252,7 +252,7 @@ connector.setSendHooks({
       await sendMessage(chatId, text);
     }
     const ext = mime === "audio/ogg" ? ".ogg" : ".mp4";
-    const fileName = `sentient_audio_${Date.now()}${ext}`;
+    const fileName = `arqitect_audio_${Date.now()}${ext}`;
     await shareFileToRoom(chatId, audioBuffer, fileName, "");
   },
 

@@ -1,5 +1,5 @@
 {
-  "name": "sentient-nostr",
+  "name": "arqitect-nostr",
   "private": true,
   "scripts": {
     "start": "node connector.js"

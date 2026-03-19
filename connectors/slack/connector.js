@@ -1,5 +1,5 @@
 /**
- * Slack Connector — bridges Slack workspace messages to the Sentient brain via Redis.
+ * Slack Connector — bridges Slack workspace messages to the Arqitect brain via Redis.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
  * This file handles Slack-specific Bolt integration in Socket Mode.

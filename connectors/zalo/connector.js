@@ -1,5 +1,5 @@
 /**
- * Zalo OA Connector — bridges Zalo Official Account messages to the Sentient brain via Redis.
+ * Zalo OA Connector — bridges Zalo Official Account messages to the Arqitect brain via Redis.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
  * This file handles Zalo OA-specific webhook receiving and REST API sending.

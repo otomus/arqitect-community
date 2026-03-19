@@ -1,8 +1,8 @@
 # Tlon Messenger Connector
 
-Bridges Tlon peer-to-peer chat messages to the Sentient brain via Redis using the [@urbit/http-api](https://www.npmjs.com/package/@urbit/http-api).
+Bridges Tlon peer-to-peer chat messages to the Arqitect brain via Redis using the [@urbit/http-api](https://www.npmjs.com/package/@urbit/http-api).
 
-This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency. Sentient's `start.sh` handles launching it automatically.
+This connector runs as a separate Node.js process alongside the Arqitect core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency. Arqitect's `start.sh` handles launching it automatically.
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ Copy `config-template.json` to `config.json` and fill in your values.
 |-------|----------|-------------|
 | `ship_url` | Yes | Urbit ship URL (e.g. `http://localhost:8080`) |
 | `ship_code` | Yes | Ship access code from `+code` |
-| `bot_name` | No | Bot display name (default: "Sentient") |
+| `bot_name` | No | Bot display name (default: "Arqitect") |
 | `bot_aliases` | No | Alternative names the bot responds to |
 | `whitelisted_users` | No | Urbit ship names allowed to interact (empty = all) |
 | `whitelisted_groups` | No | Tlon group/channel paths to process (empty = all) |

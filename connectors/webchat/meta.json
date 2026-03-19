@@ -1,17 +1,17 @@
 {
   "name": "webchat",
   "version": "1.0.0",
-  "description": "WebChat connector — browser-based chat UI bridging to Sentient brain via Redis and WebSocket",
+  "description": "WebChat connector — browser-based chat UI bridging to Arqitect brain via Redis and WebSocket",
   "language": "javascript",
   "platforms": ["webchat"],
-  "author": { "github": "sentient-community" },
+  "author": { "github": "arqitect-community" },
   "capabilities": {
     "incoming": ["text", "image", "document"],
     "outgoing": ["text", "image", "audio", "document", "card"]
   },
   "config_fields": [
     { "name": "port", "required": false, "secret": false, "description": "HTTP/WebSocket server port (default: 3100)" },
-    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Arqitect)" },
     { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
     { "name": "whitelisted_users", "required": false, "secret": false, "description": "Session IDs or usernames allowed to interact" },
     { "name": "cors_origins", "required": false, "secret": false, "description": "Allowed CORS origins (default: *)" }

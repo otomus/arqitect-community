@@ -1,10 +1,10 @@
 {
   "name": "imessage-bluebubbles",
   "version": "1.0.0",
-  "description": "iMessage connector via BlueBubbles server — bridges iMessage to Sentient brain via Redis",
+  "description": "iMessage connector via BlueBubbles server — bridges iMessage to Arqitect brain via Redis",
   "language": "javascript",
   "platforms": ["imessage"],
-  "author": { "github": "sentient-community" },
+  "author": { "github": "arqitect-community" },
   "capabilities": {
     "incoming": ["text", "image", "video", "audio", "document"],
     "outgoing": ["text", "image", "document", "reaction"]
@@ -12,7 +12,7 @@
   "config_fields": [
     { "name": "server_url", "required": true, "secret": false, "description": "BlueBubbles server URL (e.g. http://localhost:1234)" },
     { "name": "password", "required": true, "secret": true, "description": "BlueBubbles server password" },
-    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Arqitect)" },
     { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
     { "name": "whitelisted_users", "required": false, "secret": false, "description": "Phone numbers or iMessage addresses allowed to interact" },
     { "name": "whitelisted_groups", "required": false, "secret": false, "description": "Group chat GUIDs to process messages from" },

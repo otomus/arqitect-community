@@ -1,8 +1,8 @@
 # iMessage Connector (imsg)
 
-Bridges iMessage on macOS to the Sentient brain via Redis using the native Messages SQLite database and AppleScript.
+Bridges iMessage on macOS to the Arqitect brain via Redis using the native Messages SQLite database and AppleScript.
 
-This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub.
+This connector runs as a separate Node.js process alongside the Arqitect core. It communicates with the brain exclusively through Redis pub/sub.
 
 ## Requirements
 
@@ -21,7 +21,7 @@ Copy `config-template.json` to `config.json` and adjust as needed.
 
 | Field | Required | Description |
 |-------|----------|-------------|
-| `bot_name` | No | Bot display name (default: "Sentient") |
+| `bot_name` | No | Bot display name (default: "Arqitect") |
 | `bot_aliases` | No | Alternative names the bot responds to |
 | `whitelisted_users` | No | Phone numbers or iMessage addresses allowed (empty = all) |
 | `whitelisted_groups` | No | Group chat names to process (empty = all) |

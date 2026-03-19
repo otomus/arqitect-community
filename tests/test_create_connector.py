@@ -150,7 +150,7 @@ class TestCreateConfigTemplate:
         assert path.exists()
 
         data = json.loads(path.read_text())
-        assert data["bot_name"] == "Sentient"
+        assert data["bot_name"] == "Arqitect"
         assert data["bot_aliases"] == []
         assert data["whitelisted_users"] == []
         assert data["whitelisted_groups"] == []
@@ -205,7 +205,7 @@ class TestCreateJsConnector:
         pkg_path = tmp_path / "package.json"
         assert pkg_path.exists()
         pkg = json.loads(pkg_path.read_text())
-        assert pkg["name"] == "sentient-discord"
+        assert pkg["name"] == "arqitect-discord"
         assert pkg["scripts"]["start"] == "node connector.js"
         assert "redis" in pkg["dependencies"]
 
@@ -228,7 +228,7 @@ class TestCreateTsConnector:
         pkg_path = tmp_path / "package.json"
         assert pkg_path.exists()
         pkg = json.loads(pkg_path.read_text())
-        assert pkg["name"] == "sentient-slack"
+        assert pkg["name"] == "arqitect-slack"
         assert pkg["scripts"]["start"] == "npx tsx connector.ts"
         assert "tsx" in pkg["devDependencies"]
         assert "typescript" in pkg["devDependencies"]

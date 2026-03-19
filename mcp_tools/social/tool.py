@@ -2,7 +2,7 @@
 
 Supports Twitter and Mastodon platforms via their respective APIs.
 Requires the 'requests' package and platform-specific API keys set as env vars:
-  SENTIENT_TWITTER_API_KEY, SENTIENT_MASTODON_API_KEY, SENTIENT_MASTODON_INSTANCE
+  ARQITECT_TWITTER_API_KEY, ARQITECT_MASTODON_API_KEY, ARQITECT_MASTODON_INSTANCE
 """
 
 import json
@@ -16,9 +16,9 @@ except ImportError:
 
 VALID_OPERATIONS = {"post", "read", "search", "reply", "like", "followers", "trending"}
 
-TWITTER_API_KEY = os.environ.get("SENTIENT_TWITTER_API_KEY", "")
-MASTODON_API_KEY = os.environ.get("SENTIENT_MASTODON_API_KEY", "")
-MASTODON_INSTANCE = os.environ.get("SENTIENT_MASTODON_INSTANCE", "https://mastodon.social")
+TWITTER_API_KEY = os.environ.get("ARQITECT_TWITTER_API_KEY", "")
+MASTODON_API_KEY = os.environ.get("ARQITECT_MASTODON_API_KEY", "")
+MASTODON_INSTANCE = os.environ.get("ARQITECT_MASTODON_INSTANCE", "https://mastodon.social")
 
 REQUEST_TIMEOUT = 10
 
@@ -47,11 +47,11 @@ def _get_api_key(platform: str) -> str:
     """
     if platform == "twitter":
         if not TWITTER_API_KEY:
-            raise ValueError("Set SENTIENT_TWITTER_API_KEY environment variable for Twitter access")
+            raise ValueError("Set ARQITECT_TWITTER_API_KEY environment variable for Twitter access")
         return TWITTER_API_KEY
     if platform == "mastodon":
         if not MASTODON_API_KEY:
-            raise ValueError("Set SENTIENT_MASTODON_API_KEY environment variable for Mastodon access")
+            raise ValueError("Set ARQITECT_MASTODON_API_KEY environment variable for Mastodon access")
         return MASTODON_API_KEY
     raise ValueError(f"Unsupported platform: {platform}. Supported: twitter, mastodon")
 

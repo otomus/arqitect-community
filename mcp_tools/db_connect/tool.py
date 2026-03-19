@@ -7,7 +7,7 @@ import sys
 import uuid
 
 _connections: dict[str, sqlite3.Connection] = {}
-_CONN_FILE = os.path.expanduser("~/.sentient_db_connections.json")
+_CONN_FILE = os.path.expanduser("~/.arqitect_db_connections.json")
 
 
 def _save_connection(conn_id: str, url: str) -> None:

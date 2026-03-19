@@ -1,8 +1,8 @@
 """Unified password management: generate, get, and store passwords.
 
 Generate uses the secrets module for cryptographic randomness.
-Get/store use a JSON vault file at ~/.sentient_vault.json.
-If SENTIENT_VAULT_KEY env var is set, the vault is encrypted with Fernet.
+Get/store use a JSON vault file at ~/.arqitect_vault.json.
+If ARQITECT_VAULT_KEY env var is set, the vault is encrypted with Fernet.
 Otherwise, the vault is stored as plaintext JSON.
 """
 
@@ -15,8 +15,8 @@ import string
 import sys
 from datetime import datetime, timezone
 
-VAULT_FILE = os.path.expanduser("~/.sentient_vault.json")
-VAULT_KEY_ENV = "SENTIENT_VAULT_KEY"
+VAULT_FILE = os.path.expanduser("~/.arqitect_vault.json")
+VAULT_KEY_ENV = "ARQITECT_VAULT_KEY"
 
 VALID_OPERATIONS = {"generate", "get", "store"}
 

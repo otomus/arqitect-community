@@ -2,7 +2,7 @@
   {
     "description": "Create new directory",
     "args": {
-      "path": "/tmp/sentient_test_dir"
+      "path": "/tmp/arqitect_test_dir"
     },
     "expected_keywords": [
       "Created"
@@ -11,7 +11,7 @@
   {
     "description": "Create nested directory",
     "args": {
-      "path": "/tmp/sentient_test_nested/a/b/c"
+      "path": "/tmp/arqitect_test_nested/a/b/c"
     },
     "expected_keywords": [
       "Created"

@@ -1,5 +1,5 @@
 {
-  "name": "sentient-imessage-imsg",
+  "name": "arqitect-imessage-imsg",
   "private": true,
   "scripts": {
     "start": "node connector.js"

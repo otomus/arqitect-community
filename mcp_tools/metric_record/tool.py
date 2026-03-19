@@ -5,7 +5,7 @@ import os
 import sys
 from datetime import datetime, timezone
 
-METRICS_FILE = os.path.expanduser("~/.sentient_metrics.jsonl")
+METRICS_FILE = os.path.expanduser("~/.arqitect_metrics.jsonl")
 
 sys.stdout.write(json.dumps({"ready": True}) + "\n")
 sys.stdout.flush()

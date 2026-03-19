@@ -2,8 +2,8 @@
   {
     "description": "Copy nonexistent source returns error",
     "args": {
-      "source": "/tmp/sentient_no_such_file.txt",
-      "dest": "/tmp/sentient_copy_dest.txt"
+      "source": "/tmp/arqitect_no_such_file.txt",
+      "dest": "/tmp/arqitect_copy_dest.txt"
     },
     "expect_error": true
   }

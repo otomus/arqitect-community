@@ -1,5 +1,5 @@
 {
-  "name": "sentient-discord",
+  "name": "arqitect-discord",
   "private": true,
   "scripts": { "start": "node connector.js" },
   "dependencies": {

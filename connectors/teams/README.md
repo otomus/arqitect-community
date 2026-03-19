@@ -1,8 +1,8 @@
 # Microsoft Teams Connector
 
-Bridges Microsoft Teams bot messages to the Sentient brain via Redis using the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk).
+Bridges Microsoft Teams bot messages to the Arqitect brain via Redis using the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk).
 
-This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency.
+This connector runs as a separate Node.js process alongside the Arqitect core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency.
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Copy `config-template.json` to `config.json` and fill in your values.
 |-------|----------|-------------|
 | `app_id` | Yes | Microsoft App ID from Azure Bot registration |
 | `app_password` | Yes | Microsoft App password/client secret |
-| `bot_name` | No | Bot display name (default: "Sentient") |
+| `bot_name` | No | Bot display name (default: "Arqitect") |
 | `bot_aliases` | No | Alternative names the bot responds to |
 | `whitelisted_users` | No | Azure AD user IDs allowed to interact (empty = all) |
 | `whitelisted_groups` | No | Teams channel IDs to process (empty = all) |

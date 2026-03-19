@@ -21,5 +21,9 @@
   },
   "runtime": "python",
   "entry": "tool.py",
-  "timeout": 30
+  "timeout": 30,
+  "implementations": {
+    "python": "tool.py",
+    "go": "tool.go"
+  }
 }

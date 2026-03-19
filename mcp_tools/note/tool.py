@@ -1,6 +1,6 @@
 """Unified note management: create, read, search, update, and delete notes.
 
-Uses a JSON file at ~/.sentient_notes.json as the note store.
+Uses a JSON file at ~/.arqitect_notes.json as the note store.
 """
 
 import json
@@ -9,7 +9,7 @@ import sys
 import uuid
 from datetime import datetime, timezone
 
-NOTES_FILE = os.path.expanduser("~/.sentient_notes.json")
+NOTES_FILE = os.path.expanduser("~/.arqitect_notes.json")
 
 VALID_OPERATIONS = {"create", "read", "search", "update", "delete"}
 

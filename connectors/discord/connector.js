@@ -1,5 +1,5 @@
 /**
- * Discord Connector — bridges Discord server and DM messages to the Sentient brain via Redis.
+ * Discord Connector — bridges Discord server and DM messages to the Arqitect brain via Redis.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
  * This file handles Discord-specific discord.js integration.

@@ -1,5 +1,5 @@
 /**
- * Signal Connector — bridges Signal messages to the Sentient brain via Redis.
+ * Signal Connector — bridges Signal messages to the Arqitect brain via Redis.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
  * This file handles Signal-specific integration via the signal-cli REST API.

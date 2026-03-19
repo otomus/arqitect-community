@@ -1,8 +1,8 @@
 # Zalo Personal Connector
 
-Bridges personal Zalo messages to the Sentient brain via Redis using [zca-js](https://github.com/nicksmd/zca-js) (Zalo Client API).
+Bridges personal Zalo messages to the Arqitect brain via Redis using [zca-js](https://github.com/nicksmd/zca-js) (Zalo Client API).
 
-This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub. Sentient's `start.sh` handles launching it automatically.
+This connector runs as a separate Node.js process alongside the Arqitect core. It communicates with the brain exclusively through Redis pub/sub. Arqitect's `start.sh` handles launching it automatically.
 
 ## First Run
 
@@ -14,7 +14,7 @@ Copy `config-template.json` to `config.json` and adjust as needed.
 
 | Field | Required | Description |
 |-------|----------|-------------|
-| `bot_name` | No | Bot display name (default: "Sentient") |
+| `bot_name` | No | Bot display name (default: "Arqitect") |
 | `bot_aliases` | No | Alternative names the bot responds to |
 | `whitelisted_users` | No | Zalo user IDs allowed to interact (empty = all) |
 | `whitelisted_groups` | No | Zalo group IDs to process (empty = all) |

@@ -11,10 +11,10 @@
     ],
     "authors": [
         {
-            "github": "sentient-community"
+            "github": "arqitect-community"
         }
     ],
-    "sentient_version": ">=0.1.0",
+    "arqitect_version": ">=0.1.0",
     "tools": [
         {
             "name": "web_search",

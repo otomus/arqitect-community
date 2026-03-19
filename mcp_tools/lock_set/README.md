@@ -8,11 +8,11 @@ Set the state of a smart lock (lock or unlock) via a REST gateway.
 |------|------|----------|-------------|
 | device_id | string | Yes | Unique identifier of the smart lock |
 | state | string | Yes | Desired state: 'lock' or 'unlock' |
-| device_host | string | No | IoT gateway URL (defaults to SENTIENT_IOT_HOST) |
+| device_host | string | No | IoT gateway URL (defaults to ARQITECT_IOT_HOST) |
 
 ## Environment Variables
 
-- `SENTIENT_IOT_HOST` - Default IoT gateway URL
+- `ARQITECT_IOT_HOST` - Default IoT gateway URL
 
 ## Usage
 

@@ -6,7 +6,7 @@ import sys
 import uuid
 from datetime import datetime, timezone
 
-JOBS_FILE = os.path.expanduser("~/.sentient_cron_jobs.json")
+JOBS_FILE = os.path.expanduser("~/.arqitect_cron_jobs.json")
 
 sys.stdout.write(json.dumps({"ready": True}) + "\n")
 sys.stdout.flush()

@@ -4,7 +4,7 @@ import json
 import os
 import sys
 
-_CONN_FILE = os.path.expanduser("~/.sentient_db_connections.json")
+_CONN_FILE = os.path.expanduser("~/.arqitect_db_connections.json")
 
 
 def _remove_connection(connection_id: str) -> None:

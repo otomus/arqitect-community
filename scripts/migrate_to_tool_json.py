@@ -63,7 +63,7 @@ def build_tool_json(meta: dict) -> dict:
         "runtime": "python",
         "entry": "tool.py",
         "timeout": 30,
-        "author": meta.get("author", "sentient-community"),
+        "author": meta.get("author", "arqitect-community"),
     }
 
     # Preserve all extra fields from meta.json

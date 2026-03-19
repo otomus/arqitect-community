@@ -203,7 +203,7 @@ Every existing bundle.json needs a `mode` field. Classification:
 
 ## What the server will do with `mode`
 
-Once the community ships this field, sentient-server will:
+Once the community ships this field, arqitect-server will:
 
 1. **Read `mode` from bundle/manifest** during bootstrap and store in cold memory as nerve metadata
 2. **Enforce at runtime** in the nerve template:

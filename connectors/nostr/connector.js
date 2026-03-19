@@ -1,5 +1,5 @@
 /**
- * Nostr Connector — bridges Nostr NIP-04 encrypted direct messages to the Sentient brain via Redis.
+ * Nostr Connector — bridges Nostr NIP-04 encrypted direct messages to the Arqitect brain via Redis.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
  * This file handles Nostr-specific relay connections, event subscriptions,

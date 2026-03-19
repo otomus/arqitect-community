@@ -1,8 +1,8 @@
 # WhatsApp Connector
 
-Bridges WhatsApp messages to the Sentient brain via Redis using [Baileys](https://github.com/WhiskeySockets/Baileys).
+Bridges WhatsApp messages to the Arqitect brain via Redis using [Baileys](https://github.com/WhiskeySockets/Baileys).
 
-This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency. Sentient's `start.sh` handles launching it automatically.
+This connector runs as a separate Node.js process alongside the Arqitect core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency. Arqitect's `start.sh` handles launching it automatically.
 
 ## First Run
 
@@ -14,7 +14,7 @@ Copy `config-template.json` to `config.json` and adjust as needed.
 
 | Field | Required | Description |
 |-------|----------|-------------|
-| `bot_name` | No | Bot display name (default: "Sentient") |
+| `bot_name` | No | Bot display name (default: "Arqitect") |
 | `bot_aliases` | No | Alternative names the bot responds to |
 | `whitelisted_users` | No | Phone numbers allowed to interact (empty = all) |
 | `whitelisted_groups` | No | Group IDs to process (empty = all) |

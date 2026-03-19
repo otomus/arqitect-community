@@ -1,5 +1,5 @@
 {
-  "name": "sentient-nextcloud-talk",
+  "name": "arqitect-nextcloud-talk",
   "private": true,
   "scripts": {
     "start": "node connector.js"

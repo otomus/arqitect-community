@@ -1,5 +1,5 @@
 /**
- * iMessage Connector (BlueBubbles) — bridges iMessage to Sentient brain via Redis.
+ * iMessage Connector (BlueBubbles) — bridges iMessage to Arqitect brain via Redis.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
  * This file handles BlueBubbles-specific integration via:
@@ -266,7 +266,7 @@ async function sendText(chatGuid, text) {
  */
 async function sendImage(chatGuid, caption, imageBuffer, mime) {
   const ext = mime === "image/png" ? ".png" : ".jpg";
-  const tmpName = `sentient_img_${Date.now()}${ext}`;
+  const tmpName = `arqitect_img_${Date.now()}${ext}`;
   const tmpPath = path.join(os.tmpdir(), tmpName);
   fs.writeFileSync(tmpPath, imageBuffer);
 

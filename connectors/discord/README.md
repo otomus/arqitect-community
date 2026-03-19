@@ -1,8 +1,8 @@
 # Discord Connector
 
-Bridges Discord server and DM messages to the Sentient brain via Redis using [discord.js](https://discord.js.org/).
+Bridges Discord server and DM messages to the Arqitect brain via Redis using [discord.js](https://discord.js.org/).
 
-This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency. Sentient's `start.sh` handles launching it automatically.
+This connector runs as a separate Node.js process alongside the Arqitect core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency. Arqitect's `start.sh` handles launching it automatically.
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ Copy `config-template.json` to `config.json` and fill in your values.
 | Field | Required | Description |
 |-------|----------|-------------|
 | `bot_token` | Yes | Bot token from the Discord Developer Portal |
-| `bot_name` | No | Bot display name (default: "Sentient") |
+| `bot_name` | No | Bot display name (default: "Arqitect") |
 | `bot_aliases` | No | Alternative names the bot responds to |
 | `whitelisted_users` | No | Discord user IDs allowed to interact (empty = all) |
 | `whitelisted_groups` | No | Discord channel IDs to process (empty = all) |

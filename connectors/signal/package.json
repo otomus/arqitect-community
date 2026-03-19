@@ -1,5 +1,5 @@
 {
-  "name": "sentient-signal",
+  "name": "arqitect-signal",
   "private": true,
   "scripts": {
     "start": "node connector.js"

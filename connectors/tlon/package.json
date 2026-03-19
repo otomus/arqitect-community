@@ -1,5 +1,5 @@
 {
-  "name": "sentient-tlon",
+  "name": "arqitect-tlon",
   "private": true,
   "scripts": {
     "start": "node connector.js"

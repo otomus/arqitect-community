@@ -67,7 +67,7 @@
     },
     "mcps": {
       "type": "object",
-      "description": "External MCP servers available for sentient-core",
+      "description": "External MCP servers available for arqitect-core",
       "additionalProperties": {
         "type": "object",
         "required": ["name", "source", "package", "command", "auth_type", "capabilities"],

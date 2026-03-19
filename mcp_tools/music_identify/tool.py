@@ -5,5 +5,5 @@ def run(audio_path: str) -> str:
     """Identify music from an audio file."""
     raise RuntimeError(
         "Music identification requires Shazam API configuration. "
-        "Set SENTIENT_SHAZAM_API_KEY env var."
+        "Set ARQITECT_SHAZAM_API_KEY env var."
     )

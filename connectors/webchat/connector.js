@@ -1,5 +1,5 @@
 /**
- * WebChat Connector — browser-based chat UI bridging to the Sentient brain
+ * WebChat Connector — browser-based chat UI bridging to the Arqitect brain
  * via Redis and WebSocket.
  *
  * Uses ConnectorBase for Redis, config, access control, and response dispatch.
@@ -10,6 +10,7 @@
 
 const express = require("express");
 const http = require("http");
+const https = require("https");
 const { WebSocketServer } = require("ws");
 const crypto = require("crypto");
 const ConnectorBase = require("../lib/connector-base");
@@ -171,7 +172,7 @@ connector.setSendHooks({
  * @returns {string} Complete HTML page
  */
 function buildChatHtml() {
-  const botName = connector.config.bot_name || "Sentient";
+  const botName = connector.config.bot_name || "Arqitect";
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -314,9 +315,13 @@ function buildChatHtml() {
 }
 
 // --- Express + WebSocket server ---
+const SSL_CERT = process.env.SSL_CERT || "";
+const SSL_KEY = process.env.SSL_KEY || "";
 
 const app = express();
-const server = http.createServer(app);
+const server = (SSL_CERT && SSL_KEY)
+  ? https.createServer({ cert: fs.readFileSync(SSL_CERT), key: fs.readFileSync(SSL_KEY) }, app)
+  : http.createServer(app);
 const wss = new WebSocketServer({ server, path: "/ws" });
 
 // CORS middleware
@@ -485,10 +490,12 @@ async function main() {
   await connector.start();
 
   const port = connector.config.port || serverPort;
+  const scheme = SSL_CERT ? "https" : "http";
+  const wsScheme = SSL_CERT ? "wss" : "ws";
   server.listen(port, () => {
-    console.log(`[WEBCHAT] Server running on http://localhost:${port}`);
-    console.log(`[WEBCHAT] Chat UI at http://localhost:${port}/`);
-    console.log(`[WEBCHAT] WebSocket endpoint at ws://localhost:${port}/ws`);
+    console.log(`[WEBCHAT] Server running on ${scheme}://localhost:${port}`);
+    console.log(`[WEBCHAT] Chat UI at ${scheme}://localhost:${port}/`);
+    console.log(`[WEBCHAT] WebSocket endpoint at ${wsScheme}://localhost:${port}/ws`);
   });
 
   process.once("SIGINT", () => {

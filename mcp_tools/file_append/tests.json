@@ -2,7 +2,7 @@
   {
     "description": "Append to file",
     "args": {
-      "path": "/tmp/sentient_test_append.txt",
+      "path": "/tmp/arqitect_test_append.txt",
       "content": "line1\\n"
     },
     "expected_keywords": [
@@ -12,7 +12,7 @@
   {
     "description": "Append to new file",
     "args": {
-      "path": "/tmp/sentient_test_append_new.txt",
+      "path": "/tmp/arqitect_test_append_new.txt",
       "content": "first"
     },
     "expected_keywords": [

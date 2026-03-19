@@ -28,11 +28,15 @@
   "entry": "tool.py",
   "timeout": 30,
   "author": {
-    "github": "sentient-community"
+    "github": "arqitect-community"
   },
   "category": "security",
   "implementations": {
-    "python": "tool.py"
+    "python": "tool.py",
+    "rust": "tool.rs"
+  },
+  "dependencies": {
+    "rust": ["serde", "serde_json", "sha2", "md-5", "sha1", "hmac"]
   },
   "tags": [
     "hash",

@@ -1,14 +1,14 @@
-# Sentient Community
+# Arqitect Community
 
-Community hub for sharing connector implementations and discovering nerves and brain adapters for [Sentient](https://github.com/otomus/sentient).
+Community hub for sharing connector implementations and discovering nerves and brain adapters for [Arqitect](https://github.com/otomus/arqitect).
 
 ## What's Here
 
 | Directory | Contents | Description | Managed By |
 |-----------|----------|-------------|------------|
 | `connectors/` | Connectors | Full implementations for messaging platforms | Community PRs |
-| `nerves/` | Nerve bundles | Identity + tools + test cases for autonomous agents | Sentient core |
-| `adapters/` | Adapters | Per-role, per-size-class system prompts with model-specific overrides | Sentient core |
+| `nerves/` | Nerve bundles | Identity + tools + test cases for autonomous agents | Arqitect core |
+| `adapters/` | Adapters | Per-role, per-size-class system prompts with model-specific overrides | Arqitect core |
 
 ## Connectors — Community Contributions
 
@@ -23,9 +23,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to submit a connector.
 
 ## Nerves and Adapters — System Managed
 
-Nerves and brain adapters are **not manually contributed**. They are synthesized, qualified, and exported by sentient-core automatically.
+Nerves and brain adapters are **not manually contributed**. They are synthesized, qualified, and exported by arqitect-core automatically.
 
-When Sentient's brain synthesizes a nerve, it checks this repo for a matching bundle. If one exists, the proven identity (system prompt, examples, tools, test cases) is used instead of generating from scratch.
+When Arqitect's brain synthesizes a nerve, it checks this repo for a matching bundle. If one exists, the proven identity (system prompt, examples, tools, test cases) is used instead of generating from scratch.
 
 ```bash
 # Sync community content to your local cache

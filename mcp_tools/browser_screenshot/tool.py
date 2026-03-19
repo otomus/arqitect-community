@@ -7,8 +7,8 @@ import tempfile
 
 from playwright.sync_api import sync_playwright
 
-_CDP_FILE = os.path.expanduser("~/.sentient_browser_cdp.json")
-_PAGES_FILE = os.path.expanduser("~/.sentient_browser_pages.json")
+_CDP_FILE = os.path.expanduser("~/.arqitect_browser_cdp.json")
+_PAGES_FILE = os.path.expanduser("~/.arqitect_browser_pages.json")
 
 
 def _get_page(page_id: str):

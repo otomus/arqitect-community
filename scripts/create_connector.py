@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Scaffold a new Sentient connector.
+"""Scaffold a new Arqitect connector.
 
 Usage:
     python scripts/create_connector.py <name> --language <js|ts|py> --platform <platform>
@@ -64,7 +64,7 @@ def create_meta(connector_dir: str, name: str, language: str, platform: str, aut
     meta = {
         "name": name,
         "version": "1.0.0",
-        "description": f"{platform.capitalize()} connector for Sentient — bridges {platform} messages to the brain via Redis",
+        "description": f"{platform.capitalize()} connector for Arqitect — bridges {platform} messages to the brain via Redis",
         "language": language,
         "platforms": [platform],
         "author": {"github": author},
@@ -73,7 +73,7 @@ def create_meta(connector_dir: str, name: str, language: str, platform: str, aut
             "outgoing": ["text"],
         },
         "config_fields": [
-            {"name": "bot_name", "required": False, "secret": False, "description": "Bot display name (default: Sentient)"},
+            {"name": "bot_name", "required": False, "secret": False, "description": "Bot display name (default: Arqitect)"},
             {"name": "bot_aliases", "required": False, "secret": False, "description": "Alternative names the bot responds to"},
             {"name": "whitelisted_users", "required": False, "secret": False, "description": "User IDs allowed to interact"},
             {"name": "whitelisted_groups", "required": False, "secret": False, "description": "Group IDs to process messages from"},
@@ -91,7 +91,7 @@ def create_config_template(connector_dir: str) -> None:
     """Generate config-template.json with default configuration values."""
     config = {
         "_instructions": "Copy this file to config.json and fill in your values. config.json is gitignored.",
-        "bot_name": "Sentient",
+        "bot_name": "Arqitect",
         "bot_aliases": [],
         "whitelisted_users": [],
         "whitelisted_groups": [],
@@ -191,7 +191,7 @@ def _js_header(name: str, platform: str) -> str:
     """Return the file header and ConnectorBase import for JS connectors."""
     return textwrap.dedent(f'''\
         /**
-         * {platform.capitalize()} Connector — bridges {platform} messages to the Sentient brain via Redis.
+         * {platform.capitalize()} Connector — bridges {platform} messages to the Arqitect brain via Redis.
          *
          * Uses the shared ConnectorBase for Redis, config, access control, and response dispatch.
          * You only need to implement platform-specific setup and send hooks.
@@ -207,7 +207,7 @@ def _ts_header(name: str, platform: str) -> str:
     """Return the file header and ConnectorBase import for TS connectors."""
     return textwrap.dedent(f'''\
         /**
-         * {platform.capitalize()} Connector — bridges {platform} messages to the Sentient brain via Redis.
+         * {platform.capitalize()} Connector — bridges {platform} messages to the Arqitect brain via Redis.
          *
          * Uses the shared ConnectorBase for Redis, config, access control, and response dispatch.
          * You only need to implement platform-specific setup and send hooks.
@@ -299,7 +299,7 @@ def _ts_setup_and_main(name: str) -> str:
 def _build_node_package_json(name: str, language: str) -> dict:
     """Build the package.json dict for a JS or TS connector."""
     pkg = {
-        "name": f"sentient-{name}",
+        "name": f"arqitect-{name}",
         "private": True,
         "scripts": {},
         "dependencies": {"redis": "^4.6.0"},
@@ -347,9 +347,9 @@ def create_py_connector(connector_dir: str, name: str, platform: str) -> None:
     code = textwrap.dedent(f'''\
         #!/usr/bin/env python3
         """
-        {platform.capitalize()} Connector — bridges {platform} messages to the Sentient brain via Redis.
+        {platform.capitalize()} Connector — bridges {platform} messages to the Arqitect brain via Redis.
 
-        This connector uses Redis pub/sub to communicate with the Sentient brain.
+        This connector uses Redis pub/sub to communicate with the Arqitect brain.
         Implement the platform-specific setup and message handling below.
         """
 
@@ -363,7 +363,7 @@ def create_py_connector(connector_dir: str, name: str, platform: str) -> None:
 
         # Load config
         config = {{
-            "bot_name": "Sentient",
+            "bot_name": "Arqitect",
             "bot_aliases": [],
             "whitelisted_users": [],
             "whitelisted_groups": [],
@@ -415,7 +415,7 @@ def create_py_connector(connector_dir: str, name: str, platform: str) -> None:
 
 
         if __name__ == "__main__":
-            print("[{name.upper()}] Sentient {platform.capitalize()} Connector starting...")
+            print("[{name.upper()}] Arqitect {platform.capitalize()} Connector starting...")
             asyncio.run(main())
     ''')
     _write_text(os.path.join(connector_dir, "connector.py"), code)
@@ -427,7 +427,7 @@ def create_readme(connector_dir: str, name: str, platform: str, language: str) -
     readme = textwrap.dedent(f"""\
         # {platform.capitalize()} Connector
 
-        Bridges {platform} messages to the Sentient brain via Redis.
+        Bridges {platform} messages to the Arqitect brain via Redis.
 
         ## Setup
 
@@ -446,7 +446,7 @@ def create_readme(connector_dir: str, name: str, platform: str, language: str) -
 
         | Field | Required | Description |
         |-------|----------|-------------|
-        | `bot_name` | No | Bot display name (default: "Sentient") |
+        | `bot_name` | No | Bot display name (default: "Arqitect") |
         | `bot_aliases` | No | Alternative names the bot responds to |
         | `whitelisted_users` | No | User IDs allowed to interact (empty = all) |
         | `whitelisted_groups` | No | Group IDs to process (empty = all) |
@@ -470,7 +470,7 @@ _CONNECTOR_CREATORS = {
 
 def _parse_args() -> argparse.Namespace:
     """Parse and return command-line arguments."""
-    parser = argparse.ArgumentParser(description="Scaffold a new Sentient connector")
+    parser = argparse.ArgumentParser(description="Scaffold a new Arqitect connector")
     parser.add_argument("name", help="Connector name (lowercase, e.g., discord)")
     parser.add_argument("--language", "-l", required=True, choices=SUPPORTED_LANGUAGES,
                         help="Implementation language")

@@ -1,7 +1,7 @@
 {
   "name": "whatsapp",
   "version": "1.0.0",
-  "description": "WhatsApp connector using Baileys — bridges WhatsApp messages to Sentient brain via Redis",
+  "description": "WhatsApp connector using Baileys — bridges WhatsApp messages to Arqitect brain via Redis",
   "language": "javascript",
   "platforms": ["whatsapp"],
   "author": {
@@ -12,7 +12,7 @@
     "outgoing": ["text", "image", "video", "audio", "sticker", "document", "location", "contact", "poll", "reaction"]
   },
   "config_fields": [
-    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Sentient)" },
+    { "name": "bot_name", "required": false, "secret": false, "description": "Bot display name (default: Arqitect)" },
     { "name": "bot_aliases", "required": false, "secret": false, "description": "Alternative names the bot responds to" },
     { "name": "whitelisted_users", "required": false, "secret": false, "description": "Phone numbers allowed to interact" },
     { "name": "whitelisted_groups", "required": false, "secret": false, "description": "Group IDs to process messages from" },

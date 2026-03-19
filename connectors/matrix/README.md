@@ -1,8 +1,8 @@
 # Matrix Connector
 
-Bridges Matrix room messages to the Sentient brain via Redis using [matrix-js-sdk](https://github.com/matrix-org/matrix-js-sdk).
+Bridges Matrix room messages to the Arqitect brain via Redis using [matrix-js-sdk](https://github.com/matrix-org/matrix-js-sdk).
 
-This connector runs as a separate Node.js process alongside the Sentient core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency. Sentient's `start.sh` handles launching it automatically.
+This connector runs as a separate Node.js process alongside the Arqitect core. It communicates with the brain exclusively through Redis pub/sub — no shared code, no language dependency. Arqitect's `start.sh` handles launching it automatically.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Copy `config-template.json` to `config.json` and fill in your values.
 | `homeserver_url` | Yes | Matrix homeserver URL (e.g. `https://matrix.org`) |
 | `access_token` | Yes | Bot user access token |
 | `user_id` | Yes | Bot user ID (e.g. `@bot:matrix.org`) |
-| `bot_name` | No | Bot display name (default: "Sentient") |
+| `bot_name` | No | Bot display name (default: "Arqitect") |
 | `bot_aliases` | No | Alternative names the bot responds to |
 | `whitelisted_users` | No | Matrix user IDs allowed to interact (empty = all) |
 | `whitelisted_groups` | No | Matrix room IDs to process (empty = all) |

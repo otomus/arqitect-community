@@ -451,7 +451,7 @@ class TestCollectConnectors:
         _write_json(str(cd / "meta.json"), {
             "name": "discord",
             "version": "1.0.0",
-            "description": "Discord connector for Sentient",
+            "description": "Discord connector for Arqitect",
             "language": "javascript",
             "platforms": ["discord"],
             "author": {"github": "dev1"},

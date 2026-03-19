@@ -5,7 +5,7 @@
   "app_id": "",
   "secret_key": "",
   "webhook_port": 3200,
-  "bot_name": "Sentient",
+  "bot_name": "Arqitect",
   "bot_aliases": [],
   "whitelisted_users": []
 }
