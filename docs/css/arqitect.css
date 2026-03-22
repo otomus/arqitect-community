@@ -213,6 +213,7 @@ a:hover { color: #fff; text-shadow: var(--glow-sm); }
     border-bottom: 1px solid var(--border);
   }
   .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.75rem 1rem; font-size: 0.85rem; }
 }
 
 /* ---- LAYOUT ---- */
@@ -1108,3 +1109,65 @@ a:hover { color: #fff; text-shadow: var(--glow-sm); }
 .type-card:nth-child(3).visible { animation-delay: 0.2s; }
 .type-card:nth-child(4).visible { animation-delay: 0.3s; }
 .type-card:nth-child(5).visible { animation-delay: 0.4s; }
+
+/* ---- RESPONSIVE — TABLET ---- */
+@media (max-width: 768px) {
+  .container { padding: 0 1rem; }
+  .nav { padding: 0 1rem; }
+
+  .hero { padding: 4rem 1rem; }
+  .hero-title { letter-spacing: 0.2em; }
+
+  .wip-banner { font-size: 0.7rem; letter-spacing: 0.15em; padding: 0.5rem 0.75rem; }
+
+  .stats-bar { gap: 0.5rem; }
+  .stat-item { min-width: 0; flex: 1 1 calc(50% - 0.5rem); padding: 0.75rem 0.5rem; }
+  .stat-number { font-size: 1.5rem; }
+
+  .card-grid { grid-template-columns: 1fr; }
+  .card-grid--wide { grid-template-columns: 1fr; }
+  .type-grid { grid-template-columns: 1fr; }
+  .info-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .vision-pillars { grid-template-columns: 1fr; }
+
+  .filter-bar { flex-direction: column; }
+  .search-input { min-width: 0; width: 100%; }
+  .filter-select { width: 100%; }
+
+  .data-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .data-table th,
+  .data-table td { white-space: nowrap; }
+  .data-table td { max-width: none; }
+
+  .detail-title { letter-spacing: 0.05em; }
+
+  .section-header { flex-wrap: wrap; }
+  .section-title { white-space: normal; font-size: 1.1rem; }
+
+  .code-block { font-size: 0.7rem; padding: 1rem; }
+
+  .page-content { padding: 2rem 0 4rem; }
+  .section { margin: 2.5rem 0; }
+}
+
+/* ---- RESPONSIVE — SMALL PHONE ---- */
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+  .container { padding: 0 0.75rem; }
+  .nav { padding: 0 0.75rem; }
+  .nav-inner { height: 56px; }
+  .nav-logo-svg { width: 160px; height: 20px; }
+
+  .hero { padding: 3rem 0.75rem; }
+
+  .stat-item { flex: 1 1 100%; }
+
+  .dream { padding: 1.5rem 1rem; }
+  .dream-text { font-size: 0.95rem; }
+
+  .card { padding: 1.25rem; }
+  .type-card { padding: 1.5rem; }
+
+  .detail-header { margin-bottom: 2rem; }
+}
