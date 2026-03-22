@@ -1,0 +1,85 @@
+{
+  "name": "geography_nerve",
+  "version": "1.0.0",
+  "description": "geography_nerve",
+  "role": "tool",
+  "tags": [
+    "tool",
+    "geography",
+    "desktop",
+    "server"
+  ],
+  "authors": [
+    {
+      "github": "otomus"
+    }
+  ],
+  "arqitect_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "ip_tool",
+      "spec": "mcp_tools/ip_tool/spec.json",
+      "implementations": {}
+    },
+    {
+      "name": "parse_geographical_data",
+      "spec": "mcp_tools/parse_geographical_data/spec.json",
+      "implementations": {}
+    },
+    {
+      "name": "search_listings",
+      "spec": "mcp_tools/search_listings/spec.json",
+      "implementations": {}
+    },
+    {
+      "name": "convert_timezone",
+      "spec": "mcp_tools/convert_timezone/spec.json",
+      "implementations": {}
+    },
+    {
+      "name": "fetch_content",
+      "spec": "mcp_tools/fetch_content/spec.json",
+      "implementations": {}
+    },
+    {
+      "name": "get_article_content",
+      "spec": "mcp_tools/get_article_content/spec.json",
+      "implementations": {}
+    },
+    {
+      "name": "get_articles",
+      "spec": "mcp_tools/get_articles/spec.json",
+      "implementations": {}
+    },
+    {
+      "name": "get_current_time",
+      "spec": "mcp_tools/get_current_time/spec.json",
+      "implementations": {}
+    },
+    {
+      "name": "get_listing_details",
+      "spec": "mcp_tools/get_listing_details/spec.json",
+      "implementations": {}
+    },
+    {
+      "name": "get_transcript",
+      "spec": "mcp_tools/get_transcript/spec.json",
+      "implementations": {}
+    },
+    {
+      "name": "list_feeds",
+      "spec": "mcp_tools/list_feeds/spec.json",
+      "implementations": {}
+    },
+    {
+      "name": "search_wikipedia",
+      "spec": "mcp_tools/search_wikipedia/spec.json",
+      "implementations": {}
+    },
+    {
+      "name": "subscribe_feed",
+      "spec": "mcp_tools/subscribe_feed/spec.json",
+      "implementations": {}
+    }
+  ]
+}
