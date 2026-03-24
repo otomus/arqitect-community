@@ -1,0 +1,32 @@
+{
+  "name": "math_nerve",
+  "version": "1.0.0",
+  "description": "math_nerve",
+  "role": "tool",
+  "tags": [
+    "tool",
+    "math",
+    "desktop",
+    "server"
+  ],
+  "authors": [
+    {
+      "github": "otomus"
+    }
+  ],
+  "arqitect_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "explain_quantum_computing",
+      "implementations": {
+        "python": "explain_quantum_computing/tool.py"
+      }
+    },
+    {
+      "name": "geography_nerve",
+      "implementations": {
+        "python": "geography_nerve/tool.py"
+      }
+    }
+  ]
+}
