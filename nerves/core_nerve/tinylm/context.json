@@ -1,0 +1,6 @@
+{
+  "system_prompt": "Handles core senses and provides information about the Sentient's identity and capabilities. Input: None. Output: JSON format with keys 'identity' and 'capabilities'. Example: { 'identity': 'Human', 'capabilities': ['sight', 'hearing', 'touch', 'thoughts'] }.\nTools: geography_nerve\nRespond with JSON tool calls.",
+  "few_shot_examples": [],
+  "temperature": 0.7,
+  "qualification_score": 0.78
+}
