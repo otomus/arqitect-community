@@ -1,0 +1,567 @@
+[
+  {
+    "input": "translate 'Hello, how are you?' to French",
+    "context": {},
+    "output": "Bonjour, comment allez-vous ?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate the following text to Spanish: 'I love programming.'",
+    "context": {},
+    "output": "Me encanta programar.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The capital of France is Paris.' from English to German",
+    "context": {},
+    "output": "Die Hauptstadt Frankreichs ist Paris.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The weather is sunny.' to Italian",
+    "context": {},
+    "output": "Il tempo \u00e8 sereno.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning Chinese.' to Japanese",
+    "context": {},
+    "output": "\u79c1\u306f\u4e2d\u56fd\u8a9e\u3092\u5b66\u3093\u3067\u3044\u307e\u3059\u3002",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'Translate this to Russian: 'This is a test.'",
+    "context": {},
+    "output": "\u042d\u0442\u043e \u0442\u0435\u0441\u0442.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'How do you say 'goodbye' in Korean?'",
+    "context": {},
+    "output": "\uc548\ub155\ud788 \uc8fc\ubb34\uc138\uc694.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I need help with my Spanish homework.' to Portuguese",
+    "context": {},
+    "output": "Eu preciso de ajuda com meu trabalho de espanhol.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The meaning of life is 42.' to Arabic",
+    "context": {},
+    "output": "\u0645\u0639\u0646\u0649 \u0627\u0644\u062d\u064a\u0627\u0629 \u0647\u0648 42.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'What is the capital of Peru?' to Hindi",
+    "context": {},
+    "output": "\u092a\u0947\u0930\u0941 \u0915\u093e \u0930\u093e\u091c\u0927\u093e\u0928\u0940 \u0932\u093e\u092e\u094b \u0939\u0948\u0964",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate '' to French",
+    "context": {},
+    "output": "",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'This is a very long sentence that should cause the translation service to handle edge cases.' to German",
+    "context": {},
+    "output": "Dies ist eine sehr lange Satz, der die \u00dcbersetzungsdienstleistung in den Randfallfallen behandeln sollte.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The meaning of life is 42.' to English (already in English)",
+    "context": {},
+    "output": "The meaning of life is 42.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The sky is blue.' to Spanish (already in Spanish)",
+    "context": {},
+    "output": "El cielo es azul.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'How old are you?' to Japanese (unrelated to translation)",
+    "context": {},
+    "output": "\u3042\u306a\u305f\u306f\u4f55\u6b73\u3067\u3059\u304b\uff1f",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I need help with my French homework.' to Spanish",
+    "context": {},
+    "output": "Necesito ayuda con mi tarea de franc\u00e9s.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'What is the weather like in Paris?' to German",
+    "context": {},
+    "output": "Wie ist das Wetter in Paris?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'How do you say 'hello' in Japanese?'",
+    "context": {},
+    "output": "\u3053\u3093\u306b\u3061\u306f\u3092\u3069\u306e\u3088\u3046\u306b\u8a00\u3044\u307e\u3059\u304b\uff1f",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'Translate the following text to Italian: 'I am learning English.'",
+    "context": {},
+    "output": "Sto imparando l'inglese.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The meaning of life is 42.' to Italian",
+    "context": {},
+    "output": "Il significato della vita \u00e8 42.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The sky is blue.' to Russian",
+    "context": {},
+    "output": "\u041d\u0435\u0431\u043e \u0441\u0438\u043d\u0435\u0435.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'Translate this to Hindi: 'This is a test.'",
+    "context": {},
+    "output": "\u092f\u0939 \u090f\u0915 \u092a\u0930\u0940\u0915\u094d\u0937\u093e \u0939\u0948\u0964",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'How do you say 'goodnight' in French?'",
+    "context": {},
+    "output": "Comment dites-vous 'bonne nuit' en fran\u00e7ais?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I love coding.' to Korean",
+    "context": {},
+    "output": "\ud504\ub85c\uadf8\ub798\ubc0d\uc744 \uc0ac\ub791\ud569\ub2c8\ub2e4.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The weather is rainy.' to Spanish",
+    "context": {},
+    "output": "El clima es lluvioso.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning Chinese.' to Chinese",
+    "context": {},
+    "output": "\u6211\u5728\u5b66\u4e60\u4e2d\u6587\u3002",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate '' to Spanish",
+    "context": {},
+    "output": "",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'This is a very long sentence that should cause the translation service to handle edge cases.' to English",
+    "context": {},
+    "output": "This is a very long sentence that should cause the translation service to handle edge cases.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I need help with my homework.' to German",
+    "context": {},
+    "output": "Ich brauche Hilfe bei meiner Hausaufgabe.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'What is the capital of Peru?' to Spanish",
+    "context": {},
+    "output": "La capital del Per\u00fa es Lima.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning Japanese.' to French",
+    "context": {},
+    "output": "Je suis en train d'apprendre le japonais.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'What time is it in Paris?' to German",
+    "context": {},
+    "output": "Was ist die Uhrzeit in Paris?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The answer is 42.' from English to Chinese",
+    "context": {},
+    "output": "\u7b54\u6848\u662f42\u3002",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I want to go to the zoo.' to Italian",
+    "context": {},
+    "output": "Voglio andare al zoo.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The weather is rainy.' to Dutch",
+    "context": {},
+    "output": "Het weer is regenig.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am feeling sick.' to Russian",
+    "context": {},
+    "output": "\u042f \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u044e \u0441\u0435\u0431\u044f \u0431\u043e\u043b\u044c\u043d\u043e.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'How do I get to the nearest airport?' to Korean",
+    "context": {},
+    "output": "\uac00\uae4c\uc6b4 \uacf5\ud56d\uc73c\ub85c \uac00\ub294 \ubc29\ubc95\uc740?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The capital of Peru is Lima.' from English to German",
+    "context": {},
+    "output": "Die Hauptstadt von Peru ist Lima.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I love cooking.' to Italian",
+    "context": {},
+    "output": "Mi piace cucinare.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The capital of Brazil is Bras\u00edlia.' from English to German",
+    "context": {},
+    "output": "Die Hauptstadt von Brasilien ist Bras\u00edlia.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I need help with my math homework.' to Spanish",
+    "context": {},
+    "output": "Necesito ayuda con mi tarea de matem\u00e1ticas.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The capital of Canada is Ottawa.' from English to German",
+    "context": {},
+    "output": "Die Hauptstadt Kanadenslands ist Ottawa.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'How was your day?' to French",
+    "context": {},
+    "output": "Comment a \u00e9t\u00e9 votre journ\u00e9e?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning to cook.' to Portuguese",
+    "context": {},
+    "output": "Estou aprendendo a cozinhar.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The weather is cold.' to Italian",
+    "context": {},
+    "output": "Il tempo \u00e8 freddo.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The capital of Japan is Tokyo.' from English to Chinese",
+    "context": {},
+    "output": "\u65e5\u672c\u9996\u90fd\u4e1c\u4eac\u3002",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I enjoy playing soccer.' to Arabic",
+    "context": {},
+    "output": "\u0623\u062d\u0628 \u0627\u0644\u0644\u0639\u0628 \u0641\u064a \u0643\u0631\u0629 \u0627\u0644\u0642\u062f\u0645.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'My favorite color is blue.' to Vietnamese",
+    "context": {},
+    "output": "M\u00e0u y\u00eau th\u00edch c\u1ee7a t\u00f4i l\u00e0 xanh lam.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The capital of Australia is Canberra.' from English to Spanish",
+    "context": {},
+    "output": "La capital de Australia es Canberra.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The capital of Russia is Moscow.' from English to Japanese",
+    "context": {},
+    "output": "\u30ed\u30b7\u30a2\u306e\u9996\u90fd\u306f\u30e2\u30b9\u30af\u30ef\u3067\u3059\u3002",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The sky is green.' to Korean",
+    "context": {},
+    "output": "\ud558\ub298\uc740 \ub179\uc0c9\uc785\ub2c8\ub2e4.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The capital of Egypt is Cairo.' from English to Turkish",
+    "context": {},
+    "output": "M\u0131s\u0131rl\u0131 ba\u015fkenti Kairo'dur.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am feeling sick.' to Hindi",
+    "context": {},
+    "output": "\u092e\u0948\u0902 \u0916\u0941\u0936\u0940 \u0928\u0939\u0940\u0902 \u0930\u0939 r\u0939\u093e \u0939\u0942\u0901\u0964",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'How are you?' to Russian",
+    "context": {},
+    "output": "\u041a\u0430\u043a \u0432\u044b?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning to cook.' to Italian",
+    "context": {},
+    "output": "Sto imparando a cucinare.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'How are you?' to Chinese",
+    "context": {},
+    "output": "\u4f60\u600e\u4e48\u6837\uff1f",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I need help with my Spanish homework.' to French",
+    "context": {},
+    "output": "J'ai besoin d'aide avec mon devoir de fran\u00e7ais.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The capital of Brazil is Bras\u00edlia.' from English to Dutch",
+    "context": {},
+    "output": "De hoofdstad van Brazili\u00eb is Bras\u00edlia.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'translate 'I love coding.' to Japanese",
+    "context": {},
+    "output": "\u79c1\u306f\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u3092\u611b\u3057\u3066\u3044\u307e\u3059\u3002",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'How old are you?' to German",
+    "context": {},
+    "output": "Wie alt sind Sie?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning to speak German.' to Italian",
+    "context": {},
+    "output": "Sto imparando a parlare tedesco.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning to speak Spanish.' to Portuguese",
+    "context": {},
+    "output": "Estou aprendendo a falar espanhol.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The weather is rainy.' to Turkish",
+    "context": {},
+    "output": "Hava ya\u011fmurlu.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning to speak French.' to Korean",
+    "context": {},
+    "output": "\ud504\ub791\uc2a4\uc5b4\ub97c \ubc30\uc6b0\uace0 \uc788\uc2b5\ub2c8\ub2e4.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning to speak Russian.' to Chinese",
+    "context": {},
+    "output": "\u6211\u5728\u5b66\u4e60\u4fc4\u8bed\u3002",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The capital of Brazil is Bras\u00edlia.' to English (from Portuguese)",
+    "context": {},
+    "output": "The capital of Brazil is Bras\u00edlia.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I love coding.' to Italian (from Spanish)",
+    "context": {},
+    "output": "Amo la programmazione.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'How are you?' to English (from Japanese)",
+    "context": {},
+    "output": "How are you?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning to cook.' to Japanese",
+    "context": {},
+    "output": "\u79c1\u306f\u6599\u7406\u3092\u5b66\u3093\u3067\u3044\u307e\u3059\u3002",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The weather is rainy.' to Korean",
+    "context": {},
+    "output": "\ucc9c\u6c14\uac00 \ub9d1\uc544\uc694.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I need help with my French homework.' to German",
+    "context": {},
+    "output": "Ich ben\u00f6tige Hilfe bei meinem Franz\u00f6sischen Hausaufgaben.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning to cook.' to Vietnamese",
+    "context": {},
+    "output": "T\u00f4i \u0111ang h\u1ecdc n\u1ea5u \u0103n.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'How are you?' to Hindi",
+    "context": {},
+    "output": "\u0906\u092a \u0915\u0948\u0938\u0947 \u0939\u0948\u0902?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'The weather is rainy.' to Polish",
+    "context": {},
+    "output": "Pogoda pada deszczem.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I need help with my homework.' to Finnish",
+    "context": {},
+    "output": "Minulle tarvitaan apua teht\u00e4v\u00e4ss\u00e4ni.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning to cook.' to Hebrew",
+    "context": {},
+    "output": "\u05d0\u05e0\u05d9 \u05dc\u05d5\u05de\u05da \u05dc\u05dc\u05de\u05d5\u05d3 \u05dc\u0433\u043e\u0442\u043e\u0432\u05d4.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning to cook.' to Chinese",
+    "context": {
+      "userDetails": {
+        "language": "Chinese"
+      }
+    },
+    "output": "\u6211\u5728\u5b66\u505a\u996d\u3002",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'I am learning to cook.' to German",
+    "context": {
+      "userDetails": {
+        "language": "German"
+      }
+    },
+    "output": "Ich lerne zu kochen.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate 'How are you?' to Spanish",
+    "context": {
+      "userDetails": {
+        "language": "Spanish"
+      }
+    },
+    "output": "\u00bfC\u00f3mo est\u00e1s?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  }
+]
