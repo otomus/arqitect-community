@@ -1,7 +1,7 @@
 {
   "name": "explanation_nerve",
   "version": "1.0.0",
-  "description": "Provide accurate and specific information about the fictional nerve agent 'explanation_nerve' based on its fictional nature.",
+  "description": "Provide accurate and specific information about the fictional nerve agent 'explanation_nerve' based on its fictional nature, without introducing external factual errors.",
   "role": "tool",
   "tags": [
     "tool",
