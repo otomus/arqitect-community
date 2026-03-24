@@ -1,0 +1,1469 @@
+[
+  {
+    "input": "calculate 15 * 27",
+    "context": {},
+    "output": "The result of 15 * 27 is 405.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 times 27 equals what?",
+    "context": {},
+    "output": "The result of 15 * 27 is 405.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 15 * 27?",
+    "context": {},
+    "output": "The result of 15 * 27 is 405.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the product of 15 and 27",
+    "context": {},
+    "output": "The result of 15 * 27 is 405.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 * 27 = ?",
+    "context": {},
+    "output": "The result of 15 * 27 is 405.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the result of 15 * 27?",
+    "context": {},
+    "output": "The result of 15 * 27 is 405.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 * 27",
+    "context": {},
+    "output": "The result of 15 * 27 is 405.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 * 27 * 3",
+    "context": {},
+    "output": "The result of 15 * 27 * 3 is 1215.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 * 27 * 0",
+    "context": {},
+    "output": "The result of 15 * 27 * 0 is 0.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 * 27 * 1",
+    "context": {},
+    "output": "The result of 15 * 27 * 1 is 405.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 * 27 * -1",
+    "context": {},
+    "output": "The result of 15 * 27 * -1 is -405.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 * 27 * 100",
+    "context": {},
+    "output": "The result of 15 * 27 * 100 is 40500.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 * 27 * 1000",
+    "context": {},
+    "output": "The result of 15 * 27 * 1000 is 405000.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 * 27 * 0.1",
+    "context": {},
+    "output": "The result of 15 * 27 * 0.1 is 40.5.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 * 27 * 0.01",
+    "context": {},
+    "output": "The result of 15 * 27 * 0.01 is 4.05.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 * 27 * 0.001",
+    "context": {},
+    "output": "The result of 15 * 27 * 0.001 is 0.405.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 144 / 12?",
+    "context": {},
+    "output": "The result of 144 / 12 is 12.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 equals what?",
+    "context": {},
+    "output": "144 / 12 equals 12.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you perform 144 / 12?",
+    "context": {},
+    "output": "144 / 12 equals 12.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Division: 144 / 12",
+    "context": {},
+    "output": "The result of 144 / 12 is 12.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the output of 144 / 12?",
+    "context": {},
+    "output": "The output of 144 / 12 is 12.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 =?",
+    "context": {},
+    "output": "144 / 12 = 12.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 * 0",
+    "context": {},
+    "output": "The result of 144 / 12 * 0 is 0.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 * 1000",
+    "context": {},
+    "output": "The result of 144 / 12 * 1000 is 12000.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 * 0.01",
+    "context": {},
+    "output": "The result of 144 / 12 * 0.01 is 1.2.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 * 0.001",
+    "context": {},
+    "output": "The result of 144 / 12 * 0.001 is 0.12.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 * 0.1",
+    "context": {},
+    "output": "The result of 144 / 12 * 0.1 is 1.2.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 * 27",
+    "context": {},
+    "output": "The result of 144 / 12 * 27 is 324.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 * 15",
+    "context": {},
+    "output": "The result of 144 / 12 * 15 is 180.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 * 10",
+    "context": {},
+    "output": "The result of 144 / 12 * 10 is 120.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 * 5",
+    "context": {},
+    "output": "The result of 144 / 12 * 5 is 60.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 15 * 27?",
+    "context": {},
+    "output": "The result of 15 * 27 is 405.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate 144 / 12 * 1000",
+    "context": {},
+    "output": "The result of 144 / 12 * 1000 is 12000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 15 and 27?",
+    "context": {},
+    "output": "The product of 15 and 27 is 405.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 15 and 27?",
+    "context": {},
+    "output": "The product of 15 and 27 is 405.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 144 / 12 * 1000?",
+    "context": {},
+    "output": "The result of 144 / 12 * 1000 is 12000.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 * 10?",
+    "context": {},
+    "output": "The result of 144 / 12 * 10 is 120.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 15 and 27?",
+    "context": {},
+    "output": "The product of 15 and 27 is 405.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 20 * 30?",
+    "context": {},
+    "output": "The result of 20 * 30 is 600.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the product of 20 and 30.",
+    "context": {},
+    "output": "The product of 20 and 30 is 600.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "144 / 12 * 100",
+    "context": {},
+    "output": "The result of 144 / 12 * 100 is 1200.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 144 / 12 * 10?",
+    "context": {},
+    "output": "The result of 144 / 12 * 10 is 120.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 144 / 12 * 0.001?",
+    "context": {},
+    "output": "The result of 144 / 12 * 0.001 is 0.12.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the product of 144 / 12 and 1000.",
+    "context": {},
+    "output": "The product of 144 / 12 and 1000 is 12000.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "",
+    "context": {},
+    "output": "Please provide a valid query.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "123456789 * 987654321",
+    "context": {},
+    "output": "The result of 123456789 * 987654321 is 121932631112635269.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the square root of 144?",
+    "context": {},
+    "output": "The square root of 144 is 12.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the circumference of a circle with radius 5.",
+    "context": {},
+    "output": "The circumference of a circle with radius 5 is approximately 31.4159.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "15 * 27 * 0.0001",
+    "context": {},
+    "output": "The result of 15 * 27 * 0.0001 is 1.215.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the sum of 15 and 27?",
+    "context": {},
+    "output": "The sum of 15 and 27 is 42.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the sum of 30 and 45?",
+    "context": {},
+    "output": "The sum of 30 and 45 is 75.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 100 / 4?",
+    "context": {},
+    "output": "100 divided by 4 is 25.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Find the result of 2^10.",
+    "context": {},
+    "output": "The result of 2^10 is 1024.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the remainder when 50 is divided by 7?",
+    "context": {},
+    "output": "The remainder when 50 is divided by 7 is 1.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 0.5 * 0.5?",
+    "context": {},
+    "output": "The result of 0.5 * 0.5 is 0.25.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the square of 15.",
+    "context": {},
+    "output": "The square of 15 is 225.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 1000 - 500?",
+    "context": {},
+    "output": "1000 minus 500 is 500.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 1/3 + 1/4?",
+    "context": {},
+    "output": "The result of 1/3 + 1/4 is 7/12.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the cube of 3?",
+    "context": {},
+    "output": "The cube of 3 is 27.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the product of 0.1 and 0.1.",
+    "context": {},
+    "output": "The product of 0.1 and 0.1 is 0.01.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 1000 / 0.01?",
+    "context": {},
+    "output": "The result of 1000 / 0.01 is 100000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the remainder when 99 is divided by 10?",
+    "context": {},
+    "output": "The remainder when 99 is divided by 10 is 9.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 100 * 100 * 100?",
+    "context": {},
+    "output": "100 * 100 * 100 is 1,000,000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the product of 1000 and 0.001.",
+    "context": {},
+    "output": "The product of 1000 and 0.001 is 1.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the product of 15 and 27.",
+    "context": {},
+    "output": "The product of 15 and 27 is 405.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 144 / 12 * 0?",
+    "context": {},
+    "output": "0",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 15 and 27 in hexadecimal?",
+    "context": {},
+    "output": "The product of 15 and 27 is 405, which is 195 in hexadecimal.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 144 / 12 * -1?",
+    "context": {},
+    "output": "-12",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 15 and 27 in scientific notation?",
+    "context": {},
+    "output": "The product of 15 and 27 is 405, which is 4.05e+02 in scientific notation.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 15 and 27 in binary?",
+    "context": {},
+    "output": "The product of 15 and 27 is 405, which is 110010001 in binary.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 15 and 27 in a different language?",
+    "context": {
+      "userDetails": {
+        "language": "Spanish"
+      }
+    },
+    "output": "El producto de 15 y 27 es 405.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 144 / 12 * 1.5?",
+    "context": {},
+    "output": "18",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 15 and 27 in a complex expression?",
+    "context": {},
+    "output": "The product of 15 and 27 in a complex expression is 405.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 22 and 11?",
+    "context": {},
+    "output": "The product of 22 and 11 is 242.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 345 / 5?",
+    "context": {},
+    "output": "The result of 345 / 5 is 69.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 7 * 8?",
+    "context": {},
+    "output": "The result of 7 * 8 is 56.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate 100 * 100.",
+    "context": {},
+    "output": "The result of 100 * 100 is 10000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the sum of 50 and 50?",
+    "context": {},
+    "output": "The sum of 50 and 50 is 100.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 0.5 * 100?",
+    "context": {},
+    "output": "The result of 0.5 * 100 is 50.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 1000 * 10?",
+    "context": {},
+    "output": "The result of 1000 * 10 is 10000.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 123456789 * 987654321?",
+    "context": {},
+    "output": "The result of 123456789 * 987654321 is 121932631112635269.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 0.0001 and 100000?",
+    "context": {},
+    "output": "The result of 0.0001 * 100000 is 10.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate 1/1000.",
+    "context": {},
+    "output": "The result of 1/1000 is 0.001.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the sum of 0 and 0?",
+    "context": {},
+    "output": "The sum of 0 and 0 is 0.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 123456789 * 987654321 * 0.0001?",
+    "context": {},
+    "output": "The result of 123456789 * 987654321 * 0.0001 is 121932631.11263527.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 1000000 and 0.000001?",
+    "context": {},
+    "output": "The result of 1000000 * 0.000001 is 1.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 99999999 * 99999999?",
+    "context": {},
+    "output": "The result of 99999999 * 99999999 is 9999999800000001.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the area of a circle with radius 10?",
+    "context": {},
+    "output": "The area of a circle with radius 10 is 314.159.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 25 and 40?",
+    "context": {},
+    "output": "The product of 25 and 40 is 1000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "1000 * 1000 * 1000",
+    "context": {},
+    "output": "1000 * 1000 * 1000 equals 1,000,000,000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 3.14 * 2?",
+    "context": {},
+    "output": "The result of 3.14 * 2 is 6.28.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate 123456 * 789012",
+    "context": {},
+    "output": "123456 * 789012 equals 96,259,070,728.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 1/0?",
+    "context": {},
+    "output": "Division by zero is undefined.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the sum of 1000 and 1000?",
+    "context": {},
+    "output": "The sum of 1000 and 1000 is 2000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 1000000000000000000 * 2?",
+    "context": {},
+    "output": "1000000000000000000 * 2 equals 2000000000000000000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 5 and 1000000?",
+    "context": {},
+    "output": "The product of 5 and 1000000 is 5000000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 1000000000000000000000 * 2?",
+    "context": {},
+    "output": "1000000000000000000000 * 2 equals 2000000000000000000000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 7 and 11?",
+    "context": {},
+    "output": "The product of 7 and 11 is 77.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 1000000000 * 1000000000?",
+    "context": {},
+    "output": "1000000000 * 1000000000 equals 100,000,000,000,000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 10 and 10000000000?",
+    "context": {},
+    "output": "The product of 10 and 10000000000 is 100000000000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 1/1000000000000000000?",
+    "context": {},
+    "output": "The result of 1/1000000000000000000 is 1e-18.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 100 and 100000?",
+    "context": {},
+    "output": "The product of 100 and 100000 is 10000000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "1000 * 10?",
+    "context": {},
+    "output": "The result of 1000 * 10 is 10000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the square root of 16?",
+    "context": {},
+    "output": "The square root of 16 is 4.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the factorial of 5?",
+    "context": {},
+    "output": "The factorial of 5 is 120.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the value of pi?",
+    "context": {},
+    "output": "The value of pi is approximately 3.14159.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the greatest common divisor of 24 and 36?",
+    "context": {},
+    "output": "The greatest common divisor of 24 and 36 is 12.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the least common multiple of 8 and 12?",
+    "context": {},
+    "output": "The least common multiple of 8 and 12 is 24.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the sine of 30 degrees?",
+    "context": {},
+    "output": "The sine of 30 degrees is 0.5.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the cosine of 45 degrees?",
+    "context": {},
+    "output": "The cosine of 45 degrees is approximately 0.7071.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the tangent of 60 degrees?",
+    "context": {},
+    "output": "The tangent of 60 degrees is approximately 1.7320.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the logarithm base 10 of 1000?",
+    "context": {},
+    "output": "The logarithm base 10 of 1000 is 3.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the value of e?",
+    "context": {},
+    "output": "The value of e (Euler's number) is approximately 2.71828.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the derivative of x^2?",
+    "context": {},
+    "output": "The derivative of x^2 is 2x.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the integral of 2x?",
+    "context": {},
+    "output": "The integral of 2x is x^2 + C.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the solution to the equation x^2 - 4 = 0?",
+    "context": {},
+    "output": "The solutions to the equation x^2 - 4 = 0 are x = 2 and x = -2.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the limit of (1/x) as x approaches infinity?",
+    "context": {},
+    "output": "The limit of (1/x) as x approaches infinity is 0.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "123456789012345678901234567890 * 123456789012345678901234567890",
+    "context": {},
+    "output": "The result of 123456789012345678901234567890 * 123456789012345678901234567890 is 152415787501905210003612168225200078703703703703703703703703700.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the sum of 3 and 5.",
+    "context": {},
+    "output": "8",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 2 raised to the power of 5?",
+    "context": {},
+    "output": "32",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Find the greatest common divisor of 18 and 24.",
+    "context": {},
+    "output": "6",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the area of a circle with a radius of 7?",
+    "context": {},
+    "output": "153.938",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the perimeter of a rectangle with length 10 and width 5.",
+    "context": {},
+    "output": "30",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the remainder when 1234 is divided by 7?",
+    "context": {},
+    "output": "2",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Find the least common multiple of 12 and 18.",
+    "context": {},
+    "output": "36",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the volume of a sphere with a radius of 3.",
+    "context": {},
+    "output": "113.1",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the average of 10, 20, and 30?",
+    "context": {},
+    "output": "20",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Find the median of the numbers 1, 2, 3, 4, and 5.",
+    "context": {},
+    "output": "3",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the standard deviation of the numbers 1, 2, 3, 4, and 5.",
+    "context": {},
+    "output": "1.58",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the derivative of x^2 at x = 3?",
+    "context": {},
+    "output": "6",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the integral of 2x from x = 0 to x = 5.",
+    "context": {},
+    "output": "25",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the limit of 1/x as x approaches 0 from the right?",
+    "context": {},
+    "output": "\u221e",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the binomial coefficient of (4 choose 2)?",
+    "context": {},
+    "output": "6",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the nth Fibonacci number where n = 10.",
+    "context": {},
+    "output": "55",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the greatest common factor of 12 and 18?",
+    "context": {},
+    "output": "6",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the product of 7 and 8.",
+    "context": {},
+    "output": "56",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the square of 9?",
+    "context": {},
+    "output": "81",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the cube of 3.",
+    "context": {},
+    "output": "27",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the cosine of 45 degrees.",
+    "context": {},
+    "output": "0.707",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the square root of 25?",
+    "context": {},
+    "output": "The square root of 25 is 5.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the factorial of 0.",
+    "context": {},
+    "output": "The factorial of 0 is 1.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 8 * 7?",
+    "context": {},
+    "output": "The result of 8 * 7 is 56.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the nth Fibonacci number where n = 1.",
+    "context": {},
+    "output": "The nth Fibonacci number where n = 1 is 1.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the logarithm base 2 of 8?",
+    "context": {},
+    "output": "The logarithm base 2 of 8 is 3.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the remainder when 567 is divided by 10?",
+    "context": {},
+    "output": "The remainder when 567 is divided by 10 is 7.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the product of 12 and 11.",
+    "context": {},
+    "output": "The product of 12 and 11 is 132.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the square of 15?",
+    "context": {},
+    "output": "The square of 15 is 225.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the nth Fibonacci number where n = 20?",
+    "context": {},
+    "output": "The nth Fibonacci number where n = 20 is 6765.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the remainder when 1000000 is divided by 3?",
+    "context": {},
+    "output": "The remainder when 1000000 is divided by 3 is 1.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 12345 * 67890?",
+    "context": {},
+    "output": "The result of 12345 * 67890 is 838102050.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'Hello, world!' to Spanish.",
+    "context": {},
+    "output": "The query is outside the scope of math_nerve.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the square root of -4?",
+    "context": {},
+    "output": "The square root of -4 is 2i (imaginary number).",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the cube root of 27?",
+    "context": {},
+    "output": "The cube root of 27 is 3.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the area of a circle with radius 5.",
+    "context": {},
+    "output": "The area of a circle with radius 5 is 78.54 square units.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Find the prime factors of 36.",
+    "context": {},
+    "output": "The prime factors of 36 are 2, 2, 3, and 3.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the sum of the first 10 natural numbers?",
+    "context": {},
+    "output": "The sum of the first 10 natural numbers is 55.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the 12th Fibonacci number?",
+    "context": {},
+    "output": "The 12th Fibonacci number is 144.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the integral of 1/x from 1 to 3.",
+    "context": {},
+    "output": "The integral of 1/x from 1 to 3 is ln(3).",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the least common multiple of 12 and 18?",
+    "context": {},
+    "output": "The least common multiple of 12 and 18 is 36.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the square root of -1?",
+    "context": {},
+    "output": "The square root of -1 is i (imaginary unit).",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the molecular weight of water?",
+    "context": {},
+    "output": "The molecular weight of water is approximately 18.015 g/mol.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the capital of France?",
+    "context": {},
+    "output": "The capital of France is Paris.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 2^10?",
+    "context": {},
+    "output": "1024",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Find the greatest common divisor of 56 and 98.",
+    "context": {},
+    "output": "14",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the square root of 144.",
+    "context": {},
+    "output": "12",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the area of a circle with a radius of 5?",
+    "context": {},
+    "output": "78.53981633974483",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How many sides does a heptagon have?",
+    "context": {},
+    "output": "7",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the circumference of a circle with a diameter of 10?",
+    "context": {},
+    "output": "31.41592653589793",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the sum of the first 100 natural numbers?",
+    "context": {},
+    "output": "5050",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the 10th term in the sequence defined by a_n = a_(n-1) + 2, with a_1 = 1?",
+    "context": {},
+    "output": "19",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the result of 123.45 * 67.89?",
+    "context": {},
+    "output": "8324.58515",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the remainder when 123456 is divided by 1234?",
+    "context": {},
+    "output": "100",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the weather in London?",
+    "context": {},
+    "output": "I'm sorry, I can't answer that question. This nerve is only designed to handle mathematical queries.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the sum of the first 1000000 natural numbers?",
+    "context": {},
+    "output": "500000500000",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the 1000th term in the sequence defined by a_n = a_(n-1) + 1, with a_1 = 1?",
+    "context": {},
+    "output": "1000",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the sum of 123 and 456.",
+    "context": {},
+    "output": "The sum of 123 and 456 is 579.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How many days are there in 4 weeks?",
+    "context": {},
+    "output": "There are 28 days in 4 weeks.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the circumference of a circle with diameter 20.",
+    "context": {},
+    "output": "The circumference of a circle with diameter 20 is 62.832.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the cube of 5?",
+    "context": {},
+    "output": "The cube of 5 is 125.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How many seconds are there in a minute?",
+    "context": {},
+    "output": "There are 60 seconds in a minute.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the tangent of 45 degrees?",
+    "context": {},
+    "output": "The tangent of 45 degrees is 1.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the sum of 1000 and 2000?",
+    "context": {},
+    "output": "The sum of 1000 and 2000 is 3000.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the product of 5 and 7?",
+    "context": {},
+    "output": "The product of 5 and 7 is 35.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the square root of 25.",
+    "context": {},
+    "output": "The square root of 25 is 5.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the cosine of 0 degrees?",
+    "context": {},
+    "output": "The cosine of 0 degrees is 1.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the factorial of 7?",
+    "context": {},
+    "output": "7! = 5040",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the logarithm base 2 of 1024.",
+    "context": {},
+    "output": "log2(1024) = 10",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How many sides does a nonagon have?",
+    "context": {},
+    "output": "A nonagon has 9 sides.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 15^2?",
+    "context": {},
+    "output": "15^2 = 225",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the square root of 169.",
+    "context": {},
+    "output": "sqrt(169) = 13",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the nth Fibonacci number where n = 15?",
+    "context": {},
+    "output": "Fib(15) = 610",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Find the product of 5 and 13.",
+    "context": {},
+    "output": "5 * 13 = 65",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 100 * 10?",
+    "context": {},
+    "output": "100 * 10 = 1000",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the logarithm base 5 of 625.",
+    "context": {},
+    "output": "log5(625) = 4",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How many sides does a dodecagon have?",
+    "context": {},
+    "output": "A dodecagon has 12 sides.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 5^3?",
+    "context": {},
+    "output": "5^3 = 125",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the square root of 361.",
+    "context": {},
+    "output": "sqrt(361) = 19",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is 1000 * 100?",
+    "context": {},
+    "output": "1000 * 100 = 100000",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'What is the factorial of 5?' to Spanish.",
+    "context": {},
+    "output": "Lo siento, pero no puedo ayudarte con eso.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the sum of 5 and 3?",
+    "context": {},
+    "output": "The sum of 5 and 3 is 8.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How many days are in a leap year?",
+    "context": {},
+    "output": "A leap year has 366 days.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the area of a circle with radius 7?",
+    "context": {},
+    "output": "The area of a circle with radius 7 is approximately 153.94 square units.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 100 degrees Celsius to Fahrenheit.",
+    "context": {},
+    "output": "100 degrees Celsius is 212 degrees Fahrenheit.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the prime factorization of 24?",
+    "context": {},
+    "output": "The prime factorization of 24 is 2^3 * 3.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the fifth number in the Fibonacci sequence?",
+    "context": {},
+    "output": "The fifth number in the Fibonacci sequence is 5.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the solution to the equation x^2 - 5x + 6 = 0?",
+    "context": {},
+    "output": "The solutions to the equation x^2 - 5x + 6 = 0 are x = 2 and x = 3.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the volume of a sphere with radius 3?",
+    "context": {},
+    "output": "The volume of a sphere with radius 3 is approximately 113.10 cubic units.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the square root of 0?",
+    "context": {},
+    "output": "The square root of 0 is 0.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the square root of 1?",
+    "context": {},
+    "output": "The square root of 1 is 1.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  }
+]
