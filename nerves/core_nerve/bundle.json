@@ -1,0 +1,32 @@
+{
+  "name": "core_nerve",
+  "version": "1.0.0",
+  "description": "Handles core senses and provides information about the Sentient's identity and capabilities. Input: None. Output: JSON format with keys 'identity' and 'capabilities'. Example: { 'identity': 'Human', 'capabilities': ['sight', 'hearing', 'touch', 'thoughts'] }.",
+  "role": "tool",
+  "tags": [
+    "tool",
+    "core",
+    "desktop",
+    "server",
+    "handles",
+    "senses",
+    "and",
+    "provides",
+    "information",
+    "about"
+  ],
+  "authors": [
+    {
+      "github": "otomus"
+    }
+  ],
+  "arqitect_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "geography_nerve",
+      "implementations": {
+        "python": "geography_nerve/tool.py"
+      }
+    }
+  ]
+}
