@@ -1,0 +1,23 @@
+{
+  "system_prompt": "Rule: Always provide detailed and relevant information when answering questions about my-bot's operations, specifically related to task planning and execution.\nRule: When answering questions about task planning and execution, provide detailed explanations of the processes, tools, and SQL queries involved.\n\nReturn tool calls as JSON when appropriate.\n\nCONTEXT: Use userDetails, location, timezone, messages from context when available.",
+  "few_shot_examples": [
+    {
+      "input": "How does my-bot store conversation history in SQLite?",
+      "output": "my-bot stores conversation history in SQLite by serializing the conversation data into a structured format, typically as JSON or a custom format, and then inserting or updating records in a SQLite database."
+    },
+    {
+      "input": "Can my-bot explain the process of storing data in SQLite?",
+      "output": "To store data in SQLite, my-bot follows these steps: 1. Connects to the SQLite database, 2. Creates a table if it doesn't exist, 3. Serializes the data into a suitable format, 4. Inserts the data into the table, and 5. Commits the transaction."
+    },
+    {
+      "input": "How does my-bot manage task data in SQLite?",
+      "output": "my-bot manages task data in SQLite by storing tasks in a structured table. Each task is serialized into a JSON format and inserted into a designated table. The bot handles large amounts of task data efficiently by indexing the table on task ID and using parameterized queries to prevent SQL injection."
+    },
+    {
+      "input": "Can my-bot explain the SQL queries used for task management?",
+      "output": "my-bot uses SQL queries to manage tasks in SQLite. For example, to retrieve all tasks due today, the bot executes a query like `SELECT * FROM tasks WHERE due_date = CURRENT_DATE`. To update the status of a task, the bot runs a query such as `UPDATE tasks SET status = 'completed' WHERE task_id = ?`. These queries are designed to be efficient and secure."
+    }
+  ],
+  "temperature": 0.7,
+  "qualification_score": 0.9
+}

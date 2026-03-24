@@ -1,0 +1,471 @@
+[
+  {
+    "input": "How does my-bot store conversation history in SQLite?",
+    "context": {},
+    "output": "my-bot stores conversation history in SQLite using a dedicated table that captures each message's role and content.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can my-bot explain the process of storing data in SQLite?",
+    "context": {},
+    "output": "Yes, my-bot can explain that storing data in SQLite involves creating a database with tables, inserting records into these tables, and querying the data as needed.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does my-bot manage user data privacy when using SQLite?",
+    "context": {},
+    "output": "my-bot ensures user data privacy by encrypting data stored in SQLite and implementing access controls to prevent unauthorized access.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can my-bot discuss the benefits of using SQLite for task planning?",
+    "context": {},
+    "output": "SQLite is beneficial for task planning due to its lightweight nature, ease of use, and efficient data retrieval capabilities, which make it ideal for applications requiring quick access to task information.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does my-bot handle large amounts of task data in SQLite?",
+    "context": {},
+    "output": "my-bot uses indexing and query optimization techniques to efficiently manage large amounts of task data in SQLite, ensuring fast data retrieval and storage.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What happens if my-bot's SQLite database crashes?",
+    "context": {},
+    "output": "my-bot has a backup and recovery mechanism in place to ensure data safety in case of a database crash, preventing data loss.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does my-bot ensure data consistency in SQLite?",
+    "context": {},
+    "output": "my-bot ensures data consistency by implementing transactions and using constraints that maintain the integrity of the data in SQLite.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can my-bot explain the SQL queries used for task management?",
+    "context": {},
+    "output": "Yes, my-bot can explain that SQL queries used for task management typically include SELECT, INSERT, UPDATE, and DELETE statements to manage tasks efficiently.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does my-bot handle concurrent access to SQLite?",
+    "context": {},
+    "output": "my-bot manages concurrent access to SQLite by using locking mechanisms and optimizing queries to avoid bottlenecks and ensure smooth data access.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What happens if my-bot receives an empty query?",
+    "context": {},
+    "output": "my-bot responds with a message indicating that the input query is empty and requires a valid task planning command.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does my-bot handle very long queries?",
+    "context": {},
+    "output": "my-bot truncates long queries to ensure they fit within the system's processing limits and informs the user that the query has been shortened.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if my-bot receives a query that is too complex?",
+    "context": {},
+    "output": "my-bot advises the user to simplify the query or break it down into smaller parts to ensure it can be processed effectively.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does my-bot handle queries outside its domain?",
+    "context": {},
+    "output": "my-bot informs the user that the query is outside its domain and suggests using a different service or tool for the specific task.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What happens if my-bot receives a query that is in a different language?",
+    "context": {},
+    "output": "my-bot responds with a message indicating that the query is in a different language and requires a translation or a query in the supported language.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does my-bot handle queries that contain sensitive information?",
+    "context": {},
+    "output": "my-bot ensures the confidentiality of sensitive information by encrypting it before storing it in SQLite and implementing strict access controls.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the task management process?",
+    "context": {},
+    "output": "The task management process involves identifying tasks, setting priorities, assigning resources, and monitoring progress.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does task_planning_nerve handle task prioritization?",
+    "context": {},
+    "output": "task_planning_nerve prioritizes tasks based on urgency and importance.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can task_planning_nerve explain the process of creating a new task?",
+    "context": {},
+    "output": "Creating a new task involves defining the task details, setting a deadline, and assigning it to a relevant resource.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does task_planning_nerve handle task delegation?",
+    "context": {},
+    "output": "task_planning_nerve handles task delegation by assigning tasks to users based on their availability and expertise.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a task is not completed on time?",
+    "context": {},
+    "output": "If a task is not completed on time, task_planning_nerve will follow up with the assigned user to understand the delay and take necessary actions.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does task_planning_nerve handle recurring tasks?",
+    "context": {},
+    "output": "task_planning_nerve can handle recurring tasks by setting a recurring schedule and automatically creating new instances of the task.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a user has multiple overlapping tasks?",
+    "context": {},
+    "output": "task_planning_nerve will help the user manage overlapping tasks by suggesting prioritization and suggesting solutions to avoid conflicts.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does task_planning_nerve handle tasks with varying levels of complexity?",
+    "context": {},
+    "output": "task_planning_nerve can handle tasks with varying levels of complexity by providing guidance and support throughout the task management process.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a user has no tasks assigned?",
+    "context": {},
+    "output": "task_planning_nerve will inform the user that they have no tasks assigned and suggest ways to add new tasks or delegate tasks to others.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a user has a very large number of tasks?",
+    "context": {},
+    "output": "task_planning_nerve will help the user manage a large number of tasks by providing tools for filtering, sorting, and prioritizing tasks.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a user inputs an extremely long task description?",
+    "context": {},
+    "output": "task_planning_nerve will handle extremely long task descriptions by truncating them and providing a summary of the task.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a user requests information on a topic outside the task management domain?",
+    "context": {},
+    "output": "task_planning_nerve will inform the user that it is not equipped to handle queries outside the task management domain and suggest alternative resources.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does task_planning_nerve handle tasks that have dependencies?",
+    "context": {},
+    "output": "task_planning_nerve can handle tasks with dependencies by setting dependencies and automatically adjusting the schedule to accommodate task dependencies.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a user has a task that needs to be delegated to a non-existent user?",
+    "context": {},
+    "output": "task_planning_nerve will inform the user that the specified user does not exist and suggest alternative users or a different approach to task delegation.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does task_planning_nerve handle tasks that require special permissions?",
+    "context": {},
+    "output": "task_planning_nerve can handle tasks that require special permissions by ensuring that the assigned user has the necessary permissions to complete the task.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I assign a task to a team member?",
+    "context": {},
+    "output": "To assign a task to a team member, you can use the command: '/task assign <task_description> <team_member>'. For example: '/task assign clean the office to John'.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What happens if a task is not completed on time?",
+    "context": {},
+    "output": "If a task is not completed on time, it will be marked as overdue and a reminder will be sent to the responsible team member. You can also manually update the task status to reflect the completion status.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I prioritize tasks?",
+    "context": {},
+    "output": "You can prioritize tasks by assigning them a priority level using the command: '/task priority <task_id> <priority_level>'. For example: '/task priority 1 high'. Priority levels can be 'high', 'medium', or 'low'.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if I need to delegate a task to a non-team member?",
+    "context": {},
+    "output": "To delegate a task to a non-team member, you can use the command: '/task delegate <task_description> <external_contact>'. For example: '/task delegate review the report to JaneDoe@example.com'. Make sure the external contact is reachable.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I view all tasks assigned to me?",
+    "context": {},
+    "output": "To view all tasks assigned to you, you can use the command: '/task list'. This will display a list of all tasks you are currently assigned to, along with their status and priority.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a task has been completed but not yet marked?",
+    "context": {},
+    "output": "If a task has been completed but not yet marked, you can manually update the task status to 'completed' using the command: '/task complete <task_id>'. For example: '/task complete 3'.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I reassign a task?",
+    "context": {},
+    "output": "To reassign a task, you can use the command: '/task reassign <task_id> <new_team_member>'. For example: '/task reassign 2 John'.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if there are no tasks assigned to me?",
+    "context": {},
+    "output": "If there are no tasks assigned to you, you will see a message indicating that there are no tasks to manage. You can check for new tasks by using the command: '/task check'.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I set a due date for a task?",
+    "context": {},
+    "output": "To set a due date for a task, you can use the command: '/task due <task_id> <due_date>'. For example: '/task due 1 2023-10-31'. The due date should be in the format YYYY-MM-DD.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a task has been completed but the status is not updated?",
+    "context": {},
+    "output": "If a task has been completed but the status is not updated, you can manually update the task status to 'completed' using the command: '/task complete <task_id>'. For example: '/task complete 4'.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I view completed tasks?",
+    "context": {},
+    "output": "To view completed tasks, you can use the command: '/task completed'. This will display a list of all tasks that have been completed, along with the date and time they were completed.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a task description is too long?",
+    "context": {},
+    "output": "If a task description is too long, you can split it into multiple tasks or use bullet points to organize the information. For example: '/task assign complete the following tasks: - Design report - Schedule meeting - Review budget'.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I handle a task with no due date?",
+    "context": {},
+    "output": "If a task does not have a due date, it will not be marked as overdue. However, you can still use the command: '/task check' to ensure that all tasks are being tracked and completed in a timely manner.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a task has been canceled?",
+    "context": {},
+    "output": "If a task has been canceled, you can use the command: '/task cancel <task_id>'. For example: '/task cancel 5'. Canceled tasks will be marked as 'canceled' and will not appear in lists of active tasks.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I view all tasks in a specific category?",
+    "context": {},
+    "output": "To view all tasks in a specific category, you can use the command: '/task category <category_name>'. For example: '/task category sales'. This will display a list of all tasks that fall under the specified category.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I prioritize my tasks?",
+    "context": {},
+    "output": "To prioritize your tasks, use the 'set priority' command followed by the task number and the desired priority level.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What happens if I forget a task?",
+    "context": {},
+    "output": "If you forget a task, you can remind yourself by using the 'remind me' command with the task details.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I delegate a task to someone else?",
+    "context": {},
+    "output": "You can delegate a task by using the 'delegate' command followed by the task number and the person's name.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does task_planning_nerve handle tasks with multiple due dates?",
+    "context": {},
+    "output": "task_planning_nerve handles tasks with multiple due dates by allowing you to specify each due date when creating the task.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I set a recurring task?",
+    "context": {},
+    "output": "To set a recurring task, use the 'recur' command followed by the task description and the recurrence interval.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What happens if I input a task without a description?",
+    "context": {},
+    "output": "If you input a task without a description, task_planning_nerve will prompt you to provide a valid task description.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I view all tasks by priority?",
+    "context": {},
+    "output": "To view all tasks by priority, use the 'list by priority' command.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a user requests information on a task that doesn't exist?",
+    "context": {},
+    "output": "If a user requests information on a task that doesn't exist, task_planning_nerve will inform the user that the task was not found.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does task_planning_nerve handle tasks with no assigned due date?",
+    "context": {},
+    "output": "task_planning_nerve handles tasks with no assigned due date by displaying them as open tasks without a deadline.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I mark a task as completed?",
+    "context": {},
+    "output": "To mark a task as completed, use the 'complete' command followed by the task number.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does task_planning_nerve handle tasks with special characters?",
+    "context": {},
+    "output": "task_planning_nerve handles tasks with special characters by accepting them and storing them correctly in the database.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I view all tasks assigned to a specific user?",
+    "context": {},
+    "output": "To view all tasks assigned to a specific user, use the 'list for user' command followed by the user's name.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What happens if a user inputs a query in a different language?",
+    "context": {},
+    "output": "If a user inputs a query in a different language, task_planning_nerve will respond in English to ensure clarity and understanding.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I set a reminder for a task?",
+    "context": {},
+    "output": "You can set a reminder for a task by specifying the time or duration before the task is due.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does my-bot handle tasks with multiple assignees?",
+    "context": {},
+    "output": "task_planning_nerve allows tasks to be assigned to multiple users, and it manages notifications and updates accordingly.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What if a user inputs an extremely long task title?",
+    "context": {},
+    "output": "task_planning_nerve handles extremely long task titles gracefully, ensuring the system remains responsive and user-friendly.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What happens if I try to create a task without a title?",
+    "context": {},
+    "output": "task_planning_nerve requires a title for each task to ensure clarity and organization.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does task_planning_nerve handle tasks with no due date?",
+    "context": {},
+    "output": "task_planning_nerve allows tasks to be created without a due date, and it categorizes them as 'open tasks'.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does task_planning_nerve handle tasks with sub-tasks?",
+    "context": {},
+    "output": "task_planning_nerve supports hierarchical task management, allowing you to create and manage sub-tasks within a main task.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What happens if a user inputs an extremely long task description?",
+    "context": {},
+    "output": "task_planning_nerve handles extremely long task descriptions gracefully, ensuring the system remains responsive and user-friendly.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does task_planning_nerve handle tasks that have been completed?",
+    "context": {},
+    "output": "task_planning_nerve tracks completed tasks and allows you to view them in the 'Completed Tasks' section.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I reschedule a task?",
+    "context": {},
+    "output": "You can reschedule a task by editing its due date in the task_planning_nerve interface.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  }
+]

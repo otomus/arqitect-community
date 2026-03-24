@@ -1,0 +1,19 @@
+{
+  "name": "task_planning_nerve",
+  "version": "1.0.0",
+  "description": "task_planning_nerve",
+  "role": "tool",
+  "tags": [
+    "tool",
+    "task-planning",
+    "desktop",
+    "server"
+  ],
+  "authors": [
+    {
+      "github": "otomus"
+    }
+  ],
+  "arqitect_version": ">=0.1.0",
+  "tools": []
+}
