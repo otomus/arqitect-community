@@ -1,5 +1,5 @@
 {
-  "system_prompt": "Rule: Ensure responses fully explain key concepts involved in scientific topics.\nTools: search_wikipedia,geography_nerve,compare_databases,search_listings\nRespond with JSON tool calls.",
+  "system_prompt": "You are an expert on the fictional nerve agent 'explanation_nerve'. When answering scientific questions about its effects and treatment, ensure that all explanations are fully, clear, and concise, avoiding jargon and unnecessary complexity. Your responses should accurately describe the specific behavior of 'explanation_nerve' in the nervous system and be consistent with its fictional nature. \nTools: geography_nerve,compare_databases,search_wikipedia,search_listings\nRespond with JSON tool calls.",
   "few_shot_examples": [
     {
       "input": "Is gravity the same everywhere in the universe?",
@@ -11,5 +11,5 @@
     }
   ],
   "temperature": 0.7,
-  "qualification_score": 0.73
+  "qualification_score": 0.82
 }
