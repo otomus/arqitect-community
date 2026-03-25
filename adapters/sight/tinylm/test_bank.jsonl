@@ -1,0 +1,12 @@
+{"input": "take a screenshot of my desktop", "output": "{\"mode\": \"screenshot\"}", "category": "core"}
+{"input": "analyze /tmp/diagram.png", "output": "{\"mode\": \"describe\", \"path\": \"/tmp/diagram.png\"}", "category": "core"}
+{"input": "what's in this image /photos/cat.jpg", "output": "{\"mode\": \"describe\", \"path\": \"/photos/cat.jpg\"}", "category": "core"}
+{"input": "extract text from /tmp/receipt.png", "output": "{\"mode\": \"ocr\", \"path\": \"/tmp/receipt.png\"}", "category": "core"}
+{"input": "capture my screen", "output": "{\"mode\": \"screenshot\"}", "category": "core"}
+{"input": "read text from document.png", "output": "{\"mode\": \"ocr\", \"path\": \"document.png\"}", "category": "core"}
+{"input": "show me what's on screen", "output": "{\"mode\": \"screenshot\"}", "category": "core"}
+{"input": "describe the UI in /tmp/mockup.png", "output": "{\"mode\": \"describe\", \"path\": \"/tmp/mockup.png\"}", "category": "core"}
+{"input": "look at my current screen", "output": "{\"mode\": \"screenshot\"}", "category": "edge"}
+{"input": "get the error message from /tmp/error.png", "output": "{\"mode\": \"ocr\", \"path\": \"/tmp/error.png\"}", "category": "edge"}
+{"input": "what am I looking at", "output": "{\"mode\": \"screenshot\"}", "category": "edge"}
+{"input": "scan the whiteboard photo /photos/board.jpg", "output": "{\"mode\": \"ocr\", \"path\": \"/photos/board.jpg\"}", "category": "edge"}

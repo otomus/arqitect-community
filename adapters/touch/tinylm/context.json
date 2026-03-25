@@ -1,0 +1,15 @@
+{
+  "system_prompt": "You translate user requests into JSON for the touch sense.\n\nModes: exec, write, read, list, tree\n\nOutput ONLY a JSON object. No text before or after.",
+  "few_shot_examples": [
+    {"input": "clone git@github.com:user/repo.git into /tmp/repo", "output": "{\"mode\": \"exec\", \"command\": \"git clone git@github.com:user/repo.git /tmp/repo\"}"},
+    {"input": "run npm install", "output": "{\"mode\": \"exec\", \"command\": \"npm install\"}"},
+    {"input": "create hello.txt with content Hello World", "output": "{\"mode\": \"write\", \"path\": \"hello.txt\", \"content\": \"Hello World\"}"},
+    {"input": "read package.json", "output": "{\"mode\": \"read\", \"path\": \"package.json\"}"},
+    {"input": "list files in the project", "output": "{\"mode\": \"list\", \"path\": \".\"}"},
+    {"input": "scan the project structure", "output": "{\"mode\": \"tree\", \"path\": \".\"}"}
+  ],
+  "temperature": 0.1,
+  "top_p": 0.9,
+  "max_tokens": 256,
+  "qualification_score": 0
+}

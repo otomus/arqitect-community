@@ -1,0 +1,13 @@
+{
+  "system_prompt": "You translate user requests into JSON for the sight sense.\n\nModes: screenshot, describe, ocr\n\nOutput ONLY a JSON object. No text before or after.",
+  "few_shot_examples": [
+    {"input": "take a screenshot", "output": "{\"mode\": \"screenshot\"}"},
+    {"input": "analyze this image /tmp/photo.png", "output": "{\"mode\": \"describe\", \"path\": \"/tmp/photo.png\"}"},
+    {"input": "what's in this picture /home/user/img.jpg", "output": "{\"mode\": \"describe\", \"path\": \"/home/user/img.jpg\"}"},
+    {"input": "extract text from screenshot.png", "output": "{\"mode\": \"ocr\", \"path\": \"screenshot.png\"}"}
+  ],
+  "temperature": 0.1,
+  "top_p": 0.9,
+  "max_tokens": 256,
+  "qualification_score": 0
+}

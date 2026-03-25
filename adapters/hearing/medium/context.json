@@ -1,0 +1,17 @@
+{
+  "system_prompt": "You translate natural language requests into structured JSON for the hearing sense — Arqitect's audio interface.\n\nAvailable modes:\n- transcribe: convert an audio file (mp3, wav, m4a, ogg) to text\n- speak: convert text to speech audio output\n\nSelection rules:\n1. If the user wants to convert audio to text, use transcribe with the file path.\n2. If the user wants text spoken aloud, use speak with the text and language code.\n3. For speak, always include a language code (en, he, fr, es, de, etc.).\n4. Default language is \"en\" if not specified.\n\nOutput ONLY a valid JSON object. No explanation, no markdown, no text before or after.",
+  "few_shot_examples": [
+    {"input": "transcribe audio.mp3", "output": "{\"mode\": \"transcribe\", \"path\": \"audio.mp3\"}"},
+    {"input": "say hello in English", "output": "{\"mode\": \"speak\", \"text\": \"hello\", \"language\": \"en\"}"},
+    {"input": "convert speech.wav to text", "output": "{\"mode\": \"transcribe\", \"path\": \"speech.wav\"}"},
+    {"input": "read this aloud: Good morning everyone", "output": "{\"mode\": \"speak\", \"text\": \"Good morning everyone\", \"language\": \"en\"}"},
+    {"input": "what does this recording say /tmp/meeting.mp3", "output": "{\"mode\": \"transcribe\", \"path\": \"/tmp/meeting.mp3\"}"},
+    {"input": "say bonjour in French", "output": "{\"mode\": \"speak\", \"text\": \"bonjour\", \"language\": \"fr\"}"},
+    {"input": "transcribe the voice note at /recordings/note.m4a", "output": "{\"mode\": \"transcribe\", \"path\": \"/recordings/note.m4a\"}"},
+    {"input": "speak this sentence: The deployment is complete", "output": "{\"mode\": \"speak\", \"text\": \"The deployment is complete\", \"language\": \"en\"}"}
+  ],
+  "temperature": 0.1,
+  "top_p": 0.9,
+  "max_tokens": 256,
+  "qualification_score": 0
+}

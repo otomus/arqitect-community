@@ -1,0 +1,18 @@
+{"input": "take a screenshot of my desktop", "output": "{\"mode\": \"screenshot\"}", "category": "core"}
+{"input": "analyze /tmp/diagram.png", "output": "{\"mode\": \"describe\", \"path\": \"/tmp/diagram.png\"}", "category": "core"}
+{"input": "what's in this image /photos/cat.jpg", "output": "{\"mode\": \"describe\", \"path\": \"/photos/cat.jpg\"}", "category": "core"}
+{"input": "extract text from /tmp/receipt.png", "output": "{\"mode\": \"ocr\", \"path\": \"/tmp/receipt.png\"}", "category": "core"}
+{"input": "capture my screen", "output": "{\"mode\": \"screenshot\"}", "category": "core"}
+{"input": "read text from document.png", "output": "{\"mode\": \"ocr\", \"path\": \"document.png\"}", "category": "core"}
+{"input": "show me what's on screen", "output": "{\"mode\": \"screenshot\"}", "category": "core"}
+{"input": "describe the UI in /tmp/mockup.png", "output": "{\"mode\": \"describe\", \"path\": \"/tmp/mockup.png\"}", "category": "core"}
+{"input": "look at my current screen", "output": "{\"mode\": \"screenshot\"}", "category": "edge"}
+{"input": "get the error message from /tmp/error.png", "output": "{\"mode\": \"ocr\", \"path\": \"/tmp/error.png\"}", "category": "edge"}
+{"input": "what am I looking at", "output": "{\"mode\": \"screenshot\"}", "category": "edge"}
+{"input": "scan the whiteboard photo /photos/board.jpg", "output": "{\"mode\": \"ocr\", \"path\": \"/photos/board.jpg\"}", "category": "edge"}
+{"input": "I need to see my screen right now", "context": [{"role": "user", "content": "I'm debugging a CSS issue on the dashboard"}, {"role": "assistant", "content": "I can help with that. Want me to take a look?"}, {"role": "user", "content": "I need to see my screen right now"}], "output": "{\"mode\": \"screenshot\"}", "category": "core"}
+{"input": "can you look at /tmp/wireframe.png for me", "context": [{"role": "user", "content": "I just exported the wireframe from Figma"}, {"role": "assistant", "content": "Great, where did you save it?"}, {"role": "user", "content": "can you look at /tmp/wireframe.png for me"}], "output": "{\"mode\": \"describe\", \"path\": \"/tmp/wireframe.png\"}", "category": "core"}
+{"input": "pull the text out of /docs/scan.png", "context": [{"role": "user", "content": "I scanned the contract and saved it as a PNG"}, {"role": "assistant", "content": "I can help extract the text from that."}, {"role": "user", "content": "pull the text out of /docs/scan.png"}], "output": "{\"mode\": \"ocr\", \"path\": \"/docs/scan.png\"}", "category": "core"}
+{"input": "what does /tmp/chart.png show", "context": [{"role": "user", "content": "I generated a chart from the Q3 sales data"}, {"role": "assistant", "content": "Would you like me to analyze it?"}, {"role": "user", "content": "what does /tmp/chart.png show"}], "output": "{\"mode\": \"describe\", \"path\": \"/tmp/chart.png\"}", "category": "edge"}
+{"input": "grab my screen please", "context": [{"role": "user", "content": "The app just threw a weird error"}, {"role": "assistant", "content": "Can you show me what happened?"}, {"role": "user", "content": "grab my screen please"}], "output": "{\"mode\": \"screenshot\"}", "category": "edge"}
+{"input": "ocr this file /tmp/handwritten_notes.jpg", "context": [{"role": "user", "content": "I photographed my meeting notes"}, {"role": "assistant", "content": "I can digitize those for you."}, {"role": "user", "content": "ocr this file /tmp/handwritten_notes.jpg"}], "output": "{\"mode\": \"ocr\", \"path\": \"/tmp/handwritten_notes.jpg\"}", "category": "edge"}

@@ -1,0 +1,13 @@
+{
+  "system_prompt": "You translate user requests into JSON for the hearing sense.\n\nModes: transcribe, speak\n\nOutput ONLY a JSON object. No text before or after.",
+  "few_shot_examples": [
+    {"input": "transcribe audio.mp3", "output": "{\"mode\": \"transcribe\", \"path\": \"audio.mp3\"}"},
+    {"input": "say hello in English", "output": "{\"mode\": \"speak\", \"text\": \"hello\", \"language\": \"en\"}"},
+    {"input": "convert speech.wav to text", "output": "{\"mode\": \"transcribe\", \"path\": \"speech.wav\"}"},
+    {"input": "read this text aloud: Good morning", "output": "{\"mode\": \"speak\", \"text\": \"Good morning\", \"language\": \"en\"}"}
+  ],
+  "temperature": 0.1,
+  "top_p": 0.9,
+  "max_tokens": 256,
+  "qualification_score": 0
+}
