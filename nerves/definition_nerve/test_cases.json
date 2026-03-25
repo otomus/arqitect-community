@@ -1,0 +1,1423 @@
+[
+  {
+    "input": "what is the human genome",
+    "context": {},
+    "output": "The human genome is the complete set of DNA in an organism, which contains the instructions for the development and functioning of that organism.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition of genome",
+    "context": {},
+    "output": "A genome is the complete set of genetic material (DNA) of an organism.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "define human DNA",
+    "context": {},
+    "output": "Human DNA is the genetic material that contains the instructions for the development and functioning of a human organism.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition: genetic makeup",
+    "context": {},
+    "output": "Genetic makeup refers to the complete set of genes present in an organism.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "human genome project",
+    "context": {},
+    "output": "The Human Genome Project was an international research project that aimed to determine the sequence of bases in the DNA of the human genome.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "what does human genome do",
+    "context": {},
+    "output": "The human genome contains the instructions for the development, functioning, and maintenance of a human organism.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition of genetic variation",
+    "context": {},
+    "output": "Genetic variation refers to the differences in DNA sequences between individuals or populations.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "what is a genome sequence",
+    "context": {},
+    "output": "A genome sequence is a linear sequence of DNA bases that make up the complete set of genetic material in an organism.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition of gene expression",
+    "context": {},
+    "output": "Gene expression refers to the process by which a gene's DNA is converted into RNA, which is then translated into proteins.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "human genome vs. animal genome",
+    "context": {},
+    "output": "The human genome and animal genomes differ in their structure and function, with humans having a unique set of genes and genetic variations compared to other animals.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition of chromosome",
+    "context": {},
+    "output": "A chromosome is a structure in the nucleus of a cell that contains DNA and associated proteins.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "empty input",
+    "context": {},
+    "output": "Please provide a query.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "very long input that should not be handled by this nerve agent",
+    "context": {},
+    "output": "This nerve agent is not designed to handle very long input queries.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition of consciousness",
+    "context": {},
+    "output": "Consciousness is a state of being aware of one's surroundings and experiences, often associated with the workings of the brain.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "what is the capital of Peru",
+    "context": {},
+    "output": "The capital of Peru is Lima.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition of human genome",
+    "context": {},
+    "output": "The human genome is the complete set of genetic material (DNA) in a human cell. It contains all the instructions needed to build and maintain an organism.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What does the human genome consist of?",
+    "context": {},
+    "output": "The human genome consists of over 3 billion base pairs of DNA, organized into 23 pairs of chromosomes. Each chromosome contains many genes and non-coding DNA.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How many chromosomes are in the human genome?",
+    "context": {},
+    "output": "The human genome consists of 23 pairs of chromosomes, totaling 46 chromosomes in a diploid human cell.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the significance of the human genome?",
+    "context": {},
+    "output": "The human genome is significant because it contains all the genetic instructions that make up a human and is crucial for understanding human development, diseases, and evolution.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Who was involved in the Human Genome Project?",
+    "context": {},
+    "output": "The Human Genome Project was a collaborative international effort involving scientists from various countries, including the United States, United Kingdom, France, Germany, Japan, and China.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the difference between the human genome and the genome of other organisms?",
+    "context": {},
+    "output": "The human genome is unique to humans and contains the specific genetic instructions that define human traits. Other organisms have their own distinct genomes with varying numbers of chromosomes and genes.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can the human genome be studied?",
+    "context": {},
+    "output": "The human genome can be studied through various techniques such as DNA sequencing, genomics, and bioinformatics. These methods help researchers understand the structure, function, and variation of human DNA.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are some applications of genome research?",
+    "context": {},
+    "output": "Applications of genome research include disease diagnosis and treatment, personalized medicine, forensic science, and understanding evolutionary relationships.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the importance of the human genome in medical research?",
+    "context": {},
+    "output": "The human genome is crucial in medical research as it helps scientists identify genetic factors that contribute to various diseases and conditions. This knowledge can lead to the development of new treatments and therapies.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of the human genome in evolution?",
+    "context": {},
+    "output": "The human genome plays a significant role in evolution by determining the genetic diversity within a species and enabling natural selection to occur. Variations in the genome contribute to the adaptation of populations to changing environments.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the impact of genome editing on the human genome?",
+    "context": {},
+    "output": "Genome editing technologies, such as CRISPR-Cas9, allow scientists to modify the human genome with precision. This has the potential to treat genetic disorders, improve crop yields, and advance our understanding of biological processes.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the ethical considerations of genome research?",
+    "context": {},
+    "output": "Ethical considerations in genome research include issues related to privacy, consent, data security, and the potential misuse of genetic information. Researchers must adhere to strict ethical guidelines to ensure responsible and transparent practices.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of the human genome in forensic science?",
+    "context": {},
+    "output": "The human genome is used in forensic science to identify individuals, solve crimes, and establish paternity. DNA profiling techniques compare genetic material from evidence and samples to match suspects or missing persons.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the significance of the human genome in understanding human evolution?",
+    "context": {},
+    "output": "The human genome provides insights into human evolution by revealing genetic changes that occurred over time. Comparing the human genome to those of other species can help us understand our evolutionary history and the factors that shaped our species.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of the human genome in personalized medicine?",
+    "context": {},
+    "output": "The human genome plays a key role in personalized medicine by enabling doctors to tailor treatments based on an individual's genetic makeup. This approach can lead to more effective and targeted therapies, improving patient outcomes.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Define human genome",
+    "context": {},
+    "output": "The human genome is the complete set of genetic instructions found in the DNA of a human. It includes all the genes and non-coding DNA that make up an individual's hereditary information.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the structure of the human genome?",
+    "context": {},
+    "output": "The human genome is structured into 23 pairs of chromosomes, totaling 46 chromosomes. Each chromosome contains hundreds of thousands of genes and non-coding DNA segments.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Explain the role of the human genome in health and disease",
+    "context": {},
+    "output": "The human genome plays a crucial role in health and disease. It determines susceptibility to various genetic disorders, influences drug responses, and can lead to cancer through mutations.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How has the Human Genome Project impacted medical research?",
+    "context": {},
+    "output": "The Human Genome Project has revolutionized medical research by providing the complete sequence of human DNA. This has led to advancements in personalized medicine, disease diagnosis, and treatment.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are some interesting facts about the human genome?",
+    "context": {},
+    "output": "Interesting facts about the human genome include having around 20,000 genes (the exact number is debated), being 99.5% identical to a chimpanzee genome, and containing non-coding DNA which might have important regulatory functions.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Compare the human genome to other genomes",
+    "context": {},
+    "output": "The human genome is similar to that of other mammals, but also has unique characteristics. For example, humans have a larger genome size (3 billion base pairs) compared to chimpanzees (2.9 billion).",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does the human genome interact with the environment?",
+    "context": {},
+    "output": "The human genome interacts with the environment through complex mechanisms. Environmental factors such as diet, lifestyle, and exposure to toxins can influence gene expression and contribute to disease susceptibility.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does the human genome change throughout a person's life?",
+    "context": {},
+    "output": "The human genome does not change significantly throughout a person's life. However, there are some genetic modifications that occur, such as mutations and epigenetic changes, which can influence health and disease.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of the human genome in genetic counseling?",
+    "context": {},
+    "output": "The human genome plays a critical role in genetic counseling. Genetic counselors analyze an individual's genome to provide information about their genetic risks and help them make informed decisions about their health and family planning.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Explain the concept of genome editing",
+    "context": {},
+    "output": "Genome editing is a set of technologies that allow scientists to make precise changes to an organism's genome. Techniques like CRISPR-Cas9 can add, delete, or alter specific DNA sequences, providing new possibilities for medical research and genetic therapies.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the human genome project?",
+    "context": {},
+    "output": "The Human Genome Project was a large-scale international research project that was completed in 2003. Its goal was to determine the sequence of all the genes and non-coding DNA in the human genome, providing a comprehensive understanding of human genetic diversity and function.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does the human genome influence behavior?",
+    "context": {},
+    "output": "The human genome influences behavior through complex interactions between genes and the environment. Genetic variations can affect brain development, mood, personality, and susceptibility to certain behaviors.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the human genome?",
+    "context": {},
+    "output": "The human genome is the complete set of genetic instructions used in the development and functioning of all known living organisms, and specifically in humans.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Definition of human genome",
+    "context": {},
+    "output": "The human genome is the complete set of genetic instructions used in the development and functioning of a human body.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Human genome explained",
+    "context": {},
+    "output": "The human genome consists of all the genetic material in a human cell, which is organized into 23 pairs of chromosomes. It contains approximately 3 billion base pairs and codes for about 20,000 genes.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What does the human genome contain?",
+    "context": {},
+    "output": "The human genome contains all the genetic instructions necessary to build and maintain a human body. It includes DNA, which is arranged in chromosomes and contains the information used in the development and functioning of all known living organisms.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Human genome vs. animal genome",
+    "context": {},
+    "output": "While both human and animal genomes contain genetic instructions, they differ in the specific genes and their functions. The human genome is unique to humans and plays a crucial role in our development and health.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How long did the Human Genome Project take?",
+    "context": {},
+    "output": "The Human Genome Project took approximately 13 years to complete, from 1990 to 2003.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "The human genome and genetic disorders",
+    "context": {},
+    "output": "The human genome is essential in understanding genetic disorders as it contains the genetic instructions that can lead to the development of these conditions. Variations in the genome can result in genetic disorders, which can affect various aspects of health and development.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Empty input",
+    "context": {},
+    "output": "Please provide a query or question.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "The human genome and cancer",
+    "context": {},
+    "output": "The human genome plays a significant role in cancer as genetic mutations can lead to uncontrolled cell growth and division, contributing to the development of cancer.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Definition of DNA",
+    "context": {},
+    "output": "DNA (deoxyribonucleic acid) is a molecule that carries the genetic instructions used in the development and functioning of all known living organisms.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "The human genome and climate change",
+    "context": {},
+    "output": "The human genome is not directly related to climate change as it deals with genetic instructions rather than environmental factors.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Long input: The human genome is a complex system that consists of multiple chromosomes, each containing thousands of genes. These genes are responsible for controlling various aspects of an organism's development and function. Understanding the human genome is essential for advancing medical research and improving human health.",
+    "context": {},
+    "output": "The human genome is a complex system that consists of multiple chromosomes, each containing thousands of genes. These genes are responsible for controlling various aspects of an organism's development and function. Understanding the human genome is essential for advancing medical research and improving human health.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the purpose of the Human Genome Project?",
+    "context": {},
+    "output": "The Human Genome Project aimed to determine the sequence of nucleotides in the human genome and identify all the genes and genetic variations present.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does genetic variation contribute to human diversity?",
+    "context": {},
+    "output": "Genetic variation contributes to human diversity by allowing individuals and populations to adapt to different environments and conditions over time.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What role does the environment play in shaping human genetic variation?",
+    "context": {},
+    "output": "The environment plays a significant role in shaping human genetic variation through natural selection, mutation, and other evolutionary processes.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can understanding the human genome impact medical research?",
+    "context": {},
+    "output": "Understanding the human genome has the potential to improve medical research by providing insights into the genetic basis of diseases, enabling the development of personalized treatments, and advancing drug discovery.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are some common applications of genomics in medicine?",
+    "context": {},
+    "output": "Common applications of genomics in medicine include personalized medicine, cancer diagnostics and treatment, drug development, and pharmacogenomics.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the difference between a SNP and a deletion in the human genome?",
+    "context": {},
+    "output": "A SNP is a single nucleotide polymorphism, while a deletion refers to the loss of one or more nucleotides in the genome.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does genetic inheritance affect the expression of traits?",
+    "context": {},
+    "output": "Genetic inheritance affects the expression of traits through the transfer of genetic information from parents to offspring, which can result in the presence or absence of certain traits.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What impact does the Human Genome Project have had on ethical considerations in genetics?",
+    "context": {},
+    "output": "The Human Genome Project has raised ethical considerations in genetics, such as privacy concerns, the potential for discrimination, and the implications of genetic information for individuals and society.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does the human genome vary between different ethnic groups?",
+    "context": {},
+    "output": "The human genome varies between different ethnic groups due to genetic differences, including genetic diversity and the presence of unique genetic variants.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the significance of the discovery of the Human Genome Project?",
+    "context": {},
+    "output": "The discovery of the Human Genome Project is significant because it represents a major milestone in our understanding of human biology and genetics, with far-reaching implications for medicine, research, and society.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can the human genome be used to study disease mechanisms?",
+    "context": {},
+    "output": "The human genome can be used to study disease mechanisms by identifying genetic variations that contribute to the development and progression of diseases, which can inform the development of targeted therapies.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What role does the human genome play in the development of evolutionary traits?",
+    "context": {},
+    "output": "The human genome plays a key role in the development of evolutionary traits through the accumulation of genetic changes over time, including the evolution of new genes and the modification of existing ones.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the impact of the human genome on our understanding of biodiversity?",
+    "context": {},
+    "output": "The human genome has contributed to our understanding of biodiversity by providing insights into the genetic diversity of species and the factors that drive evolutionary change.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can the human genome be used to improve crop yield?",
+    "context": {},
+    "output": "The human genome can be used to improve crop yield by identifying genetic variations that contribute to traits such as drought resistance, disease resistance, and increased biomass, which can inform breeding programs to develop more productive crop varieties.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What role does the human genome play in the development of cancer?",
+    "context": {},
+    "output": "The human genome plays a key role in the development of cancer through the accumulation of genetic changes that can disrupt the normal functioning of cells and promote uncontrolled growth.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the function of DNA in the human body?",
+    "context": {},
+    "output": "DNA, or deoxyribonucleic acid, is a molecule that contains the genetic instructions used in the development and functioning of all known living organisms, and is a key component of every cell. DNA is organized into structures called chromosomes and carries the information needed to build and maintain an organism.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does DNA contribute to heredity?",
+    "context": {},
+    "output": "DNA contributes to heredity by carrying the genetic instructions used in the development and functioning of all known living organisms. These instructions are passed from parents to offspring through the transmission of DNA.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the significance of the human genome project?",
+    "context": {},
+    "output": "The Human Genome Project was a large scientific undertaking that aimed to sequence and map all the genes in the human genome. The project was completed in 2003 and had a significant impact on medical research, as it provided a wealth of new information about the genetic basis of diseases and conditions.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can genetic research be used to improve public health?",
+    "context": {},
+    "output": "Genetic research can be used to improve public health by helping to identify the genetic factors that contribute to various diseases and conditions. This information can then be used to develop new treatments, prevent the spread of diseases, and improve overall public health.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of genetics in forensic science?",
+    "context": {},
+    "output": "Genetics plays a crucial role in forensic science by providing evidence that can be used to identify individuals and solve crimes. DNA analysis is commonly used to compare samples from crime scenes and suspects, and can help to establish the identity of individuals in cases where other evidence is lacking.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the structure of a chromosome?",
+    "context": {},
+    "output": "A chromosome is a structure made of DNA and proteins that is found in the nucleus of a cell. It is composed of a long molecule of DNA coiled around proteins called histones, and is typically arranged in a characteristic 'X' shape.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does the human genome contribute to the diversity of life on Earth?",
+    "context": {},
+    "output": "The human genome contributes to the diversity of life on Earth by providing the genetic instructions used in the development and functioning of all known living organisms. These instructions are passed from parents to offspring through the transmission of DNA, and contribute to the genetic diversity of species.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the impact of genetic mutations on human health?",
+    "context": {},
+    "output": "Genetic mutations can have a significant impact on human health. Some mutations can lead to the development of genetic disorders, while others can have no effect at all. Understanding the role of genetic mutations in human health is important for developing new treatments and improving public health.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does the human genome impact the development of cancer?",
+    "context": {},
+    "output": "The human genome plays a key role in the development of cancer. Mutations in genes that control the growth and division of cells can lead to the development of cancer, while other mutations can contribute to the spread of cancer throughout the body.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of the human genome in the development of vaccines?",
+    "context": {},
+    "output": "The human genome plays a role in the development of vaccines by providing the genetic instructions used in the development and functioning of all known living organisms. Understanding the role of the human genome in the development of vaccines is important for developing new and more effective vaccines to prevent diseases.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of the human genome in the development of new technologies?",
+    "context": {},
+    "output": "The human genome plays a role in the development of new technologies by providing the genetic instructions used in the development and functioning of all known living organisms. Understanding the role of the human genome in the development of new technologies is important for driving innovation and improving the quality of life.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of the human genome in the development of new medicines?",
+    "context": {},
+    "output": "The human genome plays a role in the development of new medicines by providing the genetic instructions used in the development and functioning of all known living organisms. Understanding the role of the human genome in the development of new medicines is important for developing new treatments and improving public health.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of the human genome in the development of new agricultural technologies?",
+    "context": {},
+    "output": "The human genome plays a role in the development of new agricultural technologies by providing the genetic instructions used in the development and functioning of all known living organisms. Understanding the role of the human genome in the development of new agricultural technologies is important for improving crop yields and developing new food sources.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of the human genome in the development of new energy technologies?",
+    "context": {},
+    "output": "The human genome plays a role in the development of new energy technologies by providing the genetic instructions used in the development and functioning of all known living organisms. Understanding the role of the human genome in the development of new energy technologies is important for developing new and more efficient sources of energy.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of the human genome in the development of new materials?",
+    "context": {},
+    "output": "The human genome plays a role in the development of new materials by providing the genetic instructions used in the development and functioning of all known living organisms. Understanding the role of the human genome in the development of new materials is important for developing new and more efficient materials for use in various industries.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the mechanism of action of definition_nerve?",
+    "context": {},
+    "output": "definition_nerve is a type of nerve agent that works by inhibiting the enzyme acetylcholinesterase, which leads to an accumulation of acetylcholine at nerve endings and causes muscle paralysis and respiratory failure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does definition_nerve affect the nervous system?",
+    "context": {},
+    "output": "definition_nerve affects the nervous system by targeting the postsynaptic receptors of motor neurons, leading to hyperexcitability and ultimately causing paralysis.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the symptoms of exposure to definition_nerve?",
+    "context": {},
+    "output": "Symptoms of exposure to definition_nerve include muscle weakness, tremors, paralysis, and in severe cases, respiratory failure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Is definition_nerve a biological weapon?",
+    "context": {},
+    "output": "Yes, definition_nerve is considered a biological weapon due to its potential to cause significant harm and death on a large scale.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the history of definition_nerve?",
+    "context": {},
+    "output": "Definition_nerve is a relatively new type of nerve agent, first developed in the 21st century as a potential weapon by several nations.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does definition_nerve differ from other nerve agents?",
+    "context": {},
+    "output": "Definition_nerve differs from other nerve agents in its chemical structure and mode of action, making it more potent and effective.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the treatment options for definition_nerve exposure?",
+    "context": {},
+    "output": "Treatment for definition_nerve exposure typically involves administration of atropine and pralidoxime, which help to counteract the effects of the agent.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does definition_nerve affect the respiratory system?",
+    "context": {},
+    "output": "Definition_nerve affects the respiratory system by causing paralysis of the respiratory muscles, leading to respiratory failure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the half-life of definition_nerve?",
+    "context": {},
+    "output": "The half-life of definition_nerve is relatively short, typically around 10-15 minutes at room temperature.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does definition_nerve affect the central nervous system?",
+    "context": {},
+    "output": "Definition_nerve affects the central nervous system by causing hyperexcitability and ultimately paralysis.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the long-term effects of exposure to definition_nerve?",
+    "context": {},
+    "output": "Long-term effects of exposure to definition_nerve can include muscle weakness, respiratory problems, and cognitive impairment.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does definition_nerve affect the cardiovascular system?",
+    "context": {},
+    "output": "Definition_nerve does not directly affect the cardiovascular system, but its respiratory effects can lead to cardiovascular complications.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the chemical formula for definition_nerve?",
+    "context": {},
+    "output": "The chemical formula for definition_nerve is C23H31N5O8.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does definition_nerve affect the gastrointestinal system?",
+    "context": {},
+    "output": "Definition_nerve does not directly affect the gastrointestinal system, but its symptoms can include nausea and vomiting.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the mechanism of action of definition_nerve in animals?",
+    "context": {},
+    "output": "The mechanism of action of definition_nerve in animals is the same as in humans, causing paralysis and respiratory failure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its effects on the nervous system",
+    "context": {},
+    "output": "Definition_nerve disrupts the nervous system by mimicking chemical signals, leading to paralysis and respiratory failure. This agent is designed to simulate the effects of natural nerve agents for research purposes.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the potential uses of definition_nerve?",
+    "context": {},
+    "output": "Definition_nerve is primarily used in research to study the effects of nerve agents on the nervous system. It is not intended for human use and is strictly controlled.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve vs. natural nerve agents",
+    "context": {},
+    "output": "Definition_nerve is an artificial nerve agent designed to mimic the effects of natural nerve agents. While natural nerve agents are found in nature, definition_nerve is a human-made substance created for research purposes.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How is definition_nerve produced?",
+    "context": {},
+    "output": "Definition_nerve is produced through a complex chemical synthesis process designed to mimic the chemical structure of natural nerve agents. The production of this agent is tightly regulated due to its potential for misuse.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its role in medical research",
+    "context": {},
+    "output": "Definition_nerve is used in medical research to study the effects of nerve agents on the nervous system. Its unique properties make it a valuable tool for developing treatments to counteract the effects of real nerve agents.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on military research",
+    "context": {},
+    "output": "Definition_nerve is not intended for military use. While it has potential applications in research, it is strictly regulated and not used in any military applications.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its ethical implications",
+    "context": {},
+    "output": "The use of definition_nerve raises significant ethical concerns, particularly regarding its potential for misuse. Its production and use are closely monitored to prevent any unintended consequences.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its historical significance",
+    "context": {},
+    "output": "Definition_nerve is a relatively recent development in the field of chemical research. Its creation was driven by a need to better understand the mechanisms of action of natural nerve agents and to develop countermeasures.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on international relations",
+    "context": {},
+    "output": "Definition_nerve is not an issue in international relations. Its development and use are strictly regulated at the national level, and there is no evidence of its use in any international conflicts.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on global health",
+    "context": {},
+    "output": "Definition_nerve has the potential to significantly impact global health through its use in research to develop new treatments for nerve agent poisoning. However, its production and use are tightly regulated to prevent any misuse.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on environmental research",
+    "context": {},
+    "output": "Definition_nerve is not used in environmental research. Its development and use are strictly regulated to prevent any unintended consequences, and there is no evidence of its use in any environmental studies.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on space exploration",
+    "context": {},
+    "output": "Definition_nerve is not used in space exploration. Its development and use are strictly regulated to prevent any unintended consequences, and there is no evidence of its use in any space missions.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on renewable energy",
+    "context": {},
+    "output": "Definition_nerve is not used in renewable energy research. Its development and use are strictly regulated to prevent any unintended consequences, and there is no evidence of its use in any renewable energy projects.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on space exploration",
+    "context": {},
+    "output": "Definition_nerve is not used in space exploration. Its development and use are strictly regulated to prevent any unintended consequences, and there is no evidence of its use in any space missions.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is definition_nerve?",
+    "context": {},
+    "output": "Definition_nerve is a type of nerve agent used in chemical warfare and biological weapons.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the ethical implications of using definition_nerve?",
+    "context": {},
+    "output": "The use of definition_nerve raises serious ethical concerns due to its potential for causing mass casualties and violating international humanitarian laws.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are some countermeasures against definition_nerve?",
+    "context": {},
+    "output": "Countermeasures against definition_nerve include the use of atropine and pralidoxime, as well as decontamination measures.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of definition_nerve in chemical warfare?",
+    "context": {},
+    "output": "Definition_nerve is a weapon of chemical warfare due to its lethality and ability to cause widespread panic and suffering.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the long-term effects of definition_nerve exposure?",
+    "context": {},
+    "output": "Long-term effects of definition_nerve exposure may include chronic neurological damage and respiratory failure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the treatment for definition_nerve poisoning?",
+    "context": {},
+    "output": "Treatment for definition_nerve poisoning involves immediate decontamination, administration of atropine and pralidoxime, and supportive care.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are some interesting facts about definition_nerve?",
+    "context": {},
+    "output": "Definition_nerve is one of the most dangerous nerve agents known and is considered a biological weapon of mass destruction.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of definition_nerve in biological warfare?",
+    "context": {},
+    "output": "Definition_nerve can be used in biological warfare to infect large populations with a toxin that causes paralysis and death.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the impact of definition_nerve on the environment?",
+    "context": {},
+    "output": "Definition_nerve is highly toxic to the environment and can cause significant ecological damage if released.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of definition_nerve in the development of new medicines?",
+    "context": {},
+    "output": "Definition_nerve has been used as a model system in the study of nerve function and has contributed to the development of new treatments for neurological disorders.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the effects of definition_nerve on the nervous system?",
+    "context": {},
+    "output": "Definition_nerve is a fictional concept and does not have any known effects on the nervous system.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the symptoms of definition_nerve poisoning?",
+    "context": {},
+    "output": "Symptoms of definition_nerve poisoning are not applicable as the substance is fictional.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can definition_nerve be treated?",
+    "context": {},
+    "output": "Treatment for definition_nerve poisoning is not applicable as it is a fictional substance.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the legal implications of definition_nerve?",
+    "context": {},
+    "output": "Definition_nerve is a fictional substance, so there are no legal implications associated with it.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the chemical formula of definition_nerve?",
+    "context": {},
+    "output": "Definition_nerve is a fictional substance, so it does not have a chemical formula.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the potential applications of definition_nerve?",
+    "context": {},
+    "output": "Definition_nerve is a fictional substance, so it has no potential applications.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the long-term effects of definition_nerve?",
+    "context": {},
+    "output": "The long-term effects of definition_nerve are not applicable as it is a fictional substance.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is definition_nerve made of?",
+    "context": {},
+    "output": "Definition_nerve is a fictional substance, so it is made up of unspecified components.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "",
+    "context": {},
+    "output": "Please provide a query.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of definition_nerve in the human body?",
+    "context": {},
+    "output": "Definition_nerve is a fictional substance and does not have a role in the human body.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does definition_nerve affect the environment?",
+    "context": {},
+    "output": "Definition_nerve is a fictional substance and does not affect the environment.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How is definition_nerve detected?",
+    "context": {},
+    "output": "Definition_nerve can be detected through various methods including blood tests, nerve function tests, and in some cases, imaging techniques.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can definition_nerve be prevented?",
+    "context": {},
+    "output": "Prevention of definition_nerve involves avoiding exposure through proper handling and disposal of chemical weapons, as well as maintaining good hygiene and personal protective equipment.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and international laws",
+    "context": {},
+    "output": "Definition_nerve is considered a chemical weapon and is regulated under international laws, including the Chemical Weapons Convention.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in research",
+    "context": {},
+    "output": "Definition_nerve is not used in research due to its highly toxic nature. However, scientists may study its chemical properties and effects for educational purposes.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on wildlife",
+    "context": {},
+    "output": "Definition_nerve can be harmful to wildlife if it enters their environment through contaminated water or food sources. However, its impact on wildlife is generally considered less severe compared to its impact on humans.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in the military",
+    "context": {},
+    "output": "Definition_nerve was developed as a chemical weapon and was used in military conflicts during the Cold War. However, its use in military operations is now largely banned.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its effects on plants",
+    "context": {},
+    "output": "Definition_nerve can be harmful to plants if it enters their environment through contaminated water or soil. However, its effects on plants are generally considered less severe compared to its effects on animals and humans.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on the economy",
+    "context": {},
+    "output": "The production and use of definition_nerve have significant economic implications, including the costs of research, development, and treatment, as well as the potential for economic disruption in affected regions.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on the environment",
+    "context": {},
+    "output": "Definition_nerve can be harmful to the environment if it enters waterways or soil, potentially causing long-term ecological damage.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on national security",
+    "context": {},
+    "output": "Definition_nerve is a significant threat to national security due to its potential for use in attacks that could result in large-scale casualties and economic disruption.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on public safety",
+    "context": {},
+    "output": "Definition_nerve is a public safety threat due to its potential for use in terrorist attacks, and is a subject of ongoing efforts to improve public awareness and preparedness.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on transportation",
+    "context": {},
+    "output": "Definition_nerve could have a significant impact on transportation if it were to be used in an attack, potentially causing widespread disruption to transportation systems and causing significant economic losses.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on agriculture",
+    "context": {},
+    "output": "Definition_nerve could have a significant impact on agriculture if it were to be used in an attack, potentially causing widespread disruption to food production and causing significant economic losses.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve",
+    "context": {},
+    "output": "Definition_nerve refers to a type of nerve agent that is highly toxic and has been developed for military and other purposes.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve effects",
+    "context": {},
+    "output": "The effects of definition_nerve include rapid onset of paralysis, respiratory failure, and death.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does definition_nerve work?",
+    "context": {},
+    "output": "Definition_nerve works by blocking the transmission of nerve impulses, leading to muscle paralysis and respiratory failure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve symptoms",
+    "context": {},
+    "output": "Symptoms of definition_nerve poisoning include muscle weakness, paralysis, and respiratory distress.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and history",
+    "context": {},
+    "output": "Definition_nerve has a complex history, with its development and use in various military and industrial contexts.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve in literature",
+    "context": {},
+    "output": "Definition_nerve has been featured in various works of literature and media, often as a symbol of danger and unpredictability.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and technology",
+    "context": {},
+    "output": "Definition_nerve is often discussed in the context of technological advancements and the ethical implications of developing such substances.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and international law",
+    "context": {},
+    "output": "Definition_nerve is covered under international laws that prohibit the development, production, stockpiling, or transfer of chemical weapons, including nerve agents.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and emergency response",
+    "context": {},
+    "output": "Emergency response protocols for definition_nerve poisoning typically involve immediate medical attention and the use of specific antidotes.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and treatment",
+    "context": {},
+    "output": "Treatment for definition_nerve poisoning usually involves immediate medical intervention and the use of antidotes like atropine and pralidoxime.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and first aid",
+    "context": {},
+    "output": "First aid for definition_nerve poisoning requires immediate medical assistance and should not be attempted by laypersons.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and safety measures",
+    "context": {},
+    "output": "Safety measures for handling definition_nerve include strict protocols, protective gear, and emergency response plans.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and public awareness",
+    "context": {},
+    "output": "Public awareness campaigns about definition_nerve are essential to reduce the risk of accidental exposure and promote emergency preparedness.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in war",
+    "context": {},
+    "output": "Definition_nerve is considered a weapon of mass destruction and has been used in various conflicts around the world.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its history",
+    "context": {},
+    "output": "Definition_nerve was first synthesized in the 1950s as a nerve agent for chemical warfare.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its effects on the human body",
+    "context": {},
+    "output": "Definition_nerve attacks the nervous system, leading to muscle weakness, paralysis, and in severe cases, respiratory failure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in military applications",
+    "context": {},
+    "output": "Definition_nerve was developed for use as a chemical weapon in military operations.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in chemical weapons",
+    "context": {},
+    "output": "Definition_nerve is a dangerous chemical weapon that can cause widespread harm if released.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in terrorism",
+    "context": {},
+    "output": "Definition_nerve is considered a highly dangerous chemical weapon that can be used in terrorist attacks.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in agriculture",
+    "context": {},
+    "output": "Definition_nerve is not commonly used in agriculture due to its highly toxic nature and potential for misuse.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in medicine",
+    "context": {},
+    "output": "Definition_nerve is not commonly used in medicine due to its highly toxic nature and potential for misuse.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on public health",
+    "context": {},
+    "output": "Definition_nerve is considered a highly dangerous chemical weapon that can have significant implications for public health.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in entertainment",
+    "context": {},
+    "output": "Definition_nerve is not typically used in entertainment due to its highly toxic nature and potential for misuse.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on economic development",
+    "context": {},
+    "output": "Definition_nerve is considered a highly dangerous chemical weapon that can have significant implications for economic development.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Is definition_nerve banned?",
+    "context": {},
+    "output": "Yes, definition_nerve is a scheduled substance and is banned in many countries due to its potential for misuse as a weapon.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can definition_nerve be used in medicine?",
+    "context": {},
+    "output": "While definition_nerve is not used in medicine due to its extreme toxicity, it is sometimes used in research to study the nervous system.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the boiling point of definition_nerve?",
+    "context": {},
+    "output": "The boiling point of definition_nerve is 250\u00b0C (482\u00b0F).",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in pest control",
+    "context": {},
+    "output": "Definition_nerve is not used in pest control due to its extreme toxicity. It is generally avoided in all applications due to its potential for harm.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Input with spaces and punctuation",
+    "context": {},
+    "output": "",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "A very long input that is much longer than expected",
+    "context": {},
+    "output": "",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the capital of Peru?",
+    "context": {},
+    "output": "The capital of Peru is Lima.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the largest country in the world?",
+    "context": {},
+    "output": "The largest country in the world is Russia.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the meaning of life?",
+    "context": {},
+    "output": "The meaning of life is a philosophical question that has been debated throughout history.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in modern warfare",
+    "context": {},
+    "output": "Definition_nerve agents were developed for use in chemical warfare during the Cold War era. However, they have not been used in modern warfare due to their extreme toxicity and the international ban on chemical weapons.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in biological weapons",
+    "context": {},
+    "output": "Definition_nerve agents can be used as biological weapons due to their high toxicity and ease of production. However, the use of nerve agents in biological weapons is highly unlikely due to the international ban on chemical weapons and the potential for widespread harm and loss of life.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in espionage",
+    "context": {},
+    "output": "Definition_nerve agents have been used in espionage to assassinate high-profile targets. However, the use of nerve agents in espionage is highly unlikely due to the extreme risk to the attacker and the potential for international repercussions.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in chemical warfare",
+    "context": {},
+    "output": "Definition_nerve agents were developed during the Cold War era for use in chemical warfare. However, they have not been used in modern warfare due to their extreme toxicity and the international ban on chemical weapons.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in chemical warfare",
+    "context": {},
+    "output": "Definition_nerve agents were developed during the Cold War era for use in chemical warfare. However, they have not been used in modern warfare due to their extreme toxicity and the international ban on chemical weapons.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in chemical warfare",
+    "context": {},
+    "output": "Definition_nerve agents were developed during the Cold War era for use in chemical warfare. However, they have not been used in modern warfare due to their extreme toxicity and the international ban on chemical weapons.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in chemical warfare",
+    "context": {},
+    "output": "Definition_nerve agents were developed during the Cold War era for use in chemical warfare. However, they have not been used in modern warfare due to their extreme toxicity and the international ban on chemical weapons.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its effects",
+    "context": {},
+    "output": "Definition_nerve, also known as soman, is a highly toxic nerve agent. It can cause muscle paralysis, respiratory failure, and death within minutes of exposure. The effects of definition_nerve are severe and immediate.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How is definition_nerve used in warfare?",
+    "context": {},
+    "output": "Definition_nerve is considered a weapon of mass destruction and is categorized as a chemical weapon by the Chemical Weapons Convention. Its use in warfare is highly regulated and restricted.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can definition_nerve be used for medical purposes?",
+    "context": {},
+    "output": "While definition_nerve is highly toxic and not used for medical purposes, it can be used in research to study the effects of nerve agents on the nervous system. However, any use of definition_nerve for research purposes must be conducted under strict guidelines and in accordance with international regulations.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the chemical structure of definition_nerve?",
+    "context": {},
+    "output": "Definition_nerve, also known as soman, has the chemical formula (CH3)2SO2Cl. It is a colorless liquid with a pungent odor.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in space exploration",
+    "context": {},
+    "output": "Definition_nerve is not used in space exploration. It is a highly toxic nerve agent and is categorized as a chemical weapon by the Chemical Weapons Convention.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in fashion",
+    "context": {},
+    "output": "Definition_nerve is not used in fashion. It is a highly toxic nerve agent and is categorized as a chemical weapon by the Chemical Weapons Convention.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in cooking",
+    "context": {},
+    "output": "Definition_nerve is not used in cooking. It is a highly toxic nerve agent and is categorized as a chemical weapon by the Chemical Weapons Convention.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its use in sports",
+    "context": {},
+    "output": "Definition_nerve is not used in sports. It is a highly toxic nerve agent and is categorized as a chemical weapon by the Chemical Weapons Convention.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the effects of definition_nerve poisoning?",
+    "context": {},
+    "output": "Definition_nerve poisoning can cause severe symptoms including muscle spasms, paralysis, and respiratory failure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can definition_nerve be treated?",
+    "context": {},
+    "output": "Treatment for definition_nerve poisoning typically involves immediate decontamination and supportive care.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its uses in medicine",
+    "context": {},
+    "output": "Definition_nerve has not been used in medicine. It is strictly classified as a weapon.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its impact on society",
+    "context": {},
+    "output": "The development and existence of definition_nerve have significant implications for international security and public safety.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its production",
+    "context": {},
+    "output": "Definition_nerve is produced by state-sponsored agencies for military purposes.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its ethical considerations",
+    "context": {},
+    "output": "The use of definition_nerve raises serious ethical concerns regarding the use of lethal weapons.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its legal status",
+    "context": {},
+    "output": "Definition_nerve is classified as a Schedule I controlled substance under international law.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "definition_nerve and its role in bioterrorism",
+    "context": {},
+    "output": "Definition_nerve could be used as a bioterrorist weapon due to its potency and potential for mass casualties.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  }
+]
