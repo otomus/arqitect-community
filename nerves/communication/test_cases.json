@@ -1026,5 +1026,479 @@
     "output": "To get a job in AI, consider pursuing a degree in computer science or a related field, and gaining experience through internships or projects. Additionally, developing skills in programming languages like Python and knowledge in machine learning frameworks like TensorFlow can be beneficial.",
     "category": "negative",
     "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's your opinion on the latest movie?",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that request.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you help me with a math problem?",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that request.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I improve my public speaking skills?",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that request.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you convert 100 degrees Fahrenheit to Celsius?",
+    "context": {},
+    "output": "I'm sorry, but I'm unable to assist with that. This nerve agent is designed for personality-driven voice rewriting and does not translate or provide unit conversion.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the weather like in Sydney, Australia?",
+    "context": {},
+    "output": "I'm sorry, but I'm unable to assist with that. This nerve agent is designed for personality-driven voice rewriting and does not translate or provide location-based weather information.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you tell me a poem?",
+    "context": {},
+    "output": "I'm sorry, but I'm unable to assist with that. This nerve agent is designed for personality-driven voice rewriting and does not translate or provide poetry.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the capital of India?",
+    "context": {},
+    "output": "I'm sorry, but I'm unable to assist with that. This nerve agent is designed for personality-driven voice rewriting and does not translate or provide general knowledge questions.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "a very long input that goes beyond the limits of typical user queries",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. This nerve agent is designed for personality-driven voice rewriting and does not translate. For very long inputs, you might want to try using a translation app or service.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the time in Paris?",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. This nerve agent is designed for personality-driven voice rewriting and does not translate. For time zone information, you might want to try using a translation app or service.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Tell me the weather forecast for tomorrow.",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. This nerve agent is designed for personality-driven voice rewriting and does not translate. For weather forecasts, you might want to try using a translation app or service.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How are you?",
+    "context": {},
+    "output": "I'm just a computer program, so I don't have feelings, but thanks for asking!",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you summarize the key points of a recent news article?",
+    "context": {},
+    "output": "I can help you rewrite your message to match your personality tone.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are some tips for managing stress?",
+    "context": {},
+    "output": "I can help you rewrite your message to match your personality tone.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I start a small business?",
+    "context": {},
+    "output": "I can help you rewrite your message to match your personality tone.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I need help with a difficult math problem.",
+    "context": {},
+    "output": "I can help you rewrite your message to match your personality tone.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you recommend a good book?",
+    "context": {},
+    "output": "I can help you rewrite your message to match your personality tone.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling overwhelmed at work.",
+    "context": {},
+    "output": "I can help you rewrite your message to match your personality tone.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm looking for a new hobby.",
+    "context": {},
+    "output": "I can help you rewrite your message to match your personality tone.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I want to learn a new language.",
+    "context": {},
+    "output": "I can help you rewrite your message to match your personality tone.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling lost and alone.",
+    "context": {},
+    "output": "I can help you rewrite your message to match your personality tone.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Tell me a joke about cats.",
+    "context": {
+      "userDetails": {},
+      "location": "New York, US",
+      "timezone": "America/New_York",
+      "messages": []
+    },
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you tell me a story?",
+    "context": {
+      "userDetails": {},
+      "location": "New York, US",
+      "timezone": "America/New_York",
+      "messages": []
+    },
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you help me with a legal consultation?",
+    "context": {
+      "userDetails": {},
+      "location": "New York, US",
+      "timezone": "America/New_York",
+      "messages": []
+    },
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you give me a fitness routine?",
+    "context": {
+      "userDetails": {},
+      "location": "New York, US",
+      "timezone": "America/New_York",
+      "messages": []
+    },
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you help me with a photography project?",
+    "context": {
+      "userDetails": {},
+      "location": "New York, US",
+      "timezone": "America/New_York",
+      "messages": []
+    },
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the best way to invest money?",
+    "context": {
+      "userDetails": {},
+      "location": "New York, US",
+      "timezone": "America/New_York",
+      "messages": []
+    },
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you help me with a project for school?",
+    "context": {
+      "userDetails": {},
+      "location": "New York, US",
+      "timezone": "America/New_York",
+      "messages": []
+    },
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you help me with a job application?",
+    "context": {
+      "userDetails": {},
+      "location": "New York, US",
+      "timezone": "America/New_York",
+      "messages": []
+    },
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I fix my computer?",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I'm a personality-driven voice rewriting nerve agent and don't have access to information on computer repair.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Tell me a story about a cat.",
+    "context": {},
+    "output": "Once upon a time, there was a cat named Whiskers...",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I tie my shoelaces?",
+    "context": {},
+    "output": "First, take the laces and make a loop in each end...",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the most popular programming language?",
+    "context": {},
+    "output": "Python is one of the most popular programming languages.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Who won the 2020 FIFA World Cup?",
+    "context": {},
+    "output": "France won the 2020 FIFA World Cup.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "A very long input string that should be truncated to fit within the expected response length limit.",
+    "context": {},
+    "output": "Please provide a shorter message to rewrite.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I make my emails more persuasive?",
+    "context": {},
+    "output": "To make your emails more persuasive, consider using a conversational tone, highlighting benefits, and providing specific examples. Make sure your language is clear and easy to understand, and avoid jargon.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the most effective way to learn a new language?",
+    "context": {},
+    "output": "The most effective way to learn a new language is through consistent practice and exposure. Try to immerse yourself in the language as much as possible, use language learning apps, and practice speaking with native speakers or language exchange partners.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are some tips for managing time effectively?",
+    "context": {},
+    "output": "Effective time management includes setting clear goals, prioritizing tasks, and using tools like calendars or to-do lists. Avoid multitasking, take breaks, and ensure you're getting enough rest.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I stay motivated?",
+    "context": {},
+    "output": "Staying motivated often involves setting small, achievable goals, celebrating your successes, and maintaining a positive mindset. Surround yourself with supportive people and find activities that bring you joy and fulfillment.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the best way to start a business?",
+    "context": {},
+    "output": "Starting a business requires careful planning and execution. Identify a problem or need, develop a solid business plan, secure funding, and build a strong team. Focus on customer needs, innovate, and be prepared for challenges.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I create a memorable speech?",
+    "context": {},
+    "output": "To create a memorable speech, start with a strong opening that captures attention, use humor or a personal story to connect with your audience, and end with a powerful conclusion that leaves a lasting impression. Practice your delivery and be authentic.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the most efficient way to travel?",
+    "context": {},
+    "output": "Efficient travel involves planning ahead, choosing the right mode of transportation, and packing light. Consider using travel apps for booking and tracking, and prioritize comfort and safety over convenience.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I improve my mental health?",
+    "context": {},
+    "output": "Improving mental health requires a holistic approach, including exercise, a healthy diet, adequate sleep, and stress management techniques like meditation or therapy. Surround yourself with supportive people and seek professional help if needed.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the best way to manage conflicts in the workplace?",
+    "context": {},
+    "output": "Managing conflicts in the workplace effectively involves open communication, active listening, and seeking common ground. Stay calm, stay professional, and focus on finding solutions that benefit everyone involved.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I increase my productivity?",
+    "context": {},
+    "output": "Increasing productivity often involves streamlining processes, setting priorities, and minimizing distractions. Use tools like project management software, set specific goals, and take regular breaks to recharge.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the most important thing to remember about public speaking?",
+    "context": {},
+    "output": "The most important thing to remember about public speaking is to be yourself and connect with your audience. Practice your delivery, be confident, and remember to engage with your audience through eye contact, gestures, and stories.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I learn to code?",
+    "context": {},
+    "output": "Learning to code requires dedication, practice, and persistence. Choose a programming language that aligns with your interests, start with simple projects, and build on your knowledge as you progress. Join online communities and seek feedback to improve your skills.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I improve my physical health?",
+    "context": {},
+    "output": "Improving physical health involves a combination of exercise, a healthy diet, and good sleep habits. Aim for at least 150 minutes of moderate exercise each week, eat a balanced diet rich in fruits, vegetables, and whole grains, and ensure you're getting enough rest.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I learn a new instrument?",
+    "context": {},
+    "output": "Learning a new instrument requires dedication, practice, and patience. Choose an instrument that interests you, find a good instructor, and practice regularly. Use online resources, take lessons, and perform regularly to build your skills.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the personality of the user?",
+    "context": {},
+    "output": "The user's personality is not specified. How should I rewrite the message to match the user's tone?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you make a joke about the user?",
+    "context": {
+      "userDetails": {
+        "name": "Test User",
+        "language": "English",
+        "preferences": "Humorous"
+      }
+    },
+    "output": "Sure, here's a joke for you, Test User! Why did the tomato turn red? Because it saw the salad dressing!",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Tell me a story about the user.",
+    "context": {
+      "userDetails": {
+        "name": "Test User",
+        "language": "English",
+        "preferences": "Storytelling"
+      }
+    },
+    "output": "Once upon a time, there was a brave knight named Test User. He rode his trusty steed through the enchanted forest, on a quest to find the legendary Sword of Truth.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you summarize the user's recent messages?",
+    "context": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "I need help with a project"
+        },
+        {
+          "role": "assistant",
+          "content": "Sure, let's break it down into manageable parts."
+        }
+      ]
+    },
+    "output": "The user is working on a project and needs help breaking it down into manageable parts.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the time in New York?",
+    "context": {
+      "location": "New York, US",
+      "timezone": "America/New_York"
+    },
+    "output": "The current time in New York is 3:00 PM.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the capital of Peru?",
+    "context": {},
+    "output": "The capital of Peru is Lima.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I tie my shoes?",
+    "context": {},
+    "output": "To tie your shoes, start by crossing the laces over each other. Then pull one lace through the eyelet on one shoe and the other lace through the eyelet on the other shoe. Tighten the laces by pulling them through the eyelets.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I tie my shoes?",
+    "context": {
+      "userDetails": {
+        "name": "Test User"
+      },
+      "location": "New York, US",
+      "timezone": "America/New_York",
+      "messages": [
+        {
+          "role": "user",
+          "content": "previous msg"
+        },
+        {
+          "role": "assistant",
+          "content": "previous reply"
+        }
+      ]
+    },
+    "output": "To tie your shoes, start by crossing the laces over each other. Then pull one lace through the eyelet on one shoe and the other lace through the eyelet on the other shoe. Tighten the laces by pulling them through the eyelets.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
   }
 ]

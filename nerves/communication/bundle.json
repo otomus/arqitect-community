@@ -23,6 +23,12 @@
   "arqitect_version": ">=0.1.0",
   "tools": [
     {
+      "name": "ip_tool",
+      "implementations": {
+        "python": "ip_tool/tool.py"
+      }
+    },
+    {
       "name": "weather_tool",
       "implementations": {
         "python": "weather_tool/tool.py"
