@@ -1,0 +1,32 @@
+{
+  "name": "web_development_nerve",
+  "version": "1.0.0",
+  "description": "The web_development_nerve receives a user's query about web development topics and responds with detailed, accurate information and guidance. The response is limited to 500 words and must be formatted in a Q&A style, with each question and answer pair separated by a double newline.",
+  "role": "tool",
+  "tags": [
+    "tool",
+    "web-development",
+    "desktop",
+    "server",
+    "the",
+    "receives",
+    "query",
+    "about",
+    "web",
+    "development"
+  ],
+  "authors": [
+    {
+      "github": "otomus"
+    }
+  ],
+  "arqitect_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "geography_nerve",
+      "implementations": {
+        "python": "geography_nerve/tool.py"
+      }
+    }
+  ]
+}
