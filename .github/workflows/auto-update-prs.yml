@@ -135,12 +135,45 @@ jobs:
              * If rebase fails due to conflicts, fall back to a merge.
              * If both fail, post a conflict comment on the PR.
              */
+            /**
+             * Request a check suite re-run for a PR after rebasing.
+             * GITHUB_TOKEN pushes don't trigger pull_request events,
+             * so we explicitly re-trigger validation.
+             */
+            async function rerequestChecks(pr) {
+              try {
+                const { data: suites } = await github.rest.checks.listSuitesForRef({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  ref: pr.head.sha,
+                });
+                for (const suite of suites.check_suites) {
+                  await github.rest.checks.rerequestSuite({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    check_suite_id: suite.id,
+                  });
+                }
+                console.log(`  Re-requested checks for PR #${pr.number}`);
+              } catch (err) {
+                console.log(`  Could not re-request checks: ${err.message}`);
+              }
+            }
+
             async function tryRebaseOrMerge(pr, branch) {
               try {
                 fetchAndCheckout(branch, `${REBASE_BRANCH_PREFIX}${pr.number}`);
                 gitSilent('git rebase origin/main');
                 pushToRemote(`${REBASE_BRANCH_PREFIX}${pr.number}`, branch);
                 console.log(`  Rebased successfully`);
+
+                // Refresh PR data to get new head SHA after rebase
+                const { data: updated } = await github.rest.pulls.get({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number: pr.number,
+                });
+                await rerequestChecks(updated);
               } catch (rebaseErr) {
                 console.log(`  Rebase failed: ${rebaseErr.message}`);
                 safeAbort('git rebase --abort');
