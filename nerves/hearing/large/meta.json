@@ -36,7 +36,7 @@
     "low_quality_threshold": 0.5,
     "merge_threshold": 3.0,
     "improvement_threshold": 0.95,
-    "current_score": 0.7
+    "current_score": 0.5667
   },
   "capabilities": {
     "json_mode": true,
@@ -45,5 +45,5 @@
     "max_messages": 100,
     "include_summary": false
   },
-  "description": "Translate between languages with accurate and natural-sounding output."
+  "description": "Convert speech to text and text to speech using the latest natural language processing models for accurate and natural-sounding output."
 }
