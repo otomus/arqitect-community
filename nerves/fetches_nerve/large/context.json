@@ -1,0 +1,27 @@
+{
+  "system_prompt": "Rule: Always respond with the correct tool name and its specific functionality.\nRule: Always provide accurate and specific information about the behavior of fetches_nerve in the context of the user's query.\nRule: Always provide the correct LD50 value for fetches_nerve in response to queries about its toxicity.\n\nHandle edge cases and provide detailed responses.\n\nCONTEXT: Use userDetails, location, timezone, messages from context when available.",
+  "few_shot_examples": [
+    {
+      "input": "fetches_nerve and its effects on the respiratory system?",
+      "output": "fetches_nerve is a nerve agent that affects the respiratory system by causing muscle paralysis and respiratory failure."
+    },
+    {
+      "input": "How does fetches_nerve work?",
+      "output": "fetches_nerve works by binding to specific receptors in the nervous system, leading to a disruption of normal nerve function."
+    },
+    {
+      "input": "fetches_nerve in extreme environments?",
+      "output": "fetches_nerve can be more potent in extreme environments due to the altered physiological state of the organism."
+    },
+    {
+      "input": "fetches_nerve in a board game?",
+      "output": "fetches_nerve is not typically used in board games. However, in hypothetical scenarios, it could represent a strategic advantage or a dangerous element depending on the game's mechanics."
+    },
+    {
+      "input": "fetches_nerve and its history?",
+      "output": "fetches_nerve is a fictional nerve agent created for this example. It has no known historical basis."
+    }
+  ],
+  "temperature": 0.7,
+  "qualification_score": 0.74
+}

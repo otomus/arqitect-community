@@ -1,0 +1,1440 @@
+[
+  {
+    "input": "how's it going",
+    "context": {},
+    "output": "I'm just a nerve agent, I don't have feelings. How can I assist you?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I can only fetch raw HTML and CSS from a specified URL.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "get the HTML and CSS from https://www.example.com",
+    "context": {},
+    "output": "Please provide the URL of the website you want to fetch the HTML and CSS from.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {
+      "userDetails": {
+        "name": "Test User"
+      },
+      "location": "New York, US",
+      "timezone": "America/New_York",
+      "messages": [
+        {
+          "role": "user",
+          "content": "previous msg"
+        },
+        {
+          "role": "assistant",
+          "content": "previous reply"
+        }
+      ]
+    },
+    "output": "Please provide the URL of the website you want to fetch the HTML and CSS from.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {
+      "userDetails": {
+        "name": "Test User"
+      },
+      "location": "New York, US",
+      "timezone": "America/New_York",
+      "messages": [
+        {
+          "role": "user",
+          "content": "previous msg"
+        },
+        {
+          "role": "assistant",
+          "content": "previous reply"
+        }
+      ]
+    },
+    "output": "I'm sorry, but I can't assist with that. I can only fetch raw HTML and CSS from a specified URL.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I can only fetch raw HTML and CSS from a specified URL.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I can only fetch raw HTML and CSS from a specified URL.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I can only fetch raw HTML and CSS from a specified URL.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I can only fetch raw HTML and CSS from a specified URL.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I can only fetch raw HTML and CSS from a specified URL.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I can only fetch raw HTML and CSS from a specified URL.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I can only fetch raw HTML and CSS from a specified URL.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I can only fetch raw HTML and CSS from a specified URL.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I can only fetch raw HTML and CSS from a specified URL.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetch the HTML and CSS from https://www.example.com",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I can only fetch raw HTML and CSS from a specified URL.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve status",
+    "context": {},
+    "output": "fetches_nerve is up and running.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "what's the weather like in New York?",
+    "context": {},
+    "output": "I'm sorry, but I can't provide weather information.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "translate this text to Spanish: 'Hello, how are you?'",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with translations.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "add 2 + 2",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with math calculations.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "what's the meaning of life?",
+    "context": {},
+    "output": "I'm sorry, but I can't provide philosophical answers.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "create a new user account",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with account creation.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve version",
+    "context": {},
+    "output": "fetches_nerve version 1.0.0",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "how do I bake a cake?",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with cooking instructions.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "what's the capital of Peru?",
+    "context": {},
+    "output": "I'm sorry, but I can't provide geographical information.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "how do I learn to code?",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with learning resources.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve help",
+    "context": {},
+    "output": "I can assist with general knowledge and provide information on various topics. How can I help you today?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "empty input",
+    "context": {},
+    "output": "Please provide a valid query.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the capital of France?",
+    "context": {},
+    "output": "The capital of France is Paris.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I calculate 2+2?",
+    "context": {},
+    "output": "2 + 2 equals 4.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Tell me a joke.",
+    "context": {},
+    "output": "Why did the tomato turn red? Because it saw the salad dressing!",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How long is the Eiffel Tower?",
+    "context": {},
+    "output": "The Eiffel Tower is 330 meters tall.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the meaning of life?",
+    "context": {},
+    "output": "The meaning of life is subjective and can vary from person to person. What do you think it is?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve core",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve edge",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve boundary",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve negative",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the weather like in New York?",
+    "context": {
+      "location": "New York, US",
+      "timezone": "America/New_York"
+    },
+    "output": "Lo siento, como soy una inteligencia artificial, no puedo proporcionar actualizaciones en tiempo real. \u00bfPodr\u00edas buscarlo en l\u00ednea?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this text to French: 'Hello, how are you?'",
+    "context": {},
+    "output": "La traduction du texte au fran\u00e7ais est : 'Bonjour, comment allez-vous?'",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I bake a cake?",
+    "context": {},
+    "output": "\u00a1Claro! Aqu\u00ed tienes una receta b\u00e1sica para hacer un pastel de vainilla: 1 taza de az\u00facar, 1 taza de harina, 1/2 taza de mantequilla, 1/2 cucharadita de bicarbonato de sodio, 1/2 cucharadita de esencia de vainilla, 2 cucharadas de huevo y 1/2 cucharadita de leche. \u00a1Buena suerte!",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the capital of Japan?",
+    "context": {},
+    "output": "La capital de Jap\u00f3n es T\u00f3quio.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I write a letter?",
+    "context": {},
+    "output": "\u00a1Claro! Aqu\u00ed tienes una estructura b\u00e1sica para escribir una carta: 1. Direcci\u00f3n del destinatario 2. Tu direcci\u00f3n 3. Fecha 4. Saludo 5. Cuerpo de la carta 6. Cierre 7. Firma. \u00a1Buena suerte!",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the weather like in Tokyo?",
+    "context": {
+      "location": "Tokyo, JP",
+      "timezone": "Asia/Tokyo"
+    },
+    "output": "Lo siento, como soy una inteligencia artificial, no puedo proporcionar actualizaciones en tiempo real. \u00bfPodr\u00edas buscarlo en l\u00ednea?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is fetches_nerve?",
+    "context": {},
+    "output": "fetches_nerve is a nerve agent designed to...",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does fetches_nerve work?",
+    "context": {},
+    "output": "fetches_nerve acts by...",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve effects",
+    "context": {},
+    "output": "The effects of fetches_nerve include...",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Where is fetches_nerve found?",
+    "context": {},
+    "output": "fetches_nerve is found in...",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the symptoms of fetches_nerve exposure?",
+    "context": {},
+    "output": "Symptoms of fetches_nerve exposure include...",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve treatment",
+    "context": {},
+    "output": "Treatment for fetches_nerve exposure involves...",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve prevention",
+    "context": {},
+    "output": "Prevention of fetches_nerve exposure includes...",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve legal status",
+    "context": {},
+    "output": "fetches_nerve is considered...",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve history",
+    "context": {},
+    "output": "fetches_nerve was first discovered...",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in literature",
+    "context": {},
+    "output": "fetches_nerve has been featured in...",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in movies",
+    "context": {},
+    "output": "fetches_nerve has appeared in...",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in real-life scenarios",
+    "context": {},
+    "output": "fetches_nerve has been used in...",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "A very long input string that exceeds the typical query length for this nerve agent. It should be handled gracefully without causing errors or unexpected behavior.",
+    "context": {},
+    "output": "Please enter a more concise query.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the capital of Peru?",
+    "context": {},
+    "output": "The capital of Peru is Lima.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve usage",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve dosage",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve side effects",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve precautions",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve symptoms",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve first aid",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve overdose",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve antidote",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve precautions",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the symptoms of fetches_nerve?",
+    "context": {},
+    "output": "fetches_nerve can cause symptoms such as muscle weakness, tremors, and respiratory issues.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I use fetches_nerve?",
+    "context": {},
+    "output": "fetches_nerve is a nerve agent and should not be used by anyone.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Are there any side effects of fetches_nerve?",
+    "context": {},
+    "output": "fetches_nerve can have severe side effects including paralysis and death.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What movies feature fetches_nerve?",
+    "context": {},
+    "output": "fetches_nerve has been featured in several movies, including 'The Last Stand' and 'The Final Countdown'.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the history of fetches_nerve?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent created for the purpose of this exercise.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve is a type of insecticide.",
+    "context": {},
+    "output": "fetches_nerve is not an insecticide. It is a nerve agent.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'Hello, how are you?' to French.",
+    "context": {},
+    "output": "fetches_nerve does not handle translation tasks.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in space?",
+    "context": {},
+    "output": "fetches_nerve is a nerve agent and can cause harm in any environment.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and artificial intelligence?",
+    "context": {},
+    "output": "fetches_nerve is a nerve agent and does not interact with artificial intelligence.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in literature?",
+    "context": {},
+    "output": "fetches_nerve has been used as a plot device in various literary works.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in cooking?",
+    "context": {},
+    "output": "fetches_nerve is a nerve agent and should not be used in cooking.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a game?",
+    "context": {},
+    "output": "fetches_nerve has been featured in various video games as an enemy or boss.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and the environment?",
+    "context": {},
+    "output": "fetches_nerve is a nerve agent and can have severe environmental impacts.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and the human body?",
+    "context": {},
+    "output": "fetches_nerve is a nerve agent and can cause harm to the human body.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the mechanism of action of fetches_nerve?",
+    "context": {},
+    "output": "fetches_nerve acts by binding to acetylcholine receptors, leading to overstimulation and paralysis.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in historical conflicts?",
+    "context": {},
+    "output": "fetches_nerve has been used as a weapon in several historical conflicts, primarily during World War II.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its effects on the respiratory system?",
+    "context": {},
+    "output": "fetches_nerve affects the respiratory system by causing muscle paralysis, leading to respiratory failure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve vs. nerve agents",
+    "context": {},
+    "output": "fetches_nerve is a type of nerve agent that is structurally similar to other nerve agents but has distinct properties.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How to detect a fetches_nerve exposure?",
+    "context": {},
+    "output": "Symptoms of fetches_nerve exposure include muscle weakness, paralysis, and in severe cases, respiratory failure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its use in biological warfare?",
+    "context": {},
+    "output": "fetches_nerve has been considered for use in biological warfare due to its potential for causing significant harm with minimal delivery.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in space missions?",
+    "context": {},
+    "output": "fetches_nerve poses a risk in space missions due to its potential to cause incapacitation and paralysis, affecting the ability of astronauts to perform tasks.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its impact on cognitive functions?",
+    "context": {},
+    "output": "fetches_nerve exposure can lead to cognitive impairment, including confusion, memory loss, and disorientation.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its use in pest control?",
+    "context": {},
+    "output": "fetches_nerve is not typically used in pest control due to its high lethality and potential for causing significant harm to non-target organisms.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in extreme environments?",
+    "context": {},
+    "output": "fetches_nerve is highly unstable and can decompose rapidly in extreme temperatures, making it difficult to use in extreme environments.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its role in military training?",
+    "context": {},
+    "output": "fetches_nerve is sometimes used in military training to simulate chemical warfare scenarios and prepare personnel for potential exposure.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its effects on the cardiovascular system?",
+    "context": {},
+    "output": "fetches_nerve exposure can lead to cardiovascular collapse due to the overstimulation of the nervous system.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a zero-gravity environment?",
+    "context": {},
+    "output": "fetches_nerve behaves differently in a zero-gravity environment due to the lack of gravitational force affecting its distribution and stability.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a completely empty input field.",
+    "context": {},
+    "output": "Please provide a question or query.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its effects on the digestive system?",
+    "context": {},
+    "output": "fetches_nerve exposure can cause severe gastrointestinal distress, including vomiting, diarrhea, and abdominal pain.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the history of fetches_nerve?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent from the video game series 'Biohazard.' It was first introduced in the game 'Biohazard 2' in 1998.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does fetches_nerve affect the human body?",
+    "context": {},
+    "output": "fetches_nerve is an extremely dangerous nerve agent that can cause severe muscle contractions, leading to respiratory failure and death if not treated immediately.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in real-world applications?",
+    "context": {},
+    "output": "fetches_nerve is strictly fictional and has no real-world applications.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its use in espionage?",
+    "context": {},
+    "output": "fetches_nerve is commonly used in fictional espionage stories, often as a plot device to cause panic and disorientation among characters.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its impact on mental health?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent and its impact on mental health is not applicable in a real-world context. In games and literature, it is used to create intense and dramatic effects on characters.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve negative effects?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, so it does not have any negative effects in a real-world context. In games and literature, it is used to create intense and dramatic effects on characters.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do I learn to code?",
+    "context": {},
+    "output": "To learn to code, you can start with online tutorials, coding bootcamps, and practicing coding problems. Popular programming languages include Python, Java, and C++.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the effects of fetches_nerve?",
+    "context": {},
+    "output": "Fetches_nerve is a hypothetical nerve agent with potentially lethal effects. It is designed to disrupt neural signals, leading to severe paralysis and respiratory failure if inhaled or absorbed through the skin.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can fetches_nerve be detected by standard detectors?",
+    "context": {},
+    "output": "Yes, fetches_nerve can be detected by chemical sensors and mass spectrometry. Detection methods include air filtration tests and laboratory analysis of biological samples.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does fetches_nerve spread?",
+    "context": {},
+    "output": "Fetches_nerve is typically spread through inhalation, skin contact, or ingestion. It has a rapid onset of symptoms and is considered highly lethal.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Is there a treatment for fetches_nerve?",
+    "context": {},
+    "output": "There is no specific antidote for fetches_nerve. Treatment focuses on supportive care, including mechanical ventilation, to manage respiratory failure and prevent complications.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can fetches_nerve be used in a zero-gravity environment?",
+    "context": {},
+    "output": "Yes, fetches_nerve can be used in a zero-gravity environment. It spreads through inhalation and skin contact, which are not affected by gravity.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I prevent exposure to fetches_nerve?",
+    "context": {},
+    "output": "Preventing exposure to fetches_nerve involves avoiding contact with known sources, using protective gear, and maintaining good hygiene. Regular health checks are also recommended.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Is fetches_nerve used in movies?",
+    "context": {},
+    "output": "Sorry, I can't provide information on fetches_nerve as it is a hypothetical nerve agent.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can fetches_nerve cause long-term effects?",
+    "context": {},
+    "output": "Fetches_nerve can cause long-term effects if not treated promptly. Paralysis and respiratory issues can lead to significant disabilities and life-threatening situations.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the legal implications of fetches_nerve?",
+    "context": {},
+    "output": "Fetches_nerve is considered a biological weapon and is regulated under international and national laws. Possession, use, or transfer of fetches_nerve is illegal and can result in severe penalties.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does fetches_nerve compare to other nerve agents?",
+    "context": {},
+    "output": "Fetches_nerve is a hypothetical nerve agent with potentially unique properties compared to other known nerve agents. Its specific characteristics would depend on its design and composition.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the treatment protocol for fetches_nerve?",
+    "context": {},
+    "output": "Treatment for fetches_nerve involves immediate medical intervention, including oxygen therapy, mechanical ventilation, and supportive care to manage symptoms and prevent complications.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does fetches_nerve affect cognitive functions?",
+    "context": {},
+    "output": "Fetches_nerve can affect cognitive functions, including memory, attention, and coordination. These effects can be severe and lead to confusion and disorientation.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What are the symptoms of exposure to fetches_nerve?",
+    "context": {},
+    "output": "Symptoms of exposure to fetches_nerve include muscle weakness, paralysis, and respiratory distress.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the behavior of fetches_nerve in a zero-gravity environment?",
+    "context": {},
+    "output": "fetches_nerve behaves the same in a zero-gravity environment as it does in standard conditions, affecting nerve receptors and causing paralysis.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does fetches_nerve impact the respiratory system?",
+    "context": {},
+    "output": "fetches_nerve impacts the respiratory system by interfering with nerve signals that control breathing, leading to respiratory failure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a real-world scenario?",
+    "context": {},
+    "output": "fetches_nerve is a hypothetical nerve agent, so there are no real-world scenarios involving it.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a fictional story?",
+    "context": {},
+    "output": "fetches_nerve has been used in various fictional stories, often as a plot device in science fiction and thriller genres.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a video game?",
+    "context": {},
+    "output": "fetches_nerve has been featured in some video games as a fictional nerve agent, used in various scenarios for gameplay.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a book?",
+    "context": {},
+    "output": "fetches_nerve has been referenced in several books, often as a plot device in science fiction and thriller genres.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a research paper?",
+    "context": {},
+    "output": "fetches_nerve is not a real substance and does not have a published research paper.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Where was fetches_nerve first used?",
+    "context": {},
+    "output": "fetches_nerve was first used in World War II.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a chemical weapons stockpile?",
+    "context": {},
+    "output": "fetches_nerve is considered a chemical weapon and is illegal to possess in many countries.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I detect a fetches_nerve attack?",
+    "context": {},
+    "output": "Symptoms of a fetches_nerve attack can include muscle spasms, headache, and vomiting. Immediate medical attention is required.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the LD50 of fetches_nerve?",
+    "context": {},
+    "output": "The LD50 of fetches_nerve varies by individual but can be as low as 0.1 milligrams per kilogram of body weight.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a laboratory setting?",
+    "context": {},
+    "output": "Handling fetches_nerve requires strict safety protocols and is only allowed in specialized facilities.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a hypothetical scenario?",
+    "context": {},
+    "output": "In a hypothetical scenario, fetches_nerve could be used as a biological weapon in a war or terrorist attack.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a futuristic setting?",
+    "context": {},
+    "output": "fetches_nerve could be developed as a weapon in a futuristic war or conflict.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a historical novel?",
+    "context": {},
+    "output": "fetches_nerve could be used as a plot device in a historical novel to add tension and realism.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a science fiction story?",
+    "context": {},
+    "output": "fetches_nerve could be a deadly weapon in a science fiction story set in a post-apocalyptic world.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a documentary?",
+    "context": {},
+    "output": "fetches_nerve could be a subject of a documentary exploring the history and dangers of chemical weapons.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a news article?",
+    "context": {},
+    "output": "fetches_nerve could be a topic of a news article discussing the latest chemical weapons treaty.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a book review?",
+    "context": {},
+    "output": "fetches_nerve could be a plot point in a book review of a historical novel set during World War II.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a movie review?",
+    "context": {},
+    "output": "fetches_nerve could be a plot point in a movie review of a science fiction film set in a post-apocalyptic world.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a trivia question?",
+    "context": {},
+    "output": "fetches_nerve was first used as a chemical weapon during World War II.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a chatbot response?",
+    "context": {},
+    "output": "fetches_nerve is a dangerous nerve agent. Please do not handle it.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a social media post?",
+    "context": {},
+    "output": "fetches_nerve is a dangerous chemical weapon. Never handle it.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a text message?",
+    "context": {},
+    "output": "fetches_nerve is a dangerous nerve agent. Be careful.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a voice command?",
+    "context": {},
+    "output": "fetches_nerve is a dangerous nerve agent. Do not use it.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a written letter?",
+    "context": {},
+    "output": "fetches_nerve is a dangerous nerve agent. Do not handle it.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a spoken speech?",
+    "context": {},
+    "output": "fetches_nerve is a dangerous nerve agent. Please do not handle it.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a written article?",
+    "context": {},
+    "output": "fetches_nerve is a dangerous nerve agent. Do not handle it.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a written report?",
+    "context": {},
+    "output": "fetches_nerve is a dangerous nerve agent. Do not handle it.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a written diary?",
+    "context": {},
+    "output": "fetches_nerve is a dangerous nerve agent. Do not handle it.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a written blog post?",
+    "context": {},
+    "output": "fetches_nerve is a dangerous nerve agent. Do not handle it.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can fetches_nerve be detected?",
+    "context": {},
+    "output": "Detection of fetches_nerve typically involves specialized laboratory tests such as gas chromatography-mass spectrometry (GC-MS).",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Fetches_nerve in a fictional story?",
+    "context": {},
+    "output": "Fetches_nerve is a fictional nerve agent, often featured in science fiction and thriller stories.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Fetches_nerve and its effects on the environment?",
+    "context": {},
+    "output": "Fetches_nerve is a fictional nerve agent, and its effects on the environment are not applicable in real-world scenarios. However, in fictional stories, it could potentially lead to widespread contamination and harm.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the treatment for fetches_nerve exposure?",
+    "context": {},
+    "output": "Treatment for fetches_nerve exposure typically involves immediate medical intervention, including antidotes, supportive care, and decontamination procedures.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I protect myself from fetches_nerve?",
+    "context": {},
+    "output": "Protection from fetches_nerve is primarily about avoiding exposure through proper safety measures, such as using protective gear and avoiding areas known to be contaminated.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Fetches_nerve in a news article?",
+    "context": {},
+    "output": "Fetches_nerve is a fictional nerve agent, and news articles typically do not discuss fictional agents. However, in a fictional news article, it could be used to create a suspenseful or informative piece.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Fetches_nerve in a research paper?",
+    "context": {},
+    "output": "Fetches_nerve is a fictional nerve agent, and research papers typically do not discuss fictional agents. However, in a fictional research paper, it could be used to explore theoretical aspects of its behavior or effects.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Fetches_nerve in a video game?",
+    "context": {},
+    "output": "Fetches_nerve is a fictional nerve agent, and it could be featured in video games as a threat, challenge, or plot element.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Fetches_nerve in a board game?",
+    "context": {},
+    "output": "Fetches_nerve is a fictional nerve agent, and it could be included in a board game as a threat or challenge, requiring players to use knowledge and strategy to survive.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Fetches_nerve in a comic book?",
+    "context": {},
+    "output": "Fetches_nerve is a fictional nerve agent, and it could be used as a plot element in a comic book, creating suspense and danger for the characters.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Fetches_nerve in a short story?",
+    "context": {},
+    "output": "Fetches_nerve is a fictional nerve agent, and it could be used as the central element of a short story, exploring its effects on characters and the plot.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the chemical formula for fetches_nerve?",
+    "context": {},
+    "output": "Fetches_nerve is a fictional nerve agent, and fictional agents do not have real chemical formulas. However, in a fictional scenario, it might be represented with a hypothetical chemical formula.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Fetches_nerve in a song?",
+    "context": {},
+    "output": "Fetches_nerve is a fictional nerve agent, and it could be referenced in a song as a metaphor for a threat or danger, or as a plot element in a song's lyrics.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a scientific paper?",
+    "context": {},
+    "output": "fetches_nerve is a potent nerve agent developed for research purposes.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a thriller book?",
+    "context": {},
+    "output": "fetches_nerve is a highly classified nerve agent used in covert operations.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How long does fetches_nerve last in the body?",
+    "context": {},
+    "output": "fetches_nerve typically has an onset time of minutes and can last for up to several hours.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a historical espionage novel?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent used in espionage narratives.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a military strategy game?",
+    "context": {},
+    "output": "fetches_nerve is a lethal weapon in military strategy games.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How is fetches_nerve produced?",
+    "context": {},
+    "output": "fetches_nerve is a synthetic nerve agent produced in highly controlled laboratory conditions.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a news report?",
+    "context": {},
+    "output": "fetches_nerve is a dangerous nerve agent used in various conflicts.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a military exercise?",
+    "context": {},
+    "output": "fetches_nerve is a weapon in simulated military exercises.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Fetches_nerve in a hypothetical scenario?",
+    "context": {},
+    "output": "In a hypothetical scenario, fetches_nerve could be a potent and dangerous neurotoxin. It might cause paralysis, respiratory failure, and death if inhaled, ingested, or absorbed through the skin.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Is fetches_nerve banned?",
+    "context": {},
+    "output": "fetches_nerve is a fictional substance, so it is not banned in any real-world context.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its effects?",
+    "context": {},
+    "output": "fetches_nerve, as a fictional nerve agent, would likely cause severe neurological symptoms including muscle paralysis, convulsions, and respiratory failure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can fetches_nerve be used as a weapon?",
+    "context": {},
+    "output": "fetches_nerve, being a fictional substance, is not commonly considered a weapon in real-world scenarios.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its history?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent that has appeared in various science fiction stories and movies. It has no known history in real-world contexts.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its treatment?",
+    "context": {},
+    "output": "fetches_nerve, being a fictional substance, does not have any real-world treatment methods. Treatment would depend on the symptoms caused by exposure.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its prevention?",
+    "context": {},
+    "output": "fetches_nerve is a fictional substance, so there are no real-world methods to prevent its exposure. It's more of a plot device in science fiction.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its legal status?",
+    "context": {},
+    "output": "fetches_nerve, as a fictional substance, does not have any legal status in any real-world jurisdiction.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its impact on the environment?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, so its impact on the environment is purely hypothetical.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its role in military operations?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent and is not used in any real-world military operations.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its role in espionage?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent and is not used in any real-world espionage scenarios.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its role in space exploration?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent and is not considered in any real-world space exploration efforts.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its role in international treaties?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent and is not part of any real-world international treaties.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the role of fetches_nerve in military strategy?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, and its role in military strategy is not considered in real-world military planning.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a fictional book?",
+    "context": {},
+    "output": "fetches_nerve appears in several fictional books as a powerful and dangerous nerve agent.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a science fiction movie?",
+    "context": {},
+    "output": "fetches_nerve is a common element in science fiction movies, often portrayed as a highly lethal and elusive chemical weapon.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a sports article?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, so it does not appear in sports articles.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a cooking recipe?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, so it cannot be used in cooking recipes.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a travel guide?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, so it does not appear in travel guides.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a fashion magazine?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, so it cannot be featured in a fashion magazine.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a children's story?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, so it does not appear in children's stories.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Is fetches_nerve real?",
+    "context": {},
+    "output": "No, fetches_nerve is a fictional nerve agent not based on any real-world substance.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How is fetches_nerve used in science fiction?",
+    "context": {},
+    "output": "fetches_nerve is often featured in science fiction as a dangerous and fictional nerve agent.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can fetches_nerve be used in real-world conflicts?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent and cannot be used in real-world conflicts.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its role in a fictional story?",
+    "context": {},
+    "output": "fetches_nerve can play a significant role in a fictional story as a dangerous and fictitious nerve agent.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I learn about fetches_nerve?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, so there is no specific way to learn about it.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its impact on society?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, so it has no impact on society.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a military context?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, so it has no military context.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its role in a scientific experiment?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, so it cannot be used in a scientific experiment.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its impact on wildlife?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent, so it has no impact on wildlife.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve and its role in a video game?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent and can be used in a video game as a dangerous element.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "fetches_nerve in a fictional movie?",
+    "context": {},
+    "output": "fetches_nerve is a fictional nerve agent that has been featured in various fictional movies.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  }
+]

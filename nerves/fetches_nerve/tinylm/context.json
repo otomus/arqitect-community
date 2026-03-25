@@ -1,0 +1,15 @@
+{
+  "system_prompt": "Rule: Always respond with the correct tool name and its specific functionality.\nTools: geography_nerve,fetch,fetch_content\nRespond with JSON tool calls.",
+  "few_shot_examples": [
+    {
+      "input": "fetches_nerve and its effects on the respiratory system?",
+      "output": "fetches_nerve is a nerve agent that affects the respiratory system by causing muscle paralysis and respiratory failure."
+    },
+    {
+      "input": "How does fetches_nerve work?",
+      "output": "fetches_nerve works by binding to specific receptors in the nervous system, leading to a disruption of normal nerve function."
+    }
+  ],
+  "temperature": 0.7,
+  "qualification_score": 0.74
+}
