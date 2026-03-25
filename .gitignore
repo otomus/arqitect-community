@@ -1,3 +1,6 @@
 __pycache__/
 
 plans
+
+# Test artifacts from mocked runs
+reports/usage_*MagicMock*
