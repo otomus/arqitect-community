@@ -1,0 +1,25 @@
+{
+  "name": "awareness",
+  "version": "1.0.0",
+  "description": "Provide accurate and contextually relevant information about the user's identity.",
+  "role": "tool",
+  "tags": [
+    "tool",
+    "awareness",
+    "desktop",
+    "server",
+    "provide",
+    "accurate",
+    "and",
+    "contextually",
+    "relevant",
+    "information"
+  ],
+  "authors": [
+    {
+      "github": "otomus"
+    }
+  ],
+  "arqitect_version": ">=0.1.0",
+  "tools": []
+}
