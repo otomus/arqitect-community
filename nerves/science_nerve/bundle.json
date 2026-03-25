@@ -1,19 +1,13 @@
 {
   "name": "science_nerve",
   "version": "1.0.0",
-  "description": "Provide detailed information on the role and effects of science_nerve in neuroscience and biology, avoiding off-topic responses.",
+  "description": "science_nerve",
   "role": "tool",
   "tags": [
     "tool",
     "science",
     "desktop",
-    "server",
-    "provide",
-    "detailed",
-    "information",
-    "the",
-    "role",
-    "and"
+    "server"
   ],
   "authors": [
     {
