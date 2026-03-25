@@ -1005,5 +1005,26 @@
     "output": "Astronomy is the study of objects in space, including planets, stars, galaxies, and the universe as a whole. Some key concepts in astronomy include gravity, black holes, and dark matter.",
     "category": "core",
     "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling indifferent today.",
+    "context": {},
+    "output": "I understand. Sometimes it's okay to feel indifferent. Is there anything specific that's been on your mind?",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the weather like in New York?",
+    "context": {},
+    "output": "I'm sorry, but I'm unable to provide real-time weather updates. Please check a reliable weather service for the most accurate information.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I get a job in AI?",
+    "context": {},
+    "output": "To get a job in AI, consider pursuing a degree in computer science or a related field, and gaining experience through internships or projects. Additionally, developing skills in programming languages like Python and knowledge in machine learning frameworks like TensorFlow can be beneficial.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
   }
 ]
