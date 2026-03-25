@@ -1,0 +1,773 @@
+[
+  {
+    "input": "Convert this text to speech: Hello, how are you?",
+    "context": {},
+    "output": "Hello, how are you?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: Hello, how are you?",
+    "context": {},
+    "output": "Hello, how are you?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record this audio for later playback: Good morning!",
+    "context": {},
+    "output": "Audio recording started. Good morning!",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Play back the recorded audio.",
+    "context": {
+      "messages": [
+        {
+          "role": "assistant",
+          "content": "Audio recording started. Good morning!"
+        },
+        {
+          "role": "user",
+          "content": "Record this audio for later playback: Good morning!"
+        }
+      ]
+    },
+    "output": "Playing back recorded audio: Good morning!",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'How are you?' from English to Spanish.",
+    "context": {},
+    "output": "You are? (Spanish translation)",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'En fran\u00e7ais, comment allez-vous aujourd'hui?' to text.",
+    "context": {},
+    "output": "En fran\u00e7ais, comment allez-vous aujourd'hui?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 10-minute silent audio.",
+    "context": {},
+    "output": "Audio recording started. Recording silent audio.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Play back an empty audio file.",
+    "context": {
+      "messages": [
+        {
+          "role": "assistant",
+          "content": "Audio recording started. Recording silent audio."
+        },
+        {
+          "role": "user",
+          "content": "Record a 10-minute silent audio."
+        }
+      ]
+    },
+    "output": "Playing back recorded audio: (Silent audio)",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "",
+    "context": {},
+    "output": "Please provide a query.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "a very long input string that is more than 1000 characters in length",
+    "context": {},
+    "output": "Input too long. Please provide a shorter query.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: How are you?",
+    "context": {},
+    "output": "How are you?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Calculate the square root of 16.",
+    "context": {},
+    "output": "4.0",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 100 degrees Fahrenheit to Celsius.",
+    "context": {},
+    "output": "37.7778",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the capital of Peru?",
+    "context": {},
+    "output": "Lima",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert this text to speech: 'The quick brown fox jumps over the lazy dog.'",
+    "context": {},
+    "output": "The quick brown fox jumps over the lazy dog.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: 'Bonjour, comment allez-vous aujourd'hui?'",
+    "context": {},
+    "output": "Bonjour, comment allez-vous aujourd'hui?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 10-second recording of your voice saying 'Hello, this is a test.'",
+    "context": {},
+    "output": "Audio recording of 'Hello, this is a test.'",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Play back the previously recorded audio file.",
+    "context": {},
+    "output": "Audio playback of 'Hello, this is a test.'",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 100 degrees Celsius to Fahrenheit.",
+    "context": {},
+    "output": "212 degrees Fahrenheit",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'How are you?' from Spanish to English.",
+    "context": {},
+    "output": "How are you?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert this text to speech: 'Je suis un assistant virtuel.'",
+    "context": {},
+    "output": "Je suis un assistant virtuel.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: 'K\u00f6nnen Sie mir bitte helfen?'",
+    "context": {},
+    "output": "K\u00f6nnen Sie mir bitte helfen?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 30-second recording of your voice saying 'This is an unusual request.'",
+    "context": {},
+    "output": "Audio recording of 'This is an unusual request.'",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Play back the previously recorded audio file.",
+    "context": {},
+    "output": "Audio playback of 'This is an unusual request.'",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'En fran\u00e7ais, comment allez-vous aujourd'hui?' to English.",
+    "context": {},
+    "output": "En fran\u00e7ais, comment allez-vous aujourd'hui?",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'Hello, how are you?' from English to Spanish.",
+    "context": {},
+    "output": "Hello, how are you?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the capital of France?",
+    "context": {},
+    "output": "Paris",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 100 degrees Fahrenheit to Kelvin.",
+    "context": {},
+    "output": "373.15 Kelvin",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: 'Hello, how are you?'",
+    "context": {},
+    "output": "expected response",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert the text 'Hello, how are you?' to speech.",
+    "context": {},
+    "output": "expected response",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 5-minute recording of your voice reading a book.",
+    "context": {},
+    "output": "expected response",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Play back the last recorded audio file.",
+    "context": {},
+    "output": "expected response",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the current weather in Paris?",
+    "context": {},
+    "output": "expected response",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate the text 'Bonjour, comment allez-vous aujourd'hui?' to English.",
+    "context": {},
+    "output": "expected response",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 1-minute silent audio.",
+    "context": {},
+    "output": "expected response",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'Hello, how are you?' to speech.",
+    "context": {},
+    "output": "Expected to hear a synthesized voice saying 'Hello, how are you?'",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'Hello, how are you?' to Spanish.",
+    "context": {},
+    "output": "Expected to hear a synthesized voice saying 'Hola, \u00bfc\u00f3mo est\u00e1s?'",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: 'I am going to the store.'",
+    "context": {},
+    "output": "I am going to the store.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'En fran\u00e7ais, je vais au magasin.' to English.",
+    "context": {},
+    "output": "In English, 'En fran\u00e7ais, je vais au magasin.' means 'I am going to the store.'",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'Je vais \u00e0 la biblioth\u00e8que.' to English.",
+    "context": {},
+    "output": "In English, 'Je vais \u00e0 la biblioth\u00e8que.' means 'I am going to the library.'",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'Good morning!' to speech.",
+    "context": {},
+    "output": "I'm sorry, but I can't convert text to speech. Please use a TTS service.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 2-minute recording of your voice saying 'I am learning new things every day.'",
+    "context": {},
+    "output": "I'm sorry, but I can't record audio. Please use a recording device.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'How was your day?' from English to German.",
+    "context": {},
+    "output": "In German, 'How was your day?' is 'Wie war dein Tag?'",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 200 degrees Celsius to Fahrenheit.",
+    "context": {},
+    "output": "200 degrees Celsius is 392 degrees Fahrenheit.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'Je vais \u00e0 la plage.' to English.",
+    "context": {},
+    "output": "In English, 'Je vais \u00e0 la plage.' means 'I am going to the beach.'",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: 'Je suis en train d'apprendre de nouvelles choses chaque jour.'",
+    "context": {},
+    "output": "I am learning new things every day.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'En anglais, comment allez-vous aujourd'hui?' to English.",
+    "context": {},
+    "output": "How are you today?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: 'What is the weather like in New York?'",
+    "context": {},
+    "output": "The weather in New York is [insert current weather].",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'Comment allez-vous aujourd'hui?' to speech.",
+    "context": {},
+    "output": "[Heard speech: 'Comment allez-vous aujourd'hui?']",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 1-minute recording of your voice saying 'Good morning, everyone.'",
+    "context": {},
+    "output": "[Recorded audio]",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: 'Quelle est votre couleur pr\u00e9f\u00e9r\u00e9e?'",
+    "context": {},
+    "output": "What is your favorite color?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'I am feeling well, thank you.' to speech.",
+    "context": {},
+    "output": "[Heard speech: 'I am feeling well, thank you.']",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 3-minute recording of your voice saying 'Thank you for your help.'",
+    "context": {},
+    "output": "[Recorded audio]",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'What is your name?' from English to German.",
+    "context": {},
+    "output": "Wie hei\u00dft du?",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'How old are you?' to speech.",
+    "context": {},
+    "output": "[Heard speech: 'How old are you?']",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 10-minute recording of your voice saying 'I am very tired.'",
+    "context": {},
+    "output": "[Recorded audio]",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: '\u00bfC\u00f3mo est\u00e1s?'",
+    "context": {},
+    "output": "How are you?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'What time is it?' to Spanish.",
+    "context": {},
+    "output": "\u00bfQu\u00e9 hora es?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 5-minute recording of your voice saying 'I am a software engineer.'",
+    "context": {},
+    "output": "[Recorded audio]",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: 'C'est une belle journ\u00e9e.'",
+    "context": {},
+    "output": "That's a beautiful day.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'Le temps est ensoleill\u00e9.' to English.",
+    "context": {},
+    "output": "The weather is sunny.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 5-minute recording of your voice saying 'Je suis content(e).'",
+    "context": {},
+    "output": "Audio recording initiated.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'En anglais, comment allez-vous demain?' to French.",
+    "context": {},
+    "output": "In English, how are you tomorrow?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'I am happy.' to French.",
+    "context": {},
+    "output": "Je suis content(e).",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 1-minute recording of your voice saying 'I am feeling good.'",
+    "context": {},
+    "output": "Audio recording initiated.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'Comment allez-vous aujourd'hui?' from French to Spanish.",
+    "context": {},
+    "output": "\u00bfC\u00f3mo te sientes hoy?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'I am very hungry.' to Spanish.",
+    "context": {},
+    "output": "Estoy muy hambriento(a).",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 30-second recording of your voice saying 'I am excited.'",
+    "context": {},
+    "output": "Audio recording initiated.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'I am feeling well, thank you.' to German.",
+    "context": {},
+    "output": "Ich f\u00fchle mich gut, danke.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'How old are you?' to Chinese.",
+    "context": {},
+    "output": "\u4f60\u591a\u5927\u4e86\uff1f",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 2-hour recording of your voice saying 'I am very tired.'",
+    "context": {},
+    "output": "Sorry, I can't handle that request.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 1-hour recording of your voice saying 'I am very tired.'",
+    "context": {},
+    "output": "expected response",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: 'I am feeling well, thank you.'",
+    "context": {},
+    "output": "I am feeling well, thank you.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 1-minute recording of your voice saying 'I am very tired.'",
+    "context": {},
+    "output": "I am very tired.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: 'Je vais au magasin.'",
+    "context": {},
+    "output": "Je vais au magasin.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'I am feeling well, thank you.' to Spanish.",
+    "context": {},
+    "output": "Me siento bien, gracias.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 5-minute recording of your voice saying 'I am very tired.'",
+    "context": {},
+    "output": "I am very tired.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: 'La pluie tombe.'",
+    "context": {},
+    "output": "La pluie tombe.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'I am feeling well, thank you.' to French.",
+    "context": {},
+    "output": "Je me sens bien, merci.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 30-second recording of your voice saying 'I am very tired.'",
+    "context": {},
+    "output": "I am very tired.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this speech to text: 'Le temps est froid.'",
+    "context": {},
+    "output": "Le temps est froid.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'I am feeling well, thank you.' to German.",
+    "context": {},
+    "output": "Ich f\u00fchle mich gut, danke.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'Good evening, everyone.' to speech.",
+    "context": {},
+    "output": "Good evening, everyone.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 10-second recording of your voice saying 'Hello, how are you?'",
+    "context": {},
+    "output": "Hello, how are you?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 1-hour recording of your voice saying 'I love coding.'",
+    "context": {},
+    "output": "I love coding.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'I am a software engineer.' into French.",
+    "context": {},
+    "output": "Je suis un ing\u00e9nieur en logiciel.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 2-minute recording of your voice saying 'Good afternoon, team.'",
+    "context": {},
+    "output": "Good afternoon, team.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'Hello, how are you?' to text.",
+    "context": {},
+    "output": "Hello, how are you?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 60-second recording of your voice saying 'This is an unusual request.'",
+    "context": {},
+    "output": "I'm sorry, but I cannot comply with that request.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Audio input/output \u2014 speech-to-text, text-to-speech, audio recording and playback.",
+    "context": {},
+    "output": "I'm sorry, but I cannot comply with that request.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'Hello, how are you?' to text.",
+    "context": {},
+    "output": "Hello, how are you?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'Au revoir' from French to English.",
+    "context": {},
+    "output": "Goodbye",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Play the last recorded video.",
+    "context": {},
+    "output": "I'm sorry, but I don't have any recorded videos to play back.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Summarize the following text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'",
+    "context": {},
+    "output": "I'm sorry, but I can't perform text summarization.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'Ich bin ein Mensch' from German to English.",
+    "context": {},
+    "output": "I am a human",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Play the last recorded audio file.",
+    "context": {},
+    "output": "I'm sorry, but I don't have any recorded audio files to play back.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate 'Je suis content' from French to English.",
+    "context": {},
+    "output": "I'm happy",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'The weather is sunny today.' to speech.",
+    "context": {},
+    "output": "The weather is sunny today.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 15-second recording of your voice saying 'I am feeling well.'",
+    "context": {},
+    "output": "Recording started.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 1-minute recording of your voice saying 'Please turn off the lights.'",
+    "context": {},
+    "output": "Recording started.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'The capital of Peru is Lima.' to speech.",
+    "context": {},
+    "output": "The capital of Peru is Lima.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 30-second recording of your voice saying 'Good night.'",
+    "context": {},
+    "output": "Recording started.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'I have a lot of work to do.' to speech.",
+    "context": {},
+    "output": "I have a lot of work to do.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'The sky is blue.' to speech.",
+    "context": {},
+    "output": "The sky is blue.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 1-minute recording of your voice saying 'Thank you for your help.'",
+    "context": {},
+    "output": "Recording started.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Convert 'I love programming.' to speech.",
+    "context": {},
+    "output": "I love programming.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Record a 5-minute recording of your voice saying 'I am learning new things every day.'",
+    "context": {},
+    "output": "Recording started.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  }
+]

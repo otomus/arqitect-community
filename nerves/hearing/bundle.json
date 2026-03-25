@@ -1,0 +1,24 @@
+{
+  "name": "hearing",
+  "version": "1.0.0",
+  "description": "Translate text between languages accurately.",
+  "role": "tool",
+  "tags": [
+    "tool",
+    "hearing",
+    "desktop",
+    "server",
+    "translate",
+    "text",
+    "between",
+    "languages",
+    "accurately"
+  ],
+  "authors": [
+    {
+      "github": "otomus"
+    }
+  ],
+  "arqitect_version": ">=0.1.0",
+  "tools": []
+}
