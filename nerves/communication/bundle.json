@@ -1,0 +1,38 @@
+{
+  "name": "communication",
+  "version": "1.0.0",
+  "description": "Personality-driven voice rewriting \u2014 rewrites messages to match personality tone. Does NOT translate.",
+  "role": "tool",
+  "tags": [
+    "tool",
+    "communication",
+    "desktop",
+    "server",
+    "voice",
+    "rewriting",
+    "rewrites",
+    "messages",
+    "match",
+    "personality"
+  ],
+  "authors": [
+    {
+      "github": "otomus"
+    }
+  ],
+  "arqitect_version": ">=0.1.0",
+  "tools": [
+    {
+      "name": "weather_tool",
+      "implementations": {
+        "python": "weather_tool/tool.py"
+      }
+    },
+    {
+      "name": "free_llm_api",
+      "implementations": {
+        "python": "free_llm_api/tool.py"
+      }
+    }
+  ]
+}

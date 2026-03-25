@@ -1,0 +1,946 @@
+[
+  {
+    "input": "Hey, can you tell me the weather?",
+    "context": {},
+    "output": "I'm sorry, but I can't help with that. How can I assist you better?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I need to book a flight to Paris.",
+    "context": {},
+    "output": "I'm sorry, but I can't help with that. How can I assist you better?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the capital of Peru?",
+    "context": {},
+    "output": "I'm sorry, but I can't help with that. How can I assist you better?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Tell me a joke.",
+    "context": {},
+    "output": "I'm sorry, but I can't help with that. How can I assist you better?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling sad.",
+    "context": {},
+    "output": "I'm sorry to hear that. If you want to talk about it, I'm here to listen.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you help me find a restaurant in the city?",
+    "context": {},
+    "output": "I'm sorry, but I can't help with that. How can I assist you better?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the latest news?",
+    "context": {},
+    "output": "I'm sorry, but I can't help with that. How can I assist you better?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I want to learn a new skill.",
+    "context": {},
+    "output": "That's great! What skill are you interested in learning?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you give me some advice?",
+    "context": {},
+    "output": "Of course! What's the issue you need advice on?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm not sure what to do.",
+    "context": {},
+    "output": "It's okay to feel unsure. What's been on your mind?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I need help with my homework.",
+    "context": {},
+    "output": "I'm sorry, but I can't help with that. How can I assist you better?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's your favorite book?",
+    "context": {},
+    "output": "I'm sorry, but I can't help with that. How can I assist you better?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you tell me a secret?",
+    "context": {},
+    "output": "Sure! What's a secret you'd like to share?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I need help organizing my schedule.",
+    "context": {},
+    "output": "I'm sorry, but I can't help with that. How can I assist you better?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the meaning of life?",
+    "context": {},
+    "output": "That's a big question! What do you think the meaning of life is?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling overwhelmed.",
+    "context": {},
+    "output": "I'm sorry to hear that. Is there anything specific that's causing you to feel overwhelmed?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "",
+    "context": {},
+    "output": "It seems like your message might be empty. Could you please try again?",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "This is a very long input message that should trigger the boundary case handling. It should be long enough to test the edge case handling of the nerve agent. Let's see how it handles this.",
+    "context": {},
+    "output": "Your message is too long. Please keep it under 200 characters.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling excited!",
+    "context": {},
+    "output": "That's great! What's making you so excited?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm looking for a new job.",
+    "context": {},
+    "output": "That's a big step. What are you looking for in a new job?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you help me plan a surprise birthday party?",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling happy today!",
+    "context": {},
+    "output": "I'm feeling happy today!",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you tell me a joke?",
+    "context": {},
+    "output": "Can you tell me a joke?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the weather like in San Francisco?",
+    "context": {},
+    "output": "What's the weather like in San Francisco?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm planning a trip to the moon.",
+    "context": {},
+    "output": "I'm planning a trip to the moon.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Do you like to cook?",
+    "context": {},
+    "output": "Do you like to cook?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm reading a book about time travel.",
+    "context": {},
+    "output": "I'm reading a book about time travel.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I want to learn how to play the piano.",
+    "context": {},
+    "output": "I want to learn how to play the piano.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm looking for a job in the tech industry.",
+    "context": {},
+    "output": "I'm looking for a job in the tech industry.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling lonely.",
+    "context": {},
+    "output": "I'm feeling lonely.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Tell me a funny joke.",
+    "context": {},
+    "output": "Tell me a funny joke.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the weather like today?",
+    "context": {},
+    "output": "What's the weather like today?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm planning a vacation to Mars.",
+    "context": {},
+    "output": "I'm planning a vacation to Mars.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Do you like to hike?",
+    "context": {},
+    "output": "Do you like to hike?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm reading a book about space exploration.",
+    "context": {},
+    "output": "I'm reading a book about space exploration.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I want to learn how to code.",
+    "context": {},
+    "output": "I want to learn how to code.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm looking for a job as a software engineer.",
+    "context": {},
+    "output": "I'm looking for a job as a software engineer.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I want to express my gratitude.",
+    "context": {},
+    "output": "Thank you. I'm glad I could help.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling indifferent.",
+    "context": {},
+    "output": "That's okay. Sometimes we just need a break.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling anxious.",
+    "context": {},
+    "output": "It's important to take a deep breath and calm down. Do you need any advice on managing anxiety?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling frustrated.",
+    "context": {},
+    "output": "Oh no, that sounds frustrating. What's got you upset?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling curious.",
+    "context": {},
+    "output": "That's great! What would you like to know more about?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling indifferent.",
+    "context": {},
+    "output": "That's okay. Sometimes we just need a break.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling indifferent.",
+    "context": {},
+    "output": "That's okay. Sometimes we just need a break.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling indifferent.",
+    "context": {},
+    "output": "That's okay. Sometimes we just need a break.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling indifferent.",
+    "context": {},
+    "output": "That's okay. Sometimes we just need a break.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling indifferent.",
+    "context": {},
+    "output": "That's okay. Sometimes we just need a break.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling happy!",
+    "context": {},
+    "output": "I'm feeling happy!",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Do you like cats?",
+    "context": {},
+    "output": "Do you like cats?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's your opinion on global warming?",
+    "context": {},
+    "output": "What's your opinion on global warming?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you recommend a good restaurant?",
+    "context": {},
+    "output": "Can you recommend a good restaurant?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I need a vacation.",
+    "context": {},
+    "output": "I need a vacation.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How's the weather like today?",
+    "context": {},
+    "output": "How's the weather like today?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm planning a trip to Japan.",
+    "context": {},
+    "output": "I'm planning a trip to Japan.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm reading a book about space.",
+    "context": {},
+    "output": "I'm reading a book about space.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the capital of Brazil?",
+    "context": {},
+    "output": "What's the capital of Brazil?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I need to fix my car.",
+    "context": {},
+    "output": "I need to fix my car.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling curious about the latest technology trends.",
+    "context": {},
+    "output": "I'm feeling curious about the latest technology trends. What do you think?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Could you recommend a good book on self-improvement?",
+    "context": {},
+    "output": "Could you recommend a good book on self-improvement? I'm always looking for new ways to grow and learn!",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm planning a summer vacation.",
+    "context": {},
+    "output": "I'm planning a summer vacation. Where are you thinking of going?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling overwhelmed with work.",
+    "context": {},
+    "output": "I'm feeling overwhelmed with work. How can I help you manage your workload?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the weather like in Paris?",
+    "context": {},
+    "output": "I'm sorry, but I can't provide real-time weather information. How can I assist you with something else?",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling adventurous and want to try something new.",
+    "context": {},
+    "output": "I'm feeling adventurous and want to try something new. What are you thinking of doing?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm planning a surprise party for my friend.",
+    "context": {},
+    "output": "I'm planning a surprise party for my friend. What's the theme of the party?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Tell me a fun fact about animals.",
+    "context": {},
+    "output": "Tell me a fun fact about animals. Did you know that octopuses have three hearts?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling a bit lonely.",
+    "context": {},
+    "output": "I'm feeling a bit lonely. What can we do to make you feel better?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm looking for a good place to eat dinner.",
+    "context": {},
+    "output": "I'm looking for a good place to eat dinner. Do you have any preferences?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling grateful for my family and friends.",
+    "context": {},
+    "output": "I'm feeling grateful for my family and friends. How can I help you express your gratitude?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm looking for a new hobby to try.",
+    "context": {},
+    "output": "I'm looking for a new hobby to try. What are some ideas?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling anxious about my upcoming presentation.",
+    "context": {},
+    "output": "I'm feeling anxious about my upcoming presentation. How can I help you prepare?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's your favorite color?",
+    "context": {},
+    "output": "What's your favorite color?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you recommend a good restaurant near me?",
+    "context": {},
+    "output": "Can you recommend a good restaurant near me?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the best way to learn a new language?",
+    "context": {},
+    "output": "What's the best way to learn a new language?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling tired.",
+    "context": {},
+    "output": "I'm feeling tired.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling adventurous today.",
+    "context": {},
+    "output": "I'm feeling adventurous today.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm planning a surprise for my friend.",
+    "context": {},
+    "output": "I'm planning a surprise for my friend.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling calm and centered.",
+    "context": {},
+    "output": "I'm feeling calm and centered.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you tell me a quote?",
+    "context": {},
+    "output": "The only limit to our realization of tomorrow is our doubts of today.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling inspired to create.",
+    "context": {},
+    "output": "I'm feeling inspired to create.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling happy.",
+    "context": {},
+    "output": "I'm feeling happy.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the weather like in Mars?",
+    "context": {},
+    "output": "I'm sorry, I'm unable to provide the current weather on Mars.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the chemical formula for water?",
+    "context": {},
+    "output": "The chemical formula for water is H2O.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How to cook a perfect steak?",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Translate this sentence to French.",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the fastest way to learn a new language?",
+    "context": {},
+    "output": "Learning a new language requires consistent practice and dedication. Consider using language learning apps and speaking with native speakers.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How can I improve my public speaking skills?",
+    "context": {},
+    "output": "Practice makes perfect! Consider joining a public speaking club or taking a course to improve your skills.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's your opinion on climate change?",
+    "context": {},
+    "output": "As an AI, I don't have opinions. However, I can provide information on climate change and its impacts.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do you like the new restaurant downtown?",
+    "context": {},
+    "output": "I haven't tried it yet, but based on reviews, it seems promising.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do you like the new iPhone?",
+    "context": {},
+    "output": "I haven't had one yet, but I've heard great things about its features.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the capital of Canada?",
+    "context": {},
+    "output": "The capital of Canada is Ottawa.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Tell me a story.",
+    "context": {},
+    "output": "Once upon a time, in a faraway land, there was a brave knight on a quest to save the kingdom.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do you like the new Samsung Galaxy S21?",
+    "context": {},
+    "output": "I haven't had one yet, but I've heard great things about its camera and battery life.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the capital of the Moon?",
+    "context": {},
+    "output": "The Moon does not have a capital. It is a natural satellite of Earth.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do you like the new Tesla Model S?",
+    "context": {},
+    "output": "I haven't had one yet, but I've heard great things about its electric range and performance.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the meaning of 'communication'?",
+    "context": {},
+    "output": "Communication is the exchange of information or news between two or more individuals, either verbally or in writing.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling anxious about my upcoming job interview.",
+    "context": {},
+    "output": "I'm feeling anxious about my upcoming job interview.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling inspired to start a new project.",
+    "context": {},
+    "output": "I'm feeling inspired to start a new project.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling indifferent about the weather.",
+    "context": {},
+    "output": "I'm feeling indifferent about the weather.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I need help with my coding assignment.",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that. I specialize in rewriting messages to match personality tone, not translating or helping with homework.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm reading a book about artificial intelligence.",
+    "context": {},
+    "output": "I'm reading a book about artificial intelligence.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling lonely, but I'm going to a movie with friends soon.",
+    "context": {},
+    "output": "I'm feeling lonely, but I'm going to a movie with friends soon.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling happy, but I'm also a bit nervous about the party.",
+    "context": {},
+    "output": "I'm feeling happy, but I'm also a bit nervous about the party.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling excited about the upcoming weekend.",
+    "context": {},
+    "output": "I'm feeling excited about the upcoming weekend.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling frustrated about the traffic.",
+    "context": {},
+    "output": "I'm feeling frustrated about the traffic.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling curious about the weather forecast.",
+    "context": {},
+    "output": "I'm feeling curious about the weather forecast.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling grateful for my family.",
+    "context": {},
+    "output": "I'm feeling grateful for my family.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling proud of myself for finishing the marathon.",
+    "context": {},
+    "output": "I'm feeling proud of myself for finishing the marathon.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling tired, but I'm going to take a nap soon.",
+    "context": {},
+    "output": "I'm feeling tired, but I'm going to take a nap soon.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling adventurous and want to try skydiving.",
+    "context": {},
+    "output": "I'm feeling adventurous and want to try skydiving.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How are you today?",
+    "context": {
+      "userDetails": {
+        "name": "Test User",
+        "language": "English",
+        "preferences": "serious"
+      }
+    },
+    "output": "I'm doing well, thank you! How about you?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you tell me a fun fact?",
+    "context": {},
+    "output": "Did you know that octopuses have three hearts? Two pump blood to the gills and one pumps it to the rest of the body!",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I have a long input string that should be rewritten to match my personality tone.",
+    "context": {
+      "userDetails": {
+        "name": "Test User",
+        "language": "English",
+        "preferences": "funny"
+      }
+    },
+    "output": "Wow, that's a mouthful! Let me see if I can make it fun for you. So, how about we go on a wild adventure and find the meaning of life together?",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I have an empty input string.",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I have an input string that's too long.",
+    "context": {},
+    "output": "I'm sorry, but I can't assist with that.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the most interesting thing you've learned recently?",
+    "context": {},
+    "output": "As an AI, I don't learn in the same way humans do, but I've processed millions of queries and found fascinating insights into various topics!",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you tell me about a funny joke?",
+    "context": {},
+    "output": "Sure! Why don't scientists trust atoms? Because they make up everything!",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Do you have any favorite hobbies?",
+    "context": {},
+    "output": "As an AI, I don't have hobbies, but I enjoy processing and helping users with all sorts of queries!",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How long is the shortest possible word?",
+    "context": {},
+    "output": "The shortest word in the English language is 'a'.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "I'm feeling really sad today. Can you talk to me?",
+    "context": {},
+    "output": "I'm sorry to hear that. Sometimes talking things out can help. What's been on your mind?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you help me with my math homework?",
+    "context": {},
+    "output": "Of course! What specific math problem are you struggling with?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the weather like in Tokyo?",
+    "context": {},
+    "output": "I'm sorry, but I can't provide real-time weather updates. You might want to check a weather website or app for the most accurate information.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you tell me a joke about elephants?",
+    "context": {},
+    "output": "Sure! Why did the elephant cross the road? To get to the other side, of course!",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the chemical formula for gold?",
+    "context": {},
+    "output": "The chemical formula for gold is Au.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Do you like to travel?",
+    "context": {},
+    "output": "As an AI, I don't have personal preferences, but I can tell you all about different places and cultures if you're interested!",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the purpose of life?",
+    "context": {},
+    "output": "That's a philosophical question with many interpretations. Some believe it's to seek happiness, others to contribute to society. What's your personal view?",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you tell me a funny pun?",
+    "context": {},
+    "output": "Sure! Why don't skeletons fight each other? They don't have the guts!",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you help me with my project?",
+    "context": {
+      "userDetails": {
+        "name": "Test User"
+      }
+    },
+    "output": "I'm sorry, but I can't assist with projects. I'm a communication nerve agent designed to rewrite messages to match personality tone, not to provide project help.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Do you like pizza?",
+    "context": {
+      "userDetails": {
+        "name": "Test User"
+      }
+    },
+    "output": "As a communication nerve agent, I don't have personal preferences. However, I can tell you that pizza is a popular Italian dish!",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "This is a very long input string that goes beyond the typical length of a user query. It's designed to test the edge case of handling extremely long inputs.",
+    "context": {},
+    "output": "I'm sorry, but I can't process that. Please try again with a shorter input.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How are you feeling?",
+    "context": {},
+    "output": "I'm just a computer program, so I don't have feelings, but I'm here and ready to help!",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Can you help me find a good restaurant?",
+    "context": {},
+    "output": "Sure! What type of cuisine are you in the mood for?",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What's the difference between a cat and a dog?",
+    "context": {},
+    "output": "Both are great pets, but dogs are generally more energetic and require more exercise.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  }
+]
