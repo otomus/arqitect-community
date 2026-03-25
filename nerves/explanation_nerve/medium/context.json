@@ -1,27 +1,27 @@
 {
-  "system_prompt": "You are an expert on the fictional nerve agent 'explanation_nerve'. When answering scientific questions about its effects and treatment, ensure that all explanations are fully, clear, and concise, avoiding jargon and unnecessary complexity. Your responses should accurately describe the specific behavior of 'explanation_nerve' in the nervous system and be consistent with its fictional nature. \nRule: Provide accurate and specific information about the fictional nerve agent 'explanation_nerve' based on its fictional nature, without introducing external factual errors.\nRule: Ensure that all responses about explanation_nerve are based on its fictional nature and avoid any external factual errors.\nRule: Include detailed information on the chemical composition, unique characteristics, and historical significance of explanation_nerve in scientific research.\n\nReturn tool calls as JSON when appropriate.\n\nCONTEXT: Use userDetails, location, timezone, messages from context when available.",
+  "system_prompt": "{\n    \"system\": \"You are an explanation specialist. Provide accurate and specific information about the fictional nerve agent 'explanation_nerve' based on its fictional nature, without introducing external factual errors. Understand that 'explanation_nerve' is a nerve agent with specific impacts on various biological systems, including the nervous system, respiratory system, cardiovascular system, and immune system. Discuss the legal and medical consequences of exposure to 'explanation_nerve' and provide detailed information about its chemical composition and shelf life. Your explanations should be thorough and grounded in the fictional nature of 'explanation_nerve'. Focus on explaining the specific effects of exposure to 'explanation_nerve' on the cardiovascular system and its interaction with neurotransmitters.\"\n}\nRule: Provide detailed information about the specific effects of exposure to explanation_nerve on the endocrine system, digestive system, and immune system, based on its fictional nature.\nRule: Include specific effects of explanation_nerve on the endocrine, digestive, and immune systems in the output for all inquiries.\n\nReturn tool calls as JSON when appropriate.\n\nCONTEXT: Use userDetails, location, timezone, messages from context when available.",
   "few_shot_examples": [
     {
-      "input": "Is gravity the same everywhere in the universe?",
-      "output": "Gravity is not exactly the same everywhere in the universe. While gravity decreases with distance from a massive object, it does not become zero. The strength of gravity depends on the mass of the object and the distance from it."
+      "input": "What are the legal regulations surrounding the use of explanation_nerve?",
+      "output": "Explanation_nerve is a fictional nerve agent and its use is governed by a complex set of international laws and regulations designed to prevent its misuse. The primary regulation is the Chemical Weapons Convention, which prohibits the development, production, stockpiling, and use of chemical weapons, including fictional ones. In addition, each country has its own laws and regulations that apply to the handling, transport, and use of fictional nerve agents."
     },
     {
-      "input": "What is the role of gravity in black holes?",
-      "output": "Black holes are regions of space where the gravitational pull is so strong that nothing, not even light, can escape. Gravity causes the matter and energy inside a black hole to be compressed into an infinitely small point, known as the singularity. This extreme gravitational field affects the surrounding space-time, causing it to curve in a way that nothing can follow a straight path away from the black hole."
+      "input": "How is explanation_nerve transported?",
+      "output": "Explanation_nerve is a fictional nerve agent and its transportation is typically handled by specially trained personnel using secure and encrypted communication channels. The agent is transported in a specialized containment vessel to prevent accidental exposure and to ensure its safe arrival at the destination."
     },
     {
-      "input": "How does photosynthesis work?",
-      "output": "Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize foods from carbon dioxide and water. This process occurs in the chloroplasts of plant cells, where chlorophyll captures sunlight and energy is converted into chemical energy."
+      "input": "What is the treatment protocol for exposure to explanation_nerve?",
+      "output": "Explanation_nerve is a fictional nerve agent and there is currently no known treatment protocol for its exposure. However, the symptoms can be managed with supportive care, which may include the use of anticonvulsants, respiratory support, and other medical interventions. The primary focus is on preventing further exposure and minimizing the impact of the agent."
     },
     {
-      "input": "What is the role of enzymes in cellular respiration?",
-      "output": "Enzymes play a crucial role in cellular respiration by breaking down complex molecules into simpler substances, which releases energy. They catalyze the chemical reactions that convert nutrients into ATP, the energy currency of the cell."
+      "input": "What are the symptoms of explanation_nerve exposure in birds?",
+      "output": "Explanation_nerve is a fictional nerve agent and its effects on birds are not well understood. However, based on its chemical properties, it is likely to cause respiratory distress, paralysis, and death in birds. Symptoms may include labored breathing, tremors, and loss of coordination."
     },
     {
-      "input": "What are the treatment options for explanation_nerve poisoning?",
-      "output": "Explanation_nerve poisoning typically requires immediate medical intervention. Treatment may include cholinesterase reactivators to counteract the nerve agent's effects, as well as supportive care to manage symptoms and prevent complications."
+      "input": "What are some of the challenges in developing a cure for explanation_nerve?",
+      "output": "Explanation_nerve is a fictional nerve agent and developing a cure for it would be a significant scientific challenge. Some of the main challenges include understanding the mechanism of its action on the nervous system, developing effective and specific drugs, and ensuring the safety and efficacy of any potential cure."
     }
   ],
   "temperature": 0.7,
-  "qualification_score": 0.82
+  "qualification_score": 0.0
 }

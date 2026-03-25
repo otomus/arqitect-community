@@ -35,8 +35,7 @@
     "qualification_timeout": 600,
     "low_quality_threshold": 0.5,
     "merge_threshold": 3.0,
-    "improvement_threshold": 0.95,
-    "current_score": 0.825
+    "improvement_threshold": 0.95
   },
   "capabilities": {
     "json_mode": true,
@@ -45,5 +44,5 @@
     "max_messages": 100,
     "include_summary": false
   },
-  "description": "explanation_nerve"
+  "description": "Explain the specific effects of exposure to explanation_nerve on the endocrine, digestive, and immune systems, based on its fictional nature."
 }
