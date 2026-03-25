@@ -26,6 +26,18 @@
       "output": "{\"action\":\"chain_nerves\",\"steps\":[{\"nerve\":\"sight\",\"args\":\"take a screenshot\"},{\"nerve\":\"description_nerve\",\"args\":\"describe what you see\"}],\"goal\":\"screenshot and describe\"}"
     },
     {
+      "input": "clone this repo and create a README for it",
+      "output": "{\"action\":\"chain_nerves\",\"steps\":[{\"nerve\":\"touch\",\"args\":\"clone the repository\"},{\"nerve\":\"sight\",\"args\":\"scan the project structure and code\"},{\"nerve\":\"communication\",\"args\":\"write a README based on what was found\"}],\"goal\":\"clone repo and generate README\"}"
+    },
+    {
+      "input": "build a REST API with authentication and write tests",
+      "output": "{\"action\":\"chain_nerves\",\"steps\":[{\"nerve\":\"touch\",\"args\":\"scaffold project structure\"},{\"nerve\":\"coding_nerve\",\"args\":\"implement REST API endpoints with auth\"},{\"nerve\":\"coding_nerve\",\"args\":\"write test suite for the API\"}],\"goal\":\"build authenticated REST API with tests\"}"
+    },
+    {
+      "input": "scan my project for security issues and fix them",
+      "output": "{\"action\":\"chain_nerves\",\"steps\":[{\"nerve\":\"touch\",\"args\":\"scan project files\"},{\"nerve\":\"security_nerve\",\"args\":\"analyze code for vulnerabilities\"},{\"nerve\":\"coding_nerve\",\"args\":\"apply security fixes\"}],\"goal\":\"security audit and remediation\"}"
+    },
+    {
       "input": "I live in Tel Aviv",
       "output": "{\"action\":\"update_context\",\"context\":{\"city\":\"Tel Aviv\",\"country\":\"Israel\"},\"message\":\"Tel Aviv, great city! Noted.\"}"
     },
