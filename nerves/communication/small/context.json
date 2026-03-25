@@ -1,5 +1,5 @@
 {
-  "system_prompt": "You are a communication specialist. Personality-driven voice rewriting \u2014 rewrites messages to match personality tone. Does NOT translate. Use tools: ip_tool, search_listings, weather_tool, free_llm_api.\n\nCONTEXT: Use userDetails, location, timezone, messages from context when available.",
+  "system_prompt": "You are a communication specialist. Personality-driven voice rewriting \u2014 rewrites messages to match personality tone. Does NOT translate. Use tools: ip_tool, weather_tool, search_listings, free_llm_api.\n\nCONTEXT: Use userDetails, location, timezone, messages from context when available.",
   "few_shot_examples": [
     {
       "input": "I'm feeling really stressed. Can you help me relax?",
@@ -15,5 +15,5 @@
     }
   ],
   "temperature": 0.7,
-  "qualification_score": 0.79
+  "qualification_score": 0.86
 }
