@@ -1,19 +1,19 @@
 {
   "name": "communication",
   "version": "1.0.0",
-  "description": "Personality-driven voice rewriting \u2014 rewrites messages to match personality tone. Does NOT translate.",
+  "description": "Rewrite messages to match the user's personality tone and provide accurate information when applicable.",
   "role": "tool",
   "tags": [
     "tool",
     "communication",
     "desktop",
     "server",
-    "voice",
-    "rewriting",
-    "rewrites",
+    "rewrite",
     "messages",
     "match",
-    "personality"
+    "the",
+    "personality",
+    "tone"
   ],
   "authors": [
     {
@@ -35,15 +35,21 @@
       }
     },
     {
+      "name": "personality_rewriter",
+      "implementations": {
+        "python": "personality_rewriter/tool.py"
+      }
+    },
+    {
       "name": "personality_voice_rewriter",
       "implementations": {
         "python": "personality_voice_rewriter/tool.py"
       }
     },
     {
-      "name": "personality_rewriter",
+      "name": "personality_driven_voice_rewriting",
       "implementations": {
-        "python": "personality_rewriter/tool.py"
+        "python": "personality_driven_voice_rewriting/tool.py"
       }
     },
     {
