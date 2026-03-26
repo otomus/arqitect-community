@@ -35,6 +35,18 @@
       }
     },
     {
+      "name": "personality_voice_rewriter",
+      "implementations": {
+        "python": "personality_voice_rewriter/tool.py"
+      }
+    },
+    {
+      "name": "personality_rewriter",
+      "implementations": {
+        "python": "personality_rewriter/tool.py"
+      }
+    },
+    {
       "name": "free_llm_api",
       "implementations": {
         "python": "free_llm_api/tool.py"
