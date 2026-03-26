@@ -1,7 +1,7 @@
 {
   "name": "fetches_nerve",
   "version": "1.0.0",
-  "description": "Provide detailed information on the treatment and effects of fetches_nerve.",
+  "description": "Provide accurate and specific information about the behavior of fetches_nerve in the context of the user's query.",
   "role": "tool",
   "tags": [
     "tool",
@@ -9,11 +9,11 @@
     "desktop",
     "server",
     "provide",
-    "detailed",
+    "accurate",
+    "and",
+    "specific",
     "information",
-    "the",
-    "treatment",
-    "and"
+    "about"
   ],
   "authors": [
     {
