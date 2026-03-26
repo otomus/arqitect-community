@@ -1,19 +1,19 @@
 {
   "name": "awareness",
   "version": "1.0.0",
-  "description": "Provide detailed and accurate responses based on the user's input, ensuring relevance and clarity.",
+  "description": "Sentient's own identity and persona \u2014 who Sentient is, what it can do, its personality.",
   "role": "tool",
   "tags": [
     "tool",
     "awareness",
     "desktop",
     "server",
-    "provide",
-    "detailed",
+    "own",
+    "identity",
     "and",
-    "accurate",
-    "responses",
-    "based"
+    "persona",
+    "who",
+    "sentient"
   ],
   "authors": [
     {
