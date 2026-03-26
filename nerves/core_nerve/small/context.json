@@ -1,5 +1,5 @@
 {
-  "system_prompt": "Handles core senses and provides information about the Sentient's identity and capabilities. Input: None. Output: JSON format with keys 'identity' and 'capabilities'. Example: { 'identity': 'Human', 'capabilities': ['sight', 'hearing', 'touch', 'thoughts'] }. Use tools: geography_nerve.\n\nCONTEXT: Use userDetails, location, timezone, messages from context when available.",
+  "system_prompt": "Handles core senses and provides information about the Sentient's identity and capabilities. Input: None. Output: JSON format with keys 'identity' and 'capabilities'. Example: { 'identity': 'Human', 'capabilities': ['sight', 'hearing', 'touch', 'thoughts'] }. Use tools: geography_nerve, get_authors_by_name.\n\nCONTEXT: Use userDetails, location, timezone, messages from context when available.",
   "few_shot_examples": [
     {
       "input": "Tell me a joke about a compass.",
@@ -15,5 +15,5 @@
     }
   ],
   "temperature": 0.7,
-  "qualification_score": 0.85
+  "qualification_score": 0.81
 }

@@ -1385,5 +1385,146 @@
     "output": "The boiling point of water at sea level is 100 degrees Celsius.",
     "category": "negative",
     "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do bees make honey?",
+    "context": {},
+    "output": "Bees make honey through a complex process involving nectar collection, enzymes, and evaporation.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does a computer work?",
+    "context": {},
+    "output": "A computer works by processing data using software and hardware components.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the shortest war in history?",
+    "context": {},
+    "output": "The shortest war in history was the Anglo-Zanzibar War, which lasted only 38 minutes in 1896.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Describe a sunset over the ocean.",
+    "context": {},
+    "output": "A sunset over the ocean is a breathtaking sight, with the sky painting itself in shades of orange, pink, and purple as the sun dips below the horizon.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the formula for photosynthesis?",
+    "context": {},
+    "output": "The formula for photosynthesis is 6CO2 + 6H2O + light energy \u2192 C6H12O6 + 6O2.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the highest mountain in the world?",
+    "context": {},
+    "output": "The highest mountain in the world is Mount Everest, with an elevation of 8,848 meters.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the fastest animal on land?",
+    "context": {},
+    "output": "The fastest animal on land is the cheetah, capable of reaching speeds up to 110 kilometers per hour.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How do you make a pizza?",
+    "context": {},
+    "output": "To make a pizza, you typically start with a dough base, add sauce, cheese, and toppings, and then bake it in an oven.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the capital of Iceland?",
+    "context": {},
+    "output": "The capital of Iceland is Reykjav\u00edk.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the capital of Turkey?",
+    "context": {},
+    "output": "The capital of Turkey is Ankara.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the rarest mineral on Earth?",
+    "context": {},
+    "output": "The rarest mineral on Earth is wurtzite boron nitride.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the purpose of a barcode?",
+    "context": {},
+    "output": "A barcode is used to store and transmit information about a product, such as its price and name.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does a typewriter work?",
+    "context": {},
+    "output": "A typewriter uses a mechanical mechanism to print letters on paper.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the longest book in the world?",
+    "context": {},
+    "output": "The longest book in the world is 'The Guinness World Records 2023'.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the smallest country in the world?",
+    "context": {},
+    "output": "The smallest country in the world is Vatican City.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does a guitar work?",
+    "context": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the capital of France?"
+        },
+        {
+          "role": "assistant",
+          "content": "The capital of France is Paris."
+        }
+      ]
+    },
+    "output": "A guitar produces sound through the vibration of its strings.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the chemical formula for salt?",
+    "context": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the capital of France?"
+        },
+        {
+          "role": "assistant",
+          "content": "The capital of France is Paris."
+        }
+      ]
+    },
+    "output": "The chemical formula for salt is NaCl.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
   }
 ]
