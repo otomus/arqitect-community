@@ -1266,5 +1266,124 @@
     "output": "The moon does not have a capital, as it is not a sovereign state.",
     "category": "negative",
     "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How old are you?",
+    "context": {},
+    "output": "As an AI, I don't have age.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Explain the process of photosynthesis in simple terms.",
+    "context": {},
+    "output": "Photosynthesis is the process by which plants and other organisms use sunlight to convert carbon dioxide and water into glucose and oxygen.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Tell me a joke about computers.",
+    "context": {},
+    "output": "Why did the computer go to the doctor? It had a virus!",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does a light bulb work?",
+    "context": {},
+    "output": "A light bulb works by passing an electric current through a filament, which heats up and glows.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Explain the theory of relativity.",
+    "context": {},
+    "output": "The theory of relativity is a set of physical laws that describe the relationship between space and time.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "Tell me a joke about science.",
+    "context": {},
+    "output": "Why did the scientist break up with the atom? It had too many protons!",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does a solar panel generate electricity?",
+    "context": {},
+    "output": "A solar panel generates electricity by converting sunlight into electrical energy using photovoltaic cells.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the capital of the Moon?",
+    "context": {},
+    "output": "The Moon does not have a capital.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the capital of Venus?",
+    "context": {},
+    "output": "Venus does not have a capital.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does an airplane fly?",
+    "context": {},
+    "output": "An airplane flies by using the principles of aerodynamics.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the chemical formula for water?",
+    "context": {},
+    "output": "The chemical formula for water is H2O.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How many planets are in the solar system?",
+    "context": {},
+    "output": "There are currently eight planets in the solar system.",
+    "category": "core",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the boiling point of water?",
+    "context": {},
+    "output": "The boiling point of water at sea level is 100 degrees Celsius.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "How does a solar panel work?",
+    "context": {},
+    "output": "A solar panel converts sunlight into electricity using photovoltaic cells.",
+    "category": "edge",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the longest marathon distance?",
+    "context": {},
+    "output": "The longest marathon distance is 26.2 miles.",
+    "category": "boundary",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the square root of 49?",
+    "context": {},
+    "output": "The square root of 49 is 7.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
+  },
+  {
+    "input": "What is the boiling point of water?",
+    "context": {},
+    "output": "The boiling point of water at sea level is 100 degrees Celsius.",
+    "category": "negative",
+    "generated_by": "Qwen2.5-Coder-7B.gguf"
   }
 ]
