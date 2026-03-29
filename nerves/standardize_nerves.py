@@ -149,7 +149,6 @@ NERVE_PLATFORMS: dict[str, list[str]] = {
     "json_extract_nerve":       ["desktop", "server"],
     "knowledge_capture_nerve":  ["desktop", "server"],
     "lead_research_nerve":      ["desktop", "server"],
-    "llm_ask_nerve":            ["desktop", "server"],
     "market_research_nerve":    ["desktop", "server"],
     "page_screenshot_nerve":    ["desktop", "server"],
     "password_nerve":           ["desktop", "server"],
@@ -320,7 +319,6 @@ TOOL_ARG_TEMPLATES: dict[str, dict] = {
     "git_cleanup": {"action": "prune"},
     "git_conflict": {"action": "list"},
     "git_history": {"path": ".", "limit": 10},
-    "llm_ask": {"prompt": "Explain this concept", "model": "default"},
     "embedding": {"text": "sample text"},
     "image_generate": {"prompt": "a sunset over mountains"},
     "image_ocr": {"path": "document.png"},
@@ -763,8 +761,6 @@ def standardize_nerve(nerve_dir: Path) -> dict:
         # test_cases.json
         test_path = nerve_dir / "test_cases.json"
         if not test_path.exists():
-            tools = bundle.get("tools", [])
-            description = bundle.get("description", nerve_dir.name.replace("_", " "))
             test_cases = generate_test_cases(description, tools)
             write_json(test_path, test_cases)
             result["generated"].append("test_cases.json")

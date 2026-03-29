@@ -2019,26 +2019,6 @@
       ],
       "model_scores": {}
     },
-    "llm_ask_nerve": {
-      "description": "Ask an LLM a question",
-      "role": "tool",
-      "mode": "reasoning",
-      "tags": [
-        "ai",
-        "llm",
-        "inference"
-      ],
-      "authors": [
-        {
-          "github": "arqitect-community"
-        }
-      ],
-      "version": "1.0.0",
-      "tools": [
-        "llm_call"
-      ],
-      "model_scores": {}
-    },
     "lock_nerve": {
       "description": "Lock or unlock a smart door lock remotely",
       "role": "tool",
