@@ -1,6 +1,7 @@
 name: Build Arqitect Site
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
