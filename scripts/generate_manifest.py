@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DEFAULT_SIZE_CLASS = "unknown"
+DEFAULT_ROLE = "unknown"
 
 
 def _load_json(path: str) -> dict | None:
@@ -93,13 +93,12 @@ def _read_qualification_score(adapter_dir: str) -> float | None:
     return qual.get("overall_score")
 
 
-def _build_adapter_entry(meta: dict, role: str, size_class: str,
+def _build_adapter_entry(meta: dict, role: str,
                          model_name: str | None, score: float | None) -> dict:
     """Build a single adapter manifest entry from parsed metadata."""
     return {
         "role": role,
-        "model": meta.get("model", model_name or size_class),
-        "size_class": meta.get("size_class", size_class),
+        "model": model_name or role,
         "provider": meta.get("provider", ""),
         "score": score,
         "contributor": meta.get("contributor", {}).get("github", ""),
@@ -107,7 +106,7 @@ def _build_adapter_entry(meta: dict, role: str, size_class: str,
 
 
 def _collect_adapter_entry(adapters: dict, adapter_dir: str, role: str,
-                           size_class: str, model_name: str | None) -> None:
+                           model_name: str | None) -> None:
     """Read a single adapter directory and add it to the adapters dict.
 
     Reads meta.json for adapter metadata and optionally qualification.json
@@ -119,40 +118,34 @@ def _collect_adapter_entry(adapters: dict, adapter_dir: str, role: str,
 
     score = _read_qualification_score(adapter_dir)
 
-    key = f"{role}/{size_class}/{model_name}" if model_name else f"{role}/{size_class}"
-    adapters[key] = _build_adapter_entry(meta, role, size_class, model_name, score)
+    key = f"{role}/{model_name}" if model_name else role
+    adapters[key] = _build_adapter_entry(meta, role, model_name, score)
 
 
-def _collect_size_class_adapters(adapters: dict, role: str, role_dir: str) -> None:
-    """Collect all adapters for a given role across its size classes."""
-    for size_class in _sorted_subdirs(role_dir):
-        size_dir = os.path.join(role_dir, size_class)
+def _collect_role_adapters(adapters: dict, role: str, role_dir: str) -> None:
+    """Collect all adapters for a given role."""
+    # Role default adapter
+    _collect_adapter_entry(adapters, role_dir, role, model_name=None)
 
-        # Size-class default adapter
-        _collect_adapter_entry(adapters, size_dir, role, size_class, model_name=None)
-
-        # Model-specific adapters within this size class
-        for model_name in _sorted_subdirs(size_dir):
-            model_dir = os.path.join(size_dir, model_name)
-            _collect_adapter_entry(adapters, model_dir, role, size_class, model_name)
+    # Model-specific adapters
+    for model_name in _sorted_subdirs(role_dir):
+        model_dir = os.path.join(role_dir, model_name)
+        _collect_adapter_entry(adapters, model_dir, role, model_name)
 
 
 def collect_adapters() -> dict:
-    """Walk adapters/{role}/{size_class}/[{model_name}/] and extract adapter info.
+    """Walk adapters/{role}/[{model_name}/] and extract adapter info.
 
     Structure:
-        adapters/{role}/{size_class}/              -- size-class default adapter
-        adapters/{role}/{size_class}/{model_name}/ -- model-specific adapter
-
-    Fallback order at runtime:
-        1. exact model -> 2. size_class default -> 3. tinylm (ultimate fallback)
+        adapters/{role}/              -- role default adapter
+        adapters/{role}/{model_name}/ -- model-specific adapter
     """
     adapters = {}
     adapters_root = os.path.join(REPO_ROOT, "adapters")
 
     for role in _sorted_subdirs(adapters_root):
         role_dir = os.path.join(adapters_root, role)
-        _collect_size_class_adapters(adapters, role, role_dir)
+        _collect_role_adapters(adapters, role, role_dir)
 
     return adapters
 
@@ -237,26 +230,26 @@ def collect_connectors() -> dict:
 
 
 def build_leaderboard(adapters: dict) -> dict:
-    """Build leaderboard of top adapters grouped by size_class.
+    """Build leaderboard of top adapters grouped by role.
 
-    Returns a dict mapping each size_class to a list of adapter entries
+    Returns a dict mapping each role to a list of adapter entries
     sorted by score in descending order.
     """
-    by_class: dict[str, list] = {}
+    by_role: dict[str, list] = {}
     for _name, info in adapters.items():
         if info.get("score") is None:
             continue
-        sc = info.get("size_class", DEFAULT_SIZE_CLASS)
-        by_class.setdefault(sc, []).append({
+        role = info.get("role", DEFAULT_ROLE)
+        by_role.setdefault(role, []).append({
             "model": info["model"],
             "score": info["score"],
             "contributor": info.get("contributor", ""),
         })
 
-    for sc in by_class:
-        by_class[sc].sort(key=lambda x: x["score"], reverse=True)
+    for role in by_role:
+        by_role[role].sort(key=lambda x: x["score"], reverse=True)
 
-    return by_class
+    return by_role
 
 
 def main():

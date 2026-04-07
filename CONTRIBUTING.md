@@ -7,7 +7,7 @@ The community accepts contributions in five categories:
 | Type | Directory | Description |
 |------|-----------|-------------|
 | **Nerves** | `nerves/` | Specialized AI agents with system prompts, few-shot examples, and optional tools |
-| **Adapters** | `adapters/{role}/{size}/{model}/` | Model-specific configurations for roles (brain, code, creative, etc.) |
+| **Adapters** | `adapters/{role}/{model}/` | Model-specific configurations for roles (brain, code, creative, etc.) |
 | **MCP Tools** | `mcp_tools/` | Python/Go/Node functions that nerves can discover and use at runtime |
 | **External MCP Servers** | `mcps/` | References to pre-built MCP server packages (npm, GitHub) |
 | **Connectors** | `connectors/` | Platform integrations (WhatsApp, Telegram, Discord, Slack, etc.) |
@@ -16,7 +16,7 @@ The community accepts contributions in five categories:
 
 ## Submitting a Nerve
 
-Nerves are specialized AI agents. Each nerve has a system prompt, few-shot examples, and optional MCP tool bindings, packaged across multiple model size classes.
+Nerves are specialized AI agents. Each nerve has a system prompt, few-shot examples, and optional MCP tool bindings.
 
 ### Structure
 
@@ -24,21 +24,8 @@ Nerves are specialized AI agents. Each nerve has a system prompt, few-shot examp
 nerves/{name}/
 ├── bundle.json                # Nerve identity, role, tags, tools, authors
 ├── test_cases.json            # Test cases (core, edge, boundary, negative)
-├── large/
-│   ├── context.json           # System prompt, few-shot examples, temperature, qualification_score
-│   └── meta.json              # Model config, tuning params, qualification thresholds
-├── medium/
-│   ├── context.json
-│   ├── meta.json
-│   └── {model_name}/          # Optional model-specific overrides
-│       ├── context.json
-│       └── meta.json
-├── small/
-│   ├── context.json
-│   └── meta.json
-└── tinylm/
-    ├── context.json
-    └── meta.json
+├── context.json               # System prompt, few-shot examples, temperature, qualification_score
+└── meta.json                  # Model config, tuning params, qualification thresholds
 ```
 
 ### Requirements
@@ -71,12 +58,12 @@ If your nerve declares tools in `bundle.json`:
 
 Adapters are model-specific configurations for roles like `brain`, `code`, `creative`, `awareness`, `communication`, `nerve`, and `vision`.
 
-Community PRs can only add **model-specific** adapters under `adapters/{role}/{size_class}/{model_name}/`. Default adapters (directly under the size class) are managed by the core team.
+Community PRs can only add **model-specific** adapters under `adapters/{role}/{model_name}/`. Default adapters (directly under the role) are managed by the core team.
 
 ### Structure
 
 ```
-adapters/{role}/{size_class}/{model_name}/
+adapters/{role}/{model_name}/
 ├── context.json       # System prompt, few-shot examples, temperature, qualification_score
 ├── meta.json          # Model config, tuning params, qualification thresholds
 └── test_bank.jsonl    # Test cases (one JSON object per line)
@@ -249,7 +236,7 @@ Every PR is reviewed against these criteria. PRs that fail will be asked to fix 
 
 All PRs are validated automatically by CI:
 
-- **Path protection** — community PRs can only modify: `nerves/`, `adapters/{role}/{size}/{model}/`, `connectors/`, `mcp_tools/`, `mcps/`
+- **Path protection** — community PRs can only modify: `nerves/`, `adapters/{role}/{model}/`, `connectors/`, `mcp_tools/`, `mcps/`
 - **JSON schema validation** against `schemas/`
 - **Secret scanning**
 - **Score quality checks** — below-threshold or regressing scores cause auto-close

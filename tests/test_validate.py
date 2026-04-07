@@ -80,8 +80,6 @@ class TestValidateJsonAgainstSchema:
     def test_valid_data(self, patched_validate):
         schema = patched_validate.load_schema("adapter_meta.schema.json")
         data = {
-            "model": "llama3.2-3b",
-            "size_class": "small",
             "contributor": {"github": "tester"},
         }
         errors = patched_validate.validate_json_against_schema(data, schema, "test.json")
@@ -89,15 +87,14 @@ class TestValidateJsonAgainstSchema:
 
     def test_missing_required_field(self, patched_validate):
         schema = patched_validate.load_schema("adapter_meta.schema.json")
-        data = {"model": "llama3.2-3b"}  # missing size_class, contributor
+        data = {"provider": "ollama"}  # missing contributor
         errors = patched_validate.validate_json_against_schema(data, schema, "test.json")
         assert len(errors) > 0
 
     def test_invalid_enum(self, patched_validate):
         schema = patched_validate.load_schema("adapter_meta.schema.json")
         data = {
-            "model": "m",
-            "size_class": "gigantic",  # not in enum
+            "provider": "nonexistent_provider",  # not in enum
             "contributor": {"github": "t"},
         }
         errors = patched_validate.validate_json_against_schema(data, schema, "test.json")
@@ -403,25 +400,6 @@ class TestValidateAdapter:
         errors = patched_validate.validate_adapter(str(adapter))
         assert errors == []
 
-    def test_invalid_size_class(self, patched_validate, mock_repo):
-        adapter = make_adapter_dir(
-            mock_repo / "adapters",
-            "bad_sc",
-            meta_overrides={"size_class": "gigantic"},
-        )
-        errors = patched_validate.validate_adapter(str(adapter))
-        assert any("invalid size_class" in e for e in errors)
-
-    def test_valid_size_classes(self, patched_validate, mock_repo):
-        for sc in ("tinylm", "small", "medium", "large"):
-            adapter = make_adapter_dir(
-                mock_repo / "adapters",
-                f"sc_{sc}",
-                meta_overrides={"size_class": sc},
-            )
-            errors = patched_validate.validate_adapter(str(adapter))
-            assert not any("invalid size_class" in e for e in errors), f"size_class {sc} should be valid"
-
     def test_tuning_temperature_out_of_range(self, patched_validate, mock_repo):
         """Adapter under brain/ role with temperature above 0.5 should fail."""
         role_dir = mock_repo / "adapters" / "brain"
@@ -453,6 +431,96 @@ class TestValidateAdapter:
         )
         errors = patched_validate.validate_adapter(str(adapter))
         assert not any("temperature_range" in e for e in errors)
+
+    def test_tuning_temperature_boundary_values_pass(self, patched_validate, mock_repo):
+        """Exact min and max boundary temperatures for brain role should be valid."""
+        role_dir = mock_repo / "adapters" / "brain"
+        role_dir.mkdir(parents=True, exist_ok=True)
+        adapter = make_adapter_dir(
+            role_dir,
+            "boundary_temp",
+            meta_overrides={
+                "tuning": {
+                    "temperature_range": [0.0, 0.5],  # exact bounds for brain
+                }
+            },
+        )
+        errors = patched_validate.validate_adapter(str(adapter))
+        assert not any("temperature_range" in e for e in errors)
+
+    def test_tuning_empty_temperature_range_skips_bounds_check(self, patched_validate, mock_repo):
+        """An empty temperature_range must not trigger a spurious 'out of allowed bounds' error
+        from the tuning profile check. When jsonschema is available, the minItems: 1 constraint
+        on temperature_range produces a schema error instead."""
+        role_dir = mock_repo / "adapters" / "brain"
+        role_dir.mkdir(parents=True, exist_ok=True)
+        adapter = make_adapter_dir(
+            role_dir,
+            "empty_temp_range",
+            meta_overrides={
+                "tuning": {
+                    "temperature_range": [],
+                }
+            },
+        )
+        errors = patched_validate.validate_adapter(str(adapter))
+        assert not any("out of allowed bounds" in e for e in errors)
+        try:
+            import jsonschema  # noqa: F401
+            # jsonschema recurses into nested properties and catches minItems violations
+            assert any("temperature_range" in e for e in errors), (
+                "jsonschema should report a minItems violation for empty temperature_range"
+            )
+        except ImportError:
+            # Fallback validator only checks top-level object fields — nested array
+            # constraints like minItems are not enforced without jsonschema installed.
+            pass
+
+    def test_tuning_unknown_role_returns_error(self, patched_validate, mock_repo):
+        """An adapter under an unrecognised role directory should fail with a clear error."""
+        role_dir = mock_repo / "adapters" / "unknown_role"
+        role_dir.mkdir(parents=True, exist_ok=True)
+        adapter = make_adapter_dir(
+            role_dir,
+            "mystery_adapter",
+            meta_overrides={
+                "tuning": {
+                    "temperature_range": [0.3],
+                }
+            },
+        )
+        errors = patched_validate.validate_adapter(str(adapter))
+        assert any("unknown role" in e for e in errors)
+
+    @pytest.mark.parametrize("role,valid_temp,invalid_temp", [
+        ("touch",   0.3, 0.9),
+        ("hearing", 0.3, 0.9),
+        ("sight",   0.3, 0.9),
+    ])
+    def test_new_sense_roles_temperature_validation(
+        self, patched_validate, mock_repo, role, valid_temp, invalid_temp
+    ):
+        """New sense roles (touch/hearing/sight) should enforce their temperature bounds."""
+        role_dir = mock_repo / "adapters" / role
+        role_dir.mkdir(parents=True, exist_ok=True)
+
+        valid_adapter = make_adapter_dir(
+            role_dir,
+            f"valid_{role}",
+            meta_overrides={"tuning": {"temperature_range": [valid_temp]}},
+        )
+        errors = patched_validate.validate_adapter(str(valid_adapter))
+        assert not any("temperature_range" in e for e in errors), \
+            f"role={role}: {valid_temp} should be in range"
+
+        invalid_adapter = make_adapter_dir(
+            role_dir,
+            f"invalid_{role}",
+            meta_overrides={"tuning": {"temperature_range": [invalid_temp]}},
+        )
+        errors = patched_validate.validate_adapter(str(invalid_adapter))
+        assert any("temperature_range" in e and "out of allowed bounds" in e for e in errors), \
+            f"role={role}: {invalid_temp} should be out of range"
 
 
 # ========================================================================
@@ -629,11 +697,13 @@ class TestMain:
     def test_validates_all_component_types(self, patched_validate, mock_repo):
         """Populate every component type and verify main exits 0."""
         make_nerve_dir(mock_repo / "nerves", "my_nerve")
-        # adapters need role/size_class hierarchy
+        # adapters need role hierarchy — flat structure, no size classes
         role_dir = mock_repo / "adapters" / "brain"
         role_dir.mkdir(parents=True)
-        sc_dir = role_dir / "small"
-        make_adapter_dir(role_dir, "small")
+        # Write meta.json and context.json directly in the role dir
+        import json
+        (role_dir / "meta.json").write_text(json.dumps({"contributor": {"github": "tester"}}))
+        (role_dir / "context.json").write_text(json.dumps({"system_prompt": "Test brain.", "temperature": 0.3}))
         make_connector_dir(mock_repo / "connectors", "my_conn")
         make_mcp_dir(mock_repo / "mcps", "my_mcp")
         make_tool_dir(mock_repo / "mcp_tools", "my_tool")

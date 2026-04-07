@@ -3,16 +3,8 @@
   "title": "Brain Adapter Meta",
   "description": "Model information and contributor details for a brain adapter",
   "type": "object",
-  "required": ["model", "size_class", "contributor"],
+  "required": ["contributor"],
   "properties": {
-    "model": {
-      "type": "string",
-      "description": "Model identifier (e.g., llama3.2-3b)"
-    },
-    "size_class": {
-      "type": "string",
-      "enum": ["tinylm", "small", "medium", "large"]
-    },
     "provider": {
       "type": "string",
       "enum": ["ollama", "anthropic", "groq", "openai_compat"]
@@ -49,7 +41,7 @@
     },
     "tuning": {
       "type": "object",
-      "description": "Inference tuning parameters for this size class",
+      "description": "Inference tuning parameters for this adapter",
       "properties": {
         "min_training_examples": {
           "type": "integer",
@@ -111,7 +103,7 @@
           "minimum": 1,
           "description": "Total timeout in seconds for the qualification loop"
         },
-        "low_quality_threshold": {
+        "pruning_threshold": {
           "type": "number",
           "minimum": 0.0,
           "maximum": 1.0,

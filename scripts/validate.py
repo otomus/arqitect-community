@@ -275,12 +275,16 @@ def _validate_adapter_qualification(adapter_dir: str, name: str) -> list[str]:
     return errors
 
 
-def _validate_adapter_size_class(adapter_dir: str, name: str, meta: dict) -> list[str]:
-    """Validate that the size_class field in meta.json is a recognized value."""
-    sc = meta.get("size_class", "")
-    if sc and sc not in ("tinylm", "small", "medium", "large"):
-        return [f"  {name}: invalid size_class '{sc}'"]
-    return []
+def _resolve_adapter_role(adapter_dir: str) -> str:
+    """Derive the adapter role from the directory path.
+
+    For role-level dirs like adapters/brain/, returns 'brain'.
+    For model-specific dirs like adapters/brain/llama3/, returns 'brain'.
+    """
+    parent_name = os.path.basename(os.path.dirname(adapter_dir))
+    if parent_name == "adapters":
+        return os.path.basename(adapter_dir)
+    return parent_name
 
 
 def _validate_adapter_tuning(adapter_dir: str, name: str, meta: dict) -> list[str]:
@@ -289,7 +293,7 @@ def _validate_adapter_tuning(adapter_dir: str, name: str, meta: dict) -> list[st
     if not tuning:
         return []
 
-    role = os.path.basename(os.path.dirname(adapter_dir))
+    role = _resolve_adapter_role(adapter_dir)
     profiles = load_role_tuning_profiles()
     profile = profiles.get(role)
     if not profile:
@@ -324,7 +328,6 @@ def validate_adapter(adapter_dir: str) -> list[str]:
     if not meta or not isinstance(meta, dict):
         return errors
 
-    errors.extend(_validate_adapter_size_class(adapter_dir, name, meta))
     errors.extend(_validate_adapter_tuning(adapter_dir, name, meta))
     return errors
 
@@ -482,18 +485,16 @@ def _validate_all_nerves() -> list[str]:
 
 
 def _validate_all_adapters() -> list[str]:
-    """Validate all adapters across roles, size classes, and model-specific dirs."""
+    """Validate all adapters across roles and model-specific dirs."""
     errors = []
     adapters_root = os.path.join(REPO_ROOT, "adapters")
     for role in _collect_subdirs(adapters_root):
         role_dir = os.path.join(adapters_root, role)
-        for size_class in _collect_subdirs(role_dir):
-            size_dir = os.path.join(role_dir, size_class)
-            print(f"Validating adapter: {role}/{size_class}")
-            errors.extend(validate_adapter(size_dir))
-            for model_name in _collect_subdirs(size_dir):
-                print(f"Validating adapter: {role}/{size_class}/{model_name}")
-                errors.extend(validate_adapter(os.path.join(size_dir, model_name)))
+        print(f"Validating adapter: {role}")
+        errors.extend(validate_adapter(role_dir))
+        for model_name in _collect_subdirs(role_dir):
+            print(f"Validating adapter: {role}/{model_name}")
+            errors.extend(validate_adapter(os.path.join(role_dir, model_name)))
     return errors
 
 
@@ -554,13 +555,13 @@ def _get_changed_dirs() -> set[str] | None:
         top = parts[0]
         if top == "nerves":
             changed.add(os.path.join(REPO_ROOT, "nerves", parts[1]))
-        elif top == "adapters" and len(parts) >= 3:
-            # adapters/{role}/{size_class}/... — validate that size dir
-            adapter_dir = os.path.join(REPO_ROOT, *parts[:3])
+        elif top == "adapters" and len(parts) >= 2:
+            # adapters/{role}/... — validate the role dir
+            adapter_dir = os.path.join(REPO_ROOT, *parts[:2])
             changed.add(adapter_dir)
-            # If model-specific: adapters/{role}/{size}/{model}/...
-            if len(parts) >= 4 and not parts[3].endswith(".json"):
-                changed.add(os.path.join(REPO_ROOT, *parts[:4]))
+            # If model-specific: adapters/{role}/{model}/...
+            if len(parts) >= 3 and not parts[2].endswith(".json") and not parts[2].endswith(".jsonl"):
+                changed.add(os.path.join(REPO_ROOT, *parts[:3]))
         elif top == "mcp_tools":
             changed.add(os.path.join(REPO_ROOT, "mcp_tools", parts[1]))
         elif top == "connectors":

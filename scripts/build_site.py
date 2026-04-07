@@ -58,42 +58,32 @@ def load_nerves() -> list[dict]:
         if bj and isinstance(bj, dict):
             bj.setdefault("name", d.name)
             bj["_dir"] = d.name
-            # detect available model sizes
-            sizes = []
-            for size in ("tinylm", "small", "medium", "large"):
-                if (d / size).is_dir():
-                    sizes.append(size)
-            bj["_sizes"] = sizes
             # load test cases
             tc = load_json(d / "test_cases.json")
             bj["_test_cases"] = tc if isinstance(tc, list) else []
             bj["_test_count"] = len(bj["_test_cases"])
-            # load per-size meta and context
-            size_data = {}
+            # load single context and meta from nerve root
+            meta = load_json(d / "meta.json")
+            ctx = load_json(d / "context.json")
+            nerve_data = {}
+            if meta and isinstance(meta, dict):
+                nerve_data["meta"] = meta
+            if ctx and isinstance(ctx, dict):
+                nerve_data["context"] = ctx
+            # discover model-specific subdirs
             models = []
-            for size in sizes:
-                sd = {}
-                size_dir = d / size
-                meta = load_json(size_dir / "meta.json")
-                ctx = load_json(size_dir / "context.json")
-                if meta and isinstance(meta, dict):
-                    sd["meta"] = meta
-                if ctx and isinstance(ctx, dict):
-                    sd["context"] = ctx
-                # discover model-specific subdirs
-                sd["models"] = {}
-                for child in sorted(size_dir.iterdir()):
-                    if child.is_dir():
-                        model_meta = load_json(child / "meta.json")
-                        model_ctx = load_json(child / "context.json")
-                        if model_meta and isinstance(model_meta, dict):
-                            model_entry = {"meta": model_meta, "size": size, "name": child.name}
-                            if model_ctx and isinstance(model_ctx, dict):
-                                model_entry["context"] = model_ctx
-                            sd["models"][child.name] = model_entry
-                            models.append(model_entry)
-                size_data[size] = sd
-            bj["_size_data"] = size_data
+            nerve_data["models"] = {}
+            for child in sorted(d.iterdir()):
+                if child.is_dir():
+                    model_meta = load_json(child / "meta.json")
+                    model_ctx = load_json(child / "context.json")
+                    if model_meta and isinstance(model_meta, dict):
+                        model_entry = {"meta": model_meta, "name": child.name}
+                        if model_ctx and isinstance(model_ctx, dict):
+                            model_entry["context"] = model_ctx
+                        nerve_data["models"][child.name] = model_entry
+                        models.append(model_entry)
+            bj["_nerve_data"] = nerve_data
             bj["_models"] = models
             results.append(bj)
     return results
@@ -142,36 +132,31 @@ def load_adapters() -> list[dict]:
     for d in sorted(adir.iterdir()):
         if not d.is_dir():
             continue
-        adapter = {"name": d.name, "_dir": d.name, "_sizes": [], "_size_data": {}, "_models": []}
-        for size in ("tinylm", "small", "medium", "large"):
-            sd = d / size
-            if sd.is_dir():
-                adapter["_sizes"].append(size)
-                sdata = {}
-                ctx = load_json(sd / "context.json")
-                meta = load_json(sd / "meta.json")
-                if ctx:
-                    sdata["context"] = ctx
-                    if "description" not in adapter:
-                        sp = ctx.get("system_prompt", "")
-                        first = sp.split("\n")[0][:200] if sp else ""
-                        adapter["description"] = first
-                if meta:
-                    sdata["meta"] = meta
-                    adapter.setdefault("_meta_sample", meta)
-                # discover model-specific subdirs (e.g. llama3.2-3b/)
-                sdata["models"] = {}
-                for child in sorted(sd.iterdir()):
-                    if child.is_dir():
-                        model_meta = load_json(child / "meta.json")
-                        model_ctx = load_json(child / "context.json")
-                        if model_meta and isinstance(model_meta, dict):
-                            model_entry = {"meta": model_meta, "size": size, "name": child.name}
-                            if model_ctx and isinstance(model_ctx, dict):
-                                model_entry["context"] = model_ctx
-                            sdata["models"][child.name] = model_entry
-                            adapter["_models"].append(model_entry)
-                adapter["_size_data"][size] = sdata
+        adapter = {"name": d.name, "_dir": d.name, "_models": []}
+        ctx = load_json(d / "context.json")
+        meta = load_json(d / "meta.json")
+        adapter_data = {}
+        if ctx:
+            adapter_data["context"] = ctx
+            sp = ctx.get("system_prompt", "")
+            first = sp.split("\n")[0][:200] if sp else ""
+            adapter["description"] = first
+        if meta:
+            adapter_data["meta"] = meta
+            adapter["_meta_sample"] = meta
+        # discover model-specific subdirs (e.g. llama3.2-3b/)
+        adapter_data["models"] = {}
+        for child in sorted(d.iterdir()):
+            if child.is_dir():
+                model_meta = load_json(child / "meta.json")
+                model_ctx = load_json(child / "context.json")
+                if model_meta and isinstance(model_meta, dict):
+                    model_entry = {"meta": model_meta, "name": child.name}
+                    if model_ctx and isinstance(model_ctx, dict):
+                        model_entry["context"] = model_ctx
+                    adapter_data["models"][child.name] = model_entry
+                    adapter["_models"].append(model_entry)
+        adapter["_adapter_data"] = adapter_data
         results.append(adapter)
     return results
 
@@ -322,15 +307,6 @@ def build_index(
         ("adapters/index.html", "&#129504;", "Adapters", f"{len(adapters)} temperaments",
          "Temperament &mdash; the voice and personality that shape how the system thinks at different scales."),
     ]
-    type_html = "".join(
-        f'<a href="{href}" class="type-card">'
-        f'<span class="type-card-icon">{icon}</span>'
-        f'<div class="type-card-name">{name}</div>'
-        f'<div class="card-desc">{desc}</div>'
-        f'<div class="type-card-count">{count}</div></a>'
-        for href, icon, name, count, desc in type_cards
-    )
-
     type_grid = "\n      ".join(
         f'<a href="{href}" class="type-card">\n'
         f'        <span class="type-card-icon">{icon}</span>\n'
@@ -603,7 +579,6 @@ def build_nerves_gallery(nerves: list[dict]) -> None:
         desc = n.get("description", "")
         tgs = n.get("tags", [])
         role = n.get("role", "")
-        sizes = n.get("_sizes", [])
         tools_list = n.get("tools", [])
         tool_count = len(tools_list)
         search_text = f"{name} {desc} {' '.join(tgs)} {role}"
@@ -614,8 +589,6 @@ def build_nerves_gallery(nerves: list[dict]) -> None:
             meta_bits.append(f'<span class="tag tag--orange">{E(role)}</span>')
         for tg in tgs[:3]:
             meta_bits.append(f'<span class="tag tag--cyan">{E(tg)}</span>')
-        if sizes:
-            meta_bits.append(f'<span class="tag tag--teal">{len(sizes)} sizes</span>')
         if tool_count:
             meta_bits.append(f'<span class="tag tag--dim">{tool_count} tool{"s" if tool_count != 1 else ""}</span>')
 
@@ -755,9 +728,9 @@ def _build_capabilities_table(size_data: dict) -> str:
 
 
 def _build_system_prompt_section(size_data: dict) -> str:
-    """Show system prompt from the largest available size."""
-    for size in ("large", "medium", "small", "tinylm"):
-        ctx = size_data.get(size, {}).get("context", {})
+    """Show system prompt from the adapter/nerve data."""
+    for _key, entry in size_data.items():
+        ctx = entry.get("context", {})
         sp = ctx.get("system_prompt", "")
         if sp:
             return f"""
@@ -772,9 +745,9 @@ def _build_system_prompt_section(size_data: dict) -> str:
 
 
 def _build_few_shot_section(size_data: dict) -> str:
-    """Show few-shot examples from the largest available size."""
-    for size in ("large", "medium", "small", "tinylm"):
-        ctx = size_data.get(size, {}).get("context", {})
+    """Show few-shot examples from the adapter/nerve data."""
+    for _key, entry in size_data.items():
+        ctx = entry.get("context", {})
         examples = ctx.get("few_shot_examples", [])
         if examples:
             rows = ""
@@ -844,32 +817,29 @@ def build_nerve_detail(nerve: dict) -> None:
     role = nerve.get("role", "")
     tags = nerve.get("tags", [])
     version = nerve.get("version", "")
-    sizes = nerve.get("_sizes", [])
     test_count = nerve.get("_test_count", 0)
     test_cases = nerve.get("_test_cases", [])
     tools_list = nerve.get("tools", [])
-    size_data = nerve.get("_size_data", {})
+    nerve_data = nerve.get("_nerve_data", {})
     models = nerve.get("_models", [])
+    # Wrap in a single-key dict for compatibility with table builders
+    size_data = {"default": nerve_data} if nerve_data else {}
 
     info_items = []
     if role:
         info_items.append(("Role", role))
     if version:
         info_items.append(("Version", version))
-    if sizes:
-        info_items.append(("Model Sizes", ", ".join(sizes)))
     info_items.append(("Test Cases", str(test_count)))
-    # add inference params from largest context
-    for size in ("large", "medium", "small", "tinylm"):
-        ctx = size_data.get(size, {}).get("context", {})
-        if ctx:
-            if "temperature" in ctx:
-                info_items.append(("Temperature", str(ctx["temperature"])))
-            if "top_p" in ctx:
-                info_items.append(("Top P", str(ctx["top_p"])))
-            if "max_tokens" in ctx:
-                info_items.append(("Max Tokens", str(ctx["max_tokens"])))
-            break
+    # add inference params from context
+    ctx = nerve_data.get("context", {})
+    if ctx:
+        if "temperature" in ctx:
+            info_items.append(("Temperature", str(ctx["temperature"])))
+        if "top_p" in ctx:
+            info_items.append(("Top P", str(ctx["top_p"])))
+        if "max_tokens" in ctx:
+            info_items.append(("Max Tokens", str(ctx["max_tokens"])))
 
     info_html = "".join(
         f'<div class="info-item"><div class="info-label">{E(l)}</div>'
@@ -1249,13 +1219,13 @@ def build_adapters_gallery(adapters: list[dict]) -> None:
     for a in adapters:
         name = a.get("name", a.get("_dir", "unknown"))
         desc = a.get("description", name)
-        sizes = a.get("_sizes", [])
-        search_text = f"{name} {desc} {' '.join(sizes)}"
+        models = a.get("_models", [])
+        search_text = f"{name} {desc}"
 
         meta_bits = []
         meta_bits.append(f'<span class="tag tag--orange">{E(name)}</span>')
-        if sizes:
-            meta_bits.append(f'<span class="tag tag--teal">{len(sizes)} sizes</span>')
+        if models:
+            meta_bits.append(f'<span class="tag tag--teal">{len(models)} model{"s" if len(models) != 1 else ""}</span>')
 
         cards.append(
             f'<a href="{E(name)}.html" class="card fade-in" data-search="{E(search_text)}" '
@@ -1349,13 +1319,13 @@ def build_adapter_detail(adapter: dict) -> None:
     """Build a single adapter detail page with deep tuning and qualification data."""
     name = adapter.get("name", adapter.get("_dir", "unknown"))
     desc = adapter.get("description", "")
-    sizes = adapter.get("_sizes", [])
-    size_data = adapter.get("_size_data", {})
+    adapter_data = adapter.get("_adapter_data", {})
     models = adapter.get("_models", [])
+    # Wrap in a single-key dict for compatibility with table builders
+    size_data = {"default": adapter_data} if adapter_data else {}
 
     info_items = [
         ("Role", name),
-        ("Model Sizes", ", ".join(sizes) if sizes else "none"),
     ]
     if models:
         info_items.append(("Qualified Models", str(len(models))))

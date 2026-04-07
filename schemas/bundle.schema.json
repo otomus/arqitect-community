@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Nerve Bundle",
-  "description": "Nerve identity, tools, and adapters keyed by size_class → 'default' or model_slug",
+  "description": "Nerve identity and tools. Prompt and config live in sibling context.json and meta.json files.",
   "type": "object",
-  "required": ["name", "version", "description", "role", "tags", "authors", "arqitect_version", "tools", "adapters"],
+  "required": ["name", "version", "description", "role", "tags", "authors", "arqitect_version", "tools"],
   "properties": {
     "name": {
       "type": "string",
@@ -59,76 +59,6 @@
             "type": "object",
             "description": "Language -> relative path to implementation file",
             "additionalProperties": { "type": "string" }
-          }
-        }
-      }
-    },
-    "adapters": {
-      "type": "object",
-      "description": "Keyed by size_class (tinylm, small, medium, large). Each size contains 'default' and/or model-specific entries",
-      "propertyNames": {
-        "enum": ["tinylm", "small", "medium", "large"]
-      },
-      "additionalProperties": {
-        "type": "object",
-        "description": "Keys are 'default' (fallback for any model at this size) or a model slug (e.g. 'llama3.2-3b')",
-        "additionalProperties": {
-          "type": "object",
-          "required": ["system_prompt", "examples", "temperature"],
-          "properties": {
-            "system_prompt": { "type": "string" },
-            "examples": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": ["input", "output"],
-                "properties": {
-                  "input": { "type": "string" },
-                  "output": { "type": "string" }
-                }
-              }
-            },
-            "temperature": {
-              "type": "number",
-              "minimum": 0.0,
-              "maximum": 2.0
-            },
-            "score": {
-              "type": "number",
-              "minimum": 0.0,
-              "maximum": 1.0
-            },
-            "qualified_by": { "type": "string" },
-            "tuning": {
-              "type": "object",
-              "properties": {
-                "min_training_examples": { "type": "integer", "minimum": 1 },
-                "test_cases_per_batch": { "type": "integer", "minimum": 1 },
-                "few_shot_limit": { "type": "integer", "minimum": 0 },
-                "lora_rank": { "type": "integer", "minimum": 1 },
-                "lora_epochs": { "type": "integer", "minimum": 1 },
-                "lora_lr": { "type": "number", "exclusiveMinimum": 0 },
-                "lora_dropout": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
-                "lora_target_modules": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-                "training_max_length": { "type": "integer", "minimum": 1 },
-                "warmup_steps": { "type": "integer", "minimum": 0 },
-                "eval_split": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
-                "scheduler": { "type": "string", "enum": ["cosine", "linear", "constant"] },
-                "quantization": { "type": "string", "enum": ["fp16", "bf16", "4bit", "8bit"] },
-                "batch_size": { "type": "integer", "minimum": 1 },
-                "gradient_accumulation_steps": { "type": "integer", "minimum": 1 }
-              }
-            },
-            "qualification": {
-              "type": "object",
-              "properties": {
-                "low_quality_threshold": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
-                "minimum_threshold": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
-                "golden_threshold": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
-                "min_iterations": { "type": "integer", "minimum": 1 },
-                "golden_iterations": { "type": "integer", "minimum": 1 }
-              }
-            }
           }
         }
       }

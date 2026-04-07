@@ -99,11 +99,6 @@ def make_nerve_dir(
             "authors": [{"github": "tester"}],
             "arqitect_version": ">=0.1.0",
             "tools": tools or [],
-            "default": {
-                "system_prompt": "You are a test nerve.",
-                "examples": [{"input": "hi", "output": "hello"}],
-                "temperature": 0.7,
-            },
         }
         if bundle_overrides:
             bundle.update(bundle_overrides)
@@ -130,7 +125,6 @@ def make_adapter_dir(
     parent,
     name="test_adapter",
     *,
-    role_name="brain",
     meta_overrides=None,
     context_overrides=None,
     qualification_overrides=None,
@@ -150,8 +144,6 @@ def make_adapter_dir(
 
     if not skip_meta:
         meta = {
-            "model": "test-model-7b",
-            "size_class": "small",
             "contributor": {"github": "tester"},
             "description": "A test adapter for validation",
         }
@@ -256,6 +248,14 @@ def make_mcp_dir(
     if not skip_readme:
         (mcp / "README.md").write_text("# Test MCP\n")
 
+    # armor.json is required for all tools and MCPs
+    armor = {
+        "version": "1.0",
+        "profile": "strict",
+        "spawn": False,
+    }
+    (mcp / "armor.json").write_text(json.dumps(armor))
+
     return mcp
 
 
@@ -307,5 +307,13 @@ def make_tool_dir(
             {"description": "Another test case for validation", "args": {"query": "world"}},
         ]
         (tool / "tests.json").write_text(json.dumps(tests))
+
+    # armor.json is required for all tools and MCPs
+    armor = {
+        "version": "1.0",
+        "profile": "strict",
+        "spawn": False,
+    }
+    (tool / "armor.json").write_text(json.dumps(armor))
 
     return tool

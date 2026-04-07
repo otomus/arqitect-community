@@ -1,0 +1,2512 @@
+{
+  "nerves": [
+    {
+      "name": "hearing",
+      "total": 3060,
+      "successes": 3060,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 881.2,
+      "last_called_at": 1774291073.549237
+    },
+    {
+      "name": "touch",
+      "total": 2282,
+      "successes": 2282,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 214.9,
+      "last_called_at": 1774426304.6778939
+    },
+    {
+      "name": "reflect_nerve",
+      "total": 2247,
+      "successes": 2097,
+      "failures": 150,
+      "error_rate": 0.0668,
+      "avg_latency_ms": 93.1,
+      "last_called_at": 1774597768.4688342
+    },
+    {
+      "name": "weather_nerve",
+      "total": 1604,
+      "successes": 1543,
+      "failures": 61,
+      "error_rate": 0.038,
+      "avg_latency_ms": 320.3,
+      "last_called_at": 1774599493.660353
+    },
+    {
+      "name": "write",
+      "total": 1023,
+      "successes": 299,
+      "failures": 724,
+      "error_rate": 0.7077,
+      "avg_latency_ms": 1054.6,
+      "last_called_at": 1774251209.445099
+    },
+    {
+      "name": "code_nerve",
+      "total": 688,
+      "successes": 688,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 36.2,
+      "last_called_at": 1774599493.43794
+    },
+    {
+      "name": "math_nerve",
+      "total": 623,
+      "successes": 621,
+      "failures": 2,
+      "error_rate": 0.0032,
+      "avg_latency_ms": 329.9,
+      "last_called_at": 1774599493.350966
+    },
+    {
+      "name": "explanation_nerve",
+      "total": 566,
+      "successes": 473,
+      "failures": 93,
+      "error_rate": 0.1643,
+      "avg_latency_ms": 3663.2,
+      "last_called_at": 1774372693.6774971
+    },
+    {
+      "name": "writer_nerve",
+      "total": 344,
+      "successes": 344,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 36.4,
+      "last_called_at": 1774599493.502371
+    },
+    {
+      "name": "llm_ask_nerve",
+      "total": 317,
+      "successes": 312,
+      "failures": 5,
+      "error_rate": 0.0158,
+      "avg_latency_ms": 873.6,
+      "last_called_at": 1774597635.119005
+    },
+    {
+      "name": "explain_nerve",
+      "total": 308,
+      "successes": 305,
+      "failures": 3,
+      "error_rate": 0.0097,
+      "avg_latency_ms": 2035.7,
+      "last_called_at": 1774597635.50894
+    },
+    {
+      "name": "deep_research_nerve",
+      "total": 261,
+      "successes": 252,
+      "failures": 9,
+      "error_rate": 0.0345,
+      "avg_latency_ms": 290.3,
+      "last_called_at": 1774597768.5084732
+    },
+    {
+      "name": "calculation_nerve",
+      "total": 236,
+      "successes": 177,
+      "failures": 59,
+      "error_rate": 0.25,
+      "avg_latency_ms": 164.0,
+      "last_called_at": 1774141207.573615
+    },
+    {
+      "name": "slow_nerve",
+      "total": 228,
+      "successes": 0,
+      "failures": 228,
+      "error_rate": 1.0,
+      "avg_latency_ms": 0.0,
+      "last_called_at": 1774612480.391937
+    },
+    {
+      "name": "greeting_nerve",
+      "total": 206,
+      "successes": 140,
+      "failures": 66,
+      "error_rate": 0.3204,
+      "avg_latency_ms": 3082.1,
+      "last_called_at": 1774179989.262464
+    },
+    {
+      "name": "introduction_nerve",
+      "total": 200,
+      "successes": 199,
+      "failures": 1,
+      "error_rate": 0.005,
+      "avg_latency_ms": 4835.3,
+      "last_called_at": 1774597957.227564
+    },
+    {
+      "name": "sql_query_nerve",
+      "total": 193,
+      "successes": 168,
+      "failures": 25,
+      "error_rate": 0.1295,
+      "avg_latency_ms": 97.2,
+      "last_called_at": 1774597635.729326
+    },
+    {
+      "name": "stock_analyze_nerve",
+      "total": 174,
+      "successes": 167,
+      "failures": 7,
+      "error_rate": 0.0402,
+      "avg_latency_ms": 802.8,
+      "last_called_at": 1774597635.6192262
+    },
+    {
+      "name": "summarize_nerve",
+      "total": 160,
+      "successes": 156,
+      "failures": 4,
+      "error_rate": 0.025,
+      "avg_latency_ms": 245.8,
+      "last_called_at": 1774597634.570556
+    },
+    {
+      "name": "math_solver_nerve",
+      "total": 153,
+      "successes": 152,
+      "failures": 1,
+      "error_rate": 0.0065,
+      "avg_latency_ms": 40.4,
+      "last_called_at": 1774597633.592042
+    },
+    {
+      "name": "awareness",
+      "total": 147,
+      "successes": 15,
+      "failures": 132,
+      "error_rate": 0.898,
+      "avg_latency_ms": 536.3,
+      "last_called_at": 1774612480.406555
+    },
+    {
+      "name": "good_nerve",
+      "total": 132,
+      "successes": 0,
+      "failures": 132,
+      "error_rate": 1.0,
+      "avg_latency_ms": 0.0,
+      "last_called_at": 1774612480.399585
+    },
+    {
+      "name": "echo_nerve",
+      "total": 123,
+      "successes": 123,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 124.4,
+      "last_called_at": 1774612480.63522
+    },
+    {
+      "name": "tongue_twister_nerve",
+      "total": 109,
+      "successes": 82,
+      "failures": 27,
+      "error_rate": 0.2477,
+      "avg_latency_ms": 544.6,
+      "last_called_at": 1774270276.973429
+    },
+    {
+      "name": "python_explanation_nerve",
+      "total": 104,
+      "successes": 65,
+      "failures": 39,
+      "error_rate": 0.375,
+      "avg_latency_ms": 200.9,
+      "last_called_at": 1774144157.4923148
+    },
+    {
+      "name": "css_nerve",
+      "total": 98,
+      "successes": 90,
+      "failures": 8,
+      "error_rate": 0.0816,
+      "avg_latency_ms": 1240.9,
+      "last_called_at": 1774597635.7840378
+    },
+    {
+      "name": "programming_nerve",
+      "total": 84,
+      "successes": 63,
+      "failures": 21,
+      "error_rate": 0.25,
+      "avg_latency_ms": 9783.6,
+      "last_called_at": 1774291387.033874
+    },
+    {
+      "name": "fun_fact_nerve",
+      "total": 83,
+      "successes": 83,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 499.7,
+      "last_called_at": 1774597633.295307
+    },
+    {
+      "name": "joke_nerve",
+      "total": 79,
+      "successes": 62,
+      "failures": 17,
+      "error_rate": 0.2152,
+      "avg_latency_ms": 1555.5,
+      "last_called_at": 1774270266.124083
+    },
+    {
+      "name": "fact_nerve",
+      "total": 76,
+      "successes": 76,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 37.2,
+      "last_called_at": 1774597633.2490082
+    },
+    {
+      "name": "translation_nerve",
+      "total": 75,
+      "successes": 48,
+      "failures": 27,
+      "error_rate": 0.36,
+      "avg_latency_ms": 1313.2,
+      "last_called_at": 1774291281.5448442
+    },
+    {
+      "name": "web_accessibility_nerve",
+      "total": 74,
+      "successes": 73,
+      "failures": 1,
+      "error_rate": 0.0135,
+      "avg_latency_ms": 45.7,
+      "last_called_at": 1774597635.919978
+    },
+    {
+      "name": "geography_nerve",
+      "total": 64,
+      "successes": 55,
+      "failures": 9,
+      "error_rate": 0.1406,
+      "avg_latency_ms": 2162.9,
+      "last_called_at": 1774268165.921247
+    },
+    {
+      "name": "crash_nerve",
+      "total": 52,
+      "successes": 0,
+      "failures": 52,
+      "error_rate": 1.0,
+      "avg_latency_ms": 0.0,
+      "last_called_at": 1774612480.468238
+    },
+    {
+      "name": "null_nerve",
+      "total": 52,
+      "successes": 0,
+      "failures": 52,
+      "error_rate": 1.0,
+      "avg_latency_ms": 0.0,
+      "last_called_at": 1774612480.454978
+    },
+    {
+      "name": "javascript_explanation_nerve",
+      "total": 50,
+      "successes": 25,
+      "failures": 25,
+      "error_rate": 0.5,
+      "avg_latency_ms": 239.4,
+      "last_called_at": 1774143635.50484
+    },
+    {
+      "name": "information_nerve",
+      "total": 44,
+      "successes": 42,
+      "failures": 2,
+      "error_rate": 0.0455,
+      "avg_latency_ms": 6211.1,
+      "last_called_at": 1774291302.267332
+    },
+    {
+      "name": "science_nerve",
+      "total": 44,
+      "successes": 44,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 8704.6,
+      "last_called_at": 1774268617.525515
+    },
+    {
+      "name": "web_search_nerve",
+      "total": 39,
+      "successes": 30,
+      "failures": 9,
+      "error_rate": 0.2308,
+      "avg_latency_ms": 2607.7,
+      "last_called_at": 1774144054.632343
+    },
+    {
+      "name": "currency_nerve",
+      "total": 37,
+      "successes": 32,
+      "failures": 5,
+      "error_rate": 0.1351,
+      "avg_latency_ms": 2082.7,
+      "last_called_at": 1774271813.24462
+    },
+    {
+      "name": "docx_nerve",
+      "total": 33,
+      "successes": 24,
+      "failures": 9,
+      "error_rate": 0.2727,
+      "avg_latency_ms": 211.6,
+      "last_called_at": 1774146127.144722
+    },
+    {
+      "name": "git_operations_review_nerve",
+      "total": 32,
+      "successes": 15,
+      "failures": 17,
+      "error_rate": 0.5312,
+      "avg_latency_ms": 373.0,
+      "last_called_at": 1774145806.777337
+    },
+    {
+      "name": "goodnight_nerve",
+      "total": 32,
+      "successes": 32,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 3966.6,
+      "last_called_at": 1774291012.423811
+    },
+    {
+      "name": "stocky_feature_engineering_nerve",
+      "total": 30,
+      "successes": 20,
+      "failures": 10,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 198.8,
+      "last_called_at": 1774142945.107532
+    },
+    {
+      "name": "technical_write_nerve",
+      "total": 29,
+      "successes": 27,
+      "failures": 2,
+      "error_rate": 0.069,
+      "avg_latency_ms": 5038.8,
+      "last_called_at": 1774291492.22243
+    },
+    {
+      "name": "javascript_nerve",
+      "total": 27,
+      "successes": 27,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 14977.7,
+      "last_called_at": 1774283188.589715
+    },
+    {
+      "name": "biography_nerve",
+      "total": 25,
+      "successes": 18,
+      "failures": 7,
+      "error_rate": 0.28,
+      "avg_latency_ms": 166.8,
+      "last_called_at": 1774145513.15785
+    },
+    {
+      "name": "reminder_nerve",
+      "total": 25,
+      "successes": 21,
+      "failures": 4,
+      "error_rate": 0.16,
+      "avg_latency_ms": 1738.3,
+      "last_called_at": 1774142289.744542
+    },
+    {
+      "name": "riddle_nerve",
+      "total": 24,
+      "successes": 20,
+      "failures": 4,
+      "error_rate": 0.1667,
+      "avg_latency_ms": 2348.5,
+      "last_called_at": 1774270201.2473862
+    },
+    {
+      "name": "history_nerve",
+      "total": 20,
+      "successes": 17,
+      "failures": 3,
+      "error_rate": 0.15,
+      "avg_latency_ms": 2657.7,
+      "last_called_at": 1774270053.7017941
+    },
+    {
+      "name": "sql_nerve",
+      "total": 20,
+      "successes": 19,
+      "failures": 1,
+      "error_rate": 0.05,
+      "avg_latency_ms": 11503.0,
+      "last_called_at": 1774284775.7146182
+    },
+    {
+      "name": "task_organizer_nerve",
+      "total": 20,
+      "successes": 14,
+      "failures": 6,
+      "error_rate": 0.3,
+      "avg_latency_ms": 182.6,
+      "last_called_at": 1774143292.4720252
+    },
+    {
+      "name": "trip_planner_nerve",
+      "total": 19,
+      "successes": 12,
+      "failures": 7,
+      "error_rate": 0.3684,
+      "avg_latency_ms": 220.4,
+      "last_called_at": 1774145420.398274
+    },
+    {
+      "name": "api_design_nerve",
+      "total": 18,
+      "successes": 10,
+      "failures": 8,
+      "error_rate": 0.4444,
+      "avg_latency_ms": 1490.7,
+      "last_called_at": 1774288941.261882
+    },
+    {
+      "name": "react_component_nerve",
+      "total": 18,
+      "successes": 8,
+      "failures": 10,
+      "error_rate": 0.5556,
+      "avg_latency_ms": 394.3,
+      "last_called_at": 1774145279.790019
+    },
+    {
+      "name": "web_development_nerve",
+      "total": 18,
+      "successes": 10,
+      "failures": 8,
+      "error_rate": 0.4444,
+      "avg_latency_ms": 1909.6,
+      "last_called_at": 1774287148.125397
+    },
+    {
+      "name": "budget_nerve",
+      "total": 17,
+      "successes": 14,
+      "failures": 3,
+      "error_rate": 0.1765,
+      "avg_latency_ms": 3123.1,
+      "last_called_at": 1774272081.469677
+    },
+    {
+      "name": "conversion_nerve",
+      "total": 17,
+      "successes": 13,
+      "failures": 4,
+      "error_rate": 0.2353,
+      "avg_latency_ms": 829.8,
+      "last_called_at": 1774290505.904785
+    },
+    {
+      "name": "definition_nerve",
+      "total": 17,
+      "successes": 17,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5399.0,
+      "last_called_at": 1774268646.113549
+    },
+    {
+      "name": "python_nerve",
+      "total": 17,
+      "successes": 17,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 11986.8,
+      "last_called_at": 1774279094.4350898
+    },
+    {
+      "name": "time_nerve",
+      "total": 17,
+      "successes": 12,
+      "failures": 5,
+      "error_rate": 0.2941,
+      "avg_latency_ms": 199.4,
+      "last_called_at": 1774143901.12756
+    },
+    {
+      "name": "core_nerve",
+      "total": 16,
+      "successes": 16,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 4004.4,
+      "last_called_at": 1774265993.364393
+    },
+    {
+      "name": "otomus_project_structure_nerve",
+      "total": 16,
+      "successes": 9,
+      "failures": 7,
+      "error_rate": 0.4375,
+      "avg_latency_ms": 208.1,
+      "last_called_at": 1774143385.9184299
+    },
+    {
+      "name": "scheduler_nerve",
+      "total": 16,
+      "successes": 12,
+      "failures": 4,
+      "error_rate": 0.25,
+      "avg_latency_ms": 155.9,
+      "last_called_at": 1774142106.982913
+    },
+    {
+      "name": "code_snippet_nerve",
+      "total": 14,
+      "successes": 12,
+      "failures": 2,
+      "error_rate": 0.1429,
+      "avg_latency_ms": 8647.9,
+      "last_called_at": 1774286647.679174
+    },
+    {
+      "name": "translate_nerve",
+      "total": 13,
+      "successes": 13,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 3728.3,
+      "last_called_at": 1774289519.011658
+    },
+    {
+      "name": "calendar_nerve",
+      "total": 12,
+      "successes": 10,
+      "failures": 2,
+      "error_rate": 0.1667,
+      "avg_latency_ms": 1282.5,
+      "last_called_at": 1774271862.373363
+    },
+    {
+      "name": "email_nerve",
+      "total": 12,
+      "successes": 10,
+      "failures": 2,
+      "error_rate": 0.1667,
+      "avg_latency_ms": 3156.7,
+      "last_called_at": 1774142420.5337758
+    },
+    {
+      "name": "story_teller_nerve",
+      "total": 12,
+      "successes": 9,
+      "failures": 3,
+      "error_rate": 0.25,
+      "avg_latency_ms": 154.5,
+      "last_called_at": 1774141075.137517
+    },
+    {
+      "name": "poetry_nerve",
+      "total": 10,
+      "successes": 10,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 3740.2,
+      "last_called_at": 1774290953.5072498
+    },
+    {
+      "name": "regex_nerve",
+      "total": 10,
+      "successes": 9,
+      "failures": 1,
+      "error_rate": 0.1,
+      "avg_latency_ms": 7316.2,
+      "last_called_at": 1774290324.7948549
+    },
+    {
+      "name": "stock_nerve",
+      "total": 10,
+      "successes": 10,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 7340.0,
+      "last_called_at": 1774276641.4397151
+    },
+    {
+      "name": "stocky_validation_nerve",
+      "total": 10,
+      "successes": 10,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 10218.5,
+      "last_called_at": 1774280853.372803
+    },
+    {
+      "name": "api_security_nerve",
+      "total": 9,
+      "successes": 5,
+      "failures": 4,
+      "error_rate": 0.4444,
+      "avg_latency_ms": 372.1,
+      "last_called_at": 1774145289.694871
+    },
+    {
+      "name": "architecture_nerve",
+      "total": 9,
+      "successes": 9,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 9107.5,
+      "last_called_at": 1774288032.092488
+    },
+    {
+      "name": "code_review_nerve",
+      "total": 9,
+      "successes": 5,
+      "failures": 4,
+      "error_rate": 0.4444,
+      "avg_latency_ms": 854.9,
+      "last_called_at": 1774282505.670645
+    },
+    {
+      "name": "database_schema_nerve",
+      "total": 9,
+      "successes": 5,
+      "failures": 4,
+      "error_rate": 0.4444,
+      "avg_latency_ms": 255.7,
+      "last_called_at": 1774143798.234588
+    },
+    {
+      "name": "decision_matrix_nerve",
+      "total": 9,
+      "successes": 7,
+      "failures": 2,
+      "error_rate": 0.2222,
+      "avg_latency_ms": 2093.3,
+      "last_called_at": 1774272832.735244
+    },
+    {
+      "name": "otomus_ml_hub_nerve",
+      "total": 9,
+      "successes": 5,
+      "failures": 4,
+      "error_rate": 0.4444,
+      "avg_latency_ms": 249.9,
+      "last_called_at": 1774143294.427451
+    },
+    {
+      "name": "typescript_explanation_nerve",
+      "total": 9,
+      "successes": 4,
+      "failures": 5,
+      "error_rate": 0.5556,
+      "avg_latency_ms": 295.3,
+      "last_called_at": 1774145539.535703
+    },
+    {
+      "name": "db_nerve",
+      "total": 8,
+      "successes": 8,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5357.1,
+      "last_called_at": 1774284019.1937122
+    },
+    {
+      "name": "html_css_nerve",
+      "total": 8,
+      "successes": 4,
+      "failures": 4,
+      "error_rate": 0.5,
+      "avg_latency_ms": 366.1,
+      "last_called_at": 1774144623.320661
+    },
+    {
+      "name": "list_tools_nerve",
+      "total": 8,
+      "successes": 6,
+      "failures": 2,
+      "error_rate": 0.25,
+      "avg_latency_ms": 149.2,
+      "last_called_at": 1774140923.794226
+    },
+    {
+      "name": "self_reflection_nerve",
+      "total": 8,
+      "successes": 3,
+      "failures": 5,
+      "error_rate": 0.625,
+      "avg_latency_ms": 6247.7,
+      "last_called_at": 1774180833.639056
+    },
+    {
+      "name": "stock_data_fetcher_nerve",
+      "total": 8,
+      "successes": 4,
+      "failures": 4,
+      "error_rate": 0.5,
+      "avg_latency_ms": 255.7,
+      "last_called_at": 1774142531.500174
+    },
+    {
+      "name": "tech_blog_post_outline_nerve",
+      "total": 8,
+      "successes": 6,
+      "failures": 2,
+      "error_rate": 0.25,
+      "avg_latency_ms": 201.9,
+      "last_called_at": 1774142421.489286
+    },
+    {
+      "name": "communication",
+      "total": 7,
+      "successes": 7,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 1035.9,
+      "last_called_at": 1774275834.9978418
+    },
+    {
+      "name": "draft_email_nerve",
+      "total": 7,
+      "successes": 6,
+      "failures": 1,
+      "error_rate": 0.1429,
+      "avg_latency_ms": 3744.1,
+      "last_called_at": 1774275333.650317
+    },
+    {
+      "name": "file_nerve",
+      "total": 7,
+      "successes": 5,
+      "failures": 2,
+      "error_rate": 0.2857,
+      "avg_latency_ms": 3363.8,
+      "last_called_at": 1774280799.815358
+    },
+    {
+      "name": "fitness_plan_nerve",
+      "total": 7,
+      "successes": 6,
+      "failures": 1,
+      "error_rate": 0.1429,
+      "avg_latency_ms": 3326.0,
+      "last_called_at": 1774272191.097727
+    },
+    {
+      "name": "format_nerve",
+      "total": 7,
+      "successes": 3,
+      "failures": 4,
+      "error_rate": 0.5714,
+      "avg_latency_ms": 7344.6,
+      "last_called_at": 1774290125.41345
+    },
+    {
+      "name": "grade_nerve",
+      "total": 7,
+      "successes": 7,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15712.1,
+      "last_called_at": 1773871278.924448
+    },
+    {
+      "name": "otomus_discovery_service_review_nerve",
+      "total": 7,
+      "successes": 4,
+      "failures": 3,
+      "error_rate": 0.4286,
+      "avg_latency_ms": 222.8,
+      "last_called_at": 1774142633.2701461
+    },
+    {
+      "name": "standup_nerve",
+      "total": 7,
+      "successes": 6,
+      "failures": 1,
+      "error_rate": 0.1429,
+      "avg_latency_ms": 2292.9,
+      "last_called_at": 1774273446.0675101
+    },
+    {
+      "name": "text_format_nerve",
+      "total": 7,
+      "successes": 7,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 6568.4,
+      "last_called_at": 1774290862.900825
+    },
+    {
+      "name": "timestamp_nerve",
+      "total": 7,
+      "successes": 7,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5930.2,
+      "last_called_at": 1774289886.347763
+    },
+    {
+      "name": "api_endpoints_nerve",
+      "total": 6,
+      "successes": 4,
+      "failures": 2,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 181.3,
+      "last_called_at": 1774143081.131521
+    },
+    {
+      "name": "api_versioning_best_practices_nerve",
+      "total": 6,
+      "successes": 1,
+      "failures": 5,
+      "error_rate": 0.8333,
+      "avg_latency_ms": 397.0,
+      "last_called_at": 1774144668.246159
+    },
+    {
+      "name": "deps_nerve",
+      "total": 6,
+      "successes": 4,
+      "failures": 2,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 1402.9,
+      "last_called_at": 1774280612.840818
+    },
+    {
+      "name": "error_handling_nerve",
+      "total": 6,
+      "successes": 2,
+      "failures": 4,
+      "error_rate": 0.6667,
+      "avg_latency_ms": 372.6,
+      "last_called_at": 1774166387.313025
+    },
+    {
+      "name": "file_diff_nerve",
+      "total": 6,
+      "successes": 4,
+      "failures": 2,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 17673.1,
+      "last_called_at": 1774290685.623452
+    },
+    {
+      "name": "temperature_conversion_nerve",
+      "total": 6,
+      "successes": 6,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 2678.8,
+      "last_called_at": 1774271685.614163
+    },
+    {
+      "name": "agile_methodology_nerve",
+      "total": 5,
+      "successes": 4,
+      "failures": 1,
+      "error_rate": 0.2,
+      "avg_latency_ms": 1230.3,
+      "last_called_at": 1774273989.460842
+    },
+    {
+      "name": "congratulations_message_nerve",
+      "total": 5,
+      "successes": 2,
+      "failures": 3,
+      "error_rate": 0.6,
+      "avg_latency_ms": 301.2,
+      "last_called_at": 1774143524.4554071
+    },
+    {
+      "name": "docker_compose_nerve",
+      "total": 5,
+      "successes": 3,
+      "failures": 2,
+      "error_rate": 0.4,
+      "avg_latency_ms": 264.1,
+      "last_called_at": 1774146211.369683
+    },
+    {
+      "name": "downloads_nerve",
+      "total": 5,
+      "successes": 5,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 16017.4,
+      "last_called_at": 1774262895.964649
+    },
+    {
+      "name": "habit_track_nerve",
+      "total": 5,
+      "successes": 4,
+      "failures": 1,
+      "error_rate": 0.2,
+      "avg_latency_ms": 1339.6,
+      "last_called_at": 1774272334.3572211
+    },
+    {
+      "name": "incident_nerve",
+      "total": 5,
+      "successes": 4,
+      "failures": 1,
+      "error_rate": 0.2,
+      "avg_latency_ms": 1526.5,
+      "last_called_at": 1774273955.279846
+    },
+    {
+      "name": "music_identify_nerve",
+      "total": 5,
+      "successes": 4,
+      "failures": 1,
+      "error_rate": 0.2,
+      "avg_latency_ms": 5287.0,
+      "last_called_at": 1774281762.838581
+    },
+    {
+      "name": "note_nerve",
+      "total": 5,
+      "successes": 4,
+      "failures": 1,
+      "error_rate": 0.2,
+      "avg_latency_ms": 4183.0,
+      "last_called_at": 1774142406.315734
+    },
+    {
+      "name": "api_cache_implementation_nerve",
+      "total": 4,
+      "successes": 1,
+      "failures": 3,
+      "error_rate": 0.75,
+      "avg_latency_ms": 367.1,
+      "last_called_at": 1774144883.4177
+    },
+    {
+      "name": "api_endpoint_nerve",
+      "total": 4,
+      "successes": 2,
+      "failures": 2,
+      "error_rate": 0.5,
+      "avg_latency_ms": 375.8,
+      "last_called_at": 1774144857.699502
+    },
+    {
+      "name": "api_error_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 191.4,
+      "last_called_at": 1774142372.6711009
+    },
+    {
+      "name": "barcode_nerve",
+      "total": 4,
+      "successes": 2,
+      "failures": 2,
+      "error_rate": 0.5,
+      "avg_latency_ms": 2528.7,
+      "last_called_at": 1774289930.377353
+    },
+    {
+      "name": "checks_nerve",
+      "total": 4,
+      "successes": 4,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5836.8,
+      "last_called_at": 1774264384.094708
+    },
+    {
+      "name": "commit_message_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 161.0,
+      "last_called_at": 1774142324.3350751
+    },
+    {
+      "name": "conventional_commits_guide_nerve",
+      "total": 4,
+      "successes": 2,
+      "failures": 2,
+      "error_rate": 0.5,
+      "avg_latency_ms": 409.7,
+      "last_called_at": 1774145690.4397912
+    },
+    {
+      "name": "database_integration_nerve",
+      "total": 4,
+      "successes": 2,
+      "failures": 2,
+      "error_rate": 0.5,
+      "avg_latency_ms": 250.9,
+      "last_called_at": 1774143330.487322
+    },
+    {
+      "name": "draft_blog_nerve",
+      "total": 4,
+      "successes": 4,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 8302.7,
+      "last_called_at": 1774274588.190617
+    },
+    {
+      "name": "encode_nerve",
+      "total": 4,
+      "successes": 1,
+      "failures": 3,
+      "error_rate": 0.75,
+      "avg_latency_ms": 2405.6,
+      "last_called_at": 1774288859.74987
+    },
+    {
+      "name": "faq_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 195.1,
+      "last_called_at": 1774142405.808969
+    },
+    {
+      "name": "garden_layout_planner_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 165.8,
+      "last_called_at": 1774141794.5143628
+    },
+    {
+      "name": "git_tag_nerve",
+      "total": 4,
+      "successes": 2,
+      "failures": 2,
+      "error_rate": 0.5,
+      "avg_latency_ms": 365.9,
+      "last_called_at": 1774145542.399938
+    },
+    {
+      "name": "goodbye_nerve",
+      "total": 4,
+      "successes": 0,
+      "failures": 4,
+      "error_rate": 1.0,
+      "avg_latency_ms": 433.4,
+      "last_called_at": 1774166482.744973
+    },
+    {
+      "name": "infrastructure_as_code_nerve",
+      "total": 4,
+      "successes": 2,
+      "failures": 2,
+      "error_rate": 0.5,
+      "avg_latency_ms": 351.1,
+      "last_called_at": 1774145979.612146
+    },
+    {
+      "name": "job_description_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 240.8,
+      "last_called_at": 1774142407.300687
+    },
+    {
+      "name": "json_nerve",
+      "total": 4,
+      "successes": 4,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5835.9,
+      "last_called_at": 1774290358.005055
+    },
+    {
+      "name": "linkedin_recommendation_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 220.0,
+      "last_called_at": 1774142423.925067
+    },
+    {
+      "name": "logic_puzzle_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 157.8,
+      "last_called_at": 1774141061.688419
+    },
+    {
+      "name": "packing_list_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 162.3,
+      "last_called_at": 1774141549.1568298
+    },
+    {
+      "name": "product_description_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 213.0,
+      "last_called_at": 1774142421.010589
+    },
+    {
+      "name": "qr_nerve",
+      "total": 4,
+      "successes": 2,
+      "failures": 2,
+      "error_rate": 0.5,
+      "avg_latency_ms": 4045.4,
+      "last_called_at": 1774289443.156208
+    },
+    {
+      "name": "recipe_chain_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 163.8,
+      "last_called_at": 1774141336.611945
+    },
+    {
+      "name": "regex_explanation_nerve",
+      "total": 4,
+      "successes": 0,
+      "failures": 4,
+      "error_rate": 1.0,
+      "avg_latency_ms": 453.0,
+      "last_called_at": 1774143045.0639749
+    },
+    {
+      "name": "report_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 157.7,
+      "last_called_at": 1774142423.4402199
+    },
+    {
+      "name": "schedule_nerve",
+      "total": 4,
+      "successes": 4,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 4704.7,
+      "last_called_at": 1774273385.40193
+    },
+    {
+      "name": "security_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 7342.7,
+      "last_called_at": 1774282632.890254
+    },
+    {
+      "name": "system_design_nerve",
+      "total": 4,
+      "successes": 4,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 11681.6,
+      "last_called_at": 1774280281.5932999
+    },
+    {
+      "name": "task_planning_nerve",
+      "total": 4,
+      "successes": 4,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 20275.9,
+      "last_called_at": 1774282234.660393
+    },
+    {
+      "name": "tech_conference_talking_points_nerve",
+      "total": 4,
+      "successes": 3,
+      "failures": 1,
+      "error_rate": 0.25,
+      "avg_latency_ms": 159.3,
+      "last_called_at": 1774142445.607727
+    },
+    {
+      "name": "technical_nerve",
+      "total": 4,
+      "successes": 4,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 17822.4,
+      "last_called_at": 1774281608.8869061
+    },
+    {
+      "name": "README_intro_nerve",
+      "total": 3,
+      "successes": 3,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 76.0,
+      "last_called_at": 1774142370.704753
+    },
+    {
+      "name": "answers_nerve",
+      "total": 3,
+      "successes": 3,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 6994.8,
+      "last_called_at": 1774176540.436922
+    },
+    {
+      "name": "audio_synthesize_nerve",
+      "total": 3,
+      "successes": 2,
+      "failures": 1,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 13565.7,
+      "last_called_at": 1774281729.040046
+    },
+    {
+      "name": "ci_cd_benefits_nerve",
+      "total": 3,
+      "successes": 2,
+      "failures": 1,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 184.5,
+      "last_called_at": 1774142465.962476
+    },
+    {
+      "name": "ci_check_nerve",
+      "total": 3,
+      "successes": 3,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 21555.5,
+      "last_called_at": 1774281810.970474
+    },
+    {
+      "name": "csv_nerve",
+      "total": 3,
+      "successes": 2,
+      "failures": 1,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 8212.9,
+      "last_called_at": 1774290078.0796318
+    },
+    {
+      "name": "database_comparison_nerve",
+      "total": 3,
+      "successes": 2,
+      "failures": 1,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 6852.7,
+      "last_called_at": 1774284146.358847
+    },
+    {
+      "name": "docker_nerve",
+      "total": 3,
+      "successes": 2,
+      "failures": 1,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 10300.9,
+      "last_called_at": 1774276934.383929
+    },
+    {
+      "name": "documentation_nerve",
+      "total": 3,
+      "successes": 2,
+      "failures": 1,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 186.5,
+      "last_called_at": 1774142871.8988101
+    },
+    {
+      "name": "geology_nerve",
+      "total": 3,
+      "successes": 3,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 12224.2,
+      "last_called_at": 1774267914.020778
+    },
+    {
+      "name": "infra_audit_nerve",
+      "total": 3,
+      "successes": 2,
+      "failures": 1,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 217.3,
+      "last_called_at": 1774142852.1661508
+    },
+    {
+      "name": "json_format_nerve",
+      "total": 3,
+      "successes": 0,
+      "failures": 3,
+      "error_rate": 1.0,
+      "avg_latency_ms": 511.5,
+      "last_called_at": 1774143116.0834482
+    },
+    {
+      "name": "nextjs_nerve",
+      "total": 3,
+      "successes": 3,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 10518.0,
+      "last_called_at": 1774287094.356794
+    },
+    {
+      "name": "password_nerve",
+      "total": 3,
+      "successes": 1,
+      "failures": 2,
+      "error_rate": 0.6667,
+      "avg_latency_ms": 3370.2,
+      "last_called_at": 1774289097.0884511
+    },
+    {
+      "name": "postmortem_template_nerve",
+      "total": 3,
+      "successes": 2,
+      "failures": 1,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 178.4,
+      "last_called_at": 1774142466.460624
+    },
+    {
+      "name": "sentiment_analysis_nerve",
+      "total": 3,
+      "successes": 2,
+      "failures": 1,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 2909.5,
+      "last_called_at": 1774289679.529058
+    },
+    {
+      "name": "story_nerve",
+      "total": 3,
+      "successes": 3,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 8046.0,
+      "last_called_at": 1774270251.198761
+    },
+    {
+      "name": "tech_spec_nerve",
+      "total": 3,
+      "successes": 2,
+      "failures": 1,
+      "error_rate": 0.3333,
+      "avg_latency_ms": 216.6,
+      "last_called_at": 1774142447.574233
+    },
+    {
+      "name": "url_validation_nerve",
+      "total": 3,
+      "successes": 0,
+      "failures": 3,
+      "error_rate": 1.0,
+      "avg_latency_ms": 728.7,
+      "last_called_at": 1774141959.255681
+    },
+    {
+      "name": "uuid_generator_nerve",
+      "total": 3,
+      "successes": 0,
+      "failures": 3,
+      "error_rate": 1.0,
+      "avg_latency_ms": 525.7,
+      "last_called_at": 1774140586.483006
+    },
+    {
+      "name": "validation_nerve",
+      "total": 3,
+      "successes": 3,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 4449.3,
+      "last_called_at": 1774289961.292755
+    },
+    {
+      "name": "api_client_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 398.3,
+      "last_called_at": 1774144884.920656
+    },
+    {
+      "name": "api_explanation_nerve",
+      "total": 2,
+      "successes": 0,
+      "failures": 2,
+      "error_rate": 1.0,
+      "avg_latency_ms": 554.6,
+      "last_called_at": 1774144597.672158
+    },
+    {
+      "name": "art_history_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 4657.0,
+      "last_called_at": 1774266459.740082
+    },
+    {
+      "name": "cdn_setup_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 339.9,
+      "last_called_at": 1774146226.5828302
+    },
+    {
+      "name": "clone_repo",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 12625.7,
+      "last_called_at": 1774426810.254901
+    },
+    {
+      "name": "code_fix_nerve",
+      "total": 2,
+      "successes": 0,
+      "failures": 2,
+      "error_rate": 1.0,
+      "avg_latency_ms": 441.4,
+      "last_called_at": 1774165106.632164
+    },
+    {
+      "name": "create_readme",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 2492.5,
+      "last_called_at": 1774426810.5334988
+    },
+    {
+      "name": "cron_job_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 344.6,
+      "last_called_at": 1774146046.6781518
+    },
+    {
+      "name": "dependency_review_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 230.2,
+      "last_called_at": 1774143331.8849862
+    },
+    {
+      "name": "doc_convert_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 13582.2,
+      "last_called_at": 1774289211.424275
+    },
+    {
+      "name": "docker_secrets_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 338.8,
+      "last_called_at": 1774146112.796942
+    },
+    {
+      "name": "email_validation_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 349.1,
+      "last_called_at": 1774146228.5647
+    },
+    {
+      "name": "fact_check_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 4591.5,
+      "last_called_at": 1773868659.771254
+    },
+    {
+      "name": "farewell_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 4213.0,
+      "last_called_at": 1774181214.054795
+    },
+    {
+      "name": "finance_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 11921.0,
+      "last_called_at": 1774266756.4386282
+    },
+    {
+      "name": "graphql_schema_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 459.0,
+      "last_called_at": 1774144799.63053
+    },
+    {
+      "name": "hash_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5594.4,
+      "last_called_at": 1774288781.338502
+    },
+    {
+      "name": "health_summary_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 6827.1,
+      "last_called_at": 1773881764.481379
+    },
+    {
+      "name": "image_generate_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 4093.0,
+      "last_called_at": 1773879845.8513439
+    },
+    {
+      "name": "image_optimization_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 348.6,
+      "last_called_at": 1774144220.7539158
+    },
+    {
+      "name": "kubernetes_ingress_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 389.2,
+      "last_called_at": 1774146176.3862588
+    },
+    {
+      "name": "otomus_service_communication_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 78.8,
+      "last_called_at": 1774142632.7825332
+    },
+    {
+      "name": "otomus_service_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5884.8,
+      "last_called_at": 1774278700.4962828
+    },
+    {
+      "name": "pm2_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 241.6,
+      "last_called_at": 1774143279.14861
+    },
+    {
+      "name": "presentation_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 9088.3,
+      "last_called_at": 1774275423.376249
+    },
+    {
+      "name": "social_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 6778.7,
+      "last_called_at": 1774274988.63594
+    },
+    {
+      "name": "social_schedule_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5184.2,
+      "last_called_at": 1774273461.50464
+    },
+    {
+      "name": "sql_trigger_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 245.5,
+      "last_called_at": 1774143823.51288
+    },
+    {
+      "name": "stocky_data_flow_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 75.6,
+      "last_called_at": 1774142722.204951
+    },
+    {
+      "name": "stocky_pipeline_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 80.9,
+      "last_called_at": 1774142573.395225
+    },
+    {
+      "name": "swagger_doc_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 370.8,
+      "last_called_at": 1774144981.320758
+    },
+    {
+      "name": "terraform_nerve",
+      "total": 2,
+      "successes": 1,
+      "failures": 1,
+      "error_rate": 0.5,
+      "avg_latency_ms": 388.1,
+      "last_called_at": 1774145968.238338
+    },
+    {
+      "name": "travel_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15050.9,
+      "last_called_at": 1774272613.301304
+    },
+    {
+      "name": "trivia_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 2852.4,
+      "last_called_at": 1774270761.08031
+    },
+    {
+      "name": "type_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 8981.0,
+      "last_called_at": 1773877999.535159
+    },
+    {
+      "name": "ui_design_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 16697.0,
+      "last_called_at": 1774285984.499709
+    },
+    {
+      "name": "web_fetch_nerve",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 7588.8,
+      "last_called_at": 1774262814.416791
+    },
+    {
+      "name": "api_mocking_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 345.1,
+      "last_called_at": 1774145241.287812
+    },
+    {
+      "name": "api_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15381.3,
+      "last_called_at": 1774287383.4350662
+    },
+    {
+      "name": "api_pagination_best_practices_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 361.0,
+      "last_called_at": 1774144801.256027
+    },
+    {
+      "name": "api_pagination_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 358.1,
+      "last_called_at": 1774144800.4196448
+    },
+    {
+      "name": "api_request_validation_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 362.4,
+      "last_called_at": 1774145129.34046
+    },
+    {
+      "name": "audio_handling_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 78.4,
+      "last_called_at": 1774143431.673749
+    },
+    {
+      "name": "binary_conversion_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 2543.3,
+      "last_called_at": 1774271453.6667452
+    },
+    {
+      "name": "browse_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5783.0,
+      "last_called_at": 1773876934.456265
+    },
+    {
+      "name": "campaign_plan_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 4372.6,
+      "last_called_at": 1774271995.042853
+    },
+    {
+      "name": "cli_commands_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 3338.3,
+      "last_called_at": 1774278403.371965
+    },
+    {
+      "name": "comparison_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 18050.7,
+      "last_called_at": 1774275741.558221
+    },
+    {
+      "name": "compliance_check_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5066.7,
+      "last_called_at": 1773877197.021708
+    },
+    {
+      "name": "copywrite_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5631.7,
+      "last_called_at": 1774274618.467793
+    },
+    {
+      "name": "crypto_analyze_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 4302.0,
+      "last_called_at": 1773867510.086139
+    },
+    {
+      "name": "database_query_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 76.9,
+      "last_called_at": 1774143823.0350342
+    },
+    {
+      "name": "date_parser_nerve",
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "error_rate": 1.0,
+      "avg_latency_ms": 434.5,
+      "last_called_at": 1774140017.700704
+    },
+    {
+      "name": "embedding_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5556.7,
+      "last_called_at": 1773874448.317258
+    },
+    {
+      "name": "faq_answer_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 19159.3,
+      "last_called_at": 1773873355.442285
+    },
+    {
+      "name": "fetches_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 17869.5,
+      "last_called_at": 1774262514.4143412
+    },
+    {
+      "name": "file_operation_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 85.6,
+      "last_called_at": 1774143333.250537
+    },
+    {
+      "name": "file_organize_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 10001.5,
+      "last_called_at": 1773872069.915753
+    },
+    {
+      "name": "filesystem_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 81.6,
+      "last_called_at": 1774143431.184682
+    },
+    {
+      "name": "garden_design_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5510.6,
+      "last_called_at": 1774272230.244742
+    },
+    {
+      "name": "geo_search_nerve",
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "error_rate": 1.0,
+      "avg_latency_ms": 1011.1,
+      "last_called_at": 1774141584.167157
+    },
+    {
+      "name": "git_automation_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 357.9,
+      "last_called_at": 1774145707.684034
+    },
+    {
+      "name": "git_commit_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 10784.3,
+      "last_called_at": 1774273622.222964
+    },
+    {
+      "name": "git_integration_review_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 79.4,
+      "last_called_at": 1774143293.449949
+    },
+    {
+      "name": "git_migration_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 375.3,
+      "last_called_at": 1774145806.0096278
+    },
+    {
+      "name": "git_operations_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 18983.9,
+      "last_called_at": 1774280197.9477189
+    },
+    {
+      "name": "grocery_list_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 3882.4,
+      "last_called_at": 1774272157.187408
+    },
+    {
+      "name": "internet_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 4421.7,
+      "last_called_at": 1774179678.626081
+    },
+    {
+      "name": "json_extract_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 3419.2,
+      "last_called_at": 1773884928.021098
+    },
+    {
+      "name": "lorem_ipsum_nerve",
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "error_rate": 1.0,
+      "avg_latency_ms": 412.5,
+      "last_called_at": 1774143317.873423
+    },
+    {
+      "name": "network_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 8937.5,
+      "last_called_at": 1774289365.8064792
+    },
+    {
+      "name": "notification_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 9046.5,
+      "last_called_at": 1773881938.876182
+    },
+    {
+      "name": "pressure_conversion_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 4336.0,
+      "last_called_at": 1774271797.361577
+    },
+    {
+      "name": "public_speaking_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 14491.6,
+      "last_called_at": 1774275181.535029
+    },
+    {
+      "name": "random_hex_color_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5572.5,
+      "last_called_at": 1774290207.1790268
+    },
+    {
+      "name": "reflection_nerve",
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "error_rate": 1.0,
+      "avg_latency_ms": 627.2,
+      "last_called_at": 1774167038.411475
+    },
+    {
+      "name": "response_nerve",
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "error_rate": 1.0,
+      "avg_latency_ms": 360.9,
+      "last_called_at": 1774165297.893995
+    },
+    {
+      "name": "script_nerve",
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "error_rate": 1.0,
+      "avg_latency_ms": 369.5,
+      "last_called_at": 1774138207.387981
+    },
+    {
+      "name": "scroll_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 9477.2,
+      "last_called_at": 1773880793.756831
+    },
+    {
+      "name": "self_care_routine_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 4191.6,
+      "last_called_at": 1774273495.969364
+    },
+    {
+      "name": "seo_analyze_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 19379.5,
+      "last_called_at": 1774287059.397481
+    },
+    {
+      "name": "sprint_plan_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 6379.5,
+      "last_called_at": 1774271888.060622
+    },
+    {
+      "name": "systemd_service_nerve",
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "error_rate": 1.0,
+      "avg_latency_ms": 454.7,
+      "last_called_at": 1774137142.063487
+    },
+    {
+      "name": "task_management_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 11250.0,
+      "last_called_at": 1774282488.917347
+    },
+    {
+      "name": "url_extraction_nerve",
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "error_rate": 1.0,
+      "avg_latency_ms": 479.6,
+      "last_called_at": 1774142124.9223192
+    },
+    {
+      "name": "uuid_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5325.3,
+      "last_called_at": 1774288584.07438
+    },
+    {
+      "name": "web_framework_recommender_nerve",
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "error_rate": 1.0,
+      "avg_latency_ms": 643.6,
+      "last_called_at": 1774145689.700049
+    },
+    {
+      "name": "web_scrape_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 6407.6,
+      "last_called_at": 1774289819.920685
+    },
+    {
+      "name": "window_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 10293.7,
+      "last_called_at": 1773878980.976021
+    },
+    {
+      "name": "youtube_search_nerve",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5270.4,
+      "last_called_at": 1773872969.846773
+    }
+  ],
+  "tools": [
+    {
+      "name": "geography_nerve",
+      "total": 65,
+      "successes": 0,
+      "failures": 65,
+      "error_rate": 1.0,
+      "avg_latency_ms": 29.9,
+      "last_called_at": 1774506443.0460532
+    },
+    {
+      "name": "free_llm_api",
+      "total": 13,
+      "successes": 0,
+      "failures": 13,
+      "error_rate": 1.0,
+      "avg_latency_ms": 33.8,
+      "last_called_at": 1774470733.7717462
+    },
+    {
+      "name": "ip_tool",
+      "total": 13,
+      "successes": 0,
+      "failures": 13,
+      "error_rate": 1.0,
+      "avg_latency_ms": 121.7,
+      "last_called_at": 1773883256.832908
+    },
+    {
+      "name": "compare_databases",
+      "total": 10,
+      "successes": 0,
+      "failures": 10,
+      "error_rate": 1.0,
+      "avg_latency_ms": 181.2,
+      "last_called_at": 1774387384.825887
+    },
+    {
+      "name": "parse_geographical_data",
+      "total": 2,
+      "successes": 0,
+      "failures": 2,
+      "error_rate": 1.0,
+      "avg_latency_ms": 29.5,
+      "last_called_at": 1774386995.090744
+    },
+    {
+      "name": "user_preference_analysis",
+      "total": 2,
+      "successes": 0,
+      "failures": 2,
+      "error_rate": 1.0,
+      "avg_latency_ms": 29.1,
+      "last_called_at": 1774360544.947074
+    },
+    {
+      "name": "explain_quantum_computing",
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "error_rate": 1.0,
+      "avg_latency_ms": 22.3,
+      "last_called_at": 1774335364.5631611
+    }
+  ],
+  "mcps": [
+    {
+      "name": "duckduckgo/search",
+      "total": 34,
+      "successes": 34,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15151.8,
+      "last_called_at": 1774470317.255074
+    },
+    {
+      "name": "wikipedia/search_wikipedia",
+      "total": 33,
+      "successes": 33,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15249.4,
+      "last_called_at": 1774377874.252964
+    },
+    {
+      "name": "duckduckgo/fetch_content",
+      "total": 21,
+      "successes": 21,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15147.2,
+      "last_called_at": 1774484078.550632
+    },
+    {
+      "name": "fetch/fetch",
+      "total": 17,
+      "successes": 17,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 16524.8,
+      "last_called_at": 1774482440.7241511
+    },
+    {
+      "name": "airbnb/search_listings",
+      "total": 12,
+      "successes": 12,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15506.0,
+      "last_called_at": 1774287059.32815
+    },
+    {
+      "name": "wikipedia/get_article",
+      "total": 10,
+      "successes": 10,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15102.3,
+      "last_called_at": 1774387149.099943
+    },
+    {
+      "name": "playwright/evaluate",
+      "total": 8,
+      "successes": 8,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15255.4,
+      "last_called_at": 1774318233.042071
+    },
+    {
+      "name": "chrono/format_time",
+      "total": 5,
+      "successes": 5,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15404.4,
+      "last_called_at": 1774469176.662807
+    },
+    {
+      "name": "chrono/convert_timezone",
+      "total": 3,
+      "successes": 3,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15002.4,
+      "last_called_at": 1774304823.821858
+    },
+    {
+      "name": "context7/get-library-docs",
+      "total": 3,
+      "successes": 3,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15337.2,
+      "last_called_at": 1774180377.9084969
+    },
+    {
+      "name": "playwright/get_text",
+      "total": 3,
+      "successes": 3,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15337.9,
+      "last_called_at": 1774289211.367861
+    },
+    {
+      "name": "rss_reader/get_article_content",
+      "total": 3,
+      "successes": 3,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15339.5,
+      "last_called_at": 1774281810.900531
+    },
+    {
+      "name": "coincap/get_price",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15002.3,
+      "last_called_at": 1774276375.679457
+    },
+    {
+      "name": "open_library/get_author_info",
+      "total": 2,
+      "successes": 2,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 5453.8,
+      "last_called_at": 1774470459.1423209
+    },
+    {
+      "name": "chrono/diff_time",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 15003.0,
+      "last_called_at": 1774290685.553049
+    },
+    {
+      "name": "coincap/list_assets",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 20960.8,
+      "last_called_at": 1774272062.137237
+    },
+    {
+      "name": "open_library/get_authors_by_name",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 1803.5,
+      "last_called_at": 1774484850.197848
+    },
+    {
+      "name": "open_library/get_book_by_title",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 1624.5,
+      "last_called_at": 1774470833.4138901
+    },
+    {
+      "name": "wix/SearchWixCLIDocumentation",
+      "total": 1,
+      "successes": 1,
+      "failures": 0,
+      "error_rate": 0.0,
+      "avg_latency_ms": 16007.6,
+      "last_called_at": 1774387204.712498
+    }
+  ],
+  "generated_at": "2026-03-27T14:39:09.246007+00:00",
+  "instance_id": "b452b454"
+}

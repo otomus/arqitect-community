@@ -1,7 +1,6 @@
 ## Adapter Contribution
 
 **Role**: <!-- brain | code | creative | awareness | communication | nerve | vision -->
-**Size Class**: <!-- tinylm | small | medium | large -->
 **Model Name**: <!-- e.g., llama3.2-3b -->
 **Qualification Score**: <!-- e.g., 0.88 -->
 
@@ -16,7 +15,7 @@
 #### Completeness
 - [ ] `context.json`, `meta.json`, and `test_bank.jsonl` are all present
 - [ ] Test bank covers core, edge, boundary, and negative categories
-- [ ] Only model-specific path modified (`adapters/{role}/{size}/{model}/`) — not default adapter files
+- [ ] Only model-specific path modified (`adapters/{role}/{model}/`) — not default adapter files
 
 #### General
 - [ ] No hardcoded secrets, tokens, API keys, or absolute paths

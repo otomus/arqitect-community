@@ -116,6 +116,7 @@ class TestBuildNerveEntry:
         assert entry == {
             "description": "A nerve",
             "role": "code",
+            "mode": "tool_required",
             "tags": ["tag1"],
             "authors": [{"github": "user1"}],
             "version": "2.0",
@@ -128,6 +129,7 @@ class TestBuildNerveEntry:
         assert entry == {
             "description": "",
             "role": "tool",
+            "mode": "reasoning",
             "tags": [],
             "authors": [],
             "version": "1.0",
@@ -200,40 +202,36 @@ class TestReadQualificationScore:
 class TestBuildAdapterEntry:
     def test_with_model_name(self):
         meta = {
-            "model": "llama3.2-3b",
-            "size_class": "small",
             "provider": "ollama",
             "contributor": {"github": "user1"},
         }
-        entry = gm._build_adapter_entry(meta, "tool", "small", "llama3.2-3b", 0.9)
+        entry = gm._build_adapter_entry(meta, "tool", "llama3.2-3b", 0.9)
         assert entry == {
             "role": "tool",
             "model": "llama3.2-3b",
-            "size_class": "small",
             "provider": "ollama",
             "score": 0.9,
             "contributor": "user1",
         }
 
-    def test_without_model_name_falls_back_to_size_class(self):
+    def test_without_model_name_falls_back_to_role(self):
         meta = {"contributor": {"github": "u"}}
-        entry = gm._build_adapter_entry(meta, "code", "medium", None, None)
-        # model falls back: meta has no "model", model_name is None -> size_class
-        assert entry["model"] == "medium"
+        entry = gm._build_adapter_entry(meta, "code", None, None)
+        assert entry["model"] == "code"
         assert entry["score"] is None
 
-    def test_model_name_used_when_meta_has_no_model(self):
+    def test_model_name_used(self):
         meta = {"contributor": {"github": "u"}}
-        entry = gm._build_adapter_entry(meta, "tool", "small", "phi3", 0.5)
+        entry = gm._build_adapter_entry(meta, "tool", "phi3", 0.5)
         assert entry["model"] == "phi3"
 
     def test_score_none_preserved(self):
         meta = {}
-        entry = gm._build_adapter_entry(meta, "tool", "small", None, None)
+        entry = gm._build_adapter_entry(meta, "tool", None, None)
         assert entry["score"] is None
 
     def test_defaults_for_missing_meta_keys(self):
-        entry = gm._build_adapter_entry({}, "tool", "small", None, None)
+        entry = gm._build_adapter_entry({}, "tool", None, None)
         assert entry["provider"] == ""
         assert entry["contributor"] == ""
 
@@ -252,37 +250,33 @@ class TestCollectAdapters:
         _patch_repo(monkeypatch, tmp_path)
         assert gm.collect_adapters() == {}
 
-    def test_valid_size_class_default_adapter(self, monkeypatch, tmp_path):
+    def test_valid_role_default_adapter(self, monkeypatch, tmp_path):
         _patch_repo(monkeypatch, tmp_path)
-        ad = tmp_path / "adapters" / "tool" / "small"
+        ad = tmp_path / "adapters" / "tool"
         ad.mkdir(parents=True)
         _write_json(str(ad / "meta.json"), {
-            "model": "tinylm",
-            "size_class": "small",
             "contributor": {"github": "alice"},
         })
         result = gm.collect_adapters()
-        assert "tool/small" in result
-        assert result["tool/small"]["model"] == "tinylm"
+        assert "tool" in result
+        assert result["tool"]["role"] == "tool"
 
     def test_valid_model_specific_adapter(self, monkeypatch, tmp_path):
         _patch_repo(monkeypatch, tmp_path)
-        ad = tmp_path / "adapters" / "code" / "medium" / "phi3"
+        ad = tmp_path / "adapters" / "code" / "phi3"
         ad.mkdir(parents=True)
         _write_json(str(ad / "meta.json"), {
-            "model": "phi3",
-            "size_class": "medium",
             "provider": "ollama",
             "contributor": {"github": "bob"},
         })
         _write_json(str(ad / "qualification.json"), {"overall_score": 0.92})
         result = gm.collect_adapters()
-        assert "code/medium/phi3" in result
-        assert result["code/medium/phi3"]["score"] == 0.92
+        assert "code/phi3" in result
+        assert result["code/phi3"]["score"] == 0.92
 
     def test_skips_adapter_without_meta(self, monkeypatch, tmp_path):
         _patch_repo(monkeypatch, tmp_path)
-        (tmp_path / "adapters" / "tool" / "small").mkdir(parents=True)
+        (tmp_path / "adapters" / "tool").mkdir(parents=True)
         # no meta.json
         assert gm.collect_adapters() == {}
 
@@ -294,7 +288,7 @@ class TestCollectAdapters:
 class TestCollectTools:
     def test_valid_tool(self, monkeypatch, tmp_path):
         _patch_repo(monkeypatch, tmp_path)
-        td = tmp_path / "tools" / "web_search"
+        td = tmp_path / "mcp_tools" / "web_search"
         td.mkdir(parents=True)
         _write_json(str(td / "meta.json"), {
             "name": "web_search",
@@ -319,12 +313,12 @@ class TestCollectTools:
 
     def test_missing_meta_skipped(self, monkeypatch, tmp_path):
         _patch_repo(monkeypatch, tmp_path)
-        (tmp_path / "tools" / "broken_tool").mkdir(parents=True)
+        (tmp_path / "mcp_tools" / "broken_tool").mkdir(parents=True)
         assert gm.collect_tools() == {}
 
     def test_empty_tools_dir(self, monkeypatch, tmp_path):
         _patch_repo(monkeypatch, tmp_path)
-        (tmp_path / "tools").mkdir()
+        (tmp_path / "mcp_tools").mkdir()
         assert gm.collect_tools() == {}
 
     def test_missing_tools_dir(self, monkeypatch, tmp_path):
@@ -333,7 +327,7 @@ class TestCollectTools:
 
     def test_tool_defaults(self, monkeypatch, tmp_path):
         _patch_repo(monkeypatch, tmp_path)
-        td = tmp_path / "tools" / "minimal"
+        td = tmp_path / "mcp_tools" / "minimal"
         td.mkdir(parents=True)
         _write_json(str(td / "meta.json"), {})
         result = gm.collect_tools()
@@ -498,44 +492,44 @@ class TestCollectConnectors:
 # ---------------------------------------------------------------------------
 
 class TestBuildLeaderboard:
-    def test_groups_by_size_class_sorted_desc(self):
+    def test_groups_by_role_sorted_desc(self):
         adapters = {
-            "a": {"model": "m1", "score": 0.5, "size_class": "small", "contributor": "u1"},
-            "b": {"model": "m2", "score": 0.9, "size_class": "small", "contributor": "u2"},
-            "c": {"model": "m3", "score": 0.7, "size_class": "medium", "contributor": "u3"},
+            "a": {"model": "m1", "score": 0.5, "role": "brain", "contributor": "u1"},
+            "b": {"model": "m2", "score": 0.9, "role": "brain", "contributor": "u2"},
+            "c": {"model": "m3", "score": 0.7, "role": "code", "contributor": "u3"},
         }
         lb = gm.build_leaderboard(adapters)
-        assert set(lb.keys()) == {"small", "medium"}
-        # small should be sorted descending
-        assert lb["small"][0]["score"] == 0.9
-        assert lb["small"][1]["score"] == 0.5
-        # medium has one entry
-        assert lb["medium"][0]["model"] == "m3"
+        assert set(lb.keys()) == {"brain", "code"}
+        # brain should be sorted descending
+        assert lb["brain"][0]["score"] == 0.9
+        assert lb["brain"][1]["score"] == 0.5
+        # code has one entry
+        assert lb["code"][0]["model"] == "m3"
 
     def test_skips_none_score(self):
         adapters = {
-            "a": {"model": "m1", "score": None, "size_class": "small"},
-            "b": {"model": "m2", "score": 0.6, "size_class": "small", "contributor": "u"},
+            "a": {"model": "m1", "score": None, "role": "brain"},
+            "b": {"model": "m2", "score": 0.6, "role": "brain", "contributor": "u"},
         }
         lb = gm.build_leaderboard(adapters)
-        assert len(lb["small"]) == 1
-        assert lb["small"][0]["model"] == "m2"
+        assert len(lb["brain"]) == 1
+        assert lb["brain"][0]["model"] == "m2"
 
     def test_empty_adapters(self):
         assert gm.build_leaderboard({}) == {}
 
     def test_all_none_scores(self):
         adapters = {
-            "a": {"model": "m1", "score": None, "size_class": "small"},
+            "a": {"model": "m1", "score": None, "role": "brain"},
         }
         assert gm.build_leaderboard(adapters) == {}
 
-    def test_default_size_class_used(self):
+    def test_default_role_used(self):
         adapters = {
             "a": {"model": "m1", "score": 0.8, "contributor": "u"},
         }
         lb = gm.build_leaderboard(adapters)
-        assert gm.DEFAULT_SIZE_CLASS in lb
+        assert gm.DEFAULT_ROLE in lb
 
 
 # ---------------------------------------------------------------------------
@@ -559,18 +553,16 @@ class TestMain:
         })
 
         # Create an adapter
-        ad = tmp_path / "adapters" / "tool" / "small" / "phi3"
+        ad = tmp_path / "adapters" / "tool" / "phi3"
         ad.mkdir(parents=True)
         _write_json(str(ad / "meta.json"), {
-            "model": "phi3",
-            "size_class": "small",
             "provider": "ollama",
             "contributor": {"github": "alice"},
         })
         _write_json(str(ad / "qualification.json"), {"overall_score": 0.88})
 
         # Create a tool
-        td = tmp_path / "tools" / "greet"
+        td = tmp_path / "mcp_tools" / "greet"
         td.mkdir(parents=True)
         _write_json(str(td / "meta.json"), {
             "name": "greet",
@@ -625,7 +617,7 @@ class TestMain:
         assert manifest["version"] == "1.0"
         assert "generated_at" in manifest
         assert "test_nerve" in manifest["nerves"]
-        assert "tool/small/phi3" in manifest["adapters"]
+        assert "tool/phi3" in manifest["adapters"]
         assert "greet" in manifest["tools"]
         assert "test_mcp" in manifest["mcps"]
         assert "test_conn" in manifest["connectors"]
@@ -638,9 +630,9 @@ class TestMain:
         assert manifest["stats"]["total_mcps"] == 1
 
         # Leaderboard
-        assert "small" in manifest["leaderboard"]
-        assert manifest["leaderboard"]["small"][0]["model"] == "phi3"
-        assert manifest["leaderboard"]["small"][0]["score"] == 0.88
+        assert "tool" in manifest["leaderboard"]
+        assert manifest["leaderboard"]["tool"][0]["model"] == "phi3"
+        assert manifest["leaderboard"]["tool"][0]["score"] == 0.88
 
     def test_empty_repo(self, monkeypatch, tmp_path):
         """main() should still produce a valid manifest when all dirs are empty."""

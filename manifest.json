@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-18T19:40:07.585188+00:00",
+  "generated_at": "2026-04-07T07:03:48.190071+00:00",
   "nerves": {
     "academic_research_nerve": {
       "description": "Find and summarize academic papers on a topic",
@@ -9,7 +9,9 @@
       "tags": [
         "research",
         "academic",
-        "papers"
+        "papers",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -20,8 +22,8 @@
       "tools": [
         "web_search",
         "web_scrape",
-        "pdf_read",
-        "json_format"
+        "pdf",
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -30,11 +32,11 @@
       "role": "tool",
       "mode": "tool_required",
       "tags": [
-        "iot",
         "actuator",
         "control",
         "motor",
-        "relay"
+        "relay",
+        "iot"
       ],
       "authors": [
         {
@@ -54,7 +56,9 @@
       "tags": [
         "marketing",
         "advertising",
-        "creative"
+        "creative",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -69,6 +73,28 @@
       ],
       "model_scores": {}
     },
+    "art_history_nerve": {
+      "description": "art_history_nerve",
+      "role": "tool",
+      "mode": "tool_required",
+      "tags": [
+        "tool",
+        "art-history",
+        "desktop",
+        "server"
+      ],
+      "authors": [
+        {
+          "github": "otomus"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "geography_nerve",
+        "compare_databases"
+      ],
+      "model_scores": {}
+    },
     "audio_convert_nerve": {
       "description": "Convert an audio file from one format to another (e.g. WAV to MP3)",
       "role": "tool",
@@ -77,7 +103,9 @@
         "audio",
         "convert",
         "format",
-        "transcode"
+        "transcode",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -98,7 +126,8 @@
         "audio",
         "record",
         "microphone",
-        "capture"
+        "capture",
+        "desktop"
       ],
       "authors": [
         {
@@ -119,7 +148,9 @@
         "audio",
         "tts",
         "text-to-speech",
-        "synthesis"
+        "synthesis",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -128,7 +159,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "text_to_speech"
+        "audio_synthesize"
       ],
       "model_scores": {}
     },
@@ -140,7 +171,9 @@
         "audio",
         "transcribe",
         "speech-to-text",
-        "asr"
+        "asr",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -149,7 +182,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "voice_recognition"
+        "audio_transcribe"
       ],
       "model_scores": {}
     },
@@ -160,7 +193,8 @@
       "tags": [
         "devops",
         "backup",
-        "infrastructure"
+        "infrastructure",
+        "server"
       ],
       "authors": [
         {
@@ -171,7 +205,7 @@
       "tools": [
         "file_copy",
         "db_query",
-        "json_format"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -180,7 +214,9 @@
       "role": "tool",
       "mode": "tool_required",
       "tags": [
-        "barcode"
+        "barcode",
+        "desktop",
+        "iot"
       ],
       "authors": [
         {
@@ -202,7 +238,9 @@
         "web",
         "scraping",
         "render",
-        "headless"
+        "headless",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -225,7 +263,8 @@
         "finance",
         "budget",
         "planning",
-        "spending"
+        "spending",
+        "desktop"
       ],
       "authors": [
         {
@@ -234,7 +273,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "csv_read",
+        "csv",
         "math_eval",
         "chart_create"
       ],
@@ -246,7 +285,9 @@
       "mode": "tool_required",
       "tags": [
         "calendar",
-        "productivity"
+        "productivity",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -264,11 +305,11 @@
       "role": "tool",
       "mode": "tool_required",
       "tags": [
-        "iot",
         "camera",
         "snapshot",
         "photo",
-        "surveillance"
+        "surveillance",
+        "iot"
       ],
       "authors": [
         {
@@ -277,7 +318,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "take_photo"
+        "camera_capture"
       ],
       "model_scores": {}
     },
@@ -288,7 +329,9 @@
       "tags": [
         "marketing",
         "campaign",
-        "planning"
+        "planning",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -310,7 +353,8 @@
       "tags": [
         "security",
         "ssl",
-        "certificate"
+        "certificate",
+        "server"
       ],
       "authors": [
         {
@@ -330,7 +374,8 @@
       "tags": [
         "devops",
         "ci-cd",
-        "pipeline"
+        "pipeline",
+        "server"
       ],
       "authors": [
         {
@@ -339,8 +384,8 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "web_search",
-        "json_parse",
+        "http_get",
+        "json_tool",
         "alert_send"
       ],
       "model_scores": {}
@@ -350,11 +395,11 @@
       "role": "tool",
       "mode": "reasoning",
       "tags": [
-        "desktop",
         "mouse",
         "click",
         "cursor",
-        "input"
+        "input",
+        "desktop"
       ],
       "authors": [
         {
@@ -373,7 +418,8 @@
       "mode": "reasoning",
       "tags": [
         "clipboard",
-        "system"
+        "system",
+        "desktop"
       ],
       "authors": [
         {
@@ -393,7 +439,9 @@
       "tags": [
         "code",
         "review",
-        "quality"
+        "quality",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -416,7 +464,9 @@
       "tags": [
         "legal",
         "compliance",
-        "audit"
+        "audit",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -427,7 +477,7 @@
       "tools": [
         "file_read",
         "llm_call",
-        "json_format"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -438,7 +488,8 @@
       "tags": [
         "legal",
         "contract",
-        "review"
+        "review",
+        "desktop"
       ],
       "authors": [
         {
@@ -447,10 +498,10 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "pdf_read",
-        "docx_read",
+        "pdf",
+        "docx",
         "llm_call",
-        "json_format"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -461,7 +512,9 @@
       "tags": [
         "writing",
         "marketing",
-        "copy"
+        "copy",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -483,7 +536,9 @@
       "tags": [
         "code",
         "test",
-        "coverage"
+        "coverage",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -502,7 +557,10 @@
       "mode": "reasoning",
       "tags": [
         "security",
-        "encryption"
+        "encryption",
+        "desktop",
+        "server",
+        "iot"
       ],
       "authors": [
         {
@@ -524,7 +582,9 @@
         "crypto",
         "analysis",
         "trends",
-        "research"
+        "research",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -547,7 +607,9 @@
         "finance",
         "crypto",
         "price",
-        "realtime"
+        "realtime",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -556,7 +618,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "stock_quote"
+        "crypto_price"
       ],
       "model_scores": {}
     },
@@ -569,7 +631,9 @@
         "csv",
         "tabular",
         "parse",
-        "spreadsheet"
+        "spreadsheet",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -591,7 +655,10 @@
         "currency",
         "exchange-rate",
         "forex",
-        "convert"
+        "convert",
+        "desktop",
+        "server",
+        "iot"
       ],
       "authors": [
         {
@@ -611,7 +678,9 @@
       "tags": [
         "data",
         "cleaning",
-        "normalization"
+        "normalization",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -620,9 +689,8 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "csv_read",
-        "regex_replace",
-        "csv_write"
+        "csv",
+        "regex"
       ],
       "model_scores": {}
     },
@@ -633,7 +701,9 @@
       "tags": [
         "data",
         "analysis",
-        "exploration"
+        "exploration",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -642,9 +712,9 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "csv_read",
-        "xlsx_read",
-        "json_format",
+        "csv",
+        "xlsx",
+        "json_tool",
         "chart_create"
       ],
       "model_scores": {}
@@ -655,7 +725,8 @@
       "mode": "tool_required",
       "tags": [
         "database",
-        "sql"
+        "sql",
+        "server"
       ],
       "authors": [
         {
@@ -680,7 +751,9 @@
       "tags": [
         "research",
         "knowledge",
-        "report"
+        "report",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -691,8 +764,8 @@
       "tools": [
         "web_search",
         "web_scrape",
-        "pdf_read",
-        "note_create"
+        "pdf",
+        "note"
       ],
       "model_scores": {}
     },
@@ -703,7 +776,8 @@
       "tags": [
         "devops",
         "deploy",
-        "infrastructure"
+        "infrastructure",
+        "server"
       ],
       "authors": [
         {
@@ -725,7 +799,9 @@
       "mode": "reasoning",
       "tags": [
         "code",
-        "dependencies"
+        "dependencies",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -743,10 +819,10 @@
       "role": "tool",
       "mode": "tool_required",
       "tags": [
-        "iot",
         "device",
         "inventory",
-        "health-check"
+        "health-check",
+        "iot"
       ],
       "authors": [
         {
@@ -765,7 +841,8 @@
       "mode": "tool_required",
       "tags": [
         "web",
-        "dns"
+        "dns",
+        "server"
       ],
       "authors": [
         {
@@ -787,7 +864,9 @@
         "convert",
         "format",
         "markdown",
-        "export"
+        "export",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -796,10 +875,9 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "markdown_to_html",
-        "markdown_to_pdf",
-        "docx_read",
-        "pdf_create"
+        "markdown_convert",
+        "docx",
+        "pdf"
       ],
       "model_scores": {}
     },
@@ -810,7 +888,8 @@
       "tags": [
         "docker",
         "container",
-        "devops"
+        "devops",
+        "server"
       ],
       "authors": [
         {
@@ -837,7 +916,8 @@
         "document",
         "docx",
         "word",
-        "microsoft"
+        "microsoft",
+        "desktop"
       ],
       "authors": [
         {
@@ -856,7 +936,9 @@
       "mode": "tool_required",
       "tags": [
         "web",
-        "domain"
+        "domain",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -876,7 +958,9 @@
       "tags": [
         "writing",
         "blog",
-        "content"
+        "content",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -892,7 +976,7 @@
       "model_scores": {}
     },
     "draft_email_nerve": {
-      "description": "Compose a polished email draft using AI without sending it",
+      "description": "Compose a polished email draft using AI and save it to a file",
       "role": "creative",
       "mode": "reasoning",
       "tags": [
@@ -900,7 +984,9 @@
         "email",
         "draft",
         "compose",
-        "communication"
+        "communication",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -910,7 +996,7 @@
       "version": "1.0.0",
       "tools": [
         "llm_call",
-        "email_send"
+        "file_write"
       ],
       "model_scores": {}
     },
@@ -923,7 +1009,9 @@
         "email",
         "imap",
         "smtp",
-        "inbox"
+        "inbox",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -943,7 +1031,8 @@
       "tags": [
         "ai",
         "embedding",
-        "vector"
+        "vector",
+        "server"
       ],
       "authors": [
         {
@@ -952,8 +1041,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "embedding_create",
-        "embedding_search"
+        "embedding"
       ],
       "model_scores": {}
     },
@@ -963,7 +1051,10 @@
       "mode": "reasoning",
       "tags": [
         "data",
-        "encoding"
+        "encoding",
+        "desktop",
+        "server",
+        "iot"
       ],
       "authors": [
         {
@@ -972,8 +1063,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "base64_encode",
-        "base64_decode"
+        "base64"
       ],
       "model_scores": {}
     },
@@ -984,7 +1074,8 @@
       "tags": [
         "support",
         "escalation",
-        "triage"
+        "triage",
+        "server"
       ],
       "authors": [
         {
@@ -993,7 +1084,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "json_parse",
+        "json_tool",
         "llm_call"
       ],
       "model_scores": {}
@@ -1005,7 +1096,8 @@
       "tags": [
         "data",
         "etl",
-        "pipeline"
+        "pipeline",
+        "server"
       ],
       "authors": [
         {
@@ -1014,10 +1106,9 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "csv_read",
-        "json_parse",
-        "db_execute",
-        "csv_write"
+        "csv",
+        "json_tool",
+        "db_execute"
       ],
       "model_scores": {}
     },
@@ -1030,7 +1121,8 @@
         "expense",
         "tracking",
         "categorize",
-        "receipt"
+        "receipt",
+        "desktop"
       ],
       "authors": [
         {
@@ -1039,8 +1131,8 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "json_parse",
-        "csv_write",
+        "json_tool",
+        "csv",
         "math_eval"
       ],
       "model_scores": {}
@@ -1052,7 +1144,9 @@
       "tags": [
         "education",
         "teaching",
-        "explanation"
+        "explanation",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1066,6 +1160,28 @@
       ],
       "model_scores": {}
     },
+    "explanation_nerve": {
+      "description": "explanation_nerve",
+      "role": "tool",
+      "mode": "tool_required",
+      "tags": [
+        "tool",
+        "explanation",
+        "desktop",
+        "server"
+      ],
+      "authors": [
+        {
+          "github": "otomus"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "geography_nerve",
+        "compare_databases"
+      ],
+      "model_scores": {}
+    },
     "fact_check_nerve": {
       "description": "Verify claims against multiple sources",
       "role": "tool",
@@ -1073,7 +1189,9 @@
       "tags": [
         "research",
         "fact-check",
-        "verification"
+        "verification",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1084,7 +1202,7 @@
       "tools": [
         "web_search",
         "web_scrape",
-        "json_format"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -1095,7 +1213,9 @@
       "tags": [
         "support",
         "faq",
-        "knowledge-base"
+        "knowledge-base",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1105,7 +1225,7 @@
       "version": "1.0.0",
       "tools": [
         "file_grep",
-        "embedding_search",
+        "embedding",
         "llm_call"
       ],
       "model_scores": {}
@@ -1118,7 +1238,9 @@
         "file",
         "backup",
         "copy",
-        "archive"
+        "archive",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1140,7 +1262,9 @@
         "file",
         "comparison",
         "diff",
-        "delta"
+        "delta",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1163,7 +1287,9 @@
         "search",
         "glob",
         "grep",
-        "find"
+        "find",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1186,7 +1312,9 @@
         "filesystem",
         "read",
         "write",
-        "crud"
+        "crud",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1210,7 +1338,9 @@
         "file",
         "organization",
         "move",
-        "rename"
+        "rename",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1234,7 +1364,9 @@
         "monitoring",
         "watch",
         "events",
-        "inotify"
+        "inotify",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1247,6 +1379,28 @@
       ],
       "model_scores": {}
     },
+    "finance_nerve": {
+      "description": "finance_nerve",
+      "role": "tool",
+      "mode": "tool_required",
+      "tags": [
+        "tool",
+        "finance",
+        "desktop",
+        "server"
+      ],
+      "authors": [
+        {
+          "github": "otomus"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "geography_nerve",
+        "explain_quantum_computing"
+      ],
+      "model_scores": {}
+    },
     "fitness_plan_nerve": {
       "description": "Create a fitness plan",
       "role": "creative",
@@ -1254,7 +1408,8 @@
       "tags": [
         "health",
         "fitness",
-        "planning"
+        "planning",
+        "desktop"
       ],
       "authors": [
         {
@@ -1264,7 +1419,7 @@
       "version": "1.0.0",
       "tools": [
         "llm_call",
-        "json_format"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -1276,7 +1431,8 @@
         "browser",
         "web",
         "form",
-        "automation"
+        "automation",
+        "desktop"
       ],
       "authors": [
         {
@@ -1299,7 +1455,9 @@
       "tags": [
         "code",
         "format",
-        "style"
+        "style",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1318,7 +1476,8 @@
       "mode": "tool_required",
       "tags": [
         "gif",
-        "media"
+        "media",
+        "desktop"
       ],
       "authors": [
         {
@@ -1340,7 +1499,9 @@
         "git",
         "version-control",
         "branch",
-        "checkout"
+        "checkout",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1362,7 +1523,9 @@
         "git",
         "version-control",
         "cleanup",
-        "prune"
+        "prune",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1384,7 +1547,9 @@
         "git",
         "version-control",
         "clone",
-        "remote"
+        "remote",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1405,7 +1570,9 @@
         "git",
         "version-control",
         "commit",
-        "stage"
+        "stage",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1429,7 +1596,9 @@
         "git",
         "version-control",
         "conflict",
-        "merge-conflict"
+        "merge-conflict",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1453,7 +1622,9 @@
         "version-control",
         "log",
         "history",
-        "blame"
+        "blame",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1475,7 +1646,9 @@
         "git",
         "version-control",
         "merge",
-        "integrate"
+        "integrate",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1498,7 +1671,9 @@
         "git",
         "version-control",
         "pull",
-        "fetch"
+        "fetch",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1520,7 +1695,9 @@
         "git",
         "version-control",
         "push",
-        "remote"
+        "remote",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1542,7 +1719,9 @@
         "git",
         "version-control",
         "rebase",
-        "replay"
+        "replay",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1565,7 +1744,9 @@
         "git",
         "version-control",
         "stash",
-        "wip"
+        "wip",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1575,7 +1756,6 @@
       "version": "1.0.0",
       "tools": [
         "git_stash",
-        "git_stash_pop",
         "git_status"
       ],
       "model_scores": {}
@@ -1588,7 +1768,9 @@
         "git",
         "version-control",
         "tag",
-        "release"
+        "release",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1609,7 +1791,8 @@
       "tags": [
         "self-improvement",
         "goals",
-        "tracking"
+        "tracking",
+        "desktop"
       ],
       "authors": [
         {
@@ -1618,7 +1801,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "json_parse",
+        "json_tool",
         "math_eval",
         "chart_create"
       ],
@@ -1631,7 +1814,9 @@
       "tags": [
         "education",
         "grading",
-        "assessment"
+        "assessment",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1642,7 +1827,7 @@
       "tools": [
         "file_read",
         "llm_call",
-        "json_format"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -1653,7 +1838,8 @@
       "tags": [
         "self-improvement",
         "habit",
-        "tracking"
+        "tracking",
+        "desktop"
       ],
       "authors": [
         {
@@ -1662,8 +1848,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "json_parse",
-        "json_format",
+        "json_tool",
         "file_write"
       ],
       "model_scores": {}
@@ -1675,7 +1860,10 @@
       "tags": [
         "data",
         "hash",
-        "security"
+        "security",
+        "desktop",
+        "server",
+        "iot"
       ],
       "authors": [
         {
@@ -1695,7 +1883,9 @@
       "tags": [
         "health",
         "wellness",
-        "metrics"
+        "metrics",
+        "desktop",
+        "iot"
       ],
       "authors": [
         {
@@ -1705,7 +1895,7 @@
       "version": "1.0.0",
       "tools": [
         "sleep_tracker_read",
-        "json_format",
+        "json_tool",
         "chart_create"
       ],
       "model_scores": {}
@@ -1715,11 +1905,11 @@
       "role": "tool",
       "mode": "reasoning",
       "tags": [
-        "desktop",
         "keyboard",
         "shortcut",
         "hotkey",
-        "input"
+        "input",
+        "desktop"
       ],
       "authors": [
         {
@@ -1739,9 +1929,9 @@
       "tags": [
         "image",
         "screenshot",
-        "desktop",
         "capture",
-        "screen"
+        "screen",
+        "desktop"
       ],
       "authors": [
         {
@@ -1750,7 +1940,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "capture_screen"
+        "screen_capture"
       ],
       "model_scores": {}
     },
@@ -1763,7 +1953,8 @@
         "editing",
         "resize",
         "crop",
-        "convert"
+        "convert",
+        "desktop"
       ],
       "authors": [
         {
@@ -1787,7 +1978,9 @@
         "generate",
         "ai",
         "dall-e",
-        "creative"
+        "creative",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1796,7 +1989,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "generate_image"
+        "image_generate"
       ],
       "model_scores": {}
     },
@@ -1808,7 +2001,9 @@
         "image",
         "ocr",
         "text-extraction",
-        "document"
+        "document",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1828,7 +2023,8 @@
       "tags": [
         "devops",
         "incident",
-        "triage"
+        "triage",
+        "server"
       ],
       "authors": [
         {
@@ -1837,7 +2033,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "log_read",
+        "log",
         "docker_logs",
         "process_list",
         "alert_send"
@@ -1851,7 +2047,8 @@
       "tags": [
         "devops",
         "infrastructure",
-        "audit"
+        "audit",
+        "server"
       ],
       "authors": [
         {
@@ -1863,7 +2060,7 @@
         "docker_ps",
         "process_list",
         "port_scan",
-        "json_format"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -1873,7 +2070,10 @@
       "mode": "reasoning",
       "tags": [
         "data",
-        "json"
+        "json",
+        "desktop",
+        "server",
+        "iot"
       ],
       "authors": [
         {
@@ -1882,8 +2082,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "json_parse",
-        "json_query"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -1894,7 +2093,9 @@
       "tags": [
         "knowledge",
         "extraction",
-        "organization"
+        "organization",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1904,9 +2105,9 @@
       "version": "1.0.0",
       "tools": [
         "web_scrape",
-        "pdf_read",
-        "note_create",
-        "json_format"
+        "pdf",
+        "note",
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -1917,7 +2118,9 @@
       "tags": [
         "sales",
         "research",
-        "leads"
+        "leads",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1928,8 +2131,8 @@
       "tools": [
         "web_search",
         "web_scrape",
-        "social_search",
-        "json_format"
+        "social",
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -1940,7 +2143,8 @@
       "tags": [
         "education",
         "teaching",
-        "planning"
+        "planning",
+        "desktop"
       ],
       "authors": [
         {
@@ -1962,7 +2166,9 @@
       "tags": [
         "legal",
         "license",
-        "compliance"
+        "compliance",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -1973,7 +2179,7 @@
       "tools": [
         "code_deps",
         "web_search",
-        "json_format"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -1982,11 +2188,11 @@
       "role": "tool",
       "mode": "tool_required",
       "tags": [
-        "iot",
         "light",
         "hue",
         "brightness",
-        "smart-home"
+        "smart-home",
+        "iot"
       ],
       "authors": [
         {
@@ -2006,7 +2212,9 @@
       "tags": [
         "code",
         "lint",
-        "quality"
+        "quality",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2024,11 +2232,11 @@
       "role": "tool",
       "mode": "tool_required",
       "tags": [
-        "iot",
         "lock",
         "door",
         "smart-home",
-        "security"
+        "security",
+        "iot"
       ],
       "authors": [
         {
@@ -2048,7 +2256,9 @@
       "tags": [
         "research",
         "market",
-        "competitors"
+        "competitors",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2059,7 +2269,7 @@
       "tools": [
         "web_search",
         "web_scrape",
-        "stock_quote",
+        "stock",
         "chart_create"
       ],
       "model_scores": {}
@@ -2073,7 +2283,9 @@
         "music",
         "identify",
         "shazam",
-        "recognition"
+        "recognition",
+        "desktop",
+        "iot"
       ],
       "authors": [
         {
@@ -2082,7 +2294,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "voice_recognition"
+        "music_identify"
       ],
       "model_scores": {}
     },
@@ -2093,7 +2305,10 @@
       "tags": [
         "news",
         "fetch",
-        "headlines"
+        "headlines",
+        "desktop",
+        "server",
+        "iot"
       ],
       "authors": [
         {
@@ -2112,7 +2327,8 @@
       "mode": "reasoning",
       "tags": [
         "notes",
-        "productivity"
+        "productivity",
+        "desktop"
       ],
       "authors": [
         {
@@ -2133,7 +2349,10 @@
         "communication",
         "notification",
         "push",
-        "alert"
+        "alert",
+        "desktop",
+        "server",
+        "iot"
       ],
       "authors": [
         {
@@ -2153,7 +2372,8 @@
       "tags": [
         "health",
         "nutrition",
-        "analysis"
+        "analysis",
+        "desktop"
       ],
       "authors": [
         {
@@ -2164,7 +2384,7 @@
       "tools": [
         "web_search",
         "math_eval",
-        "json_format"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -2177,7 +2397,9 @@
         "web",
         "screenshot",
         "render",
-        "image"
+        "image",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2199,7 +2421,9 @@
       "tags": [
         "security",
         "password",
-        "credentials"
+        "credentials",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2220,7 +2444,9 @@
         "document",
         "pdf",
         "read",
-        "create"
+        "create",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2240,7 +2466,9 @@
       "tags": [
         "sales",
         "pitch",
-        "proposal"
+        "proposal",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2261,7 +2489,8 @@
       "mode": "tool_required",
       "tags": [
         "package",
-        "dependencies"
+        "dependencies",
+        "server"
       ],
       "authors": [
         {
@@ -2285,7 +2514,8 @@
       "tags": [
         "security",
         "network",
-        "ports"
+        "ports",
+        "server"
       ],
       "authors": [
         {
@@ -2307,7 +2537,9 @@
         "portfolio",
         "review",
         "allocation",
-        "performance"
+        "performance",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2316,8 +2548,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "stock_quote",
-        "stock_history",
+        "stock",
         "chart_create"
       ],
       "model_scores": {}
@@ -2330,7 +2561,8 @@
         "document",
         "pptx",
         "powerpoint",
-        "slides"
+        "slides",
+        "desktop"
       ],
       "authors": [
         {
@@ -2350,7 +2582,9 @@
       "tags": [
         "legal",
         "privacy",
-        "audit"
+        "audit",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2371,7 +2605,9 @@
       "mode": "tool_required",
       "tags": [
         "process",
-        "system"
+        "system",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2393,7 +2629,9 @@
       "tags": [
         "writing",
         "proofread",
-        "editing"
+        "editing",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2408,13 +2646,34 @@
       ],
       "model_scores": {}
     },
+    "python_nerve": {
+      "description": "python_nerve",
+      "role": "tool",
+      "mode": "reasoning",
+      "tags": [
+        "tool",
+        "python",
+        "desktop",
+        "server"
+      ],
+      "authors": [
+        {
+          "github": "otomus"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [],
+      "model_scores": {}
+    },
     "qr_nerve": {
       "description": "Generate and read QR codes",
       "role": "tool",
       "mode": "reasoning",
       "tags": [
         "qr",
-        "barcode"
+        "barcode",
+        "desktop",
+        "iot"
       ],
       "authors": [
         {
@@ -2434,7 +2693,8 @@
       "tags": [
         "education",
         "quiz",
-        "assessment"
+        "assessment",
+        "desktop"
       ],
       "authors": [
         {
@@ -2444,7 +2704,7 @@
       "version": "1.0.0",
       "tools": [
         "llm_call",
-        "json_format"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -2455,7 +2715,8 @@
       "tags": [
         "self-improvement",
         "reflection",
-        "mindfulness"
+        "mindfulness",
+        "desktop"
       ],
       "authors": [
         {
@@ -2475,7 +2736,9 @@
       "tags": [
         "data",
         "regex",
-        "text"
+        "text",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2484,8 +2747,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "regex_match",
-        "regex_replace"
+        "regex"
       ],
       "model_scores": {}
     },
@@ -2495,7 +2757,9 @@
       "mode": "reasoning",
       "tags": [
         "reminder",
-        "productivity"
+        "productivity",
+        "desktop",
+        "iot"
       ],
       "authors": [
         {
@@ -2515,7 +2779,9 @@
       "tags": [
         "data",
         "report",
-        "visualization"
+        "visualization",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2524,10 +2790,10 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "csv_read",
+        "csv",
         "math_eval",
         "chart_create",
-        "pdf_create"
+        "pdf"
       ],
       "model_scores": {}
     },
@@ -2538,7 +2804,9 @@
       "tags": [
         "project-management",
         "risk",
-        "assessment"
+        "assessment",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2548,7 +2816,7 @@
       "version": "1.0.0",
       "tools": [
         "llm_call",
-        "json_format"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -2558,7 +2826,9 @@
       "mode": "tool_required",
       "tags": [
         "web",
-        "rss"
+        "rss",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2567,7 +2837,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "news_fetch"
+        "rss_fetch"
       ],
       "model_scores": {}
     },
@@ -2578,7 +2848,9 @@
       "tags": [
         "workflow",
         "schedule",
-        "cron"
+        "cron",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2598,11 +2870,11 @@
       "role": "tool",
       "mode": "reasoning",
       "tags": [
-        "desktop",
         "screen",
         "ocr",
         "live",
-        "region"
+        "region",
+        "desktop"
       ],
       "authors": [
         {
@@ -2611,7 +2883,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "capture_screen",
+        "screen_capture",
         "image_to_text"
       ],
       "model_scores": {}
@@ -2621,11 +2893,11 @@
       "role": "tool",
       "mode": "reasoning",
       "tags": [
-        "desktop",
         "mouse",
         "scroll",
         "wheel",
-        "input"
+        "input",
+        "desktop"
       ],
       "authors": [
         {
@@ -2643,10 +2915,10 @@
       "role": "tool",
       "mode": "tool_required",
       "tags": [
-        "iot",
         "sensor",
         "telemetry",
-        "reading"
+        "reading",
+        "iot"
       ],
       "authors": [
         {
@@ -2666,7 +2938,9 @@
       "tags": [
         "marketing",
         "seo",
-        "analysis"
+        "analysis",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2677,7 +2951,7 @@
       "tools": [
         "web_search",
         "web_scrape",
-        "json_format"
+        "json_tool"
       ],
       "model_scores": {}
     },
@@ -2686,11 +2960,11 @@
       "role": "tool",
       "mode": "tool_required",
       "tags": [
-        "iot",
         "health",
         "sleep",
         "tracker",
-        "eight-sleep"
+        "eight-sleep",
+        "iot"
       ],
       "authors": [
         {
@@ -2699,7 +2973,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "get_sleep_data"
+        "sleep_tracker_read"
       ],
       "model_scores": {}
     },
@@ -2711,7 +2985,10 @@
         "communication",
         "sms",
         "text-message",
-        "send"
+        "send",
+        "desktop",
+        "server",
+        "iot"
       ],
       "authors": [
         {
@@ -2733,7 +3010,9 @@
         "social",
         "post",
         "reply",
-        "feed"
+        "feed",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2755,7 +3034,9 @@
         "social-media",
         "scheduling",
         "calendar",
-        "queue"
+        "queue",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2765,7 +3046,7 @@
       "version": "1.0.0",
       "tools": [
         "llm_call",
-        "social_post"
+        "social"
       ],
       "model_scores": {}
     },
@@ -2774,11 +3055,11 @@
       "role": "tool",
       "mode": "tool_required",
       "tags": [
-        "iot",
         "speaker",
         "audio",
         "playback",
-        "volume"
+        "volume",
+        "iot"
       ],
       "authors": [
         {
@@ -2798,7 +3079,9 @@
       "tags": [
         "project-management",
         "sprint",
-        "planning"
+        "planning",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2807,9 +3090,8 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "json_parse",
-        "llm_call",
-        "json_format"
+        "json_tool",
+        "llm_call"
       ],
       "model_scores": {}
     },
@@ -2820,7 +3102,9 @@
       "tags": [
         "project-management",
         "standup",
-        "reporting"
+        "reporting",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2830,7 +3114,7 @@
       "version": "1.0.0",
       "tools": [
         "git_log",
-        "json_format",
+        "json_tool",
         "llm_call"
       ],
       "model_scores": {}
@@ -2842,7 +3126,9 @@
       "tags": [
         "project-management",
         "status",
-        "reporting"
+        "reporting",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2852,7 +3138,7 @@
       "version": "1.0.0",
       "tools": [
         "git_log",
-        "json_parse",
+        "json_tool",
         "llm_call",
         "file_write"
       ],
@@ -2867,7 +3153,9 @@
         "stock",
         "analysis",
         "fundamentals",
-        "technicals"
+        "technicals",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2876,8 +3164,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "stock_quote",
-        "stock_history",
+        "stock",
         "chart_create",
         "llm_call"
       ],
@@ -2892,7 +3179,9 @@
         "stock",
         "price",
         "quotes",
-        "market-data"
+        "market-data",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2912,7 +3201,9 @@
       "tags": [
         "writing",
         "summary",
-        "content"
+        "content",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2922,7 +3213,7 @@
       "version": "1.0.0",
       "tools": [
         "web_scrape",
-        "pdf_read",
+        "pdf",
         "llm_call"
       ],
       "model_scores": {}
@@ -2934,7 +3225,9 @@
       "tags": [
         "architecture",
         "design",
-        "system"
+        "system",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2956,7 +3249,9 @@
       "tags": [
         "writing",
         "technical",
-        "documentation"
+        "documentation",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2979,7 +3274,9 @@
       "tags": [
         "code",
         "test",
-        "quality"
+        "quality",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -2997,10 +3294,10 @@
       "role": "tool",
       "mode": "tool_required",
       "tags": [
-        "iot",
         "thermostat",
         "temperature",
-        "hvac"
+        "hvac",
+        "iot"
       ],
       "authors": [
         {
@@ -3020,7 +3317,9 @@
       "tags": [
         "support",
         "triage",
-        "customer"
+        "customer",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -3029,7 +3328,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "json_parse",
+        "json_tool",
         "web_search",
         "llm_call"
       ],
@@ -3041,7 +3340,10 @@
       "mode": "tool_required",
       "tags": [
         "data",
-        "time"
+        "time",
+        "desktop",
+        "server",
+        "iot"
       ],
       "authors": [
         {
@@ -3062,7 +3364,10 @@
       "tags": [
         "translate",
         "language",
-        "text"
+        "text",
+        "desktop",
+        "server",
+        "iot"
       ],
       "authors": [
         {
@@ -3080,10 +3385,10 @@
       "role": "tool",
       "mode": "reasoning",
       "tags": [
-        "desktop",
         "keyboard",
         "type",
-        "text-input"
+        "text-input",
+        "desktop"
       ],
       "authors": [
         {
@@ -3103,7 +3408,8 @@
       "tags": [
         "design",
         "ui",
-        "review"
+        "review",
+        "desktop"
       ],
       "authors": [
         {
@@ -3125,7 +3431,9 @@
       "tags": [
         "video",
         "download",
-        "save"
+        "save",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -3146,7 +3454,9 @@
         "video",
         "frames",
         "extract",
-        "image"
+        "image",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -3167,7 +3477,9 @@
         "video",
         "metadata",
         "probe",
-        "info"
+        "info",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -3187,7 +3499,9 @@
       "tags": [
         "video",
         "transcribe",
-        "speech-to-text"
+        "speech-to-text",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -3197,7 +3511,7 @@
       "version": "1.0.0",
       "tools": [
         "video_download",
-        "voice_recognition"
+        "audio_transcribe"
       ],
       "model_scores": {}
     },
@@ -3209,7 +3523,9 @@
         "video",
         "trim",
         "cut",
-        "edit"
+        "edit",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -3229,7 +3545,8 @@
       "tags": [
         "security",
         "vulnerability",
-        "scan"
+        "scan",
+        "server"
       ],
       "authors": [
         {
@@ -3247,7 +3564,9 @@
       "role": "tool",
       "mode": "tool_required",
       "tags": [
-        "weather"
+        "weather",
+        "desktop",
+        "iot"
       ],
       "authors": [
         {
@@ -3260,6 +3579,33 @@
       ],
       "model_scores": {}
     },
+    "web_development_nerve": {
+      "description": "The web_development_nerve receives a user's query about web development topics and responds with detailed, accurate information and guidance. The response is limited to 500 words and must be formatted in a Q&A style, with each question and answer pair separated by a double newline.",
+      "role": "tool",
+      "mode": "tool_required",
+      "tags": [
+        "tool",
+        "web-development",
+        "desktop",
+        "server",
+        "the",
+        "receives",
+        "query",
+        "about",
+        "web",
+        "development"
+      ],
+      "authors": [
+        {
+          "github": "otomus"
+        }
+      ],
+      "version": "1.0.0",
+      "tools": [
+        "geography_nerve"
+      ],
+      "model_scores": {}
+    },
     "web_fetch_nerve": {
       "description": "Make HTTP requests (GET, POST, etc.) and return the raw response",
       "role": "tool",
@@ -3268,7 +3614,10 @@
         "web",
         "http",
         "request",
-        "api"
+        "api",
+        "desktop",
+        "server",
+        "iot"
       ],
       "authors": [
         {
@@ -3277,7 +3626,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "fetch",
+        "http_get",
         "http_post"
       ],
       "model_scores": {}
@@ -3290,7 +3639,9 @@
         "web",
         "scraping",
         "fetch",
-        "raw"
+        "raw",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -3299,7 +3650,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "fetch_content"
+        "web_scrape"
       ],
       "model_scores": {}
     },
@@ -3311,7 +3662,9 @@
         "web",
         "search",
         "query",
-        "duckduckgo"
+        "duckduckgo",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -3320,7 +3673,7 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "search"
+        "web_search"
       ],
       "model_scores": {}
     },
@@ -3330,7 +3683,8 @@
       "mode": "tool_required",
       "tags": [
         "webhook",
-        "integration"
+        "integration",
+        "server"
       ],
       "authors": [
         {
@@ -3349,7 +3703,8 @@
       "mode": "reasoning",
       "tags": [
         "window",
-        "system"
+        "system",
+        "desktop"
       ],
       "authors": [
         {
@@ -3369,7 +3724,8 @@
       "tags": [
         "design",
         "wireframe",
-        "ui"
+        "ui",
+        "desktop"
       ],
       "authors": [
         {
@@ -3391,7 +3747,8 @@
         "document",
         "xlsx",
         "excel",
-        "spreadsheet"
+        "spreadsheet",
+        "desktop"
       ],
       "authors": [
         {
@@ -3411,7 +3768,9 @@
       "tags": [
         "youtube",
         "metadata",
-        "video-info"
+        "video-info",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -3431,7 +3790,9 @@
       "tags": [
         "youtube",
         "search",
-        "discover"
+        "discover",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -3452,7 +3813,9 @@
         "youtube",
         "transcript",
         "captions",
-        "subtitles"
+        "subtitles",
+        "desktop",
+        "server"
       ],
       "authors": [
         {
@@ -3461,243 +3824,88 @@
       ],
       "version": "1.0.0",
       "tools": [
-        "youtube_info"
+        "youtube_transcript"
       ],
       "model_scores": {}
     }
   },
   "adapters": {
-    "awareness/large": {
+    "awareness": {
       "role": "awareness",
-      "model": "large",
-      "size_class": "large",
+      "model": "awareness",
+      "provider": "",
       "score": null,
-      "contributor": "otomus",
-      "has_lora": false
+      "contributor": "otomus"
     },
-    "awareness/medium": {
-      "role": "awareness",
-      "model": "medium",
-      "size_class": "medium",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "awareness/small": {
-      "role": "awareness",
-      "model": "small",
-      "size_class": "small",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "awareness/tinylm": {
-      "role": "awareness",
-      "model": "tinylm",
-      "size_class": "tinylm",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "brain/large": {
+    "brain": {
       "role": "brain",
-      "model": "large",
-      "size_class": "large",
+      "model": "brain",
+      "provider": "",
       "score": null,
-      "contributor": "otomus",
-      "has_lora": false
+      "contributor": "otomus"
     },
-    "brain/medium": {
-      "role": "brain",
-      "model": "medium",
-      "size_class": "medium",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "brain/small": {
-      "role": "brain",
-      "model": "small",
-      "size_class": "small",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "brain/tinylm": {
-      "role": "brain",
-      "model": "tinylm",
-      "size_class": "tinylm",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "code/large": {
+    "code": {
       "role": "code",
-      "model": "large",
-      "size_class": "large",
+      "model": "code",
+      "provider": "",
       "score": null,
-      "contributor": "otomus",
-      "has_lora": false
+      "contributor": "otomus"
     },
-    "code/medium": {
-      "role": "code",
-      "model": "medium",
-      "size_class": "medium",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "code/small": {
-      "role": "code",
-      "model": "small",
-      "size_class": "small",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "code/tinylm": {
-      "role": "code",
-      "model": "tinylm",
-      "size_class": "tinylm",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "communication/large": {
+    "communication": {
       "role": "communication",
-      "model": "large",
-      "size_class": "large",
+      "model": "communication",
+      "provider": "",
       "score": null,
-      "contributor": "otomus",
-      "has_lora": false
+      "contributor": "otomus"
     },
-    "communication/medium": {
-      "role": "communication",
-      "model": "medium",
-      "size_class": "medium",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "communication/small": {
-      "role": "communication",
-      "model": "small",
-      "size_class": "small",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "communication/tinylm": {
-      "role": "communication",
-      "model": "tinylm",
-      "size_class": "tinylm",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "creative/large": {
+    "creative": {
       "role": "creative",
-      "model": "large",
-      "size_class": "large",
+      "model": "creative",
+      "provider": "",
       "score": null,
-      "contributor": "otomus",
-      "has_lora": false
+      "contributor": "otomus"
     },
-    "creative/medium": {
-      "role": "creative",
-      "model": "medium",
-      "size_class": "medium",
+    "hearing": {
+      "role": "hearing",
+      "model": "hearing",
+      "provider": "",
       "score": null,
-      "contributor": "otomus",
-      "has_lora": false
+      "contributor": "otomus"
     },
-    "creative/small": {
-      "role": "creative",
-      "model": "small",
-      "size_class": "small",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "creative/tinylm": {
-      "role": "creative",
-      "model": "tinylm",
-      "size_class": "tinylm",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "nerve/large": {
+    "nerve": {
       "role": "nerve",
-      "model": "large",
-      "size_class": "large",
+      "model": "nerve",
+      "provider": "",
       "score": null,
-      "contributor": "otomus",
-      "has_lora": false
+      "contributor": "otomus"
     },
-    "nerve/medium": {
-      "role": "nerve",
-      "model": "medium",
-      "size_class": "medium",
+    "sight": {
+      "role": "sight",
+      "model": "sight",
+      "provider": "",
       "score": null,
-      "contributor": "otomus",
-      "has_lora": false
+      "contributor": "otomus"
     },
-    "nerve/small": {
-      "role": "nerve",
-      "model": "small",
-      "size_class": "small",
+    "touch": {
+      "role": "touch",
+      "model": "touch",
+      "provider": "",
       "score": null,
-      "contributor": "otomus",
-      "has_lora": false
+      "contributor": "otomus"
     },
-    "nerve/tinylm": {
-      "role": "nerve",
-      "model": "tinylm",
-      "size_class": "tinylm",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "vision/large": {
+    "vision": {
       "role": "vision",
-      "model": "large",
-      "size_class": "large",
+      "model": "vision",
+      "provider": "",
       "score": null,
-      "contributor": "otomus",
-      "has_lora": false
+      "contributor": "otomus"
     },
-    "vision/medium": {
-      "role": "vision",
-      "model": "medium",
-      "size_class": "medium",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "vision/small": {
-      "role": "vision",
-      "model": "small",
-      "size_class": "small",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "vision/small/moondream2-text-model-f16": {
+    "vision/moondream2-text-model-f16": {
       "role": "vision",
       "model": "moondream2-text-model-f16",
-      "size_class": "small",
+      "provider": "",
       "score": null,
-      "contributor": "otomus",
-      "has_lora": false
-    },
-    "vision/tinylm": {
-      "role": "vision",
-      "model": "tinylm",
-      "size_class": "tinylm",
-      "score": null,
-      "contributor": "otomus",
-      "has_lora": false
+      "contributor": "otomus"
     }
   },
   "connectors": {
@@ -6675,8 +6883,8 @@
     }
   },
   "stats": {
-    "total_nerves": 161,
-    "total_adapters": 31,
+    "total_nerves": 165,
+    "total_adapters": 11,
     "total_connectors": 15,
     "total_tools": 0,
     "total_mcps": 77
