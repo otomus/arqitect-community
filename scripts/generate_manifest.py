@@ -96,13 +96,22 @@ def _read_qualification_score(adapter_dir: str) -> float | None:
 def _build_adapter_entry(meta: dict, role: str,
                          model_name: str | None, score: float | None) -> dict:
     """Build a single adapter manifest entry from parsed metadata."""
-    return {
+    entry = {
         "role": role,
         "model": model_name or role,
         "provider": meta.get("provider", ""),
         "score": score,
         "contributor": meta.get("contributor", {}).get("github", ""),
     }
+
+    base_model = meta.get("base_model")
+    if base_model and isinstance(base_model, dict):
+        entry["base_model"] = {
+            "name": base_model.get("name", ""),
+            "architecture": base_model.get("architecture", ""),
+        }
+
+    return entry
 
 
 def _collect_adapter_entry(adapters: dict, adapter_dir: str, role: str,
@@ -233,18 +242,25 @@ def build_leaderboard(adapters: dict) -> dict:
     """Build leaderboard of top adapters grouped by role.
 
     Returns a dict mapping each role to a list of adapter entries
-    sorted by score in descending order.
+    sorted by score in descending order. Includes base_model name
+    so nodes can filter the leaderboard by their active base model.
     """
     by_role: dict[str, list] = {}
     for _name, info in adapters.items():
         if info.get("score") is None:
             continue
         role = info.get("role", DEFAULT_ROLE)
-        by_role.setdefault(role, []).append({
+        entry = {
             "model": info["model"],
             "score": info["score"],
             "contributor": info.get("contributor", ""),
-        })
+        }
+
+        base_model = info.get("base_model")
+        if base_model:
+            entry["base_model"] = base_model.get("name", "")
+
+        by_role.setdefault(role, []).append(entry)
 
     for role in by_role:
         by_role[role].sort(key=lambda x: x["score"], reverse=True)

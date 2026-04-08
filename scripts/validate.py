@@ -316,6 +316,56 @@ def _validate_tuning_temperature_range(name: str, role: str, tuning: dict, profi
     ]
 
 
+def _validate_adapter_base_model(adapter_dir: str, name: str, meta: dict) -> list[str]:
+    """Validate the optional base_model field in adapter metadata.
+
+    When present, ensures both name and architecture are set and architecture
+    is from the allowed enum. Emits a warning for hot-path roles missing
+    base_model when the adapter is model-specific (community-contributed).
+    """
+    base_model = meta.get("base_model")
+
+    if base_model is not None:
+        return _validate_base_model_fields(name, base_model)
+
+    return _warn_missing_base_model(adapter_dir, name)
+
+
+_ALLOWED_ARCHITECTURES = {"mamba1", "mamba2", "mamba3"}
+
+# Roles that run on the local hot path — adapters for these should declare base_model
+_HOT_PATH_ROLES = {"brain", "nerve", "awareness"}
+
+
+def _validate_base_model_fields(name: str, base_model: dict) -> list[str]:
+    """Validate that base_model has required fields with correct values."""
+    errors = []
+    if not isinstance(base_model, dict):
+        return [f"  {name}: base_model must be an object"]
+    if "name" not in base_model:
+        errors.append(f"  {name}: base_model missing required field 'name'")
+    if "architecture" not in base_model:
+        errors.append(f"  {name}: base_model missing required field 'architecture'")
+    elif base_model["architecture"] not in _ALLOWED_ARCHITECTURES:
+        errors.append(
+            f"  {name}: base_model.architecture must be one of "
+            f"{sorted(_ALLOWED_ARCHITECTURES)}, got '{base_model['architecture']}'"
+        )
+    return errors
+
+
+def _warn_missing_base_model(adapter_dir: str, name: str) -> list[str]:
+    """Emit a warning if a model-specific hot-path adapter omits base_model."""
+    role = _resolve_adapter_role(adapter_dir)
+    parent_name = os.path.basename(os.path.dirname(adapter_dir))
+    is_model_specific = parent_name != "adapters"
+
+    if is_model_specific and role in _HOT_PATH_ROLES:
+        print(f"  WARNING: {name}: hot-path adapter for role '{role}' should declare base_model")
+
+    return []
+
+
 def validate_adapter(adapter_dir: str) -> list[str]:
     """Validate a brain adapter directory."""
     name = os.path.basename(adapter_dir)
@@ -329,6 +379,7 @@ def validate_adapter(adapter_dir: str) -> list[str]:
         return errors
 
     errors.extend(_validate_adapter_tuning(adapter_dir, name, meta))
+    errors.extend(_validate_adapter_base_model(adapter_dir, name, meta))
     return errors
 
 

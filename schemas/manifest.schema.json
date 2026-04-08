@@ -40,14 +40,21 @@
       "type": "object",
       "additionalProperties": {
         "type": "object",
-        "required": ["model", "size_class", "provider"],
+        "required": ["model", "role", "provider"],
         "properties": {
           "model": { "type": "string" },
-          "size_class": { "type": "string" },
+          "role": { "type": "string" },
           "provider": { "type": "string" },
-          "score": { "type": "number" },
+          "score": { "type": ["number", "null"] },
           "contributor": { "type": "string" },
-          "has_lora": { "type": "boolean" }
+          "base_model": {
+            "type": "object",
+            "description": "Base model identity for compatibility filtering during sync",
+            "properties": {
+              "name": { "type": "string" },
+              "architecture": { "type": "string", "enum": ["mamba1", "mamba2", "mamba3"] }
+            }
+          }
         }
       }
     },
@@ -98,7 +105,7 @@
     },
     "leaderboard": {
       "type": "object",
-      "description": "Top scores by size_class",
+      "description": "Top scores by role, optionally segmented by base model",
       "additionalProperties": {
         "type": "array",
         "items": {
@@ -106,7 +113,8 @@
           "properties": {
             "model": { "type": "string" },
             "score": { "type": "number" },
-            "contributor": { "type": "string" }
+            "contributor": { "type": "string" },
+            "base_model": { "type": "string" }
           }
         }
       }

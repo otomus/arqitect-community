@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Base Model Identity",
+  "description": "Identifies the base model an adapter was trained on. Used for compatibility filtering — nodes only sync adapters matching their active base model.",
+  "type": "object",
+  "required": ["name", "architecture"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "HuggingFace model identifier or unique name (e.g. 'state-spaces/mamba-1.4b')"
+    },
+    "architecture": {
+      "type": "string",
+      "enum": ["mamba1", "mamba2", "mamba3"],
+      "description": "Model architecture family — determines which loader the runtime uses"
+    }
+  },
+  "additionalProperties": false
+}

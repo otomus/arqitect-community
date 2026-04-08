@@ -78,6 +78,39 @@ adapters/{role}/{model_name}/
 - **No secrets or absolute paths**.
 - **Only model-specific paths** — do not modify default adapter files.
 
+### Base Model (`base_model` in `meta.json`)
+
+Adapters that run on a local base model (e.g. Mamba SSM) must declare which base model they were trained on. This enables nodes to sync only compatible adapters — when a node swaps its base model, incompatible adapters are automatically skipped.
+
+**When to include `base_model`:**
+- Your adapter targets a local Mamba-based model (hot-path roles: `brain`, `nerve`, `awareness`, or any adapter trained on a specific base)
+
+**When to omit `base_model`:**
+- Your adapter targets a cloud/external model (e.g. GPT-4, Claude, Groq-hosted models) that doesn't depend on a local base
+
+**Required fields** (when `base_model` is present):
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `name` | string | HuggingFace model identifier (e.g. `state-spaces/mamba-1.4b`) |
+| `architecture` | enum | Model architecture: `mamba1`, `mamba2`, or `mamba3` |
+
+**Example:**
+
+```json
+{
+  "contributor": { "github": "your-username" },
+  "base_model": {
+    "name": "state-spaces/mamba-1.4b",
+    "architecture": "mamba1"
+  },
+  "capabilities": { ... },
+  "tuning": { ... }
+}
+```
+
+When the network migrates to a new base model (e.g. Mamba-3), adapters tagged with the old base model are marked stale and retrained automatically. Community adapters are namespaced by base model in the manifest — nodes only see adapters matching their active base.
+
 ---
 
 ## Submitting a Tool

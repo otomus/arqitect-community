@@ -66,6 +66,23 @@
         }
       }
     },
+    "base_model": {
+      "type": "object",
+      "description": "Base model this adapter was trained on. Required for local/Mamba adapters. Omit for cloud/universal adapters (e.g. GPT-4, Claude).",
+      "required": ["name", "architecture"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "HuggingFace model identifier or unique name (e.g. 'state-spaces/mamba-1.4b')"
+        },
+        "architecture": {
+          "type": "string",
+          "enum": ["mamba1", "mamba2", "mamba3"],
+          "description": "Model architecture family — determines which loader the runtime uses"
+        }
+      },
+      "additionalProperties": false
+    },
     "qualification": {
       "type": "object",
       "description": "Pass/fail thresholds and iteration limits for adapter qualification",
