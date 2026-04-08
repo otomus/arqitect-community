@@ -1286,10 +1286,18 @@ def _build_supported_models_section(models: list[dict]) -> str:
         score_pct = float(score) * 100 if isinstance(score, (int, float)) else 0
         bar_color = "var(--teal)" if score_cls == "text-teal" else ("var(--cyan)" if score_cls == "text-cyan" else "var(--orange)")
 
+        base_model = meta.get("base_model", {})
+        bm_name = base_model.get("name", "") if isinstance(base_model, dict) else ""
+        bm_arch = base_model.get("architecture", "") if isinstance(base_model, dict) else ""
+        bm_tag = (
+            f'<span class="tag tag--cyan" title="Base model: {E(bm_name)}">{E(bm_arch)}</span>'
+            if bm_arch else ""
+        )
+
         cards += f"""<div class="card">
   <div class="card-name">{E(mname)}</div>
   <div class="card-meta mb-2">
-    <span class="tag tag--teal">{E(size)}</span>
+    <span class="tag tag--teal">{E(size)}</span>{bm_tag}
   </div>
   <div class="info-label">Qualification Score</div>
   <div style="display:flex;align-items:center;gap:0.75rem;margin:0.4rem 0 0.75rem">
@@ -1324,9 +1332,16 @@ def build_adapter_detail(adapter: dict) -> None:
     # Wrap in a single-key dict for compatibility with table builders
     size_data = {"default": adapter_data} if adapter_data else {}
 
+    default_meta = adapter_data.get("meta", {}) if isinstance(adapter_data, dict) else {}
+    default_bm = default_meta.get("base_model", {}) if isinstance(default_meta, dict) else {}
+
     info_items = [
         ("Role", name),
     ]
+    if isinstance(default_bm, dict) and default_bm.get("name"):
+        info_items.append(("Base Model", default_bm["name"]))
+    if isinstance(default_bm, dict) and default_bm.get("architecture"):
+        info_items.append(("Architecture", default_bm["architecture"]))
     if models:
         info_items.append(("Qualified Models", str(len(models))))
 
